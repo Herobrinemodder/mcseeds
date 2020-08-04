@@ -20,11 +20,16 @@ def encodeSeed(data):
 def searchUser(user):
     referenceString = '{"searchString":"Hotline","identifier":"","start":0,"fetchUdid":"","pop":20,"udid_new":"G:"}'
     usrSearch = user
-    consData1 = '{"searchString":"' + usrSearch + '","identifier":"","start":0,"fetchUdid":"","pop":20,"udid_new":"G:"}'
+    consData1 = '{"searchString":"' + usrSearch + '","identifier":"ba3862215b3bdd84f9d366166e521a0a18d0fbdf","start":0,"fetchUdid":"","pop":20,"udid_new":"G:1281940767"}'
     print(consData1)
+    headers = {
+    'User-Agent': 'Minecraft%20Seeds%20Pro/2018.06.191148 CFNetwork/711.4.6 Darwin/14.0.0',
+    
+}
     dataa = parse.urlencode({'get_users':encodeSeed(consData1)}).encode()
-    req =  request.Request('https://mcseeds.mobi/seedscript_805.php', data=dataa)
+    req =  request.Request('https://mcseeds.mobi/seedscript_805.php', data=dataa, headers = headers)
     resp = request.urlopen(req)
+    
     comJson = json.load(resp)
     for x in range(0,len(comJson["users"])):
         print(comJson["users"][x]["udid"]+" "+comJson["users"][x]["nickname"]+" "+comJson["users"][x]["bios"])
