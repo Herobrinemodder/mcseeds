@@ -61,10 +61,13 @@ def downloadUserSeeds(id):
     print(getSeeds)
     dataa = parse.urlencode({'getSeeds':encodeSeed(getSeeds)}).encode()
     req =  request.Request('https://mcseeds.mobi/seedscript_805.php', data=dataa,headers=headers)
-    resp = request.urlopen(req)
-    comJson = json.load(resp)
+    resp = request.urlopen(req).read()
+    comJson = json.loads(resp.decode('utf-8'))
     for x in range(0,len(comJson["seeds"])):
         print(comJson["seeds"][x]["seed"])
+    file = open("./userseeds.json", 'wb')
+    file.write(resp)
+    file.close()
 
 user = input("Input the username->")
 searchUser(user)
