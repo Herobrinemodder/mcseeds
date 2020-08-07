@@ -37,10 +37,30 @@ def searchUser(user):
 def downloadUserSeeds(id):
     
     udid = id
-    getSeeds = '{"identifier":"","pop":5000,"fetchUdid":"'+udid+'","category":"Uploads","section":"myseeds","searchString":"","udid_new":"'+udid+'","version":"All","extraSortOptions":"anytime","start":0,"worldType":"","platform":"My seeds","sort":"new"}'
+    #checkIfReg = '{"udid_new":"'+udid+'","identifier":"5dfe697714eb09e10dab2bbd6c1217e445837ed1"}'
+    #dataa = parse.urlencode({'checkIfRegistered':encodeSeed(checkIfReg)}).encode()
+    #req =  request.Request('https://mcseeds.mobi/seedscript_805.php', data=dataa, headers=headers)
+    #resp = request.urlopen(req).read()
+    #comJson = json.loads(resp.decode('utf-8'))
+    
+    #tag = comJson["usertag"]
+    #nick = comJson["nickname"]
+    headers = {
+    'User-Agent': 'Minecraft%20Seeds%20Pro/2018.06.191148 CFNetwork/711.4.6 Darwin/14.0.0',
+    
+}
+    
+    #addUserStr = '{"appstore":"apple","identifier":"5dfe697714eb09e10dab2bbd6c1217e445837ed1","pro":"yes","usertag":"'+tag+'","udid_new":"'+udid+'","pushtoken":"","nickname":"'+nick+'","gcNickname":"'+nick+'","type":"gamecenter"}'
+    
+    #dataa = parse.urlencode({'addUser':encodeSeed(addUserStr)}).encode()
+    #req =  request.Request('https://mcseeds.mobi/seedscript_805.php', data=dataa, headers=headers)
+    #resp = request.urlopen(req).read()
+    #comJson = json.loads(resp.decode('utf-8'))
+    
+    getSeeds = '{"identifier":"5dfe697714eb09e10dab2bbd6c1217e445837ed1","pop":5000,"fetchUdid":"'+udid+'","category":"Uploads","section":"myseeds","searchString":"","udid_new":"'+udid+'","version":"All","extraSortOptions":"anytime","start":0,"worldType":"","platform":"My seeds","sort":"new"}'
     print(getSeeds)
     dataa = parse.urlencode({'getSeeds':encodeSeed(getSeeds)}).encode()
-    req =  request.Request('https://mcseeds.mobi/seedscript_805.php', data=dataa)
+    req =  request.Request('https://mcseeds.mobi/seedscript_805.php', data=dataa,headers=headers)
     resp = request.urlopen(req)
     comJson = json.load(resp)
     for x in range(0,len(comJson["seeds"])):
