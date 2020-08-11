@@ -1,0 +1,1670 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("openGLTextfield")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37, L37_38, L38_39, L39_40, L40_41, L41_42, L42_43, L43_44, L44_45, L45_46, L46_47, L47_48, L48_49, L49_50, L50_51, L51_52
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.getScriptFile
+  L7_8 = L7_8()
+  L8_9 = _UPVALUE1_
+  L8_9 = L8_9.imgSuff
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.getSceneProperties
+  L9_10 = L9_10()
+  L10_11 = L9_10.prevScene
+  L11_12 = math
+  L11_12 = L11_12.abs
+  L12_13, L13_14, L14_15, L15_16 = nil, nil, nil, nil
+  L16_17 = 0
+  L17_18 = _UPVALUE1_
+  L17_18 = L17_18.session
+  L17_18 = L17_18 + 1
+  L18_19 = _UPVALUE1_
+  L18_19.session = L17_18
+  L18_19 = _UPVALUE0_
+  L18_19 = L18_19.makeBlurryBg
+  L18_19 = L18_19()
+  L20_21 = L18_19
+  L19_20 = L18_19.addEventListener
+  L21_22 = "touch"
+  function L22_23()
+    local L0_53, L1_54
+    L0_53 = true
+    return L0_53
+  end
+  L19_20(L20_21, L21_22, L22_23)
+  L20_21 = L2_3
+  L19_20 = L2_3.insert
+  L21_22 = L18_19
+  L19_20(L20_21, L21_22)
+  L19_20 = _UPVALUE2_
+  L19_20 = L19_20.createSideMenu
+  L20_21 = L1_2
+  L19_20 = L19_20(L20_21)
+  L21_22 = L0_1
+  L20_21 = L0_1.insert
+  L22_23 = L19_20
+  L20_21(L21_22, L22_23)
+  L0_1.side_menu = L19_20
+  L21_22 = L19_20
+  L20_21 = L19_20.toBack
+  L20_21(L21_22)
+  function L20_21(A0_55)
+    _UPVALUE0_.removeRuntimeListener("got_gamecenter_info")
+    _UPVALUE0_.removeRuntimeListener("clearLocalTimersAndListeners", A0_55.self_listenerid)
+  end
+  L21_22 = _UPVALUE0_
+  L21_22 = L21_22.addRuntimeListener
+  L22_23 = "clearLocalTimersAndListeners"
+  L23_24 = L20_21
+  L21_22(L22_23, L23_24)
+  function L21_22()
+    local L0_56, L1_57, L2_58, L3_59, L4_60, L5_61, L6_62, L7_63, L8_64, L9_65, L10_66
+    L0_56 = display
+    L0_56 = L0_56.newGroup
+    L0_56 = L0_56()
+    L1_57 = _UPVALUE0_
+    L2_58 = L1_57
+    L1_57 = L1_57.insert
+    L3_59 = L0_56
+    L1_57(L2_58, L3_59)
+    L1_57 = display
+    L1_57 = L1_57.newImageRect
+    L2_58 = "bg-mojanglogin.jpg"
+    L3_59 = _W
+    L4_60 = _H
+    L1_57 = L1_57(L2_58, L3_59, L4_60)
+    L3_59 = L1_57
+    L2_58 = L1_57.setReferencePoint
+    L4_60 = display
+    L4_60 = L4_60.BottomCenterReferencePoint
+    L2_58(L3_59, L4_60)
+    L2_58 = _UPVALUE1_
+    L1_57.x = L2_58
+    L2_58 = _H
+    L1_57.y = L2_58
+    L3_59 = L1_57
+    L2_58 = L1_57.addEventListener
+    L4_60 = "touch"
+    function L5_61()
+      local L0_67, L1_68
+      L0_67 = true
+      return L0_67
+    end
+    L2_58(L3_59, L4_60, L5_61)
+    L3_59 = L0_56
+    L2_58 = L0_56.insert
+    L4_60 = L1_57
+    L2_58(L3_59, L4_60)
+    L2_58 = display
+    L2_58 = L2_58.newText
+    L3_59 = {}
+    L3_59.text = "Mojang"
+    L3_59.x = 0
+    L3_59.y = 0
+    L4_60 = _UPVALUE2_
+    L4_60 = L4_60.fonts
+    L4_60 = L4_60.bold
+    L3_59.font = L4_60
+    L3_59.fontSize = 22
+    L2_58 = L2_58(L3_59)
+    L4_60 = L2_58
+    L3_59 = L2_58.setReferencePoint
+    L5_61 = display
+    L5_61 = L5_61.TopLeftReferencePoint
+    L3_59(L4_60, L5_61)
+    L4_60 = L2_58
+    L3_59 = L2_58.setPosition
+    L5_61 = 20
+    L6_62 = 60
+    L3_59(L4_60, L5_61, L6_62)
+    L4_60 = L2_58
+    L3_59 = L2_58.setFillColor
+    L5_61 = 247
+    L6_62 = 247
+    L7_63 = 247
+    L3_59(L4_60, L5_61, L6_62, L7_63)
+    L4_60 = L0_56
+    L3_59 = L0_56.insert
+    L5_61 = L2_58
+    L3_59(L4_60, L5_61)
+    L3_59 = display
+    L3_59 = L3_59.newImageRect
+    L4_60 = "textfield_mojanglogin.png"
+    L5_61 = 205
+    L6_62 = 30
+    L3_59 = L3_59(L4_60, L5_61, L6_62)
+    L5_61 = L3_59
+    L4_60 = L3_59.setReferencePoint
+    L6_62 = display
+    L6_62 = L6_62.TopLeftReferencePoint
+    L4_60(L5_61, L6_62)
+    L3_59.x = 17
+    L3_59.y = 167
+    L5_61 = L0_56
+    L4_60 = L0_56.insert
+    L6_62 = L3_59
+    L4_60(L5_61, L6_62)
+    function L4_60(A0_69)
+      local L1_70, L2_71
+      L1_70 = A0_69.phase
+      L2_71 = A0_69.target
+      L2_71 = L2_71.text
+      if L1_70 == "began" then
+        display.newRect(0, 0, _W, _H):setFillColor(0, 0, 0, 0)
+        display.newRect(0, 0, _W, _H).isHitTestable = true
+        display.newRect(0, 0, _W, _H):addEventListener("touch", function(A0_72)
+          native.setKeyboardFocus(nil)
+          A0_72.target = _UPVALUE0_.delete(A0_72.target)
+        end)
+      elseif L1_70 == "editing" and string.len(L2_71) > 100 then
+        A0_69.target.text = string.sub(L2_71, 1, 100)
+      elseif L1_70 == "submitted" then
+        native.setKeyboardFocus(nil)
+      end
+      return true
+    end
+    L5_61 = display
+    L5_61 = L5_61.newText
+    L6_62 = {}
+    L6_62.text = "USERNAME: "
+    L6_62.x = 0
+    L6_62.y = 0
+    L7_63 = _UPVALUE2_
+    L7_63 = L7_63.fonts
+    L7_63 = L7_63.bold
+    L6_62.font = L7_63
+    L6_62.fontSize = 14
+    L5_61 = L5_61(L6_62)
+    L7_63 = L5_61
+    L6_62 = L5_61.setReferencePoint
+    L8_64 = display
+    L8_64 = L8_64.TopLeftReferencePoint
+    L6_62(L7_63, L8_64)
+    L7_63 = L5_61
+    L6_62 = L5_61.setPosition
+    L8_64 = 20
+    L9_65 = 142
+    L6_62(L7_63, L8_64, L9_65)
+    L5_61.yScale = 0.9
+    L7_63 = L5_61
+    L6_62 = L5_61.setFillColor
+    L8_64 = 247
+    L9_65 = 247
+    L10_66 = 247
+    L6_62(L7_63, L8_64, L9_65, L10_66)
+    L7_63 = L0_56
+    L6_62 = L0_56.insert
+    L8_64 = L5_61
+    L6_62(L7_63, L8_64)
+    L6_62 = native
+    L6_62 = L6_62.newTextField
+    L7_63 = 20
+    L8_64 = 160
+    L9_65 = 200
+    L10_66 = 24
+    L6_62 = L6_62(L7_63, L8_64, L9_65, L10_66)
+    L7_63 = native
+    L7_63 = L7_63.newFont
+    L8_64 = _UPVALUE2_
+    L8_64 = L8_64.fonts
+    L8_64 = L8_64.regular
+    L9_65 = 16
+    L7_63 = L7_63(L8_64, L9_65)
+    L6_62.font = L7_63
+    L6_62.inputType = "email"
+    L6_62.isVisible = false
+    L8_64 = L6_62
+    L7_63 = L6_62.addEventListener
+    L9_65 = "userInput"
+    L10_66 = L4_60
+    L7_63(L8_64, L9_65, L10_66)
+    function L7_63(A0_73)
+      local L1_74
+      L1_74 = _UPVALUE0_
+      L1_74.isVisible = true
+      L1_74 = _UPVALUE1_
+      L1_74.isVisible = false
+      function L1_74()
+        blackRect = _UPVALUE0_.delete(blackRect)
+        _UPVALUE1_ = _UPVALUE0_.delete(_UPVALUE1_)
+        _UPVALUE2_ = _UPVALUE0_.delete(_UPVALUE2_)
+        password_textfield = _UPVALUE0_.delete(password_textfield)
+      end
+      transition.to(_UPVALUE3_, {
+        time = 200,
+        y = _H,
+        transition = easing.outQuad,
+        onComplete = L1_74
+      })
+      return true
+    end
+    L8_64 = _UPVALUE4_
+    L8_64 = L8_64.newButton
+    L9_65 = {}
+    L9_65.top = 30
+    L10_66 = _W
+    L10_66 = L10_66 - 38
+    L9_65.left = L10_66
+    L9_65.width = 27
+    L9_65.height = 29
+    L9_65.default = "crossclose.png"
+    L9_65.over = "crossclose-over.png"
+    L9_65.onRelease = L7_63
+    L8_64 = L8_64(L9_65)
+    L10_66 = L0_56
+    L9_65 = L0_56.insert
+    L9_65(L10_66, L8_64)
+    function L9_65(A0_75)
+      local L1_76, L2_77
+      L1_76 = _UPVALUE0_
+      L1_76 = L1_76.text
+      if L1_76 then
+        L1_76 = string
+        L1_76 = L1_76.len
+        L2_77 = _UPVALUE0_
+        L2_77 = L2_77.text
+        L2_77 = L2_77.gsub
+        L2_77 = L2_77(L2_77, " ", "")
+        L1_76 = L1_76(L2_77, L2_77(L2_77, " ", ""))
+        if L1_76 > 0 then
+          L1_76 = native
+          L1_76 = L1_76.setActivityIndicator
+          L2_77 = true
+          L1_76(L2_77)
+          L1_76 = native
+          L1_76 = L1_76.showAlert
+          L2_77 = ""
+          L1_76 = L1_76(L2_77, "Signing in")
+          function L2_77(A0_78)
+            native.setActivityIndicator(false)
+            native.cancelAlert(_UPVALUE0_)
+            _UPVALUE1_:setText(_UPVALUE2_.text)
+            _UPVALUE1_:setReferencePoint(display.CenterReferencePoint)
+            _UPVALUE1_:setPosition(_UPVALUE1_.origX, _UPVALUE1_.origY)
+            _UPVALUE3_()
+            _UPVALUE1_.unlink.isVisible = true
+          end
+          _UPVALUE3_.network_request("linkMojang", L2_77, {
+            username = _UPVALUE0_.text,
+            udid = _UPVALUE4_.udid
+          })
+        end
+      else
+        L1_76 = native
+        L1_76 = L1_76.showAlert
+        L2_77 = ""
+        L1_76(L2_77, "Missing username", {"Ok"})
+      end
+      L1_76 = true
+      return L1_76
+    end
+    L10_66 = _UPVALUE4_
+    L10_66 = L10_66.newButton
+    L10_66 = L10_66({
+      top = 195,
+      left = 17,
+      width = 75,
+      height = 36,
+      default = "signin.png",
+      over = "signin-over.png",
+      onRelease = L9_65
+    })
+    L0_56:insert(L10_66)
+    _UPVALUE6_.from(L0_56, {
+      time = 200,
+      y = _H,
+      transition = easing.inOutQuad,
+      onComplete = function()
+        local L0_79, L1_80
+        L0_79 = _UPVALUE0_
+        L0_79.isVisible = false
+        L0_79 = _UPVALUE1_
+        L0_79.isVisible = true
+      end
+    }, true)
+  end
+  function L22_23()
+    local L0_81, L1_82, L2_83, L3_84, L4_85, L5_86, L6_87, L7_88, L8_89, L9_90, L10_91
+    L0_81 = display
+    L0_81 = L0_81.newGroup
+    L0_81 = L0_81()
+    L1_82 = _UPVALUE0_
+    L2_83 = L1_82
+    L1_82 = L1_82.insert
+    L3_84 = L0_81
+    L1_82(L2_83, L3_84)
+    L1_82 = display
+    L1_82 = L1_82.newImageRect
+    L2_83 = "bg-xboxlogin.jpg"
+    L3_84 = _W
+    L4_85 = _H
+    L1_82 = L1_82(L2_83, L3_84, L4_85)
+    L3_84 = L1_82
+    L2_83 = L1_82.setReferencePoint
+    L4_85 = display
+    L4_85 = L4_85.BottomCenterReferencePoint
+    L2_83(L3_84, L4_85)
+    L2_83 = _UPVALUE1_
+    L1_82.x = L2_83
+    L2_83 = _H
+    L1_82.y = L2_83
+    L3_84 = L1_82
+    L2_83 = L1_82.addEventListener
+    L4_85 = "touch"
+    function L5_86()
+      local L0_92, L1_93
+      L0_92 = true
+      return L0_92
+    end
+    L2_83(L3_84, L4_85, L5_86)
+    L3_84 = L0_81
+    L2_83 = L0_81.insert
+    L4_85 = L1_82
+    L2_83(L3_84, L4_85)
+    L2_83 = display
+    L2_83 = L2_83.newImageRect
+    L3_84 = "xboxliveicon.png"
+    L4_85 = 116
+    L5_86 = 78
+    L2_83 = L2_83(L3_84, L4_85, L5_86)
+    L4_85 = L2_83
+    L3_84 = L2_83.setReferencePoint
+    L5_86 = display
+    L5_86 = L5_86.TopLeftReferencePoint
+    L3_84(L4_85, L5_86)
+    L2_83.x = 20
+    L2_83.y = 40
+    L4_85 = L0_81
+    L3_84 = L0_81.insert
+    L5_86 = L2_83
+    L3_84(L4_85, L5_86)
+    L3_84 = display
+    L3_84 = L3_84.newImageRect
+    L4_85 = "textfield_xboxlogin.png"
+    L5_86 = 205
+    L6_87 = 30
+    L3_84 = L3_84(L4_85, L5_86, L6_87)
+    L5_86 = L3_84
+    L4_85 = L3_84.setReferencePoint
+    L6_87 = display
+    L6_87 = L6_87.TopLeftReferencePoint
+    L4_85(L5_86, L6_87)
+    L3_84.x = 17
+    L3_84.y = 166
+    L5_86 = L0_81
+    L4_85 = L0_81.insert
+    L6_87 = L3_84
+    L4_85(L5_86, L6_87)
+    function L4_85(A0_94)
+      local L1_95, L2_96
+      L1_95 = A0_94.phase
+      L2_96 = A0_94.target
+      L2_96 = L2_96.text
+      if L1_95 == "began" then
+        display.newRect(0, 0, _W, _H):setFillColor(0, 0, 0, 0)
+        display.newRect(0, 0, _W, _H).isHitTestable = true
+        display.newRect(0, 0, _W, _H):addEventListener("touch", function(A0_97)
+          native.setKeyboardFocus(nil)
+          A0_97.target = _UPVALUE0_.delete(A0_97.target)
+        end)
+      elseif L1_95 == "editing" and string.len(L2_96) > 100 then
+        A0_94.target.text = string.sub(L2_96, 1, 100)
+      elseif L1_95 == "submitted" then
+        native.setKeyboardFocus(nil)
+      end
+      return true
+    end
+    L5_86 = display
+    L5_86 = L5_86.newText
+    L6_87 = {}
+    L6_87.text = "XBOX USERNAME: "
+    L6_87.x = 0
+    L6_87.y = 0
+    L7_88 = _UPVALUE3_
+    L7_88 = L7_88.fonts
+    L7_88 = L7_88.bold
+    L6_87.font = L7_88
+    L6_87.fontSize = 14
+    L5_86 = L5_86(L6_87)
+    L7_88 = L5_86
+    L6_87 = L5_86.setReferencePoint
+    L8_89 = display
+    L8_89 = L8_89.TopLeftReferencePoint
+    L6_87(L7_88, L8_89)
+    L7_88 = L5_86
+    L6_87 = L5_86.setPosition
+    L8_89 = 20
+    L9_90 = 152
+    L6_87(L7_88, L8_89, L9_90)
+    L5_86.yScale = 0.9
+    L7_88 = L5_86
+    L6_87 = L5_86.setFillColor
+    L8_89 = 247
+    L9_90 = 247
+    L10_91 = 247
+    L6_87(L7_88, L8_89, L9_90, L10_91)
+    L7_88 = L0_81
+    L6_87 = L0_81.insert
+    L8_89 = L5_86
+    L6_87(L7_88, L8_89)
+    L6_87 = native
+    L6_87 = L6_87.newTextField
+    L7_88 = 20
+    L8_89 = 170
+    L9_90 = 200
+    L10_91 = 24
+    L6_87 = L6_87(L7_88, L8_89, L9_90, L10_91)
+    L7_88 = native
+    L7_88 = L7_88.newFont
+    L8_89 = _UPVALUE3_
+    L8_89 = L8_89.fonts
+    L8_89 = L8_89.regular
+    L9_90 = 16
+    L7_88 = L7_88(L8_89, L9_90)
+    L6_87.font = L7_88
+    L6_87.inputType = "username"
+    L6_87.isVisible = false
+    L8_89 = L6_87
+    L7_88 = L6_87.addEventListener
+    L9_90 = "userInput"
+    L10_91 = L4_85
+    L7_88(L8_89, L9_90, L10_91)
+    function L7_88(A0_98)
+      local L1_99
+      L1_99 = _UPVALUE0_
+      L1_99.isVisible = true
+      L1_99 = _UPVALUE1_
+      L1_99.isVisible = false
+      function L1_99()
+        blackRect = _UPVALUE0_.delete(blackRect)
+        _UPVALUE1_ = _UPVALUE0_.delete(_UPVALUE1_)
+        _UPVALUE2_ = _UPVALUE0_.delete(_UPVALUE2_)
+      end
+      transition.to(_UPVALUE3_, {
+        time = 200,
+        y = _H,
+        transition = easing.outQuad,
+        onComplete = L1_99
+      })
+      return true
+    end
+    L8_89 = _UPVALUE4_
+    L8_89 = L8_89.newButton
+    L9_90 = {}
+    L9_90.top = 37
+    L10_91 = _W
+    L10_91 = L10_91 - 38
+    L9_90.left = L10_91
+    L9_90.width = 27
+    L9_90.height = 29
+    L9_90.default = "crossclose.png"
+    L9_90.over = "crossclose-over.png"
+    L9_90.onRelease = L7_88
+    L8_89 = L8_89(L9_90)
+    L10_91 = L0_81
+    L9_90 = L0_81.insert
+    L9_90(L10_91, L8_89)
+    function L9_90()
+      local L0_100, L1_101
+      L0_100 = _UPVALUE0_
+      L0_100 = L0_100.text
+      if L0_100 then
+        L0_100 = string
+        L0_100 = L0_100.len
+        L1_101 = _UPVALUE0_
+        L1_101 = L1_101.text
+        L1_101 = L1_101.gsub
+        L1_101 = L1_101(L1_101, " ", "")
+        L0_100 = L0_100(L1_101, L1_101(L1_101, " ", ""))
+        if L0_100 > 0 then
+          L0_100 = native
+          L0_100 = L0_100.setActivityIndicator
+          L1_101 = true
+          L0_100(L1_101)
+          L0_100 = native
+          L0_100 = L0_100.showAlert
+          L1_101 = ""
+          L0_100 = L0_100(L1_101, "Linking")
+          function L1_101(A0_102)
+            local L1_103, L2_104, L3_105
+            L1_103 = A0_102.response
+            L3_105 = L1_103
+            L2_104 = L1_103.find
+            L2_104 = L2_104(L3_105, "<div id=\"Gamerscore\">--</div>")
+            if L2_104 == nil then
+              L2_104 = nil
+              L3_105 = L1_103.gsub
+              L3_105(L1_103, "<title>(.-)</title>", function(A0_106)
+                _UPVALUE0_ = _UPVALUE1_.html_decode(A0_106)
+              end)
+              function L3_105(A0_107)
+                native.setActivityIndicator(false)
+                native.cancelAlert(_UPVALUE0_)
+                _UPVALUE1_:setText(_UPVALUE2_)
+                _UPVALUE1_:setReferencePoint(display.CenterReferencePoint)
+                _UPVALUE1_:setPosition(_UPVALUE1_.origX, _UPVALUE1_.origY)
+                _UPVALUE3_()
+                _UPVALUE1_.unlink.isVisible = true
+              end
+              _UPVALUE0_.network_request("linkXbox", L3_105, {
+                username = L2_104,
+                udid = _UPVALUE4_.udid
+              })
+            else
+              L2_104 = native
+              L2_104 = L2_104.setActivityIndicator
+              L3_105 = false
+              L2_104(L3_105)
+              L2_104 = native
+              L2_104 = L2_104.cancelAlert
+              L3_105 = _UPVALUE1_
+              L2_104(L3_105)
+              L2_104 = native
+              L2_104 = L2_104.showAlert
+              L3_105 = "User does not exist"
+              L2_104(L3_105, "The user you typed in does not exist. Please try again with a valid Xbox Live gamertag.", {"Ok"})
+            end
+          end
+          network.request("http://gamercard.xbox.com/en-US/" .. _UPVALUE5_.escape(_UPVALUE0_.text) .. ".card", "GET", L1_101)
+        end
+      else
+        L0_100 = native
+        L0_100 = L0_100.showAlert
+        L1_101 = ""
+        L0_100(L1_101, "You forgot to fill in your username.", {"Ok"})
+      end
+      L0_100 = true
+      return L0_100
+    end
+    L10_91 = _UPVALUE4_
+    L10_91 = L10_91.newButton
+    L10_91 = L10_91({
+      top = 208,
+      left = 19,
+      width = 75,
+      height = 36,
+      default = "link.png",
+      over = "link-over.png",
+      onRelease = L9_90
+    })
+    L0_81:insert(L10_91)
+    _UPVALUE7_.from(L0_81, {
+      time = 200,
+      y = _H,
+      transition = easing.inOutQuad,
+      onComplete = function()
+        local L0_108, L1_109
+        L0_108 = _UPVALUE0_
+        L0_108.isVisible = false
+        L0_108 = _UPVALUE1_
+        L0_108.isVisible = true
+      end
+    }, true)
+  end
+  function L23_24()
+    local L0_110, L1_111, L2_112, L3_113, L4_114, L5_115, L6_116, L7_117, L8_118, L9_119, L10_120, L11_121
+    L0_110 = display
+    L0_110 = L0_110.newGroup
+    L0_110 = L0_110()
+    L1_111 = _UPVALUE0_
+    L2_112 = L1_111
+    L1_111 = L1_111.insert
+    L3_113 = L0_110
+    L1_111(L2_112, L3_113)
+    L1_111 = display
+    L1_111 = L1_111.newImageRect
+    L2_112 = "bg-psnlogin.jpg"
+    L3_113 = _W
+    L4_114 = _H
+    L1_111 = L1_111(L2_112, L3_113, L4_114)
+    L3_113 = L1_111
+    L2_112 = L1_111.setReferencePoint
+    L4_114 = display
+    L4_114 = L4_114.BottomCenterReferencePoint
+    L2_112(L3_113, L4_114)
+    L2_112 = _UPVALUE1_
+    L1_111.x = L2_112
+    L2_112 = _H
+    L1_111.y = L2_112
+    L3_113 = L1_111
+    L2_112 = L1_111.addEventListener
+    L4_114 = "touch"
+    function L5_115()
+      local L0_122, L1_123
+      L0_122 = true
+      return L0_122
+    end
+    L2_112(L3_113, L4_114, L5_115)
+    L3_113 = L0_110
+    L2_112 = L0_110.insert
+    L4_114 = L1_111
+    L2_112(L3_113, L4_114)
+    L2_112 = display
+    L2_112 = L2_112.newText
+    L3_113 = {}
+    L3_113.text = "Enter PSN username"
+    L4_114 = _UPVALUE2_
+    L4_114 = L4_114.fonts
+    L4_114 = L4_114.bold
+    L3_113.font = L4_114
+    L3_113.fontSize = 15
+    L2_112 = L2_112(L3_113)
+    L4_114 = L2_112
+    L3_113 = L2_112.setReferencePoint
+    L5_115 = display
+    L5_115 = L5_115.TopCenterReferencePoint
+    L3_113(L4_114, L5_115)
+    L4_114 = L2_112
+    L3_113 = L2_112.setPosition
+    L5_115 = _UPVALUE1_
+    L6_116 = 40
+    L3_113(L4_114, L5_115, L6_116)
+    L4_114 = L0_110
+    L3_113 = L0_110.insert
+    L5_115 = L2_112
+    L3_113(L4_114, L5_115)
+    L3_113 = display
+    L3_113 = L3_113.newImageRect
+    L4_114 = "psn_textfieldbg.png"
+    L5_115 = 199
+    L6_116 = 24
+    L3_113 = L3_113(L4_114, L5_115, L6_116)
+    L5_115 = L3_113
+    L4_114 = L3_113.setReferencePoint
+    L6_116 = display
+    L6_116 = L6_116.TopLeftReferencePoint
+    L4_114(L5_115, L6_116)
+    L3_113.x = 17
+    L3_113.y = 172
+    L5_115 = L0_110
+    L4_114 = L0_110.insert
+    L6_116 = L3_113
+    L4_114(L5_115, L6_116)
+    function L4_114(A0_124)
+      local L1_125, L2_126
+      L1_125 = A0_124.phase
+      L2_126 = A0_124.target
+      L2_126 = L2_126.text
+      if L1_125 == "began" then
+        display.newRect(0, 0, _W, _H):setFillColor(0, 0, 0, 0)
+        display.newRect(0, 0, _W, _H).isHitTestable = true
+        display.newRect(0, 0, _W, _H):addEventListener("touch", function(A0_127)
+          native.setKeyboardFocus(nil)
+          A0_127.target = _UPVALUE0_.delete(A0_127.target)
+        end)
+      elseif L1_125 == "editing" and string.len(L2_126) > 100 then
+        A0_124.target.text = string.sub(L2_126, 1, 100)
+      elseif L1_125 == "submitted" then
+        native.setKeyboardFocus(nil)
+      end
+      return true
+    end
+    L5_115 = display
+    L5_115 = L5_115.newText
+    L6_116 = {}
+    L6_116.text = "PSN USERNAME: "
+    L6_116.x = 0
+    L6_116.y = 0
+    L7_117 = _UPVALUE2_
+    L7_117 = L7_117.fonts
+    L7_117 = L7_117.bold
+    L6_116.font = L7_117
+    L6_116.fontSize = 14
+    L5_115 = L5_115(L6_116)
+    L7_117 = L5_115
+    L6_116 = L5_115.setReferencePoint
+    L8_118 = display
+    L8_118 = L8_118.TopLeftReferencePoint
+    L6_116(L7_117, L8_118)
+    L7_117 = L5_115
+    L6_116 = L5_115.setPosition
+    L8_118 = 21
+    L9_119 = 152
+    L6_116(L7_117, L8_118, L9_119)
+    L5_115.yScale = 0.9
+    L7_117 = L5_115
+    L6_116 = L5_115.setFillColor
+    L8_118 = 247
+    L9_119 = 247
+    L10_120 = 247
+    L6_116(L7_117, L8_118, L9_119, L10_120)
+    L7_117 = L0_110
+    L6_116 = L0_110.insert
+    L8_118 = L5_115
+    L6_116(L7_117, L8_118)
+    L6_116 = native
+    L6_116 = L6_116.newTextField
+    L7_117 = 23
+    L8_118 = 171
+    L9_119 = 200
+    L10_120 = 24
+    L6_116 = L6_116(L7_117, L8_118, L9_119, L10_120)
+    L7_117 = native
+    L7_117 = L7_117.newFont
+    L8_118 = _UPVALUE2_
+    L8_118 = L8_118.fonts
+    L8_118 = L8_118.regular
+    L9_119 = 14
+    L7_117 = L7_117(L8_118, L9_119)
+    L6_116.font = L7_117
+    L6_116.inputType = "username"
+    L6_116.isVisible = false
+    L8_118 = L6_116
+    L7_117 = L6_116.setTextColor
+    L9_119 = 255
+    L10_120 = 255
+    L11_121 = 255
+    L7_117(L8_118, L9_119, L10_120, L11_121)
+    L6_116.hasBackground = false
+    L8_118 = L6_116
+    L7_117 = L6_116.addEventListener
+    L9_119 = "userInput"
+    L10_120 = L4_114
+    L7_117(L8_118, L9_119, L10_120)
+    L7_117 = display
+    L7_117 = L7_117.newText
+    L8_118 = {}
+    L8_118.text = ""
+    L8_118.width = 200
+    L8_118.height = 20
+    L7_117 = L7_117(L8_118)
+    L9_119 = L7_117
+    L8_118 = L7_117.setReferencePoint
+    L10_120 = display
+    L10_120 = L10_120.TopLeftReferencePoint
+    L8_118(L9_119, L10_120)
+    L9_119 = L7_117
+    L8_118 = L7_117.setPosition
+    L10_120 = 20
+    L11_121 = 170
+    L8_118(L9_119, L10_120, L11_121)
+    L9_119 = L0_110
+    L8_118 = L0_110.insert
+    L10_120 = L7_117
+    L8_118(L9_119, L10_120)
+    function L8_118(A0_128)
+      local L1_129
+      L1_129 = _UPVALUE0_
+      L1_129.isVisible = true
+      L1_129 = _UPVALUE1_
+      L1_129.isVisible = false
+      function L1_129()
+        blackRect = _UPVALUE0_.delete(blackRect)
+        _UPVALUE1_ = _UPVALUE0_.delete(_UPVALUE1_)
+        _UPVALUE2_ = _UPVALUE0_.delete(_UPVALUE2_)
+      end
+      transition.to(_UPVALUE3_, {
+        time = 200,
+        y = _H,
+        transition = easing.outQuad,
+        onComplete = L1_129
+      })
+      return true
+    end
+    L9_119 = _UPVALUE4_
+    L9_119 = L9_119.newButton
+    L10_120 = {}
+    L10_120.top = 37
+    L11_121 = _W
+    L11_121 = L11_121 - 38
+    L10_120.left = L11_121
+    L10_120.width = 27
+    L10_120.height = 29
+    L10_120.default = "crossclose.png"
+    L10_120.over = "crossclose-over.png"
+    L10_120.onRelease = L8_118
+    L9_119 = L9_119(L10_120)
+    L11_121 = L0_110
+    L10_120 = L0_110.insert
+    L10_120(L11_121, L9_119)
+    function L10_120()
+      local L0_130
+      L0_130 = _UPVALUE0_
+      L0_130 = L0_130.text
+      if L0_130 then
+        L0_130 = string
+        L0_130 = L0_130.len
+        L0_130 = L0_130(_UPVALUE0_.text:gsub(" ", ""))
+        if L0_130 > 0 then
+          function L0_130(A0_131)
+            _UPVALUE0_:setText(_UPVALUE1_.text)
+            _UPVALUE0_:setReferencePoint(display.CenterReferencePoint)
+            _UPVALUE0_:setPosition(_UPVALUE0_.origX, _UPVALUE0_.origY)
+            _UPVALUE2_()
+            _UPVALUE0_.unlink.isVisible = true
+          end
+          _UPVALUE3_.network_request("linkPSN", L0_130, {
+            username = _UPVALUE0_.text,
+            udid = _UPVALUE4_.udid
+          })
+        end
+      else
+        L0_130 = native
+        L0_130 = L0_130.showAlert
+        L0_130("", "You forgot to fill in your username.", {"Ok"})
+      end
+      L0_130 = true
+      return L0_130
+    end
+    L11_121 = _UPVALUE4_
+    L11_121 = L11_121.newButton
+    L11_121 = L11_121({
+      top = 208,
+      left = 17,
+      width = 75,
+      height = 36,
+      default = "link.png",
+      over = "link-over.png",
+      onRelease = L10_120
+    })
+    L0_110:insert(L11_121)
+    _UPVALUE6_.from(L0_110, {
+      time = 200,
+      y = _H,
+      transition = easing.inOutQuad,
+      onComplete = function()
+        local L0_132, L1_133
+        L0_132 = _UPVALUE0_
+        L0_132.isVisible = false
+        L0_132 = _UPVALUE1_
+        L0_132.isVisible = true
+      end
+    }, true)
+  end
+  L24_25 = _UPVALUE3_
+  L24_25 = L24_25.newScrollView
+  L25_26 = {}
+  L25_26.top = 64
+  L26_27 = _W
+  L25_26.width = L26_27
+  L26_27 = _H
+  L26_27 = L26_27 - 64
+  L25_26.height = L26_27
+  L26_27 = {
+    L27_28,
+    L28_29,
+    L29_30,
+    L30_31
+  }
+  L27_28 = 0
+  L28_29 = 0
+  L29_30 = 0
+  L30_31 = 0
+  L25_26.bgColor = L26_27
+  L24_25 = L24_25(L25_26)
+  L25_26 = L24_25.content
+  L25_26.horizontalScrollDisabled = true
+  L26_27 = L3_4
+  L25_26 = L3_4.insert
+  L27_28 = L24_25
+  L25_26(L26_27, L27_28)
+  L25_26 = display
+  L25_26 = L25_26.newGroup
+  L25_26 = L25_26()
+  L27_28 = L24_25
+  L26_27 = L24_25.insert
+  L28_29 = L25_26
+  L26_27(L27_28, L28_29)
+  function L26_27(A0_134)
+    local L1_135, L2_136
+    L1_135 = A0_134.phase
+    L2_136 = A0_134.target
+    L2_136 = L2_136.id
+    if L1_135 == "press" then
+      if L2_136 == "psn" then
+        _UPVALUE0_:setFillColor(255, 255, 255)
+      elseif L2_136 == "xbox" then
+        _UPVALUE1_:setFillColor(255, 255, 255)
+      elseif L2_136 == "mojang" then
+        _UPVALUE2_:setFillColor(255, 255, 255)
+      elseif L2_136 == "gamecenter" then
+        _UPVALUE3_:setFillColor(255, 255, 255)
+      end
+    elseif L1_135 == "moved" then
+      if _UPVALUE4_(A0_134.xStart - A0_134.x) < _UPVALUE4_(A0_134.yStart - A0_134.y) then
+        _UPVALUE5_:takeFocus(A0_134)
+        if L2_136 == "psn" then
+          _UPVALUE0_:setFillColor(80, 80, 80)
+        elseif L2_136 == "xbox" then
+          _UPVALUE1_:setFillColor(80, 80, 80)
+        elseif L2_136 == "mojang" then
+          _UPVALUE2_:setFillColor(80, 80, 80)
+        elseif L2_136 == "gamecenter" then
+          _UPVALUE3_:setFillColor(80, 80, 80)
+        end
+      end
+    elseif L1_135 == "release" or L1_135 == "cancelled" then
+      if L2_136 == "psn" then
+        _UPVALUE0_:setFillColor(80, 80, 80)
+      elseif L2_136 == "xbox" then
+        _UPVALUE1_:setFillColor(80, 80, 80)
+      elseif L2_136 == "mojang" then
+        _UPVALUE2_:setFillColor(80, 80, 80)
+      elseif L2_136 == "gamecenter" then
+        _UPVALUE3_:setFillColor(80, 80, 80)
+      end
+      if L2_136 == "psn" then
+        _UPVALUE6_()
+      elseif L2_136 == "xbox" then
+        _UPVALUE7_()
+      elseif L2_136 == "mojang" then
+        _UPVALUE8_()
+      elseif L2_136 == "gamecenter" then
+        system.openURL("gamecenter://")
+      end
+    end
+    return true
+  end
+  function L27_28(A0_137)
+    local L1_138, L2_139, L3_140, L4_141, L5_142, L6_143, L7_144
+    L1_138 = A0_137.target
+    L1_138 = L1_138.group
+    L2_139 = A0_137.phase
+    L3_140 = A0_137.target
+    L3_140 = L3_140.text
+    L4_141 = A0_137.target
+    L4_141 = L4_141.id
+    L5_142 = _UPVALUE0_
+    L5_142 = L5_142.isGameCenter
+    L5_142 = L5_142()
+    if L5_142 == true then
+      if L2_139 == "began" then
+        L6_143 = L3_140
+        L5_142 = L3_140.setFillColor
+        L7_144 = 234
+        L5_142(L6_143, L7_144, 99, 0, 255)
+      elseif L2_139 == "moved" then
+        L6_143 = L3_140
+        L5_142 = L3_140.setFillColor
+        L7_144 = 255
+        L5_142(L6_143, L7_144, 255, 255)
+        L5_142 = _UPVALUE1_
+        L6_143 = L5_142
+        L5_142 = L5_142.takeFocus
+        L7_144 = A0_137
+        L5_142(L6_143, L7_144)
+      elseif L2_139 == "ended" then
+        L6_143 = L3_140
+        L5_142 = L3_140.setFillColor
+        L7_144 = 255
+        L5_142(L6_143, L7_144, 255, 255)
+        if L4_141 == "gamecenter" then
+          L5_142 = system
+          L5_142 = L5_142.openUrl
+          L6_143 = "gamecenter:"
+          L5_142(L6_143)
+        else
+          L5_142 = nil
+          if L4_141 == "psn" then
+            L5_142 = "PSN"
+          elseif L4_141 == "xbox" then
+            L5_142 = "Xbox"
+          elseif L4_141 == "mojang" then
+            L5_142 = "mojang"
+          end
+          L6_143 = native
+          L6_143 = L6_143.setActivityIndicator
+          L7_144 = true
+          L6_143(L7_144)
+          L6_143 = native
+          L6_143 = L6_143.showAlert
+          L7_144 = ""
+          L6_143 = L6_143(L7_144, "Unlinking " .. L5_142 .. " account", {})
+          function L7_144(A0_145)
+            native.cancelAlert(_UPVALUE0_)
+            native.setActivityIndicator(false)
+            _UPVALUE1_ = _UPVALUE2_.delete(_UPVALUE1_)
+            _UPVALUE3_ = _UPVALUE2_.delete(_UPVALUE3_)
+            if _UPVALUE4_ == "psn" then
+            elseif _UPVALUE4_ == "xbox" then
+            else
+            end
+            _UPVALUE7_:setText("")
+            _UPVALUE7_:setReferencePoint(display.CenterReferencePoint)
+            _UPVALUE7_:setPosition(_UPVALUE7_.origX, _UPVALUE7_.origY)
+          end
+          _UPVALUE0_.network_request("unlink_account", L7_144, {
+            account = L5_142,
+            udid = _UPVALUE5_.udid
+          })
+        end
+      end
+    end
+    L5_142 = true
+    return L5_142
+  end
+  L28_29 = 70
+  L29_30 = 115
+  L30_31 = _UPVALUE3_
+  L30_31 = L30_31.newButton
+  L31_32 = {}
+  L31_32.id = "xbox"
+  L31_32.width = 281
+  L31_32.height = 94
+  L31_32.default = "account-xbox.png"
+  L31_32.over = "account-xbox-over.png"
+  L31_32.onEvent = L26_27
+  L30_31 = L30_31(L31_32)
+  L32_33 = L30_31
+  L31_32 = L30_31.setReferencePoint
+  L33_34 = display
+  L33_34 = L33_34.CenterReferencePoint
+  L31_32(L32_33, L33_34)
+  L30_31.x = L5_6
+  L30_31.y = L28_29
+  L32_33 = L25_26
+  L31_32 = L25_26.insert
+  L33_34 = L30_31
+  L31_32(L32_33, L33_34)
+  L31_32 = display
+  L31_32 = L31_32.newGroup
+  L31_32 = L31_32()
+  L33_34 = L25_26
+  L32_33 = L25_26.insert
+  L34_35 = L31_32
+  L32_33(L33_34, L34_35)
+  L32_33 = display
+  L32_33 = L32_33.newText
+  L33_34 = {}
+  L33_34.text = "Unlink xbox"
+  L33_34.x = 0
+  L33_34.y = 0
+  L34_35 = _UPVALUE1_
+  L34_35 = L34_35.fonts
+  L34_35 = L34_35.bold
+  L33_34.font = L34_35
+  L33_34.fontSize = 12
+  L32_33 = L32_33(L33_34)
+  L34_35 = L32_33
+  L33_34 = L32_33.setReferencePoint
+  L35_36 = display
+  L35_36 = L35_36.TopRightReferencePoint
+  L33_34(L34_35, L35_36)
+  L34_35 = L32_33
+  L33_34 = L32_33.setPosition
+  L35_36 = L5_6 + 137
+  L36_37 = L30_31.y
+  L36_37 = L36_37 + 44
+  L33_34(L34_35, L35_36, L36_37)
+  L32_33.yScale = 0.9
+  L34_35 = L31_32
+  L33_34 = L31_32.insert
+  L35_36 = L32_33
+  L33_34(L34_35, L35_36)
+  L33_34 = display
+  L33_34 = L33_34.newRect
+  L34_35 = 0
+  L35_36 = 0
+  L36_37 = L32_33.width
+  L36_37 = L36_37 + 40
+  L37_38 = L32_33.height
+  L37_38 = L37_38 + 20
+  L33_34 = L33_34(L34_35, L35_36, L36_37, L37_38)
+  L35_36 = L33_34
+  L34_35 = L33_34.setReferencePoint
+  L36_37 = display
+  L36_37 = L36_37.CenterReferencePoint
+  L34_35(L35_36, L36_37)
+  L34_35 = L32_33.x
+  L35_36 = L32_33.width
+  L35_36 = L35_36 * 0.5
+  L34_35 = L34_35 - L35_36
+  L33_34.x = L34_35
+  L34_35 = L32_33.y
+  L35_36 = L32_33.height
+  L35_36 = L35_36 * 0.5
+  L34_35 = L34_35 + L35_36
+  L33_34.y = L34_35
+  L35_36 = L33_34
+  L34_35 = L33_34.setFillColor
+  L36_37 = 0
+  L37_38 = 0
+  L38_39 = 0
+  L39_40 = 0
+  L34_35(L35_36, L36_37, L37_38, L38_39, L39_40)
+  L33_34.id = "xbox"
+  L33_34.text = L32_33
+  L33_34.group = L31_32
+  L33_34.isHitTestable = true
+  L35_36 = L33_34
+  L34_35 = L33_34.addEventListener
+  L36_37 = "touch"
+  L37_38 = L27_28
+  L34_35(L35_36, L36_37, L37_38)
+  L35_36 = L31_32
+  L34_35 = L31_32.insert
+  L36_37 = L33_34
+  L34_35(L35_36, L36_37)
+  L35_36 = L32_33
+  L34_35 = L32_33.toFront
+  L34_35(L35_36)
+  L34_35 = _UPVALUE3_
+  L34_35 = L34_35.newButton
+  L35_36 = {}
+  L35_36.id = "mojang"
+  L35_36.width = 281
+  L35_36.height = 94
+  L35_36.default = "account-mojang.png"
+  L35_36.over = "account-mojang-over.png"
+  L35_36.onEvent = L26_27
+  L34_35 = L34_35(L35_36)
+  L36_37 = L34_35
+  L35_36 = L34_35.setReferencePoint
+  L37_38 = display
+  L37_38 = L37_38.CenterReferencePoint
+  L35_36(L36_37, L37_38)
+  L34_35.x = L5_6
+  L35_36 = L28_29 + L29_30
+  L34_35.y = L35_36
+  L36_37 = L25_26
+  L35_36 = L25_26.insert
+  L37_38 = L34_35
+  L35_36(L36_37, L37_38)
+  L35_36 = display
+  L35_36 = L35_36.newGroup
+  L35_36 = L35_36()
+  L37_38 = L25_26
+  L36_37 = L25_26.insert
+  L38_39 = L35_36
+  L36_37(L37_38, L38_39)
+  L36_37 = display
+  L36_37 = L36_37.newText
+  L37_38 = {}
+  L37_38.text = "Unlink mojang"
+  L37_38.x = 0
+  L37_38.y = 0
+  L38_39 = _UPVALUE1_
+  L38_39 = L38_39.fonts
+  L38_39 = L38_39.bold
+  L37_38.font = L38_39
+  L37_38.fontSize = 12
+  L36_37 = L36_37(L37_38)
+  L38_39 = L36_37
+  L37_38 = L36_37.setReferencePoint
+  L39_40 = display
+  L39_40 = L39_40.TopRightReferencePoint
+  L37_38(L38_39, L39_40)
+  L38_39 = L36_37
+  L37_38 = L36_37.setPosition
+  L39_40 = L5_6 + 137
+  L40_41 = L34_35.y
+  L40_41 = L40_41 + 44
+  L37_38(L38_39, L39_40, L40_41)
+  L36_37.yScale = 0.9
+  L38_39 = L35_36
+  L37_38 = L35_36.insert
+  L39_40 = L36_37
+  L37_38(L38_39, L39_40)
+  L37_38 = display
+  L37_38 = L37_38.newRect
+  L38_39 = 0
+  L39_40 = 0
+  L40_41 = L36_37.width
+  L40_41 = L40_41 + 40
+  L41_42 = L36_37.height
+  L41_42 = L41_42 + 20
+  L37_38 = L37_38(L38_39, L39_40, L40_41, L41_42)
+  L39_40 = L37_38
+  L38_39 = L37_38.setReferencePoint
+  L40_41 = display
+  L40_41 = L40_41.CenterReferencePoint
+  L38_39(L39_40, L40_41)
+  L38_39 = L36_37.x
+  L39_40 = L36_37.width
+  L39_40 = L39_40 * 0.5
+  L38_39 = L38_39 - L39_40
+  L37_38.x = L38_39
+  L38_39 = L36_37.y
+  L39_40 = L36_37.height
+  L39_40 = L39_40 * 0.5
+  L38_39 = L38_39 + L39_40
+  L37_38.y = L38_39
+  L39_40 = L37_38
+  L38_39 = L37_38.setFillColor
+  L40_41 = 0
+  L41_42 = 0
+  L42_43 = 0
+  L43_44 = 0
+  L38_39(L39_40, L40_41, L41_42, L42_43, L43_44)
+  L37_38.id = "mojang"
+  L37_38.text = L36_37
+  L37_38.group = L35_36
+  L37_38.isHitTestable = true
+  L39_40 = L37_38
+  L38_39 = L37_38.addEventListener
+  L40_41 = "touch"
+  L41_42 = L27_28
+  L38_39(L39_40, L40_41, L41_42)
+  L39_40 = L35_36
+  L38_39 = L35_36.insert
+  L40_41 = L37_38
+  L38_39(L39_40, L40_41)
+  L39_40 = L36_37
+  L38_39 = L36_37.toFront
+  L38_39(L39_40)
+  L38_39 = _UPVALUE3_
+  L38_39 = L38_39.newButton
+  L39_40 = {}
+  L39_40.id = "psn"
+  L39_40.width = 281
+  L39_40.height = 94
+  L39_40.default = "account-playstation.png"
+  L39_40.over = "account-playstation-over.png"
+  L39_40.onEvent = L26_27
+  L38_39 = L38_39(L39_40)
+  L40_41 = L38_39
+  L39_40 = L38_39.setReferencePoint
+  L41_42 = display
+  L41_42 = L41_42.CenterReferencePoint
+  L39_40(L40_41, L41_42)
+  L38_39.x = L5_6
+  L39_40 = L29_30 * 2
+  L39_40 = L28_29 + L39_40
+  L38_39.y = L39_40
+  L40_41 = L25_26
+  L39_40 = L25_26.insert
+  L41_42 = L38_39
+  L39_40(L40_41, L41_42)
+  L39_40 = display
+  L39_40 = L39_40.newGroup
+  L39_40 = L39_40()
+  L41_42 = L25_26
+  L40_41 = L25_26.insert
+  L42_43 = L39_40
+  L40_41(L41_42, L42_43)
+  L40_41 = display
+  L40_41 = L40_41.newText
+  L41_42 = {}
+  L41_42.text = "Unlink PSN"
+  L41_42.x = 0
+  L41_42.y = 0
+  L42_43 = _UPVALUE1_
+  L42_43 = L42_43.fonts
+  L42_43 = L42_43.bold
+  L41_42.font = L42_43
+  L41_42.fontSize = 12
+  L40_41 = L40_41(L41_42)
+  L42_43 = L40_41
+  L41_42 = L40_41.setReferencePoint
+  L43_44 = display
+  L43_44 = L43_44.TopRightReferencePoint
+  L41_42(L42_43, L43_44)
+  L42_43 = L40_41
+  L41_42 = L40_41.setPosition
+  L43_44 = L5_6 + 137
+  L44_45 = L38_39.y
+  L44_45 = L44_45 + 44
+  L41_42(L42_43, L43_44, L44_45)
+  L40_41.yScale = 0.9
+  L42_43 = L39_40
+  L41_42 = L39_40.insert
+  L43_44 = L40_41
+  L41_42(L42_43, L43_44)
+  L41_42 = display
+  L41_42 = L41_42.newRect
+  L42_43 = 0
+  L43_44 = 0
+  L44_45 = L40_41.width
+  L44_45 = L44_45 + 40
+  L45_46 = L40_41.height
+  L45_46 = L45_46 + 20
+  L41_42 = L41_42(L42_43, L43_44, L44_45, L45_46)
+  L43_44 = L41_42
+  L42_43 = L41_42.setReferencePoint
+  L44_45 = display
+  L44_45 = L44_45.CenterReferencePoint
+  L42_43(L43_44, L44_45)
+  L42_43 = L40_41.x
+  L43_44 = L40_41.width
+  L43_44 = L43_44 * 0.5
+  L42_43 = L42_43 - L43_44
+  L41_42.x = L42_43
+  L42_43 = L40_41.y
+  L43_44 = L40_41.height
+  L43_44 = L43_44 * 0.5
+  L42_43 = L42_43 + L43_44
+  L41_42.y = L42_43
+  L43_44 = L41_42
+  L42_43 = L41_42.setFillColor
+  L44_45 = 0
+  L45_46 = 0
+  L46_47 = 0
+  L47_48 = 0
+  L42_43(L43_44, L44_45, L45_46, L46_47, L47_48)
+  L41_42.id = "psn"
+  L41_42.text = L40_41
+  L41_42.group = L39_40
+  L41_42.isHitTestable = true
+  L43_44 = L41_42
+  L42_43 = L41_42.addEventListener
+  L44_45 = "touch"
+  L45_46 = L27_28
+  L42_43(L43_44, L44_45, L45_46)
+  L43_44 = L39_40
+  L42_43 = L39_40.insert
+  L44_45 = L41_42
+  L42_43(L43_44, L44_45)
+  L43_44 = L40_41
+  L42_43 = L40_41.toFront
+  L42_43(L43_44)
+  L42_43 = _UPVALUE3_
+  L42_43 = L42_43.newButton
+  L43_44 = {}
+  L43_44.id = "gamecenter"
+  L43_44.width = 281
+  L43_44.height = 94
+  L43_44.default = "account-gamecenter.png"
+  L43_44.over = "account-gamecenter-over.png"
+  L43_44.onEvent = L26_27
+  L42_43 = L42_43(L43_44)
+  L44_45 = L42_43
+  L43_44 = L42_43.setReferencePoint
+  L45_46 = display
+  L45_46 = L45_46.CenterReferencePoint
+  L43_44(L44_45, L45_46)
+  L42_43.x = L5_6
+  L43_44 = L29_30 * 3
+  L43_44 = L28_29 + L43_44
+  L42_43.y = L43_44
+  L44_45 = L25_26
+  L43_44 = L25_26.insert
+  L45_46 = L42_43
+  L43_44(L44_45, L45_46)
+  L39_40.isVisible = false
+  L31_32.isVisible = false
+  L35_36.isVisible = false
+  L43_44 = L5_6 + 45
+  L44_45 = display
+  L44_45 = L44_45.newText
+  L45_46 = {}
+  L45_46.text = ""
+  L46_47 = _UPVALUE1_
+  L46_47 = L46_47.fonts
+  L46_47 = L46_47.bold
+  L45_46.font = L46_47
+  L45_46.fontSize = 18
+  L44_45 = L44_45(L45_46)
+  L15_16 = L44_45
+  L45_46 = L15_16
+  L44_45 = L15_16.setReferencePoint
+  L46_47 = display
+  L46_47 = L46_47.CenterReferencePoint
+  L44_45(L45_46, L46_47)
+  L45_46 = L15_16
+  L44_45 = L15_16.setPosition
+  L46_47 = L43_44
+  L47_48 = L38_39.y
+  L47_48 = L47_48 + 6
+  L44_45(L45_46, L46_47, L47_48)
+  L44_45 = L15_16.x
+  L15_16.origX = L44_45
+  L44_45 = L15_16.y
+  L15_16.origY = L44_45
+  L45_46 = L15_16
+  L44_45 = L15_16.setFillColor
+  L46_47 = 80
+  L47_48 = 80
+  L48_49 = 80
+  L44_45(L45_46, L46_47, L47_48, L48_49)
+  L15_16.rotation = -2
+  L15_16.account = L38_39
+  L15_16.unlink = L39_40
+  L45_46 = L25_26
+  L44_45 = L25_26.insert
+  L46_47 = L15_16
+  L44_45(L45_46, L46_47)
+  L44_45 = display
+  L44_45 = L44_45.newText
+  L45_46 = {}
+  L45_46.text = ""
+  L46_47 = _UPVALUE1_
+  L46_47 = L46_47.fonts
+  L46_47 = L46_47.bold
+  L45_46.font = L46_47
+  L45_46.fontSize = 18
+  L44_45 = L44_45(L45_46)
+  L14_15 = L44_45
+  L45_46 = L14_15
+  L44_45 = L14_15.setReferencePoint
+  L46_47 = display
+  L46_47 = L46_47.CenterReferencePoint
+  L44_45(L45_46, L46_47)
+  L45_46 = L14_15
+  L44_45 = L14_15.setPosition
+  L46_47 = L43_44
+  L47_48 = L30_31.y
+  L47_48 = L47_48 + 6
+  L44_45(L45_46, L46_47, L47_48)
+  L44_45 = L14_15.x
+  L14_15.origX = L44_45
+  L44_45 = L14_15.y
+  L14_15.origY = L44_45
+  L45_46 = L14_15
+  L44_45 = L14_15.setFillColor
+  L46_47 = 80
+  L47_48 = 80
+  L48_49 = 80
+  L44_45(L45_46, L46_47, L47_48, L48_49)
+  L14_15.rotation = -2
+  L14_15.account = L30_31
+  L14_15.unlink = L31_32
+  L45_46 = L25_26
+  L44_45 = L25_26.insert
+  L46_47 = L14_15
+  L44_45(L45_46, L46_47)
+  L44_45 = display
+  L44_45 = L44_45.newText
+  L45_46 = {}
+  L45_46.text = ""
+  L46_47 = _UPVALUE1_
+  L46_47 = L46_47.fonts
+  L46_47 = L46_47.bold
+  L45_46.font = L46_47
+  L45_46.fontSize = 18
+  L44_45 = L44_45(L45_46)
+  L13_14 = L44_45
+  L45_46 = L13_14
+  L44_45 = L13_14.setReferencePoint
+  L46_47 = display
+  L46_47 = L46_47.CenterReferencePoint
+  L44_45(L45_46, L46_47)
+  L45_46 = L13_14
+  L44_45 = L13_14.setPosition
+  L46_47 = L43_44
+  L47_48 = L34_35.y
+  L47_48 = L47_48 + 6
+  L44_45(L45_46, L46_47, L47_48)
+  L44_45 = L13_14.x
+  L13_14.origX = L44_45
+  L44_45 = L13_14.y
+  L13_14.origY = L44_45
+  L45_46 = L13_14
+  L44_45 = L13_14.setFillColor
+  L46_47 = 80
+  L47_48 = 80
+  L48_49 = 80
+  L44_45(L45_46, L46_47, L47_48, L48_49)
+  L13_14.rotation = -2
+  L13_14.account = L34_35
+  L13_14.unlink = L35_36
+  L45_46 = L25_26
+  L44_45 = L25_26.insert
+  L46_47 = L13_14
+  L44_45(L45_46, L46_47)
+  L44_45 = display
+  L44_45 = L44_45.newText
+  L45_46 = {}
+  L46_47 = _UPVALUE1_
+  L46_47 = L46_47.gamecenterNickname
+  L45_46.text = L46_47
+  L46_47 = _UPVALUE1_
+  L46_47 = L46_47.fonts
+  L46_47 = L46_47.bold
+  L45_46.font = L46_47
+  L45_46.fontSize = 18
+  L44_45 = L44_45(L45_46)
+  L12_13 = L44_45
+  L45_46 = L12_13
+  L44_45 = L12_13.setReferencePoint
+  L46_47 = display
+  L46_47 = L46_47.CenterReferencePoint
+  L44_45(L45_46, L46_47)
+  L45_46 = L12_13
+  L44_45 = L12_13.setPosition
+  L46_47 = L43_44
+  L47_48 = L42_43.y
+  L47_48 = L47_48 + 6
+  L44_45(L45_46, L46_47, L47_48)
+  L44_45 = L12_13.x
+  L12_13.origX = L44_45
+  L44_45 = L12_13.y
+  L12_13.origY = L44_45
+  L45_46 = L12_13
+  L44_45 = L12_13.setFillColor
+  L46_47 = 80
+  L47_48 = 80
+  L48_49 = 80
+  L44_45(L45_46, L46_47, L47_48, L48_49)
+  L12_13.rotation = -2
+  L12_13.account = L42_43
+  L45_46 = L25_26
+  L44_45 = L25_26.insert
+  L46_47 = L12_13
+  L44_45(L45_46, L46_47)
+  function L44_45(A0_146)
+    _UPVALUE0_:setText(_UPVALUE1_.gamecenterNickname)
+    _UPVALUE0_:setReferencePoint(display.CenterReferencePoint)
+    _UPVALUE0_.x = _UPVALUE0_.origX
+    _UPVALUE0_.y = _UPVALUE0_.origY
+    _UPVALUE2_.removeRuntimeListener("got_gamecenter_info", A0_146.self_listenerid)
+  end
+  L45_46 = _UPVALUE0_
+  L45_46 = L45_46.addRuntimeListener
+  L46_47 = "got_gamecenter_info"
+  L47_48 = L44_45
+  L45_46(L46_47, L47_48)
+  L45_46 = _UPVALUE0_
+  L45_46 = L45_46.makeSprite
+  L46_47 = L43_44
+  L47_48 = L13_14.origY
+  L48_49 = {}
+  L48_49.img = "activity_black.png"
+  L45_46 = L45_46(L46_47, L47_48, L48_49)
+  L47_48 = L25_26
+  L46_47 = L25_26.insert
+  L48_49 = L45_46
+  L46_47(L47_48, L48_49)
+  L46_47 = _UPVALUE0_
+  L46_47 = L46_47.makeSprite
+  L47_48 = L43_44
+  L48_49 = L14_15.origY
+  L49_50 = {}
+  L49_50.img = "activity_black.png"
+  L46_47 = L46_47(L47_48, L48_49, L49_50)
+  L48_49 = L25_26
+  L47_48 = L25_26.insert
+  L49_50 = L46_47
+  L47_48(L48_49, L49_50)
+  L47_48 = _UPVALUE0_
+  L47_48 = L47_48.makeSprite
+  L48_49 = L43_44
+  L49_50 = L15_16.origY
+  L50_51 = {}
+  L50_51.img = "activity_black.png"
+  L47_48 = L47_48(L48_49, L49_50, L50_51)
+  L49_50 = L25_26
+  L48_49 = L25_26.insert
+  L50_51 = L47_48
+  L48_49(L49_50, L50_51)
+  function L48_49(A0_147)
+    if _UPVALUE0_.decode(A0_147.response) then
+      _UPVALUE1_ = _UPVALUE2_.delete(_UPVALUE1_)
+      _UPVALUE3_ = _UPVALUE2_.delete(_UPVALUE3_)
+      _UPVALUE4_ = _UPVALUE2_.delete(_UPVALUE4_)
+      _UPVALUE5_:setText(_UPVALUE0_.decode(A0_147.response).mojang)
+      _UPVALUE6_:setText(_UPVALUE0_.decode(A0_147.response).xbox)
+      _UPVALUE7_:setText(_UPVALUE0_.decode(A0_147.response).psn)
+      if _UPVALUE0_.decode(A0_147.response).psn ~= "" then
+        _UPVALUE8_.isVisible = true
+      end
+      if _UPVALUE0_.decode(A0_147.response).xbox ~= "" then
+        _UPVALUE9_.isVisible = true
+      end
+      if _UPVALUE0_.decode(A0_147.response).mojang ~= "" then
+        _UPVALUE10_.isVisible = true
+      end
+    end
+  end
+  L49_50 = _UPVALUE0_
+  L49_50 = L49_50.network_request
+  L50_51 = "getLinkedUsernames"
+  L51_52 = L48_49
+  L49_50(L50_51, L51_52, {
+    udid = _UPVALUE1_.udid
+  })
+  L49_50 = _UPVALUE0_
+  L49_50 = L49_50.makeToolbar
+  L50_51 = "Link accounts"
+  L49_50 = L49_50(L50_51)
+  L51_52 = L4_5
+  L50_51 = L4_5.insert
+  L50_51(L51_52, L49_50)
+  function L50_51(A0_148)
+    _UPVALUE0_.remove({"prevScene"})
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE1_, "toRightNew")
+    return true
+  end
+  L51_52 = _UPVALUE3_
+  L51_52 = L51_52.newButton
+  L51_52 = L51_52({
+    width = 50,
+    height = 50,
+    default = "back.png",
+    over = "back-over.png",
+    onRelease = L50_51
+  })
+  L51_52:setReferencePoint(display.CenterLeftReferencePoint)
+  L51_52.x = -1
+  L51_52.y = L49_50.yCenter
+  L4_5:insert(L51_52)
+  return L0_1
+end

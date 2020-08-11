@@ -1,0 +1,861 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = display
+L0_0 = L0_0.contentWidth
+function new(A0_1, A1_2, A2_3, A3_4, A4_5, A5_6, A6_7, A7_8, A8_9, A9_10)
+  local L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31
+  L10_11 = 0
+  L11_12 = 0
+  L12_13 = 0
+  L13_14 = A8_9 or L13_14.width
+  L14_15 = A9_10 or L14_15.height
+  L15_16 = {}
+  L16_17, L17_18, L18_19 = nil, nil, nil
+  L19_20 = display
+  L19_20 = L19_20.newGroup
+  L19_20 = L19_20()
+  L20_21 = display
+  L20_21 = L20_21.newGroup
+  L20_21 = L20_21()
+  L19_20.imagesGroup = L20_21
+  L20_21 = L19_20.imagesGroup
+  L20_21.x = 0
+  L21_22 = L19_20
+  L20_21 = L19_20.insert
+  L22_23 = L19_20.imagesGroup
+  L20_21(L21_22, L22_23)
+  L20_21 = display
+  L20_21 = L20_21.newRect
+  L21_22 = 0
+  L22_23 = 0
+  L23_24 = L13_14
+  L24_25 = L14_15
+  L20_21 = L20_21(L21_22, L22_23, L23_24, L24_25)
+  L22_23 = L20_21
+  L21_22 = L20_21.setReferencePoint
+  L23_24 = display
+  L23_24 = L23_24.TopCenterReferencePoint
+  L21_22(L22_23, L23_24)
+  L21_22 = _UPVALUE1_
+  L20_21.x = L21_22
+  L20_21.y = 0
+  L22_23 = L20_21
+  L21_22 = L20_21.setFillColor
+  L23_24 = 0
+  L24_25 = 0
+  L25_26 = 0
+  L26_27 = 0
+  L21_22(L22_23, L23_24, L24_25, L25_26, L26_27)
+  L20_21.isHitTestable = true
+  L22_23 = L19_20
+  L21_22 = L19_20.insert
+  L23_24 = L20_21
+  L21_22(L22_23, L23_24)
+  L21_22 = {}
+  L22_23 = {}
+  function L23_24(A0_32)
+    local L1_33, L2_34, L3_35, L4_36, L5_37, L6_38, L7_39, L8_40
+    L1_33 = io
+    L1_33 = L1_33.open
+    L2_34 = system
+    L2_34 = L2_34.pathForFile
+    L3_35 = _UPVALUE0_
+    L3_35 = L3_35[A0_32]
+    L3_35 = L3_35.path
+    L4_36 = _UPVALUE0_
+    L4_36 = L4_36[A0_32]
+    L4_36 = L4_36.dir
+    L8_40 = L2_34(L3_35, L4_36)
+    L1_33 = L1_33(L2_34, L3_35, L4_36, L5_37, L6_38, L7_39, L8_40, L2_34(L3_35, L4_36))
+    if not L1_33 then
+      L2_34 = _UPVALUE0_
+      L2_34 = L2_34[A0_32]
+      L2_34.path = "noImage.jpg"
+      L2_34 = _UPVALUE0_
+      L2_34 = L2_34[A0_32]
+      L3_35 = system
+      L3_35 = L3_35.ResourceDirectory
+      L2_34.dir = L3_35
+      L2_34 = table
+      L2_34 = L2_34.insert
+      L3_35 = _UPVALUE1_
+      L4_36 = A0_32
+      L2_34(L3_35, L4_36)
+    else
+      L3_35 = L1_33
+      L2_34 = L1_33.close
+      L2_34(L3_35)
+    end
+    L2_34 = display
+    L2_34 = L2_34.newGroup
+    L2_34 = L2_34()
+    L3_35 = display
+    L3_35 = L3_35.newImage
+    L4_36 = _UPVALUE0_
+    L4_36 = L4_36[A0_32]
+    L4_36 = L4_36.path
+    L5_37 = _UPVALUE0_
+    L5_37 = L5_37[A0_32]
+    L5_37 = L5_37.dir
+    L6_38 = 0
+    L7_39 = 0
+    L3_35 = L3_35(L4_36, L5_37, L6_38, L7_39)
+    L4_36 = L3_35.width
+    L5_37 = L3_35.height
+    L6_38 = _UPVALUE2_
+    L6_38 = L6_38.delete
+    L7_39 = L3_35
+    L6_38 = L6_38(L7_39)
+    L3_35 = L6_38
+    L6_38 = 1
+    L7_39 = _UPVALUE3_
+    if not (L4_36 > L7_39) then
+      L7_39 = _UPVALUE4_
+    elseif L5_37 > L7_39 then
+      L7_39 = _UPVALUE5_
+      L8_40 = _UPVALUE3_
+      L8_40 = L8_40 / L4_36
+      L7_39 = L7_39(L8_40, _UPVALUE4_ / L5_37)
+      L6_38 = L7_39
+    end
+    if L4_36 == 64 and L5_37 == 32 or L4_36 == 64 and L5_37 == 64 then
+      L7_39 = os
+      L7_39 = L7_39.rename
+      L8_40 = system
+      L8_40 = L8_40.pathForFile
+      L8_40 = L8_40(_UPVALUE0_[A0_32].path, _UPVALUE0_[A0_32].dir)
+      L8_40 = L7_39(L8_40, system.pathForFile(_UPVALUE0_[A0_32].path:sub(1, -5) .. ".png", _UPVALUE0_[A0_32].dir))
+      _UPVALUE0_[A0_32].path = _UPVALUE0_[A0_32].path:sub(1, -5) .. ".png"
+      _UPVALUE0_[A0_32].path = _UPVALUE0_[A0_32].path
+    end
+    L7_39 = _UPVALUE6_
+    L8_40 = _UPVALUE0_
+    L8_40 = L8_40[A0_32]
+    L8_40 = L8_40.path
+    L7_39 = L7_39[L8_40]
+    if not L7_39 then
+      L7_39 = _UPVALUE7_
+      L8_40 = _UPVALUE0_
+      L8_40 = L8_40[A0_32]
+      L8_40 = L8_40.path
+      L7_39(L8_40, _UPVALUE0_[A0_32].dir)
+    end
+    L7_39 = display
+    L7_39 = L7_39.newImageRect
+    L8_40 = _UPVALUE0_
+    L8_40 = L8_40[A0_32]
+    L8_40 = L8_40.path
+    L7_39 = L7_39(L8_40, _UPVALUE0_[A0_32].dir, _UPVALUE3_, _UPVALUE4_)
+    L8_40 = L7_39.setReferencePoint
+    L8_40(L7_39, display.TopCenterReferencePoint)
+    L8_40 = _UPVALUE8_
+    L8_40 = L8_40.x
+    L7_39.x = L8_40
+    L8_40 = _UPVALUE8_
+    L8_40 = L8_40.y
+    L7_39.y = L8_40
+    L8_40 = L2_34.insert
+    L8_40(L2_34, L7_39)
+    L2_34.theImg = L7_39
+    L8_40 = _UPVALUE9_
+    L8_40 = L8_40.category
+    if L8_40 == "Videos" then
+      L8_40 = display
+      L8_40 = L8_40.newImageRect
+      L8_40 = L8_40("video-big-thumbnail.png", _UPVALUE3_, _UPVALUE4_)
+      L8_40:setReferencePoint(display.TopCenterReferencePoint)
+      L8_40.x = L7_39.x
+      L8_40.y = L7_39.y
+      L2_34:insert(L8_40)
+      L2_34.thePlayLayer = L8_40
+    end
+    L8_40 = _UPVALUE0_
+    L8_40 = L8_40[A0_32]
+    L8_40 = L8_40.path
+    L2_34.id = L8_40
+    L8_40 = _UPVALUE10_
+    L8_40 = L8_40 - (_UPVALUE11_ + _UPVALUE12_)
+    if L2_34.width > _UPVALUE13_ or L8_40 < L2_34.height then
+      if L2_34.width / _UPVALUE13_ > L2_34.height / L8_40 then
+        L2_34.xScale = _UPVALUE13_ / L2_34.width
+        L2_34.yScale = _UPVALUE13_ / L2_34.width
+      else
+        L2_34.xScale = L8_40 / L2_34.height
+        L2_34.yScale = L8_40 / L2_34.height
+      end
+    end
+    L2_34:setReferencePoint(display.TopCenterReferencePoint)
+    L2_34.x = _W * 0.5 + (A0_32 - 1) * _W
+    L2_34.y = _UPVALUE8_.y
+    _UPVALUE14_.imagesGroup:insert(L2_34)
+    _UPVALUE15_[A0_32] = L2_34
+  end
+  L24_25 = L23_24
+  L25_26 = A2_3
+  L24_25(L25_26)
+  function L24_25(A0_41)
+    if A0_41 then
+      if _UPVALUE0_[A0_41] and not _UPVALUE1_[A0_41] then
+        _UPVALUE2_(A0_41)
+      end
+    else
+      if _UPVALUE0_[_UPVALUE3_ + 1] and not _UPVALUE1_[_UPVALUE3_ + 1] then
+        _UPVALUE2_(_UPVALUE3_ + 1)
+      end
+      if _UPVALUE0_[_UPVALUE3_ - 1] and not _UPVALUE1_[_UPVALUE3_ - 1] then
+        _UPVALUE2_(_UPVALUE3_ - 1)
+      end
+    end
+  end
+  L25_26 = L24_25
+  L25_26()
+  function L25_26(A0_42)
+    _UPVALUE0_.imagesGroup.x = 0
+    if A0_42 == "displayAll" then
+      for _FORV_4_, _FORV_5_ in pairs(_UPVALUE1_) do
+        _FORV_5_.x = _W * 0.5 + (_FORV_4_ - _UPVALUE2_) * _W
+        _FORV_5_.isVisible = true
+      end
+    elseif A0_42 == "displayImageInView" then
+      for _FORV_4_, _FORV_5_ in pairs(_UPVALUE1_) do
+        _FORV_5_.x = _W * 0.5
+        if _FORV_4_ ~= _UPVALUE2_ then
+          _FORV_5_.isVisible = false
+        else
+          _FORV_5_.isVisible = true
+        end
+      end
+    end
+  end
+  L19_20.isSliding = false
+  function L26_27(A0_43)
+    local L1_44, L2_45, L3_46, L4_47, L5_48, L6_49, L7_50, L8_51, L9_52, L10_53, L11_54, L12_55
+    L1_44 = A0_43.phase
+    L2_45 = A0_43.target
+    if L1_44 == "began" then
+      L3_46 = display
+      L3_46 = L3_46.getCurrentStage
+      L3_46 = L3_46()
+      L4_47 = L3_46
+      L3_46 = L3_46.setFocus
+      L5_48 = L2_45
+      L3_46(L4_47, L5_48)
+      L2_45.isFocus = true
+      L3_46 = A0_43.x
+      startPos = L3_46
+      L3_46 = A0_43.x
+      prevPos = L3_46
+      L3_46 = _UPVALUE0_
+      if L3_46 then
+        L3_46 = _UPVALUE1_
+        L3_46 = L3_46.cancel
+        L4_47 = _UPVALUE0_
+        L3_46(L4_47)
+      end
+    else
+      L3_46 = L2_45.isFocus
+      if L3_46 then
+        if L1_44 == "moved" then
+          L3_46 = _UPVALUE2_
+          L4_47 = A0_43.x
+          L5_48 = A0_43.xStart
+          L4_47 = L4_47 - L5_48
+          L3_46 = L3_46(L4_47)
+          L4_47 = _UPVALUE2_
+          L5_48 = A0_43.y
+          L6_49 = A0_43.yStart
+          L5_48 = L5_48 - L6_49
+          L4_47 = L4_47(L5_48)
+          if L4_47 > 2 and L3_46 < L4_47 then
+            L5_48 = _UPVALUE3_
+            L5_48 = L5_48.isSliding
+            if L5_48 == false then
+              L5_48 = A0_43.x
+              L6_49 = startPos
+              L5_48 = L5_48 - L6_49
+              dragDistance = L5_48
+              L5_48 = dragDistance
+              if L5_48 < -39 then
+                L5_48 = _UPVALUE4_
+                L6_49 = _UPVALUE5_
+                L6_49 = #L6_49
+                if L5_48 < L6_49 then
+                  L5_48 = _UPVALUE6_
+                  L5_48()
+                end
+              else
+                L5_48 = dragDistance
+                if L5_48 > 39 then
+                  L5_48 = _UPVALUE4_
+                  if L5_48 > 1 then
+                    L5_48 = _UPVALUE7_
+                    L5_48()
+                  end
+                else
+                  L5_48 = _UPVALUE8_
+                  L5_48()
+                end
+              end
+              L5_48 = _UPVALUE9_
+              L6_49 = L5_48
+              L5_48 = L5_48.takeFocus
+              L7_50 = A0_43
+              L5_48(L6_49, L7_50)
+            end
+          elseif not (L3_46 > 2) then
+            L5_48 = _UPVALUE3_
+            L5_48 = L5_48.isSliding
+          elseif L5_48 == true then
+            L5_48 = _UPVALUE3_
+            L5_48 = L5_48.isSliding
+            if L5_48 == false then
+              L5_48 = _UPVALUE3_
+              L5_48.isSliding = true
+              L5_48 = _UPVALUE10_
+              L5_48()
+              L5_48 = _UPVALUE11_
+              L6_49 = "displayAll"
+              L5_48(L6_49)
+            end
+            L5_48 = _UPVALUE12_
+            L5_48 = L5_48.dispatchEvent
+            L6_49 = "hasMovedSlideShow"
+            L7_50 = {}
+            L8_51 = _UPVALUE13_
+            L7_50.rowIndex = L8_51
+            L5_48(L6_49, L7_50)
+            L5_48 = A0_43.x
+            L6_49 = prevPos
+            L5_48 = L5_48 - L6_49
+            L6_49 = A0_43.x
+            prevPos = L6_49
+            L6_49 = 1
+            if L5_48 < 0 then
+              L6_49 = -1
+            end
+            L7_50 = _UPVALUE4_
+            if L7_50 ~= 1 then
+              L7_50 = _UPVALUE4_
+              L8_51 = _UPVALUE5_
+              L8_51 = #L8_51
+            else
+              if L7_50 == L8_51 then
+                L7_50 = _UPVALUE4_
+                if L7_50 == 1 then
+                  L7_50 = _UPVALUE3_
+                  L7_50 = L7_50.imagesGroup
+                  L7_50 = L7_50.x
+                else
+                  if not (L7_50 > 0) then
+                    L7_50 = _UPVALUE4_
+                    L8_51 = _UPVALUE5_
+                    L8_51 = #L8_51
+                    if L7_50 == L8_51 then
+                      L7_50 = _UPVALUE3_
+                      L7_50 = L7_50.imagesGroup
+                      L7_50 = L7_50.x
+                    end
+                end
+                else
+                  if L7_50 < 0 then
+                    L7_50 = _UPVALUE3_
+                    L7_50 = L7_50.imagesGroup
+                    L8_51 = _UPVALUE3_
+                    L8_51 = L8_51.imagesGroup
+                    L8_51 = L8_51.x
+                    L9_52 = _UPVALUE14_
+                    L10_53 = _UPVALUE2_
+                    L11_54 = L5_48
+                    L12_55 = L10_53(L11_54)
+                    L9_52 = L9_52(L10_53, L11_54, L12_55, L10_53(L11_54))
+                    L9_52 = L9_52 * L6_49
+                    L8_51 = L8_51 + L9_52
+                    L7_50.x = L8_51
+                end
+                elseif L5_48 < 0 then
+                  L7_50 = _UPVALUE15_
+                  L8_51 = _UPVALUE4_
+                  L8_51 = L8_51 + 1
+                  L7_50 = L7_50[L8_51]
+                  if L7_50 then
+                    L7_50 = _UPVALUE3_
+                    L7_50 = L7_50.imagesGroup
+                    L8_51 = _UPVALUE3_
+                    L8_51 = L8_51.imagesGroup
+                    L8_51 = L8_51.x
+                    L8_51 = L8_51 + L5_48
+                    L7_50.x = L8_51
+                  end
+                elseif L5_48 > 0 then
+                  L7_50 = _UPVALUE15_
+                  L8_51 = _UPVALUE4_
+                  L8_51 = L8_51 - 1
+                  L7_50 = L7_50[L8_51]
+                  if L7_50 then
+                    L7_50 = _UPVALUE3_
+                    L7_50 = L7_50.imagesGroup
+                    L8_51 = _UPVALUE3_
+                    L8_51 = L8_51.imagesGroup
+                    L8_51 = L8_51.x
+                    L8_51 = L8_51 + L5_48
+                    L7_50.x = L8_51
+                  end
+                else
+                  L7_50 = _UPVALUE3_
+                  L7_50 = L7_50.imagesGroup
+                  L8_51 = _UPVALUE3_
+                  L8_51 = L8_51.imagesGroup
+                  L8_51 = L8_51.x
+                  L9_52 = _UPVALUE14_
+                  L10_53 = _UPVALUE2_
+                  L11_54 = L5_48
+                  L12_55 = L10_53(L11_54)
+                  L9_52 = L9_52(L10_53, L11_54, L12_55, L10_53(L11_54))
+                  L9_52 = L9_52 * L6_49
+                  L8_51 = L8_51 + L9_52
+                  L7_50.x = L8_51
+                end
+            end
+            else
+              L7_50 = _UPVALUE3_
+              L7_50 = L7_50.imagesGroup
+              L8_51 = _UPVALUE3_
+              L8_51 = L8_51.imagesGroup
+              L8_51 = L8_51.x
+              L8_51 = L8_51 + L5_48
+              L7_50.x = L8_51
+            end
+          end
+        elseif L1_44 == "ended" or L1_44 == "cancelled" then
+          L3_46 = A0_43.x
+          L4_47 = startPos
+          L3_46 = L3_46 - L4_47
+          dragDistance = L3_46
+          L3_46 = dragDistance
+          if L3_46 < -40 then
+            L3_46 = _UPVALUE4_
+            L4_47 = _UPVALUE5_
+            L4_47 = #L4_47
+            if L3_46 < L4_47 then
+              L3_46 = _UPVALUE6_
+              L3_46()
+            end
+          else
+            L3_46 = dragDistance
+            if L3_46 > 40 then
+              L3_46 = _UPVALUE4_
+              if L3_46 > 1 then
+                L3_46 = _UPVALUE7_
+                L3_46()
+              end
+            else
+              L3_46 = _UPVALUE8_
+              L3_46()
+            end
+          end
+          if L1_44 == "cancelled" then
+            L3_46 = _UPVALUE8_
+            L3_46()
+          end
+          L3_46 = display
+          L3_46 = L3_46.getCurrentStage
+          L3_46 = L3_46()
+          L4_47 = L3_46
+          L3_46 = L3_46.setFocus
+          L5_48 = nil
+          L3_46(L4_47, L5_48)
+          L2_45.isFocus = false
+          L3_46 = _UPVALUE2_
+          L4_47 = A0_43.x
+          L5_48 = A0_43.xStart
+          L4_47 = L4_47 - L5_48
+          L3_46 = L3_46(L4_47)
+          L4_47 = _UPVALUE2_
+          L5_48 = A0_43.y
+          L6_49 = A0_43.yStart
+          L5_48 = L5_48 - L6_49
+          L4_47 = L4_47(L5_48)
+          if L3_46 < 4 and L4_47 < 4 then
+            L5_48 = _UPVALUE3_
+            L5_48 = L5_48.isSliding
+            if L5_48 == false then
+              L5_48 = _UPVALUE16_
+              if L5_48 == true then
+                L5_48 = _UPVALUE5_
+                L6_49 = _UPVALUE4_
+                L5_48 = L5_48[L6_49]
+                L5_48 = L5_48.type
+                if L5_48 == "image" then
+                  function L5_48()
+                    local L0_56
+                    L0_56 = _UPVALUE0_
+                    L0_56 = L0_56[_UPVALUE1_]
+                    L0_56 = L0_56.theImg
+                    L0_56.isVisible = true
+                  end
+                  L6_49 = _UPVALUE15_
+                  L7_50 = _UPVALUE4_
+                  L6_49 = L6_49[L7_50]
+                  L6_49 = L6_49.theImg
+                  L6_49.isVisible = false
+                  L6_49 = _UPVALUE17_
+                  L7_50 = L6_49
+                  L6_49 = L6_49.localToContent
+                  L8_51 = 0
+                  L9_52 = 0
+                  L7_50 = L6_49(L7_50, L8_51, L9_52)
+                  L8_51 = _UPVALUE18_
+                  L8_51 = L8_51.makeScrollView
+                  L9_52 = {}
+                  L10_53 = _UPVALUE5_
+                  L11_54 = _UPVALUE4_
+                  L10_53 = L10_53[L11_54]
+                  L10_53 = L10_53.fpath
+                  L9_52.path = L10_53
+                  L10_53 = _UPVALUE5_
+                  L11_54 = _UPVALUE4_
+                  L10_53 = L10_53[L11_54]
+                  L10_53 = L10_53.dir
+                  L9_52.dir = L10_53
+                  L9_52.x = L6_49
+                  L9_52.y = L7_50
+                  L10_53 = _UPVALUE5_
+                  L11_54 = _UPVALUE4_
+                  L10_53 = L10_53[L11_54]
+                  L10_53 = L10_53.path
+                  L9_52.fallback_path = L10_53
+                  L9_52.onEndCallback = L5_48
+                  L10_53 = _UPVALUE3_
+                  L9_52.slideView = L10_53
+                  L8_51(L9_52)
+                else
+                  L5_48 = _UPVALUE5_
+                  L6_49 = _UPVALUE4_
+                  L5_48 = L5_48[L6_49]
+                  L5_48 = L5_48.type
+                  if L5_48 == "video" then
+                    L5_48 = display
+                    L5_48 = L5_48.newGroup
+                    L5_48 = L5_48()
+                    L6_49 = display
+                    L6_49 = L6_49.newGroup
+                    L6_49 = L6_49()
+                    L5_48.bottom = L6_49
+                    L7_50 = L5_48
+                    L6_49 = L5_48.insert
+                    L8_51 = L5_48.bottom
+                    L6_49(L7_50, L8_51)
+                    L6_49 = display
+                    L6_49 = L6_49.newGroup
+                    L6_49 = L6_49()
+                    L5_48.top = L6_49
+                    L7_50 = L5_48
+                    L6_49 = L5_48.insert
+                    L8_51 = L5_48.top
+                    L6_49(L7_50, L8_51)
+                    L6_49 = _UPVALUE12_
+                    L6_49 = L6_49.makePreventTouch
+                    L6_49 = L6_49()
+                    L7_50 = L5_48.bottom
+                    L8_51 = L7_50
+                    L7_50 = L7_50.insert
+                    L9_52 = L6_49
+                    L7_50(L8_51, L9_52)
+                    L7_50 = _UPVALUE12_
+                    L7_50 = L7_50.makeBlurryBg
+                    L7_50 = L7_50()
+                    L8_51 = L5_48.top
+                    L9_52 = L8_51
+                    L8_51 = L8_51.insert
+                    L10_53 = L7_50
+                    L8_51(L9_52, L10_53)
+                    L8_51 = native
+                    L8_51 = L8_51.newWebView
+                    L9_52 = 0
+                    L10_53 = 64
+                    L11_54 = _W
+                    L12_55 = _H
+                    L12_55 = L12_55 - 64
+                    L8_51 = L8_51(L9_52, L10_53, L11_54, L12_55)
+                    L10_53 = L8_51
+                    L9_52 = L8_51.setReferencePoint
+                    L11_54 = display
+                    L11_54 = L11_54.TopLeftReferencePoint
+                    L9_52(L10_53, L11_54)
+                    L10_53 = L8_51
+                    L9_52 = L8_51.request
+                    L11_54 = _UPVALUE5_
+                    L12_55 = _UPVALUE4_
+                    L11_54 = L11_54[L12_55]
+                    L11_54 = L11_54.vids
+                    L9_52(L10_53, L11_54)
+                    L9_52 = _UPVALUE19_
+                    L9_52 = L9_52.seed
+                    L11_54 = L9_52
+                    L10_53 = L9_52.len
+                    L10_53 = L10_53(L11_54)
+                    if L10_53 > 16 then
+                      L10_53 = string
+                      L10_53 = L10_53.sub
+                      L11_54 = L9_52
+                      L12_55 = 1
+                      L10_53 = L10_53(L11_54, L12_55, 14)
+                      L11_54 = ".."
+                      L9_52 = L10_53 .. L11_54
+                    end
+                    L10_53 = _UPVALUE12_
+                    L10_53 = L10_53.makeToolbar
+                    L11_54 = L9_52
+                    L10_53 = L10_53(L11_54)
+                    L11_54 = L5_48.top
+                    L12_55 = L11_54
+                    L11_54 = L11_54.insert
+                    L11_54(L12_55, L10_53)
+                    function L11_54(A0_57)
+                      _UPVALUE0_.to(_UPVALUE1_, {
+                        time = 320,
+                        y = _H,
+                        transition = easing.inOutQuad,
+                        onComplete = function()
+                          _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+                        end
+                      }, true)
+                      _UPVALUE0_.to(_UPVALUE3_, {
+                        time = 320,
+                        y = _H,
+                        transition = easing.inOutQuad,
+                        onComplete = function()
+                          _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+                        end
+                      })
+                      return true
+                    end
+                    L12_55 = _UPVALUE20_
+                    L12_55 = L12_55.newButton
+                    L12_55 = L12_55({
+                      top = 26,
+                      left = 10,
+                      width = 52,
+                      height = 30,
+                      default = "back2.png",
+                      over = "back2-over.png",
+                      onRelease = L11_54
+                    })
+                    L5_48.top:insert(L12_55)
+                    _UPVALUE1_.from(L5_48.top, {
+                      time = 320,
+                      y = _H,
+                      transition = easing.inOutQuad
+                    }, true)
+                    _UPVALUE1_.from(L8_51, {
+                      time = 320,
+                      y = _H,
+                      transition = easing.inOutQuad
+                    })
+                  end
+                end
+              else
+                L5_48 = _UPVALUE16_
+                if L5_48 == false then
+                  L5_48 = _UPVALUE9_
+                  if L5_48 then
+                    L5_48 = _UPVALUE9_
+                    L5_48 = L5_48.dispatchRowTouch
+                    L6_49 = _UPVALUE13_
+                    L5_48(L6_49)
+                  end
+                end
+              end
+            end
+          end
+          L5_48 = _UPVALUE3_
+          L5_48.isSliding = false
+        end
+      end
+    end
+    L3_46 = true
+    return L3_46
+  end
+  function L27_28()
+    _UPVALUE0_("displayImageInView")
+  end
+  L28_29 = L27_28
+  L28_29()
+  function L16_17()
+    _UPVALUE0_ = _UPVALUE0_ + 1
+    _UPVALUE1_ = _UPVALUE2_.to(_UPVALUE3_.imagesGroup, {
+      time = 200,
+      x = -_W,
+      transition = easing.outExpo,
+      onComplete = _UPVALUE4_
+    })
+    _UPVALUE5_.dispatchEvent("viewingImage", {
+      image = _UPVALUE0_,
+      rowIndex = _UPVALUE6_,
+      direction = "next"
+    })
+  end
+  function L17_18()
+    _UPVALUE0_ = _UPVALUE0_ - 1
+    _UPVALUE1_ = _UPVALUE2_.to(_UPVALUE3_.imagesGroup, {
+      time = 200,
+      x = _W,
+      transition = easing.outExpo,
+      onComplete = _UPVALUE4_
+    })
+    _UPVALUE5_.dispatchEvent("viewingImage", {
+      image = _UPVALUE0_,
+      rowIndex = _UPVALUE6_,
+      direction = "previous"
+    })
+  end
+  function L28_29()
+    _UPVALUE0_("displayImageInView")
+  end
+  function L18_19()
+    _UPVALUE0_ = _UPVALUE1_.to(_UPVALUE2_.imagesGroup, {
+      time = 200,
+      x = 0,
+      transition = easing.outExpo,
+      onComplete = _UPVALUE3_
+    })
+  end
+  L30_31 = L20_21
+  L29_30 = L20_21.addEventListener
+  L29_30(L30_31, "touch", L26_27)
+  function L29_30(A0_58, A1_59, A2_60)
+    local L3_61
+    L3_61 = _UPVALUE0_
+    L3_61 = A1_59 - L3_61
+    if L3_61 < 0 then
+      L3_61 = "previous"
+    elseif L3_61 > 0 then
+      L3_61 = "next"
+    end
+    _UPVALUE1_(A1_59)
+    _UPVALUE0_ = A1_59
+    if A2_60 == true then
+      if L3_61 == "previous" then
+        _UPVALUE2_ = _UPVALUE3_.to(_UPVALUE4_.imagesGroup, {
+          time = 200,
+          x = -_W,
+          transition = easing.outExpo,
+          onComplete = _UPVALUE5_
+        })
+      elseif L3_61 == "next" then
+        _UPVALUE2_ = _UPVALUE3_.to(_UPVALUE4_.imagesGroup, {
+          time = 200,
+          x = _W,
+          transition = easing.outExpo,
+          onComplete = _UPVALUE5_
+        })
+      end
+    else
+      _UPVALUE5_()
+    end
+    _UPVALUE6_.dispatchEvent("viewingImage", {
+      image = _UPVALUE0_,
+      rowIndex = _UPVALUE7_,
+      direction = L3_61
+    })
+  end
+  L19_20.jumpToImage = L29_30
+  function L29_30(A0_62)
+    _UPVALUE0_:removeEventListener("touch", _UPVALUE1_)
+  end
+  L19_20.cleanUp = L29_30
+  L19_20.images = L21_22
+  if A6_7 == true then
+    L29_30 = graphics
+    L29_30 = L29_30.newMask
+    L30_31 = "mask-"
+    L30_31 = L30_31 .. L13_14 .. "x" .. L14_15 .. ".png"
+    L29_30 = L29_30(L30_31, system.TemporaryDirectory)
+    L30_31 = L19_20.setMask
+    L30_31(L19_20, L29_30)
+    L30_31 = L20_21.x
+    L19_20.maskX = L30_31
+    L30_31 = L20_21.y
+    L19_20.maskY = L30_31
+    L30_31 = _UPVALUE0_
+    L30_31 = L30_31.contentScaleX
+    L19_20.maskScaleX = L30_31
+    L30_31 = _UPVALUE0_
+    L30_31 = L30_31.contentScaleY
+    L19_20.maskScaleY = L30_31
+    L30_31 = L20_21.width
+    L30_31 = L30_31 * 0.5
+    L19_20.maskX = L30_31
+    L30_31 = L20_21.height
+    L30_31 = L30_31 * 0.5
+    L19_20.maskY = L30_31
+  end
+  L29_30 = #L15_16
+  if L29_30 > 0 then
+    L29_30 = A3_4.udid
+    L30_31 = _UPVALUE0_
+    L30_31 = L30_31.udid
+    if L29_30 == L30_31 then
+      function L29_30(A0_63)
+        local L1_64, L2_65, L3_66, L4_67, L5_68
+        L1_64 = A0_63.phase
+        L2_65 = A0_63.target
+        if L1_64 == "moved" then
+          L3_66 = _UPVALUE0_
+          L3_66 = L3_66(L4_67)
+          if L3_66 > 1 or L4_67 > 1 then
+            L5_68(L5_68, nil)
+            L5_68.isVisible = true
+            L5_68.isVisible = false
+            L5_68({
+              target = _UPVALUE2_,
+              phase = "began",
+              x = A0_63.x,
+              xStart = A0_63.xStart,
+              y = A0_63.y,
+              yStart = A0_63.yStart
+            })
+          end
+        elseif L1_64 == "release" or L1_64 == "cancelled" then
+          L3_66 = ""
+          for _FORV_7_ = 1, #L5_68 do
+            L3_66 = L3_66 .. _UPVALUE3_[_FORV_7_]
+            if _FORV_7_ < #_UPVALUE3_ then
+              L3_66 = L3_66 .. ", "
+            end
+          end
+          L5_68.to = {
+            "mcseeds@jninteractive.com"
+          }
+          L5_68.body = "Please attach the image(s) that are missing to this email and we'll update them as soon as possible.<br><br><br><br><i>Missing images: " .. L3_66 .. "<br>Upload name: " .. _UPVALUE4_.seed .. "<br>Section: " .. _UPVALUE4_.category .. "<br>" .. L4_67 .. _UPVALUE4_.platform .. " " .. _UPVALUE4_.version .. "<br>Uploader: " .. _UPVALUE4_.user .. "<br>Link: " .. _UPVALUE4_.url .. "</i>"
+          L5_68.subject = "Missing images for " .. _UPVALUE4_.seed
+          L5_68.isBodyHtml = true
+          native.showPopup("mail", L5_68)
+        end
+        L3_66 = true
+        return L3_66
+      end
+      L30_31 = _UPVALUE13_
+      L30_31 = L30_31.newButton
+      L30_31 = L30_31({
+        width = 119,
+        height = 18,
+        default = "reportmissingimage.png",
+        over = "reportmissingimage-over.png",
+        onEvent = L29_30
+      })
+      L30_31:setReferencePoint(display.BottomRightReferencePoint)
+      L30_31.x = L13_14
+      L30_31.y = L14_15
+      L19_20:insert(L30_31)
+    end
+  end
+  if A5_6 == true then
+    L29_30 = _UPVALUE9_
+    L29_30 = L29_30.from
+    L30_31 = L19_20.imagesGroup
+    L29_30(L30_31, {time = 400, alpha = 0})
+  end
+  return L19_20
+end

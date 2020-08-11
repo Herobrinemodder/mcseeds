@@ -1,0 +1,413 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("transitions")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.backgroundsAmount
+  L8_9 = _UPVALUE0_
+  L8_9 = L8_9.imgSuff
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.appdata
+  L10_11 = _UPVALUE1_
+  L10_11 = L10_11.getSceneProperties
+  L10_11 = L10_11()
+  L11_12 = math
+  L11_12 = L11_12.random
+  L12_13 = math
+  L12_13 = L12_13.min
+  L13_14 = L10_11.prevScene
+  L14_15 = _UPVALUE0_
+  L14_15 = L14_15.session
+  L14_15 = L14_15 + 1
+  L15_16 = _UPVALUE0_
+  L15_16.session = L14_15
+  L15_16 = _UPVALUE1_
+  L15_16 = L15_16.makeBlurryBg
+  L15_16 = L15_16()
+  L17_18 = L15_16
+  L16_17 = L15_16.addEventListener
+  L18_19 = "touch"
+  function L19_20()
+    local L0_28, L1_29
+    L0_28 = true
+    return L0_28
+  end
+  L16_17(L17_18, L18_19, L19_20)
+  L17_18 = L2_3
+  L16_17 = L2_3.insert
+  L18_19 = L15_16
+  L16_17(L17_18, L18_19)
+  L16_17 = _UPVALUE2_
+  L16_17 = L16_17.createSideMenu
+  L17_18 = L1_2
+  L16_17 = L16_17(L17_18)
+  L18_19 = L0_1
+  L17_18 = L0_1.insert
+  L19_20 = L16_17
+  L17_18(L18_19, L19_20)
+  L0_1.side_menu = L16_17
+  L18_19 = L16_17
+  L17_18 = L16_17.toBack
+  L17_18(L18_19)
+  function L17_18()
+    _UPVALUE0_.bgMain = _UPVALUE1_.delete(_UPVALUE0_.bgMain)
+    _UPVALUE0_.bgMain = display.newImageRect(_UPVALUE0_.bgPath, _UPVALUE0_.bgDir, _W, _H)
+    _UPVALUE0_.bgMain:setReferencePoint(display.TopLeftReferencePoint)
+    _UPVALUE0_.bgMain.x = 0
+    _UPVALUE0_.bgMain.y = 0
+    _UPVALUE0_.bgMain.directorId = "nil"
+    _UPVALUE0_.bgMain:toBack()
+    _UPVALUE2_ = _UPVALUE1_.delete(_UPVALUE2_)
+    _UPVALUE2_ = _UPVALUE1_.makeBlurryBg()
+    _UPVALUE2_:addEventListener("touch", function()
+      local L0_30, L1_31
+      L0_30 = true
+      return L0_30
+    end)
+    _UPVALUE3_:insert(_UPVALUE2_)
+  end
+  L18_19 = _UPVALUE3_
+  L18_19 = L18_19.newTableView
+  L19_20 = {}
+  L19_20.top = 64
+  L20_21 = _H
+  L20_21 = L20_21 - 64
+  L19_20.height = L20_21
+  L20_21 = {
+    L21_22,
+    L22_23,
+    L23_24,
+    L24_25
+  }
+  L21_22 = 0
+  L22_23 = 0
+  L19_20.bgColor = L20_21
+  L19_20.bottomPadding = 10
+  L18_19 = L18_19(L19_20)
+  L20_21 = L3_4
+  L19_20 = L3_4.insert
+  L21_22 = L18_19
+  L19_20(L20_21, L21_22)
+  function L19_20()
+    local L0_32
+    L0_32 = display
+    L0_32 = L0_32.newImageRect
+    L0_32 = L0_32(_UPVALUE0_.bgPath, _UPVALUE0_.bgDir, _W, _H)
+    L0_32:setReferencePoint(display.TopLeftReferencePoint)
+    L0_32.x = 0
+    L0_32.y = 0
+    _UPVALUE1_:insert(L0_32)
+    L0_32:toBack()
+    _UPVALUE2_.to(_UPVALUE3_, {
+      time = 300,
+      alpha = 0,
+      transition = easing.inOutQuad,
+      onComplete = function()
+        _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+        _UPVALUE2_()
+      end
+    }, true)
+  end
+  function L20_21()
+    local L0_33, L1_34, L2_35
+    L0_33 = "custombg.jpg"
+    L1_34 = system
+    L1_34 = L1_34.DocumentsDirectory
+    L2_35 = io
+    L2_35 = L2_35.open
+    L2_35 = L2_35(system.pathForFile(L0_33, L1_34))
+    if L2_35 then
+      L2_35:close()
+      os.remove(system.pathForFile(L0_33, L1_34))
+    end
+  end
+  function L21_22(A0_36)
+    local L1_37, L2_38, L3_39, L4_40
+    L1_37 = A0_36.target
+    L1_37 = L1_37.background
+    L2_38 = A0_36.phase
+    L3_39 = A0_36.target
+    L3_39 = L3_39.text
+    L4_40 = A0_36.id
+    L4_40 = L4_40.bg
+    L1_37:setFillColor(217, 217, 217, 155)
+    if L2_38 == "release" or L2_38 == "tap" then
+      timer.performWithDelay(100, function()
+        local L1_41
+        L1_41 = _UPVALUE0_
+        L1_41 = L1_41.setFillColor
+        L1_41(L1_41, unpack(_UPVALUE0_.color))
+      end)
+      if L4_40 == "Custom" then
+        media.selectPhoto({
+          mediaSource = media.PhotoLibrary,
+          listener = function(A0_42)
+            local L1_43, L2_44, L3_45, L4_46
+            L1_43 = A0_42.completed
+            if L1_43 == true then
+              L1_43 = A0_42.target
+              L2_44 = L1_43.width
+              L3_45 = L1_43.height
+              L4_46 = _W
+              if not (L2_44 > L4_46) then
+                L4_46 = _H
+              elseif L3_45 > L4_46 then
+                L4_46 = _UPVALUE0_
+                L4_46 = L4_46(_W / L2_44, _H / L3_45)
+                L1_43:scale(L4_46, L4_46)
+              end
+              L4_46 = L1_43.setReferencePoint
+              L4_46(L1_43, display.CenterReferencePoint)
+              L4_46 = _UPVALUE1_
+              L1_43.x = L4_46
+              L4_46 = _UPVALUE2_
+              L1_43.y = L4_46
+              function L4_46(A0_47)
+                local L1_48, L2_49, L3_50, L4_51, L5_52
+                L1_48 = A0_47.action
+                L2_49 = A0_47.index
+                if L1_48 == "clicked" then
+                  L3_50 = display
+                  L3_50 = L3_50.newGroup
+                  L3_50 = L3_50()
+                  L4_51 = _UPVALUE0_
+                  L5_52 = L4_51
+                  L4_51 = L4_51.insert
+                  L4_51(L5_52, L3_50)
+                  function L4_51()
+                    local L0_53, L1_54, L2_55
+                    L0_53 = _UPVALUE0_
+                    L1_54 = _UPVALUE0_
+                    L1_54 = L1_54.chooseBgAmount
+                    L1_54 = L1_54 + 1
+                    L0_53.chooseBgAmount = L1_54
+                    L0_53 = false
+                    L1_54 = _UPVALUE1_
+                    L2_55 = L1_54
+                    L1_54 = L1_54.setReferencePoint
+                    L1_54(L2_55, display.CenterReferencePoint)
+                    L1_54 = _UPVALUE1_
+                    L2_55 = _UPVALUE2_
+                    L1_54.x = L2_55
+                    L1_54 = _UPVALUE1_
+                    L2_55 = _UPVALUE3_
+                    L1_54.y = L2_55
+                    L1_54 = _UPVALUE4_
+                    L2_55 = L1_54
+                    L1_54 = L1_54.insert
+                    L1_54(L2_55, _UPVALUE1_)
+                    function L1_54()
+                      if _UPVALUE0_ == true then
+                        _UPVALUE1_.fill.effect = "filter.blurGaussian"
+                        _UPVALUE1_.fill.effect.horizontal.blurSize = 512
+                        _UPVALUE1_.fill.effect.horizontal.sigma = 512
+                        _UPVALUE1_.fill.effect.vertical.blurSize = 512
+                        _UPVALUE1_.fill.effect.vertical.sigma = 512
+                      end
+                      _UPVALUE2_.bgPath, _UPVALUE2_.bgDir = "custombg" .. _UPVALUE2_.chooseBgAmount .. ".jpg", system.DocumentsDirectory
+                      _UPVALUE3_()
+                      display.save(_UPVALUE4_, {
+                        filename = _UPVALUE2_.bgPath,
+                        baseDir = _UPVALUE2_.bgDir,
+                        isFullResolution = true
+                      })
+                      timer.performWithDelay(200, function()
+                        _UPVALUE0_.background = _UPVALUE1_.bgPath
+                        _UPVALUE2_.updateAppData(_UPVALUE0_)
+                        _UPVALUE3_.to(_UPVALUE4_, {
+                          time = 400,
+                          alpha = 0,
+                          transition = easing.inOutQuad,
+                          onComplete = function()
+                            _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+                          end
+                        }, true)
+                        _UPVALUE5_()
+                      end)
+                    end
+                    function L2_55(A0_56)
+                      if A0_56.action == "clicked" then
+                        if A0_56.index == 2 then
+                          _UPVALUE0_ = true
+                        end
+                        _UPVALUE1_()
+                      end
+                      return true
+                    end
+                    _UPVALUE7_.showAlert("Apply gaussian blur?", "Would you like to apply gaussian blur to the background?", {"No", "Yes"}, L2_55)
+                  end
+                  L5_52 = A0_47.index
+                  if L5_52 == 1 then
+                    L5_52 = display
+                    L5_52 = L5_52.newRect
+                    L5_52 = L5_52(0, 0, _W, _H)
+                    L5_52:setFillColor(0, 0, 0)
+                    L3_50:insert(L5_52)
+                    L4_51()
+                  else
+                    L5_52 = A0_47.index
+                    if L5_52 == 2 then
+                      L5_52 = _UPVALUE8_
+                      L5_52 = L5_52.to
+                      L5_52(_UPVALUE2_, {
+                        time = 300,
+                        xScale = _W / _UPVALUE10_,
+                        yScale = _H / _UPVALUE11_,
+                        transition = easing.inOutQuad,
+                        onComplete = L4_51
+                      }, true)
+                    end
+                  end
+                end
+                L3_50 = true
+                return L3_50
+              end
+              _UPVALUE7_.showAlert("Strech?", "Do you want to stretch the image to cover all corners?", {"No", "Yes"}, L4_46)
+            end
+          end
+        })
+      else
+        _UPVALUE5_()
+        if L4_40 == "Random" then
+          _UPVALUE6_.background = 0
+          L4_40 = _UPVALUE10_(_UPVALUE11_)
+          while _UPVALUE4_.bgPath == "bg" .. L4_40 .. ".jpg" do
+            L4_40 = _UPVALUE10_(_UPVALUE11_)
+          end
+        else
+          _UPVALUE6_.background = L4_40
+        end
+        _UPVALUE7_.updateAppData(_UPVALUE6_)
+        _UPVALUE4_.bgPath, _UPVALUE4_.bgDir = "bg" .. L4_40 .. ".jpg", system.ResourceDirectory
+        _UPVALUE9_()
+      end
+    end
+    return true
+  end
+  function L22_23(A0_57)
+    local L1_58, L2_59, L3_60
+    L1_58 = A0_57.target
+    L1_58 = L1_58.height
+    L2_59 = L1_58 * 0.5
+    L3_60 = A0_57.view
+    A0_57.target.background = display.newRect(0, 0, _W, L1_58 - 1)
+    A0_57.target.background.color = {
+      255,
+      255,
+      255,
+      20
+    }
+    A0_57.target.background:setFillColor(unpack(A0_57.target.background.color))
+    L3_60:insert(A0_57.target.background)
+    A0_57.target.text = display.newText({
+      text = A0_57.id.label,
+      font = _UPVALUE0_.fonts.light,
+      fontSize = 14
+    })
+    A0_57.target.text:setReferencePoint(display.CenterLeftReferencePoint)
+    A0_57.target.text.x = 20
+    A0_57.target.text.y = L2_59
+    L3_60:insert(A0_57.target.text)
+  end
+  for L26_27 = 1, L7_8 do
+    L18_19:insertRow({
+      id = {
+        label = "Background " .. L26_27,
+        bg = L26_27
+      },
+      height = 40,
+      onEvent = L21_22,
+      onRender = L22_23,
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      }
+    })
+  end
+  L26_27 = {}
+  L26_27.label = "Random"
+  L26_27.bg = "Random"
+  L25_26.id = L26_27
+  L25_26.height = 40
+  L25_26.onEvent = L21_22
+  L25_26.onRender = L22_23
+  L26_27 = {
+    0,
+    0,
+    0,
+    0
+  }
+  L25_26.rowColor = L26_27
+  L26_27 = {
+    0,
+    0,
+    0,
+    0
+  }
+  L25_26.lineColor = L26_27
+  L23_24(L24_25, L25_26)
+  L26_27 = L23_24
+  L24_25(L25_26, L26_27)
+  L26_27 = {}
+  L26_27.width = 50
+  L26_27.height = 50
+  L26_27.default = "back.png"
+  L26_27.over = "back-over.png"
+  L26_27.onRelease = L24_25
+  L26_27 = L25_26.setReferencePoint
+  L26_27(L25_26, display.CenterLeftReferencePoint)
+  L25_26.x = -1
+  L26_27 = L23_24.yCenter
+  L25_26.y = L26_27
+  L26_27 = L4_5.insert
+  L26_27(L4_5, L25_26)
+  L26_27 = L4_5.toFront
+  L26_27(L4_5)
+  return L0_1
+end

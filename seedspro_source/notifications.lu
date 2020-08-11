@@ -1,0 +1,928 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("openGLTextfield")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37, L37_38, L38_39, L39_40, L40_41, L41_42, L42_43, L43_44, L44_45, L45_46, L46_47
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.newGroup
+  L5_6 = L5_6()
+  L7_8 = L4_5
+  L6_7 = L4_5.insert
+  L8_9 = L5_6
+  L6_7(L7_8, L8_9)
+  L6_7 = display
+  L6_7 = L6_7.newGroup
+  L6_7 = L6_7()
+  L8_9 = L4_5
+  L7_8 = L4_5.insert
+  L9_10 = L6_7
+  L7_8(L8_9, L9_10)
+  L7_8 = display
+  L7_8 = L7_8.newGroup
+  L7_8 = L7_8()
+  L8_9 = L7_8.x
+  L7_8.origX = L8_9
+  L9_10 = L4_5
+  L8_9 = L4_5.insert
+  L10_11 = L7_8
+  L8_9(L9_10, L10_11)
+  L8_9 = display
+  L8_9 = L8_9.newGroup
+  L8_9 = L8_9()
+  L10_11 = L1_2
+  L9_10 = L1_2.insert
+  L11_12 = L8_9
+  L9_10(L10_11, L11_12)
+  L9_10 = display
+  L9_10 = L9_10.contentCenterX
+  L10_11 = display
+  L10_11 = L10_11.contentCenterY
+  L11_12 = nil
+  L12_13 = false
+  L13_14 = true
+  L14_15 = _UPVALUE0_
+  L14_15 = L14_15.getAppType
+  L14_15 = L14_15()
+  L15_16 = _UPVALUE1_
+  L15_16 = L15_16.showAds
+  L16_17 = _UPVALUE0_
+  L16_17 = L16_17.getSceneProperties
+  L16_17 = L16_17()
+  L17_18 = _UPVALUE1_
+  L17_18 = L17_18.udid
+  L18_19 = math
+  L18_19 = L18_19.abs
+  L19_20 = _UPVALUE1_
+  L19_20 = L19_20.appdata
+  L20_21 = L19_20.last_notif
+  L21_22 = L16_17.searchString
+  L22_23 = L16_17.fetchUdid
+  L23_24 = L16_17.fetchNick
+  L24_25 = L16_17.prevScene
+  L25_26 = L16_17.section
+  L26_27 = L16_17.listPos
+  L27_28 = L16_17.start
+  L28_29 = L16_17.page
+  L29_30 = L16_17.taps
+  L30_31 = L16_17.pop
+  L31_32 = nil
+  L32_33 = _UPVALUE1_
+  L32_33 = L32_33.session
+  L32_33 = L32_33 + 1
+  L33_34 = _UPVALUE1_
+  L33_34.session = L32_33
+  L33_34 = _UPVALUE0_
+  L33_34 = L33_34.makeBlurryBg
+  L33_34 = L33_34()
+  L35_36 = L33_34
+  L34_35 = L33_34.addEventListener
+  L36_37 = "touch"
+  function L37_38()
+    local L0_48, L1_49
+    L0_48 = true
+    return L0_48
+  end
+  L34_35(L35_36, L36_37, L37_38)
+  L35_36 = L2_3
+  L34_35 = L2_3.insert
+  L36_37 = L33_34
+  L34_35(L35_36, L36_37)
+  L34_35 = _UPVALUE2_
+  L34_35 = L34_35.createSideMenu
+  L35_36 = L1_2
+  L34_35 = L34_35(L35_36)
+  L36_37 = L0_1
+  L35_36 = L0_1.insert
+  L37_38 = L34_35
+  L35_36(L36_37, L37_38)
+  L0_1.side_menu = L34_35
+  L36_37 = L34_35
+  L35_36 = L34_35.toBack
+  L35_36(L36_37)
+  function L35_36(A0_50)
+    if _UPVALUE0_.loadMore and _UPVALUE0_.loadMore == true and _UPVALUE1_ == false and -_UPVALUE2_.virtualContentHeight + _UPVALUE2_.content.height + 300 > _UPVALUE2_:getContentPosition() then
+      _UPVALUE1_ = true
+      _UPVALUE3_ = _UPVALUE3_ + _UPVALUE4_
+      _UPVALUE5_.network_request("get_notifications", _UPVALUE6_, {
+        lastNotif = _UPVALUE7_,
+        start = _UPVALUE3_,
+        udid = _UPVALUE8_.udid,
+        pop = _UPVALUE4_
+      })
+    end
+    _UPVALUE5_.animateToolbar(A0_50, {
+      toolbar = _UPVALUE9_.toolbar,
+      list = _UPVALUE2_
+    })
+  end
+  L36_37 = _UPVALUE3_
+  L36_37 = L36_37.newTableView
+  L37_38 = {}
+  L37_38.top = 64
+  L38_39 = _W
+  L37_38.width = L38_39
+  L38_39 = _H
+  L38_39 = L38_39 - 64
+  L37_38.height = L38_39
+  L38_39 = {
+    L39_40,
+    L40_41,
+    L41_42,
+    L42_43
+  }
+  L39_40 = 0
+  L40_41 = 0
+  L41_42 = 0
+  L42_43 = 0
+  L37_38.bgColor = L38_39
+  L37_38.listener = L35_36
+  L36_37 = L36_37(L37_38)
+  L31_32 = L36_37
+  L37_38 = L3_4
+  L36_37 = L3_4.insert
+  L38_39 = L31_32
+  L36_37(L37_38, L38_39)
+  L36_37 = _UPVALUE0_
+  L36_37 = L36_37.makeToolbar
+  L37_38 = "Notifications"
+  L38_39 = {}
+  L38_39.list = L31_32
+  L36_37 = L36_37(L37_38, L38_39)
+  L8_9.toolbar = L36_37
+  L38_39 = L8_9
+  L37_38 = L8_9.insert
+  L39_40 = L36_37
+  L37_38(L38_39, L39_40)
+  if L24_25 then
+    function L37_38(A0_51)
+      _UPVALUE0_.remove({
+        "prevScene",
+        "section",
+        "category",
+        "menuPos",
+        "listPos",
+        "start",
+        "page",
+        "pop"
+      })
+      _UPVALUE0_.update({
+        taps = _UPVALUE1_ - 1
+      })
+      _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+      director:changeScene(_UPVALUE2_, "toRightNew")
+      return true
+    end
+    L38_39 = _UPVALUE3_
+    L38_39 = L38_39.newButton
+    L39_40 = {}
+    L39_40.width = 50
+    L39_40.height = 50
+    L39_40.default = "back.png"
+    L39_40.over = "back-over.png"
+    L39_40.onRelease = L37_38
+    L38_39 = L38_39(L39_40)
+    L40_41 = L38_39
+    L39_40 = L38_39.setReferencePoint
+    L41_42 = display
+    L41_42 = L41_42.CenterLeftReferencePoint
+    L39_40(L40_41, L41_42)
+    L38_39.x = -1
+    L39_40 = L36_37.yCenter
+    L38_39.y = L39_40
+    L39_40 = L36_37.contents
+    L40_41 = L39_40
+    L39_40 = L39_40.insert
+    L41_42 = L38_39
+    L39_40(L40_41, L41_42)
+  else
+    L37_38 = _UPVALUE2_
+    L37_38 = L37_38.createMenuButton
+    L38_39 = L1_2
+    L37_38 = L37_38(L38_39)
+    L38_39 = L36_37.contents
+    L39_40 = L38_39
+    L38_39 = L38_39.insert
+    L40_41 = L37_38
+    L38_39(L39_40, L40_41)
+  end
+  function L37_38(A0_52)
+    local L1_53
+    L1_53 = _UPVALUE0_
+    L1_53 = L1_53.pushtoken
+    if L1_53 == "" then
+      function L1_53(A0_54)
+        if A0_54.action == "clicked" and A0_54.index == 2 then
+          _UPVALUE0_.registerForPushNotifications()
+        end
+        return true
+      end
+      native.showAlert("Push notifications", "In order to modify your notifications you must have push notifications turned on.", {"Later", "Turn it on"}, L1_53)
+    else
+      L1_53 = _UPVALUE2_
+      L1_53 = L1_53.isGameCenter
+      L1_53 = L1_53()
+      if L1_53 == true then
+        L1_53 = _UPVALUE2_
+        L1_53 = L1_53.insert
+        L1_53({
+          prevScene = "notifications"
+        })
+        L1_53 = _UPVALUE2_
+        L1_53 = L1_53.dispatchEvent
+        L1_53("clearLocalTimersAndListeners")
+        L1_53 = director
+        L1_53 = L1_53.changeScene
+        L1_53(L1_53, "notificationsettings", "overFromRightNew")
+      end
+    end
+    L1_53 = true
+    return L1_53
+  end
+  L38_39 = _UPVALUE3_
+  L38_39 = L38_39.newButton
+  L39_40 = {}
+  L39_40.width = 50
+  L39_40.height = 50
+  L39_40.default = "settingsbtn.png"
+  L39_40.over = "settingsbtn-over.png"
+  L39_40.onRelease = L37_38
+  L38_39 = L38_39(L39_40)
+  L40_41 = L38_39
+  L39_40 = L38_39.setReferencePoint
+  L41_42 = display
+  L41_42 = L41_42.CenterRightReferencePoint
+  L39_40(L40_41, L41_42)
+  L39_40 = _W
+  L39_40 = L39_40 + 1
+  L38_39.x = L39_40
+  L39_40 = L36_37.yCenter
+  L38_39.y = L39_40
+  L39_40 = L36_37.contents
+  L40_41 = L39_40
+  L39_40 = L39_40.insert
+  L41_42 = L38_39
+  L39_40(L40_41, L41_42)
+  function L39_40(A0_55)
+    local L1_56, L2_57, L3_58, L4_59, L5_60
+    L1_56 = A0_55.target
+    L1_56 = L1_56.msgBgGroup
+    L2_57 = A0_55.phase
+    L3_58 = A0_55.target
+    L3_58 = L3_58.id
+    L4_59 = _UPVALUE0_
+    L4_59 = L4_59.decode
+    L5_60 = L3_58.custom
+    L4_59 = L4_59(L5_60)
+    L5_60 = L3_58.type
+    if L5_60 ~= "warning" then
+      L5_60 = L3_58.type
+      if L5_60 ~= "neutral" then
+        L5_60 = A0_55.background
+        L5_60 = L5_60.setFillColor
+        L5_60(L5_60, 217, 217, 217)
+        if L2_57 == "release" or L2_57 == "tap" then
+          function L5_60()
+            _UPVALUE0_.background:setFillColor(0, 0, 0, 0)
+          end
+          timer.performWithDelay(100, L5_60)
+          _UPVALUE1_.update({
+            listPos = _UPVALUE2_:getContentPosition(),
+            start = 0,
+            pop = _UPVALUE3_ + _UPVALUE4_
+          })
+          _UPVALUE5_.goTo(L3_58.type, L4_59)
+        end
+      end
+    end
+    L5_60 = true
+    return L5_60
+  end
+  function L40_41(A0_61)
+    local L1_62, L2_63, L3_64, L4_65, L5_66, L6_67, L7_68
+    L1_62 = A0_61.phase
+    L2_63 = A0_61.target
+    L3_64 = L2_63.showFullMessage
+    L4_65 = display
+    L4_65 = L4_65.getCurrentStage
+    L4_65 = L4_65()
+    L5_66 = L4_65
+    L4_65 = L4_65.setFocus
+    L6_67 = L2_63
+    L4_65(L5_66, L6_67)
+    if L1_62 == "began" then
+      L5_66 = L3_64
+      L4_65 = L3_64.setFillColor
+      L6_67 = unpack
+      L7_68 = L3_64.highlightColor
+      L7_68 = L6_67(L7_68)
+      L4_65(L5_66, L6_67, L7_68, L6_67(L7_68))
+    elseif L1_62 == "moved" then
+      L4_65 = _UPVALUE0_
+      L5_66 = A0_61.xStart
+      L6_67 = A0_61.x
+      L5_66 = L5_66 - L6_67
+      L4_65 = L4_65(L5_66)
+      L5_66 = _UPVALUE0_
+      L6_67 = A0_61.yStart
+      L7_68 = A0_61.y
+      L6_67 = L6_67 - L7_68
+      L5_66 = L5_66(L6_67)
+      if L4_65 > 2 or L5_66 > 2 then
+        L6_67 = display
+        L6_67 = L6_67.getCurrentStage
+        L6_67 = L6_67()
+        L7_68 = L6_67
+        L6_67 = L6_67.setFocus
+        L6_67(L7_68, nil)
+        L7_68 = L3_64
+        L6_67 = L3_64.setFillColor
+        L6_67(L7_68, unpack(L3_64.defaultColor))
+        L6_67 = _UPVALUE1_
+        L7_68 = L6_67
+        L6_67 = L6_67.takeFocus
+        L6_67(L7_68, A0_61)
+      end
+    elseif L1_62 == "ended" or L1_62 == "cancelled" then
+      L4_65 = display
+      L4_65 = L4_65.getCurrentStage
+      L4_65 = L4_65()
+      L5_66 = L4_65
+      L4_65 = L4_65.setFocus
+      L6_67 = nil
+      L4_65(L5_66, L6_67)
+      L5_66 = L3_64
+      L4_65 = L3_64.setFillColor
+      L6_67 = unpack
+      L7_68 = L3_64.defaultColor
+      L7_68 = L6_67(L7_68)
+      L4_65(L5_66, L6_67, L7_68, L6_67(L7_68))
+      L4_65 = display
+      L4_65 = L4_65.newGroup
+      L4_65 = L4_65()
+      L5_66 = _UPVALUE2_
+      L6_67 = L5_66
+      L5_66 = L5_66.insert
+      L7_68 = L4_65
+      L5_66(L6_67, L7_68)
+      L5_66 = _UPVALUE3_
+      L5_66 = L5_66.makeImageFromSlices
+      L6_67 = {}
+      L6_67.filename = "notifications-fullmessage-slice"
+      L7_68 = _W
+      L7_68 = L7_68 - 12
+      L6_67.resWidth = L7_68
+      L7_68 = resHeight
+      L6_67.resHeight = L7_68
+      L6_67.width = 3
+      L6_67.height = 3
+      L6_67.numFrames = 4
+      L7_68 = {
+        250,
+        250,
+        250
+      }
+      L6_67.fillColor = L7_68
+      L5_66 = L5_66(L6_67)
+      L7_68 = L5_66
+      L6_67 = L5_66.setReferencePoint
+      L6_67(L7_68, display.TopCenterReferencePoint)
+      L6_67 = _UPVALUE4_
+      L5_66.x = L6_67
+      L5_66.y = 80
+      L7_68 = L4_65
+      L6_67 = L4_65.insert
+      L6_67(L7_68, L4_65)
+      function L6_67(A0_69)
+        if A0_69.phase == "ended" or A0_69.phase == "cancelled" then
+          transitions.to(_UPVALUE0_, {
+            time = 300,
+            y = _H,
+            transition = easing.outQuad,
+            onComplete = function()
+              _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+            end
+          })
+        end
+        return true
+      end
+      L7_68 = display
+      L7_68 = L7_68.newRect
+      L7_68 = L7_68(0, 0, _W, _H)
+      L7_68:setFillColor(0, 0, 0, 0)
+      L7_68.isHitTestable = true
+      L7_68:addEventListener("touch", L6_67)
+      L4_65:insert(L7_68)
+    end
+    L4_65 = true
+    return L4_65
+  end
+  L41_42 = 40
+  function L42_43(A0_70)
+    local L1_71, L2_72, L3_73, L4_74, L5_75, L6_76, L7_77, L8_78, L9_79, L10_80
+    L1_71 = A0_70.target
+    L1_71 = L1_71.height
+    L2_72 = L1_71 * 0.5
+    L3_73 = A0_70.view
+    L4_74 = A0_70.index
+    L5_75 = A0_70.id
+    L6_76 = _UPVALUE0_
+    L7_77 = L5_75.id
+    if L6_76 < L7_77 then
+      L6_76 = display
+      L6_76 = L6_76.newImageRect
+      L7_77 = "notification-newIcon.png"
+      L8_78 = 10
+      L9_79 = 10
+      L6_76 = L6_76(L7_77, L8_78, L9_79)
+      L8_78 = L6_76
+      L7_77 = L6_76.setReferencePoint
+      L9_79 = display
+      L9_79 = L9_79.CenterReferencePoint
+      L7_77(L8_78, L9_79)
+      L7_77 = _UPVALUE1_
+      L7_77 = L7_77 * 0.5
+      L6_76.x = L7_77
+      L6_76.y = L2_72
+      L8_78 = L3_73
+      L7_77 = L3_73.insert
+      L9_79 = L6_76
+      L7_77(L8_78, L9_79)
+    end
+    L6_76 = display
+    L6_76 = L6_76.newText
+    L7_77 = {}
+    L8_78 = L5_75.header
+    L7_77.text = L8_78
+    L8_78 = _UPVALUE2_
+    L8_78 = L8_78.fonts
+    L8_78 = L8_78.regular
+    L7_77.font = L8_78
+    L7_77.fontSize = 16
+    L6_76 = L6_76(L7_77)
+    L8_78 = L6_76
+    L7_77 = L6_76.setReferencePoint
+    L9_79 = display
+    L9_79 = L9_79.CenterLeftReferencePoint
+    L7_77(L8_78, L9_79)
+    L8_78 = L6_76
+    L7_77 = L6_76.setPosition
+    L9_79 = _UPVALUE1_
+    L10_80 = 17
+    L7_77(L8_78, L9_79, L10_80)
+    L7_77 = L5_75.type
+    if L7_77 == "warning" then
+      L8_78 = L6_76
+      L7_77 = L6_76.setFillColor
+      L9_79 = 255
+      L10_80 = 155
+      L7_77(L8_78, L9_79, L10_80, 155)
+    else
+      L8_78 = L6_76
+      L7_77 = L6_76.setFillColor
+      L9_79 = 255
+      L10_80 = 255
+      L7_77(L8_78, L9_79, L10_80, 255)
+    end
+    L8_78 = L3_73
+    L7_77 = L3_73.insert
+    L9_79 = L6_76
+    L7_77(L8_78, L9_79)
+    L7_77 = display
+    L7_77 = L7_77.newImageRect
+    L8_78 = "notificationIcons/"
+    L9_79 = L5_75.headerid
+    L10_80 = ".png"
+    L8_78 = L8_78 .. L9_79 .. L10_80
+    L9_79 = 14
+    L10_80 = 14
+    L7_77 = L7_77(L8_78, L9_79, L10_80)
+    L9_79 = L7_77
+    L8_78 = L7_77.setReferencePoint
+    L10_80 = display
+    L10_80 = L10_80.CenterLeftReferencePoint
+    L8_78(L9_79, L10_80)
+    L8_78 = L6_76.x
+    L9_79 = L6_76.width
+    L8_78 = L8_78 + L9_79
+    L8_78 = L8_78 + 4
+    L7_77.x = L8_78
+    L8_78 = L6_76.y
+    L7_77.y = L8_78
+    L9_79 = L3_73
+    L8_78 = L3_73.insert
+    L10_80 = L7_77
+    L8_78(L9_79, L10_80)
+    L8_78 = display
+    L8_78 = L8_78.newText
+    L9_79 = {}
+    L10_80 = L5_75.message
+    L9_79.text = L10_80
+    L10_80 = _W
+    L10_80 = L10_80 - 10
+    L10_80 = L10_80 - _UPVALUE1_
+    L9_79.width = L10_80
+    L9_79.height = 0
+    L10_80 = _UPVALUE2_
+    L10_80 = L10_80.fonts
+    L10_80 = L10_80.light
+    L9_79.font = L10_80
+    L9_79.fontSize = 13
+    L8_78 = L8_78(L9_79)
+    L10_80 = L8_78
+    L9_79 = L8_78.setReferencePoint
+    L9_79(L10_80, display.TopLeftReferencePoint)
+    L10_80 = L8_78
+    L9_79 = L8_78.setPosition
+    L9_79(L10_80, _UPVALUE1_, L6_76.y + 14)
+    L9_79 = L5_75.type
+    if L9_79 == "warning" then
+      L10_80 = L8_78
+      L9_79 = L8_78.setFillColor
+      L9_79(L10_80, 255, 155, 155)
+    else
+      L10_80 = L8_78
+      L9_79 = L8_78.setFillColor
+      L9_79(L10_80, 255, 255, 255)
+    end
+    L10_80 = L3_73
+    L9_79 = L3_73.insert
+    L9_79(L10_80, L8_78)
+    L9_79 = display
+    L9_79 = L9_79.newText
+    L10_80 = {}
+    L10_80.text = L5_75.date
+    L10_80.font = _UPVALUE2_.fonts.light
+    L10_80.fontSize = 11
+    L9_79 = L9_79(L10_80)
+    L10_80 = L9_79.setReferencePoint
+    L10_80(L9_79, display.BottomLeftReferencePoint)
+    L10_80 = L9_79.setPosition
+    L10_80(L9_79, _UPVALUE1_, L1_71 - 8)
+    L10_80 = L5_75.type
+    if L10_80 == "warning" then
+      L10_80 = L9_79.setFillColor
+      L10_80(L9_79, 255, 155, 155, 190)
+    else
+      L10_80 = L9_79.setFillColor
+      L10_80(L9_79, 255, 255, 255, 190)
+    end
+    L10_80 = L3_73.insert
+    L10_80(L3_73, L9_79)
+    L10_80 = display
+    L10_80 = L10_80.newLine
+    L10_80 = L10_80(_UPVALUE1_, L1_71 + 0.5, _W, L1_71 + 0.5)
+    L10_80:setStrokeColor(255, 255, 255, 50)
+    L3_73:insert(L10_80)
+  end
+  function L43_44(A0_81)
+    local L1_82, L2_83, L3_84
+    L1_82 = A0_81.target
+    L1_82 = L1_82.height
+    L2_83 = A0_81.view
+    L3_84 = _UPVALUE0_
+    L3_84 = L3_84.makeSprite
+    L3_84 = L3_84(_UPVALUE1_, L1_82 * 0.5)
+    L2_83:insert(L3_84)
+  end
+  function L44_45(A0_85)
+    local L1_86, L2_87, L3_88, L4_89
+    L1_86 = A0_85.target
+    L1_86 = L1_86.height
+    L2_87 = A0_85.view
+    L3_88 = A0_85.id
+    L4_89 = display
+    L4_89 = L4_89.newText
+    L4_89 = L4_89({
+      text = L3_88 .. " new notifications",
+      font = _UPVALUE0_.fonts.light,
+      fontSize = 13
+    })
+    L4_89:setReferencePoint(display.CenterReferencePoint)
+    L4_89:setPosition(_UPVALUE1_, L1_86 * 0.5 + 1)
+    L4_89:setFillColor(255, 255, 255, 200)
+    L2_87:insert(L4_89)
+  end
+  function L11_12(A0_90)
+    local L1_91, L2_92, L3_93, L4_94, L5_95, L6_96, L7_97, L8_98, L9_99, L10_100, L11_101
+    L1_91 = _UPVALUE0_
+    L1_91 = L1_91.decode
+    L2_92 = A0_90.response
+    L1_91 = L1_91(L2_92)
+    L2_92 = L1_91.loadMore
+    L3_93 = L1_91.notifications
+    L4_94.loadMore = L2_92
+    if L4_94 == true then
+      L4_94(L5_95, L6_96)
+      L7_97 = {
+        L8_98,
+        L9_99,
+        L10_100,
+        L11_101
+      }
+      L8_98 = 0
+      L9_99 = 0
+      L10_100 = 0
+      L11_101 = 0
+      L6_96.lineColor = L7_97
+      L7_97 = {
+        L8_98,
+        L9_99,
+        L10_100,
+        L11_101
+      }
+      L8_98 = 0
+      L9_99 = 0
+      L10_100 = 0
+      L11_101 = 0
+      L6_96.rowColor = L7_97
+      L7_97 = _UPVALUE4_
+      L6_96.onRender = L7_97
+      L6_96.height = 30
+      L7_97 = L1_91.totalAmount
+      L6_96.id = L7_97
+      L4_94(L5_95, L6_96)
+    else
+      L4_94(L5_95, L6_96)
+    end
+    for L7_97 = 1, #L3_93 do
+      L8_98 = L3_93[L7_97]
+      L9_99 = tonumber
+      L10_100 = L3_93[L7_97]
+      L10_100 = L10_100.id
+      L9_99 = L9_99(L10_100)
+      L8_98.id = L9_99
+      L8_98 = string
+      L8_98 = L8_98.lower
+      L9_99 = L3_93[L7_97]
+      L9_99 = L9_99.header
+      L10_100 = L9_99
+      L9_99 = L9_99.gsub
+      L11_101 = "[! ]"
+      L11_101 = L9_99(L10_100, L11_101, "")
+      L8_98 = L8_98(L9_99, L10_100, L11_101, L9_99(L10_100, L11_101, ""))
+      L9_99 = system
+      L9_99 = L9_99.pathForFile
+      L10_100 = "notificationIcons/"
+      L11_101 = L8_98
+      L10_100 = L10_100 .. L11_101 .. ".png"
+      L9_99 = L9_99(L10_100)
+      if L9_99 then
+        L10_100 = L3_93[L7_97]
+        L10_100.headerid = L8_98
+      else
+        L10_100 = L3_93[L7_97]
+        L10_100.headerid = "empty"
+      end
+      L10_100 = 60
+      L11_101 = display
+      L11_101 = L11_101.newText
+      L11_101 = L11_101({
+        text = L3_93[L7_97].message,
+        width = _W - 10 - _UPVALUE5_,
+        height = 0,
+        font = _UPVALUE6_.fonts.light,
+        fontSize = 13
+      })
+      L10_100 = L10_100 + L11_101.height
+      L11_101 = _UPVALUE7_.delete(L11_101)
+      _UPVALUE3_:insertRow({
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        onRender = _UPVALUE8_,
+        onEvent = _UPVALUE9_,
+        height = L10_100,
+        id = L3_93[L7_97]
+      })
+    end
+    if L2_92 == true then
+      L7_97 = {
+        L8_98,
+        L9_99,
+        L10_100,
+        L11_101
+      }
+      L8_98 = 0
+      L9_99 = 0
+      L10_100 = 0
+      L11_101 = 0
+      L6_96.lineColor = L7_97
+      L7_97 = {
+        L8_98,
+        L9_99,
+        L10_100,
+        L11_101
+      }
+      L8_98 = 0
+      L9_99 = 0
+      L10_100 = 0
+      L11_101 = 0
+      L6_96.rowColor = L7_97
+      L7_97 = _UPVALUE10_
+      L6_96.onRender = L7_97
+      L6_96.height = 40
+      L4_94(L5_95, L6_96)
+    end
+    if L4_94 > 0 then
+      if L4_94 > L5_95 then
+        L4_94.last_notif = L5_95
+        L4_94(L5_95)
+      end
+    end
+    if L4_94 == true then
+      L7_97 = 0
+      L4_94(L5_95, L6_96, L7_97)
+      _UPVALUE2_ = L4_94
+    end
+    _UPVALUE13_ = L4_94
+  end
+  if L14_15 == false and L15_16 == true then
+    L45_46 = display
+    L45_46 = L45_46.newRect
+    L46_47 = 0
+    L45_46 = L45_46(L46_47, 0, _W, _H)
+    L46_47 = L45_46.setFillColor
+    L46_47(L45_46, 255, 255, 255, 125)
+    L46_47 = L45_46.addEventListener
+    L46_47(L45_46, "touch", function()
+      local L0_102, L1_103
+      L0_102 = true
+      return L0_102
+    end)
+    L46_47 = L0_1.insert
+    L46_47(L0_1, L45_46)
+    function L46_47(A0_104)
+      if A0_104.action == "clicked" then
+        if A0_104.index == 2 then
+          system.openURL("https://itunes.apple.com/app/id528919633")
+        end
+        _UPVALUE0_.restore("seedlist", _UPVALUE1_.defaultPlatform, _UPVALUE1_.defaultSection)
+        _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+        director:changeScene("seedlist")
+      end
+    end
+    _UPVALUE0_.showAlert("Pro only", [[
+This feature can only be used in Minecraft Seeds Pro.
+Upgrade to use this feature.]], {"Dismiss", "Upgrade"}, L46_47)
+  else
+    L45_46 = _UPVALUE1_
+    L45_46 = L45_46.pushtoken
+    if L45_46 == "" then
+      function L45_46(A0_105)
+        local L1_106, L2_107, L3_108
+        L1_106 = A0_105.target
+        L1_106 = L1_106.height
+        L2_107 = A0_105.view
+        L3_108 = display
+        L3_108 = L3_108.newImageRect
+        L3_108 = L3_108("notifications-activatePush.png", 262, 142)
+        L3_108:setReferencePoint(display.CenterReferencePoint)
+        L3_108.x = _UPVALUE0_
+        L3_108.y = L1_106 * 0.5
+        L2_107:insert(L3_108)
+      end
+      function L46_47(A0_109)
+        local L1_110
+        L1_110 = A0_109.phase
+        if L1_110 ~= "release" then
+          L1_110 = A0_109.phase
+        elseif L1_110 == "tap" then
+          function L1_110(A0_111)
+            if A0_111.action == "clicked" and A0_111.index == 2 then
+              _UPVALUE0_.registerForPushNotifications()
+            end
+            return true
+          end
+          _UPVALUE1_.showAlert("Push notifications", "In order to subscribe to this feature, please activate push notifications for the app.", {"Later", "Turn it on"}, L1_110)
+        end
+        L1_110 = true
+        return L1_110
+      end
+      L31_32:insertRow({
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        onRender = L45_46,
+        onEvent = L46_47,
+        height = 280
+      })
+    else
+      function L45_46(A0_112)
+        local L1_113, L2_114, L3_115, L4_116, L5_117
+        L1_113 = A0_112.target
+        L1_113 = L1_113.height
+        L2_114 = A0_112.view
+        L3_115 = display
+        L3_115 = L3_115.newGroup
+        L3_115 = L3_115()
+        L5_117 = L2_114
+        L4_116 = L2_114.insert
+        L4_116(L5_117, L3_115)
+        L4_116 = _UPVALUE0_
+        L4_116 = L4_116.makeSprite
+        L5_117 = 0
+        L4_116 = L4_116(L5_117, 0)
+        L5_117 = L4_116.setReferencePoint
+        L5_117(L4_116, display.CenterLeftReferencePoint)
+        L4_116.x = 0
+        L4_116.y = 0
+        L5_117 = L3_115.insert
+        L5_117(L3_115, L4_116)
+        L5_117 = display
+        L5_117 = L5_117.newText
+        L5_117 = L5_117({
+          text = "Fetching notifications",
+          font = _UPVALUE1_.fonts.light,
+          fontSize = 16
+        })
+        L5_117:setReferencePoint(display.CenterLeftReferencePoint)
+        L5_117:setPosition(L4_116.width + 7, 0)
+        L5_117:setFillColor(255, 255, 255)
+        L3_115:insert(L5_117)
+        L3_115:setReferencePoint(display.CenterReferencePoint)
+        L3_115.x = _UPVALUE2_
+        L3_115.y = L1_113 * 0.5
+      end
+      L46_47 = L31_32.insertRow
+      L46_47(L31_32, {
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        onRender = L45_46,
+        height = 35
+      })
+      function L46_47(A0_118)
+        _UPVALUE0_ = true
+        _UPVALUE1_.network_request("get_notifications", _UPVALUE2_, {
+          lastNotif = _UPVALUE3_,
+          start = _UPVALUE4_,
+          udid = _UPVALUE5_.udid,
+          pop = _UPVALUE6_
+        })
+        _UPVALUE1_.removeRuntimeListener("sceneLoaded", A0_118.self_listenerid)
+      end
+      _UPVALUE0_.addRuntimeListener("sceneLoaded", L46_47)
+    end
+  end
+  return L0_1
+end

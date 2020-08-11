@@ -1,0 +1,907 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("facebook")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.getAppType
+  L7_8 = L7_8()
+  L8_9 = true
+  L9_10 = false
+  L10_11 = _UPVALUE0_
+  L10_11 = L10_11.getScriptFile
+  L10_11 = L10_11()
+  L11_12 = _UPVALUE1_
+  L11_12 = L11_12.fb_invite_t
+  L12_13 = _UPVALUE1_
+  L12_13 = L12_13.nickname
+  L13_14 = _UPVALUE1_
+  L13_14 = L13_14.imgSuff
+  L14_15 = _UPVALUE0_
+  L14_15 = L14_15.getSceneProperties
+  L14_15 = L14_15()
+  L15_16 = L14_15.pageTable
+  L16_17 = L14_15.pageLabel
+  L17_18 = L14_15.prevScene
+  L18_19 = L14_15.section
+  L19_20 = L14_15.page
+  L20_21 = L14_15.taps
+  L21_22 = ""
+  L22_23 = 0
+  L23_24 = _UPVALUE1_
+  L23_24 = L23_24.session
+  L23_24 = L23_24 + 1
+  L24_25 = _UPVALUE1_
+  L24_25.session = L23_24
+  L24_25 = {}
+  function L25_26(A0_38)
+    _UPVALUE0_.removeRuntimeListener("clearLocalTimersAndListeners", A0_38.self_listenerid)
+  end
+  L26_27 = _UPVALUE0_
+  L26_27 = L26_27.addRuntimeListener
+  L27_28 = "clearLocalTimersAndListeners"
+  L28_29 = L25_26
+  L26_27(L27_28, L28_29)
+  L26_27 = _UPVALUE0_
+  L26_27 = L26_27.makeBlurryBg
+  L26_27 = L26_27()
+  L28_29 = L26_27
+  L27_28 = L26_27.addEventListener
+  L29_30 = "touch"
+  function L30_31()
+    local L0_39, L1_40
+    L0_39 = true
+    return L0_39
+  end
+  L27_28(L28_29, L29_30, L30_31)
+  L28_29 = L2_3
+  L27_28 = L2_3.insert
+  L29_30 = L26_27
+  L27_28(L28_29, L29_30)
+  L27_28 = _UPVALUE2_
+  L27_28 = L27_28.createSideMenu
+  L28_29 = L1_2
+  L27_28 = L27_28(L28_29)
+  L29_30 = L0_1
+  L28_29 = L0_1.insert
+  L30_31 = L27_28
+  L28_29(L29_30, L30_31)
+  L0_1.side_menu = L27_28
+  L29_30 = L27_28
+  L28_29 = L27_28.toBack
+  L28_29(L29_30)
+  L28_29 = _UPVALUE3_
+  L28_29 = L28_29.newTableView
+  L29_30 = {}
+  L29_30.top = 64
+  L30_31 = _W
+  L29_30.width = L30_31
+  L30_31 = _H
+  L30_31 = L30_31 - 64
+  L29_30.height = L30_31
+  L30_31 = {
+    L31_32,
+    L32_33,
+    L33_34,
+    L34_35
+  }
+  L31_32 = 0
+  L32_33 = 0
+  L33_34 = 0
+  L34_35 = 0
+  L29_30.bgColor = L30_31
+  L28_29 = L28_29(L29_30)
+  L30_31 = L3_4
+  L29_30 = L3_4.insert
+  L31_32 = L28_29
+  L29_30(L30_31, L31_32)
+  function L29_30(A0_41)
+    _UPVALUE0_:scrollToY(A0_41, 0)
+  end
+  L28_29.scrollList = L29_30
+  function L29_30()
+    return (_UPVALUE0_:getContentPosition())
+  end
+  L28_29.getPos = L29_30
+  function L29_30(A0_42)
+    local L1_43, L2_44, L3_45, L4_46, L5_47
+    L1_43 = A0_42.target
+    L1_43 = L1_43.height
+    L2_44 = A0_42.view
+    L3_45 = display
+    L3_45 = L3_45.newGroup
+    L3_45 = L3_45()
+    L5_47 = L2_44
+    L4_46 = L2_44.insert
+    L4_46(L5_47, L3_45)
+    L4_46 = _UPVALUE0_
+    L4_46 = L4_46.makeSprite
+    L5_47 = 0
+    L4_46 = L4_46(L5_47, 0)
+    L5_47 = L3_45.insert
+    L5_47(L3_45, L4_46)
+    L5_47 = display
+    L5_47 = L5_47.newText
+    L5_47 = L5_47({
+      text = "Fetching facebook friends",
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 18
+    })
+    L5_47:setReferencePoint(display.CenterLeftReferencePoint)
+    L5_47.x = L4_46.width * 0.5 + 7
+    L5_47.y = 0
+    L5_47:setTextColor(255, 255, 255, 255)
+    L3_45:insert(L5_47)
+    L3_45:setReferencePoint(display.CenterReferencePoint)
+    L3_45.x = _UPVALUE2_
+    L3_45.y = L1_43 * 0.5
+  end
+  L31_32 = L28_29
+  L30_31 = L28_29.insertRow
+  L32_33 = {}
+  L32_33.onRender = L29_30
+  L32_33.height = 42
+  L33_34 = {
+    L34_35,
+    L35_36,
+    L36_37,
+    0
+  }
+  L34_35 = 0
+  L35_36 = 0
+  L36_37 = 0
+  L32_33.rowColor = L33_34
+  L33_34 = {
+    L34_35,
+    L35_36,
+    L36_37,
+    0
+  }
+  L34_35 = 255
+  L35_36 = 255
+  L36_37 = 255
+  L32_33.lineColor = L33_34
+  L30_31(L31_32, L32_33)
+  function L30_31(A0_48)
+    local L1_49, L2_50, L3_51, L4_52, L5_53, L6_54, L7_55, L8_56
+    L1_49 = A0_48.target
+    L1_49 = L1_49.hl
+    L2_50 = A0_48.target
+    L2_50 = L2_50.bg
+    L3_51 = A0_48.phase
+    L4_52 = A0_48.target
+    L4_52 = L4_52.fetchAvatar
+    L5_53 = A0_48.target
+    L5_53 = L5_53.fetchBios
+    L6_54 = A0_48.target
+    L6_54 = L6_54.fetchNick
+    L7_55 = A0_48.target
+    L7_55 = L7_55.fetchUdid
+    if L7_55 ~= "" and L6_54 ~= "" then
+      if L3_51 == "press" then
+        L1_49.isVisible = true
+        L2_50.isVisible = false
+        L8_56 = A0_48.target
+        L8_56 = L8_56.label
+        L8_56 = L8_56.setTextColor
+        L8_56(L8_56, 255, 255, 255)
+        L8_56 = A0_48.target
+        L8_56 = L8_56.realName
+        if L8_56 then
+          L8_56 = A0_48.target
+          L8_56 = L8_56.realName
+          L8_56 = L8_56.setTextColor
+          L8_56(L8_56, 255, 255, 255)
+        end
+      elseif L3_51 == "release" or L3_51 == "tap" then
+        L1_49.isVisible = true
+        L2_50.isVisible = false
+        L8_56 = A0_48.target
+        L8_56 = L8_56.label
+        L8_56 = L8_56.setTextColor
+        L8_56(L8_56, 255, 255, 255)
+        L8_56 = A0_48.target
+        L8_56 = L8_56.realName
+        if L8_56 then
+          L8_56 = A0_48.target
+          L8_56 = L8_56.realName
+          L8_56 = L8_56.setTextColor
+          L8_56(L8_56, 255, 255, 255)
+        end
+        function L8_56()
+          _UPVALUE0_.isVisible = false
+          _UPVALUE1_.isVisible = true
+          _UPVALUE2_.target.label:setTextColor(85, 85, 85)
+          if _UPVALUE2_.target.realName then
+            _UPVALUE2_.target.realName:setTextColor(160, 160, 160)
+          end
+        end
+        timer.performWithDelay(100, L8_56)
+        if not _UPVALUE0_ or _UPVALUE0_ and _UPVALUE0_[1] and _UPVALUE0_[1].taps and _UPVALUE0_[1].taps == _UPVALUE1_ then
+          _UPVALUE2_.update({
+            pageTable = _UPVALUE3_,
+            listPos = _UPVALUE4_.getPos(),
+            taps = _UPVALUE1_ + 1
+          })
+          _UPVALUE2_.insert({
+            prevScene = "findfbfriends",
+            fetchAvtr = L4_52,
+            fetchBios = L5_53,
+            fetchNick = L6_54,
+            fetchUdid = L7_55,
+            page = "profile"
+          })
+        else
+          _UPVALUE2_.update({
+            listPos = _UPVALUE4_.getPos(),
+            taps = _UPVALUE1_ + 1
+          })
+          _UPVALUE2_.insert({
+            prevScene = "findfbfriends",
+            pageTable = _UPVALUE3_,
+            fetchAvtr = L4_52,
+            fetchBios = L5_53,
+            fetchNick = L6_54,
+            fetchUdid = L7_55,
+            page = "profile"
+          })
+        end
+        _UPVALUE5_.logout()
+        _UPVALUE2_.dispatchEvent("clearLocalTimersAndListeners")
+        director:changeScene("profile", "overFromRightNew")
+      end
+    end
+    L8_56 = true
+    return L8_56
+  end
+  function L31_32(A0_57)
+    local L1_58, L2_59, L3_60, L4_61, L5_62, L6_63, L7_64, L8_65, L9_66, L10_67, L11_68, L12_69, L13_70, L14_71, L15_72, L16_73, L17_74, L18_75
+    L1_58 = false
+    L2_59 = false
+    L3_60 = #A0_57
+    L3_60 = A0_57[L3_60]
+    L3_60 = L3_60[1]
+    L4_61 = #A0_57
+    L4_61 = A0_57[L4_61]
+    L4_61 = L4_61[2]
+    L5_62 = false
+    _UPVALUE0_ = L5_62
+    L5_62 = _UPVALUE1_
+    if L5_62 == true then
+      L5_62 = _UPVALUE2_
+      L5_62 = L5_62.deleteRow
+      L5_62(L6_63, L7_64)
+    end
+    L5_62 = #A0_57
+    L5_62 = L5_62 - 1
+    for L9_66 = 1, L5_62 do
+      L10_67 = A0_57[L9_66]
+      L10_67 = L10_67.id
+      L11_68 = A0_57[L9_66]
+      L11_68 = L11_68.fbid
+      L12_69 = A0_57[L9_66]
+      L12_69 = L12_69.name
+      L13_70 = A0_57[L9_66]
+      L13_70 = L13_70.udid
+      L14_71 = A0_57[L9_66]
+      L14_71 = L14_71.bios
+      L15_72 = A0_57[L9_66]
+      L15_72 = L15_72.avatar
+      L16_73 = A0_57[L9_66]
+      L16_73 = L16_73.nickname
+      L17_74 = A0_57[L9_66]
+      L18_75 = _UPVALUE3_
+      L17_74.taps = L18_75
+      L17_74 = _UPVALUE4_
+      L18_75 = _UPVALUE5_
+      L18_75 = L18_75 + 1
+      L17_74[L18_75] = A0_57[L9_66]
+      if L1_58 == false and L16_73 == "" or L2_59 == false and L16_73 ~= "" then
+        L17_74 = ""
+        L18_75 = 0
+        if L16_73 ~= "" then
+          L17_74 = "friendswithseedsprolite.png"
+          L18_75 = 198
+          L2_59 = true
+        elseif L16_73 == "" then
+          L17_74 = "friendswithoutseedsprolite.png"
+          L18_75 = 221
+          L1_58 = true
+        end
+        _UPVALUE2_:insertRow({
+          lineColor = {
+            0,
+            0,
+            0,
+            0
+          },
+          rowColor = {
+            0,
+            0,
+            0,
+            0
+          },
+          onRender = function(A0_76)
+            local L1_77, L2_78, L3_79
+            L1_77 = A0_76.target
+            L1_77 = L1_77.height
+            L2_78 = A0_76.view
+            L3_79 = display
+            L3_79 = L3_79.newImageRect
+            L3_79 = L3_79(_UPVALUE0_, _UPVALUE1_, _UPVALUE2_)
+            L3_79:setReferencePoint(display.CenterLeftReferencePoint)
+            L3_79.x = 13
+            L3_79.y = 20
+            L2_78:insert(L3_79)
+          end,
+          height = 30
+        })
+      end
+      function L17_74(A0_80)
+        local L1_81, L2_82, L3_83, L4_84
+        L1_81 = A0_80.target
+        L1_81 = L1_81.id
+        L2_82 = A0_80.phase
+        L3_83 = A0_80.target
+        L3_83 = L3_83.fbid
+        if L2_82 == "moved" then
+          L4_84 = _UPVALUE0_
+          L4_84 = L4_84.takeFocus
+          L4_84(L4_84, A0_80)
+        elseif L2_82 == "release" then
+          L4_84 = A0_80.target
+          L4_84 = L4_84.name
+          _UPVALUE1_ = L4_84
+          L4_84 = "POST_TO_FRIEND"
+          fbCommand = L4_84
+          L4_84 = {}
+          L4_84.description = string.gsub(_UPVALUE2_.description, "<username>", _UPVALUE3_)
+          L4_84.name = string.gsub(_UPVALUE2_.name, "<username>", _UPVALUE3_)
+          L4_84.caption = _UPVALUE2_.caption
+          L4_84.href = _UPVALUE2_.link
+          L4_84.media = {
+            {
+              type = "image",
+              src = _UPVALUE2_.img_src,
+              href = _UPVALUE2_.img_href
+            }
+          }
+          L4_84 = _UPVALUE4_.encode(L4_84)
+          _UPVALUE5_.showDialog("stream.publish", {target_id = L3_83, attachment = L4_84})
+        end
+        L4_84 = true
+        return L4_84
+      end
+      function L18_75(A0_85)
+        local L1_86, L2_87, L3_88, L4_89, L5_90, L6_91, L7_92, L8_93
+        L1_86 = A0_85.target
+        L1_86 = L1_86.height
+        L2_87 = A0_85.index
+        L3_88 = A0_85.view
+        L4_89 = A0_85.target
+        L5_90 = _UPVALUE0_
+        L4_89.fetchAvtr = L5_90
+        L5_90 = _UPVALUE1_
+        L4_89.fetchBios = L5_90
+        L5_90 = _UPVALUE2_
+        L4_89.fetchNick = L5_90
+        L5_90 = _UPVALUE3_
+        L4_89.fetchUdid = L5_90
+        L5_90 = ""
+        L6_91 = _UPVALUE2_
+        if L6_91 ~= "" then
+          L6_91 = _UPVALUE4_
+          if L6_91 == 1 then
+            L5_90 = "listrow4"
+          else
+            L6_91 = _UPVALUE5_
+            if L6_91 == 1 then
+              L5_90 = "listrow1"
+            else
+              L6_91 = _UPVALUE5_
+              L7_92 = _UPVALUE6_
+              L8_93 = _UPVALUE7_
+              L7_92 = L7_92 - L8_93
+              if L6_91 == L7_92 then
+                L5_90 = "listrow3"
+              else
+                L5_90 = "listrow2"
+              end
+            end
+          end
+        else
+          L6_91 = _UPVALUE7_
+          if L6_91 == 1 then
+            L5_90 = "listrow4"
+          else
+            L6_91 = _UPVALUE5_
+            L7_92 = _UPVALUE6_
+            L8_93 = _UPVALUE7_
+            L7_92 = L7_92 - L8_93
+            L7_92 = L7_92 + 1
+            if L6_91 == L7_92 then
+              L5_90 = "listrow1"
+            else
+              L6_91 = _UPVALUE5_
+              L7_92 = _UPVALUE6_
+              if L6_91 == L7_92 then
+                L5_90 = "listrow3"
+              else
+                L5_90 = "listrow2"
+              end
+            end
+          end
+        end
+        L6_91 = display
+        L6_91 = L6_91.newImageRect
+        L7_92 = L5_90
+        L8_93 = "-over.png"
+        L7_92 = L7_92 .. L8_93
+        L8_93 = 296
+        L6_91 = L6_91(L7_92, L8_93, 45)
+        L4_89.hl = L6_91
+        L6_91 = L4_89.hl
+        L7_92 = L6_91
+        L6_91 = L6_91.setReferencePoint
+        L8_93 = display
+        L8_93 = L8_93.CenterReferencePoint
+        L6_91(L7_92, L8_93)
+        L6_91 = L4_89.hl
+        L7_92 = _UPVALUE8_
+        L6_91.x = L7_92
+        L6_91 = L4_89.hl
+        L7_92 = L1_86 * 0.5
+        L6_91.y = L7_92
+        L6_91 = L4_89.hl
+        L6_91.isVisible = false
+        L7_92 = L3_88
+        L6_91 = L3_88.insert
+        L8_93 = L4_89.hl
+        L6_91(L7_92, L8_93)
+        L6_91 = display
+        L6_91 = L6_91.newImageRect
+        L7_92 = L5_90
+        L8_93 = ".png"
+        L7_92 = L7_92 .. L8_93
+        L8_93 = 296
+        L6_91 = L6_91(L7_92, L8_93, 45)
+        L4_89.bg = L6_91
+        L6_91 = L4_89.bg
+        L7_92 = L6_91
+        L6_91 = L6_91.setReferencePoint
+        L8_93 = display
+        L8_93 = L8_93.CenterReferencePoint
+        L6_91(L7_92, L8_93)
+        L6_91 = L4_89.bg
+        L7_92 = _UPVALUE8_
+        L6_91.x = L7_92
+        L6_91 = L4_89.bg
+        L7_92 = L1_86 * 0.5
+        L6_91.y = L7_92
+        L7_92 = L3_88
+        L6_91 = L3_88.insert
+        L8_93 = L4_89.bg
+        L6_91(L7_92, L8_93)
+        L6_91 = _UPVALUE0_
+        L7_92 = #L6_91
+        if L7_92 == 0 then
+          L6_91 = "0E0903#0D0803#120C06#0D0803#0D0903#0E0902#0E0903#100A04#0E0904#0E0904#120C05#120C05#160D05#130C05#100A04#0E0903#110B05#DCB796#E4C1A3#E1BD9E#E4C0A4#DCB495#D3A67B#120C05#D8B08E#DCB696#DDB799#DCB698#DEB79A#DDB494#CFA372#CA9968#D4A886#FFFFFF#0F7FCE#DAB395#E1BB9D#0E7BCA#FFFFFF#BB895D#BA7D50#D2A478#DAAD8E#562D20#562D20#DBAD88#BE8A51#A5663E#A0613E#A96841#6A3928#683727#663424#723C2C#A26740#9D613D#6F3D25#743C25#85492D#7E442A#82482E#8E5235#935938#905637#"
+        end
+        L7_92 = _UPVALUE9_
+        L7_92 = L7_92.checkAvatar
+        L8_93 = L6_91
+        L7_92 = L7_92(L8_93)
+        if L7_92 == false then
+          L8_93 = _UPVALUE9_
+          L8_93 = L8_93.makeAvatar
+          L8_93 = L8_93({scale = 4, avatar = L6_91})
+          L8_93:setReferencePoint(display.CenterLeftReferencePoint)
+          L8_93.x = 20
+          L8_93.y = L1_86 * 0.5
+          L3_88:insert(L8_93)
+        else
+          L8_93 = display
+          L8_93 = L8_93.newImageRect
+          L8_93 = L8_93("avatars/" .. L7_92 .. ".png", 32, 32)
+          L8_93:setReferencePoint(display.CenterLeftReferencePoint)
+          L8_93.x = 20
+          L8_93.y = L1_86 * 0.5
+          L3_88:insert(L8_93)
+        end
+        L8_93 = _UPVALUE2_
+        if L8_93 == "" then
+          L8_93 = display
+          L8_93 = L8_93.newText
+          L8_93 = L8_93({
+            text = _UPVALUE10_,
+            x = 0,
+            y = 0,
+            font = _UPVALUE11_.fonts.regular,
+            fontSize = 16
+          })
+          L4_89.label = L8_93
+          L8_93 = L4_89.label
+          L8_93 = L8_93.setReferencePoint
+          L8_93(L8_93, display.CenterLeftReferencePoint)
+          L8_93 = L4_89.label
+          L8_93.x = 64
+          L8_93 = L4_89.label
+          L8_93.y = L1_86 * 0.5 - 1
+          L8_93 = L4_89.label
+          L8_93 = L8_93.setTextColor
+          L8_93(L8_93, 85, 85, 85)
+          L8_93 = L3_88.insert
+          L8_93(L3_88, L4_89.label)
+          L8_93 = string
+          L8_93 = L8_93.len
+          L8_93 = L8_93(_UPVALUE10_)
+          if L8_93 >= 23 then
+            L8_93 = L4_89.label
+            L8_93 = L8_93.setText
+            L8_93(L8_93, string.sub(_UPVALUE10_, 1, 21) .. "..")
+            L8_93 = L4_89.label
+            L8_93 = L8_93.setReferencePoint
+            L8_93(L8_93, display.CenterLeftReferencePoint)
+            L8_93 = L4_89.label
+            L8_93.x = 64
+            L8_93 = L4_89.label
+            L8_93.y = L1_86 * 0.5 - 1
+          end
+          L8_93 = _UPVALUE12_
+          L8_93 = L8_93.newButton
+          L8_93 = L8_93({
+            width = 54,
+            height = 32,
+            default = "invite.png",
+            over = "invite-over.png",
+            onEvent = _UPVALUE13_,
+            id = _UPVALUE2_
+          })
+          L8_93:setReferencePoint(display.CenterRightReferencePoint)
+          L8_93.x = _W - 20
+          L8_93.y = L1_86 * 0.5
+          L8_93.fbid = _UPVALUE14_
+          L8_93.name = _UPVALUE10_
+          L3_88:insert(L8_93)
+        else
+          L8_93 = display
+          L8_93 = L8_93.newText
+          L8_93 = L8_93({
+            text = _UPVALUE2_,
+            x = 0,
+            y = 0,
+            font = _UPVALUE11_.fonts.regular,
+            fontSize = 16
+          })
+          L4_89.label = L8_93
+          L8_93 = L4_89.label
+          L8_93 = L8_93.setReferencePoint
+          L8_93(L8_93, display.CenterLeftReferencePoint)
+          L8_93 = L4_89.label
+          L8_93.x = 64
+          L8_93 = L4_89.label
+          L8_93.y = L1_86 * 0.5 - 8
+          L8_93 = L4_89.label
+          L8_93 = L8_93.setTextColor
+          L8_93(L8_93, 85, 85, 85)
+          L8_93 = L3_88.insert
+          L8_93(L3_88, L4_89.label)
+          L8_93 = string
+          L8_93 = L8_93.len
+          L8_93 = L8_93(_UPVALUE2_)
+          if L8_93 >= 23 then
+            L8_93 = L4_89.label
+            L8_93 = L8_93.setText
+            L8_93(L8_93, string.sub(_UPVALUE2_, 1, 21) .. "..")
+            L8_93 = L4_89.label
+            L8_93 = L8_93.setReferencePoint
+            L8_93(L8_93, display.CenterLeftReferencePoint)
+            L8_93 = L4_89.label
+            L8_93.x = 64
+            L8_93 = L4_89.label
+            L8_93.y = L1_86 * 0.5 - 8
+          end
+          L8_93 = display
+          L8_93 = L8_93.newText
+          L8_93 = L8_93({
+            text = _UPVALUE10_,
+            x = 0,
+            y = 0,
+            font = _UPVALUE11_.fonts.light,
+            fontSize = 13
+          })
+          L4_89.realName = L8_93
+          L8_93 = L4_89.realName
+          L8_93 = L8_93.setReferencePoint
+          L8_93(L8_93, display.CenterLeftReferencePoint)
+          L8_93 = L4_89.realName
+          L8_93.x = 64
+          L8_93 = L4_89.realName
+          L8_93.y = L1_86 * 0.5 + 8
+          L8_93 = L4_89.realName
+          L8_93 = L8_93.setTextColor
+          L8_93(L8_93, 160, 160, 160)
+          L8_93 = L3_88.insert
+          L8_93(L3_88, L4_89.realName)
+          L8_93 = display
+          L8_93 = L8_93.newImageRect
+          L8_93 = L8_93("greenarrow.png", 22, 22)
+          L8_93.x = _W - 38
+          L8_93.y = L1_86 * 0.5
+          L3_88:insert(L8_93)
+        end
+      end
+      _UPVALUE2_:insertRow({
+        onRender = L18_75,
+        onEvent = _UPVALUE15_,
+        height = 44,
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        }
+      })
+      _UPVALUE5_ = _UPVALUE5_ + 1
+    end
+    if L6_63 == true then
+      L6_63(L7_64)
+      _UPVALUE1_ = L6_63
+    end
+    L9_66 = L3_60
+    L10_67 = L4_61
+    L6_63[L7_64] = L8_65
+  end
+  L32_33 = _UPVALUE0_
+  L32_33 = L32_33.makeToolbar
+  L33_34 = L16_17
+  L34_35 = {}
+  L34_35.list = L28_29
+  L32_33 = L32_33(L33_34, L34_35)
+  L34_35 = L4_5
+  L33_34 = L4_5.insert
+  L35_36 = L32_33
+  L33_34(L34_35, L35_36)
+  function L33_34(A0_94)
+    _UPVALUE0_.logout()
+    _UPVALUE1_.remove({
+      "pageLabel",
+      "prevScene",
+      "section",
+      "page"
+    })
+    if _UPVALUE2_ and _UPVALUE3_ == _UPVALUE2_[1].taps then
+      _UPVALUE1_.remove({"pageTable"})
+    end
+    _UPVALUE1_.update({
+      taps = _UPVALUE3_ - 1
+    })
+    _UPVALUE1_.dispatchEvent("clearLocalTimerAndListeners")
+    director:changeScene(_UPVALUE4_, "toRightNew")
+    return true
+  end
+  L34_35 = _UPVALUE3_
+  L34_35 = L34_35.newButton
+  L35_36 = {}
+  L35_36.width = 50
+  L35_36.height = 50
+  L35_36.default = "back.png"
+  L35_36.over = "back-over.png"
+  L35_36.onRelease = L33_34
+  L34_35 = L34_35(L35_36)
+  L36_37 = L34_35
+  L35_36 = L34_35.setReferencePoint
+  L35_36(L36_37, display.CenterLeftReferencePoint)
+  L34_35.x = -1
+  L35_36 = L32_33.yCenter
+  L34_35.y = L35_36
+  L36_37 = L4_5
+  L35_36 = L4_5.insert
+  L35_36(L36_37, L34_35)
+  if L15_16 then
+    L35_36 = L15_16[1]
+    if L35_36 then
+      L35_36 = L15_16[1]
+      L35_36 = L35_36.taps
+      if L35_36 then
+        L35_36 = L15_16[1]
+        L35_36 = L35_36.taps
+        if L35_36 == L20_21 then
+          L35_36 = timer
+          L35_36 = L35_36.performWithDelay
+          L36_37 = 200
+          L35_36(L36_37, function()
+            _UPVALUE0_(_UPVALUE1_)
+          end)
+        end
+      end
+    end
+  elseif L9_10 == false then
+    function L35_36(A0_95)
+      local L1_96, L2_97, L3_98, L4_99
+      L1_96 = ""
+      L2_97 = ""
+      function L3_98(A0_100)
+        local L1_101, L2_102, L3_103, L4_104, L5_105
+        L1_101 = A0_100.type
+        if "session" == L1_101 then
+          L1_101 = A0_100.phase
+          if "login" == L1_101 then
+            L1_101 = _UPVALUE0_
+            if L1_101 == "GET_FRIEND_INFO" then
+              L1_101 = _UPVALUE1_
+              L1_101 = L1_101.request
+              L2_102 = "me/friends"
+              L1_101(L2_102)
+            else
+              L1_101 = _UPVALUE0_
+              if L1_101 == "GET_USER_INFO" then
+                L1_101 = _UPVALUE1_
+                L1_101 = L1_101.request
+                L2_102 = "me"
+                L1_101(L2_102)
+              end
+            end
+            L1_101 = A0_100.token
+          end
+        else
+          L1_101 = A0_100.type
+          if "request" == L1_101 then
+            L1_101 = A0_100.response
+            L2_102 = A0_100.isError
+            if not L2_102 then
+              L2_102 = _UPVALUE2_
+              L2_102 = L2_102.decode
+              L3_103 = A0_100.response
+              L2_102 = L2_102(L3_103)
+              L1_101 = L2_102
+              L2_102 = _UPVALUE0_
+              if L2_102 == "GET_FRIEND_INFO" then
+                L2_102 = {}
+                L3_103 = {}
+                L4_104 = L1_101.data
+                L4_104 = #L4_104
+                for _FORV_8_ = 1, L4_104 do
+                  L2_102[_FORV_8_] = L1_101.data[_FORV_8_].id
+                  L3_103[_FORV_8_] = {
+                    fbid = L1_101.data[_FORV_8_].id,
+                    name = L1_101.data[_FORV_8_].name
+                  }
+                end
+                _UPVALUE4_.network_request("find_facebook_friends", L5_105, {
+                  fbid = _UPVALUE5_,
+                  udid = _UPVALUE6_.udid,
+                  friends = L2_102
+                })
+              else
+                L2_102 = _UPVALUE0_
+                if L2_102 == "GET_USER_INFO" then
+                  L2_102 = L1_101.id
+                  _UPVALUE5_ = L2_102
+                  L2_102 = "GET_FRIEND_INFO"
+                  _UPVALUE0_ = L2_102
+                  L2_102 = _UPVALUE1_
+                  L2_102 = L2_102.request
+                  L3_103 = "me/friends"
+                  L2_102(L3_103)
+                end
+              end
+            end
+          else
+            L1_101 = A0_100.type
+            if L1_101 == "dialog" then
+              L1_101 = A0_100.didComplete
+              if L1_101 == true then
+                L1_101 = native
+                L1_101 = L1_101.showAlert
+                L2_102 = "Invited!"
+                L3_103 = _UPVALUE7_
+                L4_104 = " has been invited."
+                L3_103 = L3_103 .. L4_104
+                L4_104 = {L5_105}
+                L1_101(L2_102, L3_103, L4_104)
+              end
+            end
+          end
+        end
+      end
+      L4_99 = _UPVALUE3_
+      L4_99 = L4_99.getfbid
+      L4_99 = L4_99()
+      L1_96 = "GET_USER_INFO"
+      _UPVALUE0_.login(L4_99, L3_98, {
+        "publish_stream"
+      })
+      _UPVALUE6_ = true
+      _UPVALUE3_.removeRuntimeListener("sceneLoaded", A0_95.self_listenerid)
+    end
+    L36_37 = _UPVALUE0_
+    L36_37 = L36_37.addRuntimeListener
+    L36_37("sceneLoaded", L35_36)
+  end
+  L35_36 = _UPVALUE1_
+  L35_36 = L35_36.gamecenter
+  if L35_36 == false then
+    L35_36 = display
+    L35_36 = L35_36.newRect
+    L36_37 = 0
+    L35_36 = L35_36(L36_37, 0, _W, _H)
+    L36_37 = L35_36.setFillColor
+    L36_37(L35_36, 255, 255, 255, 125)
+    L36_37 = L35_36.addEventListener
+    L36_37(L35_36, "touch", function()
+      local L0_106, L1_107
+      L0_106 = true
+      return L0_106
+    end)
+    L36_37 = L0_1.insert
+    L36_37(L0_1, L35_36)
+    function L36_37(A0_108)
+      if A0_108.action == "clicked" then
+        _UPVALUE0_.logout()
+        if A0_108.index == 2 then
+          system.openURL("gamecenter:")
+        end
+        _UPVALUE1_.remove({
+          "pageLabel",
+          "prevScene",
+          "section",
+          "page"
+        })
+        _UPVALUE1_.dispatchEvent("clearLocalTimersAndListeners")
+        director:changeScene("profile", "toRightNew")
+      end
+    end
+    native.showAlert("Sign in to game center", "To find your facebook friends please sign in to game center", {
+      "Maybe next time",
+      "Log in"
+    }, L36_37)
+  end
+  L36_37 = L4_5
+  L35_36 = L4_5.toFront
+  L35_36(L36_37)
+  return L0_1
+end

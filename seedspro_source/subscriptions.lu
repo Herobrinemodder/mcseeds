@@ -1,0 +1,434 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("plugin.notifications")
+;({}).makeButton = function(A0_1)
+  local L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L1_2.subscribed = false
+  L2_3 = false
+  L3_4 = {}
+  L3_4.top = 26
+  L4_5 = _W
+  L4_5 = L4_5 - 40
+  L3_4.left = L4_5
+  L3_4.width = 28
+  L3_4.height = 28
+  L3_4.default = "subscribe.png"
+  L3_4.over = "subscribe-over.png"
+  L3_4.empty_btn = "emptySubscribe.png"
+  L3_4.unsub_def = "unsubscribe.png"
+  L3_4.unsub_over = "unsubscribe-over.png"
+  L3_4.loading_scale = 0.5
+  L3_4.loading_img = "activity_white.png"
+  L3_4.label = ""
+  L3_4.fontSize = 10
+  L4_5 = A0_1.check_post
+  if not L4_5 then
+    L4_5 = print
+    L5_6 = "Missing param 'check' in subscriptions.makeButton, needed to point request to piece of code on server to check for the subscription."
+    L4_5(L5_6)
+    L2_3 = true
+  end
+  L4_5 = A0_1.sub_post
+  if not L4_5 then
+    L4_5 = print
+    L5_6 = "Missing param 'subscribe' in subscriptions.makeButton, needed to point request to piece of code on server to subscribe to feature."
+    L4_5(L5_6)
+    L2_3 = true
+  end
+  L4_5 = A0_1.sub_text
+  if not L4_5 then
+    L4_5 = print
+    L5_6 = "Missing param 'sub_text' in subscriptions.makeButton, needed to show text in popup box upon subscribing."
+    L4_5(L5_6)
+    L2_3 = true
+  end
+  L4_5 = A0_1.unsub_text
+  if not L4_5 then
+    L4_5 = print
+    L5_6 = "Missing param 'unsub_text' in subscriptions.makeButton, needed to show text in popup box upon unsubscribing."
+    L4_5(L5_6)
+    L2_3 = true
+  end
+  L4_5 = A0_1.gamecenter
+  if not L4_5 then
+    L4_5 = print
+    L5_6 = "Missing param 'gamecenter' in subscriptions.makeButton, needed to know whether gamecenter is a must or not."
+    L4_5(L5_6)
+    L2_3 = true
+  end
+  L4_5 = A0_1.post_params
+  if not L4_5 then
+    L4_5 = print
+    L5_6 = "Missing param 'post_params' in subscriptions.makeButton, needed to know which variables to send to the server."
+    L4_5(L5_6)
+    L2_3 = true
+  end
+  L4_5 = A0_1.button_opts
+  if L4_5 then
+    L3_4 = A0_1.button_opts
+  end
+  L4_5 = A0_1.left
+  if L4_5 then
+    L4_5 = A0_1.left
+    L3_4.left = L4_5
+  end
+  L4_5 = A0_1.top
+  if L4_5 then
+    L4_5 = A0_1.top
+    L3_4.top = L4_5
+  end
+  L4_5 = L3_4.loading_scale
+  L4_5 = L4_5 or 0.5
+  L3_4.loading_scale = L4_5
+  L4_5 = L3_4.loading_img
+  L4_5 = L4_5 or "activity_white.png"
+  L3_4.loading_img = L4_5
+  if L2_3 == false then
+    L4_5 = A0_1.check_post
+    L5_6 = A0_1.sub_post
+    L6_7 = A0_1.sub_text
+    L7_8 = A0_1.unsub_text
+    L8_9 = A0_1.gamecenter
+    L9_10 = A0_1.post_params
+    function L10_11(A0_14)
+      local L1_15, L2_16, L3_17, L4_18, L5_19, L6_20, L7_21, L8_22
+      L1_15 = A0_14.target
+      L2_16 = A0_14.target
+      L2_16 = L2_16.img
+      L3_17 = A0_14.target
+      L3_17 = L3_17.img_over
+      L4_18 = A0_14.target
+      L4_18 = L4_18.opposite
+      L5_19 = A0_14.target
+      L5_19 = L5_19.opposite_over
+      L6_20 = _UPVALUE0_
+      L7_21 = L1_15
+      L6_20(L7_21)
+      L6_20 = _UPVALUE1_
+      L7_21 = _UPVALUE2_
+      L6_20 = L6_20(L7_21)
+      L7_21 = _UPVALUE3_
+      L8_22 = L7_21
+      L7_21 = L7_21.insert
+      L7_21(L8_22, L6_20)
+      L7_21 = _UPVALUE4_
+      if L7_21 == true then
+        L7_21 = _UPVALUE5_
+        L7_21 = L7_21.isGameCenter
+        L7_21 = L7_21()
+        if L7_21 == false then
+          L7_21 = _UPVALUE0_
+          L8_22 = L6_20
+          L7_21(L8_22)
+          L7_21 = _UPVALUE6_
+          L7_21 = L7_21.newButton
+          L8_22 = {}
+          L8_22.width = _UPVALUE2_.width
+          L8_22.height = _UPVALUE2_.height
+          L8_22.default = L2_16
+          L8_22.over = L3_17
+          L8_22.left = _UPVALUE2_.left
+          L8_22.top = _UPVALUE2_.top
+          L8_22.onRelease = _UPVALUE7_
+          L8_22.label = _UPVALUE2_.label
+          L8_22.fontSize = _UPVALUE2_.fontSize
+          L7_21 = L7_21(L8_22)
+          L7_21.img = L2_16
+          L7_21.img_over = L3_17
+          L7_21.opposite = L4_18
+          L7_21.opposite_over = L5_19
+          L8_22 = _UPVALUE3_
+          L8_22 = L8_22.insert
+          L8_22(L8_22, L7_21)
+        end
+      else
+        L7_21 = _UPVALUE8_
+        L7_21 = L7_21.prem_udid
+        if L7_21 then
+          L7_21 = _UPVALUE8_
+          L7_21 = L7_21.prem_udid
+          if L7_21 == "" then
+            L7_21 = _UPVALUE0_
+            L8_22 = L6_20
+            L7_21(L8_22)
+            L7_21 = _UPVALUE6_
+            L7_21 = L7_21.newButton
+            L8_22 = {}
+            L8_22.width = _UPVALUE2_.width
+            L8_22.height = _UPVALUE2_.height
+            L8_22.default = L2_16
+            L8_22.over = L3_17
+            L8_22.left = _UPVALUE2_.left
+            L8_22.top = _UPVALUE2_.top
+            L8_22.onRelease = _UPVALUE7_
+            L8_22.label = _UPVALUE2_.label
+            L8_22.fontSize = _UPVALUE2_.fontSize
+            L7_21 = L7_21(L8_22)
+            L7_21.img = L2_16
+            L7_21.img_over = L3_17
+            L7_21.opposite = L4_18
+            L7_21.opposite_over = L5_19
+            L8_22 = _UPVALUE3_
+            L8_22 = L8_22.insert
+            L8_22(L8_22, L7_21)
+            L8_22 = _UPVALUE5_
+            L8_22 = L8_22.showAlert
+            L8_22("", "This user is a ghost and can not be followed.", {"Ok"})
+          end
+        else
+          L7_21 = _UPVALUE9_
+          if L7_21 == "" then
+            L7_21 = _UPVALUE0_
+            L8_22 = L6_20
+            L7_21(L8_22)
+            L7_21 = _UPVALUE6_
+            L7_21 = L7_21.newButton
+            L8_22 = {}
+            L8_22.width = _UPVALUE2_.width
+            L8_22.height = _UPVALUE2_.height
+            L8_22.default = L2_16
+            L8_22.over = L3_17
+            L8_22.left = _UPVALUE2_.left
+            L8_22.top = _UPVALUE2_.top
+            L8_22.onRelease = _UPVALUE7_
+            L8_22.label = _UPVALUE2_.label
+            L8_22.fontSize = _UPVALUE2_.fontSize
+            L7_21 = L7_21(L8_22)
+            L7_21.img = L2_16
+            L7_21.img_over = L3_17
+            L7_21.opposite = L4_18
+            L7_21.opposite_over = L5_19
+            L8_22 = _UPVALUE3_
+            L8_22 = L8_22.insert
+            L8_22(L8_22, L7_21)
+            function L8_22(A0_23)
+              if A0_23.action == "clicked" and A0_23.index == 2 then
+                _UPVALUE0_.registerForPushNotifications()
+              end
+              return true
+            end
+            _UPVALUE5_.showAlert("Push notifications", "In order to subscribe to this feature, please activate push notifications for the app.", {"Later", "Turn it on"}, L8_22)
+          else
+            function L7_21(A0_24)
+              local L1_25, L2_26, L3_27, L4_28
+              L1_25 = A0_24.response
+              L2_26 = A0_24.status
+              if L2_26 == 200 then
+                if L1_25 == "Subscribed" then
+                  L3_27 = _UPVALUE0_
+                  L3_27 = L3_27.showAlert
+                  L4_28 = "Followed!"
+                  L3_27(L4_28, _UPVALUE1_, {"Ok"})
+                  L3_27 = _UPVALUE2_
+                  L3_27 = L3_27.label
+                  if L3_27 and L3_27 ~= "" then
+                    L3_27 = "Unfollow"
+                  end
+                  L4_28 = _UPVALUE3_
+                  L4_28(_UPVALUE4_)
+                  L4_28 = _UPVALUE5_
+                  L4_28 = L4_28.newButton
+                  L4_28 = L4_28({
+                    width = _UPVALUE2_.width,
+                    height = _UPVALUE2_.height,
+                    default = _UPVALUE6_,
+                    over = _UPVALUE7_,
+                    left = _UPVALUE2_.left,
+                    top = _UPVALUE2_.top,
+                    onRelease = _UPVALUE8_,
+                    label = L3_27,
+                    fontSize = _UPVALUE2_.fontSize
+                  })
+                  L4_28.img = _UPVALUE6_
+                  L4_28.img_over = _UPVALUE7_
+                  L4_28.opposite = _UPVALUE9_
+                  L4_28.opposite_over = _UPVALUE10_
+                  _UPVALUE11_:insert(L4_28)
+                  _UPVALUE11_.subscribed = true
+                  _UPVALUE0_.dispatchEvent("subscribeState", {type = "subscribed"})
+                elseif L1_25 == "Unsubscribed" then
+                  L3_27 = _UPVALUE0_
+                  L3_27 = L3_27.showAlert
+                  L4_28 = "Unfollowed"
+                  L3_27(L4_28, _UPVALUE12_, {"Ok"})
+                  L3_27 = _UPVALUE3_
+                  L4_28 = _UPVALUE4_
+                  L3_27(L4_28)
+                  L3_27 = _UPVALUE5_
+                  L3_27 = L3_27.newButton
+                  L4_28 = {}
+                  L4_28.width = _UPVALUE2_.width
+                  L4_28.height = _UPVALUE2_.height
+                  L4_28.default = _UPVALUE6_
+                  L4_28.over = _UPVALUE7_
+                  L4_28.left = _UPVALUE2_.left
+                  L4_28.top = _UPVALUE2_.top
+                  L4_28.onRelease = _UPVALUE8_
+                  L4_28.label = _UPVALUE2_.label
+                  L4_28.fontSize = _UPVALUE2_.fontSize
+                  L3_27 = L3_27(L4_28)
+                  L4_28 = _UPVALUE6_
+                  L3_27.img = L4_28
+                  L4_28 = _UPVALUE7_
+                  L3_27.img_over = L4_28
+                  L4_28 = _UPVALUE9_
+                  L3_27.opposite = L4_28
+                  L4_28 = _UPVALUE10_
+                  L3_27.opposite_over = L4_28
+                  L4_28 = _UPVALUE11_
+                  L4_28 = L4_28.insert
+                  L4_28(L4_28, L3_27)
+                  L4_28 = _UPVALUE11_
+                  L4_28.subscribed = false
+                  L4_28 = _UPVALUE0_
+                  L4_28 = L4_28.dispatchEvent
+                  L4_28("subscribeState", {
+                    type = "unsubscribed"
+                  })
+                end
+              else
+                L3_27 = _UPVALUE3_
+                L4_28 = _UPVALUE4_
+                L3_27(L4_28)
+                L3_27 = _UPVALUE5_
+                L3_27 = L3_27.newButton
+                L4_28 = {}
+                L4_28.width = _UPVALUE2_.width
+                L4_28.height = _UPVALUE2_.height
+                L4_28.default = _UPVALUE9_
+                L4_28.over = _UPVALUE10_
+                L4_28.left = _UPVALUE2_.left
+                L4_28.top = _UPVALUE2_.top
+                L4_28.onRelease = _UPVALUE8_
+                L4_28.label = _UPVALUE2_.label
+                L4_28.fontSize = _UPVALUE2_.fontSize
+                L3_27 = L3_27(L4_28)
+                L4_28 = _UPVALUE9_
+                L3_27.img = L4_28
+                L4_28 = _UPVALUE10_
+                L3_27.img_over = L4_28
+                L4_28 = _UPVALUE6_
+                L3_27.opposite = L4_28
+                L4_28 = _UPVALUE7_
+                L3_27.opposite_over = L4_28
+                L4_28 = _UPVALUE11_
+                L4_28 = L4_28.insert
+                L4_28(L4_28, L3_27)
+              end
+              L3_27 = _UPVALUE13_
+              L3_27 = L3_27.callback
+              if L3_27 then
+                L3_27 = _UPVALUE13_
+                L3_27 = L3_27.callback
+                L4_28 = L1_25
+                L3_27(L4_28)
+              end
+            end
+            L8_22 = _UPVALUE5_
+            L8_22 = L8_22.network_request
+            L8_22(_UPVALUE14_, L7_21, _UPVALUE8_)
+            L8_22 = _UPVALUE5_
+            L8_22 = L8_22.dispatchEvent
+            L8_22("hasRequestedSubscriptions")
+          end
+        end
+      end
+      L7_21 = true
+      return L7_21
+    end
+    L11_12 = _UPVALUE1_
+    L12_13 = L3_4
+    L11_12 = L11_12(L12_13)
+    L12_13 = L1_2.insert
+    L12_13(L1_2, L11_12)
+    L12_13 = _UPVALUE4_
+    if L12_13 ~= "" then
+      function L12_13(A0_29)
+        local L1_30, L2_31, L3_32, L4_33, L5_34, L6_35, L7_36, L8_37
+        L1_30 = A0_29.response
+        L2_31 = A0_29.status
+        L3_32 = _UPVALUE0_
+        L4_33 = _UPVALUE1_
+        L3_32(L4_33)
+        L3_32 = _UPVALUE2_
+        L3_32 = L3_32.default
+        L4_33 = _UPVALUE2_
+        L4_33 = L4_33.over
+        L5_34 = _UPVALUE2_
+        L5_34 = L5_34.unsub_def
+        L6_35 = _UPVALUE2_
+        L6_35 = L6_35.unsub_over
+        L7_36 = _UPVALUE2_
+        L7_36 = L7_36.label
+        L8_37 = _UPVALUE3_
+        L8_37.subscribed = false
+        if L1_30 == "Subscribed" then
+          L8_37 = _UPVALUE2_
+          L3_32 = L8_37.unsub_def
+          L8_37 = _UPVALUE2_
+          L4_33 = L8_37.unsub_over
+          L8_37 = _UPVALUE2_
+          L5_34 = L8_37.default
+          L8_37 = _UPVALUE2_
+          L6_35 = L8_37.over
+          if L7_36 and L7_36 ~= "" then
+            L7_36 = "Unfollow"
+          end
+          L8_37 = _UPVALUE3_
+          L8_37.subscribed = true
+        end
+        L8_37 = _UPVALUE4_
+        L8_37 = L8_37.newButton
+        L8_37 = L8_37({
+          width = _UPVALUE2_.width,
+          height = _UPVALUE2_.height,
+          default = L3_32,
+          over = L4_33,
+          left = _UPVALUE2_.left,
+          top = _UPVALUE2_.top,
+          onRelease = _UPVALUE5_,
+          label = L7_36,
+          fontSize = _UPVALUE2_.fontSize
+        })
+        L8_37.img = L3_32
+        L8_37.img_over = L4_33
+        L8_37.opposite = L5_34
+        L8_37.opposite_over = L6_35
+        _UPVALUE3_:insert(L8_37)
+        _UPVALUE6_.dispatchEvent("gotSubscriberState", {type = L1_30})
+      end
+      _UPVALUE2_.network_request(L4_5, L12_13, L9_10)
+    else
+      L12_13 = _UPVALUE0_
+      L12_13(L11_12)
+      L12_13 = _UPVALUE3_
+      L12_13 = L12_13.newButton
+      L12_13 = L12_13({
+        top = L3_4.top,
+        left = L3_4.left,
+        width = L3_4.width,
+        height = L3_4.height,
+        default = L3_4.default,
+        over = L3_4.over,
+        onRelease = L10_11,
+        id = L3_4.default,
+        label = L3_4.label,
+        fontSize = L3_4.fontSize
+      })
+      L12_13.img = L3_4.default
+      L12_13.img_over = L3_4.over
+      L12_13.opposite = L3_4.unsub_def
+      L12_13.opposite_over = L3_4.unsub_over
+      L1_2:insert(L12_13)
+    end
+  else
+    L4_5 = print
+    L5_6 = "Error because one or more params were missing"
+    L4_5(L5_6)
+  end
+  return L1_2
+end
+return {}

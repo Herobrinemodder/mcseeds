@@ -1,0 +1,413 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("transitions")
+;({}).makeVersions = function(A0_1, A1_2)
+  local L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L3_4 = _UPVALUE0_
+  L3_4 = L3_4.getSceneProperties
+  L3_4 = L3_4()
+  L4_5 = L3_4.category
+  L5_6 = L3_4.version
+  L6_7 = display
+  L6_7 = L6_7.newImageRect
+  L7_8 = "versions_top.png"
+  L8_9 = 84
+  L9_10 = 39
+  L6_7 = L6_7(L7_8, L8_9, L9_10)
+  L8_9 = L6_7
+  L7_8 = L6_7.setReferencePoint
+  L9_10 = display
+  L9_10 = L9_10.TopRightReferencePoint
+  L7_8(L8_9, L9_10)
+  L7_8 = _W
+  L6_7.x = L7_8
+  L6_7.y = 0
+  L8_9 = L2_3
+  L7_8 = L2_3.insert
+  L9_10 = L6_7
+  L7_8(L8_9, L9_10)
+  L7_8 = nil
+  if L5_6 == "All" then
+    L7_8 = "Versions"
+  else
+    L7_8 = L5_6
+  end
+  L8_9 = display
+  L8_9 = L8_9.newText
+  L9_10 = {}
+  L9_10.text = L7_8
+  L10_11 = _UPVALUE1_
+  L10_11 = L10_11.fonts
+  L10_11 = L10_11.bold
+  L9_10.font = L10_11
+  L9_10.fontSize = 13
+  L8_9 = L8_9(L9_10)
+  L10_11 = L8_9
+  L9_10 = L8_9.setReferencePoint
+  L11_12 = display
+  L11_12 = L11_12.BottomCenterReferencePoint
+  L9_10(L10_11, L11_12)
+  L9_10 = L6_7.x
+  L10_11 = L6_7.width
+  L10_11 = L10_11 * 0.5
+  L9_10 = L9_10 - L10_11
+  L8_9.x = L9_10
+  L9_10 = L6_7.y
+  L10_11 = L6_7.height
+  L9_10 = L9_10 + L10_11
+  L9_10 = L9_10 - 4
+  L8_9.y = L9_10
+  L10_11 = L2_3
+  L9_10 = L2_3.insert
+  L11_12 = L8_9
+  L9_10(L10_11, L11_12)
+  L9_10 = display
+  L9_10 = L9_10.newRect
+  L10_11 = 0
+  L11_12 = 0
+  L12_13 = L6_7.width
+  L12_13 = L12_13 - 19
+  L13_14 = 0.5
+  L9_10 = L9_10(L10_11, L11_12, L12_13, L13_14)
+  L11_12 = L9_10
+  L10_11 = L9_10.setReferencePoint
+  L12_13 = display
+  L12_13 = L12_13.TopCenterReferencePoint
+  L10_11(L11_12, L12_13)
+  L10_11 = L8_9.x
+  L9_10.x = L10_11
+  L10_11 = L6_7.y
+  L11_12 = L6_7.height
+  L10_11 = L10_11 + L11_12
+  L10_11 = L10_11 - 2
+  L9_10.y = L10_11
+  L11_12 = L9_10
+  L10_11 = L9_10.setFillColor
+  L12_13 = 255
+  L13_14 = 255
+  L14_15 = 255
+  L15_16 = 50
+  L10_11(L11_12, L12_13, L13_14, L14_15, L15_16)
+  L11_12 = L2_3
+  L10_11 = L2_3.insert
+  L12_13 = L9_10
+  L10_11(L11_12, L12_13)
+  L10_11 = false
+  function L11_12(A0_23)
+    local L1_24
+    L1_24 = A0_23.phase
+    if L1_24 == "moved" then
+      if _UPVALUE0_(A0_23.xStart - A0_23.x) < _UPVALUE0_(A0_23.yStart - A0_23.y) and _UPVALUE0_(A0_23.yStart - A0_23.y) > 2 and _UPVALUE1_ == false then
+        _UPVALUE2_.touchFunction({
+          name = "touch",
+          phase = "began",
+          target = _UPVALUE2_,
+          y = A0_23.y,
+          yStart = A0_23.yStart
+        })
+      elseif _UPVALUE0_(A0_23.xStart - A0_23.x) > 2 and _UPVALUE0_(A0_23.xStart - A0_23.x) > _UPVALUE0_(A0_23.yStart - A0_23.y) then
+        _UPVALUE1_ = true
+      end
+    elseif L1_24 == "release" or L1_24 == "cancelled" then
+      _UPVALUE1_ = false
+    end
+    return true
+  end
+  L12_13 = _UPVALUE3_
+  L12_13 = L12_13.newScrollView
+  L13_14 = {}
+  L14_15 = L6_7.y
+  L15_16 = L6_7.height
+  L14_15 = L14_15 + L15_16
+  L13_14.top = L14_15
+  L13_14.left = 0
+  L14_15 = _W
+  L13_14.width = L14_15
+  L13_14.height = 90
+  L14_15 = _UPVALUE4_
+  L13_14.bgColor = L14_15
+  L13_14.listener = L11_12
+  L13_14.hideScrollBar = true
+  L13_14.rightPadding = -20
+  L13_14.alwaysScrollable = true
+  L12_13 = L12_13(L13_14)
+  L13_14 = L12_13.content
+  L13_14.verticalScrollDisabled = true
+  L13_14 = display
+  L13_14 = L13_14.newGroup
+  L13_14 = L13_14()
+  L12_13.versionsGroup = L13_14
+  L14_15 = L12_13
+  L13_14 = L12_13.insert
+  L15_16 = L12_13.versionsGroup
+  L13_14(L14_15, L15_16)
+  L14_15 = L2_3
+  L13_14 = L2_3.insert
+  L15_16 = L12_13
+  L13_14(L14_15, L15_16)
+  L13_14 = display
+  L13_14 = L13_14.newRect
+  L14_15 = 0
+  L15_16 = 0
+  L16_17 = L12_13.width
+  L13_14 = L13_14(L14_15, L15_16, L16_17, L17_18)
+  L15_16 = L13_14
+  L14_15 = L13_14.setReferencePoint
+  L16_17 = display
+  L16_17 = L16_17.TopLeftReferencePoint
+  L14_15(L15_16, L16_17)
+  L13_14.x = 0
+  L14_15 = L12_13.y
+  L15_16 = L12_13.height
+  L14_15 = L14_15 + L15_16
+  L14_15 = L14_15 - 0.5
+  L13_14.y = L14_15
+  L15_16 = L13_14
+  L14_15 = L13_14.setFillColor
+  L16_17 = unpack
+  L21_22 = L16_17(L17_18)
+  L14_15(L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L16_17(L17_18))
+  L13_14.isVisible = false
+  function L14_15(A0_25)
+    local L1_26
+    L1_26 = _UPVALUE0_
+    L1_26 = L1_26.isVisible
+    if L1_26 == true then
+      L1_26 = _UPVALUE0_
+      L1_26.yScale = 0.01
+      L1_26 = _UPVALUE0_
+      L1_26.isVisible = false
+    end
+  end
+  L13_14.reset = L14_15
+  L15_16 = L2_3
+  L14_15 = L2_3.insert
+  L16_17 = L13_14
+  L14_15(L15_16, L16_17)
+  function L14_15(A0_27)
+    local L1_28, L2_29, L3_30
+    L1_28 = A0_27.target
+    L1_28 = L1_28.color
+    L2_29 = A0_27.phase
+    L3_30 = A0_27.target
+    L3_30 = L3_30.id
+    if L2_29 == "began" then
+      A0_27.target:setFillColor(255, 255, 255)
+      display.getCurrentStage():setFocus(A0_27.target)
+    elseif L2_29 == "moved" then
+      if _UPVALUE0_(A0_27.xStart - A0_27.x) < _UPVALUE0_(A0_27.yStart - A0_27.y) then
+        A0_27.target:setFillColor(unpack(L1_28))
+        display.getCurrentStage():setFocus(nil)
+        _UPVALUE1_.touchFunction({
+          name = "touch",
+          phase = "began",
+          target = _UPVALUE1_,
+          y = A0_27.y,
+          yStart = A0_27.yStart
+        })
+      elseif _UPVALUE0_(A0_27.xStart - A0_27.x) > _UPVALUE0_(A0_27.yStart - A0_27.y) then
+        A0_27.target:setFillColor(unpack(L1_28))
+        display.getCurrentStage():setFocus(nil)
+        _UPVALUE2_:takeFocus(A0_27)
+      end
+    elseif L2_29 == "ended" or L2_29 == "cancelled" then
+      A0_27.target:setFillColor(255, 255, 255)
+      display.getCurrentStage():setFocus(nil)
+      _UPVALUE3_.update({
+        listPos = _UPVALUE3_.getPadding().toppadding,
+        version = L3_30,
+        start = 0,
+        pop = 50
+      })
+      if _UPVALUE4_ and _UPVALUE4_.pageTable then
+        _UPVALUE3_.remove({"pageTable"})
+      end
+      _UPVALUE3_.dispatchEvent("clearLocalTimersAndListeners")
+      director:changeScene("seedlist")
+    end
+    return true
+  end
+  function L15_16(A0_31, A1_32)
+    local L2_33
+    L2_33 = display
+    L2_33 = L2_33.newText
+    L2_33 = L2_33({
+      text = A0_31,
+      font = _UPVALUE0_.fonts.light,
+      fontSize = 13
+    })
+    if A0_31 == _UPVALUE1_ then
+      L2_33:setFillColor(255, 255, 255)
+      L2_33.color = {
+        255,
+        255,
+        255
+      }
+    else
+      L2_33:setFillColor(150, 150, 150)
+      L2_33.color = {
+        150,
+        150,
+        150
+      }
+    end
+    L2_33:setReferencePoint(display.CenterReferencePoint)
+    L2_33.x = _UPVALUE2_(A1_32 / 3) * (_W / 3.3)
+    L2_33.y = A1_32 % 3 * 30
+    L2_33:addEventListener("touch", _UPVALUE3_)
+    L2_33.id = A0_31
+    _UPVALUE4_.versionsGroup:insert(L2_33)
+  end
+  L16_17 = L15_16
+  L16_17(L17_18, L18_19)
+  L16_17 = 1
+  for L20_21, L21_22 in L17_18(L18_19) do
+    L15_16(L21_22, L16_17)
+    if L21_22 == nil or L21_22 == "" then
+      y_max = -22
+    else
+      y_max = -1 * (22 * (L16_17 + 1))
+    end
+    L16_17 = L16_17 + 1
+  end
+  if L17_18 <= 9 then
+    L17_18(L18_19, L19_20)
+    L17_18.x = L18_19
+    L17_18.y = L18_19
+  else
+    L17_18(L18_19, L19_20)
+    L17_18.x = 20
+    L17_18.y = L18_19
+  end
+  L17_18(L18_19, L19_20)
+  L2_3.x = 0
+  L2_3.y = L17_18
+  L2_3.defaultYPosition = L17_18
+  L20_21 = L2_3.height
+  L20_21 = L6_7.height
+  function L20_21(A0_34)
+    local L1_35, L2_36, L3_37, L4_38
+    L1_35 = A0_34.phase
+    L2_36 = A0_34.target
+    if L1_35 == "began" then
+      L3_37 = _UPVALUE1_
+      L3_37 = L3_37.y
+      _UPVALUE0_ = L3_37
+      L3_37 = display
+      L3_37 = L3_37.getCurrentStage
+      L3_37 = L3_37()
+      L4_38 = L3_37
+      L3_37 = L3_37.setFocus
+      L3_37(L4_38, L2_36)
+    elseif L1_35 == "moved" then
+      L3_37 = A0_34.y
+      L4_38 = A0_34.yStart
+      L3_37 = L3_37 - L4_38
+      L4_38 = _UPVALUE0_
+      L3_37 = L3_37 + L4_38
+      L4_38 = _UPVALUE2_
+      if L3_37 > L4_38 then
+        L4_38 = _UPVALUE1_
+        L4_38 = L4_38.defaultYPosition
+        if L3_37 < L4_38 then
+          L4_38 = _UPVALUE1_
+          L4_38.y = L3_37
+          L4_38 = _UPVALUE3_
+          L4_38 = L4_38.reset
+          L4_38(L4_38)
+        end
+      else
+        L4_38 = _UPVALUE1_
+        L4_38 = L4_38.defaultYPosition
+        if L3_37 > L4_38 then
+          L4_38 = _UPVALUE1_
+          L4_38.y = _UPVALUE1_.defaultYPosition + _UPVALUE4_(L3_37 - _UPVALUE1_.defaultYPosition)
+          L4_38 = _UPVALUE3_
+          L4_38 = L4_38.reset
+          L4_38(L4_38)
+        else
+          L4_38 = _UPVALUE2_
+          if L3_37 < L4_38 then
+            L4_38 = _UPVALUE5_
+            L4_38 = L4_38(L3_37 - _UPVALUE2_)
+            _UPVALUE1_.y = _UPVALUE2_ - _UPVALUE4_(L4_38)
+            _UPVALUE3_.yScale = _UPVALUE4_(L4_38)
+            if _UPVALUE3_.isVisible == false then
+              _UPVALUE3_.isVisible = true
+            end
+          end
+        end
+      end
+      L4_38 = _UPVALUE1_
+      L4_38.maskY = _UPVALUE6_(_UPVALUE1_.y)
+    elseif L1_35 == "ended" or L1_35 == "cancelled" then
+      L3_37 = display
+      L3_37 = L3_37.getCurrentStage
+      L3_37 = L3_37()
+      L4_38 = L3_37
+      L3_37 = L3_37.setFocus
+      L3_37(L4_38, nil)
+      L3_37 = _UPVALUE7_
+      L3_37 = L3_37.height
+      L4_38 = A0_34.y
+      L4_38 = L4_38 - A0_34.yStart
+      L4_38 = L4_38 + _UPVALUE0_
+      if L4_38 < _UPVALUE1_.defaultYPosition - L3_37 * 0.15 and _UPVALUE0_ > _UPVALUE1_.defaultYPosition - L3_37 * 0.5 then
+        _UPVALUE8_.to(_UPVALUE1_, {
+          time = 300,
+          y = _UPVALUE2_,
+          maskY = _UPVALUE6_(_UPVALUE2_),
+          transition = easing.outExpo
+        })
+      elseif L4_38 > _UPVALUE2_ + L3_37 * 0.15 and _UPVALUE0_ < _UPVALUE1_.defaultYPosition - L3_37 * 0.5 then
+        _UPVALUE8_.to(_UPVALUE1_, {
+          time = 300,
+          y = _UPVALUE1_.defaultYPosition,
+          maskY = _UPVALUE6_(_UPVALUE1_.defaultYPosition),
+          transition = easing.outExpo
+        })
+      elseif L4_38 == _UPVALUE1_.defaultYPosition then
+        _UPVALUE8_.to(_UPVALUE1_, {
+          time = 75,
+          y = _UPVALUE0_ - 16,
+          maskY = _UPVALUE6_(_UPVALUE0_ - 16),
+          transition = easing.outQuad,
+          onComplete = function()
+            _UPVALUE0_.to(_UPVALUE1_, {
+              time = 50,
+              y = _UPVALUE2_,
+              maskY = _UPVALUE3_(_UPVALUE2_),
+              transition = easing.inQuad
+            }, true)
+          end
+        }, true)
+      else
+        _UPVALUE8_.to(_UPVALUE1_, {
+          time = 300,
+          y = _UPVALUE0_,
+          maskY = _UPVALUE6_(_UPVALUE0_),
+          transition = easing.outExpo
+        })
+      end
+    end
+    L3_37 = true
+    return L3_37
+  end
+  L21_22 = L2_3.addEventListener
+  L21_22(L2_3, "touch", L20_21)
+  L2_3.touchFunction = L20_21
+  L21_22 = graphics
+  L21_22 = L21_22.newMask
+  L21_22 = L21_22("mask-" .. _W .. "x4.png", system.TemporaryDirectory)
+  L2_3:setMask(L21_22)
+  L2_3.isHitTestMasked = false
+  L2_3.maskScaleX = 0.5
+  L2_3.maskScaleY = 0.5
+  L2_3.maskX = L12_13.bg.width * 0.5
+  L2_3.maskY = L17_18(L2_3.y)
+  return L2_3
+end
+return {}

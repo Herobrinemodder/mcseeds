@@ -1,0 +1,562 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("subscriptions")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L3_4
+  L5_6 = L3_4.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.newGroup
+  L5_6 = L5_6()
+  L7_8 = L1_2
+  L6_7 = L1_2.insert
+  L8_9 = L5_6
+  L6_7(L7_8, L8_9)
+  L6_7 = display
+  L6_7 = L6_7.contentCenterX
+  L7_8 = display
+  L7_8 = L7_8.contentCenterY
+  L8_9 = _UPVALUE0_
+  L8_9 = L8_9.pushtoken
+  L9_10 = _UPVALUE1_
+  L9_10 = L9_10.getSceneProperties
+  L9_10 = L9_10()
+  L10_11 = L9_10.start
+  L11_12 = L9_10.pop
+  L12_13 = math
+  L12_13 = L12_13.abs
+  L13_14 = _UPVALUE0_
+  L13_14 = L13_14.session
+  L13_14 = L13_14 + 1
+  L14_15 = _UPVALUE0_
+  L14_15.session = L13_14
+  L14_15 = nil
+  L15_16 = ""
+  L16_17 = 0
+  L17_18 = _UPVALUE1_
+  L17_18 = L17_18.makeBlurryBg
+  L17_18 = L17_18()
+  L19_20 = L17_18
+  L18_19 = L17_18.addEventListener
+  L20_21 = "touch"
+  function L21_22()
+    local L0_36, L1_37
+    L0_36 = true
+    return L0_36
+  end
+  L18_19(L19_20, L20_21, L21_22)
+  L19_20 = L2_3
+  L18_19 = L2_3.insert
+  L20_21 = L17_18
+  L18_19(L19_20, L20_21)
+  L18_19 = _UPVALUE2_
+  L18_19 = L18_19.createSideMenu
+  L19_20 = L1_2
+  L18_19 = L18_19(L19_20)
+  L20_21 = L0_1
+  L19_20 = L0_1.insert
+  L21_22 = L18_19
+  L19_20(L20_21, L21_22)
+  L0_1.side_menu = L18_19
+  L20_21 = L18_19
+  L19_20 = L18_19.toBack
+  L19_20(L20_21)
+  function L19_20(A0_38)
+    _UPVALUE0_.removeRuntimeListener("clearLocalTimersAndListeners", A0_38.self_listenerid)
+  end
+  L20_21 = _UPVALUE1_
+  L20_21 = L20_21.addRuntimeListener
+  L21_22 = "clearLocalTimersAndListeners"
+  L22_23 = L19_20
+  L20_21(L21_22, L22_23)
+  L20_21 = _UPVALUE1_
+  L20_21 = L20_21.makeSprite
+  L21_22 = L6_7
+  L22_23 = L7_8 - 80
+  L20_21 = L20_21(L21_22, L22_23)
+  L22_23 = L3_4
+  L21_22 = L3_4.insert
+  L23_24 = L20_21
+  L21_22(L22_23, L23_24)
+  L21_22 = display
+  L21_22 = L21_22.newText
+  L22_23 = {}
+  L22_23.text = "Fetching news.."
+  L22_23.x = 0
+  L22_23.y = 0
+  L23_24 = _UPVALUE0_
+  L23_24 = L23_24.fonts
+  L23_24 = L23_24.light
+  L22_23.font = L23_24
+  L22_23.fontSize = 12
+  L21_22 = L21_22(L22_23)
+  L23_24 = L21_22
+  L22_23 = L21_22.setReferencePoint
+  L24_25 = display
+  L24_25 = L24_25.CenterReferencePoint
+  L22_23(L23_24, L24_25)
+  L21_22.x = L6_7
+  L22_23 = L7_8 - 60
+  L21_22.y = L22_23
+  L21_22.alpha = 0.8
+  L23_24 = L3_4
+  L22_23 = L3_4.insert
+  L24_25 = L21_22
+  L22_23(L23_24, L24_25)
+  L22_23 = 0
+  L23_24 = display
+  L23_24 = L23_24.newText
+  L24_25 = {}
+  L24_25.text = "(Make sure you have an internet connection)"
+  L24_25.x = 0
+  L24_25.y = 0
+  L25_26 = _UPVALUE0_
+  L25_26 = L25_26.fonts
+  L25_26 = L25_26.italic
+  L24_25.font = L25_26
+  L24_25.fontSize = 10
+  L23_24 = L23_24(L24_25)
+  L25_26 = L23_24
+  L24_25 = L23_24.setReferencePoint
+  L26_27 = display
+  L26_27 = L26_27.CenterReferencePoint
+  L24_25(L25_26, L26_27)
+  L23_24.x = L6_7
+  L24_25 = L7_8 - 50
+  L23_24.y = L24_25
+  L23_24.alpha = 0.8
+  L23_24.isVisible = false
+  L25_26 = L3_4
+  L24_25 = L3_4.insert
+  L26_27 = L23_24
+  L24_25(L25_26, L26_27)
+  function L24_25()
+    local L0_39, L1_40
+    L0_39 = _UPVALUE0_
+    L0_39 = L0_39 + 1
+    _UPVALUE0_ = L0_39
+    L0_39 = _UPVALUE0_
+    if L0_39 == 10 then
+      L0_39 = _UPVALUE1_
+      L0_39.isVisible = true
+    end
+  end
+  L25_26 = timer
+  L25_26 = L25_26.performWithDelay
+  L26_27 = 1000
+  L27_28 = L24_25
+  L28_29 = 0
+  L25_26 = L25_26(L26_27, L27_28, L28_29)
+  function L26_27(A0_41)
+    _UPVALUE0_.animateToolbar(A0_41, {
+      toolbar = _UPVALUE1_.toolbar,
+      list = _UPVALUE2_.list
+    })
+    return true
+  end
+  L27_28 = _UPVALUE3_
+  L27_28 = L27_28.newTableView
+  L28_29 = {}
+  L28_29.top = 61
+  L28_29.topPadding = 10
+  L29_30 = _W
+  L28_29.width = L29_30
+  L29_30 = _H
+  L29_30 = L29_30 - 61
+  L28_29.height = L29_30
+  L29_30 = {
+    L30_31,
+    L31_32,
+    L32_33,
+    L33_34
+  }
+  L30_31 = 0
+  L31_32 = 0
+  L32_33 = 0
+  L33_34 = 0
+  L28_29.bgColor = L29_30
+  L28_29.listener = L26_27
+  L27_28 = L27_28(L28_29)
+  L3_4.list = L27_28
+  L29_30 = L3_4
+  L28_29 = L3_4.insert
+  L30_31 = L27_28
+  L28_29(L29_30, L30_31)
+  L28_29 = _UPVALUE1_
+  L28_29 = L28_29.makeToolbar
+  L29_30 = "News"
+  L30_31 = {}
+  L30_31.line = true
+  L30_31.list = L27_28
+  L28_29 = L28_29(L29_30, L30_31)
+  L5_6.toolbar = L28_29
+  L30_31 = L5_6
+  L29_30 = L5_6.insert
+  L31_32 = L28_29
+  L29_30(L30_31, L31_32)
+  L29_30 = prevScene
+  if L29_30 then
+    function L29_30(A0_42)
+      _UPVALUE0_.remove({"prevScene"})
+      _UPVALUE0_.update({
+        taps = taps - 1
+      })
+      _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+      director:changeScene(prevScene, "moveFromLeft")
+      return true
+    end
+    L30_31 = _UPVALUE3_
+    L30_31 = L30_31.newButton
+    L31_32 = {}
+    L31_32.width = 50
+    L31_32.height = 50
+    L31_32.default = "back.png"
+    L31_32.over = "back-over.png"
+    L31_32.onRelease = L29_30
+    L30_31 = L30_31(L31_32)
+    L32_33 = L30_31
+    L31_32 = L30_31.setReferencePoint
+    L33_34 = display
+    L33_34 = L33_34.CenterLeftReferencePoint
+    L31_32(L32_33, L33_34)
+    L30_31.x = -1
+    L31_32 = L28_29.yCenter
+    L30_31.y = L31_32
+    L31_32 = L28_29.contents
+    L32_33 = L31_32
+    L31_32 = L31_32.insert
+    L33_34 = L30_31
+    L31_32(L32_33, L33_34)
+  else
+    L29_30 = _UPVALUE2_
+    L29_30 = L29_30.createMenuButton
+    L30_31 = L1_2
+    L29_30 = L29_30(L30_31)
+    L30_31 = L28_29.contents
+    L31_32 = L30_31
+    L30_31 = L30_31.insert
+    L32_33 = L29_30
+    L30_31(L31_32, L32_33)
+  end
+  L29_30 = _UPVALUE4_
+  L29_30 = L29_30.makeButton
+  L30_31 = {}
+  L30_31.check_post = "check_news_subscription"
+  L30_31.sub_post = "news_subscribe"
+  L30_31.sub_text = "Thank you for subscribing to our newsletter! Whenever new news are posted you will now be notified directly."
+  L30_31.unsub_text = "You have unsubscribed to our newsletter."
+  L30_31.gamecenter = true
+  L31_32 = {}
+  L31_32.pushtoken = L8_9
+  L30_31.post_params = L31_32
+  L29_30 = L29_30(L30_31)
+  L30_31 = L28_29.contents
+  L31_32 = L30_31
+  L30_31 = L30_31.insert
+  L32_33 = L29_30
+  L30_31(L31_32, L32_33)
+  function L30_31(A0_43)
+    local L1_44, L2_45, L3_46, L4_47, L5_48
+    L1_44 = A0_43.target
+    L1_44 = L1_44.rowText
+    L2_45 = A0_43.target
+    L2_45 = L2_45.sprite
+    L3_46 = A0_43.target
+    L3_46 = L3_46.rowbg
+    L4_47 = A0_43.phase
+    L5_48 = L1_44.setFillColor
+    L5_48(L1_44, 255, 255, 255)
+    L5_48 = L3_46.setFillColor
+    L5_48(L3_46, 217, 217, 217)
+    if L4_47 == "release" or L4_47 == "tap" then
+      function L5_48()
+        _UPVALUE0_:setFillColor(0, 0, 0)
+        _UPVALUE1_:setFillColor(255, 255, 255)
+        _UPVALUE2_.isVisible = true
+        _UPVALUE2_:setSequence("loading")
+        _UPVALUE2_:play()
+        _UPVALUE0_:setText("Fetching news")
+        _UPVALUE0_.x = _UPVALUE3_ + 9
+        _UPVALUE4_.network_request("getNews", has_fetched_news, {start = _UPVALUE5_})
+      end
+      timer.performWithDelay(90, L5_48)
+    end
+    L5_48 = true
+    return L5_48
+  end
+  function L31_32(A0_49, A1_50, A2_51)
+    local L3_52, L4_53, L5_54
+    L3_52 = A0_49.target
+    L3_52 = L3_52.height
+    L4_53 = A0_49.view
+    L5_54 = A0_49.target
+    L5_54.rowbg = display.newRect(0, 0, _W - 27, 40)
+    L5_54.rowbg:setReferencePoint(display.CenterReferencePoint)
+    L5_54.rowbg.x = _UPVALUE0_
+    L5_54.rowbg.y = L3_52 * 0.5
+    L5_54.rowbg:setFillColor(255, 255, 255)
+    L4_53:insert(L5_54.rowbg)
+    L5_54.rowText = display.newText({
+      text = "Load more news",
+      font = "Delicious-Heavy",
+      fontSize = 16
+    })
+    L5_54.rowText:setReferencePoint(display.CenterReferencePoint)
+    L5_54.rowText.x = _UPVALUE0_
+    L5_54.rowText.y = L3_52 * 0.5
+    L5_54.rowText:setFillColor(0, 0, 0)
+    L4_53:insert(L5_54.rowText)
+    L5_54.sprite = _UPVALUE1_.makeSprite(_UPVALUE0_ - 56, L3_52 * 0.5, {
+      img = "activity_black.png"
+    })
+    L5_54.sprite.isVisible = false
+    L5_54.sprite:pause()
+    L4_53:insert(L5_54.sprite)
+  end
+  function L32_33(A0_55)
+    local L1_56, L2_57, L3_58, L4_59
+    L1_56 = A0_55.target
+    L1_56 = L1_56.height
+    L2_57 = A0_55.view
+    L3_58 = A0_55.target
+    L4_59 = display
+    L4_59 = L4_59.newRect
+    L4_59 = L4_59(0, 0, _W - 27, 40)
+    L3_58.rowbg = L4_59
+    L4_59 = L3_58.rowbg
+    L4_59 = L4_59.setReferencePoint
+    L4_59(L4_59, display.CenterReferencePoint)
+    L4_59 = L3_58.rowbg
+    L4_59.x = _UPVALUE0_
+    L4_59 = L3_58.rowbg
+    L4_59.y = L1_56 * 0.5
+    L4_59 = L3_58.rowbg
+    L4_59 = L4_59.setFillColor
+    L4_59(L4_59, 255, 255, 255)
+    L4_59 = L2_57.insert
+    L4_59(L2_57, L3_58.rowbg)
+    L4_59 = display
+    L4_59 = L4_59.newText
+    L4_59 = L4_59({
+      text = "Stay up to date with the latest Seeds news.",
+      x = 0,
+      y = 0,
+      font = "Delicious-Heavy",
+      fontSize = 13
+    })
+    L4_59:setReferencePoint(display.CenterReferencePoint)
+    L4_59.x = _UPVALUE0_
+    L4_59.y = L1_56 * 0.5 - 8
+    L4_59:setFillColor(0, 0, 0)
+    L2_57:insert(L4_59)
+    L2_57.subGroup = display.newGroup()
+    L2_57:insert(L2_57.subGroup)
+    L2_57.rowText = display.newText({
+      text = _UPVALUE1_ .. " users subscribed to MC Seeds news.",
+      x = 0,
+      y = 0,
+      font = "Delicious-Roman",
+      fontSize = 13
+    })
+    L2_57.rowText:setReferencePoint(display.CenterReferencePoint)
+    L2_57.rowText.x = _UPVALUE0_
+    L2_57.rowText.y = L1_56 * 0.5 + 8
+    L2_57.rowText:setFillColor(0, 0, 0)
+    L2_57.subGroup:insert(L2_57.rowText)
+    if _UPVALUE1_ == "" then
+      L2_57.loading = _UPVALUE2_.makeSprite(0, 0, {
+        img = "activity_black.png"
+      })
+      L2_57.loading:scale(0.5, 0.5)
+      L2_57.loading:setReferencePoint(display.CenterRightReferencePoint)
+      L2_57.loading.x = L2_57.rowText.x - L2_57.rowText.width * 0.5 + 1
+      L2_57.loading.y = L2_57.rowText.y + 2
+      L2_57.subGroup:insert(L2_57.loading)
+    end
+    L2_57.subGroup:setReferencePoint(display.CenterReferencePoint)
+    L2_57.subGroup.x = _UPVALUE0_
+  end
+  L34_35 = L27_28
+  L33_34 = L27_28.insertRow
+  L33_34(L34_35, {
+    onRender = L32_33,
+    height = 70,
+    rowColor = {
+      0,
+      0,
+      0,
+      0
+    },
+    lineColor = {
+      0,
+      0,
+      0,
+      0
+    }
+  })
+  function L33_34(A0_60)
+    _UPVALUE0_ = "<Error>"
+    if _UPVALUE1_.content.rows[1].view._proxy then
+      _UPVALUE1_.content.rows[1].view.rowText:setText(_UPVALUE0_ .. " users subscribed to MC Seeds news.")
+      _UPVALUE1_.content.rows[1].view.rowText:setReferencePoint(display.CenterReferencePoint)
+      _UPVALUE1_.content.rows[1].view.subGroup:setReferencePoint(display.CenterReferencePoint)
+      _UPVALUE1_.content.rows[1].view.subGroup.x = _UPVALUE2_
+      if _UPVALUE1_.content.rows[1].view.loading then
+        _UPVALUE1_.content.rows[1].view.loading = _UPVALUE3_.delete(_UPVALUE1_.content.rows[1].view.loading)
+      end
+    end
+  end
+  L34_35 = _UPVALUE1_
+  L34_35 = L34_35.network_request
+  L34_35("getNewsSubscribersAmount", L33_34, {})
+  function L34_35(A0_61)
+    local L1_62, L2_63, L3_64, L4_65, L5_66, L6_67, L7_68, L8_69, L9_70, L10_71, L11_72, L12_73, L13_74, L14_75, L15_76
+    L1_62 = _UPVALUE0_
+    L1_62 = L1_62.decode
+    L2_63 = A0_61.response
+    L1_62 = L1_62(L2_63)
+    L2_63 = _UPVALUE1_
+    if L2_63 then
+      L2_63 = timer
+      L2_63 = L2_63.cancel
+      L2_63(L3_64)
+    end
+    L2_63 = _UPVALUE3_
+    L2_63 = L2_63.delete
+    L2_63 = L2_63(L3_64)
+    _UPVALUE2_ = L2_63
+    L2_63 = _UPVALUE3_
+    L2_63 = L2_63.delete
+    L2_63 = L2_63(L3_64)
+    _UPVALUE4_ = L2_63
+    L2_63 = _UPVALUE3_
+    L2_63 = L2_63.delete
+    L2_63 = L2_63(L3_64)
+    _UPVALUE5_ = L2_63
+    L2_63 = _UPVALUE6_
+    if L2_63 > 0 then
+      L2_63 = _UPVALUE7_
+      L2_63 = L2_63.deleteRow
+      L2_63(L3_64, L4_65)
+    end
+    L2_63 = #L1_62
+    L2_63 = L2_63 - 1
+    for L6_67 = 1, L2_63 do
+      L7_68 = _UPVALUE8_
+      L7_68 = L7_68 + 1
+      _UPVALUE8_ = L7_68
+      L7_68 = _UPVALUE8_
+      L8_69 = _UPVALUE9_
+      L8_69 = L8_69.fonts
+      L8_69 = L8_69.light
+      L9_70 = {}
+      L10_71 = 50
+      for L14_75 in L11_72(L12_73, L13_74) do
+        L15_76 = #L9_70
+        L15_76 = L15_76 + 1
+        L9_70[L15_76] = L14_75
+        L15_76 = display
+        L15_76 = L15_76.newText
+        L15_76 = L15_76({
+          text = L14_75,
+          width = _W - 121,
+          height = 0,
+          font = L8_69,
+          fontSize = 11
+        })
+        L10_71 = L10_71 + L15_76.height
+        L15_76 = _UPVALUE3_.delete(L15_76)
+      end
+      L14_75 = {}
+      L14_75.onRender = L11_72
+      L15_76 = L10_71 + 20
+      L14_75.height = L15_76
+      L15_76 = {
+        0,
+        0,
+        0,
+        0
+      }
+      L14_75.rowColor = L15_76
+      L15_76 = {
+        0,
+        0,
+        0,
+        0
+      }
+      L14_75.lineColor = L15_76
+      L12_73(L13_74, L14_75)
+    end
+    _UPVALUE6_ = L3_64
+    if L3_64 ~= L4_65 then
+      L6_67 = _UPVALUE11_
+      L5_66.onRender = L6_67
+      L6_67 = _UPVALUE12_
+      L5_66.onEvent = L6_67
+      L5_66.height = 70
+      L6_67 = {
+        L7_68,
+        L8_69,
+        L9_70,
+        L10_71
+      }
+      L7_68 = 0
+      L8_69 = 0
+      L9_70 = 0
+      L10_71 = 0
+      L5_66.rowColor = L6_67
+      L6_67 = {
+        L7_68,
+        L8_69,
+        L9_70,
+        L10_71
+      }
+      L7_68 = 0
+      L8_69 = 0
+      L9_70 = 0
+      L10_71 = 0
+      L5_66.lineColor = L6_67
+      L3_64(L4_65, L5_66)
+    end
+    L3_64(L4_65)
+  end
+  has_fetched_news = L34_35
+  function L34_35()
+    if _UPVALUE0_ == _UPVALUE1_.session then
+      _UPVALUE2_.network_request("getNews", has_fetched_news, {start = _UPVALUE3_})
+    end
+  end
+  timer.performWithDelay(220, L34_35)
+  return L0_1
+end

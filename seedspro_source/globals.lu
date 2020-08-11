@@ -1,0 +1,157 @@
+local L0_0
+L0_0 = {}
+L0_0.isNotificationShowing = false
+L0_0.chatid = nil
+L0_0.hasSeenSU = false
+L0_0.hasSeenLA = false
+L0_0.model = system.getInfo("model")
+L0_0.pixelHeight = display.pixelHeight
+L0_0.isiPhone5 = (L0_0.model == "iPhone" or L0_0.model == "iPod touch") and L0_0.pixelHeight == 1136
+L0_0.isiPhone6 = (L0_0.model == "iPhone" or L0_0.model == "iPod touch") and L0_0.pixelHeight == 1334
+L0_0.isiPhone6P = (L0_0.model == "iPhone" or L0_0.model == "iPod touch") and L0_0.pixelHeight == 1920
+L0_0.contentScaleX = display.contentScaleX
+L0_0.contentScaleY = display.contentScaleY
+_W = display.contentWidth
+_H = display.contentHeight
+L0_0.scaleFrom320 = _W / 320
+L0_0.imgSuff = ""
+if L0_0.isiPhone5 == true then
+  L0_0.imgSuff = "-568h"
+elseif L0_0.isiPhone6 == true then
+  L0_0.imgSuff = "-667h"
+elseif L0_0.isiPhone6P == true then
+  L0_0.imgSuff = "-736h"
+elseif L0_0.isiPad == true then
+  L0_0.imgSuff = "-Portrait"
+end
+L0_0.os = system.getInfo("platformName")
+L0_0.environment = system.getInfo("environment")
+L0_0.appstore = system.getInfo("targetAppStore")
+L0_0.appdata = nil
+L0_0.liveAppVersion = ""
+L0_0.liveAppVersionDots = ""
+L0_0.liveAppVersionMsg = ""
+L0_0.currAppVersion = nil
+L0_0.defaultSection = "all"
+L0_0.defaultPlatform = "iOS"
+L0_0.appSections = nil
+L0_0.didTapURL = false
+L0_0.session = 0
+L0_0.bgMain = nil
+L0_0.listenersToRemove = {}
+L0_0.runtimeListeners = nil
+L0_0.listeners = {}
+L0_0.maxImageUploadSize = nil
+L0_0.imageSizeLimit = 10485760
+L0_0.hasPurchasedSkins = false
+L0_0.moderators = nil
+L0_0.iteration_constant = nil
+L0_0.networkTimeout = nil
+L0_0.showAds = nil
+L0_0.pm_polltime = nil
+L0_0.appRules = nil
+L0_0.otherApps = nil
+L0_0.miniGames = nil
+L0_0.fakeTabs = nil
+L0_0.help = nil
+L0_0.minecrafttvchannels = nil
+L0_0.comment_refresh_rate = 5000
+L0_0.uploads_amount = nil
+L0_0.commentsSort = "Top rated"
+L0_0.backgroundsAmount = 15
+L0_0.bgPath = nil
+L0_0.bgDir = nil
+L0_0.chooseBgAmount = 0
+L0_0.comment_expire = 1209600
+L0_0.uploadExhaustData = {max_amount = 4, within_time = 1200}
+L0_0.commentExhaustTime = 10
+L0_0.downvoteExhaustTime = 15
+L0_0.slideViewSize = {
+  width = _W,
+  height = math.floor(232 * L0_0.scaleFrom320)
+}
+L0_0.profilePictureRes = {width = 1000, height = 336}
+L0_0.UIDefaultColor = {
+  0,
+  30,
+  49
+}
+L0_0.UIDefaultColorSolid = {
+  L0_0.UIDefaultColor[1],
+  L0_0.UIDefaultColor[2],
+  L0_0.UIDefaultColor[3]
+}
+L0_0.cachedDefaultColors = {
+  UIDefaultColor = {
+    unpack(L0_0.UIDefaultColor)
+  },
+  UIDefaultColorSolid = {
+    unpack(L0_0.UIDefaultColorSolid)
+  }
+}
+L0_0.tw_share_t = nil
+L0_0.backgroundRefreshT = nil
+L0_0.pm_amount_limit = 10
+L0_0.urlScheme = "seeds://"
+L0_0.set_gamecenter = true
+L0_0.firstLaunch = true
+L0_0.flagsSection = "flaggeduploads"
+L0_0.reportCommentReasons = nil
+L0_0.reportUploadReasons = nil
+L0_0.worldTypes = {}
+L0_0.serverPlatforms = {}
+L0_0.isGameBoxOnline = true
+L0_0.gameBoxDesc = ""
+L0_0.showGameBox = false
+L0_0.headerMaxWidth = _W - 150
+L0_0.sectionIconsVersion = "2"
+L0_0.possibleDefaultSections = {
+  "PC",
+  "iOS",
+  "Console"
+}
+L0_0.bannerHeight = math.floor(50 * L0_0.scaleFrom320)
+L0_0.menuSearchLabel = ""
+L0_0.seedExistsLabel = ""
+L0_0.imagesCacheTime = 300
+L0_0.youtubeKeys = {yes = "", no = ""}
+L0_0.ppSelfNr = 0
+L0_0.isGoogleResize = true
+L0_0.serverImagesMaskHeight = 140
+L0_0.errorOccurange = 0
+L0_0.email_tell_t = nil
+L0_0.email_share_t = nil
+L0_0.fb_invite_t = nil
+L0_0.tw_invite_t = nil
+L0_0.fb_share_t = nil
+L0_0.pushtoken = ""
+L0_0.gamecenter = false
+L0_0.udid = ""
+if L0_0.os == "Android" then
+  L0_0.identifier = system.getInfo("deviceID")
+else
+  L0_0.identifier = require("plugin.openudid").getValue() or ""
+end
+L0_0.nickname = ""
+L0_0.avatar_code = ""
+L0_0.moderator = false
+L0_0.accountSettings = {}
+L0_0.usertag = ""
+L0_0.gamecenterNickname = ""
+L0_0.userbios = ""
+L0_0.uploadsAmount = ""
+L0_0.fonts = {}
+if L0_0.os == "Android" then
+  L0_0.fonts.regular = "Roboto-Regular"
+  L0_0.fonts.bold = "Roboto-Bold"
+  L0_0.fonts.light = "Roboto-Light"
+  L0_0.fonts.italic = "Roboto-Italic"
+  L0_0.fonts.lightItalic = "Roboto-LightItalic"
+else
+  L0_0.fonts.regular = "HelveticaNeue"
+  L0_0.fonts.bold = "HelveticaNeue-Bold"
+  L0_0.fonts.light = "HelveticaNeue-Light"
+  L0_0.fonts.italic = "HelveticaNeue-Italic"
+  L0_0.fonts.lightItalic = "HelveticaNeue-LightItalic"
+end
+return L0_0

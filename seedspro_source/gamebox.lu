@@ -1,0 +1,1104 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("transitions")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37, L37_38, L38_39, L39_40, L40_41, L41_42, L42_43, L43_44, L44_45, L45_46, L46_47, L47_48, L48_49, L49_50, L50_51, L51_52, L52_53, L53_54, L54_55, L55_56, L56_57, L57_58, L58_59, L59_60, L60_61, L61_62, L62_63, L63_64, L64_65, L65_66, L66_67, L67_68
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.isGameBoxOnline
+  L8_9 = _UPVALUE0_
+  L8_9 = L8_9.scaleFrom320
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.gameBoxDesc
+  L10_11 = _UPVALUE0_
+  L10_11 = L10_11.showAds
+  L11_12 = math
+  L11_12 = L11_12.floor
+  L12_13 = math
+  L12_13 = L12_13.random
+  L13_14 = math
+  L13_14 = L13_14.ceil
+  L14_15 = _UPVALUE1_
+  L14_15 = L14_15.getSceneProperties
+  L14_15 = L14_15()
+  L15_16 = math
+  L15_16 = L15_16.abs
+  L16_17 = L14_15.searchString
+  L17_18 = L14_15.pageLabel
+  L18_19 = L14_15.category
+  L19_20 = L14_15.platform
+  L20_21 = L14_15.section
+  L21_22 = L14_15.start
+  L22_23 = L14_15.pop
+  L23_24 = _UPVALUE0_
+  L23_24 = L23_24.session
+  L23_24 = L23_24 + 1
+  L24_25 = _UPVALUE0_
+  L24_25.session = L23_24
+  L24_25 = graphics
+  L24_25 = L24_25.newMask
+  L25_26 = "mask-"
+  L26_27 = _W
+  L27_28 = "x"
+  L28_29 = _H
+  L29_30 = ".png"
+  L25_26 = L25_26 .. L26_27 .. L27_28 .. L28_29 .. L29_30
+  L26_27 = system
+  L26_27 = L26_27.TemporaryDirectory
+  L24_25 = L24_25(L25_26, L26_27)
+  L26_27 = L1_2
+  L25_26 = L1_2.setMask
+  L27_28 = L24_25
+  L25_26(L26_27, L27_28)
+  L1_2.maskX = L5_6
+  L1_2.maskY = L6_7
+  L25_26 = _UPVALUE0_
+  L25_26 = L25_26.contentScaleX
+  L1_2.maskScaleX = L25_26
+  L25_26 = _UPVALUE0_
+  L25_26 = L25_26.contentScaleY
+  L1_2.maskScaleY = L25_26
+  L25_26 = _UPVALUE1_
+  L25_26 = L25_26.makeBlurryBg
+  L25_26 = L25_26()
+  L27_28 = L25_26
+  L26_27 = L25_26.addEventListener
+  L28_29 = "touch"
+  function L29_30()
+    local L0_69, L1_70
+    L0_69 = true
+    return L0_69
+  end
+  L26_27(L27_28, L28_29, L29_30)
+  L27_28 = L2_3
+  L26_27 = L2_3.insert
+  L28_29 = L25_26
+  L26_27(L27_28, L28_29)
+  L26_27 = _UPVALUE2_
+  L26_27 = L26_27.createSideMenu
+  L27_28 = L1_2
+  L26_27 = L26_27(L27_28)
+  L28_29 = L0_1
+  L27_28 = L0_1.insert
+  L29_30 = L26_27
+  L27_28(L28_29, L29_30)
+  L0_1.side_menu = L26_27
+  L28_29 = L26_27
+  L27_28 = L26_27.toBack
+  L27_28(L28_29)
+  function L27_28(A0_71)
+    _UPVALUE0_.cancelAll()
+    _UPVALUE1_.removeRuntimeListener("clearLocalTimersAndListeners", A0_71.self_listenerid)
+  end
+  L28_29 = _UPVALUE1_
+  L28_29 = L28_29.addRuntimeListener
+  L29_30 = "clearLocalTimersAndListeners"
+  L30_31 = L27_28
+  L28_29(L29_30, L30_31)
+  L28_29 = _UPVALUE4_
+  L28_29 = L28_29.newScrollView
+  L29_30 = {}
+  L29_30.top = 64
+  L29_30.left = 0
+  L30_31 = _W
+  L29_30.width = L30_31
+  L30_31 = _H
+  L30_31 = L30_31 - 64
+  L29_30.height = L30_31
+  L30_31 = {
+    L31_32,
+    L32_33,
+    L33_34,
+    L34_35
+  }
+  L31_32 = 0
+  L32_33 = 0
+  L33_34 = 0
+  L34_35 = 0
+  L29_30.bgColor = L30_31
+  L29_30.bottomPadding = -13
+  L28_29 = L28_29(L29_30)
+  L29_30 = L28_29.content
+  L29_30.horizontalScrollDisabled = true
+  L28_29.spacing = 26
+  L30_31 = L3_4
+  L29_30 = L3_4.insert
+  L31_32 = L28_29
+  L29_30(L30_31, L31_32)
+  L29_30 = _UPVALUE1_
+  L29_30 = L29_30.makeImageFromSlices
+  L30_31 = {}
+  L30_31.filename = "gamebox-rectsbg-slice"
+  L30_31.width = 3
+  L30_31.height = 3
+  L31_32 = _W
+  L31_32 = L31_32 - 26
+  L30_31.resWidth = L31_32
+  L30_31.resHeight = 200
+  L30_31.slices = 9
+  L29_30 = L29_30(L30_31)
+  L31_32 = L29_30
+  L30_31 = L29_30.setReferencePoint
+  L32_33 = display
+  L32_33 = L32_33.TopCenterReferencePoint
+  L30_31(L31_32, L32_33)
+  L29_30.x = L5_6
+  L30_31 = L28_29.spacing
+  L30_31 = L30_31 * 0.5
+  L29_30.y = L30_31
+  L31_32 = L28_29
+  L30_31 = L28_29.insert
+  L32_33 = L29_30
+  L30_31(L31_32, L32_33)
+  L30_31 = display
+  L30_31 = L30_31.newImageRect
+  L31_32 = "gamebox-icon_big.png"
+  L32_33 = 100
+  L33_34 = 100
+  L30_31 = L30_31(L31_32, L32_33, L33_34)
+  L32_33 = L30_31
+  L31_32 = L30_31.setReferencePoint
+  L33_34 = display
+  L33_34 = L33_34.TopLeftReferencePoint
+  L31_32(L32_33, L33_34)
+  L31_32 = L28_29.spacing
+  L30_31.x = L31_32
+  L31_32 = L29_30.y
+  L32_33 = L28_29.spacing
+  L32_33 = L32_33 * 0.5
+  L31_32 = L31_32 + L32_33
+  L30_31.y = L31_32
+  L32_33 = L28_29
+  L31_32 = L28_29.insert
+  L33_34 = L30_31
+  L31_32(L32_33, L33_34)
+  L31_32 = graphics
+  L31_32 = L31_32.newMask
+  L32_33 = "gamebox-iconmask.png"
+  L31_32 = L31_32(L32_33)
+  L33_34 = L30_31
+  L32_33 = L30_31.setMask
+  L34_35 = L31_32
+  L32_33(L33_34, L34_35)
+  L30_31.maskScaleX = 0.5
+  L30_31.maskScaleY = 0.5
+  L32_33 = L30_31.x
+  L33_34 = L30_31.width
+  L32_33 = L32_33 + L33_34
+  L32_33 = L32_33 + 15
+  L33_34 = display
+  L33_34 = L33_34.newText
+  L34_35 = {}
+  L34_35.text = "The GameBox PC"
+  L35_36 = _UPVALUE0_
+  L35_36 = L35_36.fonts
+  L35_36 = L35_36.bold
+  L34_35.font = L35_36
+  L35_36 = L11_12
+  L36_37 = L29_30.width
+  L36_37 = L36_37 - L32_33
+  L36_37 = L36_37 / 8.18181818182
+  L35_36 = L35_36(L36_37)
+  L34_35.fontSize = L35_36
+  L33_34 = L33_34(L34_35)
+  L35_36 = L33_34
+  L34_35 = L33_34.setReferencePoint
+  L36_37 = display
+  L36_37 = L36_37.TopLeftReferencePoint
+  L34_35(L35_36, L36_37)
+  L35_36 = L33_34
+  L34_35 = L33_34.setPosition
+  L36_37 = L32_33
+  L37_38 = L30_31.y
+  L37_38 = L37_38 - 2
+  L34_35(L35_36, L36_37, L37_38)
+  L35_36 = L28_29
+  L34_35 = L28_29.insert
+  L36_37 = L33_34
+  L34_35(L35_36, L36_37)
+  L34_35 = display
+  L34_35 = L34_35.newText
+  L35_36 = {}
+  L35_36.text = "The GameBox MC is a minigame server started in partnership with JN Interactive. Housing TONS of Minigames including: Survival Games, Factions, Pirate Island, Lilypad Jumper, ShockVolt, and more!"
+  L36_37 = L11_12
+  L37_38 = L33_34.width
+  L37_38 = L37_38 + 2
+  L36_37 = L36_37(L37_38)
+  L35_36.width = L36_37
+  L35_36.height = 0
+  L36_37 = _UPVALUE0_
+  L36_37 = L36_37.fonts
+  L36_37 = L36_37.light
+  L35_36.font = L36_37
+  L35_36.fontSize = 11
+  L34_35 = L34_35(L35_36)
+  L36_37 = L34_35
+  L35_36 = L34_35.setReferencePoint
+  L37_38 = display
+  L37_38 = L37_38.TopLeftReferencePoint
+  L35_36(L36_37, L37_38)
+  L36_37 = L34_35
+  L35_36 = L34_35.setPosition
+  L37_38 = L33_34.x
+  L38_39 = L33_34.y
+  L39_40 = L33_34.height
+  L38_39 = L38_39 + L39_40
+  L35_36(L36_37, L37_38, L38_39)
+  L36_37 = L28_29
+  L35_36 = L28_29.insert
+  L37_38 = L34_35
+  L35_36(L36_37, L37_38)
+  L35_36 = display
+  L35_36 = L35_36.newText
+  L36_37 = {}
+  L36_37.text = "Server info"
+  L37_38 = _UPVALUE0_
+  L37_38 = L37_38.fonts
+  L37_38 = L37_38.regular
+  L36_37.font = L37_38
+  L36_37.fontSize = 17
+  L35_36 = L35_36(L36_37)
+  L37_38 = L35_36
+  L36_37 = L35_36.setReferencePoint
+  L38_39 = display
+  L38_39 = L38_39.TopLeftReferencePoint
+  L36_37(L37_38, L38_39)
+  L37_38 = L35_36
+  L36_37 = L35_36.setPosition
+  L38_39 = L30_31.x
+  L39_40 = L30_31.y
+  L40_41 = L30_31.height
+  L39_40 = L39_40 + L40_41
+  L39_40 = L39_40 + 9
+  L36_37(L37_38, L38_39, L39_40)
+  L37_38 = L28_29
+  L36_37 = L28_29.insert
+  L38_39 = L35_36
+  L36_37(L37_38, L38_39)
+  L36_37 = display
+  L36_37 = L36_37.newText
+  L37_38 = {}
+  L37_38.text = "IP: TheGameBoxMC.com"
+  L38_39 = _UPVALUE0_
+  L38_39 = L38_39.fonts
+  L38_39 = L38_39.light
+  L37_38.font = L38_39
+  L37_38.fontSize = 14
+  L36_37 = L36_37(L37_38)
+  L38_39 = L36_37
+  L37_38 = L36_37.setReferencePoint
+  L39_40 = display
+  L39_40 = L39_40.TopLeftReferencePoint
+  L37_38(L38_39, L39_40)
+  L37_38 = L35_36.x
+  L36_37.x = L37_38
+  L37_38 = L35_36.y
+  L38_39 = L35_36.height
+  L37_38 = L37_38 + L38_39
+  L36_37.y = L37_38
+  L38_39 = L28_29
+  L37_38 = L28_29.insert
+  L39_40 = L36_37
+  L37_38(L38_39, L39_40)
+  L37_38 = nil
+  if L7_8 == true then
+    L37_38 = "online-indicator.png"
+  else
+    L37_38 = "offline-indicator.png"
+  end
+  L38_39 = display
+  L38_39 = L38_39.newImageRect
+  L39_40 = L37_38
+  L40_41 = 9
+  L41_42 = 9
+  L38_39 = L38_39(L39_40, L40_41, L41_42)
+  L40_41 = L38_39
+  L39_40 = L38_39.setReferencePoint
+  L41_42 = display
+  L41_42 = L41_42.CenterLeftReferencePoint
+  L39_40(L40_41, L41_42)
+  L39_40 = L36_37.x
+  L40_41 = L36_37.width
+  L39_40 = L39_40 + L40_41
+  L39_40 = L39_40 + 3
+  L38_39.x = L39_40
+  L39_40 = L36_37.y
+  L40_41 = L36_37.height
+  L40_41 = L40_41 * 0.5
+  L39_40 = L39_40 + L40_41
+  L39_40 = L39_40 + 1
+  L38_39.y = L39_40
+  L40_41 = L28_29
+  L39_40 = L28_29.insert
+  L41_42 = L38_39
+  L39_40(L40_41, L41_42)
+  function L39_40()
+    _UPVALUE0_.to(_UPVALUE1_, {
+      delay = _UPVALUE2_(300, 700),
+      time = _UPVALUE2_(400, 1100),
+      alpha = 0.6,
+      transition = easing.inOutQuad,
+      onComplete = function()
+        _UPVALUE0_.to(_UPVALUE1_, {
+          delay = _UPVALUE2_(300, 700),
+          time = _UPVALUE2_(400, 1100),
+          alpha = 1,
+          transition = easing.inOutQuad,
+          onComplete = _UPVALUE3_
+        })
+      end
+    })
+  end
+  L40_41 = L39_40
+  L40_41()
+  L40_41 = display
+  L40_41 = L40_41.newImageRect
+  L41_42 = "flag-usa.png"
+  L42_43 = 15
+  L43_44 = 11
+  L40_41 = L40_41(L41_42, L42_43, L43_44)
+  L42_43 = L40_41
+  L41_42 = L40_41.setReferencePoint
+  L43_44 = display
+  L43_44 = L43_44.CenterLeftReferencePoint
+  L41_42(L42_43, L43_44)
+  L41_42 = L38_39.x
+  L42_43 = L38_39.width
+  L41_42 = L41_42 + L42_43
+  L41_42 = L41_42 + 5
+  L40_41.x = L41_42
+  L41_42 = L38_39.y
+  L40_41.y = L41_42
+  L42_43 = L28_29
+  L41_42 = L28_29.insert
+  L43_44 = L40_41
+  L41_42(L42_43, L43_44)
+  L41_42, L42_43, L43_44, L44_45 = nil, nil, nil, nil
+  function L45_46(A0_72)
+    local L1_73, L2_74
+    L1_73 = A0_72.phase
+    if L1_73 == "moved" then
+      L2_74 = _UPVALUE0_
+      L2_74 = L2_74(A0_72.xStart - A0_72.x)
+      if L2_74 < _UPVALUE0_(A0_72.yStart - A0_72.y) then
+        _UPVALUE1_:takeFocus(A0_72)
+      end
+    elseif L1_73 == "release" or L1_73 == "cancelled" then
+      L2_74 = _UPVALUE2_
+      L2_74 = L2_74.isGameCenter
+      L2_74 = L2_74()
+      if L2_74 == true then
+        L2_74 = _UPVALUE3_
+        L2_74.isVisible = true
+        L2_74 = _UPVALUE4_
+        L2_74.isVisible = false
+        L2_74 = _UPVALUE5_
+        L2_74.isVisible = false
+        function L2_74(A0_75)
+          if A0_75.response == "Liked" then
+            _UPVALUE0_.isVisible = false
+            _UPVALUE1_.isVisible = true
+            _UPVALUE2_.amount = _UPVALUE2_.amount + 1
+          elseif A0_75.response == "Unliked" then
+            _UPVALUE0_.isVisible = false
+            _UPVALUE3_.isVisible = true
+            _UPVALUE2_.amount = _UPVALUE2_.amount - 1
+          end
+          _UPVALUE2_:setText(_UPVALUE2_.amount)
+          _UPVALUE2_:setReferencePoint(display.CenterLeftReferencePoint)
+          _UPVALUE2_:setPosition(_UPVALUE2_.origX, _UPVALUE2_.origY)
+        end
+        _UPVALUE2_.network_request("likeGameBoxServer", L2_74, {
+          udid = _UPVALUE7_.udid
+        })
+      end
+    end
+    L2_74 = true
+    return L2_74
+  end
+  L46_47 = _UPVALUE4_
+  L46_47 = L46_47.newButton
+  L47_48 = {}
+  L47_48.id = "like"
+  L47_48.width = 23
+  L47_48.height = 22
+  L47_48.default = "gamebox-thumbsup.png"
+  L47_48.over = "gamebox-thumbsup-over.png"
+  L47_48.onEvent = L45_46
+  L46_47 = L46_47(L47_48)
+  L41_42 = L46_47
+  L47_48 = L41_42
+  L46_47 = L41_42.setReferencePoint
+  L48_49 = display
+  L48_49 = L48_49.TopLeftReferencePoint
+  L46_47(L47_48, L48_49)
+  L46_47 = L28_29.spacing
+  L41_42.x = L46_47
+  L46_47 = L36_37.y
+  L47_48 = L36_37.height
+  L46_47 = L46_47 + L47_48
+  L46_47 = L46_47 + 6
+  L41_42.y = L46_47
+  L41_42.isVisible = false
+  L47_48 = L28_29
+  L46_47 = L28_29.insert
+  L48_49 = L41_42
+  L46_47(L47_48, L48_49)
+  L46_47 = _UPVALUE4_
+  L46_47 = L46_47.newButton
+  L47_48 = {}
+  L47_48.id = "unlike"
+  L47_48.width = 23
+  L47_48.height = 22
+  L47_48.default = "gamebox-thumbsup-highlighted.png"
+  L47_48.over = "gamebox-thumbsup-highlighted-over.png"
+  L47_48.onEvent = L45_46
+  L46_47 = L46_47(L47_48)
+  L42_43 = L46_47
+  L47_48 = L42_43
+  L46_47 = L42_43.setReferencePoint
+  L48_49 = display
+  L48_49 = L48_49.TopLeftReferencePoint
+  L46_47(L47_48, L48_49)
+  L46_47 = L28_29.spacing
+  L42_43.x = L46_47
+  L46_47 = L36_37.y
+  L47_48 = L36_37.height
+  L46_47 = L46_47 + L47_48
+  L46_47 = L46_47 + 6
+  L42_43.y = L46_47
+  L42_43.isVisible = false
+  L47_48 = L28_29
+  L46_47 = L28_29.insert
+  L48_49 = L42_43
+  L46_47(L47_48, L48_49)
+  L46_47 = display
+  L46_47 = L46_47.newText
+  L47_48 = {}
+  L47_48.text = ""
+  L48_49 = _UPVALUE0_
+  L48_49 = L48_49.fonts
+  L48_49 = L48_49.regular
+  L47_48.font = L48_49
+  L47_48.fontSize = 18
+  L46_47 = L46_47(L47_48)
+  L44_45 = L46_47
+  L47_48 = L44_45
+  L46_47 = L44_45.setReferencePoint
+  L48_49 = display
+  L48_49 = L48_49.CenterLeftReferencePoint
+  L46_47(L47_48, L48_49)
+  L47_48 = L44_45
+  L46_47 = L44_45.setPosition
+  L48_49 = L41_42.x
+  L49_50 = L41_42.width
+  L48_49 = L48_49 + L49_50
+  L48_49 = L48_49 + 7
+  L49_50 = L41_42.y
+  L50_51 = L41_42.height
+  L50_51 = L50_51 * 0.5
+  L49_50 = L49_50 + L50_51
+  L49_50 = L49_50 + 1
+  L46_47(L47_48, L48_49, L49_50)
+  L46_47 = L44_45.x
+  L44_45.origX = L46_47
+  L46_47 = L44_45.y
+  L44_45.origY = L46_47
+  L44_45.amount = 0
+  L47_48 = L28_29
+  L46_47 = L28_29.insert
+  L48_49 = L44_45
+  L46_47(L47_48, L48_49)
+  L46_47 = _UPVALUE1_
+  L46_47 = L46_47.makeSprite
+  L47_48 = L41_42.x
+  L48_49 = L41_42.width
+  L48_49 = L48_49 * 0.5
+  L47_48 = L47_48 + L48_49
+  L48_49 = L41_42.y
+  L49_50 = L41_42.height
+  L49_50 = L49_50 * 0.5
+  L48_49 = L48_49 + L49_50
+  L46_47 = L46_47(L47_48, L48_49)
+  L43_44 = L46_47
+  L47_48 = L43_44
+  L46_47 = L43_44.scale
+  L48_49 = 0.8
+  L49_50 = 0.8
+  L46_47(L47_48, L48_49, L49_50)
+  L47_48 = L28_29
+  L46_47 = L28_29.insert
+  L48_49 = L43_44
+  L46_47(L47_48, L48_49)
+  L46_47 = _UPVALUE1_
+  L46_47 = L46_47.makeImageFromSlices
+  L47_48 = {}
+  L47_48.filename = "gamebox-rectsbg-slice"
+  L47_48.width = 3
+  L47_48.height = 3
+  L48_49 = _W
+  L48_49 = L48_49 - 26
+  L47_48.resWidth = L48_49
+  L47_48.resHeight = 174
+  L47_48.slices = 9
+  L46_47 = L46_47(L47_48)
+  L48_49 = L46_47
+  L47_48 = L46_47.setReferencePoint
+  L49_50 = display
+  L49_50 = L49_50.TopCenterReferencePoint
+  L47_48(L48_49, L49_50)
+  L46_47.x = L5_6
+  L47_48 = L29_30.y
+  L48_49 = L29_30.height
+  L47_48 = L47_48 + L48_49
+  L48_49 = L28_29.spacing
+  L48_49 = L48_49 * 0.5
+  L47_48 = L47_48 + L48_49
+  L46_47.y = L47_48
+  L48_49 = L28_29
+  L47_48 = L28_29.insert
+  L49_50 = L46_47
+  L47_48(L48_49, L49_50)
+  L47_48 = display
+  L47_48 = L47_48.newText
+  L48_49 = {}
+  L48_49.text = "Players online"
+  L49_50 = _UPVALUE0_
+  L49_50 = L49_50.fonts
+  L49_50 = L49_50.regular
+  L48_49.font = L49_50
+  L48_49.fontSize = 15
+  L47_48 = L47_48(L48_49)
+  L49_50 = L47_48
+  L48_49 = L47_48.setReferencePoint
+  L50_51 = display
+  L50_51 = L50_51.TopLeftReferencePoint
+  L48_49(L49_50, L50_51)
+  L49_50 = L47_48
+  L48_49 = L47_48.setPosition
+  L50_51 = L28_29.spacing
+  L51_52 = L46_47.y
+  L51_52 = L51_52 + 6
+  L48_49(L49_50, L50_51, L51_52)
+  L49_50 = L28_29
+  L48_49 = L28_29.insert
+  L50_51 = L47_48
+  L48_49(L49_50, L50_51)
+  L48_49 = display
+  L48_49 = L48_49.newText
+  L49_50 = {}
+  L49_50.text = ""
+  L50_51 = _UPVALUE0_
+  L50_51 = L50_51.fonts
+  L50_51 = L50_51.regular
+  L49_50.font = L50_51
+  L49_50.fontSize = 13
+  L48_49 = L48_49(L49_50)
+  L50_51 = L48_49
+  L49_50 = L48_49.setReferencePoint
+  L51_52 = display
+  L51_52 = L51_52.CenterLeftReferencePoint
+  L49_50(L50_51, L51_52)
+  L50_51 = L48_49
+  L49_50 = L48_49.setPosition
+  L51_52 = L47_48.x
+  L52_53 = L47_48.width
+  L51_52 = L51_52 + L52_53
+  L51_52 = L51_52 + 4
+  L52_53 = L47_48.y
+  L53_54 = L47_48.height
+  L53_54 = L53_54 * 0.5
+  L52_53 = L52_53 + L53_54
+  L49_50(L50_51, L51_52, L52_53)
+  L49_50 = L48_49.x
+  L48_49.origX = L49_50
+  L49_50 = L48_49.y
+  L48_49.origY = L49_50
+  if L7_8 == true then
+    L50_51 = L48_49
+    L49_50 = L48_49.setFillColor
+    L51_52 = 201
+    L52_53 = 255
+    L53_54 = 187
+    L49_50(L50_51, L51_52, L52_53, L53_54)
+  else
+    L50_51 = L48_49
+    L49_50 = L48_49.setFillColor
+    L51_52 = 255
+    L52_53 = 187
+    L53_54 = 187
+    L49_50(L50_51, L51_52, L52_53, L53_54)
+  end
+  L50_51 = L28_29
+  L49_50 = L28_29.insert
+  L51_52 = L48_49
+  L49_50(L50_51, L51_52)
+  L49_50 = _UPVALUE1_
+  L49_50 = L49_50.makeSprite
+  L50_51 = 0
+  L51_52 = 0
+  L49_50 = L49_50(L50_51, L51_52)
+  L48_49.loading = L49_50
+  L49_50 = L48_49.loading
+  L50_51 = L49_50
+  L49_50 = L49_50.setReferencePoint
+  L51_52 = display
+  L51_52 = L51_52.CenterLeftReferencePoint
+  L49_50(L50_51, L51_52)
+  L49_50 = L48_49.loading
+  L50_51 = L48_49.x
+  L49_50.x = L50_51
+  L49_50 = L48_49.loading
+  L50_51 = L48_49.y
+  L49_50.y = L50_51
+  L49_50 = L48_49.loading
+  L50_51 = L49_50
+  L49_50 = L49_50.scale
+  L51_52 = 0.5
+  L52_53 = 0.5
+  L49_50(L50_51, L51_52, L52_53)
+  L50_51 = L28_29
+  L49_50 = L28_29.insert
+  L51_52 = L48_49.loading
+  L49_50(L50_51, L51_52)
+  L49_50 = _UPVALUE4_
+  L49_50 = L49_50.newTableView
+  L50_51 = {}
+  L51_52 = L47_48.y
+  L52_53 = L47_48.height
+  L51_52 = L51_52 + L52_53
+  L51_52 = L51_52 + 7
+  L50_51.top = L51_52
+  L51_52 = L28_29.spacing
+  L50_51.left = L51_52
+  L51_52 = _W
+  L51_52 = L51_52 - 52
+  L50_51.width = L51_52
+  L50_51.height = 130
+  L51_52 = {
+    L52_53,
+    L53_54,
+    L54_55,
+    L55_56
+  }
+  L52_53 = 0
+  L53_54 = 0
+  L54_55 = 0
+  L55_56 = 0
+  L50_51.bgColor = L51_52
+  L51_52 = system
+  L51_52 = L51_52.TemporaryDirectory
+  L50_51.baseDir = L51_52
+  L51_52 = "mask-"
+  L52_53 = _W
+  L52_53 = L52_53 - 52
+  L53_54 = "x130.png"
+  L51_52 = L51_52 .. L52_53 .. L53_54
+  L50_51.maskFile = L51_52
+  L49_50 = L49_50(L50_51)
+  L51_52 = L28_29
+  L50_51 = L28_29.insert
+  L52_53 = L49_50
+  L50_51(L51_52, L52_53)
+  function L50_51(A0_76)
+    local L1_77, L2_78, L3_79, L4_80, L5_81, L6_82
+    L1_77 = A0_76.target
+    L1_77 = L1_77.height
+    L2_78 = A0_76.target
+    L2_78 = L2_78.width
+    L3_79 = A0_76.view
+    L4_80 = A0_76.id
+    L5_81 = display
+    L5_81 = L5_81.newRect
+    L6_82 = 0
+    L5_81 = L5_81(L6_82, 0, L2_78, L1_77)
+    L6_82 = L5_81.setFillColor
+    L6_82(L5_81, 13, 31, 71)
+    L6_82 = L3_79.insert
+    L6_82(L3_79, L5_81)
+    L6_82 = display
+    L6_82 = L6_82.newText
+    L6_82 = L6_82({
+      text = L4_80,
+      font = _UPVALUE0_.fonts.light,
+      fontSize = 12
+    })
+    L6_82:setReferencePoint(display.CenterLeftReferencePoint)
+    L6_82:setPosition(5, L1_77 * 0.5)
+    L3_79:insert(L6_82)
+  end
+  L52_53 = L49_50
+  L51_52 = L49_50.insertRow
+  L53_54 = {}
+  L53_54.isCategory = true
+  L54_55 = {
+    L55_56,
+    L56_57,
+    L57_58,
+    L58_59
+  }
+  L55_56 = 0
+  L56_57 = 0
+  L57_58 = 0
+  L58_59 = 0
+  L53_54.lineColor = L54_55
+  L54_55 = {
+    L55_56,
+    L56_57,
+    L57_58,
+    L58_59
+  }
+  L55_56 = 0
+  L56_57 = 0
+  L57_58 = 0
+  L58_59 = 0
+  L53_54.rowColor = L54_55
+  L53_54.onRender = L50_51
+  L53_54.height = 20
+  L53_54.id = "Players"
+  L51_52(L52_53, L53_54)
+  function L51_52(A0_83)
+    local L1_84, L2_85, L3_86, L4_87, L5_88, L6_89, L7_90
+    L1_84 = A0_83.target
+    L1_84 = L1_84.height
+    L2_85 = L1_84 * 0.5
+    L3_86 = A0_83.view
+    L4_87 = A0_83.data
+    L5_88 = A0_83.id
+    if L5_88 == "loading" then
+      L6_89 = _UPVALUE0_
+      L6_89 = L6_89.makeSprite
+      L7_90 = 0
+      L6_89 = L6_89(L7_90, 0)
+      L7_90 = L6_89.setReferencePoint
+      L7_90(L6_89, display.CenterLeftReferencePoint)
+      L6_89.x = 5
+      L6_89.y = L2_85
+      L7_90 = L6_89.scale
+      L7_90(L6_89, 0.5, 0.5)
+      L7_90 = L3_86.insert
+      L7_90(L3_86, L6_89)
+      L7_90 = display
+      L7_90 = L7_90.newText
+      L7_90 = L7_90({
+        text = "Fetching players",
+        font = _UPVALUE1_.fonts.light,
+        fontSize = 12
+      })
+      L7_90:setReferencePoint(display.CenterLeftReferencePoint)
+      L7_90:setPosition(21, L2_85)
+      L3_86:insert(L7_90)
+    elseif L5_88 == "player" then
+      L6_89 = display
+      L6_89 = L6_89.newText
+      L7_90 = {}
+      L7_90.text = L4_87
+      L7_90.font = _UPVALUE1_.fonts.light
+      L7_90.fontSize = 12
+      L6_89 = L6_89(L7_90)
+      L7_90 = L6_89.setReferencePoint
+      L7_90(L6_89, display.CenterLeftReferencePoint)
+      L7_90 = L6_89.setPosition
+      L7_90(L6_89, 5, L2_85)
+      L7_90 = L3_86.insert
+      L7_90(L3_86, L6_89)
+    end
+  end
+  function L52_53(A0_91, A1_92)
+    _UPVALUE0_:insertRow({
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      onRender = _UPVALUE1_,
+      height = 20,
+      data = A1_92,
+      id = A0_91
+    })
+  end
+  L53_54 = L52_53
+  L54_55 = "loading"
+  L53_54(L54_55)
+  function L53_54(A0_93)
+    local L1_94, L2_95, L3_96, L4_97
+    L1_94 = _UPVALUE0_
+    L2_95 = _UPVALUE1_
+    L2_95 = L2_95.session
+    if L1_94 == L2_95 then
+      L1_94 = A0_93.response
+      L2_95 = L1_94
+      L1_94 = L1_94.match
+      L3_96 = "<table class=\"table table%-bordered table%-striped\">(.-)</table>"
+      L1_94 = L1_94(L2_95, L3_96)
+      L2_95 = {}
+      L3_96 = 0
+      L4_97 = string
+      L4_97 = L4_97.gsub
+      L4_97(L1_94, "<td>(.-)</td>", function(A0_98)
+        if A0_98 ~= "Nobody is online" then
+          table.insert(_UPVALUE0_, A0_98)
+          _UPVALUE1_ = _UPVALUE1_ + 1
+        end
+      end)
+      function L4_97(A0_99, A1_100)
+        local L2_101
+        L2_101 = A1_100 < A0_99
+        return L2_101
+      end
+      table.sort(L2_95, L4_97)
+      _UPVALUE2_:deleteRow(2)
+      for _FORV_8_ = 1, #L2_95 do
+        _UPVALUE3_("player", L2_95[_FORV_8_])
+      end
+      _UPVALUE4_.loading = _UPVALUE5_.delete(_UPVALUE4_.loading)
+      _UPVALUE4_:setText(L3_96 .. "/1000")
+      _UPVALUE4_:setReferencePoint(display.CenterLeftReferencePoint)
+      _UPVALUE4_.x = _UPVALUE4_.origX
+      _UPVALUE4_.y = _UPVALUE4_.origY
+    end
+  end
+  L54_55 = network
+  L54_55 = L54_55.request
+  L55_56 = "http://thegameboxmc.com/serverlist/"
+  L56_57 = "GET"
+  L57_58 = L53_54
+  L54_55(L55_56, L56_57, L57_58)
+  L54_55 = display
+  L54_55 = L54_55.newText
+  L55_56 = {}
+  L55_56.text = L9_10
+  L56_57 = _W
+  L57_58 = L28_29.spacing
+  L57_58 = L57_58 * 2
+  L56_57 = L56_57 - L57_58
+  L55_56.width = L56_57
+  L55_56.height = 0
+  L56_57 = _UPVALUE0_
+  L56_57 = L56_57.fonts
+  L56_57 = L56_57.light
+  L55_56.font = L56_57
+  L55_56.fontSize = 13
+  L54_55 = L54_55(L55_56)
+  L55_56 = L54_55.height
+  L56_57 = _UPVALUE1_
+  L56_57 = L56_57.delete
+  L57_58 = L54_55
+  L56_57 = L56_57(L57_58)
+  L54_55 = L56_57
+  L56_57 = _UPVALUE1_
+  L56_57 = L56_57.makeImageFromSlices
+  L57_58 = {}
+  L57_58.filename = "gamebox-rectsbg-slice"
+  L57_58.width = 3
+  L57_58.height = 3
+  L58_59 = _W
+  L58_59 = L58_59 - 26
+  L57_58.resWidth = L58_59
+  L58_59 = L55_56 + 44
+  L57_58.resHeight = L58_59
+  L57_58.slices = 9
+  L56_57 = L56_57(L57_58)
+  L58_59 = L56_57
+  L57_58 = L56_57.setReferencePoint
+  L59_60 = display
+  L59_60 = L59_60.TopCenterReferencePoint
+  L57_58(L58_59, L59_60)
+  L56_57.x = L5_6
+  L57_58 = L46_47.y
+  L58_59 = L46_47.height
+  L57_58 = L57_58 + L58_59
+  L58_59 = L28_29.spacing
+  L58_59 = L58_59 * 0.5
+  L57_58 = L57_58 + L58_59
+  L56_57.y = L57_58
+  L58_59 = L28_29
+  L57_58 = L28_29.insert
+  L59_60 = L56_57
+  L57_58(L58_59, L59_60)
+  L57_58 = display
+  L57_58 = L57_58.newText
+  L58_59 = {}
+  L58_59.text = "What is The GameBox?"
+  L59_60 = _UPVALUE0_
+  L59_60 = L59_60.fonts
+  L59_60 = L59_60.regular
+  L58_59.font = L59_60
+  L58_59.fontSize = 15
+  L57_58 = L57_58(L58_59)
+  L59_60 = L57_58
+  L58_59 = L57_58.setReferencePoint
+  L60_61 = display
+  L60_61 = L60_61.TopLeftReferencePoint
+  L58_59(L59_60, L60_61)
+  L59_60 = L57_58
+  L58_59 = L57_58.setPosition
+  L60_61 = L28_29.spacing
+  L61_62 = L56_57.y
+  L61_62 = L61_62 + 10
+  L58_59(L59_60, L60_61, L61_62)
+  L59_60 = L28_29
+  L58_59 = L28_29.insert
+  L60_61 = L57_58
+  L58_59(L59_60, L60_61)
+  L58_59 = display
+  L58_59 = L58_59.newText
+  L59_60 = {}
+  L59_60.text = L9_10
+  L60_61 = _W
+  L61_62 = L28_29.spacing
+  L61_62 = L61_62 * 2
+  L60_61 = L60_61 - L61_62
+  L59_60.width = L60_61
+  L59_60.height = 0
+  L60_61 = _UPVALUE0_
+  L60_61 = L60_61.fonts
+  L60_61 = L60_61.light
+  L59_60.font = L60_61
+  L59_60.fontSize = 13
+  L58_59 = L58_59(L59_60)
+  L60_61 = L58_59
+  L59_60 = L58_59.setReferencePoint
+  L61_62 = display
+  L61_62 = L61_62.TopLeftReferencePoint
+  L59_60(L60_61, L61_62)
+  L60_61 = L58_59
+  L59_60 = L58_59.setPosition
+  L61_62 = L28_29.spacing
+  L62_63 = L57_58.y
+  L63_64 = L57_58.height
+  L62_63 = L62_63 + L63_64
+  L62_63 = L62_63 + 6
+  L59_60(L60_61, L61_62, L62_63)
+  L60_61 = L28_29
+  L59_60 = L28_29.insert
+  L61_62 = L58_59
+  L59_60(L60_61, L61_62)
+  L59_60 = display
+  L59_60 = L59_60.newText
+  L60_61 = {}
+  L60_61.text = "Screenshots"
+  L61_62 = _UPVALUE0_
+  L61_62 = L61_62.fonts
+  L61_62 = L61_62.regular
+  L60_61.font = L61_62
+  L60_61.fontSize = 15
+  L59_60 = L59_60(L60_61)
+  L61_62 = L59_60
+  L60_61 = L59_60.setReferencePoint
+  L62_63 = display
+  L62_63 = L62_63.TopLeftReferencePoint
+  L60_61(L61_62, L62_63)
+  L61_62 = L59_60
+  L60_61 = L59_60.setPosition
+  L62_63 = L28_29.spacing
+  L62_63 = L62_63 * 0.5
+  L63_64 = L56_57.y
+  L63_64 = L63_64 + L64_65
+  L63_64 = L63_64 + L64_65
+  L60_61(L61_62, L62_63, L63_64)
+  L61_62 = L28_29
+  L60_61 = L28_29.insert
+  L62_63 = L59_60
+  L60_61(L61_62, L62_63)
+  L60_61 = false
+  function L61_62(A0_102)
+    local L1_103
+    L1_103 = A0_102.phase
+    if L1_103 == "moved" then
+      if _UPVALUE1_ == false then
+        if _UPVALUE0_(A0_102.xStart - A0_102.x) < _UPVALUE0_(A0_102.yStart - A0_102.y) then
+          _UPVALUE2_:takeFocus(A0_102)
+        elseif _UPVALUE0_(A0_102.xStart - A0_102.x) > _UPVALUE0_(A0_102.yStart - A0_102.y) then
+          _UPVALUE1_ = true
+        end
+      end
+    elseif L1_103 == "release" or L1_103 == "cancelled" then
+      _UPVALUE1_ = false
+    end
+    return true
+  end
+  L62_63 = _UPVALUE4_
+  L62_63 = L62_63.newScrollView
+  L63_64 = {}
+  L63_64.top = L64_65
+  L63_64.left = 0
+  L63_64.width = L64_65
+  L63_64.height = 132
+  L67_68 = 0
+  L63_64.bgColor = L64_65
+  L63_64.baseDir = L64_65
+  L63_64.maskFile = L64_65
+  L63_64.listener = L61_62
+  L63_64.rightPadding = L64_65
+  L63_64.hideScrollBar = true
+  L63_64.alwaysScrollable = true
+  L62_63 = L62_63(L63_64)
+  L63_64 = L62_63.content
+  L63_64.verticalScrollDisabled = true
+  L63_64 = L28_29.insert
+  L63_64(L64_65, L65_66)
+  L63_64 = {}
+  for L67_68 = 1, 6 do
+    L63_64[L67_68] = display.newImageRect("gamebox-screenshot" .. L67_68 .. ".png", 235, 132)
+    L63_64[L67_68]:setReferencePoint(display.TopLeftReferencePoint)
+    L63_64[L67_68].x = L28_29.spacing * 0.5 + (L67_68 - 1) * (L63_64[L67_68].width + L28_29.spacing * 0.5)
+    L63_64[L67_68].y = 0
+    L62_63:insert(L63_64[L67_68])
+  end
+  L67_68 = L64_65
+  L65_66(L66_67, L67_68, {
+    udid = _UPVALUE0_.udid
+  })
+  L67_68 = {}
+  L67_68.line = true
+  L67_68 = L4_5
+  L66_67(L67_68, L65_66)
+  L67_68 = L1_2
+  L67_68 = L4_5.insert
+  L67_68(L4_5, L66_67)
+  return L0_1
+end

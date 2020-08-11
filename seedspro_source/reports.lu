@@ -1,0 +1,1488 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("openGLTextfield")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37, L37_38, L38_39, L39_40, L40_41, L41_42, L42_43, L43_44, L44_45, L45_46, L46_47, L47_48, L48_49, L49_50, L50_51, L51_52, L52_53, L53_54, L54_55, L55_56, L56_57, L57_58, L58_59, L59_60, L60_61, L61_62
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.getAppType
+  L7_8 = L7_8()
+  L8_9 = true
+  L9_10 = false
+  L10_11 = false
+  L11_12 = nil
+  L12_13 = _UPVALUE1_
+  L12_13 = L12_13.UIDefaultColor
+  L13_14 = _UPVALUE1_
+  L13_14 = L13_14.scaleFrom320
+  L14_15 = _UPVALUE1_
+  L14_15 = L14_15.nickname
+  L15_16 = _UPVALUE1_
+  L15_16 = L15_16.appdata
+  L16_17 = _UPVALUE1_
+  L16_17 = L16_17.imgSuff
+  L17_18 = _UPVALUE0_
+  L17_18 = L17_18.getPadding
+  L17_18 = L17_18()
+  L18_19 = math
+  L18_19 = L18_19.floor
+  L19_20 = _UPVALUE0_
+  L19_20 = L19_20.getSceneProperties
+  L19_20 = L19_20()
+  L20_21 = math
+  L20_21 = L20_21.ceil
+  L21_22 = math
+  L21_22 = L21_22.abs
+  L22_23 = L19_20.searchString
+  L23_24 = L19_20.pageTable
+  L24_25 = L19_20.pageLabel
+  L25_26 = L19_20.fetchUdid
+  L26_27 = L19_20.fetchNick
+  L27_28 = L19_20.prevScene
+  L28_29 = L19_20.category
+  L29_30 = L19_20.platform
+  L30_31 = L19_20.version
+  L31_32 = L19_20.section
+  L32_33 = L19_20.listPos
+  L33_34 = L19_20.start
+  L34_35 = L19_20.sort
+  L35_36 = L19_20.page
+  L36_37 = L19_20.taps
+  L37_38 = L19_20.pop
+  L38_39 = _UPVALUE1_
+  L38_39 = L38_39.session
+  L38_39 = L38_39 + 1
+  L39_40 = _UPVALUE1_
+  L39_40.session = L38_39
+  L39_40 = nil
+  L40_41 = {}
+  L41_42 = {}
+  L40_41.reports = L41_42
+  L41_42 = graphics
+  L41_42 = L41_42.newMask
+  L42_43 = "mask-"
+  L43_44 = _W
+  L44_45 = "x"
+  L45_46 = _H
+  L46_47 = ".png"
+  L42_43 = L42_43 .. L43_44 .. L44_45 .. L45_46 .. L46_47
+  L43_44 = system
+  L43_44 = L43_44.TemporaryDirectory
+  L41_42 = L41_42(L42_43, L43_44)
+  L43_44 = L1_2
+  L42_43 = L1_2.setMask
+  L44_45 = L41_42
+  L42_43(L43_44, L44_45)
+  L1_2.maskX = L5_6
+  L1_2.maskY = L6_7
+  L42_43 = _UPVALUE1_
+  L42_43 = L42_43.contentScaleX
+  L1_2.maskScaleX = L42_43
+  L42_43 = _UPVALUE1_
+  L42_43 = L42_43.contentScaleY
+  L1_2.maskScaleY = L42_43
+  L42_43 = _UPVALUE0_
+  L42_43 = L42_43.makeBlurryBg
+  L42_43 = L42_43()
+  L44_45 = L42_43
+  L43_44 = L42_43.addEventListener
+  L45_46 = "touch"
+  function L46_47()
+    local L0_63, L1_64
+    L0_63 = true
+    return L0_63
+  end
+  L43_44(L44_45, L45_46, L46_47)
+  L44_45 = L2_3
+  L43_44 = L2_3.insert
+  L45_46 = L42_43
+  L43_44(L44_45, L45_46)
+  L43_44 = _UPVALUE2_
+  L43_44 = L43_44.createSideMenu
+  L44_45 = L1_2
+  L43_44 = L43_44(L44_45)
+  L45_46 = L0_1
+  L44_45 = L0_1.insert
+  L46_47 = L43_44
+  L44_45(L45_46, L46_47)
+  L0_1.side_menu = L43_44
+  L45_46 = L43_44
+  L44_45 = L43_44.toBack
+  L44_45(L45_46)
+  L44_45 = _UPVALUE3_
+  L45_46 = L44_45
+  L44_45 = L44_45.checkHasRated
+  L44_45(L45_46)
+  function L44_45(A0_65)
+    local L1_66, L2_67
+    L1_66 = _UPVALUE0_
+    L1_66 = L1_66.list
+    L2_67 = _UPVALUE0_
+    L2_67 = L2_67.load
+    if L2_67 == true and _UPVALUE1_ == false and L1_66.hasFetched == false and -L1_66.virtualContentHeight + L1_66.content.rows[1].height * 10 > L1_66:getContentPosition() then
+      L1_66.hasFetched = true
+      _UPVALUE2_ = _UPVALUE2_ + _UPVALUE3_
+      _UPVALUE4_.dispatchEvent("fetchReports")
+    end
+    _UPVALUE4_.animateToolbar(A0_65, {
+      toolbar = _UPVALUE5_.toolbar,
+      list = L1_66
+    })
+    if not A0_65.phase then
+      L1_66.hasFetched = false
+    end
+    return true
+  end
+  L45_46 = _UPVALUE4_
+  L45_46 = L45_46.newTableView
+  L46_47 = {}
+  L46_47.top = 96
+  L47_48 = _W
+  L46_47.width = L47_48
+  L47_48 = _H
+  L47_48 = L47_48 - 96
+  L46_47.height = L47_48
+  L47_48 = {
+    L48_49,
+    L49_50,
+    L50_51,
+    L51_52
+  }
+  L48_49 = 0
+  L49_50 = 0
+  L50_51 = 0
+  L51_52 = 0
+  L46_47.bgColor = L47_48
+  L46_47.listener = L44_45
+  L46_47.hideScrollBar = true
+  L45_46 = L45_46(L46_47)
+  L45_46.hasFetched = false
+  L3_4.list = L45_46
+  L47_48 = L3_4
+  L46_47 = L3_4.insert
+  L48_49 = L45_46
+  L46_47(L47_48, L48_49)
+  function L46_47(A0_68)
+    _UPVALUE0_:scrollToY(A0_68, 0)
+  end
+  L45_46.scrollList = L46_47
+  function L46_47()
+    return (_UPVALUE0_:getContentPosition())
+  end
+  L45_46.getPos = L46_47
+  L46_47 = _UPVALUE0_
+  L46_47 = L46_47.makeToolbar
+  L47_48 = L24_25
+  L48_49 = {}
+  L48_49.list = L45_46
+  L46_47 = L46_47(L47_48, L48_49)
+  L4_5.toolbar = L46_47
+  L48_49 = L4_5
+  L47_48 = L4_5.insert
+  L49_50 = L46_47
+  L47_48(L48_49, L49_50)
+  L47_48 = _UPVALUE2_
+  L47_48 = L47_48.createMenuButton
+  L48_49 = L1_2
+  L47_48 = L47_48(L48_49)
+  L48_49 = L46_47.contents
+  L49_50 = L48_49
+  L48_49 = L48_49.insert
+  L50_51 = L47_48
+  L48_49(L49_50, L50_51)
+  L48_49 = _UPVALUE0_
+  L49_50 = L48_49
+  L48_49 = L48_49.createSubMenu
+  L50_51 = 0
+  L51_52 = 64
+  L52_53 = L28_29
+  L53_54 = L29_30
+  L54_55 = L22_23
+  L55_56 = false
+  L56_57 = L34_35
+  L57_58 = {}
+  L57_58.page = L35_36
+  L57_58.pageTable = L23_24
+  L57_58.taps = L36_37
+  L57_58.list = L45_46
+  L57_58.showOnlySearchField = true
+  L49_50 = L48_49(L49_50, L50_51, L51_52, L52_53, L53_54, L54_55, L55_56, L56_57, L57_58)
+  L50_51 = L46_47.bg
+  L51_52 = L50_51
+  L50_51 = L50_51.insert
+  L52_53 = L48_49
+  L50_51(L51_52, L52_53)
+  L50_51 = L46_47.contents
+  L51_52 = L50_51
+  L50_51 = L50_51.insert
+  L52_53 = L49_50
+  L50_51(L51_52, L52_53)
+  function L50_51(A0_69)
+    local L1_70, L2_71, L3_72, L4_73, L5_74
+    L1_70 = A0_69.target
+    L1_70 = L1_70.height
+    L2_71 = A0_69.view
+    L3_72 = display
+    L3_72 = L3_72.newGroup
+    L3_72 = L3_72()
+    L5_74 = L2_71
+    L4_73 = L2_71.insert
+    L4_73(L5_74, L3_72)
+    L4_73 = _UPVALUE0_
+    L4_73 = L4_73.makeSprite
+    L5_74 = 0
+    L4_73 = L4_73(L5_74, 0)
+    L5_74 = L4_73.setReferencePoint
+    L5_74(L4_73, display.CenterLeftReferencePoint)
+    L4_73.x = 0
+    L4_73.y = 0
+    L5_74 = L3_72.insert
+    L5_74(L3_72, L4_73)
+    L5_74 = display
+    L5_74 = L5_74.newText
+    L5_74 = L5_74({
+      text = "Fetching reports",
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 16
+    })
+    L5_74:setReferencePoint(display.CenterLeftReferencePoint)
+    L5_74.x = L4_73.width + 7
+    L5_74.y = 0
+    L5_74:setFillColor(255, 255, 255)
+    L3_72:insert(L5_74)
+    L3_72:setReferencePoint(display.CenterReferencePoint)
+    L3_72.x = _UPVALUE2_
+    L3_72.y = L1_70 * 0.5
+  end
+  L52_53 = L45_46
+  L51_52 = L45_46.insertRow
+  L53_54 = {}
+  L54_55 = {
+    L55_56,
+    L56_57,
+    L57_58,
+    L58_59
+  }
+  L55_56 = 0
+  L56_57 = 0
+  L57_58 = 0
+  L58_59 = 0
+  L53_54.lineColor = L54_55
+  L54_55 = {
+    L55_56,
+    L56_57,
+    L57_58,
+    L58_59
+  }
+  L55_56 = 0
+  L56_57 = 0
+  L57_58 = 0
+  L58_59 = 0
+  L53_54.rowColor = L54_55
+  L53_54.onRender = L50_51
+  L53_54.height = 35
+  L51_52(L52_53, L53_54)
+  function L51_52(A0_75)
+    local L1_76, L2_77, L3_78, L4_79
+    L1_76 = A0_75.view
+    L2_77 = A0_75.target
+    L2_77 = L2_77.height
+    L3_78 = "No reports available"
+    L4_79 = _UPVALUE0_
+    if L4_79 ~= "" then
+      L3_78 = "No reports found"
+    end
+    L4_79 = display
+    L4_79 = L4_79.newText
+    L4_79 = L4_79({
+      text = L3_78,
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 16
+    })
+    L4_79:setReferencePoint(display.CenterReferencePoint)
+    L4_79.x = _UPVALUE2_
+    L4_79.y = L2_77 * 0.5
+    L1_76:insert(L4_79)
+  end
+  function L52_53()
+    _UPVALUE0_:insertRow({
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      onRender = _UPVALUE1_,
+      height = 40
+    })
+  end
+  L53_54 = -90
+  function L54_55(A0_80)
+    local L1_81, L2_82, L3_83, L4_84, L5_85, L6_86, L7_87, L8_88
+    L1_81 = A0_80.background
+    L2_82 = A0_80.target
+    L2_82 = L2_82.height
+    L3_83 = A0_80.view
+    L4_84 = A0_80.target
+    L4_84 = L4_84.header
+    L5_85 = A0_80.target
+    L5_85 = L5_85.texts
+    L6_86 = A0_80.phase
+    L7_87 = A0_80.id
+    if L8_88 == false then
+      if L8_88 == 0 then
+        if L1_81 then
+          L8_88(L1_81, 217, 217, 217)
+        end
+        if L5_85 then
+          for _FORV_11_, _FORV_12_ in L8_88(L5_85) do
+            _FORV_12_:setFillColor(255, 255, 255)
+          end
+        end
+      end
+      if L6_86 == "swipeLeft" or L6_86 == "swipeRight" or L6_86 == "release" or L6_86 == "tap" then
+        timer.performWithDelay(100, L8_88)
+      end
+      if L6_86 == "swipeLeft" then
+        if L8_88 == 0 then
+          L8_88(L3_83.contentsGroup, {
+            time = 200,
+            x = _UPVALUE2_,
+            transition = easing.outQuad
+          }, true)
+          L7_87.contentsGroupX = L8_88
+        end
+      elseif L6_86 == "swipeRight" then
+        if L8_88 == _UPVALUE2_ then
+          L8_88(L3_83.contentsGroup, {
+            time = 200,
+            x = 0,
+            transition = easing.outQuad
+          }, true)
+          L7_87.contentsGroupX = 0
+        end
+      elseif L6_86 == "release" or L6_86 == "tap" then
+        L3_83:insert(L8_88)
+        transition.to(L3_83.contentsGroup, {
+          time = 200,
+          alpha = 0,
+          transition = easing.inOutQuad,
+          onComplete = function()
+            local L0_89, L1_90, L2_91
+            L0_89 = _UPVALUE0_
+            L0_89 = L0_89.makeSprite
+            L1_90 = 0
+            L2_91 = 0
+            L0_89 = L0_89(L1_90, L2_91)
+            L2_91 = L0_89
+            L1_90 = L0_89.setReferencePoint
+            L1_90(L2_91, display.CenterLeftReferencePoint)
+            L0_89.x = 0
+            L0_89.y = 0
+            L1_90 = _UPVALUE1_
+            L2_91 = L1_90
+            L1_90 = L1_90.insert
+            L1_90(L2_91, L0_89)
+            L1_90 = display
+            L1_90 = L1_90.newText
+            L2_91 = {}
+            L2_91.text = "Fetching report"
+            L2_91.font = _UPVALUE2_.fonts.light
+            L2_91.fontSize = 16
+            L1_90 = L1_90(L2_91)
+            L2_91 = L1_90.setReferencePoint
+            L2_91(L1_90, display.CenterLeftReferencePoint)
+            L2_91 = L0_89.width
+            L2_91 = L2_91 + 7
+            L1_90.x = L2_91
+            L1_90.y = 0
+            L2_91 = L1_90.setFillColor
+            L2_91(L1_90, 255, 255, 255, 200)
+            L2_91 = _UPVALUE1_
+            L2_91 = L2_91.insert
+            L2_91(L2_91, L1_90)
+            L2_91 = _UPVALUE1_
+            L2_91 = L2_91.setReferencePoint
+            L2_91(L2_91, display.CenterReferencePoint)
+            L2_91 = _UPVALUE1_
+            L2_91.x = _UPVALUE3_
+            L2_91 = _UPVALUE1_
+            L2_91.y = _UPVALUE4_ * 0.5
+            function L2_91(A0_92)
+              _UPVALUE0_.decode(A0_92.response).removePageTable = true
+              _UPVALUE0_.decode(A0_92.response).seeds[1].commentid = _UPVALUE1_.report_id
+              if _UPVALUE1_.type == "comment" then
+              end
+              _UPVALUE3_.update({
+                pageTable = _UPVALUE0_.decode(A0_92.response),
+                listPos = _UPVALUE4_.getPos() + 1,
+                start = 0,
+                taps = _UPVALUE5_ + 1,
+                pop = _UPVALUE6_ + _UPVALUE7_
+              })
+              _UPVALUE3_.insert({
+                prevScene = "reports",
+                listPos = 0,
+                which = 1,
+                start = 0,
+                page = "seed",
+                pop = _UPVALUE2_(_UPVALUE0_.decode(A0_92.response).commentBatch / 30) * 30
+              })
+              _UPVALUE3_.dispatchEvent("clearLocalTimersAndListeners")
+              director:changeScene("seed", "overFromRightNew")
+            end
+            _UPVALUE0_.network_request("get_specific_seed_for_reports", L2_91, {
+              commentsSort = _UPVALUE12_.commentsSort,
+              report_id = _UPVALUE6_.report_id,
+              type = _UPVALUE6_.type
+            })
+          end
+        }, true)
+        _UPVALUE0_ = true
+      end
+    end
+    return L8_88
+  end
+  function L55_56(A0_93, A1_94, A2_95, A3_96)
+    local L4_97, L5_98
+    L4_97 = _UPVALUE0_
+    L4_97 = L4_97.content
+    L4_97 = L4_97.rows
+    L4_97 = L4_97[A0_93]
+    L4_97 = L4_97.view
+    if L4_97 then
+      L5_98 = L4_97._proxy
+      if L5_98 then
+        if A1_94 == "no" then
+          A2_95 = "missingthumbnail.png"
+          L5_98 = system
+          A3_96 = L5_98.ResourceDirectory
+        end
+        L5_98 = _UPVALUE1_
+        L5_98 = L5_98.delete
+        L5_98 = L5_98(L4_97.loading)
+        L4_97.loading = L5_98
+        L5_98 = display
+        L5_98 = L5_98.newImageRect
+        L5_98 = L5_98(A2_95, A3_96, 108, 60)
+        L5_98:setReferencePoint(display.TopLeftReferencePoint)
+        L5_98.x = 0
+        L5_98.y = 0
+        L4_97.behindGroup:insert(L5_98)
+      end
+    end
+  end
+  function L56_57(A0_99, A1_100)
+    local L2_101, L3_102
+    L2_101 = A1_100 or function()
+      local L0_103, L1_104
+    end
+    function L3_102(A0_105)
+      local L1_106, L2_107, L3_108, L4_109, L5_110, L6_111, L7_112, L8_113, L9_114, L10_115, L11_116, L12_117, L13_118, L14_119, L15_120, L16_121, L17_122, L18_123, L19_124, L20_125, L21_126
+      L1_106 = A0_105.action
+      L2_107 = A0_105.index
+      if L1_106 == "clicked" then
+        if L2_107 == 1 then
+          L3_108 = _UPVALUE0_
+          L3_108()
+        elseif L2_107 == 2 then
+          L3_108 = display
+          L3_108 = L3_108.newGroup
+          L3_108 = L3_108()
+          L4_109 = _UPVALUE1_
+          L5_110 = L4_109
+          L4_109 = L4_109.insert
+          L6_111 = L3_108
+          L4_109(L5_110, L6_111)
+          L4_109 = display
+          L4_109 = L4_109.newGroup
+          L4_109 = L4_109()
+          L3_108.back = L4_109
+          L5_110 = L3_108
+          L4_109 = L3_108.insert
+          L6_111 = L3_108.back
+          L4_109(L5_110, L6_111)
+          L4_109 = display
+          L4_109 = L4_109.newGroup
+          L4_109 = L4_109()
+          L3_108.front = L4_109
+          L5_110 = L3_108
+          L4_109 = L3_108.insert
+          L6_111 = L3_108.front
+          L4_109(L5_110, L6_111)
+          L4_109 = 300
+          L5_110, L6_111, L7_112 = nil, nil, nil
+          L8_113 = display
+          L8_113 = L8_113.newRect
+          L9_114 = 0
+          L10_115 = 0
+          L11_116 = _W
+          L12_117 = _H
+          L8_113 = L8_113(L9_114, L10_115, L11_116, L12_117)
+          L10_115 = L8_113
+          L9_114 = L8_113.setFillColor
+          L11_116 = 0
+          L12_117 = 0
+          L13_118 = 0
+          L14_119 = 150
+          L9_114(L10_115, L11_116, L12_117, L13_118, L14_119)
+          L8_113.isHitTestable = true
+          L10_115 = L8_113
+          L9_114 = L8_113.addEventListener
+          L11_116 = "touch"
+          function L12_117()
+            local L0_127, L1_128
+            L0_127 = true
+            return L0_127
+          end
+          L9_114(L10_115, L11_116, L12_117)
+          L9_114 = L3_108.back
+          L10_115 = L9_114
+          L9_114 = L9_114.insert
+          L11_116 = L8_113
+          L9_114(L10_115, L11_116)
+          L9_114 = _UPVALUE2_
+          L9_114 = L9_114.makeImageFromSlices
+          L10_115 = {}
+          L10_115.filename = "report-bg-slice"
+          L11_116 = _W
+          L11_116 = L11_116 - 40
+          L10_115.resWidth = L11_116
+          L10_115.resHeight = 200
+          L10_115.width = 3
+          L10_115.height = 3
+          L10_115.slices = 9
+          L9_114 = L9_114(L10_115)
+          L11_116 = L9_114
+          L10_115 = L9_114.setReferencePoint
+          L12_117 = display
+          L12_117 = L12_117.TopCenterReferencePoint
+          L10_115(L11_116, L12_117)
+          L10_115 = _UPVALUE3_
+          L9_114.x = L10_115
+          L9_114.y = 150
+          L10_115 = L3_108.front
+          L11_116 = L10_115
+          L10_115 = L10_115.insert
+          L12_117 = L9_114
+          L10_115(L11_116, L12_117)
+          L10_115 = display
+          L10_115 = L10_115.newText
+          L11_116 = {}
+          L12_117 = "Send a message to "
+          L13_118 = _UPVALUE4_
+          L12_117 = L12_117 .. L13_118
+          L11_116.text = L12_117
+          L12_117 = _UPVALUE5_
+          L12_117 = L12_117.fonts
+          L12_117 = L12_117.bold
+          L11_116.font = L12_117
+          L11_116.fontSize = 13
+          L10_115 = L10_115(L11_116)
+          L12_117 = L10_115
+          L11_116 = L10_115.setReferencePoint
+          L13_118 = display
+          L13_118 = L13_118.TopLeftReferencePoint
+          L11_116(L12_117, L13_118)
+          L10_115.x = 30
+          L10_115.y = 157
+          L12_117 = L10_115
+          L11_116 = L10_115.setFillColor
+          L13_118 = 40
+          L14_119 = 40
+          L15_120 = 40
+          L11_116(L12_117, L13_118, L14_119, L15_120)
+          L11_116 = L3_108.front
+          L12_117 = L11_116
+          L11_116 = L11_116.insert
+          L13_118 = L10_115
+          L11_116(L12_117, L13_118)
+          L11_116 = display
+          L11_116 = L11_116.newText
+          L12_117 = {}
+          L12_117.text = "Message:"
+          L13_118 = _UPVALUE5_
+          L13_118 = L13_118.fonts
+          L13_118 = L13_118.bold
+          L12_117.font = L13_118
+          L12_117.fontSize = 13
+          L11_116 = L11_116(L12_117)
+          L13_118 = L11_116
+          L12_117 = L11_116.setReferencePoint
+          L14_119 = display
+          L14_119 = L14_119.BottomLeftReferencePoint
+          L12_117(L13_118, L14_119)
+          L11_116.x = 30
+          L11_116.y = 208
+          L13_118 = L11_116
+          L12_117 = L11_116.setFillColor
+          L14_119 = 40
+          L15_120 = 40
+          L16_121 = 40
+          L12_117(L13_118, L14_119, L15_120, L16_121)
+          L12_117 = L3_108.front
+          L13_118 = L12_117
+          L12_117 = L12_117.insert
+          L14_119 = L11_116
+          L12_117(L13_118, L14_119)
+          L12_117 = display
+          L12_117 = L12_117.newText
+          L13_118 = {}
+          L14_119 = L4_109
+          L15_120 = " characters left"
+          L14_119 = L14_119 .. L15_120
+          L13_118.text = L14_119
+          L14_119 = _UPVALUE5_
+          L14_119 = L14_119.fonts
+          L14_119 = L14_119.light
+          L13_118.font = L14_119
+          L13_118.fontSize = 10
+          L12_117 = L12_117(L13_118)
+          L14_119 = L12_117
+          L13_118 = L12_117.setReferencePoint
+          L15_120 = display
+          L15_120 = L15_120.BottomRightReferencePoint
+          L13_118(L14_119, L15_120)
+          L13_118 = _W
+          L13_118 = L13_118 - 30
+          L12_117.x = L13_118
+          L12_117.y = 208
+          L13_118 = L12_117.x
+          L12_117.origX = L13_118
+          L13_118 = L12_117.y
+          L12_117.origY = L13_118
+          L14_119 = L12_117
+          L13_118 = L12_117.setFillColor
+          L15_120 = 40
+          L16_121 = 40
+          L17_122 = 40
+          L13_118(L14_119, L15_120, L16_121, L17_122)
+          L12_117.color = "40 40 40"
+          L13_118 = L3_108.front
+          L14_119 = L13_118
+          L13_118 = L13_118.insert
+          L15_120 = L12_117
+          L13_118(L14_119, L15_120)
+          L13_118 = _UPVALUE6_
+          L13_118 = L13_118.newTextField
+          L14_119 = {}
+          L14_119.filename = "textfield_reportmessage-slice"
+          L14_119.width = 3
+          L14_119.height = 3
+          L14_119.slices = 9
+          L15_120 = {}
+          L15_120.x = 30
+          L15_120.y = 210
+          L15_120.id = "reportMessageTextfield"
+          L15_120.boxType = "textbox"
+          L16_121 = _W
+          L16_121 = L16_121 - 60
+          L15_120.width = L16_121
+          L15_120.height = 100
+          L15_120.size = 11
+          L16_121 = {
+            L17_122,
+            L18_123,
+            L19_124
+          }
+          L17_122 = 95
+          L18_123 = 95
+          L19_124 = 95
+          L15_120.defaultColor = L16_121
+          L15_120.initialLabel = "Please fill in the message to submit"
+          L13_118 = L13_118(L14_119, L15_120)
+          L14_119 = L3_108.front
+          L15_120 = L14_119
+          L14_119 = L14_119.insert
+          L16_121 = L13_118
+          L14_119(L15_120, L16_121)
+          L14_119 = display
+          L14_119 = L14_119.newText
+          L15_120 = {}
+          L16_121 = "From "
+          L17_122 = _UPVALUE5_
+          L17_122 = L17_122.nickname
+          L16_121 = L16_121 .. L17_122
+          L15_120.text = L16_121
+          L16_121 = _UPVALUE5_
+          L16_121 = L16_121.fonts
+          L16_121 = L16_121.light
+          L15_120.font = L16_121
+          L15_120.fontSize = 12
+          L14_119 = L14_119(L15_120)
+          L16_121 = L14_119
+          L15_120 = L14_119.setReferencePoint
+          L17_122 = display
+          L17_122 = L17_122.CenterLeftReferencePoint
+          L15_120(L16_121, L17_122)
+          L14_119.x = 30
+          L14_119.y = 329
+          L16_121 = L14_119
+          L15_120 = L14_119.setFillColor
+          L17_122 = 40
+          L18_123 = 40
+          L19_124 = 40
+          L15_120(L16_121, L17_122, L18_123, L19_124)
+          L15_120 = L3_108.front
+          L16_121 = L15_120
+          L15_120 = L15_120.insert
+          L17_122 = L14_119
+          L15_120(L16_121, L17_122)
+          function L15_120(A0_129)
+            if string.len(_UPVALUE0_.fakeLabel.text) > _UPVALUE1_ then
+              _UPVALUE2_.showAlert("Description too long", "The description can't be longer than " .. _UPVALUE1_ .. " characters.", {"Ok"})
+            elseif _UPVALUE0_.fakeLabel.hasEdited == false or _UPVALUE0_.fakeLabel.text == "" then
+              _UPVALUE2_.showAlert("Missing message", "Please fill in the message to send to the reporter.", {"Ok"})
+            else
+              _UPVALUE3_(_UPVALUE0_.fakeLabel.text)
+            end
+            _UPVALUE4_ = _UPVALUE2_.delete(_UPVALUE4_)
+            _UPVALUE2_.removeRuntimeListener("hasInitiatedTextfield", _UPVALUE5_)
+            _UPVALUE2_.removeRuntimeListener("hasEditedTextfield", _UPVALUE6_)
+            _UPVALUE2_.removeRuntimeListener("hasFinishedTextfield", _UPVALUE7_)
+            return true
+          end
+          L16_121 = _UPVALUE7_
+          L16_121 = L16_121.newButton
+          L17_122 = {}
+          L17_122.width = 47
+          L17_122.height = 19
+          L17_122.default = "report-send.png"
+          L17_122.over = "report-send-over.png"
+          L17_122.onRelease = L15_120
+          L16_121 = L16_121(L17_122)
+          L18_123 = L16_121
+          L17_122 = L16_121.setReferencePoint
+          L19_124 = display
+          L19_124 = L19_124.CenterRightReferencePoint
+          L17_122(L18_123, L19_124)
+          L17_122 = _W
+          L17_122 = L17_122 - 30
+          L16_121.x = L17_122
+          L16_121.y = 330
+          L17_122 = L3_108.front
+          L18_123 = L17_122
+          L17_122 = L17_122.insert
+          L19_124 = L16_121
+          L17_122(L18_123, L19_124)
+          function L17_122(A0_130)
+            _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+            _UPVALUE1_.removeRuntimeListener("hasInitiatedTextfield", _UPVALUE2_)
+            _UPVALUE1_.removeRuntimeListener("hasEditedTextfield", _UPVALUE3_)
+            _UPVALUE1_.removeRuntimeListener("hasFinishedTextfield", _UPVALUE4_)
+            _UPVALUE5_()
+            return true
+          end
+          L18_123 = _UPVALUE7_
+          L18_123 = L18_123.newButton
+          L19_124 = {}
+          L19_124.width = 26
+          L19_124.height = 26
+          L19_124.default = "report-closeBtn.png"
+          L19_124.over = "report-closeBtn-over.png"
+          L19_124.onRelease = L17_122
+          L18_123 = L18_123(L19_124)
+          L20_125 = L18_123
+          L19_124 = L18_123.setReferencePoint
+          L21_126 = display
+          L21_126 = L21_126.CenterReferencePoint
+          L19_124(L20_125, L21_126)
+          L19_124 = _W
+          L19_124 = L19_124 - 20
+          L18_123.x = L19_124
+          L18_123.y = 150
+          L19_124 = L3_108.front
+          L20_125 = L19_124
+          L19_124 = L19_124.insert
+          L21_126 = L18_123
+          L19_124(L20_125, L21_126)
+          function L19_124()
+            _UPVALUE0_.to(_UPVALUE1_.front, {
+              time = 200,
+              y = _UPVALUE1_.y - 100,
+              transition = easing.inOutQuad
+            }, true)
+          end
+          L20_125 = _UPVALUE2_
+          L20_125 = L20_125.addRuntimeListener
+          L21_126 = "hasInitiatedTextfield"
+          L20_125 = L20_125(L21_126, L19_124, true)
+          L5_110 = L20_125
+          function L20_125(A0_131)
+            _UPVALUE0_:setText(_UPVALUE1_ - string.len(A0_131.text) .. " characters left")
+            _UPVALUE0_:setReferencePoint(display.BottomRightReferencePoint)
+            _UPVALUE0_.x = _UPVALUE0_.origX
+            _UPVALUE0_.y = _UPVALUE0_.origY
+            if string.len(A0_131.text) > _UPVALUE1_ and _UPVALUE0_.color ~= "146 42 42" then
+              _UPVALUE0_:setFillColor(146, 42, 42)
+              _UPVALUE0_.color = "146 42 42"
+            elseif _UPVALUE0_.color ~= "40 40 40" then
+              _UPVALUE0_:setFillColor(40, 40, 40)
+              _UPVALUE0_.color = "40 40 40"
+            end
+          end
+          L21_126 = _UPVALUE2_
+          L21_126 = L21_126.addRuntimeListener
+          L21_126 = L21_126("hasEditedTextfield", L20_125, true)
+          L6_111 = L21_126
+          function L21_126()
+            _UPVALUE0_.to(_UPVALUE1_.front, {
+              time = 200,
+              y = 0,
+              transition = easing.inOutQuad
+            }, true)
+          end
+          L7_112 = _UPVALUE2_.addRuntimeListener("hasFinishedTextfield", L21_126, true)
+        end
+      end
+    end
+    _UPVALUE1_.showAlert("Add message?", "Do you wish to send a custom message to the reporter? This message will spawn a new PM as direct contact with the reporter.", {"No", "Yes"}, L3_102)
+  end
+  function L57_58(A0_132)
+    local L1_133, L2_134, L3_135, L4_136, L5_137, L6_138
+    L1_133 = A0_132.phase
+    L2_134 = A0_132.target
+    L2_134 = L2_134.id
+    L3_135 = L2_134.index
+    L4_136 = L2_134.view
+    if L1_133 == "moved" then
+      L5_137 = A0_132.x
+      L6_138 = A0_132.xStart
+      L5_137 = L5_137 - L6_138
+      L6_138 = A0_132.y
+      L6_138 = L6_138 - A0_132.yStart
+      if L5_137 > 2 or _UPVALUE0_(L6_138) > 2 then
+        _UPVALUE1_:takeFocus(A0_132)
+      end
+    elseif L1_133 == "release" or L1_133 == "cancelled" then
+      L5_137 = _UPVALUE2_
+      L6_138 = L2_134.id
+      L6_138 = L6_138.nickname
+      L5_137(L6_138, function(A0_139)
+        _UPVALUE0_.to(_UPVALUE1_, {
+          time = 200,
+          x = -_UPVALUE1_.width,
+          transition = easing.outQuad,
+          onComplete = function()
+            local L0_140, L1_141, L2_142, L3_143
+            L0_140(L1_141, L2_142)
+            for L3_143 = _UPVALUE1_, #L1_141 do
+              if _UPVALUE0_.content.rows[L3_143].view and _UPVALUE0_.content.rows[L3_143].view.updateIndex then
+                _UPVALUE0_.content.rows[L3_143].view.updateIndex(L3_143)
+              end
+            end
+            if L0_140 == 0 then
+              L0_140()
+            end
+          end
+        }, true)
+        _UPVALUE5_.network_request("mark_report_as_resolved", nil, {
+          reporterNick = _UPVALUE6_.id.nickname,
+          reporterUdid = _UPVALUE6_.id.reporter,
+          reportid = _UPVALUE6_.id.id,
+          nickname = _UPVALUE7_.nickname,
+          message = A0_139 or "",
+          udid = _UPVALUE7_.udid
+        })
+      end)
+    end
+    L5_137 = true
+    return L5_137
+  end
+  function L58_59(A0_144)
+    local L1_145, L2_146, L3_147, L4_148, L5_149, L6_150
+    L1_145 = A0_144.phase
+    L2_146 = A0_144.target
+    L2_146 = L2_146.id
+    L3_147 = L2_146.index
+    L4_148 = L2_146.view
+    if L1_145 == "moved" then
+      L5_149 = A0_144.x
+      L6_150 = A0_144.xStart
+      L5_149 = L5_149 - L6_150
+      L6_150 = A0_144.y
+      L6_150 = L6_150 - A0_144.yStart
+      if L5_149 > 2 or _UPVALUE0_(L6_150) > 2 then
+        _UPVALUE1_:takeFocus(A0_144)
+      end
+    elseif L1_145 == "release" or L1_145 == "cancelled" then
+      L5_149 = _UPVALUE2_
+      L6_150 = L2_146.id
+      L6_150 = L6_150.nickname
+      L5_149(L6_150, function(A0_151)
+        _UPVALUE0_.to(_UPVALUE1_, {
+          time = 200,
+          x = -_UPVALUE1_.width,
+          transition = easing.outQuad,
+          onComplete = function()
+            local L0_152, L1_153, L2_154, L3_155
+            L0_152(L1_153, L2_154)
+            for L3_155 = _UPVALUE1_, #L1_153 do
+              if _UPVALUE0_.content.rows[L3_155].view and _UPVALUE0_.content.rows[L3_155].view.updateIndex then
+                _UPVALUE0_.content.rows[L3_155].view.updateIndex(L3_155)
+              end
+            end
+            if L0_152 == 0 then
+              L0_152()
+            end
+          end
+        }, true)
+        _UPVALUE5_.network_request("delete_report", nil, {
+          reporterNick = _UPVALUE6_.id.nickname,
+          reporterUdid = _UPVALUE6_.id.reporter,
+          reportid = _UPVALUE6_.id.id,
+          nickname = _UPVALUE7_.nickname,
+          message = A0_151 or "",
+          udid = _UPVALUE7_.udid
+        })
+      end)
+    end
+    L5_149 = true
+    return L5_149
+  end
+  function L59_60(A0_156)
+    local L1_157, L2_158, L3_159, L4_160, L5_161, L6_162, L7_163, L8_164, L9_165, L10_166, L11_167, L12_168, L13_169, L14_170, L15_171, L16_172, L17_173, L18_174, L19_175, L20_176, L21_177
+    L1_157 = A0_156.target
+    L1_157 = L1_157.height
+    L2_158 = L1_157 * 0.5
+    L3_159 = A0_156.view
+    L4_160 = A0_156.id
+    L5_161, L6_162, L7_163, L8_164, L9_165 = nil, nil, nil, nil, nil
+    L10_166 = L4_160.type
+    if L10_166 == "comment" then
+      L10_166 = L4_160.cMessage
+      L11_167 = _UPVALUE0_
+      L12_168 = _UPVALUE1_
+      L12_168 = 33 * L12_168
+      L11_167 = L11_167(L12_168)
+      L7_163 = 70
+      L6_162 = L11_167
+      L5_161 = L10_166
+      L10_166 = _UPVALUE2_
+      L11_167 = _UPVALUE1_
+      L11_167 = 33 * L11_167
+      L10_166 = L10_166(L11_167)
+      L9_165 = L10_166
+    else
+      L10_166 = L4_160.type
+      if L10_166 == "upload" then
+        L10_166 = L4_160.uSeed
+        L11_167 = _UPVALUE0_
+        L12_168 = _UPVALUE1_
+        L12_168 = 24 * L12_168
+        L11_167 = L11_167(L12_168)
+        L7_163 = 118
+        L6_162 = L11_167
+        L5_161 = L10_166
+        L10_166 = _UPVALUE2_
+        L11_167 = _UPVALUE1_
+        L11_167 = 21 * L11_167
+        L10_166 = L10_166(L11_167)
+        L9_165 = L10_166
+      end
+    end
+    L10_166 = display
+    L10_166 = L10_166.newGroup
+    L10_166 = L10_166()
+    L3_159.contentsGroup = L10_166
+    L10_166 = L3_159.contentsGroup
+    L11_167 = L4_160.contentsGroupX
+    L10_166.x = L11_167
+    L11_167 = L3_159
+    L10_166 = L3_159.insert
+    L12_168 = L3_159.contentsGroup
+    L10_166(L11_167, L12_168)
+    L10_166 = display
+    L10_166 = L10_166.newGroup
+    L10_166 = L10_166()
+    L3_159.behindGroup = L10_166
+    L10_166 = L3_159.contentsGroup
+    L11_167 = L10_166
+    L10_166 = L10_166.insert
+    L12_168 = L3_159.behindGroup
+    L10_166(L11_167, L12_168)
+    L10_166 = display
+    L10_166 = L10_166.newGroup
+    L10_166 = L10_166()
+    L3_159.rowFrontGroup = L10_166
+    L11_167 = L3_159
+    L10_166 = L3_159.insert
+    L12_168 = L3_159.rowFrontGroup
+    L10_166(L11_167, L12_168)
+    L10_166 = A0_156.target
+    L11_167 = {}
+    L10_166.texts = L11_167
+    L10_166 = A0_156.target
+    L10_166 = L10_166.texts
+    L11_167 = display
+    L11_167 = L11_167.newRect
+    L12_168 = 0
+    L13_169 = L1_157 - 0.5
+    L11_167 = L11_167(L12_168, L13_169, L14_170, L15_171)
+    L13_169 = L11_167
+    L12_168 = L11_167.setFillColor
+    L12_168(L13_169, L14_170, L15_171, L16_172, L17_173)
+    L12_168 = L3_159.rowFrontGroup
+    L13_169 = L12_168
+    L12_168 = L12_168.insert
+    L12_168(L13_169, L14_170)
+    L12_168 = L4_160.type
+    if L12_168 == "upload" then
+      L12_168 = L4_160.thumbnail
+      if L12_168 == false then
+        L12_168 = L4_160.hasDownloaded
+        if L12_168 == false then
+          L12_168 = _UPVALUE3_
+          L12_168 = L12_168.makeSprite
+          L13_169 = 54
+          L12_168 = L12_168(L13_169, L14_170)
+          L3_159.loading = L12_168
+          L12_168 = L3_159.loading
+          L13_169 = L12_168
+          L12_168 = L12_168.scale
+          L12_168(L13_169, L14_170, L15_171)
+          L12_168 = L3_159.loading
+          L12_168.alpha = 0.5
+          L12_168 = L3_159.behindGroup
+          L13_169 = L12_168
+          L12_168 = L12_168.insert
+          L12_168(L13_169, L14_170)
+          function L12_168(A0_178)
+            if A0_178 and _UPVALUE0_ == _UPVALUE1_.session then
+              if A0_178.status == 200 then
+                _UPVALUE2_.thumbnail = true
+                _UPVALUE3_(_UPVALUE4_.index, "yes", _UPVALUE2_.path, _UPVALUE2_.dir)
+              else
+                os.remove(system.pathForFile(_UPVALUE2_.path, _UPVALUE2_.dir))
+                _UPVALUE3_(_UPVALUE4_.index, "no", _UPVALUE2_.path, _UPVALUE2_.dir)
+              end
+            end
+            _UPVALUE2_.downloading = false
+            _UPVALUE2_.hasDownloaded = true
+          end
+          L13_169 = L4_160.downloading
+          if L13_169 == false then
+            L4_160.downloading = true
+            L13_169 = L4_160.uDate
+            L13_169 = L13_169.sub
+            L13_169 = L13_169(L14_170, L15_171, L16_172)
+            L21_177 = L4_160.uVersion
+            L21_177 = "/"
+            L15_171(L16_172, L17_173, L18_174, L19_175, L20_176)
+          end
+        end
+      else
+        L12_168 = L4_160.thumbnail
+        if L12_168 == true then
+          L12_168 = _UPVALUE6_
+          L13_169 = A0_156.index
+          L12_168(L13_169, L14_170, L15_171, L16_172)
+        else
+          L12_168 = L4_160.thumbnail
+          if L12_168 == false then
+            L12_168 = _UPVALUE6_
+            L13_169 = A0_156.index
+            L12_168(L13_169, L14_170, L15_171, L16_172)
+          end
+        end
+      end
+    else
+      L12_168 = L4_160.type
+      if L12_168 == "comment" then
+        L12_168 = display
+        L12_168 = L12_168.newImageRect
+        L13_169 = "report-commentIcon.png"
+        L12_168 = L12_168(L13_169, L14_170, L15_171)
+        L13_169 = L12_168.setReferencePoint
+        L13_169(L14_170, L15_171)
+        L12_168.x = 35
+        L12_168.y = 35
+        L13_169 = L3_159.behindGroup
+        L13_169 = L13_169.insert
+        L13_169(L14_170, L15_171)
+      end
+    end
+    L12_168 = ""
+    L13_169 = 0
+    for L17_173 in L14_170(L15_171, L16_172) do
+      L13_169 = L13_169 + 1
+      if L13_169 == L6_162 then
+        L12_168 = L18_174 .. L19_175
+        break
+      else
+        L12_168 = L18_174 .. L19_175
+      end
+    end
+    L15_171.text = L12_168
+    L15_171.width = L16_172
+    L15_171.height = 20
+    L15_171.font = L16_172
+    L15_171.fontSize = 13
+    L10_166.report_name = L14_170
+    L14_170(L15_171, L16_172)
+    L14_170.x = L7_163
+    L14_170.y = 7
+    L14_170(L15_171, L16_172, L17_173, L18_174)
+    L14_170.color = L15_171
+    L14_170(L15_171, L16_172)
+    for L19_175 in L16_172(L17_173, L18_174) do
+      if L15_171 == L9_165 then
+        L21_177 = "..."
+        break
+      else
+        L21_177 = L19_175
+      end
+    end
+    L17_173.text = L18_174
+    L17_173.font = L18_174
+    L17_173.fontSize = 12
+    L10_166.reportedBy = L16_172
+    L16_172(L17_173, L18_174)
+    L16_172.x = L7_163
+    L16_172.y = 24
+    L21_177 = 200
+    L16_172.color = L17_173
+    L21_177 = L18_174(L19_175)
+    L16_172(L17_173, L18_174, L19_175, L20_176, L21_177, L18_174(L19_175))
+    L16_172(L17_173, L18_174)
+    L17_173.text = L18_174
+    L17_173.font = L18_174
+    L17_173.fontSize = 12
+    L10_166.reasonType = L16_172
+    L16_172(L17_173, L18_174)
+    L16_172.x = L7_163
+    L16_172.y = 40
+    L21_177 = 120
+    L16_172.color = L17_173
+    L21_177 = L18_174(L19_175)
+    L16_172(L17_173, L18_174, L19_175, L20_176, L21_177, L18_174(L19_175))
+    L16_172(L17_173, L18_174)
+    for L21_177 in L18_174(L19_175, L20_176) do
+      if L17_173 == reasonLength then
+        break
+      else
+      end
+    end
+    L19_175.text = L16_172
+    L19_175.width = L20_176
+    L19_175.height = 0
+    L19_175.font = L20_176
+    L19_175.fontSize = 12
+    L10_166.reason = L18_174
+    L18_174(L19_175, L20_176)
+    L18_174.x = 10
+    L18_174.y = 70
+    L21_177 = 255
+    L18_174.color = L19_175
+    L21_177 = L10_166.reason
+    L21_177 = L21_177.color
+    L21_177 = L20_176(L21_177)
+    L18_174(L19_175, L20_176, L21_177, L20_176(L21_177))
+    L18_174(L19_175, L20_176)
+    L19_175.text = L20_176
+    L19_175.font = L20_176
+    L19_175.fontSize = 10
+    L10_166.date = L18_174
+    L18_174(L19_175, L20_176)
+    L18_174.x = 10
+    L18_174.y = L19_175
+    L21_177 = 255
+    L18_174.color = L19_175
+    L21_177 = L10_166.date
+    L21_177 = L21_177.color
+    L21_177 = L20_176(L21_177)
+    L18_174(L19_175, L20_176, L21_177, L20_176(L21_177))
+    L18_174(L19_175, L20_176)
+    L20_176.id = A0_156
+    L20_176.width = 45
+    L20_176.height = L1_157
+    L20_176.default = "report-markAsSolved.png"
+    L20_176.over = "report-markAsSolved-over.png"
+    L21_177 = _UPVALUE9_
+    L20_176.onEvent = L21_177
+    L18_174.markAsSolved = L19_175
+    L18_174(L19_175, L20_176)
+    L18_174.x = L19_175
+    L18_174.y = 0
+    L18_174(L19_175, L20_176)
+    L20_176.text = [[
+Mark
+as
+resolved]]
+    L20_176.width = 45
+    L20_176.height = 0
+    L21_177 = _UPVALUE5_
+    L21_177 = L21_177.fonts
+    L21_177 = L21_177.light
+    L20_176.font = L21_177
+    L20_176.fontSize = 10
+    L20_176.align = "center"
+    L18_174.optionLabel = L19_175
+    L18_174(L19_175, L20_176)
+    L18_174.x = L19_175
+    L18_174.y = L19_175
+    L18_174(L19_175, L20_176)
+    L20_176.id = A0_156
+    L20_176.width = 45
+    L20_176.height = L1_157
+    L20_176.default = "report-deleteReport.png"
+    L20_176.over = "report-deleteReport-over.png"
+    L21_177 = _UPVALUE10_
+    L20_176.onEvent = L21_177
+    L18_174.delete = L19_175
+    L18_174(L19_175, L20_176)
+    L18_174.x = L19_175
+    L18_174.y = 0
+    L18_174(L19_175, L20_176)
+    L20_176.text = "Delete"
+    L20_176.width = 45
+    L20_176.height = 0
+    L21_177 = _UPVALUE5_
+    L21_177 = L21_177.fonts
+    L21_177 = L21_177.light
+    L20_176.font = L21_177
+    L20_176.fontSize = 12
+    L20_176.align = "center"
+    L18_174.optionLabel = L19_175
+    L18_174(L19_175, L20_176)
+    L18_174.x = L19_175
+    L18_174.y = L19_175
+    L18_174(L19_175, L20_176)
+    L3_159.updateIndex = L18_174
+    if L18_174 == true then
+      L20_176.time = 300
+      L20_176.alpha = 0
+      L21_177 = easing
+      L21_177 = L21_177.inOutQuad
+      L20_176.transition = L21_177
+      L18_174(L19_175, L20_176)
+      L4_160.animateRow = false
+    end
+  end
+  function L11_12(A0_179)
+    local L1_180, L2_181, L3_182, L4_183, L5_184, L6_185, L7_186, L8_187, L9_188, L10_189, L11_190, L12_191
+    L1_180 = _UPVALUE0_
+    L1_180 = L1_180.decode
+    L2_181 = A0_179.response
+    L1_180 = L1_180(L2_181)
+    L2_181 = L1_180.reports
+    L3_182 = L1_180.loadMore
+    L4_183 = false
+    _UPVALUE1_ = L4_183
+    L4_183 = _UPVALUE2_
+    L4_183.load = L3_182
+    L4_183 = _UPVALUE3_
+    L4_183 = L4_183.deleteRow
+    L4_183(L5_184, L6_185)
+    L4_183 = #L2_181
+    for L8_187 = 1, L4_183 do
+      L9_188 = _UPVALUE4_
+      L9_188 = L9_188.reports
+      L9_188 = #L9_188
+      L9_188 = L9_188 + 1
+      L10_189 = L2_181[L8_187]
+      L11_190 = _UPVALUE5_
+      L10_189.taps = L11_190
+      L10_189 = _UPVALUE4_
+      L10_189 = L10_189.reports
+      L11_190 = L2_181[L8_187]
+      L10_189[L9_188] = L11_190
+      L10_189 = L2_181[L8_187]
+      L11_190 = L2_181[L8_187]
+      L12_191 = L2_181[L8_187]
+      L12_191 = L12_191.id
+      L12_191 = L12_191 .. "-thumbnail.jpg"
+      L11_190.dir = system.TemporaryDirectory
+      L10_189.path = L12_191
+      L10_189 = io
+      L10_189 = L10_189.open
+      L11_190 = system
+      L11_190 = L11_190.pathForFile
+      L12_191 = L2_181[L8_187]
+      L12_191 = L12_191.path
+      L12_191 = L11_190(L12_191, L2_181[L8_187].dir)
+      L10_189 = L10_189(L11_190, L12_191, L11_190(L12_191, L2_181[L8_187].dir))
+      if not L10_189 then
+        L11_190 = L2_181[L8_187]
+        L11_190.thumbnail = false
+      else
+        L11_190 = L2_181[L8_187]
+        L11_190.thumbnail = true
+        L12_191 = L10_189
+        L11_190 = L10_189.close
+        L11_190(L12_191)
+      end
+      L11_190 = L2_181[L8_187]
+      L11_190.animateRow = true
+      L11_190 = L2_181[L8_187]
+      L11_190.downloading = false
+      L11_190 = L2_181[L8_187]
+      L11_190.hasDownloaded = false
+      L11_190 = L2_181[L8_187]
+      L11_190.contentsGroupX = 0
+      L11_190 = 97
+      L12_191 = display
+      L12_191 = L12_191.newText
+      L12_191 = L12_191({
+        text = L2_181[L8_187].reason,
+        width = _W - 20,
+        height = 0,
+        font = _UPVALUE6_.fonts.regular,
+        fontSize = 12
+      })
+      L11_190 = L11_190 + L12_191.height
+      L12_191 = _UPVALUE7_.delete(L12_191)
+      _UPVALUE3_:insertRow({
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        onRender = _UPVALUE8_,
+        onEvent = _UPVALUE9_,
+        height = L11_190,
+        id = L2_181[L8_187]
+      })
+    end
+    if L3_182 == true then
+      L8_187 = {}
+      L8_187.onRender = L5_184
+      L8_187.height = 40
+      L9_188 = {
+        L10_189,
+        L11_190,
+        L12_191,
+        0
+      }
+      L10_189 = 0
+      L11_190 = 0
+      L12_191 = 0
+      L8_187.rowColor = L9_188
+      L9_188 = {
+        L10_189,
+        L11_190,
+        L12_191,
+        0
+      }
+      L10_189 = 0
+      L11_190 = 0
+      L12_191 = 0
+      L8_187.lineColor = L9_188
+      L6_185(L7_186, L8_187)
+    elseif L5_184 == 0 then
+      L5_184()
+    end
+    if L5_184 == true then
+      L6_185(L7_186)
+      L6_185(L7_186)
+      _UPVALUE12_ = L6_185
+    end
+    L5_184.loadMore = L3_182
+    L5_184(L6_185)
+  end
+  function L60_61(A0_192)
+    local L1_193
+    L1_193 = true
+    _UPVALUE0_ = L1_193
+    L1_193 = {}
+    L1_193.searchString = _UPVALUE1_
+    L1_193.fetchNick = _UPVALUE2_
+    L1_193.fetchUdid = _UPVALUE3_
+    L1_193.nickname = _UPVALUE4_
+    L1_193.category = _UPVALUE5_
+    L1_193.platform = _UPVALUE6_
+    L1_193.section = _UPVALUE7_
+    L1_193.version = _UPVALUE8_
+    L1_193.start = _UPVALUE9_
+    L1_193.sort = _UPVALUE10_
+    L1_193.udid = _UPVALUE11_.udid
+    L1_193.pop = _UPVALUE12_
+    _UPVALUE13_.network_request("getReports", _UPVALUE14_, L1_193)
+  end
+  L61_62 = _UPVALUE0_
+  L61_62 = L61_62.addRuntimeListener
+  L61_62("fetchReports", L60_61, true)
+  if L23_24 then
+    L61_62 = L23_24.seeds
+    if L61_62 then
+      L61_62 = L23_24.seeds
+      L61_62 = L61_62[1]
+      if L61_62 then
+        L61_62 = L23_24.seeds
+        L61_62 = L61_62[1]
+        L61_62 = L61_62.taps
+        if L61_62 then
+          L61_62 = L23_24.seeds
+          L61_62 = L61_62[1]
+          L61_62 = L61_62.taps
+          if L61_62 == L36_37 then
+            function L61_62(A0_194)
+              _UPVALUE0_({
+                status = 200,
+                response = _UPVALUE1_.encode(_UPVALUE2_)
+              })
+              _UPVALUE3_.removeRuntimeListener("sceneLoaded", A0_194.self_listenerid)
+            end
+            _UPVALUE0_.addRuntimeListener("sceneLoaded", L61_62)
+          end
+        end
+      end
+    end
+  elseif L9_10 == false then
+    function L61_62(A0_195)
+      _UPVALUE0_.dispatchEvent("fetchReports")
+      _UPVALUE0_.removeRuntimeListener("sceneLoaded", A0_195.self_listenerid)
+    end
+    _UPVALUE0_.addRuntimeListener("sceneLoaded", L61_62)
+  end
+  return L0_1
+end

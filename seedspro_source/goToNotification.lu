@@ -1,0 +1,469 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("assembleVideo")
+;({}).goTo = function(A0_1, A1_2)
+  local L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13
+  L2_3 = _UPVALUE0_
+  L2_3 = L2_3.getSceneProperties
+  L2_3 = L2_3()
+  L3_4 = L2_3.taps
+  L4_5 = L2_3.page
+  L5_6, L6_7 = nil, nil
+  if L4_5 == "notifications" then
+    L7_8 = "overFromRightNew"
+    L6_7 = "overFromBottom"
+    L5_6 = L7_8
+  end
+  function L7_8()
+    native.setKeyboardFocus(nil)
+    native.setActivityIndicator(true)
+    _UPVALUE0_.dispatchEvent("removeNotificationPopup", {animate = false})
+  end
+  if A0_1 == "snapshot" then
+    L8_9 = L7_8
+    L8_9()
+    if L4_5 == "notifications" then
+      L8_9 = _UPVALUE0_
+      L8_9 = L8_9.insert
+      L9_10 = {}
+      L9_10.prevScene = "notifications"
+      L9_10.listPos = 0
+      L8_9(L9_10)
+    else
+      L8_9 = _UPVALUE0_
+      L8_9 = L8_9.restore
+      L9_10 = "snapshots"
+      L10_11 = "Snapshots"
+      L11_12 = "snapshots"
+      L8_9(L9_10, L10_11, L11_12)
+      L8_9 = _UPVALUE0_
+      L8_9 = L8_9.update
+      L9_10 = {}
+      L9_10.pageLabel = "PC Snapshots"
+      L8_9(L9_10)
+    end
+    L8_9 = native
+    L8_9 = L8_9.setActivityIndicator
+    L9_10 = false
+    L8_9(L9_10)
+    L8_9 = _UPVALUE0_
+    L8_9 = L8_9.dispatchEvent
+    L9_10 = "clearLocalTimersAndListeners"
+    L8_9(L9_10)
+    L8_9 = director
+    L9_10 = L8_9
+    L8_9 = L8_9.changeScene
+    L10_11 = "snapshots"
+    L11_12 = L5_6
+    L8_9(L9_10, L10_11, L11_12)
+  elseif A0_1 == "news" then
+    L8_9 = L7_8
+    L8_9()
+    if L4_5 == "notifications" then
+      L8_9 = _UPVALUE0_
+      L8_9 = L8_9.insert
+      L9_10 = {}
+      L9_10.prevScene = "notifications"
+      L8_9(L9_10)
+    else
+      L8_9 = _UPVALUE0_
+      L8_9 = L8_9.restore
+      L9_10 = ""
+      L10_11 = "more"
+      L8_9(L9_10, L10_11)
+      L8_9 = _UPVALUE0_
+      L8_9 = L8_9.insert
+      L9_10 = {}
+      L9_10.prevScene = "more"
+      L8_9(L9_10)
+    end
+    L8_9 = _UPVALUE0_
+    L8_9 = L8_9.update
+    L9_10 = {}
+    L10_11 = L3_4 + 1
+    L9_10.taps = L10_11
+    L8_9(L9_10)
+    L8_9 = native
+    L8_9 = L8_9.setActivityIndicator
+    L9_10 = false
+    L8_9(L9_10)
+    L8_9 = _UPVALUE0_
+    L8_9 = L8_9.dispatchEvent
+    L9_10 = "clearLocalTimersAndListeners"
+    L8_9(L9_10)
+    L8_9 = director
+    L9_10 = L8_9
+    L8_9 = L8_9.changeScene
+    L10_11 = "news"
+    L11_12 = L5_6
+    L8_9(L9_10, L10_11, L11_12)
+  elseif A0_1 == "ad" then
+    L8_9 = L7_8
+    L8_9()
+    L8_9 = native
+    L8_9 = L8_9.setActivityIndicator
+    L9_10 = false
+    L8_9(L9_10)
+    L8_9 = A1_2.url
+    if L8_9 then
+      L8_9 = system
+      L8_9 = L8_9.openURL
+      L9_10 = A1_2.url
+      L8_9(L9_10)
+    end
+  elseif A0_1 == "pm" then
+    L8_9 = L7_8
+    L8_9()
+    function L8_9(A0_14)
+      local L1_15
+      function L1_15(A0_16)
+        local L1_17, L2_18, L3_19, L4_20
+        L1_17 = A0_16.response
+        if L1_17 == "PM Session does not exist" then
+          L2_18 = _UPVALUE0_
+          L2_18 = L2_18.showAlert
+          L3_19 = "No PM session"
+          L4_20 = "This PM session has been closed and does no longer exist."
+          L2_18(L3_19, L4_20, {"Ok"})
+          L2_18 = native
+          L2_18 = L2_18.setActivityIndicator
+          L3_19 = false
+          L2_18(L3_19)
+        elseif L1_17 == "Can not access PM session" then
+          L2_18 = _UPVALUE0_
+          L2_18 = L2_18.showAlert
+          L3_19 = "Can not enter PM session"
+          L4_20 = [[
+You can no longer enter this PM session. Either because you have unfollowed one of the users participating or because it is a Group PM and you have left it.
+
+Please try refollowing the users again or create a new Group PM.]]
+          L2_18(L3_19, L4_20, {"Ok"})
+          L2_18 = native
+          L2_18 = L2_18.setActivityIndicator
+          L3_19 = false
+          L2_18(L3_19)
+        else
+          L2_18 = _UPVALUE1_
+          L2_18 = L2_18.decode
+          L3_19 = A0_16.response
+          L2_18 = L2_18(L3_19)
+          function L3_19()
+            _UPVALUE0_.update({
+              taps = _UPVALUE1_ + 1
+            })
+            _UPVALUE0_.insert({
+              pmsession = _UPVALUE2_,
+              start = 0,
+              page = "pm-messages",
+              pop = 200
+            })
+            if _UPVALUE3_ == "notifications" then
+              _UPVALUE0_.insert({
+                prevScene = "notifications"
+              })
+            else
+              _UPVALUE0_.insert({prevScene = "pm-menu"})
+            end
+            native.setActivityIndicator(false)
+            _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+            director:changeScene("pm-messages", _UPVALUE4_)
+          end
+          L4_20 = _UPVALUE3_
+          if L4_20 ~= "notifications" then
+            function L4_20(A0_21)
+              local L1_22, L2_23, L3_24
+              L1_22 = _UPVALUE0_
+              L1_22 = L1_22.decode
+              L2_23 = A0_21.response
+              L1_22 = L1_22(L2_23)
+              L2_23 = L1_22.hasUser
+              if L2_23 == true then
+                L2_23 = _UPVALUE1_
+                L2_23 = L2_23.restore
+                L3_24 = "profile"
+                L2_23(L3_24, "My profile", "profile")
+                L2_23 = _UPVALUE1_
+                L2_23 = L2_23.update
+                L3_24 = {}
+                L3_24.fetchAvtr = L1_22.avatar
+                L3_24.fetchBios = L1_22.bios
+                L3_24.fetchNick = L1_22.nickname
+                L3_24.fetchUdid = _UPVALUE2_.udid
+                L2_23(L3_24)
+                L2_23 = _UPVALUE1_
+                L2_23 = L2_23.insert
+                L3_24 = {}
+                L3_24.prevScene = "profile"
+                L3_24.listPos = 0
+                L3_24.start = 0
+                L3_24.page = "pm-menu"
+                L3_24.pop = 30
+                L2_23(L3_24)
+                L2_23 = _UPVALUE3_
+                L2_23()
+              else
+                L2_23 = {L3_24}
+                L3_24 = "Ok"
+                L3_24 = _UPVALUE4_
+                L3_24 = L3_24.errorOccurange
+                if L3_24 > 0 then
+                  L3_24 = table
+                  L3_24 = L3_24.insert
+                  L3_24(L2_23, "Email")
+                end
+                function L3_24(A0_25)
+                  local L1_26
+                  L1_26 = A0_25.action
+                  if L1_26 == "clicked" then
+                    L1_26 = A0_25.index
+                    if L1_26 == 2 then
+                      L1_26 = {}
+                      L1_26.to = {
+                        "mcseeds@jninteractive.com"
+                      }
+                      L1_26.body = "Please describe the issue you are seeing."
+                      L1_26.subject = "Error"
+                      L1_26.isBodyHtml = true
+                      native.showPopup("mail", L1_26)
+                    end
+                  end
+                  L1_26 = true
+                  return L1_26
+                end
+                _UPVALUE1_.showAlert("Error", [[
+There seems to have been an issue with fetching the user from the notification. Try searching the user up manually instead.
+
+If this issue is reoccurring please let us know via email and we'll look into it as soon as possible.]], L2_23, L3_24)
+                _UPVALUE4_.errorOccurange = _UPVALUE4_.errorOccurange + 1
+              end
+            end
+            _UPVALUE0_.network_request("getUserInfo", L4_20, {
+              fetchUdid = _UPVALUE5_.udid
+            })
+          else
+            L4_20 = L3_19
+            L4_20()
+          end
+        end
+      end
+      _UPVALUE0_.network_request("get_pm_session_by_sessionid", L1_15, {
+        sessionid = _UPVALUE5_.sessionid,
+        udid = _UPVALUE5_.udid
+      })
+      if A0_14 then
+        _UPVALUE0_.removeRuntimeListener("got_gamecenter_info", A0_14.self_listenerid)
+      end
+    end
+    L9_10 = _UPVALUE0_
+    L9_10 = L9_10.isGameCenter
+    L10_11 = false
+    L9_10 = L9_10(L10_11)
+    if L9_10 == true then
+      L9_10 = L8_9
+      L9_10()
+    else
+      L9_10 = _UPVALUE0_
+      L9_10 = L9_10.addRuntimeListener
+      L10_11 = "got_gamecenter_info"
+      L11_12 = L8_9
+      L9_10(L10_11, L11_12)
+    end
+  elseif A0_1 == "seed" then
+    L8_9 = L7_8
+    L8_9()
+    L8_9 = false
+    L9_10 = false
+    L10_11 = A1_2.id
+    L11_12 = tonumber
+    L12_13 = L10_11
+    L11_12 = L11_12(L12_13)
+    if L11_12 == nil then
+      L12_13 = L10_11
+      L11_12 = L10_11.match
+      L11_12 = L11_12(L12_13, "%w")
+      if L11_12 then
+        L8_9 = true
+      end
+    else
+      L11_12 = tonumber
+      L12_13 = L10_11
+      L11_12 = L11_12(L12_13)
+      if L11_12 == nil then
+        L9_10 = true
+      end
+    end
+    function L11_12(A0_27)
+      local L1_28
+      L1_28 = A0_27.response
+      if _UPVALUE0_ == true then
+        L1_28 = _UPVALUE1_.assemble(L1_28)
+      elseif _UPVALUE2_ == false then
+        L1_28 = _UPVALUE3_.decode(L1_28)
+      end
+      native.setActivityIndicator(false)
+      if _UPVALUE2_ == true or #L1_28.seeds == 0 then
+        _UPVALUE4_.showAlert("Oops!", "Seems like this upload does not exist. Perhaps the seed link is wrong?", {"Ok"})
+        if _UPVALUE5_.resetAppOnFailure then
+          _UPVALUE4_.dispatchEvent("clearLocalTimersAndListeners")
+          _UPVALUE4_.restore("seedlist", _UPVALUE6_.defaultPlatform, _UPVALUE6_.defaultSection)
+          _UPVALUE4_.update({
+            listPos = _UPVALUE4_.getPadding().toppadding
+          })
+          director:changeScene("seedlist")
+        end
+      else
+        if _UPVALUE7_ == "notifications" then
+          L1_28.removePageTable = true
+          _UPVALUE4_.insert({
+            prevScene = "notifications",
+            pageTable = L1_28,
+            which = 1
+          })
+        else
+          _UPVALUE4_.restore(_UPVALUE8_, _UPVALUE6_.defaultPlatform, _UPVALUE6_.defaultSection)
+          _UPVALUE4_.update({
+            prevScene = "seedlist",
+            pageTable = L1_28,
+            listPos = 0,
+            script = "getSeeds",
+            start = 0,
+            which = 1,
+            taps = _UPVALUE9_ + 1,
+            pop = 30
+          })
+        end
+        _UPVALUE4_.insert({
+          listPos = 0,
+          start = 0,
+          page = "seed",
+          pop = 30
+        })
+        _UPVALUE4_.dispatchEvent("clearLocalTimersAndListeners")
+        director:changeScene("seed", _UPVALUE10_)
+      end
+    end
+    L12_13 = {}
+    function L12_13.failed()
+      native.setActivityIndicator(false)
+      _UPVALUE0_.showAlert("Oops!", "Seems like this upload does not exist. Perhaps the seed link is wrong?", {"Ok"})
+      if _UPVALUE1_.firstLaunch == true then
+        _UPVALUE0_.restore(_UPVALUE2_, _UPVALUE1_.defaultPlatform, _UPVALUE1_.defaultSection)
+        _UPVALUE0_.update({
+          listPos = _UPVALUE0_.getPadding().toppadding
+        })
+      end
+    end
+    L12_13.success = L11_12
+    if L8_9 == true then
+      _UPVALUE0_.network_request("", L12_13, {}, {
+        hashed = false,
+        type = "GET",
+        nurl = "https://gdata.youtube.com/feeds/api/videos/" .. _UPVALUE4_.escape(L10_11) .. "?v=2&alt=json-in-script"
+      })
+    else
+      _UPVALUE0_.network_request("get_specific_seed", L12_13, {
+        seedid = L10_11,
+        udid = _UPVALUE2_.udid
+      })
+    end
+  elseif A0_1 == "reportNotif" then
+    L8_9 = L7_8
+    L8_9()
+    function L8_9(A0_29)
+      native.setActivityIndicator(false)
+      _UPVALUE0_.showAlert("", A0_29.response, {"Ok"})
+    end
+    L9_10 = _UPVALUE0_
+    L9_10 = L9_10.network_request
+    L10_11 = "get_resolveMessage_of_report"
+    L11_12 = L8_9
+    L12_13 = {}
+    L12_13.reportid = A1_2.id
+    L9_10(L10_11, L11_12, L12_13)
+  elseif A0_1 == "user" then
+    L8_9 = L7_8
+    L8_9()
+    function L8_9(A0_30)
+      local L1_31, L2_32, L3_33
+      L1_31 = _UPVALUE0_
+      L1_31 = L1_31.decode
+      L2_32 = A0_30.response
+      L1_31 = L1_31(L2_32)
+      L2_32 = native
+      L2_32 = L2_32.setActivityIndicator
+      L3_33 = false
+      L2_32(L3_33)
+      L2_32 = L1_31.hasUser
+      if L2_32 == true then
+        L2_32 = _UPVALUE1_
+        L2_32 = L2_32.getSceneProperties
+        L2_32 = L2_32()
+        L3_33 = _UPVALUE1_
+        L3_33 = L3_33.update
+        L3_33({
+          taps = L2_32.taps + 1
+        })
+        L3_33 = _UPVALUE1_
+        L3_33 = L3_33.insert
+        L3_33({
+          fetchAvtr = L1_31.avatar,
+          fetchBios = L1_31.bios,
+          fetchNick = L1_31.nickname,
+          fetchUdid = _UPVALUE2_.user,
+          prevScene = L2_32.page,
+          page = "profile"
+        })
+        L3_33 = _UPVALUE1_
+        L3_33 = L3_33.dispatchEvent
+        L3_33("clearLocalTimersAndListeners")
+        L3_33 = director
+        L3_33 = L3_33.changeScene
+        L3_33(L3_33, "profile", "overFromRightNew")
+      else
+        L2_32 = {L3_33}
+        L3_33 = "Ok"
+        L3_33 = _UPVALUE3_
+        L3_33 = L3_33.errorOccurange
+        if L3_33 > 0 then
+          L3_33 = table
+          L3_33 = L3_33.insert
+          L3_33(L2_32, "Email")
+        end
+        function L3_33(A0_34)
+          local L1_35
+          L1_35 = A0_34.action
+          if L1_35 == "clicked" then
+            L1_35 = A0_34.index
+            if L1_35 == 2 then
+              L1_35 = {}
+              L1_35.to = {
+                "mcseeds@jninteractive.com"
+              }
+              L1_35.body = "Please describe the issue you are seeing."
+              L1_35.subject = "Error"
+              L1_35.isBodyHtml = true
+              native.showPopup("mail", L1_35)
+            end
+          end
+          L1_35 = true
+          return L1_35
+        end
+        _UPVALUE1_.showAlert("Error", [[
+There seems to have been an issue with fetching the user from the notification. Try searching the user up manually instead.
+
+If this issue is reoccurring please let us know via email and we'll look into it as soon as possible.]], L2_32, L3_33)
+        _UPVALUE3_.errorOccurange = _UPVALUE3_.errorOccurange + 1
+      end
+    end
+    L9_10 = _UPVALUE0_
+    L9_10 = L9_10.network_request
+    L10_11 = "getUserInfo"
+    L11_12 = L8_9
+    L12_13 = {}
+    L12_13.fetchUdid = A1_2.user
+    L9_10(L10_11, L11_12, L12_13)
+  end
+  L8_9 = true
+  return L8_9
+end
+return {}

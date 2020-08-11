@@ -1,0 +1,154 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("creator")
+;({}).checkMask = function(A0_1, A1_2, A2_3)
+  local L3_4
+  if not A2_3 then
+    L3_4 = {}
+    A2_3 = L3_4
+  end
+  L3_4 = A2_3.type
+  L3_4 = L3_4 or "rect"
+  A2_3.type = L3_4
+  L3_4 = A2_3.customFileName
+  if not L3_4 then
+    L3_4 = "mask-"
+    L3_4 = L3_4 .. A0_1 .. "x" .. A1_2 .. ".png"
+  end
+  if not io.open(system.pathForFile(L3_4, system.TemporaryDirectory)) then
+    table.insert(_UPVALUE0_, {
+      filename = L3_4,
+      width = A0_1,
+      height = A1_2,
+      params = A2_3
+    })
+  else
+    io.open(system.pathForFile(L3_4, system.TemporaryDirectory)):close()
+  end
+end
+;({}).makeMasks = function(A0_5)
+  local L1_6, L2_7, L3_8, L4_9, L5_10, L6_11, L7_12, L8_13, L9_14, L10_15, L11_16, L12_17, L13_18, L14_19, L15_20
+  L1_6 = _UPVALUE0_
+  L1_6 = #L1_6
+  if L1_6 == 0 then
+    L1_6 = _UPVALUE1_
+    if L1_6 == true then
+      L1_6 = false
+      _UPVALUE1_ = L1_6
+      L1_6 = native
+      L1_6 = L1_6.setActivityIndicator
+      L2_7 = false
+      L1_6(L2_7)
+    end
+    L1_6 = A0_5
+    L1_6()
+  else
+    L1_6 = display
+    L1_6 = L1_6.newGroup
+    L1_6 = L1_6()
+    L2_7 = _UPVALUE0_
+    L2_7 = L2_7[1]
+    L2_7 = L2_7.width
+    L3_8 = _UPVALUE0_
+    L3_8 = L3_8[1]
+    L3_8 = L3_8.height
+    L4_9 = _UPVALUE2_
+    L5_10 = _UPVALUE3_
+    L5_10 = L2_7 / L5_10
+    L5_10 = L5_10 / 4
+    L4_9 = L4_9(L5_10)
+    L4_9 = L4_9 * 4
+    L4_9 = L4_9 + 4
+    L5_10 = _UPVALUE3_
+    L4_9 = L4_9 * L5_10
+    L5_10 = _UPVALUE2_
+    L6_11 = _UPVALUE4_
+    L6_11 = L3_8 / L6_11
+    L6_11 = L6_11 / 4
+    L5_10 = L5_10(L6_11)
+    L5_10 = L5_10 * 4
+    L5_10 = L5_10 + 4
+    L6_11 = _UPVALUE4_
+    L5_10 = L5_10 * L6_11
+    L6_11 = _UPVALUE0_
+    L6_11 = L6_11[1]
+    L6_11 = L6_11.params
+    L7_12 = display
+    L7_12 = L7_12.newRect
+    L7_12 = L7_12(L8_13, L9_14, L10_15, L11_16)
+    L8_13(L9_14, L10_15)
+    L7_12.x = L8_13
+    L7_12.y = L8_13
+    L8_13(L9_14, L10_15, L11_16, L12_17)
+    L7_12.bw = L4_9
+    L7_12.bh = L5_10
+    L7_12.origWidth = L8_13
+    L7_12.origHeight = L8_13
+    L8_13(L9_14, L10_15)
+    if L8_13 then
+      for L11_16, L12_17 in L8_13(L9_14) do
+        if L11_16 == "left" or L11_16 == "right" then
+          L2_7 = L2_7 + 1
+        elseif L11_16 == "top" or L11_16 == "bottom" then
+          L3_8 = L3_8 + 1
+        end
+      end
+    end
+    if L9_14 == "rect" then
+      L13_18 = L3_8
+    elseif L9_14 == "roundedRect" then
+      L13_18 = L3_8
+      L14_19 = L6_11.roundedDiam
+    elseif L9_14 == "gradient" then
+      L13_18 = L2_7
+      L14_19 = L3_8
+      for L13_18, L14_19 in L10_15(L11_16) do
+        L15_20 = nil
+        if L13_18 == "top" then
+          L15_20 = display.newRect(0, 0, L14_19.width, L14_19.height)
+        elseif L13_18 == "bottom" then
+          L15_20 = display.newRect(0, L3_8 - L14_19.height, L14_19.width, L14_19.height)
+        elseif L13_18 == "left" then
+          L15_20 = display.newRect(0, 0, L14_19.width, L14_19.height)
+        elseif L13_18 == "right" then
+          L15_20 = display.newRect(L2_7 - L14_19.width, 0, L14_19.width, L14_19.height)
+        end
+        L15_20:setFillColor({
+          color1 = L14_19.color1,
+          color2 = L14_19.color2,
+          direction = "down"
+        })
+        L8_13:insert(L15_20)
+      end
+    end
+    L9_14(L10_15, L11_16)
+    L8_13.x = L9_14
+    L8_13.y = L9_14
+    if L9_14 then
+      if L9_14 then
+        L9_14(L10_15, L11_16)
+        L8_13.x = L9_14
+      elseif L9_14 then
+        L9_14(L10_15, L11_16)
+        L8_13.x = L9_14
+      end
+      if L9_14 then
+        L9_14(L10_15, L11_16)
+        L8_13.y = L9_14
+      elseif L9_14 then
+        L9_14(L10_15, L11_16)
+        L8_13.y = L9_14
+      end
+    end
+    L9_14(L10_15, L11_16)
+    L9_14(L10_15)
+    if L9_14 == true then
+      if L9_14 == false then
+        _UPVALUE1_ = L9_14
+        L9_14(L10_15)
+      end
+    end
+    L11_16()
+  end
+end
+return {}

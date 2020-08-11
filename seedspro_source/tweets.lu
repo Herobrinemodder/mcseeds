@@ -1,0 +1,1146 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("openGLTextfield")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37, L37_38, L38_39, L39_40, L40_41, L41_42, L42_43, L43_44, L44_45, L45_46, L46_47, L47_48, L48_49
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.newGroup
+  L5_6 = L5_6()
+  L7_8 = L1_2
+  L6_7 = L1_2.insert
+  L8_9 = L5_6
+  L6_7(L7_8, L8_9)
+  L6_7 = display
+  L6_7 = L6_7.contentCenterX
+  L7_8 = display
+  L7_8 = L7_8.contentCenterY
+  L8_9 = _UPVALUE0_
+  L8_9 = L8_9.contentScaleX
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.contentScaleY
+  L10_11 = math
+  L10_11 = L10_11.floor
+  L11_12 = math
+  L11_12 = L11_12.ceil
+  L12_13 = math
+  L12_13 = L12_13.min
+  L13_14 = math
+  L13_14 = L13_14.max
+  L14_15 = math
+  L14_15 = L14_15.abs
+  L15_16 = {}
+  L15_16.newer = false
+  L15_16.older = false
+  L16_17 = nil
+  L17_18 = _UPVALUE1_
+  L17_18 = L17_18.getSceneProperties
+  L17_18 = L17_18()
+  L18_19 = L17_18.prevScene
+  L19_20 = L17_18.start
+  L20_21 = L17_18.pop
+  L21_22 = 0
+  L22_23 = _UPVALUE0_
+  L22_23 = L22_23.UIDefaultColor
+  L23_24 = _UPVALUE0_
+  L23_24 = L23_24.scaleFrom320
+  L24_25 = _UPVALUE0_
+  L24_25 = L24_25.session
+  L24_25 = L24_25 + 1
+  L25_26 = _UPVALUE0_
+  L25_26.session = L24_25
+  L25_26 = _UPVALUE1_
+  L25_26 = L25_26.makeBlurryBg
+  L25_26 = L25_26()
+  L27_28 = L25_26
+  L26_27 = L25_26.addEventListener
+  L28_29 = "touch"
+  function L29_30()
+    local L0_50, L1_51
+    L0_50 = true
+    return L0_50
+  end
+  L26_27(L27_28, L28_29, L29_30)
+  L27_28 = L2_3
+  L26_27 = L2_3.insert
+  L28_29 = L25_26
+  L26_27(L27_28, L28_29)
+  L26_27 = _UPVALUE2_
+  L26_27 = L26_27.createSideMenu
+  L27_28 = L1_2
+  L26_27 = L26_27(L27_28)
+  L28_29 = L0_1
+  L27_28 = L0_1.insert
+  L29_30 = L26_27
+  L27_28(L28_29, L29_30)
+  L0_1.side_menu = L26_27
+  L28_29 = L26_27
+  L27_28 = L26_27.toBack
+  L27_28(L28_29)
+  function L27_28(A0_52)
+    timer.cancel(_UPVALUE0_)
+    _UPVALUE1_.removeRuntimeListener("clearLocalTimersAndListeners", A0_52.self_listenerid)
+  end
+  L28_29 = _UPVALUE1_
+  L28_29 = L28_29.addRuntimeListener
+  L29_30 = "clearLocalTimersAndListeners"
+  L30_31 = L27_28
+  L28_29(L29_30, L30_31)
+  function L28_29(A0_53)
+    local L1_54, L2_55, L3_56
+    L1_54 = A0_53.phase
+    L2_55 = A0_53.type
+    L3_56 = _UPVALUE0_
+    L3_56 = L3_56.list
+    _UPVALUE1_.animateToolbar(A0_53, {
+      toolbar = _UPVALUE2_.toolbar,
+      list = L3_56
+    })
+    if L3_56 and _UPVALUE3_.older == false and L3_56.loadMore == true and -L3_56.virtualContentHeight + _H + 400 > L3_56:getContentPosition() then
+      _UPVALUE1_.dispatchEvent("fetchTweets", {sort = "older"})
+    end
+    return true
+  end
+  L29_30 = _UPVALUE3_
+  L29_30 = L29_30.newTableView
+  L30_31 = {}
+  L30_31.top = 64
+  L30_31.left = 0
+  L31_32 = _W
+  L30_31.width = L31_32
+  L31_32 = _H
+  L31_32 = L31_32 - 64
+  L30_31.height = L31_32
+  L31_32 = {
+    L32_33,
+    L33_34,
+    L34_35,
+    L35_36
+  }
+  L32_33 = 0
+  L33_34 = 0
+  L34_35 = 0
+  L35_36 = 0
+  L30_31.bgColor = L31_32
+  L30_31.listener = L28_29
+  L30_31.topPadding = -70
+  L29_30 = L29_30(L30_31)
+  L3_4.list = L29_30
+  L31_32 = L3_4
+  L30_31 = L3_4.insert
+  L32_33 = L29_30
+  L30_31(L31_32, L32_33)
+  function L30_31(A0_57)
+    local L1_58, L2_59, L3_60, L4_61, L5_62, L6_63, L7_64
+    L1_58 = A0_57.target
+    L1_58 = L1_58.height
+    L2_59 = L1_58 * 0.5
+    L3_60 = A0_57.view
+    L4_61 = A0_57.id
+    L5_62 = display
+    L5_62 = L5_62.newGroup
+    L5_62 = L5_62()
+    L3_60.group = L5_62
+    L7_64 = L3_60
+    L6_63 = L3_60.insert
+    L6_63(L7_64, L5_62)
+    L6_63 = _UPVALUE0_
+    L6_63 = L6_63.makeSprite
+    L7_64 = 0
+    L6_63 = L6_63(L7_64, 0)
+    L7_64 = L5_62.insert
+    L7_64(L5_62, L6_63)
+    L7_64 = display
+    L7_64 = L7_64.newText
+    L7_64 = L7_64("Auto fetching new tweets", 0, 0, _UPVALUE1_.fonts.light, 12)
+    L7_64:setReferencePoint(display.TopCenterReferencePoint)
+    L7_64.x = 0
+    L7_64.y = L6_63.height * 0.5 + 1
+    L5_62:insert(L7_64)
+    L5_62:setReferencePoint(display.CenterReferencePoint)
+    L5_62.x = _UPVALUE2_
+    L5_62.y = L2_59
+    if L4_61.notVisible == true then
+      L5_62.isVisible = false
+    end
+  end
+  L32_33 = L29_30
+  L31_32 = L29_30.insertRow
+  L33_34 = {}
+  L33_34.dontRenderOnTouch = true
+  L34_35 = {
+    L35_36,
+    L36_37,
+    L37_38,
+    L38_39
+  }
+  L35_36 = 0
+  L36_37 = 0
+  L37_38 = 0
+  L38_39 = 0
+  L33_34.lineColor = L34_35
+  L34_35 = {
+    L35_36,
+    L36_37,
+    L37_38,
+    L38_39
+  }
+  L35_36 = 0
+  L36_37 = 0
+  L37_38 = 0
+  L38_39 = 0
+  L33_34.rowColor = L34_35
+  L33_34.onRender = L30_31
+  L34_35 = L29_30.topPadding
+  L34_35 = -L34_35
+  L33_34.height = L34_35
+  L34_35 = {}
+  L34_35.notVisible = true
+  L33_34.id = L34_35
+  L31_32(L32_33, L33_34)
+  function L31_32(A0_65)
+    local L1_66, L2_67, L3_68, L4_69, L5_70, L6_71
+    L1_66 = A0_65.target
+    L1_66 = L1_66.height
+    L2_67 = L1_66 * 0.5
+    L3_68 = A0_65.view
+    L4_69 = display
+    L4_69 = L4_69.newGroup
+    L4_69 = L4_69()
+    L6_71 = L3_68
+    L5_70 = L3_68.insert
+    L5_70(L6_71, L4_69)
+    L5_70 = _UPVALUE0_
+    L5_70 = L5_70.makeSprite
+    L6_71 = 0
+    L5_70 = L5_70(L6_71, 0)
+    L6_71 = L5_70.setReferencePoint
+    L6_71(L5_70, display.CenterLeftReferencePoint)
+    L5_70.x = 0
+    L5_70.y = 0
+    L6_71 = L4_69.insert
+    L6_71(L4_69, L5_70)
+    L6_71 = display
+    L6_71 = L6_71.newText
+    L6_71 = L6_71({
+      text = "Fetching tweets",
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 16
+    })
+    L6_71:setReferencePoint(display.CenterLeftReferencePoint)
+    L6_71.x = L5_70.width + 7
+    L6_71.y = 0
+    L4_69:insert(L6_71)
+    L4_69:setReferencePoint(display.CenterReferencePoint)
+    L4_69.x = _UPVALUE2_
+    L4_69.y = L2_67
+  end
+  function L32_33()
+    _UPVALUE0_:insertRow({
+      lineColor = {
+        255,
+        255,
+        255,
+        0
+      },
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      onRender = _UPVALUE1_,
+      height = 35
+    })
+  end
+  L33_34 = L32_33
+  L33_34()
+  function L33_34(A0_72)
+    local L1_73, L2_74, L3_75
+    L1_73 = A0_72.target
+    L1_73 = L1_73.height
+    L2_74 = A0_72.view
+    L3_75 = _UPVALUE0_
+    L3_75 = L3_75.makeSprite
+    L3_75 = L3_75(_UPVALUE1_, L1_73 * 0.5)
+    L2_74:insert(L3_75)
+  end
+  L34_35 = _UPVALUE1_
+  L34_35 = L34_35.makeToolbar
+  L35_36 = ""
+  L36_37 = {}
+  L36_37.list = L29_30
+  L34_35 = L34_35(L35_36, L36_37)
+  L4_5.toolbar = L34_35
+  L36_37 = L4_5
+  L35_36 = L4_5.insert
+  L37_38 = L34_35
+  L35_36(L36_37, L37_38)
+  L35_36 = display
+  L35_36 = L35_36.newGroup
+  L35_36 = L35_36()
+  L36_37 = L34_35.contents
+  L37_38 = L36_37
+  L36_37 = L36_37.insert
+  L38_39 = L35_36
+  L36_37(L37_38, L38_39)
+  L36_37 = display
+  L36_37 = L36_37.newImageRect
+  L37_38 = "twitterIcon.png"
+  L38_39 = 18
+  L39_40 = 15
+  L36_37 = L36_37(L37_38, L38_39, L39_40)
+  L38_39 = L36_37
+  L37_38 = L36_37.setReferencePoint
+  L39_40 = display
+  L39_40 = L39_40.BottomCenterReferencePoint
+  L37_38(L38_39, L39_40)
+  L36_37.x = 0
+  L36_37.y = 0
+  L38_39 = L35_36
+  L37_38 = L35_36.insert
+  L39_40 = L36_37
+  L37_38(L38_39, L39_40)
+  L37_38 = display
+  L37_38 = L37_38.newText
+  L38_39 = "The latest from Mojang & Partners"
+  L39_40 = 0
+  L40_41 = 0
+  L41_42 = _UPVALUE0_
+  L41_42 = L41_42.fonts
+  L41_42 = L41_42.light
+  L42_43 = 12
+  L37_38 = L37_38(L38_39, L39_40, L40_41, L41_42, L42_43)
+  L39_40 = L37_38
+  L38_39 = L37_38.setReferencePoint
+  L40_41 = display
+  L40_41 = L40_41.TopCenterReferencePoint
+  L38_39(L39_40, L40_41)
+  L37_38.x = 0
+  L38_39 = L36_37.y
+  L38_39 = L38_39 + 2
+  L37_38.y = L38_39
+  L39_40 = L35_36
+  L38_39 = L35_36.insert
+  L40_41 = L37_38
+  L38_39(L39_40, L40_41)
+  L39_40 = L35_36
+  L38_39 = L35_36.setReferencePoint
+  L40_41 = display
+  L40_41 = L40_41.CenterReferencePoint
+  L38_39(L39_40, L40_41)
+  L35_36.x = L6_7
+  L38_39 = L34_35.yCenter
+  L35_36.y = L38_39
+  function L38_39(A0_76)
+    _UPVALUE0_.remove({
+      "prevScene",
+      "start",
+      "page",
+      "pop"
+    })
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE1_, "toRightNew")
+    return true
+  end
+  L39_40 = _UPVALUE3_
+  L39_40 = L39_40.newButton
+  L40_41 = {}
+  L40_41.width = 50
+  L40_41.height = 50
+  L40_41.default = "back.png"
+  L40_41.over = "back-over.png"
+  L40_41.onRelease = L38_39
+  L39_40 = L39_40(L40_41)
+  L41_42 = L39_40
+  L40_41 = L39_40.setReferencePoint
+  L42_43 = display
+  L42_43 = L42_43.CenterLeftReferencePoint
+  L40_41(L41_42, L42_43)
+  L39_40.x = -1
+  L40_41 = L34_35.yCenter
+  L39_40.y = L40_41
+  L40_41 = L34_35.contents
+  L41_42 = L40_41
+  L40_41 = L40_41.insert
+  L42_43 = L39_40
+  L40_41(L41_42, L42_43)
+  L40_41 = graphics
+  L40_41 = L40_41.newMask
+  L41_42 = "mask-avatar5.png"
+  L40_41 = L40_41(L41_42)
+  function L41_42(A0_77)
+    local L1_78, L2_79, L3_80, L4_81, L5_82, L6_83, L7_84, L8_85, L9_86
+    L1_78 = A0_77.phase
+    L2_79 = A0_77.index
+    L3_80 = A0_77.id
+    L4_81 = _UPVALUE0_
+    L4_81 = L4_81.content
+    L4_81 = L4_81.rows
+    L4_81 = L4_81[L2_79]
+    L4_81 = L4_81.view
+    if L4_81 then
+      L5_82 = L4_81._proxy
+      if L5_82 then
+        L5_82 = L4_81.tweetsGroup
+        L5_82.alpha = 0.5
+      end
+    end
+    if L1_78 == "release" or L1_78 == "tap" then
+      L5_82 = timer
+      L5_82 = L5_82.performWithDelay
+      L6_83 = 100
+      function L7_84()
+        local L0_87, L1_88
+        L0_87 = _UPVALUE0_
+        L0_87 = L0_87.content
+        L0_87 = L0_87.rows
+        L1_88 = _UPVALUE1_
+        L0_87 = L0_87[L1_88]
+        L0_87 = L0_87.view
+        if L0_87 then
+          L1_88 = L0_87._proxy
+          if L1_88 then
+            L1_88 = L0_87.tweetsGroup
+            L1_88.alpha = 1
+          end
+        end
+      end
+      L5_82(L6_83, L7_84)
+      L5_82 = display
+      L5_82 = L5_82.newGroup
+      L5_82 = L5_82()
+      L6_83 = _UPVALUE1_
+      L7_84 = L6_83
+      L6_83 = L6_83.insert
+      L8_85 = L5_82
+      L6_83(L7_84, L8_85)
+      L6_83 = native
+      L6_83 = L6_83.newWebView
+      L7_84 = 0
+      L8_85 = 64
+      L9_86 = _W
+      L6_83 = L6_83(L7_84, L8_85, L9_86, _H - 64)
+      L8_85 = L6_83
+      L7_84 = L6_83.request
+      L9_86 = "https://twitter.com/#!/"
+      L9_86 = L9_86 .. L3_80.user.screen_name .. "/status/" .. L3_80.id_str
+      L7_84(L8_85, L9_86)
+      L8_85 = L5_82
+      L7_84 = L5_82.insert
+      L9_86 = L6_83
+      L7_84(L8_85, L9_86)
+      L7_84 = _UPVALUE2_
+      L7_84 = L7_84.makeToolbar
+      L8_85 = L3_80.user
+      L8_85 = L8_85.screen_name
+      L7_84 = L7_84(L8_85)
+      L9_86 = L5_82
+      L8_85 = L5_82.insert
+      L8_85(L9_86, L7_84)
+      function L8_85(A0_89)
+        _UPVALUE0_.to(_UPVALUE1_, {
+          time = 320,
+          x = _W,
+          transition = easing.outQuad,
+          onComplete = function()
+            _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+            _UPVALUE2_ = _UPVALUE1_.delete(_UPVALUE2_)
+          end
+        }, true)
+        return true
+      end
+      L9_86 = _UPVALUE4_
+      L9_86 = L9_86.newButton
+      L9_86 = L9_86({
+        width = 50,
+        height = 50,
+        default = "back.png",
+        over = "back-over.png",
+        onRelease = L8_85
+      })
+      L9_86:setReferencePoint(display.CenterLeftReferencePoint)
+      L9_86.x = -1
+      L9_86.y = L7_84.yCenter
+      L5_82:insert(L9_86)
+      _UPVALUE3_.from(L5_82, {
+        time = 200,
+        x = _W,
+        transition = easing.inOutQuad
+      }, true)
+    end
+    L5_82 = true
+    return L5_82
+  end
+  function L42_43(A0_90, A1_91, A2_92, A3_93, A4_94, A5_95, A6_96)
+    local L7_97, L8_98, L9_99
+    L7_97 = _UPVALUE0_
+    L7_97 = L7_97.content
+    L7_97 = L7_97.rows
+    L7_97 = L7_97[A0_90]
+    L7_97 = L7_97.view
+    L8_98 = _UPVALUE0_
+    L8_98 = L8_98.content
+    L8_98 = L8_98.rows
+    L8_98 = L8_98[A0_90]
+    L8_98 = L8_98.id
+    if L7_97 then
+      L9_99 = L7_97._proxy
+      if L9_99 then
+        L9_99 = _UPVALUE1_
+        L9_99 = L9_99.delete
+        L9_99 = L9_99(L7_97.loadingMedia)
+        L7_97.loadingMedia = L9_99
+        L9_99 = L8_98.hasImage
+        if L9_99 == true then
+          L9_99 = display
+          L9_99 = L9_99.newImageRect
+          L9_99 = L9_99(A1_91, A2_92, A5_95, A6_96)
+          L9_99:setReferencePoint(display.TopLeftReferencePoint)
+          L9_99.x = A3_93
+          L9_99.y = A4_94
+          L7_97.tweetsGroup:insert(L9_99)
+          if L8_98.isFirstAnimImage == true then
+            L8_98.isFirstAnimImage = false
+            _UPVALUE2_.from(L9_99, {time = 800, alpha = 0})
+          end
+        else
+          L9_99 = display
+          L9_99 = L9_99.newText
+          L9_99 = L9_99("Failed to fetch image", 0, 0, _UPVALUE3_.fonts.light, 12)
+          L9_99:setReferencePoint(display.TopLeftReferencePoint)
+          L9_99.x = A3_93
+          L9_99.y = A4_94
+          L9_99:setFillColor(0, 0, 0, 100)
+          L7_97.tweetsGroup:insert(L9_99)
+        end
+      end
+    end
+  end
+  function L43_44(A0_100)
+    local L1_101, L2_102, L3_103
+    L1_101 = _UPVALUE0_
+    L1_101 = L1_101.content
+    L1_101 = L1_101.rows
+    L1_101 = L1_101[A0_100]
+    L1_101 = L1_101.view
+    L2_102 = _UPVALUE0_
+    L2_102 = L2_102.content
+    L2_102 = L2_102.rows
+    L2_102 = L2_102[A0_100]
+    L2_102 = L2_102.id
+    if L1_101 then
+      L3_103 = L1_101._proxy
+      if L3_103 then
+        L3_103 = _UPVALUE1_
+        L3_103 = L3_103.delete
+        L3_103 = L3_103(L1_101.loadingAvatar)
+        L1_101.loadingAvatar = L3_103
+        L3_103 = nil
+        if L2_102.hasAvatar == false then
+          L3_103 = display.newRect(0, 0, 40, 40)
+          L3_103:setFillColor(175, 175, 175)
+        else
+          L3_103 = display.newImageRect(L2_102.avatarPath, L2_102.avatarDir, 40, 40)
+        end
+        L3_103:setReferencePoint(display.TopLeftReferencePoint)
+        L3_103.x = 10
+        L3_103.y = 10
+        L3_103:setMask(_UPVALUE2_)
+        L3_103.maskScaleX = 0.5
+        L3_103.maskScaleY = 0.5
+        L1_101.tweetsGroup.front:insert(L3_103)
+      end
+    end
+  end
+  function L44_45(A0_104)
+    local L1_105, L2_106, L3_107, L4_108, L5_109, L6_110, L7_111, L8_112, L9_113, L10_114, L11_115, L12_116, L13_117, L14_118, L15_119, L16_120, L17_121, L18_122
+    L1_105 = A0_104.target
+    L1_105 = L1_105.height
+    L2_106 = L1_105 * 0.5
+    L3_107 = A0_104.view
+    L4_108 = display
+    L4_108 = L4_108.newGroup
+    L4_108 = L4_108()
+    L3_107.contentsGroup = L4_108
+    L5_109 = L3_107
+    L4_108 = L3_107.insert
+    L6_110 = L3_107.contentsGroup
+    L4_108(L5_109, L6_110)
+    L4_108 = display
+    L4_108 = L4_108.newGroup
+    L4_108 = L4_108()
+    L3_107.backGroup = L4_108
+    L4_108 = L3_107.contentsGroup
+    L5_109 = L4_108
+    L4_108 = L4_108.insert
+    L6_110 = L3_107.backGroup
+    L4_108(L5_109, L6_110)
+    L4_108 = display
+    L4_108 = L4_108.newGroup
+    L4_108 = L4_108()
+    L3_107.tweetsGroup = L4_108
+    L4_108 = L3_107.contentsGroup
+    L5_109 = L4_108
+    L4_108 = L4_108.insert
+    L6_110 = L3_107.tweetsGroup
+    L4_108(L5_109, L6_110)
+    L4_108 = L3_107.tweetsGroup
+    L5_109 = display
+    L5_109 = L5_109.newGroup
+    L5_109 = L5_109()
+    L4_108.back = L5_109
+    L4_108 = L3_107.tweetsGroup
+    L5_109 = L4_108
+    L4_108 = L4_108.insert
+    L6_110 = L3_107.tweetsGroup
+    L6_110 = L6_110.back
+    L4_108(L5_109, L6_110)
+    L4_108 = L3_107.tweetsGroup
+    L5_109 = display
+    L5_109 = L5_109.newGroup
+    L5_109 = L5_109()
+    L4_108.front = L5_109
+    L4_108 = L3_107.tweetsGroup
+    L5_109 = L4_108
+    L4_108 = L4_108.insert
+    L6_110 = L3_107.tweetsGroup
+    L6_110 = L6_110.front
+    L4_108(L5_109, L6_110)
+    L4_108 = display
+    L4_108 = L4_108.newGroup
+    L4_108 = L4_108()
+    L3_107.frontGroup = L4_108
+    L4_108 = L3_107.contentsGroup
+    L5_109 = L4_108
+    L4_108 = L4_108.insert
+    L6_110 = L3_107.frontGroup
+    L4_108(L5_109, L6_110)
+    L4_108 = A0_104.index
+    L5_109 = A0_104.id
+    L6_110 = display
+    L6_110 = L6_110.newRect
+    L7_111 = 0
+    L8_112 = 0
+    L9_113 = _W
+    L10_114 = L1_105
+    L6_110 = L6_110(L7_111, L8_112, L9_113, L10_114)
+    L7_111 = L3_107.backGroup
+    L8_112 = L7_111
+    L7_111 = L7_111.insert
+    L9_113 = L6_110
+    L7_111(L8_112, L9_113)
+    L7_111 = display
+    L7_111 = L7_111.newRect
+    L8_112 = 60
+    L9_113 = L1_105 - 1
+    L10_114 = _W
+    L10_114 = L10_114 - 60
+    L7_111 = L7_111(L8_112, L9_113, L10_114, L11_115)
+    L9_113 = L7_111
+    L8_112 = L7_111.setFillColor
+    L10_114 = 0
+    L8_112(L9_113, L10_114, L11_115, L12_116, L13_117)
+    L8_112 = L3_107.backGroup
+    L9_113 = L8_112
+    L8_112 = L8_112.insert
+    L10_114 = L7_111
+    L8_112(L9_113, L10_114)
+    L8_112 = L5_109.hasAvatar
+    if L8_112 == false then
+      L8_112 = L5_109.hasDownloadedAvatar
+      if L8_112 == false then
+        L8_112 = _UPVALUE0_
+        L8_112 = L8_112.makeSprite
+        L9_113 = 30
+        L10_114 = 30
+        L11_115.img = "activity_black.png"
+        L8_112 = L8_112(L9_113, L10_114, L11_115)
+        L3_107.loadingAvatar = L8_112
+        L8_112 = L3_107.loadingAvatar
+        L9_113 = L8_112
+        L8_112 = L8_112.scale
+        L10_114 = 0.8
+        L8_112(L9_113, L10_114, L11_115)
+        L8_112 = L3_107.loadingAvatar
+        L8_112.alpha = 0.5
+        L8_112 = L3_107.tweetsGroup
+        L8_112 = L8_112.front
+        L9_113 = L8_112
+        L8_112 = L8_112.insert
+        L10_114 = L3_107.loadingAvatar
+        L8_112(L9_113, L10_114)
+        L8_112 = L5_109.isDownloadingAvatar
+        if L8_112 == false then
+          function L8_112(A0_123)
+            local L1_124
+            L1_124 = _UPVALUE0_
+            L1_124 = L1_124.content
+            L1_124 = L1_124.rows
+            L1_124 = L1_124[_UPVALUE1_]
+            L1_124 = L1_124.id
+            if A0_123.status == 200 then
+              L1_124.hasAvatar = true
+            else
+              os.remove(system.pathForFile(L1_124.avatarPath, L1_124.avatarDir))
+            end
+            _UPVALUE2_(_UPVALUE1_)
+            L1_124.hasDownloadedAvatar = true
+            L1_124.isDownloadingAvatar = false
+          end
+          L9_113 = network
+          L9_113 = L9_113.download
+          L10_114 = L5_109.user
+          L10_114 = L10_114.profile_image_url
+          L14_118 = L5_109.avatarDir
+          L9_113(L10_114, L11_115, L12_116, L13_117, L14_118)
+          L5_109.isDownloadingAvatar = true
+        end
+      end
+    else
+      L8_112 = _UPVALUE2_
+      L9_113 = L4_108
+      L8_112(L9_113)
+    end
+    L8_112 = display
+    L8_112 = L8_112.newText
+    L9_113 = {}
+    L10_114 = L5_109.user
+    L10_114 = L10_114.name
+    L9_113.text = L10_114
+    L10_114 = _UPVALUE3_
+    L10_114 = L10_114.fonts
+    L10_114 = L10_114.bold
+    L9_113.font = L10_114
+    L9_113.fontSize = 13
+    L8_112 = L8_112(L9_113)
+    L10_114 = L8_112
+    L9_113 = L8_112.setReferencePoint
+    L9_113(L10_114, L11_115)
+    L8_112.x = 60
+    L8_112.y = 9
+    L10_114 = L8_112
+    L9_113 = L8_112.setFillColor
+    L14_118 = 215
+    L9_113(L10_114, L11_115, L12_116, L13_117, L14_118)
+    L9_113 = L3_107.tweetsGroup
+    L9_113 = L9_113.front
+    L10_114 = L9_113
+    L9_113 = L9_113.insert
+    L9_113(L10_114, L11_115)
+    L9_113 = display
+    L9_113 = L9_113.newText
+    L10_114 = {}
+    L10_114.text = L11_115
+    L10_114.font = L11_115
+    L10_114.fontSize = 12
+    L9_113 = L9_113(L10_114)
+    L10_114 = L9_113.setReferencePoint
+    L10_114(L11_115, L12_116)
+    L10_114 = L8_112.x
+    L10_114 = L10_114 + L11_115
+    L10_114 = L10_114 + 2
+    L9_113.x = L10_114
+    L10_114 = L8_112.y
+    L10_114 = L10_114 + 0.5
+    L9_113.y = L10_114
+    L10_114 = L9_113.setFillColor
+    L14_118 = 0
+    L15_119 = 100
+    L10_114(L11_115, L12_116, L13_117, L14_118, L15_119)
+    L10_114 = L3_107.tweetsGroup
+    L10_114 = L10_114.front
+    L10_114 = L10_114.insert
+    L10_114(L11_115, L12_116)
+    L10_114 = display
+    L10_114 = L10_114.newText
+    L11_115.text = L12_116
+    L11_115.width = L12_116
+    L11_115.height = 0
+    L11_115.font = L12_116
+    L11_115.fontSize = 12
+    L10_114 = L10_114(L11_115)
+    L11_115(L12_116, L13_117)
+    L10_114.x = L11_115
+    L10_114.y = 26
+    L14_118 = 0
+    L15_119 = 0
+    L16_120 = 175
+    L11_115(L12_116, L13_117, L14_118, L15_119, L16_120)
+    L11_115(L12_116, L13_117)
+    if L11_115 == true then
+      L12_116.text = L13_117
+      L12_116.width = L13_117
+      L12_116.height = 0
+      L12_116.font = L13_117
+      L12_116.fontSize = 12
+      L14_118 = display
+      L14_118 = L14_118.TopLeftReferencePoint
+      L12_116(L13_117, L14_118)
+      L11_115.x = 60
+      L11_115.y = L12_116
+      L14_118 = 59
+      L15_119 = 136
+      L16_120 = 204
+      L12_116(L13_117, L14_118, L15_119, L16_120)
+      L14_118 = L11_115
+      L12_116(L13_117, L14_118)
+      L14_118 = ".jpg"
+      L14_118 = L5_109.entities
+      L14_118 = L14_118.media
+      L14_118 = L14_118[1]
+      L14_118 = L14_118.imageWidth
+      L15_119 = L5_109.entities
+      L15_119 = L15_119.media
+      L15_119 = L15_119[1]
+      L15_119 = L15_119.imageHeight
+      L16_120 = L11_115.x
+      L17_121 = L11_115.y
+      L18_122 = L11_115.height
+      L17_121 = L17_121 + L18_122
+      L17_121 = L17_121 + 2
+      L18_122 = L5_109.hasImage
+      if L18_122 == false then
+        L18_122 = L5_109.hasDownloadedImage
+        if L18_122 == false then
+          L18_122 = _UPVALUE0_
+          L18_122 = L18_122.makeSprite
+          L18_122 = L18_122(0, 0, {
+            img = "activity_black.png"
+          })
+          L3_107.loadingMedia = L18_122
+          L18_122 = L3_107.loadingMedia
+          L18_122 = L18_122.setReferencePoint
+          L18_122(L18_122, display.TopCenterReferencePoint)
+          L18_122 = L3_107.loadingMedia
+          L18_122.x = L16_120 + L14_118 * 0.5
+          L18_122 = L3_107.loadingMedia
+          L18_122.y = L17_121 + 8
+          L18_122 = L3_107.tweetsGroup
+          L18_122 = L18_122.insert
+          L18_122(L18_122, L3_107.loadingMedia)
+          L18_122 = L5_109.isDownloadingImage
+          if L18_122 == false then
+            function L18_122(A0_125)
+              local L1_126
+              L1_126 = _UPVALUE0_
+              L1_126 = L1_126.content
+              L1_126 = L1_126.rows
+              L1_126 = L1_126[_UPVALUE1_]
+              L1_126 = L1_126.id
+              if A0_125.status == 200 then
+                L1_126.hasImage = true
+              else
+                os.remove(system.pathForFile(_UPVALUE2_, _UPVALUE3_))
+              end
+              _UPVALUE4_(_UPVALUE1_, _UPVALUE2_, _UPVALUE3_, _UPVALUE5_, _UPVALUE6_, _UPVALUE7_, _UPVALUE8_)
+              L1_126.hasDownloadedImage = true
+              L1_126.isDownloadingImage = false
+            end
+            network.download(L5_109.entities.media[1].media_url_https, "GET", L18_122, L12_116, L13_117)
+            L5_109.isDownloadingImage = true
+          end
+        end
+      else
+        L18_122 = _UPVALUE4_
+        L18_122(L4_108, L12_116, L13_117, L16_120, L17_121, L14_118, L15_119)
+      end
+    end
+    if L11_115 == true then
+      L5_109.isFirstAnim = false
+      L13_117.time = 400
+      L13_117.alpha = 0
+      L11_115(L12_116, L13_117)
+      if L11_115 == "newer" then
+        for L14_118 = 2, #L12_116 do
+          L15_119 = _UPVALUE1_
+          L15_119 = L15_119.content
+          L15_119 = L15_119.rows
+          L15_119 = L15_119[L14_118]
+          L15_119 = L15_119.view
+          if L15_119 then
+            L16_120 = L15_119._proxy
+            if L16_120 then
+              L16_120 = _UPVALUE5_
+              L16_120 = L16_120.from
+              L17_121 = L15_119
+              L18_122 = {}
+              L18_122.time = 200
+              L18_122.y = L15_119.y - L1_105
+              L18_122.transition = easing.outCubic
+              L16_120(L17_121, L18_122)
+            end
+          end
+        end
+      end
+    end
+    L11_115(L12_116, L13_117)
+  end
+  function L45_46(A0_127)
+    local L1_128, L2_129, L3_130, L4_131, L5_132, L6_133, L7_134, L8_135, L9_136, L10_137
+    L1_128 = _UPVALUE0_
+    L1_128 = L1_128.decode
+    L2_129 = A0_127.response
+    L1_128 = L1_128(L2_129)
+    L2_129 = L1_128.tweets
+    L3_130 = A0_127.sort
+    L4_131[L3_130] = false
+    if L3_130 == "older" then
+      L4_131.loadMore = L5_132
+      L4_131(L5_132, L6_133)
+      if L4_131 == 1 then
+        L5_132.notVisible = false
+        if L4_131 then
+          if L6_133 then
+            L6_133.isVisible = true
+          end
+        end
+      end
+      if L4_131 > 0 then
+        _UPVALUE3_ = L4_131
+      end
+    end
+    for L7_134 = 1, #L2_129 do
+      L8_135 = 60
+      L9_136 = L2_129[L7_134]
+      L9_136.isFirstAnim = true
+      L9_136 = L2_129[L7_134]
+      L9_136.sort = L3_130
+      L9_136 = L2_129[L7_134]
+      L9_136.hasMedia = false
+      L9_136 = L2_129[L7_134]
+      L9_136 = L9_136.entities
+      L9_136 = L9_136.media
+      if L9_136 then
+        L9_136 = L2_129[L7_134]
+        L9_136 = L9_136.entities
+        L9_136 = L9_136.media
+        L9_136 = L9_136[1]
+        if L9_136 then
+          L9_136 = L2_129[L7_134]
+          L9_136 = L9_136.entities
+          L9_136 = L9_136.media
+          L9_136 = L9_136[1]
+          L9_136 = L9_136.type
+          if L9_136 == "photo" then
+            L9_136 = L2_129[L7_134]
+            L9_136 = L9_136.entities
+            L9_136 = L9_136.media
+            L9_136 = L9_136[1]
+            L9_136 = L9_136.url
+            if L9_136 then
+              L9_136 = L2_129[L7_134]
+              L9_136 = L9_136.entities
+              L9_136 = L9_136.media
+              L9_136 = L9_136[1]
+              L10_137 = L2_129[L7_134]
+              L10_137 = L10_137.entities
+              L10_137 = L10_137.media
+              L10_137 = L10_137[1]
+              L10_137 = L10_137.sizes
+              L10_137 = L10_137.medium
+              L10_137 = L10_137.h
+              L10_137 = L10_137 * _UPVALUE4_
+              L9_136.imageHeight = L10_137
+              L9_136 = L2_129[L7_134]
+              L9_136 = L9_136.entities
+              L9_136 = L9_136.media
+              L9_136 = L9_136[1]
+              L10_137 = L2_129[L7_134]
+              L10_137 = L10_137.entities
+              L10_137 = L10_137.media
+              L10_137 = L10_137[1]
+              L10_137 = L10_137.sizes
+              L10_137 = L10_137.medium
+              L10_137 = L10_137.w
+              L10_137 = L10_137 * _UPVALUE5_
+              L9_136.imageWidth = L10_137
+              L9_136 = _W
+              L9_136 = L9_136 - 70
+              L10_137 = L2_129[L7_134]
+              L10_137 = L10_137.entities
+              L10_137 = L10_137.media
+              L10_137 = L10_137[1]
+              L10_137 = L10_137.imageWidth
+              L9_136 = L9_136 / L10_137
+              L10_137 = L2_129[L7_134]
+              L10_137 = L10_137.entities
+              L10_137 = L10_137.media
+              L10_137 = L10_137[1]
+              L10_137.imageHeight = L2_129[L7_134].entities.media[1].imageHeight * L9_136
+              L10_137 = L2_129[L7_134]
+              L10_137 = L10_137.entities
+              L10_137 = L10_137.media
+              L10_137 = L10_137[1]
+              L10_137.imageWidth = L2_129[L7_134].entities.media[1].imageWidth * L9_136
+              L10_137 = L2_129[L7_134]
+              L10_137.hasMedia = true
+              L10_137 = L2_129[L7_134]
+              L10_137.hasImage = false
+              L10_137 = L2_129[L7_134]
+              L10_137.isDownloadingImage = false
+              L10_137 = L2_129[L7_134]
+              L10_137.hasDownloadedImage = false
+              L10_137 = L2_129[L7_134]
+              L10_137.isFirstAnimImage = true
+              L10_137 = L2_129[L7_134]
+              L10_137.text = L2_129[L7_134].text:gsub(" " .. L2_129[L7_134].entities.media[1].url, "")
+              L10_137 = L2_129[L7_134]
+              L10_137.text = L2_129[L7_134].text:gsub(L2_129[L7_134].entities.media[1].url, "")
+              L10_137 = display
+              L10_137 = L10_137.newText
+              L10_137 = L10_137({
+                text = L2_129[L7_134].entities.media[1].url,
+                width = _W - 70,
+                height = 0,
+                font = _UPVALUE6_.fonts.light,
+                fontSize = 12
+              })
+              L8_135 = L8_135 + 22 + L2_129[L7_134].entities.media[1].imageHeight + L10_137.height
+              L10_137 = _UPVALUE7_.delete(L10_137)
+            end
+          end
+        end
+      end
+      L9_136 = display
+      L9_136 = L9_136.newText
+      L10_137 = {}
+      L10_137.text = L2_129[L7_134].text
+      L10_137.width = _W - 70
+      L10_137.height = 0
+      L10_137.font = _UPVALUE6_.fonts.light
+      L10_137.fontSize = 12
+      L9_136 = L9_136(L10_137)
+      L10_137 = _UPVALUE8_
+      L10_137 = L10_137(0, L9_136.height - 30)
+      L10_137 = L8_135 + L10_137
+      L9_136 = _UPVALUE7_.delete(L9_136)
+      L2_129[L7_134].avatarPath, L2_129[L7_134].avatarDir = "twitterimages-" .. L2_129[L7_134].user.screen_name .. ".jpg", system.TemporaryDirectory
+      if io.open(system.pathForFile(L2_129[L7_134].avatarPath, L2_129[L7_134].avatarDir)) then
+        L2_129[L7_134].hasAvatar = true
+        io.open(system.pathForFile(L2_129[L7_134].avatarPath, L2_129[L7_134].avatarDir)):close()
+      else
+        L2_129[L7_134].hasAvatar = false
+      end
+      L2_129[L7_134].isDownloadingAvatar = false
+      L2_129[L7_134].hasDownloadedAvatar = false
+      _UPVALUE2_:insertRow({
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        onRender = _UPVALUE9_,
+        onEvent = _UPVALUE10_,
+        height = L10_137,
+        rowNr = 2,
+        id = L2_129[L7_134]
+      })
+      if tonumber(_UPVALUE11_) < tonumber(L2_129[L7_134].id_str) then
+        _UPVALUE11_ = L2_129[L7_134].id_str
+      end
+    end
+    if L4_131 == true then
+      L6_133.dontRenderOnTouch = true
+      L7_134 = {
+        L8_135,
+        L9_136,
+        L10_137,
+        0
+      }
+      L8_135 = 0
+      L9_136 = 0
+      L10_137 = 0
+      L6_133.lineColor = L7_134
+      L7_134 = {
+        L8_135,
+        L9_136,
+        L10_137,
+        0
+      }
+      L8_135 = 0
+      L9_136 = 0
+      L10_137 = 0
+      L6_133.rowColor = L7_134
+      L7_134 = _UPVALUE12_
+      L6_133.onRender = L7_134
+      L6_133.height = 40
+      L4_131(L5_132, L6_133)
+    end
+  end
+  function L46_47(A0_138)
+    local L1_139
+    L1_139 = _UPVALUE0_
+    L1_139 = L1_139[A0_138.sort]
+    if L1_139 == false then
+      L1_139 = _UPVALUE0_
+      L1_139[A0_138.sort] = true
+      function L1_139(A0_140)
+        A0_140.sort = _UPVALUE0_.sort
+        _UPVALUE1_(A0_140)
+      end
+      _UPVALUE2_.network_request("getMojangTweets", L1_139, {
+        lastTweetID = _UPVALUE3_,
+        start = _UPVALUE4_,
+        sort = A0_138.sort,
+        pop = _UPVALUE5_
+      })
+    end
+  end
+  L47_48 = _UPVALUE1_
+  L47_48 = L47_48.addRuntimeListener
+  L48_49 = "fetchTweets"
+  L47_48(L48_49, L46_47)
+  function L47_48()
+    _UPVALUE0_({sort = "newer"})
+  end
+  L48_49 = timer
+  L48_49 = L48_49.performWithDelay
+  L48_49 = L48_49(6000, L47_48, 0)
+  L16_17 = L48_49
+  function L48_49(A0_141)
+    _UPVALUE0_({sort = "older"})
+    _UPVALUE1_.removeRuntimeListener("sceneLoaded", A0_141.self_listenerid)
+  end
+  _UPVALUE1_.addRuntimeListener("sceneLoaded", L48_49)
+  return L0_1
+end

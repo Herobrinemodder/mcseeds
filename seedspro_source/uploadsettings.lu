@@ -1,0 +1,241 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("subscriptions")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.imgSuff
+  L8_9 = _UPVALUE0_
+  L8_9 = L8_9.udid
+  L9_10 = math
+  L9_10 = L9_10.abs
+  L10_11 = _UPVALUE1_
+  L10_11 = L10_11.getSceneProperties
+  L10_11 = L10_11()
+  L11_12 = L10_11.prevScene
+  L12_13 = L10_11.taps
+  L13_14 = _UPVALUE0_
+  L13_14 = L13_14.session
+  L13_14 = L13_14 + 1
+  L14_15 = _UPVALUE0_
+  L14_15.session = L13_14
+  L14_15 = _UPVALUE1_
+  L14_15 = L14_15.makeBlurryBg
+  L14_15 = L14_15()
+  L16_17 = L14_15
+  L15_16 = L14_15.addEventListener
+  L17_18 = "touch"
+  function L18_19()
+    local L0_24, L1_25
+    L0_24 = true
+    return L0_24
+  end
+  L15_16(L16_17, L17_18, L18_19)
+  L16_17 = L2_3
+  L15_16 = L2_3.insert
+  L17_18 = L14_15
+  L15_16(L16_17, L17_18)
+  L15_16 = _UPVALUE2_
+  L15_16 = L15_16.createSideMenu
+  L16_17 = L1_2
+  L15_16 = L15_16(L16_17)
+  L17_18 = L0_1
+  L16_17 = L0_1.insert
+  L18_19 = L15_16
+  L16_17(L17_18, L18_19)
+  L0_1.side_menu = L15_16
+  L17_18 = L15_16
+  L16_17 = L15_16.toBack
+  L16_17(L17_18)
+  L16_17 = _UPVALUE3_
+  L16_17 = L16_17.newTableView
+  L17_18 = {}
+  L17_18.top = 64
+  L18_19 = _H
+  L18_19 = L18_19 - 64
+  L17_18.height = L18_19
+  L18_19 = {
+    L19_20,
+    L20_21,
+    L21_22,
+    L22_23
+  }
+  L19_20 = 0
+  L20_21 = 0
+  L21_22 = 0
+  L22_23 = 0
+  L17_18.bgColor = L18_19
+  L17_18.bottomPadding = 10
+  L16_17 = L16_17(L17_18)
+  L18_19 = L3_4
+  L17_18 = L3_4.insert
+  L19_20 = L16_17
+  L17_18(L18_19, L19_20)
+  function L17_18(A0_26)
+    local L1_27, L2_28, L3_29, L4_30, L5_31, L6_32, L7_33, L8_34
+    L1_27 = A0_26.target
+    L1_27 = L1_27.bottom_line
+    L2_28 = A0_26.target
+    L2_28 = L2_28.background
+    L3_29 = A0_26.phase
+    L4_30 = A0_26.target
+    L4_30 = L4_30.text
+    L5_31 = A0_26.id
+    L1_27.isVisible = false
+    L7_33 = L2_28
+    L6_32 = L2_28.setFillColor
+    L8_34 = 217
+    L6_32(L7_33, L8_34, 217, 217)
+    L7_33 = L4_30
+    L6_32 = L4_30.setFillColor
+    L8_34 = 255
+    L6_32(L7_33, L8_34, 255, 255)
+    if L3_29 == "release" or L3_29 == "tap" then
+      function L6_32()
+        _UPVALUE0_.isVisible = true
+        _UPVALUE1_:setFillColor(unpack(_UPVALUE1_.color))
+        _UPVALUE2_:setFillColor(0, 0, 0, 240)
+      end
+      L7_33 = timer
+      L7_33 = L7_33.performWithDelay
+      L8_34 = 100
+      L7_33(L8_34, L6_32)
+      if L5_31 == "Block users" then
+        L7_33 = require
+        L8_34 = "blockedusers"
+        L7_33 = L7_33(L8_34)
+        L8_34 = L7_33.make
+        L8_34 = L8_34(L7_33)
+        _UPVALUE0_:insert(L8_34)
+      elseif L5_31 == "Ignore users" then
+        L7_33 = require
+        L8_34 = "ignoredusers"
+        L7_33 = L7_33(L8_34)
+        L8_34 = L7_33.make
+        L8_34 = L8_34(L7_33)
+        _UPVALUE0_:insert(L8_34)
+      end
+    end
+    L6_32 = true
+    return L6_32
+  end
+  function L18_19(A0_35)
+    local L1_36, L2_37, L3_38
+    L1_36 = A0_35.target
+    L1_36 = L1_36.height
+    L2_37 = A0_35.view
+    L3_38 = A0_35.id
+    A0_35.target.background = display.newRect(0, 0, _W, L1_36 + 1)
+    A0_35.target.background:setFillColor(245, 245, 245, 255)
+    A0_35.target.background.color = {
+      245,
+      245,
+      245,
+      255
+    }
+    L2_37:insert(A0_35.target.background)
+    A0_35.target.text = display.newText({
+      text = A0_35.id,
+      font = _UPVALUE0_.fonts.light,
+      fontSize = 12
+    })
+    A0_35.target.text:setReferencePoint(display.CenterLeftReferencePoint)
+    A0_35.target.text:setPosition(12, L1_36 * 0.5 - 6)
+    A0_35.target.text:setFillColor(0, 0, 0, 240)
+    L2_37:insert(A0_35.target.text)
+    A0_35.target.bottom_line = display.newRect(0, L1_36, _W, 1)
+    A0_35.target.bottom_line:setFillColor(0, 0, 0, 30)
+    L2_37:insert(A0_35.target.bottom_line)
+  end
+  function L19_20(A0_39)
+    _UPVALUE0_:insertRow({
+      id = A0_39,
+      height = 40,
+      onEvent = _UPVALUE1_,
+      onRender = _UPVALUE2_,
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      }
+    })
+  end
+  L20_21 = L19_20
+  L21_22 = "Block users"
+  L20_21(L21_22)
+  L20_21 = L19_20
+  L21_22 = "Ignore users"
+  L20_21(L21_22)
+  L20_21 = _UPVALUE1_
+  L20_21 = L20_21.makeToolbar
+  L21_22 = "Upload settings"
+  L20_21 = L20_21(L21_22)
+  L22_23 = L4_5
+  L21_22 = L4_5.insert
+  L21_22(L22_23, L20_21)
+  function L21_22(A0_40)
+    _UPVALUE0_.remove({"prevScene"})
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE1_, "toRightNew")
+    return true
+  end
+  L22_23 = _UPVALUE3_
+  L22_23 = L22_23.newButton
+  L22_23 = L22_23({
+    width = 50,
+    height = 50,
+    default = "back.png",
+    over = "back-over.png",
+    onRelease = L21_22
+  })
+  L22_23:setReferencePoint(display.CenterLeftReferencePoint)
+  L22_23.x = -1
+  L22_23.y = L20_21.yCenter
+  L4_5:insert(L22_23)
+  L4_5:toFront()
+  return L0_1
+end

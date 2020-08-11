@@ -1,0 +1,895 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("gameNetwork")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37, L37_38, L38_39, L39_40
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.scaleFrom320
+  L8_9 = _UPVALUE1_
+  L8_9 = L8_9.getScriptFile
+  L8_9 = L8_9()
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.imgSuff
+  L10_11 = math
+  L10_11 = L10_11.floor
+  L11_12 = math
+  L11_12 = L11_12.ceil
+  L12_13 = _UPVALUE1_
+  L12_13 = L12_13.getSceneProperties
+  L12_13 = L12_13()
+  L13_14 = _UPVALUE1_
+  L13_14 = L13_14.getAppType
+  L13_14 = L13_14()
+  L14_15 = L12_13.pageLabel
+  L15_16 = "001"
+  L16_17 = _UPVALUE0_
+  L16_17 = L16_17.os
+  if L16_17 == "iPhone OS" then
+    if L13_14 == true then
+      L15_16 = "001"
+    elseif L13_14 == false then
+      L15_16 = "002"
+    end
+  else
+    L16_17 = _UPVALUE0_
+    L16_17 = L16_17.os
+    if L16_17 == "Android" then
+      if L13_14 == true then
+        L15_16 = "CgkItISbsNoUEAIQAQ"
+      elseif L13_14 == false then
+        L15_16 = "CgkIteat4q8BEAIQAQ"
+      end
+    end
+  end
+  L16_17 = 0
+  L17_18 = 0
+  L18_19 = 0
+  L19_20, L20_21 = nil, nil
+  L21_22 = _UPVALUE0_
+  L21_22 = L21_22.session
+  L21_22 = L21_22 + 1
+  L22_23 = _UPVALUE0_
+  L22_23.session = L21_22
+  L22_23 = _UPVALUE1_
+  L22_23 = L22_23.makeBlurryBg
+  L22_23 = L22_23()
+  L24_25 = L22_23
+  L23_24 = L22_23.addEventListener
+  L25_26 = "touch"
+  function L26_27()
+    local L0_41, L1_42
+    L0_41 = true
+    return L0_41
+  end
+  L23_24(L24_25, L25_26, L26_27)
+  L24_25 = L2_3
+  L23_24 = L2_3.insert
+  L25_26 = L22_23
+  L23_24(L24_25, L25_26)
+  L23_24 = _UPVALUE2_
+  L23_24 = L23_24.createSideMenu
+  L24_25 = L1_2
+  L23_24 = L23_24(L24_25)
+  L25_26 = L0_1
+  L24_25 = L0_1.insert
+  L26_27 = L23_24
+  L24_25(L25_26, L26_27)
+  L0_1.side_menu = L23_24
+  L25_26 = L23_24
+  L24_25 = L23_24.toBack
+  L24_25(L25_26)
+  L24_25 = L11_12
+  L25_26 = 14 * L7_8
+  L24_25 = L24_25(L25_26)
+  L25_26 = display
+  L25_26 = L25_26.newText
+  L26_27 = {}
+  L26_27.text = "Which one of these two uploads is most popular?"
+  L26_27.x = 0
+  L26_27.y = 0
+  L27_28 = _W
+  L27_28 = L27_28 - 60
+  L26_27.width = L27_28
+  L26_27.height = 0
+  L26_27.font = "Hobo Std"
+  L26_27.fontSize = L24_25
+  L25_26 = L25_26(L26_27)
+  L27_28 = L25_26
+  L26_27 = L25_26.setReferencePoint
+  L28_29 = display
+  L28_29 = L28_29.TopCenterReferencePoint
+  L26_27(L27_28, L28_29)
+  L25_26.x = L5_6
+  L26_27 = L10_11
+  L27_28 = _H
+  L27_28 = L27_28 - 480
+  L27_28 = L27_28 * 0.1
+  L27_28 = 70 + L27_28
+  L26_27 = L26_27(L27_28)
+  L25_26.y = L26_27
+  L27_28 = L3_4
+  L26_27 = L3_4.insert
+  L28_29 = L25_26
+  L26_27(L27_28, L28_29)
+  L26_27 = _UPVALUE0_
+  L26_27 = L26_27.gamecenter
+  if L26_27 == true then
+    function L26_27(A0_43)
+      if A0_43.localPlayerScore ~= nil then
+        _UPVALUE0_ = tonumber(A0_43.localPlayerScore.value)
+        _UPVALUE1_:setText(_UPVALUE0_)
+      end
+    end
+    L27_28 = _UPVALUE3_
+    L27_28 = L27_28.request
+    L28_29 = "loadScores"
+    L29_30 = {}
+    L29_30.listener = L26_27
+    L27_28(L28_29, L29_30)
+  end
+  L26_27 = 1
+  L27_28 = _W
+  L27_28 = L27_28 - 60
+  L28_29 = L10_11
+  L29_30 = 144 * L7_8
+  L28_29 = L28_29(L29_30)
+  L29_30 = L25_26.y
+  L30_31 = L25_26.height
+  L29_30 = L29_30 + L30_31
+  L30_31 = L25_26.y
+  L30_31 = L30_31 - 70
+  L29_30 = L29_30 + L30_31
+  L29_30 = L29_30 + 20
+  L30_31 = L29_30 + L28_29
+  L30_31 = L30_31 + 20
+  function L31_32(A0_44)
+    local L1_45, L2_46, L3_47, L4_48, L5_49
+    L1_45 = display
+    L1_45 = L1_45.newGroup
+    L1_45 = L1_45()
+    L2_46 = _UPVALUE0_
+    L3_47 = L2_46
+    L2_46 = L2_46.insert
+    L4_48 = L1_45
+    L2_46(L3_47, L4_48)
+    L2_46 = display
+    L2_46 = L2_46.newGroup
+    L2_46 = L2_46()
+    L3_47 = _UPVALUE0_
+    L4_48 = L3_47
+    L3_47 = L3_47.insert
+    L5_49 = L2_46
+    L3_47(L4_48, L5_49)
+    L3_47 = _UPVALUE1_
+    L3_47 = L3_47.makeSprite
+    L4_48 = _UPVALUE2_
+    L5_49 = _UPVALUE3_
+    L5_49 = L5_49 + _UPVALUE4_ * 0.5
+    L3_47 = L3_47(L4_48, L5_49)
+    L5_49 = L1_45
+    L4_48 = L1_45.insert
+    L4_48(L5_49, L3_47)
+    L4_48 = _UPVALUE1_
+    L4_48 = L4_48.makeSprite
+    L5_49 = _UPVALUE2_
+    L4_48 = L4_48(L5_49, _UPVALUE5_ + _UPVALUE4_ * 0.5)
+    L5_49 = L1_45.insert
+    L5_49(L1_45, L4_48)
+    function L5_49(A0_50)
+      local L1_51, L2_52, L3_53, L4_54, L5_55, L6_56, L7_57, L8_58, L9_59, L10_60, L11_61, L12_62, L13_63, L14_64, L15_65, L16_66, L17_67, L18_68, L19_69, L20_70, L21_71, L22_72, L23_73, L24_74, L25_75, L26_76
+      L1_51 = A0_50.response
+      L2_52 = display
+      L2_52 = L2_52.newGroup
+      L2_52 = L2_52()
+      L3_53 = _UPVALUE0_
+      L4_54 = L3_53
+      L3_53 = L3_53.insert
+      L5_55 = L2_52
+      L3_53(L4_54, L5_55)
+      L3_53 = display
+      L3_53 = L3_53.newGroup
+      L3_53 = L3_53()
+      L3_53.isVisible = false
+      L4_54 = _UPVALUE0_
+      L5_55 = L4_54
+      L4_54 = L4_54.insert
+      L6_56 = L3_53
+      L4_54(L5_55, L6_56)
+      L4_54 = 0
+      L5_55 = {}
+      L6_56 = _UPVALUE1_
+      L6_56 = L6_56.decode
+      L6_56 = L6_56(L7_57)
+      for L10_60 = 1, 2 do
+        L11_61 = L6_56[L10_60]
+        L12_62 = L11_61.favorited
+        L13_63 = L11_61.filename
+        L14_64 = L11_61.platform
+        L15_65 = L11_61.version
+        L16_66 = L11_61.votes
+        L17_67 = L11_61.stars
+        L18_68 = L11_61.date
+        L19_69 = L11_61.id
+        L20_70 = math
+        L20_70 = L20_70.sqrt
+        L21_71 = "Trivia"
+        L22_72 = L19_69
+        L23_73 = "-"
+        L24_74 = L13_63
+        L25_75 = "-trivia.jpg"
+        L21_71 = L21_71 .. L22_72 .. L23_73 .. L24_74 .. L25_75
+        L22_72 = system
+        L22_72 = L22_72.TemporaryDirectory
+        L23_73 = tonumber
+        L24_74 = L12_62
+        L23_73 = L23_73(L24_74)
+        if L23_73 < 0 then
+          L12_62 = 0
+        end
+        L23_73 = L20_70
+        L24_74 = tonumber
+        L25_75 = L17_67
+        L26_76 = L24_74(L25_75)
+        L23_73 = L23_73(L24_74, L25_75, L26_76, L24_74(L25_75))
+        L24_74 = L20_70
+        L25_75 = tonumber
+        L26_76 = L12_62
+        L26_76 = L25_75(L26_76)
+        L24_74 = L24_74(L25_75, L26_76, L25_75(L26_76))
+        L23_73 = L23_73 + L24_74
+        L5_55[L10_60] = L23_73
+        L23_73 = L5_55[L10_60]
+        L24_74 = L5_55[L10_60]
+        if L23_73 ~= L24_74 then
+          L5_55[L10_60] = 0
+        end
+        function L23_73(A0_77)
+          local L1_78, L2_79, L3_80, L4_81, L5_82, L6_83
+          L1_78 = A0_77.status
+          if L1_78 == 200 then
+            L1_78 = _UPVALUE0_
+            L2_79 = _UPVALUE1_
+            L2_79 = L2_79.session
+            if L1_78 == L2_79 then
+              L1_78 = _UPVALUE2_
+              L2_79 = _UPVALUE3_
+              if L1_78 == L2_79 then
+                function L1_78(A0_84)
+                  local L1_85, L2_86, L3_87, L4_88, L5_89, L6_90
+                  L1_85 = A0_84.target
+                  L1_85 = L1_85.correct
+                  L2_86 = A0_84.target
+                  L2_86 = L2_86.wrong
+                  L3_87 = A0_84.target
+                  L4_88 = A0_84.phase
+                  L5_89 = A0_84.target
+                  L5_89 = L5_89.id
+                  if L4_88 == "press" then
+                    L3_87.alpha = 0.7
+                  elseif L4_88 == "moved" then
+                    L3_87.alpha = 1
+                  elseif L4_88 == "release" or L4_88 == "tap" then
+                    L6_90 = _UPVALUE0_
+                    if L5_89 ~= L6_90 then
+                      L6_90 = _UPVALUE0_
+                    else
+                      if L6_90 == "tie" then
+                        L1_85.isVisible = true
+                        L3_87.alpha = 0.7
+                        L6_90 = _UPVALUE1_
+                        L6_90.isVisible = true
+                        L6_90 = _UPVALUE2_
+                        L6_90 = L6_90 + 1
+                        _UPVALUE2_ = L6_90
+                        function L6_90(A0_91)
+                          if A0_91.action == "clicked" then
+                            _UPVALUE0_:setText(_UPVALUE1_)
+                            if _UPVALUE1_ > _UPVALUE2_ then
+                              _UPVALUE3_:setText(_UPVALUE1_)
+                              _UPVALUE2_ = _UPVALUE1_
+                            end
+                            transition.from(_UPVALUE0_, {
+                              time = 800,
+                              xScale = 3,
+                              yScale = 5,
+                              transition = easing.outElastic
+                            })
+                            _UPVALUE4_ = _UPVALUE5_.delete(_UPVALUE4_)
+                            _UPVALUE6_ = _UPVALUE6_ + 1
+                            _UPVALUE7_(_UPVALUE6_)
+                          end
+                        end
+                        native.showAlert("Correct!", "That's the correct answer! Current streak " .. _UPVALUE2_, {"Next"}, L6_90)
+                    end
+                    else
+                      L2_86.isVisible = true
+                      L3_87.alpha = 0.7
+                      L6_90 = _UPVALUE1_
+                      L6_90.isVisible = true
+                      L6_90 = _UPVALUE2_
+                      if L6_90 >= _UPVALUE4_ then
+                        L6_90 = _UPVALUE10_
+                        L6_90 = L6_90.gamecenter
+                        if L6_90 == true then
+                          L6_90 = _UPVALUE11_
+                          L6_90 = L6_90.request
+                          L6_90("setHighScore", {
+                            localPlayerScore = {category = _UPVALUE12_, value = _UPVALUE2_}
+                          })
+                        end
+                        L6_90 = _UPVALUE5_
+                        L6_90 = L6_90.setText
+                        L6_90(L6_90, _UPVALUE2_)
+                      end
+                      function L6_90(A0_92)
+                        if A0_92.action == "clicked" then
+                          if A0_92.index == 1 then
+                            _UPVALUE0_ = 0
+                            _UPVALUE1_:setText(_UPVALUE0_)
+                            transition.from(_UPVALUE1_, {
+                              time = 800,
+                              xScale = 3,
+                              yScale = 5,
+                              transition = easing.outElastic
+                            })
+                            _UPVALUE2_ = _UPVALUE3_.delete(_UPVALUE2_)
+                            _UPVALUE4_ = _UPVALUE4_ + 1
+                            _UPVALUE5_(_UPVALUE4_)
+                          elseif A0_92.index == 2 then
+                            native.showPopup("social", {
+                              service = "facebook",
+                              message = "I just got a streak of " .. _UPVALUE0_ .. " in 'Guess The Best Seed' (Minecraft Seeds Pro)! Think you can beat me?",
+                              image = {
+                                {
+                                  filename = "Icon@2x.png",
+                                  baseDir = system.ResourceDirectory
+                                }
+                              },
+                              url = "http://bit.ly/L91Mw2"
+                            })
+                            _UPVALUE0_ = 0
+                            _UPVALUE1_:setText(_UPVALUE0_)
+                            transition.from(_UPVALUE1_, {
+                              time = 800,
+                              xScale = 3,
+                              yScale = 5,
+                              transition = easing.outElastic
+                            })
+                            _UPVALUE2_ = _UPVALUE3_.delete(_UPVALUE2_)
+                            _UPVALUE4_ = _UPVALUE4_ + 1
+                            _UPVALUE5_(_UPVALUE4_)
+                          end
+                        end
+                      end
+                      native.showAlert("Wrong!", "Wrong answer. You lost your running streak of " .. _UPVALUE2_, {
+                        "Ok",
+                        "Post to facebook"
+                      }, L6_90)
+                    end
+                  end
+                  L6_90 = true
+                  return L6_90
+                end
+                L2_79 = _UPVALUE15_
+                if L2_79 == 1 then
+                  L2_79 = _UPVALUE11_
+                  L2_79 = L2_79.delete
+                  L3_80 = _UPVALUE16_
+                  L2_79 = L2_79(L3_80)
+                  _UPVALUE16_ = L2_79
+                  L2_79 = display
+                  L2_79 = L2_79.newText
+                  L3_80 = {}
+                  L4_81 = "Rating average: "
+                  L5_82 = _UPVALUE17_
+                  L6_83 = _UPVALUE15_
+                  L5_82 = L5_82[L6_83]
+                  L4_81 = L4_81 .. L5_82
+                  L3_80.text = L4_81
+                  L3_80.x = 0
+                  L3_80.y = 0
+                  L3_80.font = "Hobo Std"
+                  L3_80.fontSize = 14
+                  L2_79 = L2_79(L3_80)
+                  L4_81 = L2_79
+                  L3_80 = L2_79.setReferencePoint
+                  L5_82 = display
+                  L5_82 = L5_82.TopCenterReferencePoint
+                  L3_80(L4_81, L5_82)
+                  L3_80 = _UPVALUE18_
+                  L2_79.x = L3_80
+                  L3_80 = _UPVALUE19_
+                  L3_80 = L3_80 + 20
+                  L2_79.y = L3_80
+                  L3_80 = _UPVALUE5_
+                  L4_81 = L3_80
+                  L3_80 = L3_80.insert
+                  L5_82 = L2_79
+                  L3_80(L4_81, L5_82)
+                  L3_80 = display
+                  L3_80 = L3_80.newRect
+                  L4_81 = 0
+                  L5_82 = 0
+                  L6_83 = _UPVALUE20_
+                  L3_80 = L3_80(L4_81, L5_82, L6_83, _UPVALUE21_)
+                  L5_82 = L3_80
+                  L4_81 = L3_80.setReferencePoint
+                  L6_83 = display
+                  L6_83 = L6_83.TopCenterReferencePoint
+                  L4_81(L5_82, L6_83)
+                  L4_81 = _UPVALUE18_
+                  L3_80.x = L4_81
+                  L4_81 = _UPVALUE19_
+                  L3_80.y = L4_81
+                  L5_82 = L3_80
+                  L4_81 = L3_80.setFillColor
+                  L6_83 = 0
+                  L4_81(L5_82, L6_83, 0, 0)
+                  L4_81 = _UPVALUE22_
+                  L5_82 = L4_81
+                  L4_81 = L4_81.insert
+                  L6_83 = L3_80
+                  L4_81(L5_82, L6_83)
+                  L4_81 = display
+                  L4_81 = L4_81.newRect
+                  L5_82 = 0
+                  L6_83 = 0
+                  L4_81 = L4_81(L5_82, L6_83, _UPVALUE20_, _UPVALUE21_)
+                  L6_83 = L4_81
+                  L5_82 = L4_81.setReferencePoint
+                  L5_82(L6_83, display.TopCenterReferencePoint)
+                  L5_82 = _UPVALUE18_
+                  L4_81.x = L5_82
+                  L5_82 = _UPVALUE19_
+                  L4_81.y = L5_82
+                  L6_83 = L4_81
+                  L5_82 = L4_81.setFillColor
+                  L5_82(L6_83, 0, 255, 0)
+                  L4_81.isVisible = false
+                  L5_82 = _UPVALUE22_
+                  L6_83 = L5_82
+                  L5_82 = L5_82.insert
+                  L5_82(L6_83, L4_81)
+                  L5_82 = display
+                  L5_82 = L5_82.newRect
+                  L6_83 = 0
+                  L5_82 = L5_82(L6_83, 0, _UPVALUE20_, _UPVALUE21_)
+                  L6_83 = L5_82.setReferencePoint
+                  L6_83(L5_82, display.TopCenterReferencePoint)
+                  L6_83 = _UPVALUE18_
+                  L5_82.x = L6_83
+                  L6_83 = _UPVALUE19_
+                  L5_82.y = L6_83
+                  L6_83 = L5_82.setFillColor
+                  L6_83(L5_82, 255, 0, 0)
+                  L5_82.isVisible = false
+                  L6_83 = _UPVALUE22_
+                  L6_83 = L6_83.insert
+                  L6_83(L6_83, L5_82)
+                  L6_83 = _UPVALUE23_
+                  L6_83 = L6_83.newButton
+                  L6_83 = L6_83({
+                    default = _UPVALUE24_,
+                    baseDir = _UPVALUE25_,
+                    width = _UPVALUE20_,
+                    height = _UPVALUE21_,
+                    id = _UPVALUE15_,
+                    onEvent = L1_78
+                  })
+                  L6_83:setReferencePoint(display.TopCenterReferencePoint)
+                  L6_83.x = _UPVALUE18_
+                  L6_83.y = _UPVALUE19_
+                  L6_83.correct = L4_81
+                  L6_83.wrong = L5_82
+                  _UPVALUE22_:insert(L6_83)
+                else
+                  L2_79 = _UPVALUE15_
+                  if L2_79 == 2 then
+                    L2_79 = _UPVALUE11_
+                    L2_79 = L2_79.delete
+                    L3_80 = _UPVALUE26_
+                    L2_79 = L2_79(L3_80)
+                    _UPVALUE26_ = L2_79
+                    L2_79 = display
+                    L2_79 = L2_79.newText
+                    L3_80 = {}
+                    L4_81 = "Rating average: "
+                    L5_82 = _UPVALUE17_
+                    L6_83 = _UPVALUE15_
+                    L5_82 = L5_82[L6_83]
+                    L4_81 = L4_81 .. L5_82
+                    L3_80.text = L4_81
+                    L3_80.x = 0
+                    L3_80.y = 0
+                    L3_80.font = "Hobo Std"
+                    L3_80.fontSize = 14
+                    L2_79 = L2_79(L3_80)
+                    L4_81 = L2_79
+                    L3_80 = L2_79.setReferencePoint
+                    L5_82 = display
+                    L5_82 = L5_82.BottomCenterReferencePoint
+                    L3_80(L4_81, L5_82)
+                    L3_80 = _UPVALUE18_
+                    L2_79.x = L3_80
+                    L3_80 = _UPVALUE27_
+                    L4_81 = _UPVALUE21_
+                    L3_80 = L3_80 + L4_81
+                    L3_80 = L3_80 - 20
+                    L2_79.y = L3_80
+                    L3_80 = _UPVALUE5_
+                    L4_81 = L3_80
+                    L3_80 = L3_80.insert
+                    L5_82 = L2_79
+                    L3_80(L4_81, L5_82)
+                    L3_80 = display
+                    L3_80 = L3_80.newRect
+                    L4_81 = 0
+                    L5_82 = 0
+                    L6_83 = _UPVALUE20_
+                    L3_80 = L3_80(L4_81, L5_82, L6_83, _UPVALUE21_)
+                    L5_82 = L3_80
+                    L4_81 = L3_80.setReferencePoint
+                    L6_83 = display
+                    L6_83 = L6_83.TopCenterReferencePoint
+                    L4_81(L5_82, L6_83)
+                    L4_81 = _UPVALUE18_
+                    L3_80.x = L4_81
+                    L4_81 = _UPVALUE27_
+                    L3_80.y = L4_81
+                    L5_82 = L3_80
+                    L4_81 = L3_80.setFillColor
+                    L6_83 = 0
+                    L4_81(L5_82, L6_83, 0, 0)
+                    L4_81 = _UPVALUE22_
+                    L5_82 = L4_81
+                    L4_81 = L4_81.insert
+                    L6_83 = L3_80
+                    L4_81(L5_82, L6_83)
+                    L4_81 = display
+                    L4_81 = L4_81.newRect
+                    L5_82 = 0
+                    L6_83 = 0
+                    L4_81 = L4_81(L5_82, L6_83, _UPVALUE20_, _UPVALUE21_)
+                    L6_83 = L4_81
+                    L5_82 = L4_81.setReferencePoint
+                    L5_82(L6_83, display.TopCenterReferencePoint)
+                    L5_82 = _UPVALUE18_
+                    L4_81.x = L5_82
+                    L5_82 = _UPVALUE27_
+                    L4_81.y = L5_82
+                    L6_83 = L4_81
+                    L5_82 = L4_81.setFillColor
+                    L5_82(L6_83, 0, 255, 0)
+                    L4_81.isVisible = false
+                    L5_82 = _UPVALUE22_
+                    L6_83 = L5_82
+                    L5_82 = L5_82.insert
+                    L5_82(L6_83, L4_81)
+                    L5_82 = display
+                    L5_82 = L5_82.newRect
+                    L6_83 = 0
+                    L5_82 = L5_82(L6_83, 0, _UPVALUE20_, _UPVALUE21_)
+                    L6_83 = L5_82.setReferencePoint
+                    L6_83(L5_82, display.TopCenterReferencePoint)
+                    L6_83 = _UPVALUE18_
+                    L5_82.x = L6_83
+                    L6_83 = _UPVALUE27_
+                    L5_82.y = L6_83
+                    L6_83 = L5_82.setFillColor
+                    L6_83(L5_82, 255, 0, 0)
+                    L5_82.isVisible = false
+                    L6_83 = _UPVALUE22_
+                    L6_83 = L6_83.insert
+                    L6_83(L6_83, L5_82)
+                    L6_83 = _UPVALUE23_
+                    L6_83 = L6_83.newButton
+                    L6_83 = L6_83({
+                      default = _UPVALUE24_,
+                      baseDir = _UPVALUE25_,
+                      width = _UPVALUE20_,
+                      height = _UPVALUE21_,
+                      id = _UPVALUE15_,
+                      onEvent = L1_78
+                    })
+                    L6_83:setReferencePoint(display.TopCenterReferencePoint)
+                    L6_83.x = _UPVALUE18_
+                    L6_83.y = _UPVALUE27_
+                    L6_83.correct = L4_81
+                    L6_83.wrong = L5_82
+                    _UPVALUE22_:insert(L6_83)
+                  end
+                end
+              else
+                L1_78 = _UPVALUE15_
+                if L1_78 == 1 then
+                  L1_78 = _UPVALUE11_
+                  L1_78 = L1_78.delete
+                  L2_79 = _UPVALUE16_
+                  L1_78 = L1_78(L2_79)
+                  _UPVALUE16_ = L1_78
+                else
+                  L1_78 = _UPVALUE15_
+                  if L1_78 == 2 then
+                    L1_78 = _UPVALUE11_
+                    L1_78 = L1_78.delete
+                    L2_79 = _UPVALUE26_
+                    L1_78 = L1_78(L2_79)
+                    _UPVALUE26_ = L1_78
+                  end
+                end
+              end
+            end
+          end
+        end
+        L24_74 = string
+        L24_74 = L24_74.sub
+        L25_75 = L18_68
+        L26_76 = 6
+        L24_74 = L24_74(L25_75, L26_76, 10)
+        L25_75 = string
+        L25_75 = L25_75.sub
+        L26_76 = L18_68
+        L25_75 = L25_75(L26_76, 1, 4)
+        L26_76 = _UPVALUE10_
+        L26_76 = L26_76.getSite
+        L26_76 = L26_76()
+        L26_76 = L26_76 .. "seeds/user_uploads/" .. L14_64 .. "/" .. L15_65 .. "/" .. L25_75 .. "/" .. L24_74 .. "/" .. L13_63 .. "1.jpg?a=" .. os.time()
+        network.download(L26_76, "GET", L23_73, L21_71, L22_72)
+        if L10_60 == 2 then
+          if L5_55[1] > L5_55[2] then
+            L4_54 = 1
+          elseif L5_55[1] < L5_55[2] then
+            L4_54 = 2
+          else
+            L4_54 = "tie"
+          end
+        end
+      end
+    end
+    _UPVALUE1_.network_request("get_trivia_seeds", L5_49, {})
+  end
+  L32_33 = L31_32
+  L33_34 = L26_27
+  L32_33(L33_34)
+  L32_33 = display
+  L32_33 = L32_33.newImageRect
+  L33_34 = "streak_label.png"
+  L34_35 = L27_28 + 10
+  L35_36 = 44
+  L32_33 = L32_33(L33_34, L34_35, L35_36)
+  L34_35 = L32_33
+  L33_34 = L32_33.setReferencePoint
+  L35_36 = display
+  L35_36 = L35_36.TopCenterReferencePoint
+  L33_34(L34_35, L35_36)
+  L32_33.x = L5_6
+  L33_34 = L30_31 + L28_29
+  L33_34 = L33_34 + 20
+  L32_33.y = L33_34
+  L34_35 = L3_4
+  L33_34 = L3_4.insert
+  L35_36 = L32_33
+  L33_34(L34_35, L35_36)
+  L33_34 = display
+  L33_34 = L33_34.newText
+  L34_35 = {}
+  L34_35.text = "Streak: "
+  L34_35.font = "Hobo Std"
+  L34_35.fontSize = 14
+  L33_34 = L33_34(L34_35)
+  L35_36 = L33_34
+  L34_35 = L33_34.setReferencePoint
+  L36_37 = display
+  L36_37 = L36_37.TopLeftReferencePoint
+  L34_35(L35_36, L36_37)
+  L34_35 = L32_33.x
+  L35_36 = L32_33.width
+  L35_36 = L35_36 * 0.5
+  L34_35 = L34_35 - L35_36
+  L34_35 = L34_35 + 13
+  L33_34.x = L34_35
+  L34_35 = L32_33.y
+  L34_35 = L34_35 + 6
+  L33_34.y = L34_35
+  L35_36 = L33_34
+  L34_35 = L33_34.setFillColor
+  L36_37 = 60
+  L37_38 = 60
+  L38_39 = 60
+  L34_35(L35_36, L36_37, L37_38, L38_39)
+  L35_36 = L3_4
+  L34_35 = L3_4.insert
+  L36_37 = L33_34
+  L34_35(L35_36, L36_37)
+  L34_35 = display
+  L34_35 = L34_35.newText
+  L35_36 = {}
+  L35_36.text = L16_17
+  L35_36.x = 0
+  L35_36.y = 0
+  L35_36.font = "Hobo Std"
+  L35_36.fontSize = 14
+  L34_35 = L34_35(L35_36)
+  L19_20 = L34_35
+  L35_36 = L19_20
+  L34_35 = L19_20.setReferencePoint
+  L36_37 = display
+  L36_37 = L36_37.CenterReferencePoint
+  L34_35(L35_36, L36_37)
+  L34_35 = L33_34.x
+  L35_36 = L33_34.width
+  L34_35 = L34_35 + L35_36
+  L35_36 = L19_20.width
+  L35_36 = L35_36 * 0.5
+  L34_35 = L34_35 + L35_36
+  L19_20.x = L34_35
+  L34_35 = L33_34.y
+  L35_36 = L33_34.height
+  L35_36 = L35_36 * 0.5
+  L34_35 = L34_35 + L35_36
+  L19_20.y = L34_35
+  L35_36 = L19_20
+  L34_35 = L19_20.setFillColor
+  L36_37 = 60
+  L37_38 = 60
+  L38_39 = 60
+  L34_35(L35_36, L36_37, L37_38, L38_39)
+  L35_36 = L3_4
+  L34_35 = L3_4.insert
+  L36_37 = L19_20
+  L34_35(L35_36, L36_37)
+  L34_35 = display
+  L34_35 = L34_35.newText
+  L35_36 = {}
+  L35_36.text = "Highscore: "
+  L35_36.font = "Hobo Std"
+  L35_36.fontSize = 9
+  L34_35 = L34_35(L35_36)
+  L36_37 = L34_35
+  L35_36 = L34_35.setReferencePoint
+  L37_38 = display
+  L37_38 = L37_38.TopLeftReferencePoint
+  L35_36(L36_37, L37_38)
+  L35_36 = L33_34.x
+  L34_35.x = L35_36
+  L35_36 = L33_34.y
+  L36_37 = L33_34.height
+  L35_36 = L35_36 + L36_37
+  L35_36 = L35_36 + 2
+  L34_35.y = L35_36
+  L36_37 = L34_35
+  L35_36 = L34_35.setFillColor
+  L37_38 = 87
+  L38_39 = 87
+  L39_40 = 87
+  L35_36(L36_37, L37_38, L38_39, L39_40)
+  L36_37 = L3_4
+  L35_36 = L3_4.insert
+  L37_38 = L34_35
+  L35_36(L36_37, L37_38)
+  L35_36 = display
+  L35_36 = L35_36.newText
+  L36_37 = {}
+  L36_37.text = L17_18
+  L36_37.x = 0
+  L36_37.y = 0
+  L36_37.font = "Hobo Std"
+  L36_37.fontSize = 9
+  L35_36 = L35_36(L36_37)
+  L20_21 = L35_36
+  L36_37 = L20_21
+  L35_36 = L20_21.setReferencePoint
+  L37_38 = display
+  L37_38 = L37_38.CenterReferencePoint
+  L35_36(L36_37, L37_38)
+  L35_36 = L34_35.x
+  L36_37 = L34_35.width
+  L35_36 = L35_36 + L36_37
+  L36_37 = L20_21.width
+  L36_37 = L36_37 * 0.5
+  L35_36 = L35_36 + L36_37
+  L20_21.x = L35_36
+  L35_36 = L34_35.y
+  L36_37 = L34_35.height
+  L36_37 = L36_37 * 0.5
+  L35_36 = L35_36 + L36_37
+  L20_21.y = L35_36
+  L36_37 = L20_21
+  L35_36 = L20_21.setFillColor
+  L37_38 = 87
+  L38_39 = 87
+  L39_40 = 87
+  L35_36(L36_37, L37_38, L38_39, L39_40)
+  L36_37 = L3_4
+  L35_36 = L3_4.insert
+  L37_38 = L20_21
+  L35_36(L36_37, L37_38)
+  L35_36 = _UPVALUE1_
+  L35_36 = L35_36.makeToolbar
+  L36_37 = L14_15
+  L37_38 = {}
+  L37_38.line = true
+  L35_36 = L35_36(L36_37, L37_38)
+  L37_38 = L4_5
+  L36_37 = L4_5.insert
+  L38_39 = L35_36
+  L36_37(L37_38, L38_39)
+  L36_37 = _UPVALUE2_
+  L36_37 = L36_37.createMenuButton
+  L37_38 = L1_2
+  L36_37 = L36_37(L37_38)
+  L38_39 = L4_5
+  L37_38 = L4_5.insert
+  L39_40 = L36_37
+  L37_38(L38_39, L39_40)
+  function L37_38(A0_93)
+    _UPVALUE0_.show("leaderboards")
+    return true
+  end
+  L38_39 = _UPVALUE5_
+  L38_39 = L38_39.newButton
+  L39_40 = {}
+  L39_40.default = "highscore.png"
+  L39_40.over = "highscore-over.png"
+  L39_40.width = 50
+  L39_40.height = 50
+  L39_40.onRelease = L37_38
+  L38_39 = L38_39(L39_40)
+  L39_40 = L38_39.setReferencePoint
+  L39_40(L38_39, display.TopRightReferencePoint)
+  L39_40 = _W
+  L39_40 = L39_40 - 5
+  L38_39.x = L39_40
+  L38_39.y = 15
+  L39_40 = L4_5.insert
+  L39_40(L4_5, L38_39)
+  L39_40 = nil
+  if _UPVALUE0_.gamecenter == false then
+    L39_40 = [[
+We will show you pictures of two seeds or creations from the app, can you guess which one has the best popularity average? (Ratings + Favorites)
+
+To save and post your highscores, make sure you are logged on to game center.]]
+  else
+    L39_40 = "We will show you pictures of two seeds or creations from the app, can you guess which one has the best popularity average? (Ratings + Favorites)"
+  end
+  native.showAlert("Guess the best seed!", L39_40, {"Start"})
+  L4_5:toFront()
+  return L0_1
+end

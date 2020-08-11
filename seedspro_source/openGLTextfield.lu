@@ -1,0 +1,229 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("transitions")
+;({}).newTextField = function(A0_1, A1_2)
+  local L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37, L37_38, L38_39, L39_40, L40_41, L41_42, L42_43, L43_44
+  L2_3 = A1_2 or {}
+  L3_4 = L2_3.id
+  L3_4 = L3_4 or nil
+  L4_5 = L2_3.x
+  L4_5 = L4_5 or 0
+  L5_6 = L2_3.y
+  L5_6 = L5_6 or 0
+  L6_7 = L2_3.width
+  L6_7 = L6_7 or 0
+  L7_8 = L2_3.height
+  L7_8 = L7_8 or 0
+  L8_9 = L2_3.font
+  if not L8_9 then
+    L8_9 = _UPVALUE0_
+    L8_9 = L8_9.fonts
+    L8_9 = L8_9.light
+  end
+  L9_10 = L2_3.size
+  L9_10 = L9_10 or 15
+  L10_11 = L2_3.inputType
+  L10_11 = L10_11 or "default"
+  L11_12 = L2_3.topPadding
+  L11_12 = L11_12 or 0
+  L12_13 = L2_3.leftPadding
+  L12_13 = L12_13 or 0
+  L13_14 = L2_3.defaultColor
+  if not L13_14 then
+    L13_14 = {
+      L14_15,
+      L15_16,
+      L16_17
+    }
+    L14_15 = 0
+    L15_16 = 0
+    L16_17 = 0
+  end
+  L14_15 = L2_3.initialColor
+  L14_15 = L14_15 or L13_14
+  L15_16 = L2_3.defaultLabel
+  L15_16 = L15_16 or ""
+  L16_17 = L2_3.initialLabel
+  L16_17 = L16_17 or ""
+  L17_18 = L2_3.initialFont
+  L17_18 = L17_18 or L8_9
+  L18_19 = L2_3.maxLength
+  L18_19 = L18_19 or nil
+  L19_20 = L2_3.isSecure
+  L19_20 = L19_20 or false
+  L20_21 = L2_3.boxType
+  L20_21 = L20_21 or "textfield"
+  L21_22 = L2_3.list
+  L22_23 = L2_3.displayInitialLabel
+  L22_23 = L22_23 or "yes"
+  L23_24 = L2_3.textfieldAlign
+  L23_24 = L23_24 or "left"
+  L24_25 = L2_3.hasPreEditAnimation
+  L24_25 = L24_25 or false
+  L25_26 = L2_3.textfieldTopPadding
+  L25_26 = L25_26 or 0
+  L26_27 = L2_3.textfieldLeftPadding
+  L26_27 = L26_27 or 0
+  L27_28 = L2_3.textAdditionalWidth
+  L27_28 = L27_28 or 0
+  L28_29 = L2_3.textAdditionalHeight
+  L28_29 = L28_29 or 0
+  L29_30 = L2_3.textfieldAdditionalWidth
+  L29_30 = L29_30 or 0
+  L30_31 = L2_3.textfieldAdditionalHeight
+  L30_31 = L30_31 or 0
+  L31_32 = L2_3.fakeLabelTopPadding
+  L31_32 = L31_32 or 0
+  L32_33 = L2_3.fakeLabelLeftPadding
+  L32_33 = L32_33 or 0
+  L33_34 = L2_3.fakeLabelAdditionalWidth
+  L33_34 = L33_34 or 0
+  L34_35 = L2_3.fakeLabelAdditionalHeight
+  L34_35 = L34_35 or 0
+  L35_36 = L2_3.passTouchOnCancel
+  L35_36 = L35_36 or "no"
+  L36_37 = L2_3.onInitiatedCallback
+  L36_37 = L36_37 or nil
+  L37_38 = L2_3.onEditedCallback
+  L37_38 = L37_38 or nil
+  L38_39 = L2_3.onFinishedCallback
+  L38_39 = L38_39 or nil
+  L39_40 = L2_3.insertCancelRectIntoGroup
+  L39_40 = L39_40 or nil
+  L40_41 = L2_3.updateFakeLabelOnEdit
+  L40_41 = L40_41 or "no"
+  L41_42 = L2_3.isEditable
+  L41_42 = L41_42 or true
+  if L16_17 == "" then
+    L22_23 = "no"
+  end
+  L42_43 = display
+  L42_43 = L42_43.newGroup
+  L42_43 = L42_43()
+  L43_44 = nil
+  if type(A0_1) == "table" then
+    A0_1.resWidth = L6_7
+    A0_1.resHeight = L7_8
+    L43_44 = _UPVALUE1_.makeImageFromSlices(A0_1)
+  elseif A0_1 == "" then
+    L43_44 = display.newRect(0, 0, L6_7, L7_8)
+    L43_44:setFillColor(0, 0, 0, 0)
+  else
+    L43_44 = display.newImageRect(A0_1, L6_7, L7_8)
+  end
+  L43_44:setReferencePoint(display.TopLeftReferencePoint)
+  L43_44.x = 0
+  L43_44.y = 0
+  L43_44.list = L21_22
+  L43_44.id = L3_4
+  L43_44.group = L42_43
+  L43_44.topPadding = L11_12
+  L43_44.leftPadding = L12_13
+  L43_44.fakeLabelAdditionalWidth = L33_34
+  L43_44.fakeLabelAdditionalHeight = L34_35
+  L43_44.textAdditionalWidth = L27_28
+  L43_44.textAdditionalHeight = L28_29
+  L43_44.textfieldTopPadding = L25_26
+  L43_44.textfieldLeftPadding = L26_27
+  L43_44.textfieldAdditionalWidth = L29_30
+  L43_44.textfieldAdditionalHeight = L30_31
+  L43_44.hasPreEditAnimation = L24_25
+  L43_44.activateTextfield = _UPVALUE2_
+  L43_44.passTouchOnCancel = L35_36
+  L43_44.onInitiatedCallback = L36_37
+  L43_44.onEditedCallback = L37_38
+  L43_44.onFinishedCallback = L38_39
+  L43_44.insertCancelRectIntoGroup = L39_40
+  L43_44.updateFakeLabelOnEdit = L40_41
+  L43_44.isEditable = L41_42
+  L43_44.isHitTestable = true
+  L43_44:addEventListener("touch", _UPVALUE2_)
+  L42_43:insert(L43_44)
+  L11_12 = L11_12 + 3
+  L43_44.fakeLabel = display.newText({
+    text = L15_16,
+    width = L6_7 + L33_34 + L27_28 - L12_13 - 8,
+    height = L43_44.height + L34_35 + L28_29 - 6,
+    font = L8_9,
+    fontSize = L9_10,
+    align = L23_24
+  })
+  L43_44.fakeLabel._defaultReferencePoint = display.TopLeftReferencePoint
+  L43_44.fakeLabel:setReferencePoint(L43_44.fakeLabel._defaultReferencePoint)
+  L43_44.fakeLabel.x = 8 + L12_13 + L32_33
+  L43_44.fakeLabel.y = L11_12 + L31_32
+  L43_44.fakeLabel.origX = L43_44.fakeLabel.x
+  L43_44.fakeLabel.origY = L43_44.fakeLabel.y
+  L43_44.fakeLabel.font = L8_9
+  L43_44.fakeLabel.size = L9_10
+  L43_44.fakeLabel.label = L15_16
+  L43_44.fakeLabel.defaultColor = L13_14
+  L43_44.fakeLabel.defaultLabel = L15_16
+  L43_44.fakeLabel.initialLabel = L16_17
+  L43_44.fakeLabel.hasEdited = false
+  L43_44.fakeLabel.inputType = L10_11
+  L43_44.fakeLabel.maxLength = L18_19
+  L43_44.fakeLabel.boxType = L20_21
+  L43_44.fakeLabel.textfieldAlign = L23_24
+  L43_44.fakeLabel.isSecure = L19_20
+  L43_44.fakeLabel:setFillColor(unpack(L13_14))
+  L42_43:insert(L43_44.fakeLabel)
+  L43_44.initialLabel = display.newText({
+    text = L16_17,
+    width = L43_44.fakeLabel.width,
+    height = L43_44.fakeLabel.height,
+    font = L17_18,
+    fontSize = L9_10,
+    align = L23_24
+  })
+  L43_44.initialLabel:setReferencePoint(L43_44.fakeLabel._defaultReferencePoint)
+  L43_44.initialLabel.x = L43_44.fakeLabel.x
+  L43_44.initialLabel.y = L43_44.fakeLabel.y
+  L43_44.initialLabel:setFillColor(unpack(L14_15))
+  L42_43:insert(L43_44.initialLabel)
+  L42_43:setReferencePoint(display.TopLeftReferencePoint)
+  L42_43.x = L4_5
+  L42_43.y = L5_6
+  if L22_23 == "yes" then
+    L43_44.fakeLabel.isVisible = false
+  elseif L22_23 == "no" then
+    L43_44.initialLabel.isVisible = false
+  end
+  function L42_43.setText(A0_45, A1_46)
+    if not A1_46 then
+      A1_46 = ""
+      _UPVALUE0_.initialLabel.isVisible = true
+      _UPVALUE0_.fakeLabel.isVisible = false
+    else
+      _UPVALUE0_.fakeLabel.isVisible = true
+      _UPVALUE0_.initialLabel.isVisible = false
+      if _UPVALUE0_.fakeLabel.hasEdited == false then
+        _UPVALUE0_.fakeLabel.hasEdited = true
+      end
+    end
+    _UPVALUE0_.fakeLabel:setText(A1_46)
+    _UPVALUE0_.fakeLabel:setReferencePoint(_UPVALUE0_.fakeLabel._defaultReferencePoint)
+    _UPVALUE0_.fakeLabel.x = _UPVALUE0_.fakeLabel.origX
+    _UPVALUE0_.fakeLabel.y = _UPVALUE0_.fakeLabel.origY
+    _UPVALUE0_.fakeLabel.label = A1_46
+    if _UPVALUE0_.textfield then
+      _UPVALUE0_.textfield.text = A1_46
+    end
+    _UPVALUE0_.fakeLabel.defaultLabel = A1_46
+  end
+  function L42_43.setFillColor(A0_47, A1_48, A2_49, A3_50, A4_51)
+    A1_48 = A1_48 or 255
+    A2_49 = A2_49 or 255
+    A3_50 = A3_50 or 255
+    A4_51 = A4_51 or 255
+    _UPVALUE0_.fakeLabel:setFillColor(A1_48, A2_49, A3_50, A4_51)
+    if _UPVALUE0_.textfield then
+      _UPVALUE0_.textfield:setTextColor(A1_48, A2_49, A3_50, A4_51)
+    end
+  end
+  L42_43.bg = L43_44
+  L42_43.fakeLabel = L43_44.fakeLabel
+  L42_43.initialLabel = L43_44.initialLabel
+  return L42_43
+end
+return {}

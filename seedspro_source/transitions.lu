@@ -1,0 +1,101 @@
+local L0_0, L1_1, L2_2, L3_3
+L0_0 = {}
+L1_1 = 0
+L2_2 = {}
+function L3_3(A0_4, A1_5, A2_6)
+  if A0_4 then
+    _UPVALUE0_ = _UPVALUE0_ + 1
+    if A2_6 and A2_6 == true then
+      A0_4._transPreventTouch = require("creator").delete(A0_4._transPreventTouch)
+      A0_4._transPreventTouch = require("creator").makePreventTouch()
+    end
+    function A1_5.onComplete(...)
+      local L1_8
+      L1_8 = _UPVALUE0_
+      L1_8[_UPVALUE1_] = nil
+      L1_8 = _UPVALUE2_
+      L1_8 = L1_8._transPreventTouch
+      if L1_8 then
+        L1_8 = _UPVALUE2_
+        L1_8._transPreventTouch = _UPVALUE3_.delete(_UPVALUE2_._transPreventTouch)
+      end
+      L1_8 = _UPVALUE4_
+      if L1_8 then
+        L1_8 = _UPVALUE4_
+        L1_8(...)
+      end
+    end
+    transition.to(A0_4, A1_5)._autoIncrmnt = _UPVALUE0_
+    transition.to(A0_4, A1_5)._object = A0_4
+    _UPVALUE1_[_UPVALUE0_] = transition.to(A0_4, A1_5)
+    return (transition.to(A0_4, A1_5))
+  end
+end
+L2_2.to = L3_3
+function L3_3(A0_9, A1_10, A2_11)
+  if A0_9 then
+    _UPVALUE0_ = _UPVALUE0_ + 1
+    if A2_11 and A2_11 == true then
+      A0_9._transPreventTouch = require("creator").delete(A0_9._transPreventTouch)
+      A0_9._transPreventTouch = require("creator").makePreventTouch()
+    end
+    function A1_10.onComplete(...)
+      local L1_13
+      L1_13 = _UPVALUE0_
+      L1_13[_UPVALUE1_] = nil
+      L1_13 = _UPVALUE2_
+      L1_13 = L1_13._transPreventTouch
+      if L1_13 then
+        L1_13 = _UPVALUE2_
+        L1_13._transPreventTouch = _UPVALUE3_.delete(_UPVALUE2_._transPreventTouch)
+      end
+      L1_13 = _UPVALUE4_
+      if L1_13 then
+        L1_13 = _UPVALUE4_
+        L1_13(...)
+      end
+    end
+    transition.from(A0_9, A1_10)._autoIncrmnt = _UPVALUE0_
+    transition.from(A0_9, A1_10)._object = A0_9
+    _UPVALUE1_[_UPVALUE0_] = transition.from(A0_9, A1_10)
+    return (transition.from(A0_9, A1_10))
+  end
+end
+L2_2.from = L3_3
+function L3_3(A0_14)
+  if A0_14 then
+    transition.cancel(A0_14)
+    A0_14._object._transPreventTouch = require("creator").delete(A0_14._object._transPreventTouch)
+    _UPVALUE0_[A0_14._autoIncrmnt] = nil
+  end
+end
+L2_2.cancel = L3_3
+function L3_3()
+  local L0_15, L1_16, L2_17, L3_18, L4_19, L5_20
+  L0_15 = require
+  L0_15 = L0_15(L1_16)
+  for L4_19, L5_20 in L1_16(L2_17) do
+    transition.cancel(L5_20)
+    L5_20._object._transPreventTouch = L0_15.delete(L5_20._object._transPreventTouch)
+    _UPVALUE0_[L4_19] = nil
+  end
+  _UPVALUE1_ = L1_16
+  _UPVALUE0_ = L1_16
+end
+L2_2.cancelAll = L3_3
+function L3_3()
+  local L0_21, L1_22, L2_23, L3_24, L4_25
+  for L3_24, L4_25 in L0_21(L1_22) do
+    transition.pause(L4_25)
+  end
+end
+L2_2.pauseAll = L3_3
+function L3_3()
+  local L0_26, L1_27, L2_28, L3_29, L4_30
+  for L3_29, L4_30 in L0_26(L1_27) do
+    transition.resume(L4_30)
+  end
+end
+L2_2.resumeAll = L3_3
+L2_2.transitions = L0_0
+return L2_2

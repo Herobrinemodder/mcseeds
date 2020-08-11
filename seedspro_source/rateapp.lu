@@ -1,0 +1,98 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("creator")
+;({}).checkHasRated = function(A0_1)
+  local L1_2, L2_3, L3_4, L4_5, L5_6
+  L3_4 = _UPVALUE0_
+  L3_4 = L3_4.appdata
+  L4_5 = L3_4.hasRated
+  L5_6 = string
+  L5_6 = L5_6.find
+  L5_6 = L5_6(L4_5, "f20 ")
+  if not L5_6 then
+    L5_6 = string
+    L5_6 = L5_6.find
+    L5_6 = L5_6(L4_5, "f60 ")
+  else
+    if L5_6 then
+      L5_6 = string
+      L5_6 = L5_6.gsub
+      L5_6 = L5_6(string.sub(L4_5, 0, 3), " ", "")
+      L1_2 = L5_6
+      L5_6 = string
+      L5_6 = L5_6.gsub
+      L5_6 = L5_6(L1_2, "f", "")
+      L2_3 = L5_6
+  end
+  else
+    L5_6 = string
+    L5_6 = L5_6.find
+    L5_6 = L5_6(L4_5, "f9999999 ")
+    if L5_6 then
+      L5_6 = string
+      L5_6 = L5_6.gsub
+      L5_6 = L5_6(string.sub(L4_5, 0, 8), " ", "")
+      L1_2 = L5_6
+      L5_6 = string
+      L5_6 = L5_6.gsub
+      L5_6 = L5_6(L1_2, "f", "")
+      L2_3 = L5_6
+    else
+      L5_6 = string
+      L5_6 = L5_6.gsub
+      L5_6 = L5_6(string.sub(L4_5, 0, 3), " ", "")
+      L1_2 = L5_6
+      L5_6 = string
+      L5_6 = L5_6.gsub
+      L5_6 = L5_6(L1_2, "f", "")
+      L2_3 = L5_6
+    end
+  end
+  L5_6 = L1_2
+  L5_6 = L5_6 .. " false " .. L2_3
+  if L4_5 == L5_6 then
+    function L5_6(A0_7)
+      local L1_8, L2_9, L3_10
+      L1_8 = A0_7.action
+      L2_9 = A0_7.index
+      if L1_8 == "clicked" then
+        if L2_9 == 1 then
+          L3_10 = nil
+          if _UPVALUE0_.os == "Android" then
+            L3_10 = "https://play.google.com/store/apps/details?id=" .. _UPVALUE1_.getAppIdentifier()
+          else
+            L3_10 = "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?pageNumber=0&sortOrdering=1&type=Purple+Software&mt=8&id=" .. _UPVALUE1_.getAppId()
+          end
+          system.openURL(L3_10)
+          _UPVALUE2_.hasRated = "true"
+          _UPVALUE1_.updateAppData(_UPVALUE2_)
+        elseif L2_9 == 2 then
+          L3_10 = "f60 false 1"
+          if _UPVALUE3_ == "f60" then
+            L3_10 = "f9999999 false 1"
+          elseif _UPVALUE3_ == "f9999999" then
+            L3_10 = "f9999999 false 1"
+          end
+          _UPVALUE2_.hasRated = L3_10
+          _UPVALUE1_.updateAppData(_UPVALUE2_)
+        end
+      end
+    end
+    _UPVALUE1_.showAlert("", "If you find this app helpful, please help us out by rating it on the store. It would help us a lot!", {
+      "Rate this app",
+      "Nope"
+    }, L5_6)
+  elseif L4_5 ~= "true" then
+    L5_6 = string
+    L5_6 = L5_6.gsub
+    L5_6 = L5_6(tonumber(string.sub(L4_5, -2)), " ", "")
+    if L5_6 ~= nil then
+      L5_6 = L5_6 + 1
+      L4_5 = L1_2 .. " false " .. L5_6
+      L3_4.hasRated = L4_5
+      _UPVALUE1_.updateAppData(L3_4)
+    end
+  end
+  return
+end
+return {}

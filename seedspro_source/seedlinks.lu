@@ -1,0 +1,625 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("assembleVideo")
+;({}).linkToSeedLinks = function(A0_1, A1_2, A2_3, A3_4)
+  local L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17
+  if not A3_4 then
+    L4_5 = {}
+    A3_4 = L4_5
+  end
+  L4_5 = A3_4.functionToExecuteBeforeChangingScene
+  L4_5 = L4_5 or function()
+    local L0_18, L1_19
+  end
+  L5_6 = A3_4.listDirection
+  L5_6 = L5_6 or nil
+  L6_7 = A3_4.list
+  L6_7 = L6_7 or nil
+  L7_8 = A3_4.onStart
+  L7_8 = L7_8 or function()
+    local L0_20, L1_21
+  end
+  L8_9 = A3_4.onClose
+  L8_9 = L8_9 or function()
+    local L0_22, L1_23
+  end
+  L9_10 = {}
+  L10_11 = {}
+  L11_12 = {}
+  L12_13 = {}
+  function L13_14(A0_24)
+    local L1_25, L2_26, L3_27, L4_28, L5_29, L6_30, L7_31
+    L1_25 = A0_24.background
+    L2_26 = A0_24.index
+    L2_26 = L2_26 - 1
+    L3_27 = A0_24.phase
+    L5_29 = L1_25
+    L4_28 = L1_25.setFillColor
+    L6_30 = 217
+    L7_31 = 217
+    L4_28(L5_29, L6_30, L7_31, 217)
+    if L3_27 == "release" or L3_27 == "cancelled" or L3_27 == "tap" then
+      function L4_28()
+        _UPVALUE0_:setFillColor(0, 0, 0, 0)
+      end
+      L5_29 = timer
+      L5_29 = L5_29.performWithDelay
+      L6_30 = 20
+      L7_31 = L4_28
+      L5_29(L6_30, L7_31)
+      L5_29 = native
+      L5_29 = L5_29.setActivityIndicator
+      L6_30 = true
+      L5_29(L6_30)
+      L5_29 = _UPVALUE0_
+      L5_29 = L5_29[L2_26]
+      function L6_30(A0_32)
+        local L1_33
+        L1_33 = A0_32.response
+        if _UPVALUE0_.type == "video" then
+          L1_33 = _UPVALUE1_.assemble(L1_33)
+        else
+          L1_33 = _UPVALUE2_.decode(L1_33)
+        end
+        native.setActivityIndicator(false)
+        if #L1_33.seeds == 0 then
+          _UPVALUE3_.showAlert("Oops!", "Seems like this upload does not exist. Perhaps the seed link is wrong?", {"Ok"})
+        else
+          L1_33.removePageTable = true
+          _UPVALUE4_.didTapURL = true
+          _UPVALUE5_()
+          _UPVALUE3_.update({
+            taps = _UPVALUE3_.getSceneProperties().taps + 1
+          })
+          _UPVALUE3_.insert({
+            pop = 30,
+            page = "seed",
+            start = 0,
+            which = 1,
+            script = "getSeeds",
+            listPos = 0,
+            prevScene = _UPVALUE3_.getSceneProperties().page,
+            pageTable = L1_33
+          })
+          _UPVALUE3_.dispatchEvent("clearLocalTimersAndListeners")
+          director:changeScene("seed", "overFromRightNew")
+        end
+      end
+      L7_31 = L5_29.type
+      if L7_31 == "video" then
+        L7_31 = _UPVALUE3_
+        L7_31 = L7_31.network_request
+        L7_31("", L6_30, {}, {
+          hashed = false,
+          type = "GET",
+          nurl = "https://gdata.youtube.com/feeds/api/videos/" .. _UPVALUE6_.escape(L5_29.str) .. "?v=2&alt=json-in-script"
+        })
+      else
+        L7_31 = L5_29.type
+        if L7_31 == "seed" then
+          L7_31 = _UPVALUE3_
+          L7_31 = L7_31.network_request
+          L7_31("get_specific_seed", L6_30, {
+            seedid = L5_29.str,
+            udid = _UPVALUE4_.udid
+          })
+        else
+          L7_31 = L5_29.type
+          if L7_31 == "user" then
+            function L7_31(A0_34)
+              native.setActivityIndicator(false)
+              if #_UPVALUE0_.decode(A0_34.response) == 1 then
+                _UPVALUE1_.didTapURL = true
+                _UPVALUE2_()
+                _UPVALUE3_.update({
+                  taps = _UPVALUE3_.getSceneProperties().taps + 1
+                })
+                _UPVALUE3_.insert({
+                  fetchAvtr = _UPVALUE0_.decode(A0_34.response)[1].avatar,
+                  fetchBios = _UPVALUE0_.decode(A0_34.response)[1].bios,
+                  fetchNick = _UPVALUE0_.decode(A0_34.response)[1].nickname,
+                  fetchUdid = _UPVALUE0_.decode(A0_34.response)[1].udid,
+                  prevScene = _UPVALUE3_.getSceneProperties().page,
+                  page = "profile"
+                })
+                _UPVALUE3_.dispatchEvent("clearLocalTimersAndListeners")
+                director:changeScene("profile", "overFromRightNew")
+              else
+                _UPVALUE3_.showAlert("Oops!", "There doesn't seem to be a user with this usertag. Perhaps the usertag was misspelled?", {"Ok"})
+              end
+            end
+            _UPVALUE3_.network_request("getUserByUsertag", L7_31, {
+              usertag = L5_29.str
+            })
+          end
+        end
+      end
+    end
+  end
+  function L14_15(A0_35)
+    local L1_36, L2_37, L3_38, L4_39, L5_40, L6_41
+    L1_36 = A0_35.target
+    L1_36 = L1_36.height
+    L2_37 = A0_35.view
+    L3_38 = A0_35.id
+    L4_39 = A0_35.index
+    L4_39 = L4_39 - 1
+    L5_40 = _UPVALUE0_
+    L5_40 = L5_40[L4_39]
+    if L5_40 then
+      L5_40 = _UPVALUE0_
+      L6_41 = _UPVALUE1_
+      L6_41 = L6_41.delete
+      L6_41 = L6_41(_UPVALUE0_[L4_39])
+      L5_40[L4_39] = L6_41
+    end
+    L5_40 = _UPVALUE2_
+    L5_40 = L5_40[L4_39]
+    if L5_40 then
+      L5_40 = _UPVALUE2_
+      L6_41 = _UPVALUE1_
+      L6_41 = L6_41.delete
+      L6_41 = L6_41(_UPVALUE2_[L4_39])
+      L5_40[L4_39] = L6_41
+    end
+    L5_40 = _UPVALUE0_
+    L6_41 = display
+    L6_41 = L6_41.newText
+    L6_41 = L6_41({
+      text = _UPVALUE3_[L4_39],
+      font = _UPVALUE4_.fonts.light,
+      fontSize = 14
+    })
+    L5_40[L4_39] = L6_41
+    L5_40 = _UPVALUE0_
+    L5_40 = L5_40[L4_39]
+    L6_41 = L5_40
+    L5_40 = L5_40.setReferencePoint
+    L5_40(L6_41, display.CenterLeftReferencePoint)
+    L5_40 = _UPVALUE0_
+    L5_40 = L5_40[L4_39]
+    L6_41 = L5_40
+    L5_40 = L5_40.setPosition
+    L5_40(L6_41, 20, L1_36 * 0.5 - 7)
+    L5_40 = _UPVALUE0_
+    L5_40 = L5_40[L4_39]
+    L6_41 = _UPVALUE0_
+    L6_41 = L6_41[L4_39]
+    L6_41 = L6_41.x
+    L5_40.origX = L6_41
+    L5_40 = _UPVALUE0_
+    L5_40 = L5_40[L4_39]
+    L6_41 = _UPVALUE0_
+    L6_41 = L6_41[L4_39]
+    L6_41 = L6_41.y
+    L5_40.origY = L6_41
+    L5_40 = _UPVALUE0_
+    L5_40 = L5_40[L4_39]
+    L6_41 = L5_40
+    L5_40 = L5_40.setFillColor
+    L5_40(L6_41, 80, 80, 80)
+    L6_41 = L2_37
+    L5_40 = L2_37.insert
+    L5_40(L6_41, _UPVALUE0_[L4_39])
+    L5_40 = _UPVALUE3_
+    L5_40 = L5_40[L4_39]
+    if L5_40 == "" then
+      L5_40 = _UPVALUE2_
+      L6_41 = _UPVALUE1_
+      L6_41 = L6_41.makeSprite
+      L6_41 = L6_41(0, 0, {
+        img = "activity_black.png"
+      })
+      L5_40[L4_39] = L6_41
+      L5_40 = _UPVALUE2_
+      L5_40 = L5_40[L4_39]
+      L6_41 = L5_40
+      L5_40 = L5_40.setReferencePoint
+      L5_40(L6_41, display.CenterLeftReferencePoint)
+      L5_40 = _UPVALUE2_
+      L5_40 = L5_40[L4_39]
+      L5_40.x = 20
+      L5_40 = _UPVALUE2_
+      L5_40 = L5_40[L4_39]
+      L6_41 = L1_36 * 0.5
+      L6_41 = L6_41 - 7
+      L5_40.y = L6_41
+      L5_40 = _UPVALUE2_
+      L5_40 = L5_40[L4_39]
+      L6_41 = L5_40
+      L5_40 = L5_40.scale
+      L5_40(L6_41, 0.75, 0.75)
+      L6_41 = L2_37
+      L5_40 = L2_37.insert
+      L5_40(L6_41, _UPVALUE2_[L4_39])
+    end
+    L5_40 = display
+    L5_40 = L5_40.newText
+    L6_41 = {}
+    L6_41.text = L3_38
+    L6_41.font = _UPVALUE4_.fonts.light
+    L6_41.fontSize = 11
+    L5_40 = L5_40(L6_41)
+    L6_41 = L5_40.setReferencePoint
+    L6_41(L5_40, display.CenterLeftReferencePoint)
+    L6_41 = L5_40.setPosition
+    L6_41(L5_40, 20, L1_36 * 0.5 + 8)
+    L6_41 = L5_40.setFillColor
+    L6_41(L5_40, 80, 80, 80)
+    L6_41 = L2_37.insert
+    L6_41(L2_37, L5_40)
+    L6_41 = display
+    L6_41 = L6_41.newLine
+    L6_41 = L6_41(20, L1_36 - 1, _W, L1_36)
+    L6_41:setStrokeColor(210, 210, 210)
+    L2_37:insert(L6_41)
+  end
+  function L15_16(A0_42)
+    local L1_43, L2_44, L3_45
+    L1_43 = A0_42.target
+    L1_43 = L1_43.height
+    L2_44 = A0_42.view
+    L3_45 = display
+    L3_45 = L3_45.newText
+    L3_45 = L3_45({
+      text = "Upload links",
+      font = _UPVALUE0_.fonts.light,
+      fontSize = 13
+    })
+    L3_45:setReferencePoint(display.CenterReferencePoint)
+    L3_45:setPosition(_UPVALUE1_, L1_43 * 0.5)
+    L3_45:setFillColor(80, 80, 80)
+    L2_44:insert(L3_45)
+  end
+  function L16_17(A0_46)
+    local L1_47, L2_48, L3_49, L4_50, L5_51, L6_52, L7_53, L8_54, L9_55
+    L1_47 = A0_46.phase
+    L2_48 = display
+    L2_48 = L2_48.getCurrentStage
+    L2_48 = L2_48()
+    L3_49 = L2_48
+    L2_48 = L2_48.setFocus
+    L2_48(L3_49, L4_50)
+    if L1_47 == "moved" then
+      L2_48 = _UPVALUE0_
+      L3_49 = A0_46.xStart
+      L3_49 = L3_49 - L4_50
+      L2_48 = L2_48(L3_49)
+      L3_49 = _UPVALUE0_
+      L3_49 = L3_49(L4_50)
+      if L4_50 ~= "vertical" or not (L2_48 < L3_49) then
+      elseif L4_50 == "both" then
+        L4_50(L5_51, L6_52)
+        L4_50(L5_51, L6_52)
+      end
+    elseif L1_47 == "ended" or L1_47 == "cancelled" then
+      L2_48 = display
+      L2_48 = L2_48.getCurrentStage
+      L2_48 = L2_48()
+      L3_49 = L2_48
+      L2_48 = L2_48.setFocus
+      L2_48(L3_49, L4_50)
+      L2_48 = display
+      L2_48 = L2_48.newGroup
+      L2_48 = L2_48()
+      L3_49 = _UPVALUE3_
+      L3_49 = L3_49.insert
+      L3_49(L4_50, L5_51)
+      function L3_49(A0_56)
+        if A0_56.phase == "ended" or A0_56.phase == "cancelled" then
+          _UPVALUE0_.to(_UPVALUE1_.tableViewGroup, {
+            time = 200,
+            y = _H + _UPVALUE1_.tableViewGroup.height,
+            transition = easing.outQuad,
+            onComplete = function()
+              _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+              _UPVALUE2_()
+            end
+          }, true)
+        end
+        return true
+      end
+      L2_48.close = L4_50
+      L4_50(L5_51, L6_52)
+      L2_48.tableViewGroup = L4_50
+      L4_50(L5_51, L6_52)
+      L5_51.top = 0
+      L5_51.left = 0
+      L5_51.width = L6_52
+      L5_51.height = 180
+      L7_53 = 245
+      L8_54 = 245
+      L9_55 = 245
+      L5_51.bgColor = L6_52
+      L5_51.baseDir = L6_52
+      L7_53 = _W
+      L8_54 = "x180.png"
+      L5_51.maskFile = L6_52
+      L5_51.bottomPadding = 10
+      L5_51.hideScrollBar = true
+      L2_48.tableView = L4_50
+      L4_50(L5_51, L6_52)
+      L7_53 = 0
+      L8_54 = _W
+      L9_55 = 0
+      L4_50.topLine = L5_51
+      L7_53 = 100
+      L8_54 = 100
+      L4_50(L5_51, L6_52, L7_53, L8_54)
+      L4_50(L5_51, L6_52)
+      L4_50(L5_51, L6_52)
+      L4_50.x = L5_51
+      L4_50.y = L5_51
+      L7_53 = _UPVALUE9_
+      L6_52.onRender = L7_53
+      L6_52.height = 24
+      L7_53 = {
+        L8_54,
+        L9_55,
+        245
+      }
+      L8_54 = 245
+      L9_55 = 245
+      L6_52.rowColor = L7_53
+      L7_53 = {
+        L8_54,
+        L9_55,
+        0,
+        0
+      }
+      L8_54 = 0
+      L9_55 = 0
+      L6_52.lineColor = L7_53
+      L6_52.isCategory = true
+      L4_50(L5_51, L6_52)
+      for L7_53 = 1, #L5_51 do
+        L8_54 = _UPVALUE11_
+        L8_54 = L8_54[L7_53]
+        if not L8_54 then
+          L8_54 = _UPVALUE11_
+          L8_54[L7_53] = ""
+        end
+        L8_54 = _UPVALUE12_
+        L8_54 = L8_54[L7_53]
+        if not L8_54 then
+          L8_54 = string
+          L8_54 = L8_54.lower
+          L9_55 = _UPVALUE10_
+          L9_55 = L9_55[L7_53]
+          L8_54 = L8_54(L9_55)
+          L9_55 = L8_54
+          L8_54 = L8_54.find
+          L8_54 = L8_54(L9_55, _UPVALUE13_ .. "s")
+          if L8_54 then
+            L8_54 = _UPVALUE12_
+            L9_55 = {}
+            L9_55.str = ""
+            L9_55.type = "seed"
+            L8_54[L7_53] = L9_55
+            L8_54 = _UPVALUE12_
+            L8_54 = L8_54[L7_53]
+            L9_55 = _UPVALUE10_
+            L9_55 = L9_55[L7_53]
+            L9_55 = L9_55.sub
+            L9_55 = L9_55(L9_55, string.len(_UPVALUE13_ .. "s") + 1)
+            L8_54.str = L9_55
+            L8_54 = _UPVALUE12_
+            L8_54 = L8_54[L7_53]
+            L9_55 = string
+            L9_55 = L9_55.gsub
+            L9_55 = L9_55(_UPVALUE12_[L7_53].str, "-", "=")
+            L8_54.str = L9_55
+            L8_54 = _UPVALUE12_
+            L8_54 = L8_54[L7_53]
+            L9_55 = string
+            L9_55 = L9_55.gsub
+            L9_55 = L9_55(_UPVALUE12_[L7_53].str, "_", "==")
+            L8_54.str = L9_55
+            L8_54 = _UPVALUE12_
+            L8_54 = L8_54[L7_53]
+            L9_55 = _UPVALUE5_
+            L9_55 = L9_55.b64unhash
+            L9_55 = L9_55(_UPVALUE12_[L7_53].str)
+            L8_54.str = L9_55
+            L8_54 = tonumber
+            L9_55 = _UPVALUE12_
+            L9_55 = L9_55[L7_53]
+            L9_55 = L9_55.str
+            L8_54 = L8_54(L9_55)
+            if L8_54 == nil then
+              L8_54 = _UPVALUE12_
+              L8_54 = L8_54[L7_53]
+              L8_54 = L8_54.str
+              L9_55 = L8_54
+              L8_54 = L8_54.match
+              L8_54 = L8_54(L9_55, "%w")
+              if L8_54 then
+                L8_54 = _UPVALUE12_
+                L8_54 = L8_54[L7_53]
+                L8_54.type = "video"
+              end
+            else
+              L8_54 = tonumber
+              L9_55 = _UPVALUE12_
+              L9_55 = L9_55[L7_53]
+              L9_55 = L9_55.str
+              L8_54 = L8_54(L9_55)
+              if L8_54 == nil then
+                L8_54 = _UPVALUE12_
+                L9_55 = {}
+                L9_55.str = ""
+                L9_55.type = "notvalid"
+                L8_54[L7_53] = L9_55
+              end
+            end
+          else
+            L8_54 = string
+            L8_54 = L8_54.lower
+            L9_55 = _UPVALUE10_
+            L9_55 = L9_55[L7_53]
+            L8_54 = L8_54(L9_55)
+            L9_55 = L8_54
+            L8_54 = L8_54.find
+            L8_54 = L8_54(L9_55, _UPVALUE13_ .. "@")
+            if not L8_54 then
+              L8_54 = string
+              L8_54 = L8_54.lower
+              L9_55 = _UPVALUE10_
+              L9_55 = L9_55[L7_53]
+              L8_54 = L8_54(L9_55)
+              L9_55 = L8_54
+              L8_54 = L8_54.find
+              L8_54 = L8_54(L9_55, _UPVALUE13_ .. "u/")
+            else
+              if L8_54 then
+                L8_54 = _UPVALUE12_
+                L9_55 = {}
+                L9_55.str = ""
+                L9_55.type = "user"
+                L8_54[L7_53] = L9_55
+                L8_54 = string
+                L8_54 = L8_54.lower
+                L9_55 = _UPVALUE10_
+                L9_55 = L9_55[L7_53]
+                L8_54 = L8_54(L9_55)
+                L9_55 = L8_54
+                L8_54 = L8_54.find
+                L8_54 = L8_54(L9_55, _UPVALUE13_ .. "@")
+                if L8_54 then
+                  L8_54 = _UPVALUE12_
+                  L8_54 = L8_54[L7_53]
+                  L9_55 = _UPVALUE10_
+                  L9_55 = L9_55[L7_53]
+                  L9_55 = L9_55.sub
+                  L9_55 = L9_55(L9_55, string.len(_UPVALUE13_ .. "@") + 1)
+                  L8_54.str = L9_55
+                else
+                  L8_54 = _UPVALUE12_
+                  L8_54 = L8_54[L7_53]
+                  L9_55 = _UPVALUE10_
+                  L9_55 = L9_55[L7_53]
+                  L9_55 = L9_55.sub
+                  L9_55 = L9_55(L9_55, string.len(_UPVALUE13_ .. "u/") + 1)
+                  L8_54.str = L9_55
+                end
+            end
+            else
+              L8_54 = _UPVALUE12_
+              L9_55 = {}
+              L9_55.str = ""
+              L9_55.type = "notvalid"
+              L8_54[L7_53] = L9_55
+            end
+          end
+        end
+        L8_54 = _UPVALUE11_
+        L8_54 = L8_54[L7_53]
+        if L8_54 == "" then
+          function L8_54(A0_57)
+            if _UPVALUE0_.tableView then
+              if A0_57:len() > 46 then
+                A0_57 = A0_57:sub(1, 44) .. "..."
+              end
+              _UPVALUE1_[_UPVALUE2_] = A0_57
+              _UPVALUE3_[_UPVALUE2_]:setText(A0_57)
+              _UPVALUE3_[_UPVALUE2_]:setReferencePoint(display.CenterLeftReferencePoint)
+              _UPVALUE3_[_UPVALUE2_]:setPosition(_UPVALUE3_[_UPVALUE2_].origX, _UPVALUE3_[_UPVALUE2_].origY)
+              _UPVALUE4_[_UPVALUE2_] = _UPVALUE5_.delete(_UPVALUE4_[_UPVALUE2_])
+            end
+          end
+          L9_55 = _UPVALUE12_
+          L9_55 = L9_55[L7_53]
+          L9_55 = L9_55.type
+          if L9_55 == "notvalid" then
+            L9_55 = _UPVALUE5_
+            L9_55 = L9_55.showAlert
+            L9_55("Invalid seed link", "The seed link provided is invalid and doesn't lead to an upload or user.", {"Ok"})
+          else
+            L9_55 = _UPVALUE12_
+            L9_55 = L9_55[L7_53]
+            L9_55 = L9_55.type
+            if L9_55 == "video" then
+              function L9_55(A0_58)
+                _UPVALUE1_(_UPVALUE2_.html_decode(_UPVALUE0_.convert(A0_58.response).entry.title["$t"]))
+              end
+              _UPVALUE5_.network_request("", {
+                success = L9_55,
+                failed = function(A0_59)
+                  if A0_59.response == "<errors xmlns='http://schemas.google.com/g/2005'><error><domain>GData</domain><code>InvalidRequestUriException</code><internalReason>Invalid id</internalReason></error></errors>" then
+                    _UPVALUE0_.showAlert("Invalid seed link", "The seed link provided is invalid and doesn't lead to an upload.", {"Ok"})
+                  end
+                end
+              }, {}, {
+                showErrorMsg = false,
+                hashed = false,
+                type = "GET",
+                nurl = "https://gdata.youtube.com/feeds/api/videos/" .. _UPVALUE17_.escape(_UPVALUE12_[L7_53].str) .. "?v=2&alt=json-in-script"
+              })
+            else
+              L9_55 = _UPVALUE12_
+              L9_55 = L9_55[L7_53]
+              L9_55 = L9_55.type
+              if L9_55 == "seed" then
+                function L9_55(A0_60)
+                  _UPVALUE0_(A0_60.response)
+                end
+                _UPVALUE5_.network_request("get_upload_name_by_id", L9_55, {
+                  id = _UPVALUE12_[L7_53].str
+                })
+              else
+                L9_55 = _UPVALUE12_
+                L9_55 = L9_55[L7_53]
+                L9_55 = L9_55.type
+                if L9_55 == "user" then
+                  function L9_55(A0_61)
+                    _UPVALUE0_(A0_61.response)
+                  end
+                  _UPVALUE5_.network_request("getNicknameByUsertag", L9_55, {
+                    usertag = _UPVALUE12_[L7_53].str
+                  })
+                end
+              end
+            end
+          end
+        end
+        L8_54 = L2_48.tableView
+        L9_55 = L8_54
+        L8_54 = L8_54.insertRow
+        L8_54(L9_55, {
+          id = _UPVALUE10_[L7_53],
+          onRender = _UPVALUE18_,
+          onEvent = _UPVALUE19_,
+          height = 40,
+          rowColor = {
+            0,
+            0,
+            0,
+            0
+          },
+          lineColor = {
+            0,
+            0,
+            0,
+            0
+          }
+        })
+      end
+      L6_52.time = 200
+      L7_53 = _H
+      L8_54 = L2_48.tableViewGroup
+      L8_54 = L8_54.height
+      L7_53 = L7_53 + L8_54
+      L6_52.y = L7_53
+      L7_53 = easing
+      L7_53 = L7_53.outQuad
+      L6_52.transition = L7_53
+      L7_53 = true
+      L4_50(L5_51, L6_52, L7_53)
+      L4_50()
+    end
+    L2_48 = true
+    return L2_48
+  end
+  A0_1:addEventListener("touch", L16_17)
+end
+return {}

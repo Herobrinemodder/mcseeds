@@ -1,0 +1,167 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("creator")
+;({}).makeBanner = function(A0_1)
+  local L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L2_3 = display
+  L2_3 = L2_3.newRect
+  L3_4 = 0
+  L4_5 = 0
+  L5_6 = _W
+  L6_7 = _UPVALUE0_
+  L2_3 = L2_3(L3_4, L4_5, L5_6, L6_7)
+  L4_5 = L2_3
+  L3_4 = L2_3.setFillColor
+  L5_6 = 160
+  L6_7 = 160
+  L7_8 = 160
+  L3_4(L4_5, L5_6, L6_7, L7_8)
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = _UPVALUE1_
+  L3_4 = L3_4.makeSprite
+  L4_5 = _UPVALUE2_
+  L5_6 = 25
+  L3_4 = L3_4(L4_5, L5_6)
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = {}
+  L5_6 = nil
+  function L6_7(A0_10, A1_11, A2_12, A3_13)
+    local L4_14
+    L4_14 = _UPVALUE0_
+    L4_14 = L4_14.session
+    if L4_14 == _UPVALUE1_ and A0_10 == true then
+      function L4_14(A0_15)
+        local L1_16
+        L1_16 = _UPVALUE0_
+        L1_16 = L1_16.session
+        if L1_16 == _UPVALUE1_ then
+          if A0_15 then
+            L1_16 = _UPVALUE2_
+            L1_16 = L1_16.delete
+            L1_16 = L1_16(A0_15)
+            A0_15 = L1_16
+          end
+          function L1_16(A0_17)
+            if A0_17.phase == "ended" then
+              _UPVALUE0_.network_request("tapped_ad", nil, {})
+              system.openURL(_UPVALUE1_)
+            end
+            return true
+          end
+          _UPVALUE4_[1] = display.newImageRect(_UPVALUE5_, _UPVALUE6_, _W, _UPVALUE7_)
+          _UPVALUE4_[1]:setReferencePoint(display.TopLeftReferencePoint)
+          _UPVALUE4_[1].x = 0
+          _UPVALUE4_[1].y = 0
+          transition.from(_UPVALUE4_[1], {time = 800, alpha = 0})
+          _UPVALUE4_[1]:addEventListener("touch", L1_16)
+          _UPVALUE8_:insert(_UPVALUE4_[1])
+          _UPVALUE9_ = _UPVALUE2_.delete(_UPVALUE9_)
+        end
+      end
+      if _UPVALUE3_[1] then
+        transition.to(_UPVALUE3_[1], {
+          time = 500,
+          alpha = 0,
+          onComplete = L4_14
+        })
+      else
+        L4_14()
+      end
+    end
+  end
+  function L7_8(A0_18)
+    local L1_19, L2_20, L3_21, L4_22, L5_23
+    L1_19 = _UPVALUE0_
+    L1_19 = L1_19.decode
+    L2_20 = A0_18.response
+    L1_19 = L1_19(L2_20)
+    L2_20 = L1_19.constant
+    if L2_20 == true then
+      L2_20 = "banner-constant.png"
+      L3_21 = system
+      L3_21 = L3_21.TemporaryDirectory
+      function L4_22(A0_24)
+        if A0_24.status == 200 then
+          _UPVALUE0_(true, _UPVALUE1_, _UPVALUE2_, _UPVALUE3_.link)
+        else
+          os.remove(system.pathForFile(_UPVALUE1_, _UPVALUE2_))
+          _UPVALUE0_(false, nil, nil, nil)
+        end
+      end
+      L5_23 = io
+      L5_23 = L5_23.open
+      L5_23 = L5_23(system.pathForFile(L2_20, L3_21))
+      if L5_23 == nil then
+        L5_23 = network
+        L5_23 = L5_23.download
+        L5_23(_UPVALUE2_.getSite() .. "banners/imgs/constant.png", "GET", L4_22, L2_20, L3_21)
+      else
+        L5_23 = L4_22
+        L5_23({status = 200})
+      end
+    else
+      L2_20 = L1_19.count
+      if L2_20 == 0 then
+        L2_20 = _UPVALUE1_
+        L3_21 = false
+        L4_22, L5_23 = nil, nil
+        L2_20(L3_21, L4_22, L5_23, nil)
+      else
+        L2_20 = math
+        L2_20 = L2_20.random
+        L3_21 = 1
+        L4_22 = L1_19.count
+        L2_20 = L2_20(L3_21, L4_22)
+        L3_21 = "banner-"
+        L4_22 = "img"
+        L5_23 = L2_20
+        L4_22 = L4_22 .. L5_23
+        L4_22 = L1_19[L4_22]
+        L5_23 = ".png"
+        L3_21 = L3_21 .. L4_22 .. L5_23
+        L4_22 = system
+        L4_22 = L4_22.TemporaryDirectory
+        function L5_23(A0_25)
+          if A0_25.status == 200 then
+            _UPVALUE0_(true, _UPVALUE1_, _UPVALUE2_, _UPVALUE3_["link" .. _UPVALUE4_])
+          else
+            os.remove(system.pathForFile(_UPVALUE1_, _UPVALUE2_))
+            _UPVALUE0_(false, nil, nil, nil)
+          end
+        end
+        if io.open(system.pathForFile(L3_21, L4_22)) == nil then
+          network.download(_UPVALUE2_.getSite() .. "banners/imgs/" .. L1_19["img" .. L2_20] .. ".png?time=" .. os.time(), "GET", L5_23, L3_21, L4_22)
+        else
+          L5_23({status = 200})
+        end
+        _UPVALUE3_ = timer.performWithDelay(14000, function()
+          _UPVALUE0_({
+            response = _UPVALUE1_.encode(_UPVALUE2_),
+            status = 200
+          })
+        end)
+      end
+    end
+  end
+  L8_9 = _UPVALUE1_
+  L8_9 = L8_9.network_request
+  L8_9("check_banner_images", L7_8, {})
+  function L8_9(A0_26)
+    if _UPVALUE0_ then
+      timer.cancel(_UPVALUE0_)
+    end
+    _UPVALUE1_.removeRuntimeListener("clearLocalTimersAndListeners", A0_26.self_listenerid)
+  end
+  _UPVALUE1_.addRuntimeListener("clearLocalTimersAndListeners", L8_9)
+  return L1_2
+end
+return {}

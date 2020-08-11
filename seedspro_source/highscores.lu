@@ -1,0 +1,391 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("creator")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.getAppType
+  L7_8 = L7_8()
+  L8_9 = _UPVALUE0_
+  L8_9 = L8_9.getScriptFile
+  L8_9 = L8_9()
+  L9_10 = _UPVALUE1_
+  L9_10 = L9_10.miniGames
+  L10_11 = _UPVALUE1_
+  L10_11 = L10_11.nickname
+  L11_12 = _UPVALUE1_
+  L11_12 = L11_12.imgSuff
+  L12_13 = _UPVALUE0_
+  L12_13 = L12_13.getSceneProperties
+  L12_13 = L12_13()
+  L13_14 = _UPVALUE1_
+  L13_14 = L13_14.udid
+  L14_15 = L12_13.fetchUdid
+  L15_16 = L12_13.fetchNick
+  L16_17 = L12_13.prevScene
+  L17_18 = L12_13.section
+  L18_19 = L12_13.page
+  L19_20 = L12_13.taps
+  L20_21 = _UPVALUE1_
+  L20_21 = L20_21.session
+  L20_21 = L20_21 + 1
+  L21_22 = _UPVALUE1_
+  L21_22.session = L20_21
+  L21_22 = _UPVALUE0_
+  L21_22 = L21_22.makeBlurryBg
+  L21_22 = L21_22()
+  L23_24 = L21_22
+  L22_23 = L21_22.addEventListener
+  L24_25 = "touch"
+  function L25_26()
+    local L0_32, L1_33
+    L0_32 = true
+    return L0_32
+  end
+  L22_23(L23_24, L24_25, L25_26)
+  L23_24 = L2_3
+  L22_23 = L2_3.insert
+  L24_25 = L21_22
+  L22_23(L23_24, L24_25)
+  L22_23 = _UPVALUE2_
+  L22_23 = L22_23.createSideMenu
+  L23_24 = L1_2
+  L22_23 = L22_23(L23_24)
+  L24_25 = L0_1
+  L23_24 = L0_1.insert
+  L25_26 = L22_23
+  L23_24(L24_25, L25_26)
+  L0_1.side_menu = L22_23
+  L24_25 = L22_23
+  L23_24 = L22_23.toBack
+  L23_24(L24_25)
+  L23_24 = _UPVALUE3_
+  L23_24 = L23_24.newTableView
+  L24_25 = {}
+  L24_25.top = 64
+  L25_26 = _W
+  L24_25.width = L25_26
+  L25_26 = _H
+  L25_26 = L25_26 - 64
+  L24_25.height = L25_26
+  L25_26 = {
+    L26_27,
+    L27_28,
+    L28_29,
+    L29_30
+  }
+  L26_27 = 0
+  L27_28 = 0
+  L28_29 = 0
+  L29_30 = 0
+  L24_25.bgColor = L25_26
+  L23_24 = L23_24(L24_25)
+  L25_26 = L3_4
+  L24_25 = L3_4.insert
+  L26_27 = L23_24
+  L24_25(L25_26, L26_27)
+  function L24_25(A0_34)
+    _UPVALUE0_:scrollToY(A0_34, 0)
+  end
+  L23_24.scrollList = L24_25
+  function L24_25()
+    return (_UPVALUE0_:getContentPosition())
+  end
+  L23_24.getPos = L24_25
+  function L24_25(A0_35)
+    local L1_36, L2_37, L3_38, L4_39, L5_40
+    L1_36 = A0_35.target
+    L1_36 = L1_36.height
+    L2_37 = A0_35.view
+    L3_38 = display
+    L3_38 = L3_38.newGroup
+    L3_38 = L3_38()
+    L5_40 = L2_37
+    L4_39 = L2_37.insert
+    L4_39(L5_40, L3_38)
+    L4_39 = _UPVALUE0_
+    L4_39 = L4_39.makeSprite
+    L5_40 = 0
+    L4_39 = L4_39(L5_40, 0)
+    L5_40 = L3_38.insert
+    L5_40(L3_38, L4_39)
+    L5_40 = display
+    L5_40 = L5_40.newText
+    L5_40 = L5_40({
+      text = "Fetching highscores",
+      x = 0,
+      y = 0,
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 16
+    })
+    L5_40:setReferencePoint(display.CenterLeftReferencePoint)
+    L5_40:setPosition(L4_39.x + L4_39.width * 0.5 + 7, 0)
+    L5_40:setFillColor(255, 255, 255, 255)
+    L3_38:insert(L5_40)
+    L3_38:setReferencePoint(display.CenterReferencePoint)
+    L3_38.x = _UPVALUE2_
+    L3_38.y = L1_36 * 0.5
+  end
+  L26_27 = L23_24
+  L25_26 = L23_24.insertRow
+  L27_28 = {}
+  L27_28.onRender = L24_25
+  L27_28.height = 35
+  L28_29 = {
+    L29_30,
+    L30_31,
+    0,
+    0
+  }
+  L29_30 = 0
+  L30_31 = 0
+  L27_28.rowColor = L28_29
+  L28_29 = {
+    L29_30,
+    L30_31,
+    255,
+    0
+  }
+  L29_30 = 255
+  L30_31 = 255
+  L27_28.lineColor = L28_29
+  L25_26(L26_27, L27_28)
+  function L25_26(A0_41)
+    local L1_42, L2_43, L3_44, L4_45, L5_46, L6_47
+    L1_42 = A0_41.background
+    L2_43 = A0_41.target
+    L2_43 = L2_43.score
+    L3_44 = A0_41.phase
+    L4_45 = A0_41.target
+    L4_45 = L4_45.id
+    L6_47 = L1_42
+    L5_46 = L1_42.setFillColor
+    L5_46(L6_47, 217, 217, 217)
+    L6_47 = L2_43
+    L5_46 = L2_43.setFillColor
+    L5_46(L6_47, 255, 255, 255)
+    if L3_44 == "release" or L3_44 == "tap" then
+      function L5_46()
+        _UPVALUE0_:setFillColor(0, 0, 0, 0)
+        _UPVALUE1_:setFillColor(unpack(_UPVALUE1_.color))
+      end
+      L6_47 = timer
+      L6_47 = L6_47.performWithDelay
+      L6_47(100, L5_46)
+      function L6_47(A0_48)
+        if A0_48.action == "clicked" and A0_48.index == 2 and system.openURL(_UPVALUE0_.scheme) == false then
+          system.openURL(_UPVALUE0_.link)
+        end
+      end
+      _UPVALUE0_.showAlert("Launch game?", "Give " .. L4_45.label .. " a try?", {"Cancel", "Sure!"}, L6_47)
+    end
+    L5_46 = true
+    return L5_46
+  end
+  function L26_27(A0_49)
+    _UPVALUE1_:deleteRow(1)
+    for _FORV_6_ = 1, #_UPVALUE3_ do
+      _UPVALUE1_:insertRow({
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        onRender = function(A0_50)
+          local L1_51, L2_52, L3_53, L4_54, L5_55, L6_56, L7_57
+          L1_51 = A0_50.target
+          L1_51 = L1_51.height
+          L2_52 = A0_50.view
+          L3_53 = A0_50.target
+          L3_53 = L3_53.id
+          L4_54 = display
+          L4_54 = L4_54.newImageRect
+          L5_55 = "miniGames-"
+          L6_56 = L3_53.label
+          L7_57 = ".png"
+          L5_55 = L5_55 .. L6_56 .. L7_57
+          L6_56 = system
+          L6_56 = L6_56.TemporaryDirectory
+          L7_57 = 28
+          L4_54 = L4_54(L5_55, L6_56, L7_57, 28)
+          L6_56 = L4_54
+          L5_55 = L4_54.setReferencePoint
+          L7_57 = display
+          L7_57 = L7_57.CenterLeftReferencePoint
+          L5_55(L6_56, L7_57)
+          L4_54.x = 8
+          L5_55 = L1_51 * 0.5
+          L4_54.y = L5_55
+          L6_56 = L2_52
+          L5_55 = L2_52.insert
+          L7_57 = L4_54
+          L5_55(L6_56, L7_57)
+          L5_55 = display
+          L5_55 = L5_55.newGroup
+          L5_55 = L5_55()
+          L7_57 = L2_52
+          L6_56 = L2_52.insert
+          L6_56(L7_57, L5_55)
+          L6_56 = display
+          L6_56 = L6_56.newText
+          L7_57 = {}
+          L7_57.text = L3_53.label
+          L7_57.font = _UPVALUE0_.fonts.light
+          L7_57.fontSize = 14
+          L6_56 = L6_56(L7_57)
+          L7_57 = L6_56.setReferencePoint
+          L7_57(L6_56, display.TopLeftReferencePoint)
+          L7_57 = L6_56.setPosition
+          L7_57(L6_56, 0, 0)
+          L7_57 = L5_55.insert
+          L7_57(L5_55, L6_56)
+          L7_57 = _UPVALUE1_
+          L7_57 = L7_57[L3_53.gameid]
+          if L7_57 then
+            L7_57 = A0_50.target
+            L7_57.score = display.newText({
+              text = "Rank: #" .. _UPVALUE1_[L3_53.gameid].rank .. "    Score: " .. _UPVALUE1_[L3_53.gameid].score,
+              font = _UPVALUE0_.fonts.light,
+              fontSize = 12
+            })
+          else
+            L7_57 = A0_50.target
+            L7_57.score = display.newText({
+              text = "Not played yet",
+              font = _UPVALUE0_.fonts.light,
+              fontSize = 12
+            })
+          end
+          L7_57 = A0_50.target
+          L7_57 = L7_57.score
+          L7_57 = L7_57.setReferencePoint
+          L7_57(L7_57, display.TopLeftReferencePoint)
+          L7_57 = A0_50.target
+          L7_57 = L7_57.score
+          L7_57 = L7_57.setPosition
+          L7_57(L7_57, 0, L6_56.height - 2)
+          L7_57 = A0_50.target
+          L7_57 = L7_57.score
+          L7_57.color = {
+            255,
+            255,
+            255,
+            155
+          }
+          L7_57 = A0_50.target
+          L7_57 = L7_57.score
+          L7_57 = L7_57.setFillColor
+          L7_57(L7_57, unpack(A0_50.target.score.color))
+          L7_57 = L5_55.insert
+          L7_57(L5_55, A0_50.target.score)
+          L7_57 = L5_55.setReferencePoint
+          L7_57(L5_55, display.CenterLeftReferencePoint)
+          L5_55.x = 45
+          L7_57 = L1_51 * 0.5
+          L7_57 = L7_57 - 1
+          L5_55.y = L7_57
+          L7_57 = display
+          L7_57 = L7_57.newLine
+          L7_57 = L7_57(8, L1_51 - 1, _W, L1_51 - 1)
+          L7_57:setStrokeColor(255, 255, 255, 50)
+          L2_52:insert(L7_57)
+        end,
+        onEvent = _UPVALUE4_,
+        height = 40,
+        id = _UPVALUE3_[_FORV_6_]
+      })
+    end
+  end
+  function L27_28(A0_58)
+    _UPVALUE0_.network_request("getHighscoresOfUser", _UPVALUE1_, {fetchUdid = _UPVALUE2_})
+    _UPVALUE0_.removeRuntimeListener("sceneLoaded", A0_58.self_listenerid)
+  end
+  L28_29 = _UPVALUE0_
+  L28_29 = L28_29.addRuntimeListener
+  L29_30 = "sceneLoaded"
+  L30_31 = L27_28
+  L28_29(L29_30, L30_31)
+  L28_29 = _UPVALUE0_
+  L28_29 = L28_29.makeToolbar
+  L29_30 = "Highscores"
+  L30_31 = {}
+  L30_31.line = true
+  L28_29 = L28_29(L29_30, L30_31)
+  L30_31 = L4_5
+  L29_30 = L4_5.insert
+  L29_30(L30_31, L28_29)
+  function L29_30(A0_59)
+    _UPVALUE0_.remove({
+      "fetchUdid",
+      "fetchNick",
+      "prevScene",
+      "section",
+      "page"
+    })
+    _UPVALUE0_.update({
+      taps = _UPVALUE1_ - 1
+    })
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE2_, "toRightNew")
+    return true
+  end
+  L30_31 = _UPVALUE3_
+  L30_31 = L30_31.newButton
+  L30_31 = L30_31({
+    width = 50,
+    height = 50,
+    default = "back.png",
+    over = "back-over.png",
+    onRelease = L29_30
+  })
+  L30_31:setReferencePoint(display.CenterLeftReferencePoint)
+  L30_31.x = -1
+  L30_31.y = L28_29.yCenter
+  L4_5:insert(L30_31)
+  L4_5:toFront()
+  return L0_1
+end

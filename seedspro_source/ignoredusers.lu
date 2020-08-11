@@ -1,0 +1,1189 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("openGLTextfield")
+;({}).make = function(A0_1, A1_2)
+  local L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29
+  L2_3 = {}
+  L3_4 = {}
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L5_6 = display
+  L5_6 = L5_6.newRect
+  L6_7 = 0
+  L7_8 = 0
+  L8_9 = _W
+  L9_10 = _H
+  L5_6 = L5_6(L6_7, L7_8, L8_9, L9_10)
+  L7_8 = L5_6
+  L6_7 = L5_6.setFillColor
+  L8_9 = 0
+  L9_10 = 0
+  L10_11 = 0
+  L11_12 = 220
+  L6_7(L7_8, L8_9, L9_10, L10_11, L11_12)
+  L5_6.isHitTestable = true
+  L7_8 = L5_6
+  L6_7 = L5_6.addEventListener
+  L8_9 = "touch"
+  function L9_10()
+    native.setKeyboardFocus(nil)
+    return true
+  end
+  L6_7(L7_8, L8_9, L9_10)
+  L7_8 = L4_5
+  L6_7 = L4_5.insert
+  L8_9 = L5_6
+  L6_7(L7_8, L8_9)
+  L6_7 = display
+  L6_7 = L6_7.newText
+  L7_8 = {}
+  L7_8.text = "Ignore users"
+  L8_9 = _UPVALUE0_
+  L8_9 = L8_9.fonts
+  L8_9 = L8_9.bold
+  L7_8.font = L8_9
+  L7_8.fontSize = 20
+  L6_7 = L6_7(L7_8)
+  L8_9 = L6_7
+  L7_8 = L6_7.setReferencePoint
+  L9_10 = display
+  L9_10 = L9_10.CenterReferencePoint
+  L7_8(L8_9, L9_10)
+  L8_9 = L6_7
+  L7_8 = L6_7.setPosition
+  L9_10 = _UPVALUE1_
+  L10_11 = 49
+  L7_8(L8_9, L9_10, L10_11)
+  L8_9 = L6_7
+  L7_8 = L6_7.setFillColor
+  L9_10 = 255
+  L10_11 = 255
+  L11_12 = 255
+  L7_8(L8_9, L9_10, L10_11, L11_12)
+  L8_9 = L4_5
+  L7_8 = L4_5.insert
+  L9_10 = L6_7
+  L7_8(L8_9, L9_10)
+  L7_8 = _UPVALUE2_
+  L7_8 = L7_8.makeImageFromSlices
+  L8_9 = {}
+  L8_9.filename = "blockignoreusersbg-slice"
+  L9_10 = _W
+  L9_10 = L9_10 - 49
+  L8_9.resWidth = L9_10
+  L9_10 = _H
+  L9_10 = L9_10 - 159
+  L8_9.resHeight = L9_10
+  L8_9.width = 6
+  L8_9.height = 6
+  L8_9.slices = 4
+  L9_10 = {
+    L10_11,
+    L11_12,
+    L12_13
+  }
+  L10_11 = 210
+  L11_12 = 213
+  L12_13 = 214
+  L8_9.fillColor = L9_10
+  L7_8 = L7_8(L8_9)
+  L9_10 = L7_8
+  L8_9 = L7_8.setReferencePoint
+  L10_11 = display
+  L10_11 = L10_11.TopCenterReferencePoint
+  L8_9(L9_10, L10_11)
+  L8_9 = _UPVALUE1_
+  L7_8.x = L8_9
+  L7_8.y = 94
+  L9_10 = L4_5
+  L8_9 = L4_5.insert
+  L10_11 = L7_8
+  L8_9(L9_10, L10_11)
+  L8_9 = _UPVALUE3_
+  L8_9 = L8_9.newTableView
+  L9_10 = {}
+  L10_11 = _W
+  L10_11 = L10_11 - 78
+  L9_10.width = L10_11
+  L10_11 = _UPVALUE4_
+  L11_12 = _H
+  L11_12 = L11_12 * 0.5
+  L10_11 = L10_11(L11_12)
+  L10_11 = L10_11 - 170
+  L9_10.height = L10_11
+  L10_11 = {
+    L11_12,
+    L12_13,
+    L13_14,
+    L14_15
+  }
+  L11_12 = 0
+  L12_13 = 0
+  L13_14 = 0
+  L14_15 = 0
+  L9_10.bgColor = L10_11
+  L10_11 = system
+  L10_11 = L10_11.TemporaryDirectory
+  L9_10.baseDir = L10_11
+  L10_11 = "mask-"
+  L11_12 = _W
+  L11_12 = L11_12 - 78
+  L12_13 = "x"
+  L13_14 = _UPVALUE4_
+  L14_15 = _H
+  L14_15 = L14_15 * 0.5
+  L13_14 = L13_14(L14_15)
+  L13_14 = L13_14 - 170
+  L14_15 = ".png"
+  L10_11 = L10_11 .. L11_12 .. L12_13 .. L13_14 .. L14_15
+  L9_10.maskFile = L10_11
+  L8_9 = L8_9(L9_10)
+  L10_11 = L8_9
+  L9_10 = L8_9.setReferencePoint
+  L11_12 = display
+  L11_12 = L11_12.TopCenterReferencePoint
+  L9_10(L10_11, L11_12)
+  L9_10 = _UPVALUE1_
+  L8_9.x = L9_10
+  L8_9.y = 141
+  L10_11 = L4_5
+  L9_10 = L4_5.insert
+  L11_12 = L8_9
+  L9_10(L10_11, L11_12)
+  L9_10 = _UPVALUE3_
+  L9_10 = L9_10.newTableView
+  L10_11 = {}
+  L11_12 = _W
+  L11_12 = L11_12 - 78
+  L10_11.width = L11_12
+  L11_12 = _UPVALUE4_
+  L12_13 = _H
+  L12_13 = L12_13 * 0.5
+  L11_12 = L11_12(L12_13)
+  L11_12 = L11_12 - 56
+  L10_11.height = L11_12
+  L11_12 = {
+    L12_13,
+    L13_14,
+    L14_15,
+    L15_16
+  }
+  L12_13 = 0
+  L13_14 = 0
+  L14_15 = 0
+  L15_16 = 0
+  L10_11.bgColor = L11_12
+  L11_12 = system
+  L11_12 = L11_12.TemporaryDirectory
+  L10_11.baseDir = L11_12
+  L11_12 = "mask-"
+  L12_13 = _W
+  L12_13 = L12_13 - 78
+  L13_14 = "x"
+  L14_15 = _UPVALUE4_
+  L15_16 = _H
+  L15_16 = L15_16 * 0.5
+  L14_15 = L14_15(L15_16)
+  L14_15 = L14_15 - 56
+  L15_16 = ".png"
+  L11_12 = L11_12 .. L12_13 .. L13_14 .. L14_15 .. L15_16
+  L10_11.maskFile = L11_12
+  L9_10 = L9_10(L10_11)
+  L11_12 = L9_10
+  L10_11 = L9_10.setReferencePoint
+  L12_13 = display
+  L12_13 = L12_13.TopCenterReferencePoint
+  L10_11(L11_12, L12_13)
+  L10_11 = _UPVALUE1_
+  L9_10.x = L10_11
+  L10_11 = L8_9.y
+  L11_12 = L8_9.height
+  L10_11 = L10_11 + L11_12
+  L10_11 = L10_11 + 5
+  L9_10.y = L10_11
+  L11_12 = L4_5
+  L10_11 = L4_5.insert
+  L12_13 = L9_10
+  L10_11(L11_12, L12_13)
+  function L10_11(A0_30)
+    local L1_31, L2_32, L3_33, L4_34, L5_35, L6_36
+    L1_31 = _UPVALUE0_
+    L1_31 = L1_31.content
+    L1_31 = L1_31.rows
+    L1_31 = #L1_31
+    for L5_35 = 1, L1_31 do
+      L6_36 = _UPVALUE0_
+      L6_36 = L6_36.content
+      L6_36 = L6_36.rows
+      L6_36 = L6_36[L5_35]
+      L6_36 = L6_36.id
+      if L6_36 then
+        L6_36 = _UPVALUE0_
+        L6_36 = L6_36.content
+        L6_36 = L6_36.rows
+        L6_36 = L6_36[L5_35]
+        L6_36 = L6_36.id
+        L6_36 = L6_36.id
+        if L6_36 == A0_30 then
+          L6_36 = _UPVALUE0_
+          L6_36 = L6_36.deleteRow
+          L6_36(L6_36, L5_35)
+          break
+        end
+      end
+    end
+    for L6_36 = 1, L2_32 do
+      if _UPVALUE1_.content.rows[L6_36].id.id == A0_30 then
+        _UPVALUE1_.content.rows[L6_36].checkmark.isVisible = false
+        break
+      end
+    end
+    for L6_36, _FORV_7_ in L3_33(L4_34) do
+      if _FORV_7_.id == A0_30 then
+        if _UPVALUE2_[L6_36].status == "ignoredfrombefore" then
+          _UPVALUE2_[L6_36].status = "unignored"
+        else
+          _UPVALUE2_[L6_36] = _UPVALUE3_.delete(_UPVALUE2_[L6_36])
+          table.remove(_UPVALUE2_, L6_36)
+        end
+      end
+    end
+  end
+  function L11_12(A0_37)
+    local L1_38, L2_39, L3_40, L4_41, L5_42, L6_43
+    L1_38 = A0_37.target
+    L1_38 = L1_38.height
+    L2_39 = L1_38 * 0.5
+    L3_40 = A0_37.target
+    L3_40 = L3_40.width
+    L4_41 = A0_37.view
+    L5_42 = display
+    L5_42 = L5_42.newText
+    L6_43 = {}
+    L6_43.text = "User"
+    L6_43.font = _UPVALUE0_.fonts.regular
+    L6_43.fontSize = 12
+    L5_42 = L5_42(L6_43)
+    L6_43 = L5_42.setReferencePoint
+    L6_43(L5_42, display.CenterLeftReferencePoint)
+    L6_43 = L5_42.setPosition
+    L6_43(L5_42, 11, L2_39 + 2)
+    L6_43 = L5_42.setFillColor
+    L6_43(L5_42, 71, 75, 76)
+    L6_43 = L4_41.insert
+    L6_43(L4_41, L5_42)
+    L6_43 = display
+    L6_43 = L6_43.newText
+    L6_43 = L6_43({
+      text = "Ignore type",
+      font = _UPVALUE0_.fonts.regular,
+      fontSize = 12
+    })
+    L6_43:setReferencePoint(display.CenterRightReferencePoint)
+    L6_43:setPosition(L3_40 - 11, L2_39 + 2)
+    L6_43:setFillColor(71, 75, 76)
+    L4_41:insert(L6_43)
+  end
+  function L12_13(A0_44)
+    local L1_45, L2_46, L3_47, L4_48, L5_49, L6_50, L7_51, L8_52, L9_53
+    L1_45 = A0_44.target
+    L1_45 = L1_45.ignoredType
+    L2_46 = A0_44.target
+    L2_46 = L2_46.ignoredTypeArrows_over
+    L3_47 = A0_44.background
+    L4_48 = A0_44.target
+    L4_48 = L4_48.ignoredTypeArrows
+    L5_49 = A0_44.target
+    L5_49 = L5_49.username
+    L6_50 = A0_44.id
+    L7_51 = A0_44.phase
+    L8_52 = A0_44.target
+    L8_52 = L8_52.mod
+    L9_53 = L3_47.setFillColor
+    L9_53(L3_47, 217, 217, 217)
+    L9_53 = L5_49.setFillColor
+    L9_53(L5_49, 255, 255, 255)
+    L9_53 = L1_45.setFillColor
+    L9_53(L1_45, 255, 255, 255)
+    L4_48.isVisible = false
+    L2_46.isVisible = true
+    if L8_52 then
+      L9_53 = L8_52.setFillColor
+      L9_53(L8_52, 255, 255, 255)
+    end
+    if L7_51 == "release" or L7_51 == "tap" then
+      function L9_53()
+        _UPVALUE0_:setFillColor(0, 0, 0, 0)
+        _UPVALUE1_:setFillColor(71, 75, 76)
+        _UPVALUE2_:setFillColor(71, 75, 76)
+        _UPVALUE3_.isVisible = true
+        _UPVALUE4_.isVisible = false
+        if _UPVALUE5_ then
+          _UPVALUE5_:setFillColor(unpack(_UPVALUE5_.color))
+        end
+        _UPVALUE6_(_UPVALUE7_.id)
+      end
+      timer.performWithDelay(120, L9_53)
+    end
+  end
+  function L13_14(A0_54)
+    local L1_55, L2_56, L3_57
+    L1_55 = A0_54.target
+    L1_55 = L1_55.ignoredType
+    L2_56 = A0_54.target
+    L2_56 = L2_56.response
+    L3_57 = A0_54.phase
+    if L3_57 == "moved" then
+      if _UPVALUE0_(A0_54.xStart - A0_54.x) > 1 or _UPVALUE0_(A0_54.yStart - A0_54.y) > 1 then
+        _UPVALUE1_:takeFocus(A0_54)
+      end
+    elseif L3_57 == "ended" or L3_57 == "cancelled" then
+      if L2_56.type == "all" then
+        L1_55:setText("Comments")
+        L2_56.type = "comments"
+      elseif L2_56.type == "comments" then
+        L1_55:setText("Uploads")
+        L2_56.type = "uploads"
+      elseif L2_56.type == "uploads" then
+        L1_55:setText("All")
+        L2_56.type = "all"
+      end
+      if L2_56.status == "ignoredfrombefore" then
+        L2_56.status = "updateignored"
+      end
+      L1_55:setReferencePoint(display.CenterRightReferencePoint)
+      L1_55:setPosition(L1_55.origX, L1_55.origY)
+    end
+    return true
+  end
+  function L14_15(A0_58)
+    local L1_59, L2_60, L3_61, L4_62, L5_63, L6_64, L7_65
+    L1_59 = A0_58.target
+    L1_59 = L1_59.height
+    L2_60 = L1_59 * 0.5
+    L3_61 = A0_58.target
+    L3_61 = L3_61.width
+    L4_62 = A0_58.view
+    L5_63 = A0_58.id
+    L6_64 = _UPVALUE0_
+    L6_64 = L6_64.makeAvatar
+    L7_65 = {}
+    L7_65.scale = 2
+    L7_65.avatar = L5_63.avatar
+    L6_64 = L6_64(L7_65)
+    L7_65 = L6_64.setReferencePoint
+    L7_65(L6_64, display.CenterLeftReferencePoint)
+    L6_64.x = 11
+    L6_64.y = L2_60
+    L7_65 = L4_62.insert
+    L7_65(L4_62, L6_64)
+    L7_65 = A0_58.target
+    L7_65.username = display.newText({
+      text = L5_63.nickname,
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 12
+    })
+    L7_65 = A0_58.target
+    L7_65 = L7_65.username
+    L7_65 = L7_65.setReferencePoint
+    L7_65(L7_65, display.CenterLeftReferencePoint)
+    L7_65 = A0_58.target
+    L7_65 = L7_65.username
+    L7_65 = L7_65.setPosition
+    L7_65(L7_65, 36, L2_60)
+    L7_65 = A0_58.target
+    L7_65 = L7_65.username
+    L7_65 = L7_65.setFillColor
+    L7_65(L7_65, 71, 75, 76)
+    L7_65 = L4_62.insert
+    L7_65(L4_62, A0_58.target.username)
+    L7_65 = L5_63.udid
+    if L7_65 == "1234567890" then
+      L7_65 = A0_58.target
+      L7_65.mod = display.newText({
+        text = "(Adm)",
+        x = 0,
+        y = 0,
+        font = _UPVALUE1_.fonts.light,
+        fontSize = 12
+      })
+      L7_65 = A0_58.target
+      L7_65 = L7_65.mod
+      L7_65 = L7_65.setReferencePoint
+      L7_65(L7_65, display.CenterLeftReferencePoint)
+      L7_65 = A0_58.target
+      L7_65 = L7_65.mod
+      L7_65 = L7_65.setPosition
+      L7_65(L7_65, 32 + A0_58.target.username.width, L2_60)
+      L7_65 = A0_58.target
+      L7_65 = L7_65.mod
+      L7_65 = L7_65.setFillColor
+      L7_65(L7_65, 111, 33, 33, 240)
+      L7_65 = A0_58.target
+      L7_65 = L7_65.mod
+      L7_65.color = {
+        111,
+        33,
+        33,
+        240
+      }
+      L7_65 = L4_62.insert
+      L7_65(L4_62, A0_58.target.mod)
+    else
+      L7_65 = _UPVALUE2_
+      L7_65 = L7_65[L5_63.udid]
+      if L7_65 then
+        L7_65 = A0_58.target
+        L7_65.mod = display.newText({
+          text = "(Mod)",
+          x = 0,
+          y = 0,
+          font = _UPVALUE1_.fonts.light,
+          fontSize = 12
+        })
+        L7_65 = A0_58.target
+        L7_65 = L7_65.mod
+        L7_65 = L7_65.setReferencePoint
+        L7_65(L7_65, display.CenterLeftReferencePoint)
+        L7_65 = A0_58.target
+        L7_65 = L7_65.mod
+        L7_65 = L7_65.setPosition
+        L7_65(L7_65, 38 + A0_58.target.username.width, L2_60)
+        L7_65 = A0_58.target
+        L7_65 = L7_65.mod
+        L7_65 = L7_65.setFillColor
+        L7_65(L7_65, 33, 83, 111, 240)
+        L7_65 = A0_58.target
+        L7_65 = L7_65.mod
+        L7_65.color = {
+          33,
+          83,
+          111,
+          240
+        }
+        L7_65 = L4_62.insert
+        L7_65(L4_62, A0_58.target.mod)
+      end
+    end
+    L7_65 = A0_58.target
+    L7_65.ignoredTypeArrows = display.newImageRect("ignoredtype-arrows.png", 8, 10)
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredTypeArrows
+    L7_65 = L7_65.setReferencePoint
+    L7_65(L7_65, display.CenterRightReferencePoint)
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredTypeArrows
+    L7_65.x = L3_61 - 11
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredTypeArrows
+    L7_65.y = L2_60
+    L7_65 = L4_62.insert
+    L7_65(L4_62, A0_58.target.ignoredTypeArrows)
+    L7_65 = A0_58.target
+    L7_65.ignoredTypeArrows_over = display.newImageRect("ignoredtype-arrows-over.png", 8, 10)
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredTypeArrows_over
+    L7_65 = L7_65.setReferencePoint
+    L7_65(L7_65, display.CenterRightReferencePoint)
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredTypeArrows_over
+    L7_65.x = L3_61 - 11
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredTypeArrows_over
+    L7_65.y = L2_60
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredTypeArrows_over
+    L7_65.isVisible = false
+    L7_65 = L4_62.insert
+    L7_65(L4_62, A0_58.target.ignoredTypeArrows_over)
+    L7_65 = A0_58.target
+    L7_65.ignoredType = display.newText({
+      text = _UPVALUE3_.firstToUpper(L5_63.type),
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 12
+    })
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredType
+    L7_65 = L7_65.setReferencePoint
+    L7_65(L7_65, display.CenterRightReferencePoint)
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredType
+    L7_65 = L7_65.setPosition
+    L7_65(L7_65, L3_61 - 23, L2_60)
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredType
+    L7_65.origX = A0_58.target.ignoredType.x
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredType
+    L7_65.origY = A0_58.target.ignoredType.y
+    L7_65 = A0_58.target
+    L7_65 = L7_65.ignoredType
+    L7_65 = L7_65.setFillColor
+    L7_65(L7_65, 71, 75, 76)
+    L7_65 = L4_62.insert
+    L7_65(L4_62, A0_58.target.ignoredType)
+    L7_65 = display
+    L7_65 = L7_65.newRect
+    L7_65 = L7_65(0, 0, 82, L1_59)
+    L7_65:setReferencePoint(display.CenterRightReferencePoint)
+    L7_65.x = L3_61
+    L7_65.y = L2_60
+    L7_65:setFillColor(0, 0, 0, 0)
+    L7_65.ignoredType = A0_58.target.ignoredType
+    L7_65.response = L5_63
+    L7_65.isHitTestable = true
+    L7_65:addEventListener("touch", _UPVALUE4_)
+    L4_62:insert(L7_65)
+  end
+  function L15_16(A0_66, A1_67)
+    _UPVALUE0_:insertRow({
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      onRender = _UPVALUE1_,
+      onEvent = _UPVALUE2_,
+      height = 24,
+      id = A0_66
+    })
+    _UPVALUE3_[#_UPVALUE3_ + 1] = A0_66
+    _UPVALUE3_[#_UPVALUE3_ + 1].status = A1_67
+    _UPVALUE0_:scrollToBottom(100)
+  end
+  function L16_17(A0_68)
+    local L1_69, L2_70, L3_71, L4_72, L5_73, L6_74
+    L1_69 = A0_68.target
+    L1_69 = L1_69.height
+    L2_70 = A0_68.target
+    L2_70 = L2_70.width
+    L3_71 = A0_68.view
+    L4_72 = display
+    L4_72 = L4_72.newGroup
+    L4_72 = L4_72()
+    L6_74 = L3_71
+    L5_73 = L3_71.insert
+    L5_73(L6_74, L4_72)
+    L5_73 = _UPVALUE0_
+    L5_73 = L5_73.makeSprite
+    L6_74 = 0
+    L5_73 = L5_73(L6_74, 0, {
+      img = "activity_black.png"
+    })
+    L6_74 = L5_73.setReferencePoint
+    L6_74(L5_73, display.CenterLeftReferencePoint)
+    L5_73.x = 0
+    L5_73.y = 0
+    L6_74 = L5_73.scale
+    L6_74(L5_73, 0.5, 0.5)
+    L6_74 = L4_72.insert
+    L6_74(L4_72, L5_73)
+    L6_74 = display
+    L6_74 = L6_74.newText
+    L6_74 = L6_74({
+      text = "Searching users",
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 13
+    })
+    L6_74:setReferencePoint(display.CenterLeftReferencePoint)
+    L6_74:setPosition(17, 0)
+    L6_74:setFillColor(71, 75, 76)
+    L4_72:insert(L6_74)
+    L4_72:setReferencePoint(display.CenterReferencePoint)
+    L4_72.x = L2_70 * 0.5
+    L4_72.y = L1_69 * 0.5
+  end
+  function L17_18(A0_75)
+    local L1_76, L2_77, L3_78, L4_79, L5_80
+    L1_76 = A0_75.target
+    L1_76 = L1_76.height
+    L2_77 = L1_76 * 0.5
+    L3_78 = A0_75.view
+    L4_79 = A0_75.id
+    L5_80 = _UPVALUE0_
+    L5_80 = L5_80.makeAvatar
+    L5_80 = L5_80({
+      scale = 2,
+      avatar = L4_79.avatar
+    })
+    L5_80:setReferencePoint(display.CenterLeftReferencePoint)
+    L5_80.x = 5
+    L5_80.y = L2_77
+    L3_78:insert(L5_80)
+    A0_75.target.username = display.newText({
+      text = L4_79.nickname,
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 12
+    })
+    A0_75.target.username:setReferencePoint(display.CenterLeftReferencePoint)
+    A0_75.target.username:setPosition(30, L2_77)
+    A0_75.target.username:setFillColor(71, 75, 76)
+    L3_78:insert(A0_75.target.username)
+    if L4_79.udid == "1234567890" then
+      A0_75.target.mod = display.newText({
+        text = "(Adm)",
+        x = 0,
+        y = 0,
+        font = _UPVALUE1_.fonts.light,
+        fontSize = 12
+      })
+      A0_75.target.mod:setReferencePoint(display.CenterLeftReferencePoint)
+      A0_75.target.mod:setPosition(32 + A0_75.target.username.width, L2_77)
+      A0_75.target.mod:setFillColor(111, 33, 33, 240)
+      A0_75.target.mod.color = {
+        111,
+        33,
+        33,
+        240
+      }
+      L3_78:insert(A0_75.target.mod)
+    elseif _UPVALUE2_[L4_79.udid] then
+      A0_75.target.mod = display.newText({
+        text = "(Mod)",
+        x = 0,
+        y = 0,
+        font = _UPVALUE1_.fonts.light,
+        fontSize = 12
+      })
+      A0_75.target.mod:setReferencePoint(display.CenterLeftReferencePoint)
+      A0_75.target.mod:setPosition(32 + A0_75.target.username.width, L2_77)
+      A0_75.target.mod:setFillColor(33, 83, 111, 240)
+      A0_75.target.mod.color = {
+        33,
+        83,
+        111,
+        240
+      }
+      L3_78:insert(A0_75.target.mod)
+    end
+    A0_75.target.checkmark = display.newImageRect("blockignoreuserscheckmark.png", 18, 18)
+    A0_75.target.checkmark:setReferencePoint(display.CenterRightReferencePoint)
+    A0_75.target.checkmark.x = 230
+    A0_75.target.checkmark.y = L2_77
+    A0_75.target.checkmark.isVisible = false
+    L3_78:insert(A0_75.target.checkmark)
+    for _FORV_9_, _FORV_10_ in pairs(_UPVALUE3_) do
+      if _UPVALUE3_[_FORV_9_].id == L4_79.id then
+        A0_75.target.checkmark.isVisible = true
+        break
+      end
+    end
+  end
+  function L18_19(A0_81)
+    local L1_82, L2_83, L3_84, L4_85, L5_86, L6_87, L7_88
+    L1_82 = A0_81.background
+    L2_83 = A0_81.target
+    L2_83 = L2_83.checkmark
+    L3_84 = A0_81.target
+    L3_84 = L3_84.username
+    L4_85 = A0_81.id
+    L5_86 = A0_81.phase
+    L6_87 = A0_81.target
+    L6_87 = L6_87.mod
+    L7_88 = L1_82.setFillColor
+    L7_88(L1_82, 217, 217, 217)
+    L7_88 = L3_84.setFillColor
+    L7_88(L3_84, 255, 255, 255)
+    if L6_87 then
+      L7_88 = L6_87.setFillColor
+      L7_88(L6_87, 255, 255, 255)
+    end
+    if L5_86 == "release" or L5_86 == "tap" then
+      function L7_88()
+        _UPVALUE0_:setFillColor(0, 0, 0, 0)
+        _UPVALUE1_:setFillColor(71, 75, 76)
+        if _UPVALUE2_ then
+          _UPVALUE2_:setFillColor(unpack(_UPVALUE2_.color))
+        end
+        if not _UPVALUE3_[_UPVALUE4_.udid] then
+          if _UPVALUE5_.isVisible == false then
+            _UPVALUE5_.isVisible = true
+            _UPVALUE4_.type = "comments"
+            _UPVALUE6_(_UPVALUE4_, "ignored")
+          else
+            _UPVALUE7_(_UPVALUE4_.id)
+          end
+        else
+          native.showAlert("Cannot ignore moderators", "You can not ignore moderators", {"Ok"})
+        end
+      end
+      timer.performWithDelay(120, L7_88)
+    end
+    L7_88 = true
+    return L7_88
+  end
+  L19_20 = nil
+  function L20_21(A0_89)
+    local L1_90
+    L1_90 = _UPVALUE0_
+    L1_90 = L1_90.fakeLabel
+    L1_90 = L1_90.label
+    if L1_90 ~= "" then
+      L1_90 = _UPVALUE0_
+      L1_90 = L1_90.fakeLabel
+      L1_90 = L1_90.hasEdited
+      if L1_90 == true then
+        L1_90 = _UPVALUE1_
+        L1_90 = L1_90.deleteAllRows
+        L1_90(L1_90)
+        L1_90 = _UPVALUE1_
+        L1_90 = L1_90.insertRow
+        L1_90(L1_90, {
+          height = 24,
+          onRender = _UPVALUE2_,
+          rowColor = {
+            0,
+            0,
+            0,
+            0
+          },
+          lineColor = {
+            0,
+            0,
+            0,
+            0
+          }
+        })
+        function L1_90(A0_91)
+          if _UPVALUE1_ then
+            _UPVALUE2_:deleteRow(#_UPVALUE2_.content.rows)
+            for _FORV_5_ = 1, #_UPVALUE0_.decode(A0_91.response) do
+              _UPVALUE2_:insertRow({
+                id = _UPVALUE0_.decode(A0_91.response)[_FORV_5_],
+                height = 24,
+                onEvent = _UPVALUE3_,
+                onRender = _UPVALUE4_,
+                rowColor = {
+                  0,
+                  0,
+                  0,
+                  0
+                },
+                lineColor = {
+                  0,
+                  0,
+                  0,
+                  0
+                }
+              })
+            end
+          end
+        end
+        _UPVALUE7_.network_request("get_users_to_block_or_ignore", L1_90, {
+          searchString = _UPVALUE0_.fakeLabel.label
+        })
+      end
+    end
+    L1_90 = true
+    return L1_90
+  end
+  function L21_22(A0_92)
+    local L1_93
+    L1_93 = A0_92.phase
+    if A0_92.id == "searchUser" then
+      _UPVALUE0_()
+    end
+  end
+  L22_23 = _UPVALUE9_
+  L22_23 = L22_23.newTextField
+  L23_24 = {}
+  L23_24.filename = "blockIgnoreUsersSearchField-slice"
+  L23_24.width = 3
+  L23_24.height = 3
+  L23_24.slices = 9
+  L24_25 = {}
+  L24_25.id = "searchUser"
+  L24_25.boxType = "textfield"
+  L25_26 = L8_9.width
+  L25_26 = L25_26 - 46
+  L24_25.width = L25_26
+  L24_25.height = 25
+  L24_25.size = 14
+  L25_26 = list
+  L24_25.list = L25_26
+  L25_26 = _UPVALUE0_
+  L25_26 = L25_26.fonts
+  L25_26 = L25_26.light
+  L24_25.font = L25_26
+  L24_25.textfieldTopPadding = -0.5
+  L24_25.defaultLabel = ""
+  L25_26 = {
+    L26_27,
+    L27_28,
+    L28_29
+  }
+  L26_27 = 71
+  L27_28 = 75
+  L28_29 = 76
+  L24_25.defaultColor = L25_26
+  L24_25.initialLabel = "Search user"
+  L25_26 = {
+    L26_27,
+    L27_28,
+    L28_29
+  }
+  L26_27 = 175
+  L27_28 = 175
+  L28_29 = 175
+  L24_25.initialColor = L25_26
+  L25_26 = _UPVALUE0_
+  L25_26 = L25_26.fonts
+  L25_26 = L25_26.lightItalic
+  L24_25.initialFont = L25_26
+  L24_25.onFinishedCallback = L21_22
+  L22_23 = L22_23(L23_24, L24_25)
+  L19_20 = L22_23
+  L23_24 = L19_20
+  L22_23 = L19_20.setReferencePoint
+  L24_25 = display
+  L24_25 = L24_25.TopLeftReferencePoint
+  L22_23(L23_24, L24_25)
+  L22_23 = L8_9.x
+  L23_24 = L8_9.width
+  L23_24 = L23_24 * 0.5
+  L22_23 = L22_23 - L23_24
+  L19_20.x = L22_23
+  L19_20.y = 107
+  L23_24 = L4_5
+  L22_23 = L4_5.insert
+  L24_25 = L19_20
+  L22_23(L23_24, L24_25)
+  L22_23 = _UPVALUE3_
+  L22_23 = L22_23.newButton
+  L23_24 = {}
+  L23_24.width = 56
+  L23_24.height = 27
+  L23_24.default = "searchblockignoreusers.png"
+  L23_24.over = "searchblockignoreusers-over.png"
+  L23_24.onRelease = L20_21
+  L22_23 = L22_23(L23_24)
+  L24_25 = L22_23
+  L23_24 = L22_23.setReferencePoint
+  L25_26 = display
+  L25_26 = L25_26.TopLeftReferencePoint
+  L23_24(L24_25, L25_26)
+  L23_24 = L19_20.x
+  L24_25 = L19_20.width
+  L23_24 = L23_24 + L24_25
+  L23_24 = L23_24 - 10
+  L22_23.x = L23_24
+  L22_23.y = 106.5
+  L24_25 = L4_5
+  L23_24 = L4_5.insert
+  L25_26 = L22_23
+  L23_24(L24_25, L25_26)
+  function L23_24(A0_94)
+    local L1_95, L2_96, L3_97
+    L1_95 = A0_94.target
+    L1_95 = L1_95.height
+    L2_96 = A0_94.view
+    L3_97 = display
+    L3_97 = L3_97.newText
+    L3_97 = L3_97({
+      text = "Ignored users",
+      font = _UPVALUE0_.fonts.bold,
+      fontSize = 14
+    })
+    L3_97:setReferencePoint(display.CenterLeftReferencePoint)
+    L3_97:setPosition(10, L1_95 * 0.5 + 3)
+    L3_97:setFillColor(71, 75, 76)
+    L2_96:insert(L3_97)
+  end
+  L25_26 = L9_10
+  L24_25 = L9_10.insertRow
+  L26_27 = {}
+  L26_27.height = 26
+  L26_27.onRender = L23_24
+  L27_28 = {
+    L28_29,
+    0,
+    0,
+    0
+  }
+  L28_29 = 0
+  L26_27.rowColor = L27_28
+  L27_28 = {
+    L28_29,
+    0,
+    0,
+    0
+  }
+  L28_29 = 0
+  L26_27.lineColor = L27_28
+  L24_25(L25_26, L26_27)
+  function L24_25(A0_98)
+    local L1_99, L2_100, L3_101, L4_102, L5_103
+    L1_99 = A0_98.target
+    L1_99 = L1_99.height
+    L2_100 = A0_98.view
+    L3_101 = display
+    L3_101 = L3_101.newGroup
+    L3_101 = L3_101()
+    L5_103 = L2_100
+    L4_102 = L2_100.insert
+    L4_102(L5_103, L3_101)
+    L4_102 = _UPVALUE0_
+    L4_102 = L4_102.makeSprite
+    L5_103 = _UPVALUE1_
+    L4_102 = L4_102(L5_103, L1_99 * 0.5, {
+      img = "activity_black.png"
+    })
+    L5_103 = L4_102.setReferencePoint
+    L5_103(L4_102, display.CenterLeftReferencePoint)
+    L4_102.x = 0
+    L4_102.y = 0
+    L5_103 = L4_102.scale
+    L5_103(L4_102, 0.7, 0.7)
+    L5_103 = L3_101.insert
+    L5_103(L3_101, L4_102)
+    L5_103 = display
+    L5_103 = L5_103.newText
+    L5_103 = L5_103({
+      text = "Fetching ignored users",
+      font = _UPVALUE2_.fonts.light,
+      fontSize = 14
+    })
+    L5_103:setReferencePoint(display.CenterLeftReferencePoint)
+    L5_103:setPosition(22, 0)
+    L5_103:setFillColor(71, 75, 76)
+    L3_101:insert(L5_103)
+    L3_101:setReferencePoint(display.CenterLeftReferencePoint)
+    L3_101.x = 10
+    L3_101.y = L1_99 * 0.5
+  end
+  L26_27 = L9_10
+  L25_26 = L9_10.insertRow
+  L27_28 = {}
+  L27_28.height = 28
+  L27_28.onRender = L24_25
+  L28_29 = {
+    0,
+    0,
+    0,
+    0
+  }
+  L27_28.rowColor = L28_29
+  L28_29 = {
+    0,
+    0,
+    0,
+    0
+  }
+  L27_28.lineColor = L28_29
+  L25_26(L26_27, L27_28)
+  function L25_26(A0_104)
+    local L1_105, L2_106, L3_107
+    L1_105 = _UPVALUE0_
+    L1_105 = L1_105.decode
+    L2_106 = A0_104.response
+    L1_105 = L1_105(L2_106)
+    L2_106 = _UPVALUE1_
+    if L2_106 then
+      L2_106 = _UPVALUE2_
+      L3_107 = L2_106
+      L2_106 = L2_106.deleteRow
+      L2_106(L3_107, 2)
+      L2_106 = _UPVALUE2_
+      L3_107 = L2_106
+      L2_106 = L2_106.insertRow
+      L2_106(L3_107, {
+        onRender = _UPVALUE3_,
+        isCategory = true,
+        rowColor = {
+          242,
+          242,
+          243,
+          220
+        },
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        height = 20
+      })
+      L2_106 = false
+      L3_107 = #L1_105
+      for _FORV_7_ = 1, L3_107 do
+        _UPVALUE4_(L1_105[_FORV_7_], "ignoredfrombefore")
+        if _UPVALUE5_ and _UPVALUE5_.udid == L1_105[_FORV_7_].udid then
+          L2_106 = true
+        end
+      end
+      if L2_106 == true then
+        _UPVALUE6_.showAlert("User ignored", "This user is already ignored.", {"Ok"})
+      elseif _UPVALUE5_ then
+        if _UPVALUE7_[_UPVALUE5_.udid] then
+          native.showAlert("Cannot ignore moderators", "You can not ignore moderators", {"Ok"})
+        else
+          _UPVALUE4_(_UPVALUE5_, "ignored")
+        end
+      end
+    end
+  end
+  L26_27 = _UPVALUE2_
+  L26_27 = L26_27.network_request
+  L27_28 = "fetch_ignored_users"
+  L28_29 = L25_26
+  L26_27(L27_28, L28_29, {udid = _UPVALUE10_})
+  function L26_27(A0_108)
+    local L1_109, L2_110, L3_111
+    L1_109 = A0_108.target
+    L1_109 = L1_109.id
+    L2_110 = native
+    L2_110 = L2_110.setKeyboardFocus
+    L3_111 = nil
+    L2_110(L3_111)
+    if L1_109 == "save" then
+      L2_110 = native
+      L2_110 = L2_110.setActivityIndicator
+      L3_111 = true
+      L2_110(L3_111)
+      L2_110 = _UPVALUE0_
+      L2_110 = L2_110.showAlert
+      L3_111 = ""
+      L2_110 = L2_110(L3_111, "Updating ignored users..", {})
+      function L3_111(A0_112)
+        _UPVALUE0_.to(_UPVALUE1_, {
+          time = 200,
+          y = _UPVALUE1_.animFrom,
+          transition = easing.outQuad,
+          onComplete = function()
+            _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+          end
+        }, true)
+        _UPVALUE0_.to(_UPVALUE3_, {
+          time = 200,
+          y = _UPVALUE3_.animFrom,
+          transition = easing.outQuad,
+          onComplete = function()
+            _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+          end
+        }, true)
+        _UPVALUE2_.cancelAlert(_UPVALUE4_)
+        native.setActivityIndicator(false)
+      end
+      _UPVALUE0_.network_request("ignoreusers", L3_111, {
+        ignoredusers = _UPVALUE4_,
+        udid = _UPVALUE5_.udid
+      })
+    elseif L1_109 == "cancel" then
+      L2_110 = _UPVALUE1_
+      L2_110 = L2_110.to
+      L3_111 = _UPVALUE2_
+      L2_110(L3_111, {
+        time = 200,
+        y = _UPVALUE2_.animFrom,
+        transition = easing.outQuad,
+        onComplete = function()
+          _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+        end
+      }, true)
+      L2_110 = _UPVALUE1_
+      L2_110 = L2_110.to
+      L3_111 = _UPVALUE3_
+      L2_110(L3_111, {
+        time = 200,
+        y = _UPVALUE3_.animFrom,
+        transition = easing.outQuad,
+        onComplete = function()
+          _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+        end
+      }, true)
+    end
+    L2_110 = true
+    return L2_110
+  end
+  L27_28 = _UPVALUE3_
+  L27_28 = L27_28.newButton
+  L28_29 = {}
+  L28_29.sheet = {
+    default = {
+      filename = "blockIgnoreUsersSaveBtn-slice",
+      width = 6,
+      height = 6,
+      slices = 4,
+      fillColor = {
+        210,
+        213,
+        214
+      }
+    },
+    over = {
+      filename = "blockIgnoreUsersSaveBtn-over-slice",
+      width = 6,
+      height = 6,
+      slices = 4,
+      fillColor = {
+        168,
+        170,
+        171
+      }
+    }
+  }
+  L28_29.width = L7_8.width
+  L28_29.height = 40
+  L28_29.onRelease = L26_27
+  L28_29.label = "Save"
+  L28_29.fontSize = 21
+  L28_29.font = _UPVALUE0_.fonts.bold
+  L28_29.labelColor = {
+    default = {
+      71,
+      75,
+      76
+    },
+    over = {
+      50,
+      52,
+      54
+    }
+  }
+  L28_29.id = "save"
+  L27_28 = L27_28(L28_29)
+  L28_29 = L27_28.setReferencePoint
+  L28_29(L27_28, display.CenterReferencePoint)
+  L28_29 = _UPVALUE1_
+  L27_28.x = L28_29
+  L28_29 = _UPVALUE4_
+  L28_29 = L28_29((L7_8.y + L7_8.height + _H) * 0.5)
+  L27_28.y = L28_29
+  L28_29 = L4_5.insert
+  L28_29(L4_5, L27_28)
+  L28_29 = _UPVALUE3_
+  L28_29 = L28_29.newButton
+  L28_29 = L28_29({
+    top = 37,
+    left = _W - 49,
+    width = 27,
+    height = 29,
+    default = "crossclose.png",
+    over = "crossclose-over.png",
+    onRelease = L26_27,
+    id = "cancel"
+  })
+  L4_5:insert(L28_29)
+  L19_20.animFrom = L19_20.y + _H
+  L4_5.animFrom = L4_5.y + _H
+  _UPVALUE11_.from(L19_20, {
+    time = 200,
+    y = L19_20.animFrom,
+    transition = easing.outQuad
+  })
+  _UPVALUE11_.from(L4_5, {
+    time = 200,
+    y = L4_5.animFrom,
+    transition = easing.outQuad
+  }, true)
+  return L4_5
+end
+return {}

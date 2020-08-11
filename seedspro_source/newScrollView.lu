@@ -1,0 +1,446 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("transitions")
+;({}).makeScrollView = function(A0_1)
+  local L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31
+  L1_2 = A0_1.path
+  L2_3 = A0_1.dir
+  L3_4 = A0_1.x
+  L4_5 = A0_1.y
+  L5_6 = A0_1.fallback_path
+  L6_7 = A0_1.onEndCallback
+  L7_8 = A0_1.slideView
+  L8_9 = display
+  L8_9 = L8_9.newGroup
+  L8_9 = L8_9()
+  L8_9.alpha = 0.01
+  L9_10 = true
+  L10_11 = display
+  L10_11 = L10_11.newGroup
+  L10_11 = L10_11()
+  L10_11.alpha = 0.01
+  L11_12 = display
+  L11_12 = L11_12.newGroup
+  L11_12 = L11_12()
+  L13_14 = L10_11
+  L12_13 = L10_11.insert
+  L14_15 = L11_12
+  L12_13(L13_14, L14_15)
+  L12_13 = 237
+  function L13_14(A0_32, A1_33)
+    if A1_33 == system.ResourceDirectory then
+      return system.pathForFile(A0_32, A1_33)
+    else
+      return io.open(system.pathForFile(A0_32, A1_33))
+    end
+  end
+  L14_15 = L13_14
+  L15_16 = L1_2
+  L16_17 = L2_3
+  L14_15 = L14_15(L15_16, L16_17)
+  if not L14_15 then
+    L1_2 = L5_6
+  else
+    L16_17 = L14_15
+    L15_16 = L14_15.close
+    L15_16(L16_17)
+  end
+  L15_16 = display
+  L15_16 = L15_16.newImage
+  L16_17 = L1_2
+  L17_18 = L2_3
+  L15_16 = L15_16(L16_17, L17_18)
+  L16_17 = L15_16.width
+  L17_18 = L15_16.height
+  L18_19 = _UPVALUE0_
+  L18_19 = L18_19.delete
+  L19_20 = L15_16
+  L18_19 = L18_19(L19_20)
+  L15_16 = L18_19
+  L18_19 = _UPVALUE1_
+  L19_20 = 1
+  L20_21 = _W
+  L20_21 = L20_21 / L16_17
+  L21_22 = _H
+  L21_22 = L21_22 / L17_18
+  L18_19 = L18_19(L19_20, L20_21, L21_22)
+  L19_20 = display
+  L19_20 = L19_20.newImageRect
+  L20_21 = L1_2
+  L21_22 = L2_3
+  L22_23 = L16_17
+  L23_24 = L17_18
+  L19_20 = L19_20(L20_21, L21_22, L22_23, L23_24)
+  L21_22 = L19_20
+  L20_21 = L19_20.setReferencePoint
+  L22_23 = display
+  L22_23 = L22_23.CenterReferencePoint
+  L20_21(L21_22, L22_23)
+  L19_20.x = L3_4
+  L19_20.y = L4_5
+  L20_21 = _UPVALUE2_
+  L20_21 = L20_21.width
+  L21_22 = L7_8.xScale
+  L20_21 = L20_21 * L21_22
+  L20_21 = L20_21 / L16_17
+  L19_20.backScaleX = L20_21
+  L20_21 = _UPVALUE2_
+  L20_21 = L20_21.height
+  L21_22 = L7_8.yScale
+  L20_21 = L20_21 * L21_22
+  L20_21 = L20_21 / L17_18
+  L19_20.backScaleY = L20_21
+  L19_20.defScale = L18_19
+  L20_21 = L19_20.x
+  L19_20.defX = L20_21
+  L20_21 = L19_20.y
+  L19_20.defY = L20_21
+  L19_20.defW = L16_17
+  L19_20.defH = L17_18
+  L21_22 = L19_20
+  L20_21 = L19_20.scale
+  L22_23 = L19_20.backScaleX
+  L23_24 = L19_20.backScaleY
+  L20_21(L21_22, L22_23, L23_24)
+  function L20_21()
+    local L0_34
+    L0_34 = _UPVALUE0_
+    if L0_34 == false then
+      L0_34 = display
+      L0_34 = L0_34.newGroup
+      L0_34 = L0_34()
+      L0_34:insert(_UPVALUE1_)
+      L0_34:insert(_UPVALUE2_)
+      display.setStatusBar(display.TranslucentStatusBar)
+      if _UPVALUE1_.rotation > 180 then
+      else
+      end
+      _UPVALUE3_.to(_UPVALUE4_, {
+        time = 200,
+        alpha = 0,
+        transition = easing.inOutQuad
+      })
+      _UPVALUE3_.to(_UPVALUE2_, {
+        time = 200,
+        alpha = 0,
+        transition = easing.inOutQuad
+      })
+      _UPVALUE3_.to(_UPVALUE1_, {
+        time = 320,
+        xScale = _UPVALUE1_.backScaleX,
+        yScale = _UPVALUE1_.backScaleY,
+        x = _UPVALUE1_.defX,
+        y = _UPVALUE1_.defY,
+        rotation = 0,
+        transition = easing.inOutQuad,
+        onComplete = function()
+          _UPVALUE0_()
+          _UPVALUE1_.to(_UPVALUE2_, {
+            time = 200,
+            alpha = 0,
+            onComplete = function()
+              _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+              _UPVALUE2_ = _UPVALUE1_.delete(_UPVALUE2_)
+              _UPVALUE3_ = _UPVALUE1_.delete(_UPVALUE3_)
+            end
+          }, true)
+        end
+      }, true)
+      _UPVALUE0_ = true
+    end
+  end
+  L21_22 = display
+  L21_22 = L21_22.setStatusBar
+  L22_23 = display
+  L22_23 = L22_23.HiddenStatusBar
+  L21_22(L22_23)
+  L21_22 = display
+  L21_22 = L21_22.newRect
+  L22_23 = 0
+  L23_24 = 0
+  L24_25 = _W
+  L25_26 = _H
+  L21_22 = L21_22(L22_23, L23_24, L24_25, L25_26)
+  L23_24 = L21_22
+  L22_23 = L21_22.setFillColor
+  L24_25 = 0
+  L25_26 = 0
+  L26_27 = 0
+  L27_28 = 230
+  L22_23(L23_24, L24_25, L25_26, L26_27, L27_28)
+  L23_24 = L8_9
+  L22_23 = L8_9.insert
+  L24_25 = L21_22
+  L22_23(L23_24, L24_25)
+  L22_23 = _UPVALUE3_
+  L22_23 = L22_23.to
+  L23_24 = L19_20
+  L24_25 = {}
+  L24_25.delay = 85
+  L24_25.time = 320
+  L25_26 = _UPVALUE4_
+  L24_25.x = L25_26
+  L25_26 = _UPVALUE5_
+  L24_25.y = L25_26
+  L25_26 = L19_20.defScale
+  L24_25.xScale = L25_26
+  L25_26 = L19_20.defScale
+  L24_25.yScale = L25_26
+  L25_26 = easing
+  L25_26 = L25_26.inOutQuad
+  L24_25.transition = L25_26
+  function L25_26()
+    _UPVALUE0_ = false
+    _UPVALUE1_.xOrig = _UPVALUE1_.x
+    _UPVALUE1_.yOrig = _UPVALUE1_.y
+    _UPVALUE1_.xPrev = _UPVALUE1_.x
+    _UPVALUE1_.yPrev = _UPVALUE1_.y
+    _UPVALUE1_.xScal = _UPVALUE1_.xScale
+    _UPVALUE1_.yScal = _UPVALUE1_.yScale
+    _UPVALUE2_:insert(_UPVALUE1_)
+    _UPVALUE1_:toBack()
+    _UPVALUE3_:toBack()
+    _UPVALUE2_:insert(_UPVALUE4_)
+  end
+  L24_25.onComplete = L25_26
+  L25_26 = true
+  L22_23(L23_24, L24_25, L25_26)
+  L22_23 = _UPVALUE3_
+  L22_23 = L22_23.to
+  L23_24 = L8_9
+  L24_25 = {}
+  L24_25.delay = 85
+  L24_25.time = 200
+  L24_25.alpha = 1
+  L25_26 = easing
+  L25_26 = L25_26.inOutQuad
+  L24_25.transition = L25_26
+  L22_23(L23_24, L24_25)
+  L22_23 = _UPVALUE3_
+  L22_23 = L22_23.to
+  L23_24 = L10_11
+  L24_25 = {}
+  L24_25.delay = 85
+  L24_25.time = 200
+  L24_25.alpha = 1
+  L25_26 = easing
+  L25_26 = L25_26.inOutQuad
+  L24_25.transition = L25_26
+  L22_23(L23_24, L24_25)
+  function L22_23(A0_35)
+    local L1_36, L2_37, L5_38, L6_39
+    L1_36 = _UPVALUE0_
+    if L1_36 == false then
+      L1_36 = A0_35.target
+      L2_37 = A0_35.phase
+      L5_38 = A0_35.x
+      L6_39 = A0_35.y
+      display.getCurrentStage():setFocus(L1_36)
+      if L2_37 == "moved" then
+        L1_36.image.y = L6_39 - A0_35.yStart + L1_36.image.yOrig - L1_36.image.yPrev + L1_36.image.yPrev
+        L1_36.image.x = L5_38 - A0_35.xStart + L1_36.image.xOrig - L1_36.image.xPrev + L1_36.image.xPrev
+        L1_36.image.xPrev, L1_36.image.yPrev = L1_36.image.x, L1_36.image.y
+        L1_36.hasMoved = true
+      elseif L2_37 == "ended" or L2_37 == "cancelled" then
+        display.getCurrentStage():setFocus(nil)
+        L1_36.image.xOrig, L1_36.image.yOrig = L1_36.image.x, L1_36.image.y
+        if L1_36.hasMoved == false then
+          _UPVALUE1_()
+        end
+        L1_36.hasMoved = false
+      end
+    end
+    L1_36 = true
+    return L1_36
+  end
+  L23_24 = display
+  L23_24 = L23_24.newImageRect
+  L24_25 = "invisimg.png"
+  L25_26 = _W
+  L26_27 = _H
+  L23_24 = L23_24(L24_25, L25_26, L26_27)
+  L24_25 = _UPVALUE4_
+  L23_24.x = L24_25
+  L24_25 = _UPVALUE5_
+  L23_24.y = L24_25
+  L23_24.image = L19_20
+  L23_24.hasMoved = false
+  L25_26 = L23_24
+  L24_25 = L23_24.addEventListener
+  L26_27 = "touch"
+  L27_28 = L22_23
+  L24_25(L25_26, L26_27, L27_28)
+  L25_26 = L10_11
+  L24_25 = L10_11.insert
+  L26_27 = L23_24
+  L24_25(L25_26, L26_27)
+  L25_26 = L23_24
+  L24_25 = L23_24.toBack
+  L24_25(L25_26)
+  L24_25 = display
+  L24_25 = L24_25.newText
+  L25_26 = {}
+  L26_27 = "Res: "
+  L27_28 = L19_20.defW
+  L28_29 = "x"
+  L29_30 = L19_20.defH
+  L26_27 = L26_27 .. L27_28 .. L28_29 .. L29_30
+  L25_26.text = L26_27
+  L26_27 = _UPVALUE6_
+  L26_27 = L26_27.fonts
+  L26_27 = L26_27.regular
+  L25_26.font = L26_27
+  L25_26.fontSize = 10
+  L24_25 = L24_25(L25_26)
+  L26_27 = L24_25
+  L25_26 = L24_25.setReferencePoint
+  L27_28 = display
+  L27_28 = L27_28.TopLeftReferencePoint
+  L25_26(L26_27, L27_28)
+  L25_26 = _UPVALUE4_
+  L26_27 = L12_13 * 0.5
+  L25_26 = L25_26 - L26_27
+  L24_25.x = L25_26
+  L25_26 = _H
+  L25_26 = L25_26 - 18
+  L24_25.y = L25_26
+  L26_27 = L24_25
+  L25_26 = L24_25.setFillColor
+  L27_28 = 255
+  L28_29 = 255
+  L29_30 = 255
+  L30_31 = 200
+  L25_26(L26_27, L27_28, L28_29, L29_30, L30_31)
+  L26_27 = L11_12
+  L25_26 = L11_12.insert
+  L27_28 = L24_25
+  L25_26(L26_27, L27_28)
+  L25_26 = display
+  L25_26 = L25_26.newText
+  L26_27 = {}
+  L27_28 = "Scale: "
+  L28_29 = L19_20.defScale
+  L27_28 = L27_28 .. L28_29
+  L26_27.text = L27_28
+  L27_28 = _UPVALUE6_
+  L27_28 = L27_28.fonts
+  L27_28 = L27_28.regular
+  L26_27.font = L27_28
+  L26_27.fontSize = 10
+  L25_26 = L25_26(L26_27)
+  L27_28 = L25_26
+  L26_27 = L25_26.setReferencePoint
+  L28_29 = display
+  L28_29 = L28_29.TopRightReferencePoint
+  L26_27(L27_28, L28_29)
+  L26_27 = _UPVALUE4_
+  L27_28 = L12_13 * 0.5
+  L26_27 = L26_27 + L27_28
+  L25_26.x = L26_27
+  L26_27 = _H
+  L26_27 = L26_27 - 18
+  L25_26.y = L26_27
+  L26_27 = L25_26.x
+  L25_26.origX = L26_27
+  L26_27 = L25_26.y
+  L25_26.origY = L26_27
+  L27_28 = L25_26
+  L26_27 = L25_26.setFillColor
+  L28_29 = 255
+  L29_30 = 255
+  L30_31 = 255
+  L26_27(L27_28, L28_29, L29_30, L30_31, 200)
+  L27_28 = L11_12
+  L26_27 = L11_12.insert
+  L28_29 = L25_26
+  L26_27(L27_28, L28_29)
+  L26_27 = 1.5
+  L27_28 = L19_20.width
+  L28_29 = _W
+  if L27_28 < L28_29 then
+    L27_28 = _W
+    L28_29 = L19_20.width
+    L26_27 = L27_28 / L28_29
+  end
+  function L27_28(A0_40)
+    local L1_41
+    L1_41 = A0_40.value
+    if L1_41 > 0 then
+      L1_41 = _UPVALUE0_
+      L1_41 = L1_41 - _UPVALUE1_.defScale
+      L1_41 = L1_41 * 0.02
+      L1_41 = L1_41 * A0_40.value
+      L1_41 = L1_41 + (2 * _UPVALUE1_.defScale - _UPVALUE0_)
+      if L1_41 >= 0 then
+        _UPVALUE1_.xScale, _UPVALUE1_.yScale = L1_41, L1_41
+        _UPVALUE1_.xScal, _UPVALUE1_.yScal = L1_41, L1_41
+        _UPVALUE2_:setText("Scale: " .. _UPVALUE3_.round(L1_41, 3))
+        _UPVALUE2_:setReferencePoint(display.TopRightReferencePoint)
+        _UPVALUE2_.x = _UPVALUE2_.origX
+        _UPVALUE2_.y = _UPVALUE2_.origY
+      end
+    end
+    L1_41 = true
+    return L1_41
+  end
+  L28_29 = _UPVALUE7_
+  L28_29 = L28_29.newSlider
+  L29_30 = {}
+  L29_30.width = L12_13
+  L29_30.height = 15
+  L29_30.background = "slider-zoom-bg.png"
+  L29_30.fillImage = "invisimg.png"
+  L29_30.fillWidth = 2
+  L29_30.width = L12_13
+  L29_30.height = 15
+  L29_30.handle = "slider-zoom-knob.png"
+  L29_30.handleWidth = 25
+  L29_30.handleHeight = 25
+  L29_30.leftWidth = 25
+  L29_30.listener = L27_28
+  L28_29 = L28_29(L29_30)
+  L30_31 = L28_29
+  L29_30 = L28_29.setReferencePoint
+  L29_30(L30_31, display.TopCenterReferencePoint)
+  L29_30 = _UPVALUE4_
+  L28_29.x = L29_30
+  L29_30 = _H
+  L29_30 = L29_30 - 40
+  L28_29.y = L29_30
+  L30_31 = L11_12
+  L29_30 = L11_12.insert
+  L29_30(L30_31, L28_29)
+  function L29_30(A0_42)
+    _UPVALUE1_.to(_UPVALUE0_, {
+      time = 320,
+      rotation = _UPVALUE0_.rotation + 90,
+      transition = easing.outExpo,
+      onComplete = function()
+        local L0_43, L1_44
+        L0_43 = _UPVALUE0_
+        L0_43 = L0_43.rotation
+        if L0_43 == 360 then
+          L0_43 = _UPVALUE0_
+          L0_43.rotation = 0
+        end
+      end
+    }, true)
+    return true
+  end
+  L30_31 = _UPVALUE7_
+  L30_31 = L30_31.newButton
+  L30_31 = L30_31({
+    width = 38,
+    height = 38,
+    default = "rotate.png",
+    over = "rotate-over.png",
+    onRelease = L29_30
+  })
+  L30_31:setReferencePoint(display.TopRightReferencePoint)
+  L30_31.x = _W - 4
+  L30_31.y = L28_29.y - 1
+  L11_12:insert(L30_31)
+  L19_20:toFront()
+  L10_11:toFront()
+end
+return {}

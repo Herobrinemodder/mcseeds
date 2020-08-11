@@ -1,0 +1,1508 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("transitions")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37, L37_38, L38_39, L39_40, L40_41, L41_42, L42_43, L43_44, L44_45, L45_46, L46_47, L47_48, L48_49, L49_50, L50_51, L51_52, L52_53, L53_54, L54_55, L55_56, L56_57, L57_58, L58_59, L59_60, L60_61, L61_62, L62_63, L63_64, L64_65, L65_66, L66_67, L67_68, L68_69, L69_70, L70_71, L71_72, L72_73, L73_74, L74_75, L75_76, L76_77, L77_78, L78_79, L79_80, L80_81, L81_82, L82_83, L83_84, L84_85, L85_86, L86_87
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.newGroup
+  L5_6 = L5_6()
+  L7_8 = L1_2
+  L6_7 = L1_2.insert
+  L8_9 = L5_6
+  L6_7(L7_8, L8_9)
+  L6_7 = display
+  L6_7 = L6_7.newGroup
+  L6_7 = L6_7()
+  L8_9 = L1_2
+  L7_8 = L1_2.insert
+  L9_10 = L6_7
+  L7_8(L8_9, L9_10)
+  L7_8 = display
+  L7_8 = L7_8.contentCenterX
+  L8_9 = display
+  L8_9 = L8_9.contentCenterY
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.getAppType
+  L9_10 = L9_10()
+  L10_11 = false
+  L11_12 = false
+  L12_13 = _UPVALUE1_
+  L12_13 = L12_13.scaleFrom320
+  L13_14 = _UPVALUE1_
+  L13_14 = L13_14.nickname
+  L14_15 = _UPVALUE1_
+  L14_15 = L14_15.showAds
+  L15_16 = _UPVALUE0_
+  L15_16 = L15_16.getSceneProperties
+  L15_16 = L15_16()
+  L16_17 = _UPVALUE1_
+  L16_17 = L16_17.udid
+  L17_18 = L15_16.prevScene
+  L18_19 = math
+  L18_19 = L18_19.floor
+  L19_20 = math
+  L19_20 = L19_20.random
+  L20_21 = math
+  L20_21 = L20_21.ceil
+  L21_22 = math
+  L21_22 = L21_22.abs
+  L22_23 = _W
+  L22_23 = L22_23 - 120
+  L23_24 = "brush"
+  L24_25, L25_26, L26_27, L27_28, L28_29 = nil, nil, nil, nil, nil
+  L29_30 = L22_23 / 8
+  L30_31 = nil
+  L31_32 = _UPVALUE1_
+  L31_32 = L31_32.avatar_code
+  L32_33 = _UPVALUE1_
+  L32_33 = L32_33.session
+  L32_33 = L32_33 + 1
+  L33_34 = _UPVALUE1_
+  L33_34.session = L32_33
+  L33_34 = {}
+  L34_35 = {}
+  L35_36 = {}
+  L36_37 = {}
+  L37_38 = {}
+  function L38_39(A0_88)
+    _UPVALUE0_.removeRuntimeListener("clearLocalTimersAndListeners", A0_88.self_listenerid)
+  end
+  L39_40 = _UPVALUE0_
+  L39_40 = L39_40.addRuntimeListener
+  L40_41 = "clearLocalTimersAndListeners"
+  L41_42 = L38_39
+  L39_40(L40_41, L41_42)
+  L39_40 = _UPVALUE0_
+  L39_40 = L39_40.makeBlurryBg
+  L39_40 = L39_40()
+  L41_42 = L39_40
+  L40_41 = L39_40.addEventListener
+  L42_43 = "touch"
+  function L43_44()
+    local L0_89, L1_90
+    L0_89 = true
+    return L0_89
+  end
+  L40_41(L41_42, L42_43, L43_44)
+  L41_42 = L2_3
+  L40_41 = L2_3.insert
+  L42_43 = L39_40
+  L40_41(L41_42, L42_43)
+  L40_41 = _UPVALUE2_
+  L40_41 = L40_41.createSideMenu
+  L41_42 = L1_2
+  L40_41 = L40_41(L41_42)
+  L42_43 = L0_1
+  L41_42 = L0_1.insert
+  L43_44 = L40_41
+  L41_42(L42_43, L43_44)
+  L0_1.side_menu = L40_41
+  L42_43 = L40_41
+  L41_42 = L40_41.toBack
+  L41_42(L42_43)
+  L41_42 = "avatars.bin"
+  L42_43 = system
+  L42_43 = L42_43.DocumentsDirectory
+  L43_44 = io
+  L43_44 = L43_44.open
+  L44_45 = system
+  L44_45 = L44_45.pathForFile
+  L45_46 = L41_42
+  L86_87 = L44_45(L45_46, L46_47)
+  L43_44 = L43_44(L44_45, L45_46, L46_47, L47_48, L48_49, L49_50, L50_51, L51_52, L52_53, L53_54, L54_55, L55_56, L56_57, L57_58, L58_59, L59_60, L60_61, L61_62, L62_63, L63_64, L64_65, L65_66, L66_67, L67_68, L68_69, L69_70, L70_71, L71_72, L72_73, L73_74, L74_75, L75_76, L76_77, L77_78, L78_79, L79_80, L80_81, L81_82, L82_83, L83_84, L84_85, L85_86, L86_87, L44_45(L45_46, L46_47))
+  L45_46 = L43_44
+  L44_45 = L43_44.read
+  L44_45 = L44_45(L45_46, L46_47)
+  L45_46 = L44_45
+  L44_45 = L44_45.gsub
+  L44_45 = L44_45(L45_46, L46_47, L47_48)
+  L45_46 = io
+  L45_46 = L45_46.close
+  L45_46(L46_47)
+  L45_46 = _UPVALUE0_
+  L45_46 = L45_46.split
+  L45_46 = L45_46(L46_47, L47_48)
+  for L49_50 = 1, #L45_46 do
+    L50_51 = _UPVALUE3_
+    L50_51 = L50_51.unb64
+    L51_52 = L45_46[L49_50]
+    L50_51 = L50_51(L51_52)
+    L45_46[L49_50] = L50_51
+  end
+  L49_50 = {}
+  L49_50.top = 64
+  L49_50.left = 0
+  L50_51 = _W
+  L50_51 = L50_51 - 52
+  L49_50.width = L50_51
+  L49_50.height = 66
+  L50_51 = {
+    L51_52,
+    L52_53,
+    L53_54,
+    L54_55
+  }
+  L51_52 = 255
+  L52_53 = 255
+  L53_54 = 255
+  L49_50.bgColor = L50_51
+  L50_51 = system
+  L50_51 = L50_51.TemporaryDirectory
+  L49_50.baseDir = L50_51
+  L50_51 = "mask-"
+  L51_52 = _W
+  L51_52 = L51_52 - 52
+  L52_53 = "x66.png"
+  L50_51 = L50_51 .. L51_52 .. L52_53
+  L49_50.maskFile = L50_51
+  L49_50 = L48_49.content
+  L49_50.verticalScrollDisabled = true
+  L50_51 = L3_4
+  L49_50 = L3_4.insert
+  L51_52 = L48_49
+  L49_50(L50_51, L51_52)
+  L49_50 = display
+  L49_50 = L49_50.newRect
+  L50_51 = -15
+  L51_52 = 0
+  L52_53 = 300
+  L53_54 = 66
+  L49_50 = L49_50(L50_51, L51_52, L52_53, L53_54)
+  L51_52 = L49_50
+  L50_51 = L49_50.setFillColor
+  L52_53 = 0
+  L53_54 = 0
+  L50_51(L51_52, L52_53, L53_54, L54_55, L55_56)
+  L51_52 = L48_49
+  L50_51 = L48_49.insert
+  L52_53 = L49_50
+  L50_51(L51_52, L52_53)
+  function L50_51(A0_91)
+    local L1_92, L2_93, L3_94, L4_95, L5_96, L6_97, L7_98, L8_99
+    L1_92 = timer
+    L1_92 = L1_92.cancel
+    L2_93 = tim
+    L1_92(L2_93)
+    L1_92 = true
+    _UPVALUE0_ = L1_92
+    L1_92 = false
+    _UPVALUE1_ = L1_92
+    L1_92 = display
+    L1_92 = L1_92.newGroup
+    L1_92 = L1_92()
+    L2_93 = _UPVALUE2_
+    L2_93 = L2_93.insert
+    L2_93(L3_94, L4_95)
+    function L2_93(A0_100)
+      local L1_101, L2_102, L3_103
+      L1_101 = A0_100.target
+      L1_101 = L1_101.id
+      L2_102 = _UPVALUE0_
+      L2_102 = L2_102[L1_101]
+      L2_102 = L2_102.img
+      L2_102 = L2_102.avatarsIndex
+      function L3_103(A0_104)
+        local L1_105
+        L1_105 = A0_104.action
+        if L1_105 == "clicked" then
+          L1_105 = A0_104.index
+          if L1_105 == 2 then
+            function L1_105()
+              local L0_106
+              L0_106 = _UPVALUE0_
+              L0_106[_UPVALUE1_] = _UPVALUE2_.delete(_UPVALUE0_[_UPVALUE1_])
+              L0_106 = table
+              L0_106 = L0_106.remove
+              L0_106(_UPVALUE0_, _UPVALUE1_)
+              L0_106 = table
+              L0_106 = L0_106.remove
+              L0_106(_UPVALUE3_, _UPVALUE4_)
+              L0_106 = _UPVALUE4_
+              if _UPVALUE1_ <= #_UPVALUE0_ then
+                for _FORV_4_ = _UPVALUE1_, #_UPVALUE0_ do
+                  _UPVALUE0_[_FORV_4_].img.avatarsIndex = L0_106
+                  _UPVALUE0_[_FORV_4_].deleteBtn.id = _FORV_4_
+                  _UPVALUE5_.to(_UPVALUE0_[_FORV_4_], {
+                    time = 200,
+                    x = _UPVALUE0_[_FORV_4_].x - 60,
+                    transition = easing.inOutQuad,
+                    onComplete = function()
+                      if _UPVALUE0_ == #_UPVALUE1_ then
+                        _UPVALUE2_:scrollToPosition(-1 * _UPVALUE2_.content.width + 268, 0, 500)
+                      end
+                    end
+                  }, true)
+                  L0_106 = L0_106 + 1
+                end
+              else
+                _UPVALUE6_:scrollToPosition(-1 * _UPVALUE6_.content.width + 268, 0, 500)
+              end
+              _UPVALUE7_()
+            end
+            _UPVALUE0_[_UPVALUE1_]:setReferencePoint(display.CenterReferencePoint)
+            _UPVALUE5_.to(_UPVALUE0_[_UPVALUE1_], {
+              time = 500,
+              xScale = 0.01,
+              yScale = 0.01,
+              transition = easing.inOutQuad,
+              onComplete = L1_105
+            }, true)
+          end
+        end
+      end
+      _UPVALUE1_.showAlert("Are you sure?", "Do you really want to delete this avatar?", {"No", "Yes"}, L3_103)
+      return true
+    end
+    for L6_97, L7_98 in L3_94(L4_95) do
+      L8_99 = L7_98.img
+      L8_99 = L8_99.type
+      if L8_99 ~= "fromfile" then
+        L8_99 = L7_98.img
+        L8_99 = L8_99.type
+      elseif L8_99 == "new" then
+        L8_99 = transition
+        L8_99 = L8_99.to
+        L8_99(L7_98.img, {
+          time = 200,
+          xScale = 1.1,
+          yScale = 1.1,
+          transition = easing.outElastic
+        })
+        L8_99 = L7_98.img
+        L8_99.alpha = 0.4
+        L8_99 = _UPVALUE9_
+        L8_99 = L8_99.newButton
+        L8_99 = L8_99({
+          width = 20,
+          height = 20,
+          default = "crossclose.png",
+          over = "crossclose-over.png",
+          id = L6_97,
+          onRelease = L2_93
+        })
+        L7_98.deleteBtn = L8_99
+        L8_99 = L7_98.deleteBtn
+        L8_99 = L8_99.setReferencePoint
+        L8_99(L8_99, display.CenterReferencePoint)
+        L8_99 = L7_98.deleteBtn
+        L8_99.x = L7_98.img.x + L7_98.img.width * L7_98.img.xScale * 0.5
+        L8_99 = L7_98.deleteBtn
+        L8_99.y = L7_98.img.y + L7_98.img.height * L7_98.img.yScale * 0.5
+        L8_99 = L7_98.insert
+        L8_99(L7_98, L7_98.deleteBtn)
+      end
+    end
+    L5_96.width = 64
+    L5_96.height = 29
+    L5_96.default = "ava-done.png"
+    L5_96.over = "ava-done-over.png"
+    L5_96.onRelease = L3_94
+    L6_97 = L4_95
+    L7_98 = display
+    L7_98 = L7_98.CenterReferencePoint
+    L5_96(L6_97, L7_98)
+    L4_95.x = L5_96
+    L4_95.y = 150
+    L6_97 = L1_92
+    L7_98 = L4_95
+    L5_96(L6_97, L7_98)
+    L6_97 = L4_95
+    L7_98 = {}
+    L7_98.time = 200
+    L7_98.xScale = 0.01
+    L7_98.yScale = 0.01
+    L8_99 = easing
+    L8_99 = L8_99.outElastic
+    L7_98.transition = L8_99
+    L5_96(L6_97, L7_98)
+    L6_97 = L5_96.y
+    L7_98 = display
+    L7_98 = L7_98.newRect
+    L8_99 = 0
+    L7_98 = L7_98(L8_99, L6_97, 268, _H - L6_97)
+    L8_99 = L7_98.setFillColor
+    L8_99(L7_98, 0, 0, 0, 0)
+    L7_98.isHitTestable = true
+    L8_99 = L7_98.addEventListener
+    L8_99(L7_98, "touch", function()
+      local L0_107, L1_108
+      L0_107 = true
+      return L0_107
+    end)
+    L8_99 = L1_92.insert
+    L8_99(L1_92, L7_98)
+    L8_99 = _UPVALUE10_
+    L8_99.alpha = 0.5
+    L8_99 = display
+    L8_99 = L8_99.newRect
+    L8_99 = L8_99(L5_96.x, L5_96.y, L5_96.width, L5_96.height)
+    L8_99:setFillColor(255, 255, 255, 100)
+    L1_92:insert(L8_99)
+  end
+  function L51_52(A0_109)
+    local L1_110, L2_111, L3_112, L4_113, L5_114, L6_115
+    L1_110 = _UPVALUE0_
+    L2_111 = A0_109.xStart
+    L3_112 = A0_109.x
+    L2_111 = L2_111 - L3_112
+    L1_110 = L1_110(L2_111)
+    L2_111 = _UPVALUE0_
+    L3_112 = A0_109.yStart
+    L4_113 = A0_109.y
+    L3_112 = L3_112 - L4_113
+    L2_111 = L2_111(L3_112)
+    L3_112 = A0_109.phase
+    L4_113 = A0_109.target
+    L4_113 = L4_113.type
+    L5_114 = A0_109.target
+    L5_114 = L5_114.id
+    L6_115 = display
+    L6_115 = L6_115.getCurrentStage
+    L6_115 = L6_115(L6_115)
+    L6_115 = L6_115.setFocus
+    L6_115(L6_115, A0_109.target)
+    if L4_113 == "fromfile" or L4_113 == "new" then
+      if L3_112 == "began" or L3_112 == "press" then
+        L6_115 = _UPVALUE1_
+        if L6_115 == false then
+          L6_115 = timer
+          L6_115 = L6_115.performWithDelay
+          L6_115 = L6_115(500, _UPVALUE2_)
+          tim = L6_115
+        end
+      elseif L3_112 ~= "began" and L3_112 ~= "press" and L3_112 ~= "moved" or L3_112 == "moved" and (L1_110 > 1 or L2_111 > 1) then
+        L6_115 = tim
+        if L6_115 then
+          L6_115 = timer
+          L6_115 = L6_115.cancel
+          L6_115(tim)
+          L6_115 = nil
+          tim = L6_115
+        end
+      end
+    end
+    if L3_112 == "moved" then
+      if L1_110 > 1 or L2_111 > 1 then
+        L6_115 = _UPVALUE3_
+        L6_115 = L6_115.takeFocus
+        L6_115(L6_115, A0_109)
+      end
+    elseif L3_112 == "release" or L3_112 == "cancelled" or L3_112 == "ended" then
+      L6_115 = display
+      L6_115 = L6_115.getCurrentStage
+      L6_115 = L6_115(L6_115)
+      L6_115 = L6_115.setFocus
+      L6_115(L6_115, nil)
+      L6_115 = _UPVALUE1_
+      if L6_115 == false then
+        L6_115 = _UPVALUE4_
+        L6_115()
+        L6_115 = _UPVALUE5_
+        L6_115 = L6_115.checkAvatarsById
+        L6_115 = L6_115(L5_114)
+        L6_115 = L6_115 or A0_109.target.code
+        if L6_115 then
+          for _FORV_11_ = 0, 63 do
+            _UPVALUE7_[_FORV_11_]:setFillColor(_UPVALUE6_.hexToRgb("#" .. _UPVALUE6_.split(L6_115, "#")[_FORV_11_ + 1])[1], _UPVALUE6_.hexToRgb("#" .. _UPVALUE6_.split(L6_115, "#")[_FORV_11_ + 1])[2], _UPVALUE6_.hexToRgb("#" .. _UPVALUE6_.split(L6_115, "#")[_FORV_11_ + 1])[3], 255)
+            _UPVALUE7_[_FORV_11_].color = {
+              _UPVALUE6_.hexToRgb("#" .. _UPVALUE6_.split(L6_115, "#")[_FORV_11_ + 1])[1],
+              _UPVALUE6_.hexToRgb("#" .. _UPVALUE6_.split(L6_115, "#")[_FORV_11_ + 1])[2],
+              _UPVALUE6_.hexToRgb("#" .. _UPVALUE6_.split(L6_115, "#")[_FORV_11_ + 1])[3],
+              255
+            }
+          end
+        end
+      end
+    end
+    L6_115 = true
+    return L6_115
+  end
+  function L52_53(A0_116, A1_117, A2_118)
+    local L3_119, L4_120
+    L3_119 = _UPVALUE0_
+    L3_119 = #L3_119
+    L3_119 = L3_119 * 60
+    L3_119 = 40 + L3_119
+    L4_120 = _UPVALUE0_
+    L4_120 = #L4_120
+    L4_120 = L4_120 + 1
+    _UPVALUE0_[L4_120] = display.newGroup()
+    _UPVALUE1_:insert(_UPVALUE0_[L4_120])
+    if A1_117 == "presaved" then
+      _UPVALUE0_[L4_120].img = _UPVALUE2_.newButton({
+        id = A0_116,
+        width = 50,
+        height = 50,
+        default = "avatars/" .. string.lower(A0_116) .. ".png",
+        over = "avatars/" .. string.lower(A0_116) .. "-over.png",
+        onEvent = _UPVALUE3_
+      })
+    elseif A1_117 == "fromfile" or A1_117 == "new" then
+      _UPVALUE0_[L4_120].img = _UPVALUE4_.makeAvatar({scale = 6.25, avatar = A0_116})
+      _UPVALUE0_[L4_120].img:addEventListener("touch", _UPVALUE3_)
+    end
+    _UPVALUE0_[L4_120].img:setReferencePoint(display.CenterReferencePoint)
+    _UPVALUE0_[L4_120].img.x = L3_119
+    _UPVALUE0_[L4_120].img.y = 33
+    _UPVALUE0_[L4_120].img.code = A0_116
+    _UPVALUE0_[L4_120].img.type = A1_117
+    _UPVALUE0_[L4_120].img.avatarsIndex = A2_118
+    _UPVALUE0_[L4_120]:insert(_UPVALUE0_[L4_120].img)
+  end
+  L53_54 = _UPVALUE6_
+  L53_54 = L53_54.getCachedAvatars
+  L53_54 = L53_54()
+  for L57_58 = 1, #L53_54 do
+    L58_59 = L52_53
+    L59_60 = L53_54[L57_58]
+    L60_61 = "presaved"
+    L61_62 = 0
+    L58_59(L59_60, L60_61, L61_62)
+  end
+  for L57_58 = 1, #L45_46 do
+    L58_59 = L52_53
+    L59_60 = L45_46[L57_58]
+    L60_61 = "fromfile"
+    L61_62 = L57_58
+    L58_59(L59_60, L60_61, L61_62)
+  end
+  L57_58 = 52
+  L58_59 = _H
+  L58_59 = L58_59 - 64
+  L57_58 = 0
+  L58_59 = 0
+  L59_60 = 0
+  L60_61 = 0
+  L55_56(L56_57, L57_58, L58_59, L59_60, L60_61)
+  L54_55.isHitTestable = true
+  L57_58 = "touch"
+  function L58_59()
+    local L0_121, L1_122
+    L0_121 = true
+    return L0_121
+  end
+  L55_56(L56_57, L57_58, L58_59)
+  L57_58 = L54_55
+  L55_56(L56_57, L57_58)
+  L57_58 = 80
+  L58_59 = _H
+  L58_59 = L58_59 - 64
+  L57_58 = L55_56
+  L58_59 = display
+  L58_59 = L58_59.TopLeftReferencePoint
+  L56_57(L57_58, L58_59)
+  L55_56.x = L56_57
+  L55_56.y = 64
+  L57_58 = L3_4
+  L58_59 = L55_56
+  L56_57(L57_58, L58_59)
+  L57_58 = {}
+  L57_58.top = 64
+  L58_59 = _W
+  L58_59 = L58_59 - 50
+  L57_58.left = L58_59
+  L57_58.width = 50
+  L58_59 = _H
+  L58_59 = L58_59 - 64
+  L57_58.height = L58_59
+  L58_59 = {
+    L59_60,
+    L60_61,
+    L61_62,
+    L62_63
+  }
+  L59_60 = 255
+  L60_61 = 255
+  L61_62 = 255
+  L62_63 = 0
+  L57_58.bgColor = L58_59
+  L58_59 = system
+  L58_59 = L58_59.TemporaryDirectory
+  L57_58.baseDir = L58_59
+  L58_59 = "mask-50x"
+  L59_60 = _H
+  L59_60 = L59_60 - 64
+  L60_61 = ".png"
+  L58_59 = L58_59 .. L59_60 .. L60_61
+  L57_58.maskFile = L58_59
+  L57_58.topPadding = 30
+  L57_58.bottomPadding = -5
+  L57_58 = L56_57.content
+  L57_58.horizontalScrollDisabled = true
+  L58_59 = L3_4
+  L57_58 = L3_4.insert
+  L59_60 = L56_57
+  L57_58(L58_59, L59_60)
+  L57_58 = _UPVALUE6_
+  L57_58 = L57_58.colors
+  L58_59 = {
+    L59_60,
+    L60_61,
+    L61_62,
+    L62_63
+  }
+  L59_60 = 255
+  L60_61 = 255
+  L61_62 = 255
+  L62_63 = 255
+  L59_60 = 1
+  function L60_61(A0_123)
+    local L1_124, L2_125, L3_126, L4_127, L5_128, L6_129
+    L1_124 = A0_123.phase
+    L2_125 = A0_123.target
+    L2_125 = L2_125.nr
+    L3_126 = A0_123.target
+    L3_126 = L3_126.id
+    L4_127 = A0_123.y
+    L5_128 = 30
+    L6_129 = 518
+    if L4_127 > 30 and L4_127 < 518 then
+      if L1_124 == "moved" then
+        _UPVALUE0_:takeFocus(A0_123)
+      elseif L1_124 == "ended" or L1_124 == "cancelled" then
+        _UPVALUE1_ = A0_123.target.color
+        if _UPVALUE2_ and _UPVALUE3_[_UPVALUE2_] then
+          _UPVALUE3_[_UPVALUE2_].hl.isVisible = false
+        end
+        if L2_125 then
+          _UPVALUE2_ = L2_125
+          if L3_126 ~= "pre_sqrs" then
+            _UPVALUE4_[3].nr = _UPVALUE4_[2].nr
+            _UPVALUE4_[2].nr = _UPVALUE4_[1].nr
+            _UPVALUE4_[1].nr = L2_125
+          end
+          if _UPVALUE3_[_UPVALUE2_] then
+            _UPVALUE3_[_UPVALUE2_].hl.isVisible = true
+          end
+        end
+        if L3_126 ~= "pre_sqrs" then
+          _UPVALUE4_[3]:setFillColor(unpack(_UPVALUE4_[2].color))
+          _UPVALUE4_[3].color = _UPVALUE5_.copyTable(_UPVALUE4_[2].color)
+          _UPVALUE4_[2]:setFillColor(unpack(_UPVALUE4_[1].color))
+          _UPVALUE4_[2].color = _UPVALUE5_.copyTable(_UPVALUE4_[1].color)
+          _UPVALUE4_[1]:setFillColor(unpack(_UPVALUE1_))
+          _UPVALUE4_[1].color = _UPVALUE5_.copyTable(_UPVALUE1_)
+          _UPVALUE6_.y = 70
+        else
+          _UPVALUE6_.y = _UPVALUE4_[A0_123.target.i].y
+        end
+      end
+    end
+    return true
+  end
+  L61_62 = display
+  L61_62 = L61_62.newRect
+  L62_63 = 6
+  L63_64 = 51
+  L61_62 = L61_62(L62_63, L63_64, L64_65, L65_66)
+  L30_31 = L61_62
+  L62_63 = L30_31
+  L61_62 = L30_31.setFillColor
+  L63_64 = 0
+  L61_62(L62_63, L63_64, L64_65, L65_66)
+  L62_63 = L56_57
+  L61_62 = L56_57.insert
+  L63_64 = L30_31
+  L61_62(L62_63, L63_64)
+  function L61_62(A0_130, A1_131, A2_132, A3_133)
+    local L4_134
+    L4_134 = _UPVALUE0_
+    if L4_134 then
+      L4_134 = _UPVALUE1_
+      L4_134 = L4_134[_UPVALUE0_]
+      L4_134 = L4_134.hl
+      L4_134.isVisible = false
+      L4_134 = nil
+      _UPVALUE0_ = L4_134
+    end
+    L4_134 = {
+      A0_130,
+      A1_131,
+      A2_132,
+      A3_133
+    }
+    _UPVALUE2_ = L4_134
+    L4_134 = _UPVALUE3_
+    L4_134 = L4_134[3]
+    L4_134.nr = _UPVALUE3_[2].nr
+    L4_134 = _UPVALUE3_
+    L4_134 = L4_134[2]
+    L4_134.nr = _UPVALUE3_[1].nr
+    L4_134 = _UPVALUE3_
+    L4_134 = L4_134[1]
+    L4_134.nr = nil
+    L4_134 = _UPVALUE3_
+    L4_134 = L4_134[3]
+    L4_134 = L4_134.setFillColor
+    L4_134(L4_134, unpack(_UPVALUE3_[2].color))
+    L4_134 = _UPVALUE3_
+    L4_134 = L4_134[3]
+    L4_134.color = _UPVALUE4_.copyTable(_UPVALUE3_[2].color)
+    L4_134 = _UPVALUE3_
+    L4_134 = L4_134[2]
+    L4_134 = L4_134.setFillColor
+    L4_134(L4_134, unpack(_UPVALUE3_[1].color))
+    L4_134 = _UPVALUE3_
+    L4_134 = L4_134[2]
+    L4_134.color = _UPVALUE4_.copyTable(_UPVALUE3_[1].color)
+    L4_134 = _UPVALUE3_
+    L4_134 = L4_134[1]
+    L4_134 = L4_134.setFillColor
+    L4_134(L4_134, unpack(_UPVALUE2_))
+    L4_134 = _UPVALUE3_
+    L4_134 = L4_134[1]
+    L4_134.color = _UPVALUE4_.copyTable(_UPVALUE2_)
+    L4_134 = _UPVALUE5_
+    L4_134.y = 70
+  end
+  function L62_63(A0_135)
+    local L1_136
+    L1_136 = A0_135.phase
+    if L1_136 == "moved" then
+      if _UPVALUE0_(A0_135.xStart - A0_135.x) < _UPVALUE0_(A0_135.yStart - A0_135.y) then
+        _UPVALUE1_:takeFocus(A0_135)
+      end
+    elseif L1_136 == "release" or L1_136 == "cancelled" then
+      _UPVALUE2_.show(_UPVALUE3_, _UPVALUE4_[1] / 255, _UPVALUE4_[2] / 255, _UPVALUE4_[3] / 255, _UPVALUE4_[4] / 255)
+    end
+    return true
+  end
+  L63_64 = _UPVALUE4_
+  L63_64 = L63_64.newButton
+  L64_65.top = -7
+  L64_65.left = 9
+  L64_65.width = 32
+  L64_65.height = 32
+  L64_65.default = "colorPickerIcon.png"
+  L64_65.over = "colorPickerIcon-over.png"
+  L64_65.onEvent = L62_63
+  L63_64 = L63_64(L64_65)
+  L64_65(L65_66, L66_67)
+  for L67_68 = 1, 3 do
+    L35_36[L67_68] = L68_69
+    L86_87 = L70_71(L71_72)
+    L68_69(L69_70, L70_71, L71_72, L72_73, L73_74, L74_75, L75_76, L76_77, L77_78, L78_79, L79_80, L80_81, L81_82, L82_83, L83_84, L84_85, L85_86, L86_87, L70_71(L71_72))
+    L68_69.color = L58_59
+    L68_69.nr = 1
+    L68_69.strokeWidth = 1
+    L68_69(L69_70, L70_71, L71_72, L72_73)
+    L68_69.id = "pre_sqrs"
+    L68_69.i = L67_68
+    L68_69(L69_70, L70_71, L71_72)
+    L68_69(L69_70, L70_71)
+  end
+  for L67_68 = 1, #L57_58 do
+    L37_38[L67_68] = L68_69
+    L86_87 = L70_71(L71_72)
+    L68_69(L69_70, L70_71, L71_72, L72_73, L73_74, L74_75, L75_76, L76_77, L77_78, L78_79, L79_80, L80_81, L81_82, L82_83, L83_84, L84_85, L85_86, L86_87, L70_71(L71_72))
+    L68_69.color = L69_70
+    L68_69.nr = L67_68
+    L68_69.strokeWidth = 1
+    L68_69(L69_70, L70_71, L71_72, L72_73)
+    L68_69.id = "sqrs"
+    L68_69(L69_70, L70_71, L71_72)
+    L68_69(L69_70, L70_71)
+    L73_74 = 38
+    L68_69.hl = L69_70
+    L68_69(L69_70, L70_71, L71_72, L72_73)
+    L68_69.isVisible = false
+    L68_69(L69_70, L70_71)
+    for L73_74 = 1, #L71_72 do
+      L74_75 = L57_58[L67_68]
+      L74_75 = L74_75[L73_74]
+      L69_70[L73_74] = L74_75
+    end
+    for L73_74 = 1, #L58_59 do
+      L74_75 = L69_70[L73_74]
+      L75_76 = L58_59[L73_74]
+    end
+    if L68_69 == true then
+      L70_71.isVisible = true
+    end
+    L70_71(L71_72)
+  end
+  L67_68 = 30
+  L64_65(L65_66, L66_67, L67_68, L68_69)
+  L67_68 = "nearest"
+  L65_66(L66_67, L67_68)
+  L67_68 = L22_23
+  L67_68 = L65_66
+  L66_67(L67_68, L68_69)
+  L65_66.x = 33
+  L65_66.y = 170
+  L65_66.isHitTestable = true
+  L65_66.xmin = L66_67
+  L67_68 = L65_66.width
+  L65_66.xmax = L66_67
+  L65_66.ymin = L66_67
+  L67_68 = L65_66.height
+  L65_66.ymax = L66_67
+  L67_68 = L65_66
+  L66_67(L67_68, L68_69, L69_70)
+  L67_68 = L3_4
+  L66_67(L67_68, L68_69)
+  L1_2.avatar_background = L65_66
+  L67_68 = "magTextureFilter"
+  L66_67(L67_68, L68_69)
+  if L31_32 == "" then
+    L31_32 = "0E0903#0D0803#120C06#0D0803#0D0903#0E0902#0E0903#100A04#0E0904#0E0904#120C05#120C05#160D05#130C05#100A04#0E0903#110B05#DCB796#E4C1A3#E1BD9E#E4C0A4#DCB495#D3A67B#120C05#D8B08E#DCB696#DDB799#DCB698#DEB79A#DDB494#CFA372#CA9968#D4A886#FFFFFF#0F7FCE#DAB395#E1BB9D#0E7BCA#FFFFFF#BB895D#BA7D50#D2A478#DAAD8E#562D20#562D20#DBAD88#BE8A51#A5663E#A0613E#A96841#6A3928#683727#663424#723C2C#A26740#9D613D#6F3D25#743C25#85492D#7E442A#82482E#8E5235#935938#905637#"
+  end
+  L67_68 = L31_32
+  L67_68 = display
+  L67_68 = L67_68.newGroup
+  L67_68 = L67_68()
+  for L71_72 = 0, 63 do
+    L73_74 = "#"
+    L74_75 = L71_72 + 1
+    L74_75 = L66_67[L74_75]
+    L73_74 = L73_74 .. L74_75
+    L73_74 = display
+    L73_74 = L73_74.newRect
+    L74_75 = L71_72 % 8
+    L74_75 = L74_75 * L29_30
+    L75_76 = L18_19
+    L76_77 = L71_72 / 8
+    L75_76 = L75_76(L76_77)
+    L75_76 = L75_76 * L29_30
+    L76_77 = L29_30
+    L77_78 = L29_30
+    L73_74 = L73_74(L74_75, L75_76, L76_77, L77_78)
+    L33_34[L71_72] = L73_74
+    L73_74 = L33_34[L71_72]
+    L74_75 = L73_74
+    L73_74 = L73_74.setFillColor
+    L75_76 = L72_73[1]
+    L76_77 = L72_73[2]
+    L77_78 = L72_73[3]
+    L78_79 = 255
+    L73_74(L74_75, L75_76, L76_77, L77_78, L78_79)
+    L73_74 = L33_34[L71_72]
+    L74_75 = {
+      L75_76,
+      L76_77,
+      L77_78,
+      L78_79
+    }
+    L75_76 = L72_73[1]
+    L76_77 = L72_73[2]
+    L77_78 = L72_73[3]
+    L78_79 = 255
+    L73_74.color = L74_75
+    L74_75 = L67_68
+    L73_74 = L67_68.insert
+    L75_76 = L33_34[L71_72]
+    L73_74(L74_75, L75_76)
+  end
+  L68_69(L69_70, L70_71)
+  L67_68.x = L68_69
+  L67_68.y = L68_69
+  L68_69(L69_70, L70_71)
+  L69_70(L70_71, L71_72)
+  L68_69.x = 0
+  L68_69.y = L69_70
+  L68_69.yCenter = L69_70
+  L69_70(L70_71, L71_72)
+  L73_74 = L5_6
+  L74_75 = L71_72
+  L72_73(L73_74, L74_75)
+  L73_74 = _UPVALUE4_
+  L73_74 = L73_74.newButton
+  L74_75 = {}
+  L74_75.width = L69_70
+  L74_75.height = L69_70
+  L74_75.default = "brush.png"
+  L74_75.over = "brush-over.png"
+  L74_75.onRelease = L72_73
+  L73_74 = L73_74(L74_75)
+  L24_25 = L73_74
+  L74_75 = L24_25
+  L73_74 = L24_25.setReferencePoint
+  L75_76 = display
+  L75_76 = L75_76.CenterLeftReferencePoint
+  L73_74(L74_75, L75_76)
+  L24_25.x = 0
+  L24_25.y = 0
+  L24_25.isVisible = false
+  L74_75 = L71_72
+  L73_74 = L71_72.insert
+  L75_76 = L24_25
+  L73_74(L74_75, L75_76)
+  L73_74 = _UPVALUE4_
+  L73_74 = L73_74.newButton
+  L74_75 = {}
+  L74_75.width = L69_70
+  L74_75.height = L69_70
+  L74_75.default = "brush-over.png"
+  L73_74 = L73_74(L74_75)
+  L24_25.selected = L73_74
+  L73_74 = L24_25.selected
+  L74_75 = L73_74
+  L73_74 = L73_74.setReferencePoint
+  L75_76 = display
+  L75_76 = L75_76.CenterLeftReferencePoint
+  L73_74(L74_75, L75_76)
+  L73_74 = L24_25.selected
+  L74_75 = L24_25.x
+  L73_74.x = L74_75
+  L73_74 = L24_25.selected
+  L73_74.y = 0
+  L74_75 = L71_72
+  L73_74 = L71_72.insert
+  L75_76 = L24_25.selected
+  L73_74(L74_75, L75_76)
+  function L73_74(A0_137)
+    local L1_138
+    L1_138 = _UPVALUE0_
+    L1_138()
+    L1_138 = _UPVALUE1_
+    L1_138 = #L1_138
+    for _FORV_5_ = 0, L1_138 do
+      _UPVALUE1_[_FORV_5_]:setFillColor(unpack(_UPVALUE2_))
+      _UPVALUE1_[_FORV_5_].color = {
+        unpack(_UPVALUE2_)
+      }
+    end
+    return _FOR_
+  end
+  L74_75 = _UPVALUE4_
+  L74_75 = L74_75.newButton
+  L75_76 = {}
+  L75_76.width = L69_70
+  L75_76.height = L69_70
+  L75_76.default = "fill.png"
+  L75_76.over = "fill-over.png"
+  L75_76.onRelease = L73_74
+  L74_75 = L74_75(L75_76)
+  L28_29 = L74_75
+  L75_76 = L28_29
+  L74_75 = L28_29.setReferencePoint
+  L76_77 = display
+  L76_77 = L76_77.CenterLeftReferencePoint
+  L74_75(L75_76, L76_77)
+  L74_75 = L24_25.x
+  L75_76 = L24_25.width
+  L74_75 = L74_75 + L75_76
+  L74_75 = L74_75 + L70_71
+  L28_29.x = L74_75
+  L28_29.y = 0
+  L75_76 = L71_72
+  L74_75 = L71_72.insert
+  L76_77 = L28_29
+  L74_75(L75_76, L76_77)
+  function L74_75(A0_139)
+    local L1_140, L2_141, L3_142, L4_143, L5_144, L6_145, L7_146, L8_147, L9_148
+    function L1_140(A0_149)
+      local L1_150, L2_151, L3_152, L4_153, L5_154
+      for L4_153 = 1, #A0_149 do
+        L5_154 = A0_149[L4_153]
+        if L5_154 > 255 then
+          A0_149[L4_153] = 255
+        else
+          L5_154 = A0_149[L4_153]
+          if L5_154 < 0 then
+            A0_149[L4_153] = 0
+          end
+        end
+      end
+      return A0_149
+    end
+    L2_141()
+    for L5_144 = 0, #L3_142 do
+      L6_145 = tonumber
+      L7_146 = _UPVALUE1_
+      L7_146 = L7_146[L5_144]
+      L7_146 = L7_146.color
+      L7_146 = L7_146[1]
+      L6_145 = L6_145(L7_146)
+      L7_146 = tonumber
+      L8_147 = _UPVALUE1_
+      L8_147 = L8_147[L5_144]
+      L8_147 = L8_147.color
+      L8_147 = L8_147[2]
+      L7_146 = L7_146(L8_147)
+      L8_147 = tonumber
+      L9_148 = _UPVALUE1_
+      L9_148 = L9_148[L5_144]
+      L9_148 = L9_148.color
+      L9_148 = L9_148[3]
+      L8_147 = L8_147(L9_148)
+      L9_148 = tonumber
+      L9_148 = L9_148(_UPVALUE1_[L5_144].color[4])
+      L6_145 = L6_145 + _UPVALUE2_(-5, 5)
+      L7_146 = L7_146 + _UPVALUE2_(-5, 5)
+      L8_147 = L8_147 + _UPVALUE2_(-5, 5)
+      _UPVALUE1_[L5_144]:setFillColor(L1_140({
+        L6_145,
+        L7_146,
+        L8_147,
+        L9_148
+      })[1], L1_140({
+        L6_145,
+        L7_146,
+        L8_147,
+        L9_148
+      })[2], L1_140({
+        L6_145,
+        L7_146,
+        L8_147,
+        L9_148
+      })[3], L1_140({
+        L6_145,
+        L7_146,
+        L8_147,
+        L9_148
+      })[4])
+      _UPVALUE1_[L5_144].color = {
+        L1_140({
+          L6_145,
+          L7_146,
+          L8_147,
+          L9_148
+        })[1],
+        L1_140({
+          L6_145,
+          L7_146,
+          L8_147,
+          L9_148
+        })[2],
+        L1_140({
+          L6_145,
+          L7_146,
+          L8_147,
+          L9_148
+        })[3],
+        L1_140({
+          L6_145,
+          L7_146,
+          L8_147,
+          L9_148
+        })[4]
+      }
+    end
+    return L2_141
+  end
+  L75_76 = _UPVALUE4_
+  L75_76 = L75_76.newButton
+  L76_77 = {}
+  L76_77.width = L69_70
+  L76_77.height = L69_70
+  L76_77.default = "addnoise.png"
+  L76_77.over = "addnoise-over.png"
+  L76_77.onRelease = L74_75
+  L75_76 = L75_76(L76_77)
+  L27_28 = L75_76
+  L76_77 = L27_28
+  L75_76 = L27_28.setReferencePoint
+  L77_78 = display
+  L77_78 = L77_78.CenterLeftReferencePoint
+  L75_76(L76_77, L77_78)
+  L75_76 = L28_29.x
+  L76_77 = L28_29.width
+  L75_76 = L75_76 + L76_77
+  L75_76 = L75_76 + L70_71
+  L27_28.x = L75_76
+  L27_28.y = 0
+  L76_77 = L71_72
+  L75_76 = L71_72.insert
+  L77_78 = L27_28
+  L75_76(L76_77, L77_78)
+  function L75_76(A0_155)
+    local L1_156
+    L1_156 = "eraser"
+    _UPVALUE0_ = L1_156
+    L1_156 = _UPVALUE1_
+    L1_156.isVisible = true
+    L1_156 = _UPVALUE1_
+    L1_156 = L1_156.selected
+    L1_156.isVisible = false
+    L1_156 = _UPVALUE2_
+    L1_156.isVisible = false
+    L1_156 = _UPVALUE2_
+    L1_156 = L1_156.selected
+    L1_156.isVisible = true
+    L1_156 = _UPVALUE3_
+    L1_156.isVisible = true
+    L1_156 = _UPVALUE3_
+    L1_156 = L1_156.selected
+    L1_156.isVisible = false
+    L1_156 = true
+    return L1_156
+  end
+  L76_77 = _UPVALUE4_
+  L76_77 = L76_77.newButton
+  L77_78 = {}
+  L77_78.width = L69_70
+  L77_78.height = L69_70
+  L77_78.default = "eraser.png"
+  L77_78.over = "eraser-over.png"
+  L77_78.onRelease = L75_76
+  L76_77 = L76_77(L77_78)
+  L25_26 = L76_77
+  L77_78 = L25_26
+  L76_77 = L25_26.setReferencePoint
+  L78_79 = display
+  L78_79 = L78_79.CenterLeftReferencePoint
+  L76_77(L77_78, L78_79)
+  L76_77 = L27_28.x
+  L77_78 = L27_28.width
+  L76_77 = L76_77 + L77_78
+  L76_77 = L76_77 + L70_71
+  L25_26.x = L76_77
+  L25_26.y = 0
+  L77_78 = L71_72
+  L76_77 = L71_72.insert
+  L78_79 = L25_26
+  L76_77(L77_78, L78_79)
+  L76_77 = _UPVALUE4_
+  L76_77 = L76_77.newButton
+  L77_78 = {}
+  L77_78.width = L69_70
+  L77_78.height = L69_70
+  L77_78.default = "eraser-over.png"
+  L76_77 = L76_77(L77_78)
+  L25_26.selected = L76_77
+  L76_77 = L25_26.selected
+  L77_78 = L76_77
+  L76_77 = L76_77.setReferencePoint
+  L78_79 = display
+  L78_79 = L78_79.CenterLeftReferencePoint
+  L76_77(L77_78, L78_79)
+  L76_77 = L25_26.selected
+  L77_78 = L25_26.x
+  L76_77.x = L77_78
+  L76_77 = L25_26.selected
+  L76_77.y = 0
+  L76_77 = L25_26.selected
+  L76_77.isVisible = false
+  L77_78 = L71_72
+  L76_77 = L71_72.insert
+  L78_79 = L25_26.selected
+  L76_77(L77_78, L78_79)
+  function L76_77(A0_157)
+    local L1_158
+    L1_158 = "picker"
+    _UPVALUE0_ = L1_158
+    L1_158 = _UPVALUE1_
+    L1_158.isVisible = false
+    L1_158 = _UPVALUE1_
+    L1_158 = L1_158.selected
+    L1_158.isVisible = true
+    L1_158 = _UPVALUE2_
+    L1_158.isVisible = true
+    L1_158 = _UPVALUE2_
+    L1_158 = L1_158.selected
+    L1_158.isVisible = false
+    L1_158 = _UPVALUE3_
+    L1_158.isVisible = true
+    L1_158 = _UPVALUE3_
+    L1_158 = L1_158.selected
+    L1_158.isVisible = false
+    L1_158 = true
+    return L1_158
+  end
+  L77_78 = _UPVALUE4_
+  L77_78 = L77_78.newButton
+  L78_79 = {}
+  L78_79.width = L69_70
+  L78_79.height = L69_70
+  L78_79.default = "picker.png"
+  L78_79.over = "picker-over.png"
+  L78_79.onRelease = L76_77
+  L77_78 = L77_78(L78_79)
+  L26_27 = L77_78
+  L78_79 = L26_27
+  L77_78 = L26_27.setReferencePoint
+  L79_80 = display
+  L79_80 = L79_80.CenterLeftReferencePoint
+  L77_78(L78_79, L79_80)
+  L77_78 = L25_26.x
+  L78_79 = L25_26.width
+  L77_78 = L77_78 + L78_79
+  L77_78 = L77_78 + L70_71
+  L26_27.x = L77_78
+  L26_27.y = 0
+  L78_79 = L71_72
+  L77_78 = L71_72.insert
+  L79_80 = L26_27
+  L77_78(L78_79, L79_80)
+  L77_78 = _UPVALUE4_
+  L77_78 = L77_78.newButton
+  L78_79 = {}
+  L78_79.width = L69_70
+  L78_79.height = L69_70
+  L78_79.default = "picker-over.png"
+  L77_78 = L77_78(L78_79)
+  L26_27.selected = L77_78
+  L77_78 = L26_27.selected
+  L78_79 = L77_78
+  L77_78 = L77_78.setReferencePoint
+  L79_80 = display
+  L79_80 = L79_80.CenterLeftReferencePoint
+  L77_78(L78_79, L79_80)
+  L77_78 = L26_27.selected
+  L78_79 = L26_27.x
+  L77_78.x = L78_79
+  L77_78 = L26_27.selected
+  L77_78.y = 0
+  L77_78 = L26_27.selected
+  L77_78.isVisible = false
+  L78_79 = L71_72
+  L77_78 = L71_72.insert
+  L79_80 = L26_27.selected
+  L77_78(L78_79, L79_80)
+  L78_79 = L71_72
+  L77_78 = L71_72.setReferencePoint
+  L79_80 = display
+  L79_80 = L79_80.CenterReferencePoint
+  L77_78(L78_79, L79_80)
+  L77_78 = L68_69.x
+  L78_79 = L68_69.width
+  L78_79 = L78_79 * 0.5
+  L77_78 = L77_78 + L78_79
+  L71_72.x = L77_78
+  L77_78 = L68_69.yCenter
+  L71_72.y = L77_78
+  function L77_78(A0_159)
+    local L1_160, L2_161, L3_162, L4_163, L5_164, L6_165, L7_166
+    L1_160 = A0_159.target
+    L1_160 = L1_160.id
+    if L1_160 == "undo" then
+      L2_161 = _UPVALUE0_
+      L2_161 = #L2_161
+      if L2_161 > 0 then
+        L2_161 = _UPVALUE0_
+        L2_161 = L2_161[L3_162]
+        for L6_165 = 0, #L2_161 do
+          L7_166 = L2_161[L6_165]
+          _UPVALUE1_[L6_165]:setFillColor(L7_166[1], L7_166[2], L7_166[3], L7_166[4])
+          _UPVALUE1_[L6_165].color = {
+            L7_166[1],
+            L7_166[2],
+            L7_166[3],
+            L7_166[4]
+          }
+        end
+        L3_162(L4_163, L5_164)
+      end
+    elseif L1_160 == "save" then
+      L2_161 = _UPVALUE2_
+      if L2_161 == false then
+        L2_161 = _UPVALUE3_
+        if L2_161 == true then
+          L2_161 = _UPVALUE4_
+          L2_161 = #L2_161
+          if L2_161 > 0 then
+            function L2_161(A0_167)
+              if A0_167.action == "clicked" and A0_167.index == 2 then
+                system.openURL("https://itunes.apple.com/us/app/minecraft-seeds-pro/id528919633?mt=8")
+              end
+            end
+            L6_165 = {L7_166, "Upgrade"}
+            L7_166 = "Dismiss"
+            L7_166 = L2_161
+            L3_162(L4_163, L5_164, L6_165, L7_166)
+          end
+        end
+      else
+        L2_161 = _UPVALUE6_
+        L2_161 = L2_161.scrollToPosition
+        L6_165 = 500
+        L2_161(L3_162, L4_163, L5_164, L6_165)
+        L2_161 = ""
+        for L6_165 = 0, #L4_163 do
+          L7_166 = _UPVALUE1_
+          L7_166 = L7_166[L6_165]
+          L7_166 = L7_166.color
+          L7_166 = L7_166[4]
+          if L7_166 == 0 then
+            L7_166 = _UPVALUE1_
+            L7_166 = L7_166[L6_165]
+            L7_166 = L7_166.color
+            L7_166[1] = 150
+            L7_166 = _UPVALUE1_
+            L7_166 = L7_166[L6_165]
+            L7_166 = L7_166.color
+            L7_166[2] = 150
+            L7_166 = _UPVALUE1_
+            L7_166 = L7_166[L6_165]
+            L7_166 = L7_166.color
+            L7_166[3] = 150
+          end
+          L7_166 = _UPVALUE5_
+          L7_166 = L7_166.rgbToHex
+          L7_166 = L7_166(_UPVALUE1_[L6_165].color[1], _UPVALUE1_[L6_165].color[2], _UPVALUE1_[L6_165].color[3])
+          L7_166 = string.gsub(L7_166, "#", "")
+          L7_166 = L7_166 .. "#"
+          L2_161 = L2_161 .. "" .. L7_166
+        end
+        L4_163.scale = 25
+        L4_163.avatar = L2_161
+        L6_165 = display
+        L6_165 = L6_165.CenterReferencePoint
+        L4_163(L5_164, L6_165)
+        L3_162.x = 133
+        L3_162.y = 270
+        L6_165 = L3_162
+        L7_166 = {}
+        L7_166.time = 600
+        L7_166.x = _W - 92
+        L7_166.y = 97
+        L7_166.xScale = 6.25 / (25 / L3_162.xScale)
+        L7_166.yScale = 6.25 / (25 / L3_162.yScale)
+        L7_166.transition = easing.outQuad
+        L7_166.onComplete = L4_163
+        L5_164(L6_165, L7_166, true)
+      end
+    end
+    L2_161 = true
+    return L2_161
+  end
+  L78_79 = _UPVALUE4_
+  L78_79 = L78_79.newButton
+  L79_80 = {}
+  L79_80.id = "undo"
+  L79_80.width = 64
+  L79_80.height = 29
+  L79_80.default = "ava-undo.png"
+  L79_80.over = "ava-undo-over.png"
+  L79_80.onRelease = L77_78
+  L78_79 = L78_79(L79_80)
+  L80_81 = L78_79
+  L79_80 = L78_79.setReferencePoint
+  L81_82 = display
+  L81_82 = L81_82.CenterRightReferencePoint
+  L79_80(L80_81, L81_82)
+  L78_79.x = 93
+  L79_80 = L65_66.y
+  L80_81 = L65_66.height
+  L79_80 = L79_80 + L80_81
+  L79_80 = L79_80 + 25
+  L78_79.y = L79_80
+  L80_81 = L4_5
+  L79_80 = L4_5.insert
+  L81_82 = L78_79
+  L79_80(L80_81, L81_82)
+  L79_80 = _UPVALUE4_
+  L79_80 = L79_80.newButton
+  L80_81 = {}
+  L80_81.id = "save"
+  L80_81.width = 64
+  L80_81.height = 29
+  L80_81.default = "ava-save.png"
+  L80_81.over = "ava-save-over.png"
+  L80_81.onRelease = L77_78
+  L79_80 = L79_80(L80_81)
+  L81_82 = L79_80
+  L80_81 = L79_80.setReferencePoint
+  L82_83 = display
+  L82_83 = L82_83.CenterRightReferencePoint
+  L80_81(L81_82, L82_83)
+  L80_81 = _W
+  L80_81 = L80_81 - 83
+  L79_80.x = L80_81
+  L80_81 = L78_79.y
+  L79_80.y = L80_81
+  L81_82 = L4_5
+  L80_81 = L4_5.insert
+  L82_83 = L79_80
+  L80_81(L81_82, L82_83)
+  L80_81 = _UPVALUE0_
+  L80_81 = L80_81.makeToolbar
+  L81_82 = L13_14
+  L80_81 = L80_81(L81_82)
+  L82_83 = L6_7
+  L81_82 = L6_7.insert
+  L83_84 = L80_81
+  L81_82(L82_83, L83_84)
+  function L81_82(A0_168)
+    _UPVALUE0_.remove({"prevScene"})
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE1_, "toRightNew")
+    return true
+  end
+  L82_83 = _UPVALUE4_
+  L82_83 = L82_83.newButton
+  L83_84 = {}
+  L83_84.width = 50
+  L83_84.height = 50
+  L83_84.default = "back.png"
+  L83_84.over = "back-over.png"
+  L83_84.onRelease = L81_82
+  L82_83 = L82_83(L83_84)
+  L84_85 = L82_83
+  L83_84 = L82_83.setReferencePoint
+  L85_86 = display
+  L85_86 = L85_86.CenterLeftReferencePoint
+  L83_84(L84_85, L85_86)
+  L82_83.x = -1
+  L83_84 = L80_81.yCenter
+  L82_83.y = L83_84
+  L84_85 = L6_7
+  L83_84 = L6_7.insert
+  L85_86 = L82_83
+  L83_84(L84_85, L85_86)
+  function L83_84(A0_169)
+    local L1_170, L2_171, L3_172, L4_173, L5_174, L6_175
+    L1_170 = _UPVALUE0_
+    L1_170 = L1_170.isGameCenter
+    L1_170 = L1_170()
+    if L1_170 == true then
+      L1_170 = ""
+      for L5_174 = 0, #L3_172 do
+        L6_175 = _UPVALUE1_
+        L6_175 = L6_175[L5_174]
+        L6_175 = L6_175.color
+        L6_175 = L6_175[4]
+        if L6_175 < 255 then
+          L6_175 = _UPVALUE1_
+          L6_175 = L6_175[L5_174]
+          L6_175 = L6_175.color
+          L6_175[1] = 150
+          L6_175 = _UPVALUE1_
+          L6_175 = L6_175[L5_174]
+          L6_175 = L6_175.color
+          L6_175[2] = 150
+          L6_175 = _UPVALUE1_
+          L6_175 = L6_175[L5_174]
+          L6_175 = L6_175.color
+          L6_175[3] = 150
+        end
+        L6_175 = _UPVALUE0_
+        L6_175 = L6_175.rgbToHex
+        L6_175 = L6_175(_UPVALUE1_[L5_174].color[1], _UPVALUE1_[L5_174].color[2], _UPVALUE1_[L5_174].color[3])
+        L6_175 = string.gsub(L6_175, "#", "")
+        L6_175 = L6_175 .. "#"
+        L1_170 = L1_170 .. L6_175
+      end
+      A0_169.target = L2_171
+      L3_172.top = 26
+      L3_172.left = L4_173
+      L3_172.width = 52
+      L3_172.height = 30
+      L3_172.default = "empty-done.png"
+      L5_174 = L2_171
+      L3_172(L4_173, L5_174)
+      L5_174 = 41
+      L5_174 = L3_172
+      L6_175 = 0.7
+      L4_173(L5_174, L6_175, 0.7)
+      L5_174 = L4_173
+      L6_175 = L3_172
+      L4_173(L5_174, L6_175)
+      L5_174 = ""
+      L6_175 = "Applying.."
+      function L5_174()
+        _UPVALUE0_.cancelAlert(_UPVALUE1_)
+        _UPVALUE2_ = _UPVALUE3_
+        _UPVALUE4_.avatar_code = _UPVALUE3_
+        _UPVALUE0_.remove({"prevScene"})
+        _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+        director:changeScene(_UPVALUE5_, "toRightNew")
+      end
+      L6_175 = _UPVALUE7_
+      L6_175 = #L6_175
+      if L6_175 > 0 then
+        L6_175 = _UPVALUE0_
+        L6_175 = L6_175.isGameCenter
+        L6_175 = L6_175()
+        if L6_175 == true then
+          function L6_175(A0_176)
+            if A0_176.response == "Updated" then
+              _UPVALUE0_()
+            else
+              _UPVALUE1_.showAlert("Oops!", "Seems like there was an internet connection error, if this error is consistent double check your connection or try again in a few minutes.", {"Ok"})
+            end
+          end
+          _UPVALUE0_.network_request("upload_avatar", L6_175, {
+            avatar = L1_170,
+            udid = _UPVALUE5_.udid
+          })
+        end
+      else
+        L6_175 = L5_174
+        L6_175()
+      end
+    end
+    L1_170 = true
+    return L1_170
+  end
+  L84_85 = _UPVALUE4_
+  L84_85 = L84_85.newButton
+  L85_86 = {}
+  L85_86.top = 26
+  L86_87 = _W
+  L86_87 = L86_87 - 62
+  L85_86.left = L86_87
+  L85_86.width = 52
+  L85_86.height = 30
+  L85_86.default = "apply.png"
+  L85_86.over = "apply-over.png"
+  L85_86.onRelease = L83_84
+  L84_85 = L84_85(L85_86)
+  L86_87 = L6_7
+  L85_86 = L6_7.insert
+  L85_86(L86_87, L84_85)
+  if L9_10 == false and L14_15 == true then
+    L85_86 = display
+    L85_86 = L85_86.newRect
+    L86_87 = 0
+    L85_86 = L85_86(L86_87, 0, _W, _H)
+    L86_87 = L85_86.setFillColor
+    L86_87(L85_86, 255, 255, 255, 125)
+    L86_87 = L85_86.addEventListener
+    L86_87(L85_86, "touch", function()
+      local L0_177, L1_178
+      L0_177 = true
+      return L0_177
+    end)
+    L86_87 = L0_1.insert
+    L86_87(L0_1, L85_86)
+    function L86_87(A0_179)
+      if A0_179.action == "clicked" then
+        if A0_179.index == 2 then
+          system.openURL("https://itunes.apple.com/us/app/minecraft-seeds-pro/id528919633?mt=8")
+        end
+        _UPVALUE0_.restore("seedlist", _UPVALUE1_.defaultPlatform, _UPVALUE1_.defaultSection)
+        _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+        director:changeScene("seedlist")
+      end
+    end
+    _UPVALUE0_.showAlert("Pro only", [[
+This section can only be used in Minecraft Seeds Pro.
+Upgrade to use this feature.]], {"Dismiss", "Upgrade"}, L86_87)
+  end
+  return L0_1
+end

@@ -1,0 +1,448 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("creator")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L3_4
+  L5_6 = L3_4.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.newGroup
+  L5_6 = L5_6()
+  L7_8 = L3_4
+  L6_7 = L3_4.insert
+  L8_9 = L5_6
+  L6_7(L7_8, L8_9)
+  L6_7 = display
+  L6_7 = L6_7.contentCenterX
+  L7_8 = display
+  L7_8 = L7_8.contentCenterY
+  L8_9 = _UPVALUE0_
+  L8_9 = L8_9.email_tell_t
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.moderator
+  L10_11 = _UPVALUE0_
+  L10_11 = L10_11.nickname
+  L11_12 = _UPVALUE0_
+  L11_12 = L11_12.imgSuff
+  L12_13 = _UPVALUE1_
+  L12_13 = L12_13.getSceneProperties
+  L12_13 = L12_13()
+  L13_14 = _UPVALUE1_
+  L13_14 = L13_14.getAppType
+  L13_14 = L13_14()
+  L14_15 = _UPVALUE0_
+  L14_15 = L14_15.session
+  L14_15 = L14_15 + 1
+  L15_16 = _UPVALUE0_
+  L15_16.session = L14_15
+  L15_16 = L12_13.page
+  L16_17 = L12_13.taps
+  L17_18 = _UPVALUE1_
+  L17_18 = L17_18.makeBlurryBg
+  L17_18 = L17_18()
+  L19_20 = L17_18
+  L18_19 = L17_18.addEventListener
+  L20_21 = "touch"
+  function L21_22()
+    local L0_29, L1_30
+    L0_29 = true
+    return L0_29
+  end
+  L18_19(L19_20, L20_21, L21_22)
+  L19_20 = L2_3
+  L18_19 = L2_3.insert
+  L20_21 = L17_18
+  L18_19(L19_20, L20_21)
+  L18_19 = _UPVALUE2_
+  L18_19 = L18_19.createSideMenu
+  L19_20 = L1_2
+  L18_19 = L18_19(L19_20)
+  L20_21 = L0_1
+  L19_20 = L0_1.insert
+  L21_22 = L18_19
+  L19_20(L20_21, L21_22)
+  L0_1.side_menu = L18_19
+  L20_21 = L18_19
+  L19_20 = L18_19.toBack
+  L19_20(L20_21)
+  L19_20 = _UPVALUE3_
+  L19_20 = L19_20.newTableView
+  L20_21 = {}
+  L20_21.top = 64
+  L21_22 = _W
+  L20_21.width = L21_22
+  L21_22 = _H
+  L21_22 = L21_22 - 64
+  L20_21.height = L21_22
+  L21_22 = {
+    L22_23,
+    L23_24,
+    L24_25,
+    L25_26
+  }
+  L22_23 = 0
+  L23_24 = 0
+  L24_25 = 0
+  L25_26 = 0
+  L20_21.bgColor = L21_22
+  L20_21.bottomPadding = 40
+  L19_20 = L19_20(L20_21)
+  L21_22 = L4_5
+  L20_21 = L4_5.insert
+  L22_23 = L19_20
+  L20_21(L21_22, L22_23)
+  function L20_21(A0_31)
+    local L1_32, L2_33, L3_34, L4_35, L5_36, L6_37
+    L1_32 = A0_31.background
+    L2_33 = A0_31.phase
+    L3_34 = A0_31.id
+    L5_36 = L1_32
+    L4_35 = L1_32.setFillColor
+    L6_37 = 217
+    L4_35(L5_36, L6_37, 217, 217)
+    if L2_33 == "release" or L2_33 == "tap" then
+      L4_35 = timer
+      L4_35 = L4_35.performWithDelay
+      L5_36 = 100
+      function L6_37()
+        _UPVALUE0_:setFillColor(0, 0, 0, 0)
+      end
+      L4_35(L5_36, L6_37)
+      L4_35 = L3_34.row
+      if L4_35 ~= "about" then
+        L4_35 = L3_34.row
+        if L4_35 ~= "help" then
+          L4_35 = L3_34.row
+          if L4_35 ~= "twitter" then
+            L4_35 = L3_34.row
+          end
+        end
+      else
+        if L4_35 == "facebook" then
+          L4_35 = _UPVALUE0_
+          L4_35 = L4_35.insert
+          L5_36 = {}
+          L5_36.prevScene = "more"
+          L4_35(L5_36)
+          L4_35 = _UPVALUE0_
+          L4_35 = L4_35.update
+          L5_36 = {}
+          L6_37 = _UPVALUE1_
+          L6_37 = L6_37 + 1
+          L5_36.taps = L6_37
+          L4_35(L5_36)
+          L4_35 = _UPVALUE0_
+          L4_35 = L4_35.dispatchEvent
+          L5_36 = "clearLocalTimersAndListeners"
+          L4_35(L5_36)
+          L4_35 = director
+          L5_36 = L4_35
+          L4_35 = L4_35.changeScene
+          L6_37 = L3_34.scene
+          L4_35(L5_36, L6_37, "overFromRightNew")
+      end
+      else
+        L4_35 = L3_34.row
+        if L4_35 == "tellafriend" then
+          L4_35 = _UPVALUE2_
+          L4_35 = L4_35.body
+          L5_36 = _UPVALUE2_
+          L5_36 = L5_36.subject
+          L6_37 = _UPVALUE3_
+          if L6_37 == false then
+            L6_37 = string
+            L6_37 = L6_37.gsub
+            L6_37 = L6_37(L4_35, "<appname>", "Minecraft Seeds Lite")
+            L4_35 = L6_37
+            L6_37 = string
+            L6_37 = L6_37.gsub
+            L6_37 = L6_37(L4_35, "<applink>", "https://itunes.apple.com/us/app/minecraft-seeds-lite/id576246209?l=sv&ls=1&mt=8")
+            L4_35 = L6_37
+            L6_37 = string
+            L6_37 = L6_37.gsub
+            L6_37 = L6_37(L5_36, "<appname>", "Minecraft Seeds Lite")
+            L5_36 = L6_37
+          else
+            L6_37 = string
+            L6_37 = L6_37.gsub
+            L6_37 = L6_37(L4_35, "<appname>", "Minecraft Seeds Pro")
+            L4_35 = L6_37
+            L6_37 = string
+            L6_37 = L6_37.gsub
+            L6_37 = L6_37(L4_35, "<applink>", "https://itunes.apple.com/us/app/minecraft-seeds-pro/id528919633?mt=8")
+            L4_35 = L6_37
+            L6_37 = string
+            L6_37 = L6_37.gsub
+            L6_37 = L6_37(L5_36, "<appname>", "Minecraft Seeds Pro")
+            L5_36 = L6_37
+          end
+          L6_37 = {}
+          L6_37.to = {""}
+          L6_37.body = L4_35
+          L6_37.subject = L5_36
+          L6_37.isBodyHtml = true
+          native.showPopup("mail", L6_37)
+        else
+          L4_35 = L3_34.row
+          if L4_35 == "ratethisapp" then
+            L4_35 = system
+            L4_35 = L4_35.pathForFile
+            L5_36 = "hasRated.txt"
+            L6_37 = system
+            L6_37 = L6_37.DocumentsDirectory
+            L4_35 = L4_35(L5_36, L6_37)
+            L5_36 = io
+            L5_36 = L5_36.open
+            L6_37 = L4_35
+            L5_36 = L5_36(L6_37, "w")
+            L6_37 = nil
+            if _UPVALUE4_.os == "Android" then
+              L6_37 = "https://play.google.com/store/apps/details?id=" .. _UPVALUE0_.getAppIdentifier()
+            else
+              L6_37 = "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?pageNumber=0&sortOrdering=1&type=Purple+Software&mt=8&id=" .. _UPVALUE0_.getAppId()
+            end
+            L5_36:write("true")
+            io.close(L5_36)
+            system.openURL(L6_37)
+          else
+            L4_35 = L3_34.row
+            if L4_35 == "otherapps" then
+              L4_35 = nil
+              L5_36 = _UPVALUE4_
+              L5_36 = L5_36.os
+              if L5_36 == "Android" then
+                L4_35 = "https://play.google.com/store/apps/developer?id=Imperianet+Llc"
+              else
+                L4_35 = "itms-apps://itunes.com/apps/jninteractiveab"
+              end
+              L5_36 = system
+              L5_36 = L5_36.openURL
+              L6_37 = L4_35
+              L5_36(L6_37)
+            else
+              L4_35 = L3_34.row
+              if L4_35 == "contactus" then
+                L4_35 = {}
+                L5_36 = {L6_37}
+                L6_37 = "mcseeds@jninteractive.com"
+                L4_35.to = L5_36
+                L4_35.body = ""
+                L4_35.subject = "Contact"
+                L4_35.isBodyHtml = true
+                L5_36 = native
+                L5_36 = L5_36.showPopup
+                L6_37 = "mail"
+                L5_36(L6_37, L4_35)
+                L5_36 = _UPVALUE4_
+                L5_36 = L5_36.moderator
+                if L5_36 == true then
+                  L5_36 = _UPVALUE0_
+                  L5_36 = L5_36.network_request
+                  L6_37 = "hasEmailedExpress"
+                  L5_36(L6_37, nil, {
+                    nickname = _UPVALUE4_.nickname,
+                    udid = _UPVALUE4_.udid
+                  })
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+    L4_35 = true
+    return L4_35
+  end
+  function L21_22(A0_38)
+    local L1_39, L2_40, L3_41
+    L1_39 = A0_38.target
+    L1_39 = L1_39.height
+    L2_40 = A0_38.view
+    L3_41 = display
+    L3_41 = L3_41.newRect
+    L3_41 = L3_41(0, L1_39, _W, 1)
+    L3_41:setFillColor(255, 255, 255, 20)
+    L2_40:insert(L3_41)
+  end
+  function L22_23(A0_42)
+    local L1_43, L2_44, L3_45, L4_46, L5_47, L6_48, L7_49
+    L1_43 = A0_42.target
+    L1_43 = L1_43.height
+    L2_44 = L1_43 * 0.5
+    L3_45 = A0_42.view
+    L4_46 = A0_42.id
+    if L4_46 ~= "space" then
+      L5_47 = display
+      L5_47 = L5_47.newImageRect
+      L6_48 = "more-"
+      L7_49 = L4_46.icon
+      L6_48 = L6_48 .. L7_49
+      L7_49 = 34
+      L5_47 = L5_47(L6_48, L7_49, 34)
+      L7_49 = L5_47
+      L6_48 = L5_47.setReferencePoint
+      L6_48(L7_49, display.CenterLeftReferencePoint)
+      L5_47.x = 11
+      L6_48 = L1_43 * 0.5
+      L5_47.y = L6_48
+      L7_49 = L3_45
+      L6_48 = L3_45.insert
+      L6_48(L7_49, L5_47)
+      L6_48 = display
+      L6_48 = L6_48.newText
+      L7_49 = {}
+      L7_49.text = L4_46.header
+      L7_49.font = _UPVALUE0_.fonts.light
+      L7_49.fontSize = 15
+      L6_48 = L6_48(L7_49)
+      L7_49 = L6_48.setReferencePoint
+      L7_49(L6_48, display.CenterLeftReferencePoint)
+      L6_48.x = 50
+      L6_48.y = L2_44
+      L7_49 = L3_45.insert
+      L7_49(L3_45, L6_48)
+      L7_49 = display
+      L7_49 = L7_49.newImageRect
+      L7_49 = L7_49("rightarrow-over.png", 7, 13)
+      L7_49:setReferencePoint(display.CenterRightReferencePoint)
+      L7_49.x = _W - 13
+      L7_49.y = L2_44
+      L3_45:insert(L7_49)
+    end
+    L5_47 = display
+    L5_47 = L5_47.newRect
+    L6_48 = 0
+    L7_49 = L1_43
+    L5_47 = L5_47(L6_48, L7_49, _W, 1)
+    L7_49 = L5_47
+    L6_48 = L5_47.setFillColor
+    L6_48(L7_49, 255, 255, 255, 20)
+    L7_49 = L3_45
+    L6_48 = L3_45.insert
+    L6_48(L7_49, L5_47)
+  end
+  L23_24 = "Contact us"
+  L24_25 = "contactus.png"
+  L25_26 = _UPVALUE0_
+  L25_26 = L25_26.moderator
+  if L25_26 == true then
+    L25_26 = "Contact us express"
+    L24_25 = "contactusexpress.png"
+    L23_24 = L25_26
+  end
+  L25_26 = {
+    L26_27,
+    L27_28,
+    {
+      row = "twitter",
+      icon = "twitter.png",
+      header = "Follow us",
+      scene = "twitterpage"
+    },
+    {
+      row = "facebook",
+      icon = "facebook.png",
+      header = "Like us on facebook",
+      scene = "facebookpage"
+    },
+    {
+      row = "tellafriend",
+      icon = "tellafriend.png",
+      header = "Tell a friend"
+    },
+    {
+      row = "ratethisapp",
+      icon = "ratethisapp.png",
+      header = "Rate this app"
+    },
+    {
+      row = "otherapps",
+      icon = "appstore.png",
+      header = "Other apps"
+    },
+    "space",
+    {
+      row = "contactus",
+      icon = L24_25,
+      header = L23_24
+    }
+  }
+  L26_27.row = "about"
+  L26_27.icon = "about.png"
+  L26_27.header = "About"
+  L26_27.scene = "about"
+  for _FORV_29_ = 1, #L25_26 do
+    if L25_26[_FORV_29_] == "space" then
+      L19_20:insertRow({
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        onRender = L21_22,
+        height = 30,
+        id = L25_26[_FORV_29_]
+      })
+    else
+      L19_20:insertRow({
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        onRender = L22_23,
+        onEvent = L20_21,
+        height = 40,
+        id = L25_26[_FORV_29_]
+      })
+    end
+  end
+  L27_28(L5_6, L26_27)
+  L5_6:insert(L27_28)
+  return L0_1
+end

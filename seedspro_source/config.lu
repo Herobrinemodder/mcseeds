@@ -1,0 +1,246 @@
+(function()
+  if not application or type(application) ~= "table" then
+    application = {}
+  end
+  application.metadata = {
+    appName = "Minecraft Seeds Pro",
+    appVersion = "8.0.2",
+    appPackageId = "com.nahirc.minecraftseeds",
+    appId = "00000000",
+    appKey = "00000000",
+    userId = "14018",
+    subscription = "pro",
+    mode = "distribution"
+  }
+end)()
+;(function()
+  local L0_0, L1_1, L2_2, L3_3, L4_4
+  function L0_0(A0_5, A1_6)
+    local L2_7
+    function L2_7(A0_8)
+      if "clicked" ~= A0_8.action or 1 == A0_8.index then
+      else
+        system.openURL(_UPVALUE0_)
+      end
+      if _UPVALUE1_ then
+        os.exit(-1)
+      end
+    end
+    return L2_7
+  end
+  function L1_1(A0_9)
+    local L1_10, L2_11, L3_12, L4_13, L5_14, L6_15, L7_16, L8_17, L9_18
+    L1_10 = A0_9.feature
+    L1_10 = L1_10 or ""
+    L2_11 = A0_9.type
+    L2_11 = L2_11 or ""
+    L3_12 = A0_9.tier
+    L3_12 = L3_12 or "Pro (or higher)"
+    L4_13 = "Corona SDK Error"
+    L5_14 = "The premium %s feature (%s) is restricted to %s subscribers. You must upgrade your subscription to run this project."
+    L6_15 = string
+    L6_15 = L6_15.format
+    L7_16 = L5_14
+    L8_17 = L2_11
+    L9_18 = L1_10
+    L6_15 = L6_15(L7_16, L8_17, L9_18, L3_12)
+    L7_16 = {L8_17, L9_18}
+    L8_17 = "Quit"
+    L9_18 = "Upgrade"
+    L8_17 = "http://www.coronalabs.com/upgrade/?utm_source=corona-sdk&utm_medium=corona-sdk&utm_campaign=feature-error&api="
+    L9_18 = L1_10
+    L8_17 = L8_17 .. L9_18
+    L9_18 = _UPVALUE0_
+    L9_18 = L9_18(L8_17, true)
+    native.showAlert(L4_13, L6_15, L7_16, L9_18)
+  end
+  function L2_2(A0_19)
+    local L1_20, L2_21, L3_22, L4_23, L5_24, L6_25, L7_26, L8_27, L9_28
+    L1_20 = A0_19.feature
+    L1_20 = L1_20 or ""
+    L2_21 = A0_19.type
+    L2_21 = L2_21 or ""
+    L3_22 = A0_19.tier
+    L3_22 = L3_22 or "Pro (or higher)"
+    L4_23 = "Corona SDK Warning"
+    L5_24 = "Your project uses a premium %s feature (%s) available only to %s subscribers. You can view this in the Simulator as a demo, but you must upgrade to use it on a device."
+    L6_25 = string
+    L6_25 = L6_25.format
+    L7_26 = L5_24
+    L8_27 = L2_21
+    L9_28 = L1_20
+    L6_25 = L6_25(L7_26, L8_27, L9_28, L3_22)
+    L7_26 = {L8_27, L9_28}
+    L8_27 = "Continue with Demo"
+    L9_28 = "Upgrade"
+    L8_27 = "http://www.coronalabs.com/upgrade/?utm_source=corona-sdk&utm_medium=corona-sdk&utm_campaign=feature-warning&api="
+    L9_28 = L1_20
+    L8_27 = L8_27 .. L9_28
+    L9_28 = _UPVALUE0_
+    L9_28 = L9_28(L8_27)
+    native.showAlert(L4_23, L6_25, L7_26, L9_28)
+  end
+  L3_3 = L1_1
+  L4_4 = system
+  L4_4 = L4_4.getInfo
+  L4_4 = L4_4("environment")
+  if "simulator" == L4_4 then
+    L3_3 = L2_2
+  end
+  function L4_4()
+    local L0_29, L1_30, L2_31, L3_32, L4_33, L5_34
+    L0_29 = true
+    L1_30 = true
+    L2_31 = true
+    L3_32 = true
+    L4_33 = application
+    if L4_33 then
+      L4_33 = application
+      L4_33 = L4_33.metadata
+      if L4_33 then
+        L4_33 = application
+        L4_33 = L4_33.metadata
+        L4_33 = L4_33.subscription
+        if L4_33 and "trial" ~= L4_33 then
+          L0_29 = false
+        end
+        if L4_33 and "basic" ~= L4_33 then
+          L1_30 = false
+        end
+        if L4_33 and "pro" ~= L4_33 then
+          L2_31 = false
+        end
+        L5_34 = application
+        L5_34 = L5_34.metadata
+        L5_34 = L5_34.mode
+        if L5_34 and "distribution" ~= L5_34 then
+          L3_32 = false
+        end
+      end
+    end
+    L4_33 = initializeMetadata
+    if L4_33 then
+      L4_33 = nil
+      L5_34 = application
+      if L5_34 then
+        L5_34 = application
+        L4_33 = L5_34.metadata
+      else
+        L5_34 = {}
+        L4_33 = L5_34
+      end
+      L5_34 = L4_33.permissions
+      if not L5_34 then
+        L5_34 = {}
+        L4_33.permissions = L5_34
+      end
+      L5_34.advancedGraphics = not L0_29 and not L1_30
+      L5_34.customFragment = not L0_29 and not L1_30 and not L2_31
+      L5_34.customVertex = not L0_29 and not L1_30 and not L2_31
+      initializeMetadata(L4_33)
+      initializeMetadata = nil
+      Runtime:addEventListener("featureRestriction", _UPVALUE0_)
+    end
+    L4_33 = require
+    L5_34 = {}
+    L5_34.store = true
+    if L0_29 then
+      function _G.require(...)
+        local L1_36
+        L1_36 = _UPVALUE0_
+        L1_36 = L1_36(...)
+        if L1_36 then
+          L1_36 = _UPVALUE1_
+          return L1_36(...)
+        end
+        L1_36 = (...)
+        _UPVALUE2_(L1_36)
+        return nil
+      end
+    end
+  end
+  L4_4()
+  L4_4 = nil
+end)()
+;(function()
+  if system.getInfo("model") == "iPad" then
+    application = {
+      license = {
+        google = {
+          key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq0jUYfqqVLzVp5IzaW8UGb6zEENqx+NdX62v89IFq+zO3us9rXRl4GjKHOYWoguQ3BVcR2vVxNzjWvb8+/IwI5TGPtoDILemMKfNXgrLd209Wx475YDzKLM4TDUnPt9brOpazCd5dr3VEMH5jDrMUakn/Yz6GNWk9daPG2d5Z8Xwvz6X+fUwNvadvEyLOAYvjGsojd5Tl9g/iQ/PPEHMrylkmvK5u2UUf0y1Ha1Rhd1C9S3gzvMu9JI7jIUSEPVcQtW5HnJnL4yuyU9bvjq7Z0Kj/0eyYwQpAToUVKlZFORuhkQzxgwfCu2g1YDhL9grdIwnRHzK+ip9++vtJpwwhQIDAQAB",
+          policy = "serverManaged"
+        }
+      },
+      content = {
+        graphicsCompatibility = 1,
+        scale = "zoomStretch",
+        width = 384,
+        height = 512,
+        fps = 60,
+        imageSuffix = {
+          ["@2x"] = 2,
+          ["@3x"] = 2.5
+        }
+      },
+      notification = {
+        google = {
+          projectNumber = "711455064628"
+        },
+        iphone = {
+          types = {
+            "badge",
+            "sound",
+            "alert",
+            "custom"
+          }
+        }
+      }
+    }
+  else
+    application = {
+      license = {
+        google = {
+          key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq0jUYfqqVLzVp5IzaW8UGb6zEENqx+NdX62v89IFq+zO3us9rXRl4GjKHOYWoguQ3BVcR2vVxNzjWvb8+/IwI5TGPtoDILemMKfNXgrLd209Wx475YDzKLM4TDUnPt9brOpazCd5dr3VEMH5jDrMUakn/Yz6GNWk9daPG2d5Z8Xwvz6X+fUwNvadvEyLOAYvjGsojd5Tl9g/iQ/PPEHMrylkmvK5u2UUf0y1Ha1Rhd1C9S3gzvMu9JI7jIUSEPVcQtW5HnJnL4yuyU9bvjq7Z0Kj/0eyYwQpAToUVKlZFORuhkQzxgwfCu2g1YDhL9grdIwnRHzK+ip9++vtJpwwhQIDAQAB",
+          policy = "serverManaged"
+        }
+      },
+      content = {
+        graphicsCompatibility = 1,
+        scale = "adaptive",
+        fps = 60,
+        imageSuffix = {
+          ["@2x"] = 2,
+          ["@3x"] = 2.5
+        }
+      },
+      notification = {
+        google = {
+          projectNumber = "711455064628"
+        },
+        iphone = {
+          types = {
+            "badge",
+            "sound",
+            "alert",
+            "custom"
+          }
+        }
+      }
+    }
+  end
+end)()
+;(function()
+  if not application or type(application) ~= "table" then
+    application = {}
+  end
+  application.metadata = {
+    appName = "Minecraft Seeds Pro",
+    appVersion = "8.0.2",
+    appPackageId = "com.nahirc.minecraftseeds",
+    appId = "00000000",
+    appKey = "00000000",
+    userId = "14018",
+    subscription = "pro",
+    mode = "distribution"
+  }
+end)()

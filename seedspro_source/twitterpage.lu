@@ -1,0 +1,89 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("creator")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12
+  L0_1 = _UPVALUE0_
+  L0_1 = L0_1.getSceneProperties
+  L0_1 = L0_1()
+  L1_2 = _UPVALUE1_
+  L1_2 = L1_2.session
+  L1_2 = L1_2 + 1
+  L2_3 = _UPVALUE1_
+  L2_3.session = L1_2
+  L2_3 = L0_1.prevScene
+  L3_4 = L0_1.taps
+  L4_5 = display
+  L4_5 = L4_5.contentCenterX
+  L5_6 = display
+  L5_6 = L5_6.contentCenterY
+  L6_7 = display
+  L6_7 = L6_7.newGroup
+  L6_7 = L6_7()
+  L7_8 = display
+  L7_8 = L7_8.newGroup
+  L7_8 = L7_8()
+  L9_10 = L6_7
+  L8_9 = L6_7.insert
+  L10_11 = L7_8
+  L8_9(L9_10, L10_11)
+  L8_9 = native
+  L8_9 = L8_9.newWebView
+  L9_10 = 0
+  L10_11 = 64
+  L11_12 = _W
+  L8_9 = L8_9(L9_10, L10_11, L11_12, _H - 64)
+  L10_11 = L8_9
+  L9_10 = L8_9.request
+  L11_12 = "http://www.twitter.com/JNInteractive"
+  L9_10(L10_11, L11_12)
+  L9_10 = transition
+  L9_10 = L9_10.from
+  L10_11 = L8_9
+  L11_12 = {}
+  L11_12.time = 320
+  L11_12.x = _W
+  L11_12.transition = easing.outCubic
+  L9_10(L10_11, L11_12)
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.makeToolbar
+  L10_11 = "Twitter"
+  L9_10 = L9_10(L10_11)
+  L11_12 = L7_8
+  L10_11 = L7_8.insert
+  L10_11(L11_12, L9_10)
+  function L10_11(A0_13)
+    _UPVALUE0_.remove({"prevScene"})
+    _UPVALUE0_.update({
+      taps = _UPVALUE1_ - 1
+    })
+    transition.to(_UPVALUE2_, {
+      time = 320,
+      x = _W,
+      transition = easing.outCubic,
+      onComplete = function()
+        _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+      end
+    })
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE3_, "toRightNew")
+    return true
+  end
+  L11_12 = _UPVALUE2_
+  L11_12 = L11_12.newButton
+  L11_12 = L11_12({
+    width = 50,
+    height = 50,
+    default = "back.png",
+    over = "back-over.png",
+    onRelease = L10_11
+  })
+  L11_12:setReferencePoint(display.CenterLeftReferencePoint)
+  L11_12.x = -1
+  L11_12.y = L9_10.yCenter
+  L7_8:insert(L11_12)
+  L7_8:toFront()
+  return L6_7
+end

@@ -1,0 +1,572 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("openGLTextfield")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.getAppType
+  L7_8 = L7_8()
+  L8_9 = true
+  L9_10 = false
+  L10_11 = _UPVALUE1_
+  L10_11 = L10_11.UIDefaultColor
+  L11_12 = _UPVALUE0_
+  L11_12 = L11_12.getScriptFile
+  L11_12 = L11_12()
+  L12_13 = _UPVALUE1_
+  L12_13 = L12_13.imgSuff
+  L13_14 = _UPVALUE0_
+  L13_14 = L13_14.getSceneProperties
+  L13_14 = L13_14()
+  L14_15 = _UPVALUE1_
+  L14_15 = L14_15.udid
+  L15_16 = L13_14.searchString
+  L16_17 = L13_14.pageLabel
+  L17_18 = ""
+  L18_19 = _UPVALUE1_
+  L18_19 = L18_19.session
+  L18_19 = L18_19 + 1
+  L19_20 = L13_14.page
+  L20_21 = L13_14.taps
+  L21_22 = _UPVALUE1_
+  L21_22.session = L18_19
+  L21_22 = _W
+  L21_22 = L21_22 - 12
+  L22_23 = _UPVALUE0_
+  L22_23 = L22_23.makeBlurryBg
+  L22_23 = L22_23()
+  L24_25 = L22_23
+  L23_24 = L22_23.addEventListener
+  L25_26 = "touch"
+  function L26_27()
+    local L0_34, L1_35
+    L0_34 = true
+    return L0_34
+  end
+  L23_24(L24_25, L25_26, L26_27)
+  L24_25 = L2_3
+  L23_24 = L2_3.insert
+  L25_26 = L22_23
+  L23_24(L24_25, L25_26)
+  L23_24 = _UPVALUE2_
+  L23_24 = L23_24.createSideMenu
+  L24_25 = L1_2
+  L23_24 = L23_24(L24_25)
+  L25_26 = L0_1
+  L24_25 = L0_1.insert
+  L26_27 = L23_24
+  L24_25(L25_26, L26_27)
+  L0_1.side_menu = L23_24
+  L25_26 = L23_24
+  L24_25 = L23_24.toBack
+  L24_25(L25_26)
+  function L24_25(A0_36)
+    _UPVALUE0_.animateToolbar(A0_36, {
+      toolbar = _UPVALUE1_.toolbar,
+      list = _UPVALUE2_.list
+    })
+    return true
+  end
+  L25_26 = _UPVALUE3_
+  L25_26 = L25_26.newTableView
+  L26_27 = {}
+  L26_27.top = 96
+  L26_27.left = 0
+  L27_28 = _W
+  L26_27.width = L27_28
+  L27_28 = _H
+  L27_28 = L27_28 - 96
+  L26_27.height = L27_28
+  L27_28 = {
+    L28_29,
+    L29_30,
+    L30_31,
+    L31_32
+  }
+  L28_29 = 0
+  L29_30 = 0
+  L30_31 = 0
+  L31_32 = 0
+  L26_27.bgColor = L27_28
+  L26_27.listener = L24_25
+  L25_26 = L25_26(L26_27)
+  L3_4.list = L25_26
+  L27_28 = L3_4
+  L26_27 = L3_4.insert
+  L28_29 = L25_26
+  L26_27(L27_28, L28_29)
+  L26_27 = _UPVALUE0_
+  L26_27 = L26_27.makeToolbar
+  L27_28 = "PC "
+  L28_29 = L16_17
+  L27_28 = L27_28 .. L28_29
+  L28_29 = {}
+  L28_29.list = L25_26
+  L26_27 = L26_27(L27_28, L28_29)
+  L4_5.toolbar = L26_27
+  L28_29 = L4_5
+  L27_28 = L4_5.insert
+  L29_30 = L26_27
+  L27_28(L28_29, L29_30)
+  L27_28 = _UPVALUE2_
+  L27_28 = L27_28.createMenuButton
+  L28_29 = L1_2
+  L27_28 = L27_28(L28_29)
+  L28_29 = L26_27.contents
+  L29_30 = L28_29
+  L28_29 = L28_29.insert
+  L30_31 = L27_28
+  L28_29(L29_30, L30_31)
+  L28_29 = _UPVALUE0_
+  L29_30 = L28_29
+  L28_29 = L28_29.createSubMenu
+  L30_31 = 0
+  L31_32 = 64
+  L32_33 = category
+  L29_30 = L28_29(L29_30, L30_31, L31_32, L32_33, platform, L15_16, false, sort, {
+    page = L19_20,
+    pageTable = pageTable,
+    taps = L20_21,
+    list = L25_26,
+    showOnlySearchField = true
+  })
+  L30_31 = L26_27.bg
+  L31_32 = L30_31
+  L30_31 = L30_31.insert
+  L32_33 = L28_29
+  L30_31(L31_32, L32_33)
+  L30_31 = L26_27.contents
+  L31_32 = L30_31
+  L30_31 = L30_31.insert
+  L32_33 = L29_30
+  L30_31(L31_32, L32_33)
+  function L30_31(A0_37)
+    local L1_38, L2_39, L3_40, L4_41, L5_42
+    L1_38 = A0_37.target
+    L1_38 = L1_38.height
+    L2_39 = A0_37.view
+    L3_40 = display
+    L3_40 = L3_40.newGroup
+    L3_40 = L3_40()
+    L5_42 = L2_39
+    L4_41 = L2_39.insert
+    L4_41(L5_42, L3_40)
+    L4_41 = _UPVALUE0_
+    L4_41 = L4_41.makeSprite
+    L5_42 = 0
+    L4_41 = L4_41(L5_42, 0)
+    L5_42 = L3_40.insert
+    L5_42(L3_40, L4_41)
+    L5_42 = display
+    L5_42 = L5_42.newText
+    L5_42 = L5_42({
+      text = "Fetching commands",
+      x = 0,
+      y = 0,
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 16
+    })
+    L5_42:setReferencePoint(display.CenterLeftReferencePoint)
+    L5_42.x = L4_41.width * 0.5 + 7
+    L5_42.y = 0
+    L3_40:insert(L5_42)
+    L3_40:setReferencePoint(display.CenterReferencePoint)
+    L3_40.x = _UPVALUE2_
+    L3_40.y = L1_38 * 0.5
+  end
+  L32_33 = L25_26
+  L31_32 = L25_26.insertRow
+  L31_32(L32_33, {
+    onRender = L30_31,
+    height = 35,
+    rowColor = {
+      0,
+      0,
+      0,
+      0
+    },
+    lineColor = {
+      0,
+      0,
+      0,
+      0
+    }
+  })
+  function L31_32(A0_43)
+    local L1_44, L2_45, L3_46, L4_47, L5_48, L6_49, L7_50, L8_51, L9_52, L10_53, L11_54, L12_55, L13_56, L14_57, L15_58
+    L1_44 = A0_43.response
+    L2_45 = _UPVALUE0_
+    L2_45 = L2_45.decode
+    L3_46 = L1_44
+    L2_45 = L2_45(L3_46)
+    L3_46 = false
+    _UPVALUE1_ = L3_46
+    L3_46 = _UPVALUE2_
+    if L3_46 == true then
+      L3_46 = _UPVALUE3_
+      L3_46 = L3_46.deleteRow
+      L3_46(L4_47, L5_48)
+    end
+    L3_46 = #L2_45
+    if L3_46 == 0 then
+      function L3_46(A0_59)
+        local L1_60, L2_61, L3_62
+        L1_60 = A0_59.target
+        L1_60 = L1_60.height
+        L2_61 = A0_59.view
+        L3_62 = display
+        L3_62 = L3_62.newText
+        L3_62 = L3_62({
+          text = "No commands",
+          x = 0,
+          y = 0,
+          font = _UPVALUE0_.fonts.light,
+          fontSize = 16
+        })
+        L3_62:setReferencePoint(display.CenterReferencePoint)
+        L3_62.x = _UPVALUE1_
+        L3_62.y = L1_60 * 0.5
+        L2_61:insert(L3_62)
+      end
+      L6_49.onRender = L3_46
+      L6_49.height = 35
+      L7_50 = {
+        L8_51,
+        L9_52,
+        L10_53,
+        L11_54
+      }
+      L8_51 = 0
+      L9_52 = 0
+      L10_53 = 0
+      L11_54 = 0
+      L6_49.rowColor = L7_50
+      L7_50 = {
+        L8_51,
+        L9_52,
+        L10_53,
+        L11_54
+      }
+      L8_51 = 0
+      L9_52 = 0
+      L10_53 = 0
+      L11_54 = 0
+      L6_49.lineColor = L7_50
+      L4_47(L5_48, L6_49)
+    else
+      L3_46 = #L2_45
+      for L7_50 = 1, L3_46 do
+        L8_51 = L2_45[L7_50]
+        L8_51 = L8_51.type
+        L9_52 = L2_45[L7_50]
+        L9_52 = L9_52.command
+        L10_53 = L2_45[L7_50]
+        L10_53 = L10_53.description
+        L11_54 = _UPVALUE6_
+        if L8_51 ~= L11_54 then
+          L11_54 = _UPVALUE6_
+          if L11_54 ~= "" then
+            function L11_54(A0_63)
+              local L1_64, L2_65, L3_66
+              L1_64 = A0_63.target
+              L1_64 = L1_64.height
+              L2_65 = A0_63.view
+              L3_66 = display
+              L3_66 = L3_66.newImageRect
+              L3_66 = L3_66("desc_bg_bottom.png", _UPVALUE0_, 4)
+              L3_66:setReferencePoint(display.TopCenterReferencePoint)
+              L3_66.x = _UPVALUE1_
+              L3_66.y = 0
+              L2_65:insert(L3_66)
+            end
+            L12_55 = _UPVALUE3_
+            L13_56 = L12_55
+            L12_55 = L12_55.insertRow
+            L14_57 = {}
+            L14_57.onRender = L11_54
+            L15_58 = onEvent
+            L14_57.onEvent = L15_58
+            L14_57.height = 10
+            L15_58 = {
+              0,
+              0,
+              0,
+              0
+            }
+            L14_57.rowColor = L15_58
+            L15_58 = {
+              0,
+              0,
+              0,
+              0
+            }
+            L14_57.lineColor = L15_58
+            L12_55(L13_56, L14_57)
+          end
+          L11_54 = _W
+          L11_54 = L11_54 - 72
+          function L12_55(A0_67)
+            local L1_68, L2_69, L3_70, L4_71, L5_72
+            L1_68 = A0_67.target
+            L1_68 = L1_68.height
+            L2_69 = A0_67.view
+            L3_70 = _UPVALUE0_
+            L3_70 = L3_70.makeImageFromSlices
+            L4_71 = {}
+            L4_71.filename = "desc_bg_top-slice"
+            L5_72 = _UPVALUE1_
+            L4_71.resWidth = L5_72
+            L4_71.resHeight = 25
+            L4_71.width = 4
+            L4_71.height = 25
+            L4_71.slices = 3
+            L3_70 = L3_70(L4_71)
+            L5_72 = L3_70
+            L4_71 = L3_70.setReferencePoint
+            L4_71(L5_72, display.TopCenterReferencePoint)
+            L4_71 = _UPVALUE2_
+            L3_70.x = L4_71
+            L3_70.y = 7
+            L5_72 = L2_69
+            L4_71 = L2_69.insert
+            L4_71(L5_72, L3_70)
+            L4_71 = display
+            L4_71 = L4_71.newText
+            L5_72 = {}
+            L5_72.text = _UPVALUE3_
+            L5_72.x = 0
+            L5_72.y = 0
+            L5_72.font = _UPVALUE4_.fonts.regular
+            L5_72.fontSize = 14
+            L4_71 = L4_71(L5_72)
+            L5_72 = L4_71.setReferencePoint
+            L5_72(L4_71, display.TopCenterReferencePoint)
+            L5_72 = _UPVALUE2_
+            L4_71.x = L5_72
+            L4_71.y = 10
+            L5_72 = L4_71.setFillColor
+            L5_72(L4_71, 0, 0, 0)
+            L5_72 = L2_69.insert
+            L5_72(L2_69, L4_71)
+            L5_72 = display
+            L5_72 = L5_72.newRect
+            L5_72 = L5_72(0, 0, _UPVALUE5_, 1)
+            L5_72:setReferencePoint(display.TopCenterReferencePoint)
+            L5_72.x = _UPVALUE2_
+            L5_72.y = 30
+            L5_72:setFillColor(160, 160, 160)
+            L2_69:insert(L5_72)
+          end
+          L13_56 = _UPVALUE3_
+          L14_57 = L13_56
+          L13_56 = L13_56.insertRow
+          L15_58 = {}
+          L15_58.onRender = L12_55
+          L15_58.onEvent = onEvent
+          L15_58.height = 32
+          L15_58.rowColor = {
+            0,
+            0,
+            0,
+            0
+          }
+          L15_58.lineColor = {
+            0,
+            0,
+            0,
+            0
+          }
+          L13_56(L14_57, L15_58)
+          _UPVALUE6_ = L8_51
+        end
+        L11_54 = 11
+        L12_55 = _W
+        L12_55 = L12_55 - 27
+        L13_56 = display
+        L13_56 = L13_56.newText
+        L14_57 = {}
+        L14_57.text = L10_53
+        L14_57.x = 0
+        L14_57.y = 0
+        L14_57.width = L12_55
+        L14_57.height = 0
+        L15_58 = _UPVALUE4_
+        L15_58 = L15_58.fonts
+        L15_58 = L15_58.light
+        L14_57.font = L15_58
+        L14_57.fontSize = L11_54
+        L13_56 = L13_56(L14_57)
+        L14_57 = L13_56.height
+        L14_57 = L14_57 + 30
+        L15_58 = _UPVALUE8_
+        L15_58 = L15_58.delete
+        L15_58 = L15_58(L13_56)
+        L13_56 = L15_58
+        L15_58 = display
+        L15_58 = L15_58.newText
+        L15_58 = L15_58({
+          text = L9_52,
+          x = 0,
+          y = 0,
+          width = L12_55,
+          height = 0,
+          font = _UPVALUE4_.fonts.regular,
+          fontSize = L11_54
+        })
+        L15_58 = _UPVALUE8_.delete(L15_58)
+        L14_57 = L14_57 + L15_58.height
+        _UPVALUE3_:insertRow({
+          onRender = function(A0_73)
+            local L1_74, L2_75, L3_76, L4_77, L5_78
+            L1_74 = A0_73.target
+            L1_74 = L1_74.height
+            L2_75 = A0_73.view
+            L3_76 = display
+            L3_76 = L3_76.newRect
+            L4_77 = 0
+            L5_78 = 0
+            L3_76 = L3_76(L4_77, L5_78, _UPVALUE0_, L1_74)
+            L5_78 = L3_76
+            L4_77 = L3_76.setReferencePoint
+            L4_77(L5_78, display.CenterReferencePoint)
+            L4_77 = _UPVALUE1_
+            L3_76.x = L4_77
+            L4_77 = L1_74 * 0.5
+            L3_76.y = L4_77
+            L5_78 = L3_76
+            L4_77 = L3_76.setFillColor
+            L4_77(L5_78, 255, 255, 255)
+            L5_78 = L2_75
+            L4_77 = L2_75.insert
+            L4_77(L5_78, L3_76)
+            L4_77 = display
+            L4_77 = L4_77.newText
+            L5_78 = {}
+            L5_78.text = _UPVALUE2_
+            L5_78.x = 0
+            L5_78.y = 0
+            L5_78.width = _UPVALUE3_
+            L5_78.height = 0
+            L5_78.font = _UPVALUE4_.fonts.regular
+            L5_78.fontSize = _UPVALUE5_
+            L4_77 = L4_77(L5_78)
+            L5_78 = L4_77.setReferencePoint
+            L5_78(L4_77, display.TopLeftReferencePoint)
+            L4_77.x = 15
+            L4_77.y = 4
+            L5_78 = L4_77.setFillColor
+            L5_78(L4_77, 40, 40, 40)
+            L5_78 = L2_75.insert
+            L5_78(L2_75, L4_77)
+            L5_78 = display
+            L5_78 = L5_78.newText
+            L5_78 = L5_78({
+              text = _UPVALUE6_,
+              x = 0,
+              y = 0,
+              width = _UPVALUE3_,
+              height = 0,
+              font = _UPVALUE4_.fonts.light,
+              fontSize = _UPVALUE5_
+            })
+            L5_78:setReferencePoint(display.TopLeftReferencePoint)
+            L5_78.x = 15
+            L5_78.y = _UPVALUE7_ + 4
+            L5_78:setFillColor(40, 40, 40)
+            L2_75:insert(L5_78)
+          end,
+          onEvent = onEvent,
+          height = L14_57 - 10,
+          rowColor = {
+            0,
+            0,
+            0,
+            0
+          },
+          lineColor = {
+            0,
+            0,
+            0,
+            0
+          }
+        })
+      end
+      L7_50 = {}
+      L7_50.onRender = L4_47
+      L8_51 = onEvent
+      L7_50.onEvent = L8_51
+      L7_50.height = 6
+      L8_51 = {
+        L9_52,
+        L10_53,
+        L11_54,
+        L12_55
+      }
+      L9_52 = 0
+      L10_53 = 0
+      L11_54 = 0
+      L12_55 = 0
+      L7_50.rowColor = L8_51
+      L8_51 = {
+        L9_52,
+        L10_53,
+        L11_54,
+        L12_55
+      }
+      L9_52 = 0
+      L10_53 = 0
+      L11_54 = 0
+      L12_55 = 0
+      L7_50.lineColor = L8_51
+      L5_48(L6_49, L7_50)
+    end
+    L3_46 = _UPVALUE2_
+    if L3_46 == true then
+      L3_46 = false
+      _UPVALUE2_ = L3_46
+    end
+  end
+  function L32_33(A0_79)
+    _UPVALUE0_.network_request("fetch_commands", _UPVALUE1_, {searchString = _UPVALUE2_})
+    _UPVALUE0_.removeRuntimeListener("sceneLoaded", A0_79.self_listenerid)
+  end
+  _UPVALUE0_.addRuntimeListener("sceneLoaded", L32_33)
+  return L0_1
+end

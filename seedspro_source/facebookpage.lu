@@ -1,0 +1,89 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("creator")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = _UPVALUE0_
+  L2_3 = L2_3.getSceneProperties
+  L2_3 = L2_3()
+  L3_4 = _UPVALUE1_
+  L3_4 = L3_4.session
+  L3_4 = L3_4 + 1
+  L4_5 = _UPVALUE1_
+  L4_5.session = L3_4
+  L4_5 = L2_3.prevScene
+  L5_6 = L2_3.taps
+  L6_7 = display
+  L6_7 = L6_7.contentCenterX
+  L7_8 = display
+  L7_8 = L7_8.contentCenterY
+  L8_9 = native
+  L8_9 = L8_9.newWebView
+  L9_10 = 0
+  L10_11 = 64
+  L11_12 = _W
+  L8_9 = L8_9(L9_10, L10_11, L11_12, _H - 64)
+  L10_11 = L8_9
+  L9_10 = L8_9.request
+  L11_12 = "http://www.facebook.com/seeds4minecraft"
+  L9_10(L10_11, L11_12)
+  L9_10 = transition
+  L9_10 = L9_10.from
+  L10_11 = L8_9
+  L11_12 = {}
+  L11_12.time = 320
+  L11_12.x = _W
+  L11_12.transition = easing.outCubic
+  L9_10(L10_11, L11_12)
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.makeToolbar
+  L10_11 = "Facebook"
+  L9_10 = L9_10(L10_11)
+  L11_12 = L1_2
+  L10_11 = L1_2.insert
+  L10_11(L11_12, L9_10)
+  function L10_11(A0_13)
+    _UPVALUE0_.remove({"prevScene"})
+    _UPVALUE0_.update({
+      taps = _UPVALUE1_ - 1
+    })
+    transition.to(_UPVALUE2_, {
+      time = 320,
+      x = _W,
+      transition = easing.outCubic,
+      onComplete = function()
+        _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+      end
+    })
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE3_, "toRightNew")
+    return true
+  end
+  L11_12 = _UPVALUE2_
+  L11_12 = L11_12.newButton
+  L11_12 = L11_12({
+    width = 50,
+    height = 50,
+    default = "back.png",
+    over = "back-over.png",
+    onRelease = L10_11
+  })
+  L11_12:setReferencePoint(display.CenterLeftReferencePoint)
+  L11_12.x = -1
+  L11_12.y = L9_10.yCenter
+  L1_2:insert(L11_12)
+  L1_2:toFront()
+  return L0_1
+end

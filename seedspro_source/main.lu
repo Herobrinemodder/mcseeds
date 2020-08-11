@@ -1,0 +1,2283 @@
+local L0_0, L1_1, L2_2, L3_3, L4_4, L5_5, L6_6, L7_7, L8_8, L9_9, L10_10, L11_11, L12_12, L13_13, L14_14, L15_15, L16_16, L17_17, L18_18, L19_19, L20_20, L21_21, L22_22, L23_23, L24_24, L25_25, L26_26, L27_27, L28_28, L29_29, L30_30, L31_31, L32_32, L33_33, L34_34, L35_35, L36_36, L37_37, L38_38, L39_39, L40_40, L41_41, L42_42, L43_43, L44_44, L45_45, L46_46, L47_47
+L0_0 = (...)
+L1_1 = math
+L1_1 = L1_1.randomseed
+L2_2 = os
+L2_2 = L2_2.time
+L47_47 = L2_2()
+L1_1(L2_2, L3_3, L4_4, L5_5, L6_6, L7_7, L8_8, L9_9, L10_10, L11_11, L12_12, L13_13, L14_14, L15_15, L16_16, L17_17, L18_18, L19_19, L20_20, L21_21, L22_22, L23_23, L24_24, L25_25, L26_26, L27_27, L28_28, L29_29, L30_30, L31_31, L32_32, L33_33, L34_34, L35_35, L36_36, L37_37, L38_38, L39_39, L40_40, L41_41, L42_42, L43_43, L44_44, L45_45, L46_46, L47_47, L2_2())
+L1_1 = require
+L2_2 = "globals"
+L1_1 = L1_1(L2_2)
+L2_2 = display
+L2_2 = L2_2.setStatusBar
+L3_3 = display
+L3_3 = L3_3.TranslucentStatusBar
+L2_2(L3_3)
+L2_2 = display
+L2_2 = L2_2.newContainer
+L3_3 = display
+function L4_4(A0_48, A1_49)
+  display.newGroup()._fillBg = display.newRect(0, 0, A0_48, A1_49)
+  display.newGroup()._fillBg:setFillColor(0, 0, 0, 0)
+  display.newGroup()._groupType = "container"
+  display.newGroup():insert(display.newGroup()._fillBg)
+  display.newGroup():setReferencePoint(display.TopLeftReferencePoint)
+  return (display.newGroup())
+end
+L3_3.newContainer = L4_4
+L3_3 = display
+L3_3 = L3_3.newText
+L4_4 = display
+function L5_5(...)
+  local L1_51, L2_52
+  L1_51 = _UPVALUE0_
+  L2_52 = ...
+  L1_51 = L1_51(L2_52)
+  function L2_52(A0_53, A1_54)
+    local L2_55, L3_56
+    L2_55 = _UPVALUE0_
+    L2_55.text = A1_54
+    L2_55 = _UPVALUE0_
+    L3_56 = _UPVALUE0_
+    L3_56 = L3_56.width
+    L2_55.width = L3_56
+    L2_55 = _UPVALUE0_
+    L3_56 = _UPVALUE0_
+    L3_56 = L3_56.height
+    L2_55.height = L3_56
+  end
+  L1_51.setText = L2_52
+  function L2_52(A0_57, A1_58, A2_59)
+    local L3_60
+    if A1_58 ~= "" then
+      L3_60 = _UPVALUE0_
+      L3_60.x = A1_58
+    end
+    if A2_59 ~= "" then
+      L3_60 = _UPVALUE0_
+      L3_60.y = A2_59
+    end
+  end
+  L1_51.setPosition = L2_52
+  return L1_51
+end
+L4_4.newText = L5_5
+L4_4 = require
+L5_5 = "creator"
+L4_4 = L4_4(L5_5)
+L1_1.creator = L4_4
+L4_4 = L1_1.creator
+L5_5 = L4_4.makeAppData
+L5_5()
+L5_5 = L4_4.setDefaultRequestVariables
+L6_6 = {}
+L6_6.identifier = "identifier"
+L6_6.udid = "udid"
+L7_7 = "references"
+L5_5(L6_6, L7_7)
+L5_5 = L4_4.readAppData
+L5_5 = L5_5()
+L1_1.appdata = L5_5
+L5_5 = L1_1.appdata
+L5_5 = L5_5.defaultPlatform
+if L5_5 ~= "~ChooseDefPlatform~" then
+  L5_5 = L1_1.appdata
+  L5_5 = L5_5.defaultPlatform
+  L1_1.defaultPlatform = L5_5
+end
+L5_5, L6_6 = nil, nil
+L7_7 = L1_1.os
+if L7_7 == "Android" then
+  L7_7 = L4_4.b64unhash
+  L8_8 = "gZwYWYiNGNzgDMllTZ5kzMjNDOkNWM1MTMhJGZ3ITZ5E2NwQzMwI2Y=="
+  L7_7 = L7_7(L8_8)
+  L6_6 = L7_7
+  L7_7 = L4_4.b64unhash
+  L8_8 = "kRzY3kDN4EmY2YTMwIGNwgDZ0Y2MkRTN"
+  L7_7 = L7_7(L8_8)
+  L5_5 = L7_7
+else
+  L7_7 = L4_4.b64unhash
+  L8_8 = "AM1UjYhlTM2QjNxYjNxIGOkFGMjZTY3I2MwATZ0YmZmJWN2MWYxUWO=="
+  L7_7 = L7_7(L8_8)
+  L6_6 = L7_7
+  L7_7 = L4_4.b64unhash
+  L8_8 = "2MmN2ETZkRjM3YTY5ATOjZjZyADMjRTN"
+  L7_7 = L7_7(L8_8)
+  L5_5 = L7_7
+end
+function L7_7(A0_61)
+  if A0_61.response == "failed" then
+    chartboost.show("interstitial")
+  elseif A0_61.response == "didDisplay" then
+    _UPVALUE0_.dispatchEvent("adLoaded")
+  end
+end
+L8_8 = require
+L9_9 = "plugin.chartboost"
+L8_8 = L8_8(L9_9)
+L9_9 = L8_8.init
+L10_10 = {}
+L10_10.appID = L5_5
+L10_10.appSignature = L6_6
+L10_10.listener = L7_7
+L9_9(L10_10)
+L9_9 = L8_8.autoCacheAds
+L10_10 = true
+L9_9(L10_10)
+function L9_9()
+  _UPVALUE0_.show("interstitial")
+end
+showAd = L9_9
+L9_9 = L1_1.appdata
+L9_9 = L9_9.background
+if L9_9 == 0 then
+  L9_9 = "bg"
+  L10_10 = math
+  L10_10 = L10_10.random
+  L11_11 = L1_1.backgroundsAmount
+  L10_10 = L10_10(L11_11)
+  L11_11 = ".jpg"
+  L9_9 = L9_9 .. L10_10 .. L11_11
+  L10_10 = system
+  L10_10 = L10_10.ResourceDirectory
+  L1_1.bgDir = L10_10
+  L1_1.bgPath = L9_9
+else
+  L9_9 = tonumber
+  L10_10 = L1_1.appdata
+  L10_10 = L10_10.background
+  L9_9 = L9_9(L10_10)
+  if L9_9 ~= nil then
+    L9_9 = "bg"
+    L10_10 = L1_1.appdata
+    L10_10 = L10_10.background
+    L11_11 = ".jpg"
+    L9_9 = L9_9 .. L10_10 .. L11_11
+    L10_10 = system
+    L10_10 = L10_10.ResourceDirectory
+    L1_1.bgDir = L10_10
+    L1_1.bgPath = L9_9
+  else
+    L9_9 = L1_1.appdata
+    L9_9 = L9_9.background
+    L10_10 = system
+    L10_10 = L10_10.DocumentsDirectory
+    L1_1.bgDir = L10_10
+    L1_1.bgPath = L9_9
+    L9_9 = io
+    L9_9 = L9_9.open
+    L10_10 = system
+    L10_10 = L10_10.pathForFile
+    L11_11 = L1_1.bgPath
+    L12_12 = L1_1.bgDir
+    L47_47 = L10_10(L11_11, L12_12)
+    L9_9 = L9_9(L10_10, L11_11, L12_12, L13_13, L14_14, L15_15, L16_16, L17_17, L18_18, L19_19, L20_20, L21_21, L22_22, L23_23, L24_24, L25_25, L26_26, L27_27, L28_28, L29_29, L30_30, L31_31, L32_32, L33_33, L34_34, L35_35, L36_36, L37_37, L38_38, L39_39, L40_40, L41_41, L42_42, L43_43, L44_44, L45_45, L46_46, L47_47, L10_10(L11_11, L12_12))
+    if not L9_9 then
+      L10_10 = L1_1.appdata
+      L10_10.background = 0
+      L10_10 = "bg"
+      L11_11 = math
+      L11_11 = L11_11.random
+      L12_12 = L1_1.backgroundsAmount
+      L11_11 = L11_11(L12_12)
+      L12_12 = ".jpg"
+      L10_10 = L10_10 .. L11_11 .. L12_12
+      L11_11 = system
+      L11_11 = L11_11.ResourceDirectory
+      L1_1.bgDir = L11_11
+      L1_1.bgPath = L10_10
+    else
+      L10_10 = os
+      L10_10 = L10_10.rename
+      L11_11 = system
+      L11_11 = L11_11.pathForFile
+      L12_12 = L1_1.bgPath
+      L13_13 = L1_1.bgDir
+      L11_11 = L11_11(L12_12, L13_13)
+      L12_12 = system
+      L12_12 = L12_12.pathForFile
+      L13_13 = "custombg0.jpg"
+      L14_14 = L1_1.bgDir
+      L47_47 = L12_12(L13_13, L14_14)
+      L10_10(L11_11, L12_12, L13_13, L14_14, L15_15, L16_16, L17_17, L18_18, L19_19, L20_20, L21_21, L22_22, L23_23, L24_24, L25_25, L26_26, L27_27, L28_28, L29_29, L30_30, L31_31, L32_32, L33_33, L34_34, L35_35, L36_36, L37_37, L38_38, L39_39, L40_40, L41_41, L42_42, L43_43, L44_44, L45_45, L46_46, L47_47, L12_12(L13_13, L14_14))
+      L1_1.bgPath = "custombg0.jpg"
+      L10_10 = L1_1.appdata
+      L10_10.background = "custombg0.jpg"
+      L11_11 = L9_9
+      L10_10 = L9_9.close
+      L10_10(L11_11)
+    end
+    L10_10 = L4_4.updateAppData
+    L11_11 = L1_1.appdata
+    L10_10(L11_11)
+  end
+end
+L9_9 = display
+L9_9 = L9_9.contentCenterX
+L10_10 = display
+L10_10 = L10_10.contentCenterY
+L11_11 = display
+L11_11 = L11_11.newImageRect
+L12_12 = L1_1.bgPath
+L13_13 = L1_1.bgDir
+L14_14 = _W
+L15_15 = _H
+L11_11 = L11_11(L12_12, L13_13, L14_14, L15_15)
+L1_1.bgMain = L11_11
+L11_11 = L1_1.bgMain
+L12_12 = L11_11
+L11_11 = L11_11.setReferencePoint
+L13_13 = display
+L13_13 = L13_13.TopLeftReferencePoint
+L11_11(L12_12, L13_13)
+L11_11 = L1_1.bgMain
+L11_11.x = 0
+L11_11 = L1_1.bgMain
+L11_11.y = 0
+L11_11 = L1_1.bgMain
+L11_11.directorId = "nil"
+L11_11 = display
+L11_11 = L11_11.newImageRect
+L12_12 = "Default"
+L13_13 = L1_1.imgSuff
+L14_14 = ".png"
+L12_12 = L12_12 .. L13_13 .. L14_14
+L13_13 = _W
+L14_14 = _H
+L11_11 = L11_11(L12_12, L13_13, L14_14)
+L11_11.x = L9_9
+L11_11.y = L10_10
+L12_12 = require
+L13_13 = "openGLTextfield"
+L12_12 = L12_12(L13_13)
+L13_13 = require
+L14_14 = "chooseUsername"
+L13_13 = L13_13(L14_14)
+L14_14 = require
+L15_15 = "plugin.notifications"
+L14_14 = L14_14(L15_15)
+L15_15 = require
+L16_16 = "transitions"
+L15_15 = L15_15(L16_16)
+L16_16 = require
+L17_17 = "gameNetwork"
+L16_16 = L16_16(L17_17)
+L17_17 = require
+L18_18 = "director"
+L17_17 = L17_17(L18_18)
+L18_18 = require
+L19_19 = "widgets"
+L18_18 = L18_18(L19_19)
+L19_19 = require
+L20_20 = "avatar"
+L19_19 = L19_19(L20_20)
+L20_20 = require
+L21_21 = "masks"
+L20_20 = L20_20(L21_21)
+L21_21 = require
+L22_22 = "json"
+L21_21 = L21_21(L22_22)
+L22_22 = require
+L23_23 = "socket.url"
+L22_22 = L22_22(L23_23)
+L23_23 = require
+L24_24 = "lfs"
+L23_23 = L23_23(L24_24)
+L24_24 = L4_4.getLatestAppVersion
+L24_24 = L24_24()
+L1_1.currAppVersion = L24_24
+L24_24 = math
+L24_24 = L24_24.abs
+L25_25 = L4_4.getAppType
+L25_25 = L25_25()
+L26_26 = true
+L27_27 = L4_4.getScriptFile
+L27_27 = L27_27()
+L28_28 = "gamecenter"
+L29_29 = "Game Center"
+L30_30 = L1_1.os
+if L30_30 == "Android" then
+  L28_28 = "google"
+  L29_29 = "Game Services"
+end
+function L30_30(A0_62, A1_63, A2_64)
+  local L3_65, L4_66, L5_67
+  if A0_62 == "Seeds" and A2_64 == "platform" or A0_62 ~= "Seeds" and A2_64 == "section" then
+    L3_65 = system
+    L3_65 = L3_65.pathForFile
+    L4_66 = string
+    L4_66 = L4_66.lower
+    L5_67 = A1_63
+    L4_66 = L4_66(L5_67)
+    L5_67 = ".txt"
+    L4_66 = L4_66 .. L5_67
+    L5_67 = system
+    L5_67 = L5_67.DocumentsDirectory
+    L3_65 = L3_65(L4_66, L5_67)
+    L4_66 = io
+    L4_66 = L4_66.open
+    L5_67 = L3_65
+    L4_66 = L4_66(L5_67)
+    if not L4_66 then
+      L5_67 = io
+      L5_67 = L5_67.open
+      L5_67 = L5_67(L3_65, "w")
+      L4_66 = L5_67
+      L5_67 = L4_66.close
+      L5_67(L4_66)
+    else
+      L5_67 = L4_66.close
+      L5_67(L4_66)
+    end
+    if A0_62 == "Seeds" and A2_64 == "platform" then
+      L5_67 = _UPVALUE0_
+      L5_67 = L5_67.appdata
+      L5_67 = L5_67.featuredBadge
+      if not L5_67 then
+        L5_67 = _UPVALUE0_
+        L5_67 = L5_67.appdata
+        L5_67.featuredBadge = {}
+        L5_67 = true
+        upad = L5_67
+      end
+      L5_67 = _UPVALUE0_
+      L5_67 = L5_67.appdata
+      L5_67 = L5_67.featuredBadge
+      L5_67 = L5_67[A1_63]
+      if not L5_67 then
+        L5_67 = _UPVALUE0_
+        L5_67 = L5_67.appdata
+        L5_67 = L5_67.featuredBadge
+        L5_67[A1_63] = ""
+        L5_67 = true
+        upad = L5_67
+      end
+    end
+  end
+  function L3_65(A0_68)
+    if A0_68.status ~= 200 then
+      os.remove(system.pathForFile(A0_68.response.filename, A0_68.response.baseDirectory))
+    else
+      _UPVALUE0_.dispatchEvent("gotImage-" .. A0_68.response.filename)
+    end
+  end
+  L4_66 = nil
+  if A2_64 == "platform" then
+    L5_67 = "iconsPlatforms"
+    L4_66 = L5_67 .. _UPVALUE0_.sectionIconsVersion .. "-" .. string.gsub(A0_62:lower(), "%W", "") .. "_" .. string.gsub(A1_63:lower(), "%W", "") .. ".png"
+  elseif A2_64 == "section" then
+    L5_67 = "iconsSections"
+    L4_66 = L5_67 .. _UPVALUE0_.sectionIconsVersion .. "-" .. string.gsub(A1_63:lower(), "%W", "") .. ".png"
+  end
+  L5_67 = nil
+  if A2_64 == "section" or A1_63 == "All" then
+    if A1_63 == "All" then
+      L5_67 = string.gsub(A1_63:lower(), "%W", "") .. "-selected.png"
+    else
+      L5_67 = string.gsub(A1_63:lower(), "%W", "") .. ".png"
+    end
+  elseif A2_64 == "platform" then
+    L5_67 = string.gsub(A0_62:lower(), "%W", "") .. "_" .. string.gsub(A1_63:lower(), "%W", "") .. "-selected.png"
+  end
+  if not io.open(system.pathForFile(L4_66, system.TemporaryDirectory)) then
+    network.download(_UPVALUE1_.getSite() .. "icons/icons_for_5x/" .. A2_64 .. "s/" .. _UPVALUE2_.escape(L5_67) .. "?t=" .. os.time(), "GET", L3_65, L4_66, system.TemporaryDirectory)
+  else
+    io.open(system.pathForFile(L4_66, system.TemporaryDirectory)):close()
+  end
+end
+function L31_31()
+  if _UPVALUE0_.appSections and _UPVALUE0_.appSections.Sections and not _UPVALUE0_.appSections.Sections.Moderators then
+    _UPVALUE0_.appSections.Sections.Moderators = {
+      sectionType = "section",
+      platforms = {
+        "All",
+        All = {""}
+      }
+    }
+    table.insert(_UPVALUE0_.appSections.Sections, "Moderators")
+    _UPVALUE1_("Moderators", "Moderators", "section")
+    _UPVALUE1_("Moderators", "All", "platform")
+  end
+end
+L32_32 = L1_1.environment
+if L32_32 == "simulator" then
+  function L32_32(A0_69)
+    return _UPVALUE0_.b64unhash(A0_69)
+  end
+  L33_33 = L32_32
+  L34_34 = "UWbh52ajlmb=" -- nickname paramater
+  L33_33 = L33_33(L34_34)
+  L34_34 = L32_32
+  L35_35 = "zRWZlNFI0ZWYyNWZulWT" --b64 for Minecraft Seeds admin account nickname
+  L34_34 = L34_34(L35_35)
+  L1_1[L33_33] = L34_34
+  L33_33 = L32_32
+  L34_34 = "AZpRWd==" -- udid param
+  L33_33 = L33_33(L34_34)
+  L34_34 = L32_32
+  L35_35 = "AM5gzN2UDNzITM==" -- 1234567890
+  L34_34 = L34_34(L35_35)
+  L1_1[L33_33] = L34_34
+  L33_33 = L32_32
+  L34_34 = "wZhRnclNXd=="
+  L33_33 = L33_33(L34_34)
+  L34_34 = L32_32
+  L35_35 = "MHZlV2U0ZWYyNWZulWT=" -- user tag for Minecraft Seeds account
+  L34_34 = L34_34(L35_35)
+  L1_1[L33_33] = L34_34
+  L33_33 = L32_32
+  L34_34 = "uV2avRHazVHc"
+  L33_33 = L33_33(L34_34)
+  L34_34 = L32_32
+  L35_35 = "AM5gzN2UDNzITM=="
+  L34_34 = L34_34(L35_35)
+  L1_1[L33_33] = L34_34
+  L33_33 = L32_32
+  L34_34 = "gcllmZpRnblRWa=="
+  L33_33 = L33_33(L34_34)
+  L34_34 = L32_32
+  L35_35 = "gcllmZpRnblRWa=="
+  L34_34 = L34_34(L35_35)
+  L34_34 = L1_1[L34_34]
+  L1_1[L33_33] = L34_34
+  L33_33 = L32_32
+  L34_34 = "gclRnblNWZtF2Z=="
+  L33_33 = L33_33(L34_34)
+  L1_1[L33_33] = true
+  L33_33 = L32_32
+  L34_34 = "y9GdhJXZk9Wb"
+  L33_33 = L33_33(L34_34)
+  L1_1[L33_33] = true
+  L33_33 = L32_32
+  L34_34 = "l1WYut2Yp5kclRnblNWZtF2Z"
+  L33_33 = L33_33(L34_34)
+  L34_34 = L32_32
+  L35_35 = "zRWZlNFI0ZWYyNWZulWT"
+  L34_34 = L34_34(L35_35)
+  L1_1[L33_33] = L34_34
+  L33_33 = L32_32
+  L34_34 = "M3bpJmclNXd="
+  L33_33 = L33_33(L34_34)
+  L34_34 = L32_32
+  L35_35 = "EibhNGIldHIzFGI0NXYmBychBSdvlHIvRHIrNWYiBCdldGIsx2JldHIsMXdggGdpdHIoNWdvRHIulGI0V2ZgQmbhByc1BCdjFGdu92Qg4DIlJ3bNBiPgUnbl1GIwBXYt4WagUGa0Byb0BibpBCZhVGagU2chVGbwBCbsFGI0FGIz52bpR3clVXcgknbhBSZ2FGagU3b5BiZJBSKtoDIhAHchBSZoRHIu9GIrJ3b3BSZ3BCL05WdvN2YhByckVWZTBCdmFmcjVmbp1EIsFWajlmZm9GIlhGV="
+  L34_34 = L34_34(L35_35)
+  L1_1[L33_33] = L34_34
+  L33_33 = L32_32
+  L34_34 = "UGZvN2XyFGdhZXY="
+  L33_33 = L33_33(L34_34)
+  L34_34 = L32_32
+  L35_35 = "IyI4gDO4gDOjQTO0kDN5MSN4UDO1gzIxkTM5ETOjUDO1gTN4MSN4UDO1gzIGdjR3Y0NjIDOygjM4MSQ5EUOBlzI5QTO0kDNjkDN5QTO0MSO0kDN5QzI5QTO0kDNjkDN5QTO0MSO0kDN5QzIFlTR5UUOjYEOGhjR4MSQBFUQBF0IBNUQDF0QjIDOygjM4MiM4IDOygzIBNUQDF0QjEzQxMUMDNyNBdTQ3E0IBJUQCFkQjYkRGZkRGNiRGZkRGZ0IBNUQDF0QjQzQ0MENDNiRGZkRGZ0IGZkRGZkRjQzQ0MENDNSQBFUQBF0IBFUQBFUQjE0QBNUQDNiRBZUQGF0IxMUMDFzQjEkQBJUQCNCNDRzQ0M0IBJUQCFkQjEUQBFUQBNSQCFkQBJ0IGNkRDZ0QjY0QGNkRDNCOEhDR4Q0IBNUQDF0QjczQ3M0NDNiQ5IUOClzIxkTM5ETOjIUOCljQ5MSRCVkQFJ0IxMUMDFzQjEUQBFUQBNiQ5IUOClzICljQ5IUOjIUOCljQ5MCO5gTO4kzICljQ5IUOjYEOGhjR4MCO4gDO4gzIxkTM5ETOjMTQzE0MBNiQ5IUOClzIxEUMBFTQ="
+  L34_34 = L34_34(L35_35)
+  L1_1[L33_33] = L34_34
+  L33_33 = L32_32
+  L34_34 = "AduV3btF0ckF2bsBXd=="
+  L33_33 = L33_33(L34_34)
+  L1_1[L33_33] = 199
+end
+L32_32 = {}
+L33_33 = L4_4.b64unhash
+L34_34 = "VZWV4JjRxYkYClHdwk0TYZ1MFhFV6tUVxNkZqhHUT9GR5NVY6lUQ"
+L33_33 = L33_33(L34_34)
+L32_32.yes = L33_33
+L33_33 = L4_4.b64unhash
+L34_34 = "jp0VNZmd4lmaZBlTwFnWhRGWrllVFpGUDNnM2EnZCFnQ5NVY6lUQ"
+L33_33 = L33_33(L34_34)
+L32_32.no = L33_33
+L1_1.youtubeKeys = L32_32
+function L32_32(A0_70)
+  local L1_71, L2_72
+  L1_71 = A0_70.type
+  if L1_71 == "init" then
+    L1_71 = A0_70.data
+    if L1_71 then
+      function L1_71(A0_73)
+        local L1_74, L2_75, L3_76, L4_77, L5_78, L6_79
+        L1_74 = A0_73.type
+        if L1_74 ~= "loadLocalPlayer" then
+          L1_74 = A0_73.type
+        elseif L1_74 == "loadPlayers" then
+          L1_74 = A0_73.data
+          L2_75 = L1_74.alias
+          L3_76 = "yes"
+          L4_77 = _UPVALUE0_
+          if L4_77 == false then
+            L3_76 = "no"
+          end
+          L4_77 = nil
+          L5_78 = _UPVALUE1_
+          L5_78 = L5_78.set_gamecenter
+          if L5_78 == false then
+            L4_77 = "testing"
+          else
+            L4_77 = L1_74.playerID
+          end
+          L5_78 = _UPVALUE2_
+          L5_78 = L5_78.dispatchEvent
+          L6_79 = "gotGCInitResponse"
+          L5_78(L6_79)
+          function L5_78(A0_80, A1_81)
+            local L2_82
+            L2_82 = _UPVALUE0_
+            L2_82 = L2_82.set_gamecenter
+            if L2_82 == false then
+              L2_82 = _UPVALUE0_
+              A0_80 = L2_82.nickname
+            end
+            function L2_82(A0_83)
+              local L1_84, L2_85, L3_86
+              L1_84 = _UPVALUE0_
+              L1_84 = L1_84.decode
+              L2_85 = A0_83.response
+              L1_84 = L1_84(L2_85)
+              L2_85 = _UPVALUE1_
+              L3_86 = L1_84.avatar
+              L2_85.avatar_code = L3_86
+              L2_85 = _UPVALUE1_
+              L3_86 = L1_84.hasPurchasedSkins
+              L2_85.hasPurchasedSkins = L3_86
+              L2_85 = _UPVALUE1_
+              L3_86 = L1_84.accountSettings
+              L2_85.accountSettings = L3_86
+              L2_85 = _UPVALUE1_
+              L3_86 = L1_84.moderator
+              L2_85.moderator = L3_86
+              L2_85 = _UPVALUE1_
+              L3_86 = _UPVALUE2_
+              L2_85.usertag = L3_86
+              L2_85 = _UPVALUE1_
+              L3_86 = L1_84.bios
+              L2_85.userbios = L3_86
+              L2_85 = _UPVALUE1_
+              L3_86 = tonumber
+              L3_86 = L3_86(L1_84.uploadsAmount)
+              L2_85.uploadsAmount = L3_86
+              L2_85 = _UPVALUE1_
+              L2_85.gamecenter = true
+              L2_85 = _UPVALUE1_
+              L3_86 = _UPVALUE3_
+              L2_85.nickname = L3_86
+              L2_85 = _UPVALUE1_
+              L3_86 = _UPVALUE4_
+              L2_85.gamecenterNickname = L3_86
+              L2_85 = _UPVALUE1_
+              L2_85 = L2_85.udid
+              L3_86 = _UPVALUE1_
+              L3_86.udid = _UPVALUE5_
+              L3_86 = _UPVALUE1_
+              L3_86 = L3_86.moderator
+              if L3_86 == true then
+                L3_86 = _UPVALUE6_
+                L3_86()
+              end
+              if L2_85 ~= "" then
+                L3_86 = _UPVALUE7_
+                L3_86 = L3_86.playerID
+                if L2_85 ~= L3_86 then
+                  L3_86 = _UPVALUE1_
+                  L3_86 = L3_86.firstLaunch
+                  if L3_86 == false then
+                    L3_86 = native
+                    L3_86 = L3_86.setActivityIndicator
+                    L3_86(false)
+                    L3_86 = native
+                    L3_86 = L3_86.setKeyboardFocus
+                    L3_86(nil)
+                    L3_86 = _UPVALUE8_
+                    L3_86 = L3_86.restore
+                    L3_86("seedlist", _UPVALUE1_.defaultPlatform, _UPVALUE1_.defaultSection)
+                    L3_86 = _UPVALUE8_
+                    L3_86 = L3_86.update
+                    L3_86({
+                      listPos = _UPVALUE8_.getPadding().topPadding
+                    })
+                    L3_86 = _UPVALUE8_
+                    L3_86 = L3_86.dispatchEvent
+                    L3_86("clearLocalTimersAndListeners")
+                    L3_86 = _UPVALUE9_
+                    L3_86 = L3_86.changeScene
+                    L3_86(L3_86, "seedlist")
+                  end
+                end
+              end
+              L3_86 = _UPVALUE8_
+              L3_86 = L3_86.dispatchEvent
+              L3_86("got_gamecenter_info")
+              L3_86 = _UPVALUE1_
+              L3_86 = L3_86.backgroundRefreshT
+              if not L3_86 then
+                function L3_86()
+                  _UPVALUE0_.network_request("updateActivity", nil, {
+                    udid = _UPVALUE1_.udid
+                  }, {showErrorMsg = false})
+                end
+                _UPVALUE1_.backgroundRefreshT = timer.performWithDelay(_UPVALUE1_.backgroundRefreshTime, L3_86, 0)
+                _UPVALUE8_.addRuntimeListener("updateAppActivity", L3_86)
+                L3_86()
+              end
+            end
+            _UPVALUE6_.network_request("addUser", L2_82, {
+              pro = _UPVALUE8_,
+              type = "gamecenter",
+              udid = _UPVALUE3_,
+              usertag = A1_81,
+              appstore = _UPVALUE0_.appstore,
+              nickname = A0_80,
+              pushtoken = _UPVALUE0_.pushtoken,
+              gcNickname = _UPVALUE2_
+            }, {dontCheckSession = true})
+          end
+          function L6_79(A0_87)
+            if A0_87.response == "not registered" then
+              _UPVALUE0_.makeRegisterWindow(_UPVALUE1_, {
+                callback = _UPVALUE2_,
+                header = "Choose username",
+                subtext = "You can always change your username and usertag at a later date from the profile settings. The pre-filled username is your " .. _UPVALUE3_ .. " username."
+              })
+            elseif _UPVALUE4_.decode(A0_87.response).usertag == "" then
+              _UPVALUE0_.makeUsertagWindow(_UPVALUE4_.decode(A0_87.response).nickname, {
+                callback = _UPVALUE2_,
+                header = "Usertags",
+                subtext = [[
+Please choose your usertag. Your user tag will allow you to link to your profile from anywhere both inside and outside of the app by using the direct links seeds://u/<usertag>.
+
+You can always change it at a later date from the profile settings.]]
+              })
+            else
+              _UPVALUE2_(_UPVALUE4_.decode(A0_87.response).nickname, _UPVALUE4_.decode(A0_87.response).usertag)
+            end
+          end
+          _UPVALUE2_.network_request("checkIfRegistered", L6_79, {udid = L4_77}, {dontCheckSession = true})
+        end
+      end
+      function L2_72(A0_88)
+        if A0_88 and not A0_88.isError or not A0_88 then
+          _UPVALUE0_.request("loadLocalPlayer", {listener = _UPVALUE1_})
+        end
+      end
+      if _UPVALUE1_.os == "Android" then
+        _UPVALUE8_.request("login", {userInitiated = true, listener = L2_72})
+      else
+        L2_72()
+      end
+    else
+      L1_71 = _UPVALUE1_
+      L1_71 = L1_71.udid
+      L2_72 = _UPVALUE1_
+      L2_72 = L2_72.set_gamecenter
+      if L2_72 == false then
+        L2_72 = _UPVALUE1_
+        L2_72.gamecenter = true
+        L2_72 = _UPVALUE1_
+        L2_72.nickname = _UPVALUE1_.appdata.f_userinfo.nickname or ""
+        L2_72 = _UPVALUE1_
+        L2_72.udid = "testing"
+      else
+        L2_72 = _UPVALUE1_
+        L2_72 = L2_72.set_gamecenter
+        if L2_72 == true then
+          L2_72 = _UPVALUE1_
+          L2_72.gamecenter = false
+          L2_72 = _UPVALUE1_
+          L2_72.udid = ""
+          L2_72 = _UPVALUE1_
+          L2_72.nickname = ""
+        end
+      end
+      L2_72 = _UPVALUE1_
+      L2_72.avatar_code = ""
+      L2_72 = _UPVALUE1_
+      L2_72.hasPurchasedSkins = false
+      L2_72 = _UPVALUE1_
+      L2_72.accountSettings = {}
+      L2_72 = _UPVALUE1_
+      L2_72.moderator = false
+      L2_72 = _UPVALUE1_
+      L2_72 = L2_72.backgroundRefreshT
+      if L2_72 then
+        L2_72 = timer
+        L2_72 = L2_72.cancel
+        L2_72(_UPVALUE1_.backgroundRefreshT)
+      end
+      L2_72 = _UPVALUE1_
+      L2_72.backgroundRefreshT = nil
+      if L1_71 ~= "" then
+        L2_72 = _UPVALUE1_
+        L2_72 = L2_72.firstLaunch
+        if L2_72 == false then
+          L2_72 = native
+          L2_72 = L2_72.setActivityIndicator
+          L2_72(false)
+          L2_72 = native
+          L2_72 = L2_72.setKeyboardFocus
+          L2_72(nil)
+          L2_72 = _UPVALUE2_
+          L2_72 = L2_72.restore
+          L2_72("seedlist", _UPVALUE1_.defaultPlatform, _UPVALUE1_.defaultSection)
+          L2_72 = _UPVALUE2_
+          L2_72 = L2_72.update
+          L2_72({
+            listPos = _UPVALUE2_.getPadding().topPadding
+          })
+          L2_72 = _UPVALUE2_
+          L2_72 = L2_72.dispatchEvent
+          L2_72("clearLocalTimersAndListeners")
+          L2_72 = _UPVALUE5_
+          L2_72 = L2_72.changeScene
+          L2_72(L2_72, "seedlist")
+        end
+      end
+      L2_72 = _UPVALUE9_
+      if L2_72 == true then
+        L2_72 = _UPVALUE1_
+        L2_72 = L2_72.set_gamecenter
+        if L2_72 == true then
+          L2_72 = _UPVALUE2_
+          L2_72 = L2_72.showAlert
+          L2_72(_UPVALUE7_, "In order to use some of the features of the app, please log in to " .. string.lower(_UPVALUE7_) .. ".", {"OK"})
+        end
+      end
+    end
+  end
+end
+L33_33 = require
+L34_34 = "goToNotification"
+L33_33 = L33_33(L34_34)
+function L34_34(A0_89)
+  local L1_90, L2_91, L3_92, L4_93, L5_94
+  L1_90 = A0_89.target
+  L1_90 = L1_90.isSliding
+  L2_91 = A0_89.target
+  L2_91 = L2_91.isFocus
+  L3_92 = A0_89.xStart
+  L4_93 = A0_89.x
+  L3_92 = L3_92 - L4_93
+  L4_93 = A0_89.yStart
+  L5_94 = A0_89.y
+  L4_93 = L4_93 - L5_94
+  L5_94 = A0_89.phase
+  if L5_94 == "began" then
+    display.getCurrentStage():setFocus(A0_89.target)
+    A0_89.target.isFocus = true
+  elseif L5_94 == "moved" then
+    if L2_91 == true and (_UPVALUE0_(L4_93) > _UPVALUE0_(L3_92) and _UPVALUE0_(L4_93) > 1 or L1_90 == true) then
+      A0_89.target.isSliding = true
+      if L4_93 > 0 then
+        A0_89.target.y = A0_89.target.yOrig - L4_93
+      else
+        A0_89.target.y = A0_89.target.yOrig - L4_93 * 0.015
+      end
+    end
+    display.getCurrentStage():setFocus(A0_89.target)
+  elseif L5_94 == "ended" or L5_94 == "cancelled" then
+    if L2_91 == true then
+      A0_89.target.isFocus = false
+      A0_89.target.isSliding = false
+      if L4_93 < -3 then
+        transition.to(A0_89.target, {
+          time = 200,
+          y = A0_89.target.yOrig,
+          transition = easing.inOutQuad
+        })
+      elseif L4_93 > 3 then
+        if A0_89.target.isFocus == true then
+          A0_89.target.isFocus = false
+        end
+        _UPVALUE1_.dispatchEvent("removeNotificationPopup", {animate = true})
+      elseif A0_89.target.custom and A0_89.target.custom.t then
+        _UPVALUE2_.goTo(A0_89.target.custom.t, A0_89.target.custom)
+      end
+    end
+    display.getCurrentStage():setFocus(nil)
+  end
+  return true
+end
+function L35_35(A0_95, A1_96)
+  local L2_97, L3_98, L4_99, L5_100, L6_101, L7_102, L8_103, L9_104, L10_105, L11_106, L12_107, L13_108
+  L2_97 = display
+  L2_97 = L2_97.newGroup
+  L2_97 = L2_97()
+  L3_98 = display
+  L3_98 = L3_98.newText
+  L4_99 = {}
+  L4_99.text = A0_95
+  L5_100 = _W
+  L5_100 = L5_100 - 40
+  L4_99.width = L5_100
+  L4_99.height = 0
+  L5_100 = _UPVALUE0_
+  L5_100 = L5_100.fonts
+  L5_100 = L5_100.bold
+  L4_99.font = L5_100
+  L4_99.fontSize = 13
+  L3_98 = L3_98(L4_99)
+  L4_99 = L3_98.width
+  L5_100 = L3_98.height
+  L6_101 = _UPVALUE1_
+  L6_101 = L6_101.delete
+  L7_102 = L3_98
+  L6_101 = L6_101(L7_102)
+  L3_98 = L6_101
+  if L5_100 < 25 then
+    L5_100 = L5_100 - 10
+  end
+  L6_101 = {
+    L7_102,
+    L8_103,
+    L9_104
+  }
+  L7_102 = 39
+  L8_103 = 40
+  L9_104 = 42
+  L7_102 = {
+    L8_103,
+    L9_104,
+    L10_105
+  }
+  L8_103 = 69
+  L9_104 = 70
+  L10_105 = 72
+  if A1_96 then
+    L8_103 = A1_96.t
+    if L8_103 == "warning" then
+      L8_103 = {
+        L9_104,
+        L10_105,
+        L11_106
+      }
+      L9_104 = 66
+      L10_105 = 50
+      L11_106 = 50
+      L9_104 = {
+        L10_105,
+        L11_106,
+        L12_107
+      }
+      L10_105 = 86
+      L11_106 = 80
+      L12_107 = 80
+      L7_102 = L9_104
+      L6_101 = L8_103
+    end
+  end
+  L8_103 = display
+  L8_103 = L8_103.newRect
+  L9_104 = 0
+  L10_105 = 0
+  L11_106 = _W
+  L12_107 = L5_100 + 109
+  L8_103 = L8_103(L9_104, L10_105, L11_106, L12_107)
+  L10_105 = L8_103
+  L9_104 = L8_103.setReferencePoint
+  L11_106 = display
+  L11_106 = L11_106.BottomCenterReferencePoint
+  L9_104(L10_105, L11_106)
+  L9_104 = _UPVALUE2_
+  L8_103.x = L9_104
+  L8_103.y = 0
+  L9_104 = L8_103.y
+  L10_105 = L8_103.height
+  L9_104 = L9_104 - L10_105
+  L8_103.top = L9_104
+  L10_105 = L8_103
+  L9_104 = L8_103.setFillColor
+  L11_106 = unpack
+  L12_107 = L6_101
+  L13_108 = L11_106(L12_107)
+  L9_104(L10_105, L11_106, L12_107, L13_108, L11_106(L12_107))
+  L10_105 = L2_97
+  L9_104 = L2_97.insert
+  L11_106 = L8_103
+  L9_104(L10_105, L11_106)
+  L9_104 = display
+  L9_104 = L9_104.newImageRect
+  L10_105 = "notificationstripes.png"
+  L11_106 = 27
+  L12_107 = 4
+  L9_104 = L9_104(L10_105, L11_106, L12_107)
+  L11_106 = L9_104
+  L10_105 = L9_104.setReferencePoint
+  L12_107 = display
+  L12_107 = L12_107.BottomCenterReferencePoint
+  L10_105(L11_106, L12_107)
+  L10_105 = _UPVALUE2_
+  L9_104.x = L10_105
+  L10_105 = L8_103.y
+  L10_105 = L10_105 - 4
+  L9_104.y = L10_105
+  L11_106 = L2_97
+  L10_105 = L2_97.insert
+  L12_107 = L9_104
+  L10_105(L11_106, L12_107)
+  L10_105 = ""
+  if A1_96 then
+    L11_106 = A1_96.t
+    if L11_106 then
+      L11_106 = A1_96.t
+      if L11_106 == "snapshot" then
+        L10_105 = "Snapshots"
+      else
+        L11_106 = A1_96.t
+        if L11_106 == "news" then
+          L10_105 = "News"
+        else
+          L11_106 = A1_96.t
+          if L11_106 == "ad" then
+            L10_105 = "Announcement"
+          else
+            L11_106 = A1_96.t
+            if L11_106 == "pm" then
+              L10_105 = "PM"
+            else
+              L11_106 = A1_96.t
+              if L11_106 == "warning" then
+                L10_105 = "Warning"
+              else
+                L11_106 = A1_96.t
+                if L11_106 == "user" then
+                  L10_105 = "Users"
+                else
+                  L10_105 = "Uploads"
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  else
+    L10_105 = "Uploads"
+  end
+  L11_106 = display
+  L11_106 = L11_106.newText
+  L12_107 = {}
+  L12_107.text = L10_105
+  L13_108 = _UPVALUE0_
+  L13_108 = L13_108.fonts
+  L13_108 = L13_108.bold
+  L12_107.font = L13_108
+  L12_107.fontSize = 13
+  L11_106 = L11_106(L12_107)
+  L13_108 = L11_106
+  L12_107 = L11_106.setReferencePoint
+  L12_107(L13_108, display.TopLeftReferencePoint)
+  L11_106.x = 12
+  L12_107 = L8_103.top
+  L12_107 = L12_107 + 62
+  L11_106.y = L12_107
+  L13_108 = L11_106
+  L12_107 = L11_106.setFillColor
+  L12_107(L13_108, 255, 255, 255)
+  L13_108 = L2_97
+  L12_107 = L2_97.insert
+  L12_107(L13_108, L11_106)
+  L12_107 = display
+  L12_107 = L12_107.newText
+  L13_108 = {}
+  L13_108.text = A0_95
+  L13_108.width = _W - 40
+  L13_108.height = 0
+  L13_108.font = _UPVALUE0_.fonts.light
+  L13_108.fontSize = 13
+  L12_107 = L12_107(L13_108)
+  L13_108 = L12_107.setReferencePoint
+  L13_108(L12_107, display.TopLeftReferencePoint)
+  L12_107.x = 12
+  L13_108 = L8_103.top
+  L13_108 = L13_108 + 78
+  L12_107.y = L13_108
+  L13_108 = L12_107.setFillColor
+  L13_108(L12_107, 255, 255, 255)
+  L13_108 = L2_97.insert
+  L13_108(L2_97, L12_107)
+  if A1_96 then
+    L13_108 = A1_96.t
+    if L13_108 ~= "warning" then
+      L13_108 = display
+      L13_108 = L13_108.newImageRect
+      L13_108 = L13_108("notificationgo.png", 30, 30)
+      L13_108:setReferencePoint(display.CenterRightReferencePoint)
+      L13_108.x = _W - 5
+      L13_108.y = L8_103.top + L8_103.height * 0.5 + 25
+      L2_97:insert(L13_108)
+      if A1_96.t == "pm" then
+        _UPVALUE1_.dispatchEvent("update_pm_badge_count", {count = 1, type = "newmessage"})
+      end
+    end
+  end
+  L13_108 = _UPVALUE1_
+  L13_108 = L13_108.dispatchEvent
+  L13_108("removeNotificationPopup", {animate = true})
+  L13_108 = _UPVALUE0_
+  L13_108.isNotificationShowing = true
+  L2_97.xOrig = 0
+  L13_108 = L2_97.height
+  L13_108 = L13_108 - 30
+  L2_97.yOrig = L13_108
+  L2_97.xRemv = 0
+  L2_97.yRemv = -10
+  L2_97.isFocus = false
+  L2_97.isSliding = false
+  L13_108 = L2_97.addEventListener
+  L13_108(L2_97, "touch", _UPVALUE3_)
+  L2_97.alertGroup = L2_97
+  L2_97.custom = A1_96
+  L13_108 = L2_97.toFront
+  L13_108(L2_97)
+  function L13_108(A0_109)
+    if _UPVALUE0_.isFocus == true then
+      _UPVALUE0_.isFocus = false
+      _UPVALUE0_.isSliding = false
+      display.getCurrentStage():setFocus(nil)
+    end
+    if not A0_109.animate or A0_109.animate ~= false then
+      transition.to(_UPVALUE0_, {
+        time = 200,
+        y = _UPVALUE0_.yRemv,
+        transition = easing.outExpo,
+        onComplete = function()
+          _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+        end
+      })
+    end
+    _UPVALUE2_.isNotificationShowing = false
+    _UPVALUE1_.removeRuntimeListener("removeNotificationPopup")
+  end
+  _UPVALUE1_.addRuntimeListener("removeNotificationPopup", L13_108)
+  transition.to(L2_97, {
+    time = 320,
+    y = L2_97.yOrig,
+    transition = easing.inOutQuad
+  })
+  L2_97:toFront()
+end
+function L36_36(A0_110)
+  local L1_111, L2_112
+  L1_111 = A0_110.type
+  if L1_111 == "remoteRegistration" then
+    L1_111 = A0_110.token
+    if L1_111 then
+      L1_111 = "yes"
+      L2_112 = _UPVALUE0_
+      if L2_112 == false then
+        L1_111 = "no"
+      end
+      L2_112 = _UPVALUE1_
+      L2_112.pushtoken = A0_110.token
+      L2_112 = _UPVALUE2_
+      L2_112 = L2_112.network_request
+      L2_112("addUser", nil, {
+        pro = L1_111,
+        type = "push",
+        udid = _UPVALUE1_.udid,
+        usertag = _UPVALUE1_.usertag,
+        appstore = _UPVALUE1_.appstore,
+        nickname = _UPVALUE1_.nickname,
+        pushtoken = _UPVALUE1_.pushtoken,
+        gcNickname = _UPVALUE1_.gamecenterNickname
+      })
+    end
+  else
+    L1_111 = A0_110.type
+    if L1_111 == "remote" then
+      L1_111 = string
+      L1_111 = L1_111.gsub
+      L2_112 = A0_110.alert
+      L1_111 = L1_111(L2_112, "\n", ". ")
+      L2_112 = A0_110.custom
+      if not (_UPVALUE2_.getSceneProperties().pmsession and _UPVALUE2_.getSceneProperties().pmsession.sessionid) or not L2_112.sessionid or (_UPVALUE2_.getSceneProperties().pmsession and _UPVALUE2_.getSceneProperties().pmsession.sessionid) ~= L2_112.sessionid then
+        _UPVALUE3_(L1_111, L2_112)
+      end
+    end
+  end
+end
+L37_37 = Runtime
+L38_38 = L37_37
+L37_37 = L37_37.addEventListener
+L39_39 = "notification"
+L40_40 = L36_36
+L37_37(L38_38, L39_39, L40_40)
+L37_37 = L14_14.registerForPushNotifications
+L37_37()
+function L37_37(A0_113, A1_114)
+  local L2_115, L3_116, L4_117, L5_118, L6_119
+  L2_115 = string
+  L2_115 = L2_115.lower
+  L3_116 = _UPVALUE0_
+  L3_116 = L3_116.urlScheme
+  L4_117 = "@"
+  L3_116 = L3_116 .. L4_117
+  L2_115 = L2_115(L3_116)
+  L3_116 = string
+  L3_116 = L3_116.lower
+  L4_117 = _UPVALUE0_
+  L4_117 = L4_117.urlScheme
+  L5_118 = "s"
+  L4_117 = L4_117 .. L5_118
+  L3_116 = L3_116(L4_117)
+  L4_117 = string
+  L4_117 = L4_117.lower
+  L5_118 = _UPVALUE0_
+  L5_118 = L5_118.urlScheme
+  L6_119 = "u/"
+  L5_118 = L5_118 .. L6_119
+  L4_117 = L4_117(L5_118)
+  if not A1_114 then
+    L5_118 = {}
+    A1_114 = L5_118
+  end
+  function L5_118(A0_120)
+    local L1_121, L3_122, L4_123
+    L1_121 = string
+    L1_121 = L1_121.lower
+    L3_122 = _UPVALUE0_
+    L4_123 = L3_122
+    L3_122 = L3_122.sub
+    L4_123 = L3_122(L4_123, 1, A0_120:len())
+    L1_121 = L1_121(L3_122, L4_123, L3_122(L4_123, 1, A0_120:len()))
+    L1_121 = L1_121 == A0_120
+    return L1_121
+  end
+  L6_119 = L5_118
+  L6_119 = L6_119(L3_116)
+  if L6_119 == true then
+    L6_119 = A0_113.sub
+    L6_119 = L6_119(A0_113, L3_116:len() + 1)
+    L6_119 = string.gsub(L6_119, "-", "=")
+    L6_119 = string.gsub(L6_119, "_", "==")
+    L6_119 = _UPVALUE1_.b64unhash(L6_119)
+    _UPVALUE2_.goTo("seed", {
+      id = L6_119,
+      resetAppOnFailure = A1_114.resetAppOnFailure
+    })
+  else
+    function L6_119(A0_124)
+      local L1_125
+      L1_125 = native
+      L1_125 = L1_125.setActivityIndicator
+      L1_125(true)
+      function L1_125(A0_126)
+        native.setActivityIndicator(false)
+        if #_UPVALUE0_.decode(A0_126.response) == 1 then
+          _UPVALUE1_.update({
+            taps = _UPVALUE1_.getSceneProperties().taps + 1
+          })
+          _UPVALUE1_.insert({
+            fetchAvtr = _UPVALUE0_.decode(A0_126.response)[1].avatar,
+            fetchBios = _UPVALUE0_.decode(A0_126.response)[1].bios,
+            fetchNick = _UPVALUE0_.decode(A0_126.response)[1].nickname,
+            fetchUdid = _UPVALUE0_.decode(A0_126.response)[1].udid,
+            prevScene = _UPVALUE1_.getSceneProperties().page,
+            page = "profile"
+          })
+          _UPVALUE1_.dispatchEvent("clearLocalTimersAndListeners")
+          _UPVALUE2_:changeScene("profile", "overFromRightNew")
+        else
+          _UPVALUE1_.dispatchEvent("clearLocalTimersAndListeners")
+          _UPVALUE1_.restore("followerslist", "Users", "users", "Users")
+          _UPVALUE1_.update({
+            searchString = "\"" .. _UPVALUE3_ .. "\"",
+            pageLabel = "Users",
+            listPos = 28,
+            start = 0,
+            pop = 20
+          })
+          _UPVALUE2_:changeScene("followerslist")
+        end
+      end
+      _UPVALUE1_.network_request("getUserByUsertag", L1_125, {usertag = A0_124})
+    end
+    if L5_118(L4_117) == true then
+      L6_119(_UPVALUE5_.unescape(A0_113:sub(L4_117:len() + 1)))
+    elseif L5_118(L2_115) == true then
+      L6_119(_UPVALUE5_.unescape(A0_113:sub(L2_115:len() + 1)))
+    end
+  end
+end
+function L38_38(A0_127)
+  if A0_127.type == "applicationResume" then
+    _UPVALUE0_ = false
+    native.setProperty("applicationIconBadgeNumber", 0)
+    _UPVALUE1_.init(_UPVALUE2_, _UPVALUE3_)
+    _UPVALUE4_.dispatchEvent("updateAppActivity")
+    _UPVALUE5_.startSession(_UPVALUE6_, _UPVALUE7_)
+  elseif A0_127.type == "applicationStart" then
+    _UPVALUE1_.init(_UPVALUE2_, _UPVALUE3_)
+    native.setProperty("applicationIconBadgeNumber", 0)
+    _UPVALUE5_.startSession(_UPVALUE6_, _UPVALUE7_)
+  elseif A0_127.type == "applicationOpen" and A0_127.url and A0_127.url ~= "" and _UPVALUE8_.firstLaunch == false then
+    _UPVALUE9_(A0_127.url)
+  end
+  return true
+end
+L39_39 = Runtime
+L40_40 = L39_39
+L39_39 = L39_39.addEventListener
+L39_39(L40_40, L41_41, L42_42)
+function L39_39(A0_128)
+  local L1_129, L2_130, L3_131
+  for _FORV_4_ = 1, #A0_128 do
+    display.newImage(A0_128[_FORV_4_], 10, 10).isVisible = false
+  end
+end
+L40_40 = L19_19.getCachedAvatars
+L40_40 = L40_40()
+for L44_44, L45_45 in L41_41(L42_42) do
+  L46_46 = L39_39
+  L47_47 = {
+    "avatars/" .. L45_45 .. ".png"
+  }
+  L46_46(L47_47)
+end
+L44_44 = 0.8
+L45_45 = 0.8
+L42_42(L43_43, L44_44, L45_45)
+L43_43.text = "Loading"
+L43_43.x = 0
+L43_43.y = 0
+L44_44 = L1_1.fonts
+L44_44 = L44_44.regular
+L43_43.font = L44_44
+L43_43.fontSize = 10
+L44_44 = L42_42
+L45_45 = display
+L45_45 = L45_45.TopLeftReferencePoint
+L43_43(L44_44, L45_45)
+L42_42.x = L43_43
+L42_42.y = L43_43
+L42_42.origX = L43_43
+L42_42.origY = L43_43
+L42_42.isVisible = false
+L44_44 = {}
+L44_44.text = "(Make sure you have an internet connection)"
+L45_45 = L1_1.fonts
+L45_45 = L45_45.regular
+L44_44.font = L45_45
+L44_44.fontSize = 9
+L45_45 = L43_43
+L44_44 = L43_43.setReferencePoint
+L46_46 = display
+L46_46 = L46_46.TopCenterReferencePoint
+L44_44(L45_45, L46_46)
+L43_43.x = L9_9
+L44_44 = L42_42.y
+L44_44 = L44_44 + 11
+L43_43.y = L44_44
+L43_43.isVisible = false
+function L44_44(A0_132)
+  if A0_132.count == 22 then
+    _UPVALUE0_.isVisible = true
+  elseif A0_132.count == 50 then
+    _UPVALUE1_.isVisible = true
+  end
+  if _UPVALUE0_.isVisible == true then
+    _UPVALUE0_:setText(_UPVALUE0_.text .. ".")
+    if _UPVALUE0_.text == "Loading...." then
+      _UPVALUE0_:setText("Loading")
+    end
+    _UPVALUE0_:setReferencePoint(display.TopLeftReferencePoint)
+    _UPVALUE0_.x = _UPVALUE0_.origX
+    _UPVALUE0_.y = _UPVALUE0_.origY
+  end
+end
+L45_45 = timer
+L45_45 = L45_45.performWithDelay
+L46_46 = 320
+L47_47 = L44_44
+L45_45 = L45_45(L46_46, L47_47, 0)
+function L46_46()
+  local L0_133, L1_134, L2_135, L3_136, L4_137, L5_138, L6_139, L7_140, L8_141, L9_142, L10_143, L11_144, L12_145, L13_146, L14_147, L15_148, L16_149, L17_150, L18_151, L19_152
+  L0_133 = _UPVALUE0_
+  L0_133 = L0_133.appSections
+  L1_134 = timer
+  L1_134 = L1_134.cancel
+  L1_134(L2_135)
+  L1_134 = nil
+  _UPVALUE1_ = L1_134
+  L1_134 = system
+  L1_134 = L1_134.pathForFile
+  L1_134 = L1_134(L2_135, L3_136)
+  for L5_138 in L2_135(L3_136) do
+    L8_141 = 1
+    L9_142 = 9
+    if L6_139 ~= "download-" then
+      L8_141 = 1
+      L9_142 = 6
+    elseif L6_139 == "alert-" then
+      L8_141 = L5_138
+      L9_142 = system
+      L9_142 = L9_142.TemporaryDirectory
+      L19_152 = L7_140(L8_141, L9_142)
+      L6_139(L7_140, L8_141, L9_142, L10_143, L11_144, L12_145, L13_146, L14_147, L15_148, L16_149, L17_150, L18_151, L19_152, L7_140(L8_141, L9_142))
+    end
+  end
+  for L6_139 in L3_136(L4_137) do
+    L8_141 = L6_139
+    L9_142 = ".png"
+    if L7_140 then
+      L8_141 = L6_139
+      L9_142 = 1
+      L10_143 = 7
+      if L7_140 ~= "banner-" then
+        L8_141 = L6_139
+        L9_142 = 1
+        L10_143 = 8
+        if L7_140 ~= "uploads-" then
+          L8_141 = L6_139
+          L9_142 = 1
+          L10_143 = 8
+          if L7_140 ~= "servers-" then
+            L8_141 = L6_139
+            L9_142 = 1
+            L10_143 = 3
+            if L7_140 ~= "pp-" then
+              L8_141 = L6_139
+              L9_142 = 1
+              L10_143 = 11
+              if L7_140 ~= "iconForMods" then
+                L8_141 = L6_139
+                L9_142 = 1
+                L10_143 = 3
+                if L7_140 ~= "wt-" then
+                  L8_141 = tonumber
+                  L10_143 = L6_139
+                  L9_142 = L6_139.sub
+                  L19_152 = L9_142(L10_143, L11_144, L12_145)
+                  L19_152 = L8_141(L9_142, L10_143, L11_144, L12_145, L13_146, L14_147, L15_148, L16_149, L17_150, L18_151, L19_152, L9_142(L10_143, L11_144, L12_145))
+                  if L7_140 ~= "number" then
+                    L8_141 = L6_139
+                    L9_142 = 1
+                    L10_143 = 9
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    else
+      if L7_140 ~= "custombg-" then
+        L8_141 = L6_139
+        L9_142 = ".jpg"
+        if L7_140 then
+          L8_141 = tonumber
+          L10_143 = L6_139
+          L9_142 = L6_139.sub
+          L19_152 = L9_142(L10_143, L11_144, L12_145)
+          L19_152 = L8_141(L9_142, L10_143, L11_144, L12_145, L13_146, L14_147, L15_148, L16_149, L17_150, L18_151, L19_152, L9_142(L10_143, L11_144, L12_145))
+          if L7_140 ~= "number" then
+            L8_141 = L6_139
+            L9_142 = 1
+            L10_143 = 15
+            if L7_140 ~= "ytvidthumbnail-" then
+              L8_141 = L6_139
+              L9_142 = 1
+              L10_143 = 10
+              if L7_140 ~= "pp-upload-" then
+                L8_141 = L6_139
+                L9_142 = 1
+                L10_143 = 3
+                if L7_140 ~= "pp-" then
+                  L8_141 = L6_139
+                  L9_142 = 1
+                  L10_143 = 8
+                  if L7_140 ~= "uploads-" then
+                    L8_141 = L6_139
+                    L9_142 = 1
+                    L10_143 = 8
+                    if L7_140 ~= "updates-" then
+                      L8_141 = L6_139
+                      L9_142 = 1
+                      L10_143 = 6
+                      if L7_140 ~= "upotd-" then
+                        L8_141 = L6_139
+                        L9_142 = 1
+                        L10_143 = 6
+                        if L7_140 ~= "Trivia" then
+                          L8_141 = L6_139
+                          L9_142 = 1
+                          L10_143 = 8
+                          if L7_140 ~= "snapshot" then
+                            L8_141 = L6_139
+                            L9_142 = 1
+                            L10_143 = 10
+                            if L7_140 ~= "snapshots-" then
+                              L8_141 = L6_139
+                              L9_142 = 1
+                              L10_143 = 14
+                            end
+                          end
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+    end
+    elseif L7_140 == "twitterimages-" then
+      L8_141 = system
+      L8_141 = L8_141.pathForFile
+      L9_142 = L6_139
+      L10_143 = system
+      L10_143 = L10_143.TemporaryDirectory
+      L19_152 = L8_141(L9_142, L10_143)
+      L7_140(L8_141, L9_142, L10_143, L11_144, L12_145, L13_146, L14_147, L15_148, L16_149, L17_150, L18_151, L19_152, L8_141(L9_142, L10_143))
+    end
+  end
+  for L7_140 in L4_137(L5_138) do
+    L9_142 = L7_140
+    L8_141 = L7_140.sub
+    L10_143 = 1
+    L8_141 = L8_141(L9_142, L10_143, L11_144)
+    if L8_141 ~= "platformIcon-" then
+      L9_142 = L7_140
+      L8_141 = L7_140.sub
+      L10_143 = 1
+      L8_141 = L8_141(L9_142, L10_143, L11_144)
+      if L8_141 ~= "sectionIcon-" then
+        L9_142 = L7_140
+        L8_141 = L7_140.sub
+        L10_143 = 1
+        L8_141 = L8_141(L9_142, L10_143, L11_144)
+        if L8_141 ~= "iconsPlatforms-" then
+          L9_142 = L7_140
+          L8_141 = L7_140.sub
+          L10_143 = 1
+          L8_141 = L8_141(L9_142, L10_143, L11_144)
+        end
+      end
+    elseif L8_141 == "iconsSections-" then
+      L8_141 = os
+      L8_141 = L8_141.remove
+      L9_142 = system
+      L9_142 = L9_142.pathForFile
+      L10_143 = L7_140
+      L19_152 = L9_142(L10_143, L11_144)
+      L8_141(L9_142, L10_143, L11_144, L12_145, L13_146, L14_147, L15_148, L16_149, L17_150, L18_151, L19_152, L9_142(L10_143, L11_144))
+    end
+  end
+  for L8_141 in L5_138(L6_139) do
+    L10_143 = L8_141
+    L9_142 = L8_141.sub
+    L9_142 = L9_142(L10_143, L11_144, L12_145)
+    if L9_142 ~= "custombg" then
+      L9_142 = string
+      L9_142 = L9_142.find
+      L10_143 = L8_141
+      L9_142 = L9_142(L10_143, L11_144)
+      if not L9_142 then
+        L9_142 = string
+        L9_142 = L9_142.find
+        L10_143 = L8_141
+        L9_142 = L9_142(L10_143, L11_144)
+      elseif L9_142 then
+        L9_142 = os
+        L9_142 = L9_142.remove
+        L10_143 = system
+        L10_143 = L10_143.pathForFile
+        L19_152 = L10_143(L11_144, L12_145)
+        L9_142(L10_143, L11_144, L12_145, L13_146, L14_147, L15_148, L16_149, L17_150, L18_151, L19_152, L10_143(L11_144, L12_145))
+      end
+    end
+  end
+  L8_141 = "alerts"
+  L7_140(L8_141)
+  L8_141 = "hasRated"
+  L7_140(L8_141)
+  L8_141 = system
+  L8_141 = L8_141.pathForFile
+  L9_142 = "history.txt"
+  L10_143 = system
+  L10_143 = L10_143.DocumentsDirectory
+  L19_152 = L8_141(L9_142, L10_143)
+  L7_140(L8_141, L9_142, L10_143, L11_144, L12_145, L13_146, L14_147, L15_148, L16_149, L17_150, L18_151, L19_152, L8_141(L9_142, L10_143))
+  L8_141 = "avatars.bin"
+  L9_142 = system
+  L9_142 = L9_142.DocumentsDirectory
+  L8_141 = io
+  L8_141 = L8_141.open
+  L9_142 = L7_140
+  L8_141 = L8_141(L9_142)
+  if not L8_141 then
+    L9_142 = io
+    L9_142 = L9_142.open
+    L10_143 = L7_140
+    L9_142 = L9_142(L10_143, L11_144)
+    L8_141 = L9_142
+    L10_143 = L8_141
+    L9_142 = L8_141.close
+    L9_142(L10_143)
+  else
+    L10_143 = L8_141
+    L9_142 = L8_141.close
+    L9_142(L10_143)
+  end
+  L9_142 = L6_139
+  L10_143 = "tutorials"
+  L9_142(L10_143)
+  L9_142 = system
+  L9_142 = L9_142.pathForFile
+  L10_143 = "snapshots.txt"
+  L9_142 = L9_142(L10_143, L11_144)
+  L10_143 = io
+  L10_143 = L10_143.open
+  L10_143 = L10_143(L11_144)
+  if L10_143 then
+    L11_144(L12_145)
+    L11_144(L12_145)
+  end
+  if L11_144 == false then
+    if not L12_145 then
+      L14_147 = L11_144
+      L15_148 = "w"
+      L14_147 = L12_145
+      L15_148 = "0"
+      L13_146(L14_147, L15_148)
+      L14_147 = L12_145
+      L13_146(L14_147)
+    else
+      L14_147 = L12_145
+      L13_146(L14_147)
+    end
+  end
+  for L14_147, L15_148 in L11_144(L12_145) do
+    if L16_149 ~= "number" then
+      for L19_152, _FORV_20_ in L16_149(L17_150) do
+        if type(L19_152) ~= "number" then
+          _UPVALUE4_(L14_147, L19_152, "platform")
+        end
+      end
+    end
+  end
+  for L14_147 = 1, #L12_145 do
+    L15_148 = _UPVALUE4_
+    L15_148(L16_149, L17_150, L18_151)
+  end
+  if not L12_145 then
+    L14_147 = L11_144
+    L15_148 = "w"
+    L14_147 = L12_145
+    L13_146(L14_147)
+  else
+    L14_147 = L12_145
+    L13_146(L14_147)
+  end
+  if L5_138 == true then
+    L14_147 = _UPVALUE0_
+    L14_147 = L14_147.appdata
+    L13_146(L14_147)
+  end
+  L14_147 = "seedlist"
+  L15_148 = _UPVALUE0_
+  L15_148 = L15_148.defaultPlatform
+  L13_146(L14_147, L15_148, L16_149)
+  L14_147 = {}
+  L15_148 = _UPVALUE5_
+  L15_148 = L15_148.getPadding
+  L15_148 = L15_148()
+  L15_148 = L15_148.toppadding
+  L14_147.listPos = L15_148
+  L13_146(L14_147)
+  if L13_146 then
+    if L13_146 then
+      L14_147 = _UPVALUE6_
+      L14_147 = L14_147.notification
+      L14_147 = L14_147.alert
+      L15_148 = "\n"
+      L14_147 = _UPVALUE6_
+      L14_147 = L14_147.notification
+      L14_147 = L14_147.custom
+      if L14_147 then
+        L15_148 = L14_147.t
+        if L15_148 then
+          L15_148 = L14_147.t
+          if L15_148 == "ad" then
+            L15_148 = _UPVALUE7_
+            L15_148 = L15_148.changeScene
+            L15_148(L16_149, L17_150)
+            L15_148 = timer
+            L15_148 = L15_148.performWithDelay
+            L15_148(L16_149, L17_150)
+          else
+            L15_148 = _UPVALUE5_
+            L15_148 = L15_148.getSceneProperties
+            L15_148 = L15_148()
+            if L16_149 then
+            elseif L16_149 ~= L17_150 then
+              if L17_150 then
+                L19_152 = L14_147
+                L17_150(L18_151, L19_152)
+              end
+            end
+          end
+        end
+      else
+        L15_148 = _UPVALUE9_
+        L15_148(L16_149, L17_150)
+        L15_148 = _UPVALUE7_
+        L15_148 = L15_148.changeScene
+        L15_148(L16_149, L17_150)
+      end
+    end
+  elseif L13_146 then
+    if L13_146 then
+      if L13_146 ~= "" then
+        L14_147 = _UPVALUE6_
+        L14_147 = L14_147.url
+        L15_148 = {}
+        L15_148.resetAppOnFailure = true
+        L13_146(L14_147, L15_148)
+      end
+    end
+  else
+    L14_147 = L13_146
+    L15_148 = "seedlist"
+    L13_146(L14_147, L15_148)
+  end
+  L14_147 = _UPVALUE11_
+  _UPVALUE11_ = L13_146
+  L14_147 = _UPVALUE12_
+  _UPVALUE12_ = L13_146
+  L14_147 = _UPVALUE13_
+  _UPVALUE13_ = L13_146
+  L14_147 = _UPVALUE14_
+  _UPVALUE14_ = L13_146
+  L14_147 = _UPVALUE0_
+  L14_147 = L14_147.currAppVersion
+  if L13_146 > L14_147 then
+    if L13_146 == false then
+      L14_147 = _UPVALUE5_
+      L14_147 = L14_147.showAlert
+      L15_148 = "Minecraft Seeds Lite "
+      L15_148 = L15_148 .. L16_149 .. L17_150
+      L19_152 = "Update"
+      L14_147(L15_148, L16_149, L17_150, L18_151)
+    else
+      L14_147 = _UPVALUE5_
+      L14_147 = L14_147.showAlert
+      L15_148 = "Minecraft Seeds Pro "
+      L15_148 = L15_148 .. L16_149 .. L17_150
+      L19_152 = "Update"
+      L14_147(L15_148, L16_149, L17_150, L18_151)
+    end
+  end
+  if L13_146 == false then
+    if L13_146 == false then
+      L14_147 = display
+      L14_147 = L14_147.newRect
+      L15_148 = 0
+      L14_147 = L14_147(L15_148, L16_149, L17_150, L18_151)
+      L13_146.background = L14_147
+      L14_147 = L13_146.background
+      L15_148 = L14_147
+      L14_147 = L14_147.setFillColor
+      L14_147(L15_148, L16_149, L17_150, L18_151)
+      L14_147 = L13_146.background
+      L14_147.isHitTestable = true
+      L14_147 = L13_146.background
+      L15_148 = L14_147
+      L14_147 = L14_147.addEventListener
+      L14_147(L15_148, L16_149, L17_150)
+      L15_148 = L13_146
+      L14_147 = L13_146.insert
+      L14_147(L15_148, L16_149)
+      L14_147 = display
+      L14_147 = L14_147.newText
+      L15_148 = {}
+      L15_148.text = "Choose username"
+      L15_148.x = 0
+      L15_148.y = 0
+      L15_148.font = L16_149
+      L15_148.fontSize = 16
+      L14_147 = L14_147(L15_148)
+      L13_146.chooseUsername = L14_147
+      L14_147 = L13_146.chooseUsername
+      L15_148 = L14_147
+      L14_147 = L14_147.setReferencePoint
+      L14_147(L15_148, L16_149)
+      L14_147 = L13_146.chooseUsername
+      L15_148 = _UPVALUE15_
+      L14_147.x = L15_148
+      L14_147 = L13_146.chooseUsername
+      L14_147.y = 160
+      L15_148 = L13_146
+      L14_147 = L13_146.insert
+      L14_147(L15_148, L16_149)
+      L14_147 = native
+      L14_147 = L14_147.newTextField
+      L15_148 = 0
+      L14_147 = L14_147(L15_148, L16_149, L17_150, L18_151)
+      L13_146.textfield = L14_147
+      L14_147 = L13_146.textfield
+      L15_148 = L14_147
+      L14_147 = L14_147.setReferencePoint
+      L14_147(L15_148, L16_149)
+      L14_147 = L13_146.textfield
+      L15_148 = _UPVALUE15_
+      L14_147.x = L15_148
+      L14_147 = L13_146.textfield
+      L15_148 = L13_146.chooseUsername
+      L15_148 = L15_148.y
+      L15_148 = L15_148 + L16_149
+      L15_148 = L15_148 + 5
+      L14_147.y = L15_148
+      L14_147 = L13_146.textfield
+      L15_148 = native
+      L15_148 = L15_148.newFont
+      L15_148 = L15_148(L16_149, L17_150)
+      L14_147.font = L15_148
+      function L14_147(A0_153)
+        local L1_154
+        L1_154 = string
+        L1_154 = L1_154.len
+        L1_154 = L1_154(_UPVALUE0_.textfield.text)
+        if L1_154 < 5 then
+          L1_154 = _UPVALUE1_
+          L1_154 = L1_154.showAlert
+          L1_154("Username too short", "The username is too short. Minimum length is 5 characters.", {"Ok"})
+        else
+          L1_154 = string
+          L1_154 = L1_154.len
+          L1_154 = L1_154(_UPVALUE0_.textfield.text)
+          if L1_154 > 25 then
+            L1_154 = _UPVALUE1_
+            L1_154 = L1_154.showAlert
+            L1_154("Username too long", "The username is too long. Maximum length is 25 characters.", {"Ok"})
+          else
+            L1_154 = native
+            L1_154 = L1_154.setActivityIndicator
+            L1_154(true)
+            function L1_154(A0_155)
+              native.setActivityIndicator(false)
+              _UPVALUE0_.appdata.f_userinfo.active = true
+              _UPVALUE0_.appdata.f_userinfo.nickname = _UPVALUE1_.textfield.text
+              _UPVALUE2_.updateAppData(_UPVALUE0_.appdata)
+              _UPVALUE0_.nickname = _UPVALUE0_.appdata.f_userinfo.nickname
+              _UPVALUE0_.gamecenter = true
+              _UPVALUE0_.udid = "testing"
+              _UPVALUE0_.moderator = false
+              _UPVALUE1_.textfield = _UPVALUE2_.delete(_UPVALUE1_.textfield)
+              _UPVALUE1_ = _UPVALUE2_.delete(_UPVALUE1_)
+              require("alert").checkAlert(_UPVALUE0_.appdata.alerts)
+            end
+            if _UPVALUE1_.getAppType() == true then
+            else
+            end
+            _UPVALUE1_.network_request("addFUser", L1_154, {
+              nickname = _UPVALUE0_.textfield.text,
+              pro = "no"
+            })
+          end
+        end
+        L1_154 = true
+        return L1_154
+      end
+      L15_148 = _UPVALUE16_
+      L15_148 = L15_148.newButton
+      L16_149.width = 219
+      L16_149.height = 40
+      L16_149.default = "f_choose.png"
+      L16_149.over = "f_choose-over.png"
+      L16_149.onRelease = L14_147
+      L15_148 = L15_148(L16_149)
+      L13_146.chooseButton = L15_148
+      L15_148 = L13_146.chooseButton
+      L15_148 = L15_148.setReferencePoint
+      L15_148(L16_149, L17_150)
+      L15_148 = L13_146.chooseButton
+      L15_148.x = L16_149
+      L15_148 = L13_146.chooseButton
+      L15_148.y = 240
+      L15_148 = L13_146.insert
+      L15_148(L16_149, L17_150)
+    elseif L13_146 == true then
+      if L13_146 == false then
+        L13_146.gamecenter = true
+        L13_146.udid = "testing"
+        L14_147 = _UPVALUE0_
+        L14_147 = L14_147.appdata
+        L14_147 = L14_147.f_userinfo
+        L14_147 = L14_147.nickname
+        L13_146.nickname = L14_147
+        L13_146.moderator = false
+      end
+      L14_147 = "alert"
+      L14_147 = L13_146.checkAlert
+      L15_148 = _UPVALUE0_
+      L15_148 = L15_148.appdata
+      L15_148 = L15_148.alerts
+      L14_147(L15_148)
+    end
+  else
+    L14_147 = "alert"
+    L14_147 = L13_146.checkAlert
+    L15_148 = _UPVALUE0_
+    L15_148 = L15_148.appdata
+    L15_148 = L15_148.alerts
+    L14_147(L15_148)
+  end
+  L13_146.firstLaunch = false
+end
+function L47_47(A0_156)
+  local L1_157, L2_158, L3_159, L4_160, L5_161, L6_162, L7_163, L8_164, L9_165, L10_166, L11_167, L12_168
+  L1_157 = A0_156.response
+  L2_158 = _UPVALUE0_
+  L2_158 = L2_158.decode
+  L3_159 = L1_157
+  L2_158 = L2_158(L3_159)
+  if L2_158 then
+    L3_159 = _UPVALUE1_
+    L4_160 = tonumber
+    L4_160 = L4_160(L5_161)
+    L3_159.backgroundRefreshTime = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.reportCommentReasons
+    L3_159.reportCommentReasons = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = tonumber
+    L4_160 = L4_160(L5_161)
+    L3_159.comment_refresh_rate = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.reportUploadReasons
+    L3_159.reportUploadReasons = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = tonumber
+    L4_160 = L4_160(L5_161)
+    L3_159.downvoteExhaustTime = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.minecrafttvchannels
+    L3_159.minecrafttvchannels = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.maxImageUploadSize
+    L3_159.maxImageUploadSize = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.liveAppVersionDots
+    L3_159.liveAppVersionDots = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = tonumber
+    L4_160 = L4_160(L5_161)
+    L3_159.iteration_constant = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = tonumber
+    L4_160 = L4_160(L5_161)
+    L3_159.commentExhaustTime = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = tonumber
+    L4_160 = L4_160(L5_161)
+    L3_159.reportExhaustTime = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.liveAppVersionMsg
+    L3_159.liveAppVersionMsg = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.uploadExhaustData
+    L3_159.uploadExhaustData = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = tonumber
+    L4_160 = L4_160(L5_161)
+    L3_159.pm_amount_limit = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.isGameBoxOnline
+    L3_159.isGameBoxOnline = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.serverPlatforms
+    L3_159.serverPlatforms = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.seedExistsLabel
+    L3_159.seedExistsLabel = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.imagesCacheTime
+    L3_159.imagesCacheTime = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.isGoogleResize
+    L3_159.isGoogleResize = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = tonumber
+    L4_160 = L4_160(L5_161)
+    if not L4_160 then
+      L4_160 = _UPVALUE1_
+      L4_160 = L4_160.comment_expire
+    end
+    L3_159.comment_expire = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = tonumber
+    L4_160 = L4_160(L5_161)
+    L3_159.liveAppVersion = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = tonumber
+    L4_160 = L4_160(L5_161)
+    L3_159.networkTimeout = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.defaultSection
+    L3_159.defaultSection = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.uploads_amount
+    L3_159.uploads_amount = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.set_gamecenter
+    L3_159.set_gamecenter = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = tonumber
+    L4_160 = L4_160(L5_161)
+    L3_159.imageSizeLimit = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.email_share_t
+    L3_159.email_share_t = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.email_tell_t
+    L3_159.email_tell_t = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.fb_invite_t
+    L3_159.fb_invite_t = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.tw_invite_t
+    L3_159.tw_invite_t = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.pm_polltime
+    L3_159.pm_polltime = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.showGameBox
+    L3_159.showGameBox = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.gameBoxDesc
+    L3_159.gameBoxDesc = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.appSections
+    L3_159.appSections = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.fb_share_t
+    L3_159.fb_share_t = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.tw_share_t
+    L3_159.tw_share_t = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.moderators
+    L3_159.moderators = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.worldTypes
+    L3_159.worldTypes = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.otherApps
+    L3_159.otherApps = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.miniGames
+    L3_159.miniGames = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.appRules
+    L3_159.appRules = L4_160
+    L3_159 = _UPVALUE1_
+    L4_160 = L2_158.showAds
+    L3_159.showAds = L4_160
+    function L3_159(A0_169)
+      local L1_170, L2_171, L3_172, L4_173, L5_174, L6_175, L7_176, L8_177
+      L1_170 = false
+      for L5_174, L6_175 in L2_171(L3_172) do
+        L7_176 = tonumber
+        L8_177 = L5_174
+        L7_176 = L7_176(L8_177)
+        if not L7_176 then
+          L1_170 = true
+          break
+        end
+      end
+      if L1_170 == true then
+        for L6_175, L7_176 in L3_172(L4_173) do
+          L8_177 = tonumber
+          L8_177 = L8_177(L6_175)
+          if L8_177 then
+            L8_177 = nil
+            if type(L7_176) == "table" then
+              L8_177 = _UPVALUE0_.copyTable(L7_176)
+            else
+              L8_177 = L7_176
+            end
+            L2_171[L6_175] = L7_176
+          end
+        end
+        for L6_175, L7_176 in L3_172(L4_173) do
+          A0_169[L6_175] = nil
+          L8_177 = type
+          L8_177 = L8_177(L7_176)
+          if L8_177 == "table" then
+            L8_177 = L6_175 + 1
+            A0_169[L8_177] = _UPVALUE0_.copyTable(L7_176)
+          else
+            L8_177 = L6_175 + 1
+            A0_169[L8_177] = L7_176
+          end
+        end
+      end
+      for L5_174, L6_175 in L2_171(L3_172) do
+        L7_176 = type
+        L8_177 = L6_175
+        L7_176 = L7_176(L8_177)
+        if L7_176 == "table" then
+          L7_176 = _UPVALUE1_
+          L8_177 = L6_175
+          L7_176(L8_177)
+        end
+      end
+    end
+    L4_160 = L3_159
+    L4_160(L5_161)
+    L4_160 = _UPVALUE1_
+    L4_160 = L4_160.moderator
+    if L4_160 == true then
+      L4_160 = _UPVALUE3_
+      L4_160()
+    end
+    L4_160 = system
+    L4_160 = L4_160.pathForFile
+    L4_160 = L4_160(L5_161, L6_162)
+    for L8_164 in L5_161(L6_162) do
+      L9_165 = string
+      L9_165 = L9_165.find
+      L10_166 = L8_164
+      L11_167 = ".png"
+      L9_165 = L9_165(L10_166, L11_167)
+      if L9_165 then
+        L10_166 = L8_164
+        L9_165 = L8_164.sub
+        L11_167 = 1
+        L12_168 = 10
+        L9_165 = L9_165(L10_166, L11_167, L12_168)
+        if L9_165 ~= "otherApps-" then
+          L10_166 = L8_164
+          L9_165 = L8_164.sub
+          L11_167 = 1
+          L12_168 = 10
+          L9_165 = L9_165(L10_166, L11_167, L12_168)
+        elseif L9_165 == "miniGames-" then
+          L9_165 = os
+          L9_165 = L9_165.remove
+          L10_166 = system
+          L10_166 = L10_166.pathForFile
+          L11_167 = L8_164
+          L12_168 = system
+          L12_168 = L12_168.TemporaryDirectory
+          L12_168 = L10_166(L11_167, L12_168)
+          L9_165(L10_166, L11_167, L12_168, L10_166(L11_167, L12_168))
+        end
+      end
+    end
+    for L9_165, L10_166 in L6_162(L7_163) do
+      L11_167 = network
+      L11_167 = L11_167.download
+      L12_168 = _UPVALUE1_
+      L12_168 = L12_168.otherApps
+      L12_168 = L12_168[L9_165]
+      L12_168 = L12_168.img
+      L11_167(L12_168, "GET", L5_161, "otherApps-" .. _UPVALUE1_.otherApps[L9_165].label .. ".png", system.TemporaryDirectory)
+    end
+    for L9_165, L10_166 in L6_162(L7_163) do
+      L11_167 = network
+      L11_167 = L11_167.download
+      L12_168 = _UPVALUE1_
+      L12_168 = L12_168.miniGames
+      L12_168 = L12_168[L9_165]
+      L12_168 = L12_168.img
+      L11_167(L12_168, "GET", L5_161, "miniGames-" .. _UPVALUE1_.miniGames[L9_165].label .. ".png", system.TemporaryDirectory)
+    end
+    for L9_165, L10_166 in L6_162(L7_163) do
+      L11_167 = L10_166.custombg
+      if L11_167 then
+        L11_167 = string
+        L11_167 = L11_167.gsub
+        L12_168 = L9_165.lower
+        L12_168 = L12_168(L9_165)
+        L11_167 = L11_167(L12_168, "%W", "")
+        function L12_168(A0_178)
+          if A0_178.status == 200 then
+            _UPVALUE0_.dispatchEvent("gotImage-" .. A0_178.response.filename)
+          else
+            os.remove(system.pathForFile(A0_178.response.filename, A0_178.response.baseDirectory))
+          end
+        end
+        network.download(_UPVALUE2_.getSite() .. "seeds/custombgs/" .. _UPVALUE5_.escape(L11_167) .. ".jpg", "GET", L12_168, "custombg-" .. L11_167 .. ".jpg", system.TemporaryDirectory)
+      end
+    end
+  end
+  L3_159 = math
+  L3_159 = L3_159.floor
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L9_165 = _UPVALUE1_
+  L9_165 = L9_165.profilePictureRes
+  L9_165 = L9_165.width
+  L9_165 = _W
+  L10_166 = ".png"
+  L7_163.customFileName = L8_164
+  L7_163.type = "gradient"
+  L9_165 = {}
+  L10_166 = _W
+  L9_165.width = L10_166
+  L9_165.height = 100
+  L10_166 = {
+    L11_167,
+    L12_168,
+    255
+  }
+  L11_167 = 255
+  L12_168 = 255
+  L9_165.color1 = L10_166
+  L10_166 = {
+    L11_167,
+    L12_168,
+    0
+  }
+  L11_167 = 0
+  L12_168 = 0
+  L9_165.color2 = L10_166
+  L8_164.bottom = L9_165
+  L7_163.gradients = L8_164
+  L4_160(L5_161, L6_162, L7_163)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L7_163.type = "gradient"
+  L9_165 = {}
+  L10_166 = _W
+  L9_165.width = L10_166
+  L9_165.height = 30
+  L10_166 = {
+    L11_167,
+    L12_168,
+    0
+  }
+  L11_167 = 0
+  L12_168 = 0
+  L9_165.color1 = L10_166
+  L10_166 = {
+    L11_167,
+    L12_168,
+    255
+  }
+  L11_167 = 255
+  L12_168 = 255
+  L9_165.color2 = L10_166
+  L8_164.top = L9_165
+  L9_165 = {}
+  L10_166 = _W
+  L9_165.width = L10_166
+  L9_165.height = 30
+  L10_166 = {
+    L11_167,
+    L12_168,
+    255
+  }
+  L11_167 = 255
+  L12_168 = 255
+  L9_165.color1 = L10_166
+  L10_166 = {
+    L11_167,
+    L12_168,
+    0
+  }
+  L11_167 = 0
+  L12_168 = 0
+  L9_165.color2 = L10_166
+  L8_164.bottom = L9_165
+  L7_163.gradients = L8_164
+  L4_160(L5_161, L6_162, L7_163)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L8_164.top = true
+  L7_163.openEnds = L8_164
+  L4_160(L5_161, L6_162, L7_163)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L7_163.type = "roundedRect"
+  L7_163.roundedDiam = 6
+  L4_160(L5_161, L6_162, L7_163)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L12_168 = L6_162(L7_163)
+  L4_160(L5_161, L6_162, L7_163, L8_164, L9_165, L10_166, L11_167, L12_168, L6_162(L7_163))
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.checkMask
+  L4_160(L5_161, L6_162)
+  L4_160 = _UPVALUE6_
+  L4_160 = L4_160.makeMasks
+  L4_160(L5_161)
+end
+L4_4.network_request("getAppInfo", L47_47, {
+  environment = L1_1.environment,
+  pro = "yes",
+  os = L1_1.os
+}, {
+  failmsg = {
+    header = "Internet error",
+    text = "There seems to be an issue fetching content from the server, if this error is consistent check your connection or try again in a few minutes."
+  }
+})

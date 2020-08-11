@@ -1,0 +1,189 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("transitions")
+;({}).spawnWindow = function()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L0_1.backGroup = L1_2
+  L2_3 = L0_1
+  L1_2 = L0_1.insert
+  L3_4 = L0_1.backGroup
+  L1_2(L2_3, L3_4)
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L0_1.contentsGroup = L1_2
+  L2_3 = L0_1
+  L1_2 = L0_1.insert
+  L3_4 = L0_1.contentsGroup
+  L1_2(L2_3, L3_4)
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L0_1.frontGroup = L1_2
+  L2_3 = L0_1
+  L1_2 = L0_1.insert
+  L3_4 = L0_1.frontGroup
+  L1_2(L2_3, L3_4)
+  L1_2 = display
+  L1_2 = L1_2.getCurrentStage
+  L1_2 = L1_2()
+  L2_3 = L1_2
+  L1_2 = L1_2.insert
+  L3_4 = L0_1
+  L1_2(L2_3, L3_4)
+  L1_2 = _UPVALUE0_
+  L1_2 = L1_2.makeBlurryBg
+  L1_2 = L1_2()
+  L2_3 = L0_1.backGroup
+  L3_4 = L2_3
+  L2_3 = L2_3.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = _UPVALUE1_
+  L2_3 = L2_3.newTableView
+  L3_4 = {}
+  L3_4.top = 64
+  L3_4.left = 0
+  L4_5 = _W
+  L3_4.width = L4_5
+  L4_5 = _H
+  L4_5 = L4_5 - 64
+  L3_4.height = L4_5
+  L4_5 = {
+    L5_6,
+    L6_7,
+    L7_8,
+    L8_9
+  }
+  L5_6 = 0
+  L6_7 = 0
+  L7_8 = 0
+  L8_9 = 0
+  L3_4.bgColor = L4_5
+  L2_3 = L2_3(L3_4)
+  L3_4 = L0_1.contentsGroup
+  L4_5 = L3_4
+  L3_4 = L3_4.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  function L3_4(A0_10)
+    local L1_11, L2_12, L3_13, L4_14, L5_15
+    L1_11 = A0_10.target
+    L1_11 = L1_11.height
+    L2_12 = L1_11 * 0.5
+    L3_13 = A0_10.view
+    L4_14 = A0_10.id
+    L5_15 = display
+    L5_15 = L5_15.newText
+    L5_15 = L5_15(L4_14, 0, 0, _UPVALUE0_.fonts.light, 18)
+    L5_15:setReferencePoint(display.CenterLeftReferencePoint)
+    L5_15.x = 6
+    L5_15.y = L2_12
+    L3_13:insert(L5_15)
+  end
+  L5_6 = L2_3
+  L4_5 = L2_3.insertRow
+  L6_7 = {}
+  L7_8 = {
+    L8_9,
+    0,
+    0,
+    0
+  }
+  L8_9 = 0
+  L6_7.lineColor = L7_8
+  L7_8 = {
+    L8_9,
+    0,
+    0,
+    0
+  }
+  L8_9 = 0
+  L6_7.rowColor = L7_8
+  L6_7.onRender = L3_4
+  L6_7.height = 40
+  L6_7.id = "Packages"
+  L4_5(L5_6, L6_7)
+  function L4_5(A0_16)
+    local L1_17, L2_18, L3_19, L4_20, L5_21, L6_22
+    L1_17 = A0_16.target
+    L1_17 = L1_17.height
+    L2_18 = L1_17 * 0.5
+    L3_19 = A0_16.view
+    L4_20 = display
+    L4_20 = L4_20.newGroup
+    L4_20 = L4_20()
+    L6_22 = L3_19
+    L5_21 = L3_19.insert
+    L5_21(L6_22, L4_20)
+    L5_21 = _UPVALUE0_
+    L5_21 = L5_21.makeSprite
+    L6_22 = 0
+    L5_21 = L5_21(L6_22, 0)
+    L6_22 = L4_20.insert
+    L6_22(L4_20, L5_21)
+    L6_22 = display
+    L6_22 = L6_22.newText
+    L6_22 = L6_22("Fetching packages", 0, 0, _UPVALUE1_.fonts.light, 16)
+    L6_22:setReferencePoint(display.CenterLeftReferencePoint)
+    L6_22.x = L5_21.width * 0.5 + 7
+    L6_22.y = 0
+    L4_20:insert(L6_22)
+    L4_20:setReferencePoint(display.CenterReferencePoint)
+    L4_20.x = _UPVALUE2_
+    L4_20.y = L2_18
+  end
+  function L5_6(A0_23)
+    _UPVALUE0_:deleteRow(#_UPVALUE0_.content.rows)
+    for _FORV_5_ = 1, #json.decode(A0_23.response) do
+    end
+  end
+  L6_7 = _UPVALUE0_
+  L6_7 = L6_7.network_request
+  L7_8 = "fetchSponsoredServersPackages"
+  L8_9 = L5_6
+  L6_7(L7_8, L8_9, {})
+  L6_7 = _UPVALUE0_
+  L6_7 = L6_7.makeToolbar
+  L7_8 = "Sponsor server"
+  L6_7 = L6_7(L7_8)
+  L7_8 = L0_1.frontGroup
+  L8_9 = L7_8
+  L7_8 = L7_8.insert
+  L7_8(L8_9, L6_7)
+  function L7_8(A0_24)
+    _UPVALUE0_.to(_UPVALUE1_, {
+      time = 320,
+      y = _H,
+      transition = easing.outCubic,
+      onComplete = function()
+        _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+      end
+    }, true)
+    return true
+  end
+  L8_9 = _UPVALUE1_
+  L8_9 = L8_9.newButton
+  L8_9 = L8_9({
+    top = 26,
+    left = 10,
+    width = 52,
+    height = 30,
+    default = "cancel.png",
+    over = "cancel-over.png",
+    onRelease = L7_8
+  })
+  L0_1.frontGroup:insert(L8_9)
+  _UPVALUE4_.from(L0_1, {
+    time = 320,
+    y = _H,
+    transition = easing.outCubic
+  }, true)
+end
+return {}

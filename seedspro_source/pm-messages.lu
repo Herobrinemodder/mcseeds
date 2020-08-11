@@ -1,0 +1,2872 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("openGLTextfield")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37, L37_38, L38_39, L39_40, L40_41, L41_42, L42_43, L43_44, L44_45, L45_46, L46_47, L47_48, L48_49, L49_50, L50_51, L51_52, L52_53, L53_54, L54_55, L55_56, L56_57, L57_58, L58_59, L59_60, L60_61, L61_62, L62_63, L63_64, L64_65, L65_66, L66_67, L67_68, L68_69, L69_70, L70_71, L71_72, L72_73, L73_74, L74_75, L75_76, L76_77, L77_78, L78_79, L79_80, L80_81, L81_82, L82_83, L83_84, L84_85, L85_86, L86_87, L87_88, L88_89, L89_90, L90_91, L91_92, L92_93, L93_94, L94_95
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L3_4
+  L5_6 = L3_4.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.newGroup
+  L5_6 = L5_6()
+  L7_8 = L3_4
+  L6_7 = L3_4.insert
+  L8_9 = L5_6
+  L6_7(L7_8, L8_9)
+  L6_7 = display
+  L6_7 = L6_7.newGroup
+  L6_7 = L6_7()
+  L7_8 = display
+  L7_8 = L7_8.newGroup
+  L7_8 = L7_8()
+  L6_7.back = L7_8
+  L8_9 = L6_7
+  L7_8 = L6_7.insert
+  L9_10 = L6_7.back
+  L7_8(L8_9, L9_10)
+  L7_8 = display
+  L7_8 = L7_8.newGroup
+  L7_8 = L7_8()
+  L6_7.front = L7_8
+  L8_9 = L6_7
+  L7_8 = L6_7.insert
+  L9_10 = L6_7.front
+  L7_8(L8_9, L9_10)
+  L8_9 = L3_4
+  L7_8 = L3_4.insert
+  L9_10 = L6_7
+  L7_8(L8_9, L9_10)
+  L7_8 = display
+  L7_8 = L7_8.newGroup
+  L7_8 = L7_8()
+  L9_10 = L3_4
+  L8_9 = L3_4.insert
+  L10_11 = L7_8
+  L8_9(L9_10, L10_11)
+  L8_9 = display
+  L8_9 = L8_9.contentCenterX
+  L9_10 = display
+  L9_10 = L9_10.contentCenterY
+  L10_11 = false
+  L11_12 = _UPVALUE0_
+  L11_12 = L11_12.UIDefaultColor
+  L12_13 = _UPVALUE0_
+  L12_13 = L12_13.contentScaleX
+  L13_14 = _UPVALUE0_
+  L13_14 = L13_14.contentScaleY
+  L14_15 = _UPVALUE0_
+  L14_15 = L14_15.scaleFrom320
+  L15_16 = _UPVALUE1_
+  L15_16 = L15_16.getScriptFile
+  L15_16 = L15_16()
+  L16_17 = _UPVALUE0_
+  L16_17 = L16_17.pm_polltime
+  L17_18 = _UPVALUE0_
+  L17_18 = L17_18.avatar_code
+  L18_19 = _UPVALUE0_
+  L18_19 = L18_19.urlScheme
+  L19_20 = _UPVALUE0_
+  L19_20 = L19_20.showAds
+  L20_21 = _UPVALUE0_
+  L20_21 = L20_21.imgSuff
+  L21_22 = math
+  L21_22 = L21_22.floor
+  L22_23 = _UPVALUE1_
+  L22_23 = L22_23.getSceneProperties
+  L22_23 = L22_23()
+  L23_24 = _UPVALUE1_
+  L23_24 = L23_24.getAppType
+  L23_24 = L23_24()
+  L24_25 = math
+  L24_25 = L24_25.ceil
+  L25_26 = math
+  L25_26 = L25_26.abs
+  L26_27 = L22_23.prevScene
+  L27_28 = L22_23.pmsession
+  L28_29 = L22_23.start
+  L29_30 = L22_23.taps
+  L30_31 = L22_23.pop
+  L31_32 = L27_28.notifications
+  L32_33 = L27_28.sessionName
+  L33_34 = L27_28.sessionid
+  L34_35 = L27_28.nicknames
+  L35_36 = L27_28.time
+  if not L35_36 then
+    L35_36 = os
+    L35_36 = L35_36.time
+    L35_36 = L35_36()
+  end
+  L36_37 = L27_28.admin
+  L37_38 = _UPVALUE1_
+  L37_38 = L37_38.copyTable
+  L38_39 = L27_28.users
+  L37_38 = L37_38(L38_39)
+  L38_39 = _UPVALUE0_
+  L38_39 = L38_39.session
+  L38_39 = L38_39 + 1
+  L39_40 = _UPVALUE0_
+  L39_40.session = L38_39
+  L39_40 = graphics
+  L39_40 = L39_40.newMask
+  L40_41 = "mask-avatar3.png"
+  L39_40 = L39_40(L40_41)
+  L40_41 = 0
+  L41_42 = nil
+  L42_43 = 400
+  L43_44 = 0
+  L44_45 = false
+  L45_46 = ""
+  L46_47 = 0
+  L47_48 = ""
+  L48_49 = {}
+  L49_50 = {}
+  L50_51 = {}
+  L51_52 = {}
+  for L55_56, L56_57 in L52_53(L53_54) do
+    L57_58 = L56_57.udid
+    L50_51[L57_58] = true
+  end
+  L53_54(L54_55)
+  L55_56 = _W
+  L56_57 = "x"
+  L57_58 = _H
+  L58_59 = ".png"
+  L55_56 = system
+  L55_56 = L55_56.TemporaryDirectory
+  L55_56 = L1_2
+  L56_57 = L53_54
+  L54_55(L55_56, L56_57)
+  L1_2.maskX = L8_9
+  L1_2.maskY = L9_10
+  L1_2.maskScaleX = L12_13
+  L1_2.maskScaleY = L13_14
+  L56_57 = L54_55
+  L55_56 = L54_55.addEventListener
+  L57_58 = "touch"
+  function L58_59()
+    local L0_96, L1_97
+    L0_96 = true
+    return L0_96
+  end
+  L55_56(L56_57, L57_58, L58_59)
+  L56_57 = L2_3
+  L55_56 = L2_3.insert
+  L57_58 = L54_55
+  L55_56(L56_57, L57_58)
+  function L55_56(A0_98)
+    if newMsgTim then
+      timer.cancel(newMsgTim)
+      newMsgTim = nil
+    end
+    _UPVALUE0_.removeRuntimeListener("setPMsession")
+    _UPVALUE0_.removeRuntimeListener("hasEditedTextfield")
+    _UPVALUE0_.removeRuntimeListener("hasFinishedTextfield")
+    _UPVALUE0_.removeRuntimeListener("hasInitiatedTextfield")
+    _UPVALUE0_.removeRuntimeListener("clearLocalTimersAndListeners", A0_98.self_listenerid)
+  end
+  L56_57 = _UPVALUE1_
+  L56_57 = L56_57.addRuntimeListener
+  L57_58 = "clearLocalTimersAndListeners"
+  L58_59 = L55_56
+  L56_57(L57_58, L58_59)
+  function L56_57(A0_99)
+    local L1_100
+    L1_100 = _UPVALUE0_
+    if L1_100 == false then
+      L1_100 = _UPVALUE1_
+      L1_100 = L1_100.showAlert
+      L1_100("Fetching session", "Please wait for the session to load first.", {"Ok"})
+      L1_100 = A0_99.target
+      L1_100 = L1_100.group
+      L1_100.y = A0_99.target.group.origY
+    else
+      function L1_100(A0_101)
+        local L1_102, L2_103
+        L1_102 = A0_101.action
+        if L1_102 == "clicked" then
+          L1_102 = A0_101.index
+          if L1_102 == 2 then
+            L1_102 = _UPVALUE0_
+            L2_103 = _UPVALUE1_
+            L2_103 = L2_103.udid
+            if L1_102 == L2_103 then
+              L1_102 = _UPVALUE2_
+              L1_102 = L1_102.makeSprite
+              L2_103 = _UPVALUE3_
+              L2_103 = L2_103.target
+              L2_103 = L2_103.group
+              L2_103 = L2_103.origX
+              L2_103 = L2_103 + _UPVALUE3_.target.group.width * 0.5
+              L1_102 = L1_102(L2_103, _UPVALUE3_.target.group.origY)
+              L2_103 = _UPVALUE3_
+              L2_103 = L2_103.target
+              L2_103 = L2_103.scrollView
+              L2_103 = L2_103.insert
+              L2_103(L2_103, L1_102)
+              function L2_103()
+                local L0_104, L1_105, L2_106, L3_107, L4_108, L5_109
+                L0_104 = _UPVALUE0_
+                L0_104 = L0_104.showAlert
+                L4_108 = " has been kicked"
+                L4_108 = "Ok"
+                L0_104(L1_105, L2_106, L3_107)
+                L0_104 = _UPVALUE0_
+                L0_104 = L0_104.delete
+                L0_104 = L0_104(L1_105)
+                _UPVALUE2_ = L0_104
+                L0_104 = _UPVALUE3_
+                L4_108 = _UPVALUE1_
+                L4_108 = L4_108.target
+                L4_108 = L4_108.udid
+                L0_104[L1_105] = L2_106
+                L0_104 = _UPVALUE1_
+                L0_104 = L0_104.target
+                L0_104 = L0_104.group
+                L0_104 = L0_104.x
+                for L4_108, L5_109 in L1_105(L2_106) do
+                  if L0_104 < L5_109.x then
+                    _UPVALUE1_.target.group.origX = L5_109.x - _UPVALUE1_.target.spacing
+                    _UPVALUE4_.to(L5_109, {
+                      time = 200,
+                      x = L5_109.x - _UPVALUE1_.target.spacing,
+                      transition = easing.inOutQuad
+                    })
+                  end
+                end
+                L1_105.group = L2_106
+                for L4_108, L5_109 in L1_105(L2_106) do
+                  if _UPVALUE1_.target.udid == L5_109.udid then
+                    table.remove(_UPVALUE5_, L4_108)
+                    break
+                  end
+                end
+                for L4_108, L5_109 in L1_105(L2_106) do
+                  if _UPVALUE1_.target.udid == L5_109.udid then
+                    table.remove(_UPVALUE6_.users, L4_108)
+                    break
+                  end
+                end
+                L4_108 = _UPVALUE1_
+                L4_108 = L4_108.target
+                L4_108 = L4_108.nick
+                if L1_105 then
+                  L4_108 = ", "
+                  L5_109 = _UPVALUE1_
+                  L5_109 = L5_109.target
+                  L5_109 = L5_109.nick
+                  L4_108 = L4_108 .. L5_109
+                  L5_109 = ""
+                  L1_105.nicknames = L2_106
+                else
+                  L4_108 = ", "
+                  if L1_105 then
+                    L4_108 = _UPVALUE1_
+                    L4_108 = L4_108.target
+                    L4_108 = L4_108.nick
+                    L5_109 = ", "
+                    L4_108 = L4_108 .. L5_109
+                    L5_109 = ""
+                    L1_105.nicknames = L2_106
+                  elseif L1_105 then
+                    L4_108 = _UPVALUE1_
+                    L4_108 = L4_108.target
+                    L4_108 = L4_108.nick
+                    L5_109 = ""
+                    L1_105.nicknames = L2_106
+                  end
+                end
+                L2_106.pmsession = L3_107
+                L1_105(L2_106)
+              end
+              _UPVALUE2_.network_request("kick_user_from_pm", L2_103, {
+                nickname = _UPVALUE3_.target.nick,
+                session = _UPVALUE8_,
+                users = _UPVALUE6_,
+                udid = _UPVALUE1_.udid,
+                user = _UPVALUE3_.target.udid
+              })
+            end
+          else
+            L1_102 = _UPVALUE3_
+            L1_102 = L1_102.target
+            L1_102 = L1_102.group
+            L2_103 = _UPVALUE3_
+            L2_103 = L2_103.target
+            L2_103 = L2_103.group
+            L2_103 = L2_103.origY
+            L1_102.y = L2_103
+          end
+        end
+      end
+      if #_UPVALUE6_ > 1 then
+        _UPVALUE1_.showAlert("Kick " .. A0_99.target.nick .. "?", "Are you sure you want to kick this user from this session?", {"Cancel", "Yes"}, L1_100)
+      else
+        A0_99.target.group.y = A0_99.target.group.origY
+        _UPVALUE1_.showAlert("Can not kick", "You can only kick users in a Group PM. To exit from this PM swipe to delete it from your messages list or unfollow the user.", {"Ok"})
+      end
+    end
+  end
+  function L57_58(A0_110)
+    local L1_111, L2_112, L3_113, L4_114, L5_115, L6_116, L7_117, L8_118
+    L1_111 = A0_110.target
+    L1_111 = L1_111.scrollView
+    L2_112 = A0_110.target
+    L2_112 = L2_112.isMoving
+    L3_113 = A0_110.x
+    L4_114 = A0_110.xStart
+    L3_113 = L3_113 - L4_114
+    L4_114 = A0_110.y
+    L5_115 = A0_110.yStart
+    L4_114 = L4_114 - L5_115
+    L5_115 = _UPVALUE0_
+    L6_116 = L3_113
+    L5_115 = L5_115(L6_116)
+    L6_116 = _UPVALUE0_
+    L7_117 = L4_114
+    L6_116 = L6_116(L7_117)
+    L7_117 = A0_110.phase
+    L8_118 = A0_110.target
+    L8_118 = L8_118.group
+    display.getCurrentStage():setFocus(A0_110.target)
+    if L7_117 == "moved" then
+      if L5_115 > L6_116 and L5_115 > 0.5 and L2_112 == false then
+        L1_111:takeFocus(A0_110)
+      elseif _UPVALUE1_ == _UPVALUE2_.udid and (L5_115 < L6_116 and L6_116 > 0.5 or L2_112 == true) then
+        if L8_118.transition then
+          _UPVALUE3_.cancel(L8_118.transition)
+          L8_118.transition = nil
+          L8_118.y = L8_118.origY
+        end
+        L4_114 = L4_114 - 0.5
+        if L4_114 > 0 then
+          L4_114 = L4_114 * 0.15
+        end
+        L8_118.y = L8_118.origY + L4_114
+        A0_110.target.isMoving = true
+      end
+    elseif L7_117 == "ended" or L7_117 == "cancelled" then
+      if L2_112 == true then
+        if L8_118.transition then
+          _UPVALUE3_.cancel(L8_118.transition)
+          L8_118.transition = nil
+          L8_118.y = L8_118.origY
+        end
+        if L8_118.origY - L8_118.y > 40 and A0_110.target.udid ~= _UPVALUE1_ and A0_110.target.udid ~= _UPVALUE2_.udid then
+          L8_118.transition = _UPVALUE3_.to(L8_118, {
+            time = 100,
+            y = L8_118.origY - 50,
+            transition = easing.outExpo,
+            onComplete = function()
+              _UPVALUE0_.transition = nil
+              _UPVALUE1_(_UPVALUE2_)
+            end
+          })
+        else
+          if A0_110.target.udid == _UPVALUE2_.udid then
+            _UPVALUE5_.showAlert("Can not kick yourself", "You can not kick yourself from the PM session. To leave the PM session, swipe the session left in your list of PMs and tap 'Delete'.", {"Ok"})
+          elseif A0_110.target.udid == _UPVALUE1_ then
+            _UPVALUE5_.showAlert("Can not kick admin", "You can not kick the admin of the PM session.", {"Ok"})
+          end
+          L8_118.transition = _UPVALUE3_.to(L8_118, {
+            time = 100,
+            y = L8_118.origY,
+            transition = easing.outExpo,
+            onComplete = function()
+              local L1_119
+              L1_119 = _UPVALUE0_
+              L1_119.transition = nil
+            end
+          })
+        end
+        A0_110.target.isMoving = false
+      elseif L2_112 == false then
+        _UPVALUE5_.insert({
+          prevScene = "pm-messages",
+          fetchAvtr = A0_110.target.avtr,
+          fetchBios = A0_110.target.bios,
+          fetchNick = A0_110.target.nick,
+          fetchUdid = A0_110.target.udid,
+          page = "profile"
+        })
+        _UPVALUE5_.update({
+          taps = _UPVALUE6_ + 1
+        })
+        _UPVALUE3_.to(_UPVALUE7_.textfield, {
+          time = 200,
+          x = _UPVALUE7_.textfield.x - _W,
+          transition = easing.inOutQuad
+        })
+        _UPVALUE5_.dispatchEvent("clearLocalTimersAndListeners")
+        director:changeScene("profile", "overFromRightNew")
+      end
+      display.getCurrentStage():setFocus(nil)
+    end
+    return true
+  end
+  L58_59 = _UPVALUE1_
+  L58_59 = L58_59.makeToolbar
+  L59_60 = ""
+  L58_59 = L58_59(L59_60)
+  L7_8.toolbar = L58_59
+  L60_61 = L7_8
+  L59_60 = L7_8.insert
+  L61_62 = L58_59
+  L59_60(L60_61, L61_62)
+  function L59_60()
+    local L0_120, L1_121, L2_122, L3_123, L4_124, L5_125, L6_126
+    L1_121 = _UPVALUE0_
+    if L1_121 == "" then
+      L0_120 = _UPVALUE1_
+    else
+      L0_120 = _UPVALUE0_
+    end
+    L1_121 = ""
+    L2_122 = 0
+    for L6_126 in L3_123(L4_124, L5_125) do
+      L2_122 = L2_122 + 1
+      if L2_122 == _UPVALUE2_(15 * _UPVALUE3_) then
+        L1_121 = L1_121 .. "..."
+        break
+      else
+        L1_121 = L1_121 .. L6_126
+      end
+    end
+    L3_123(L4_124, L5_125)
+    L3_123(L4_124, L5_125)
+    L3_123.x = L4_124
+    L3_123.y = L4_124
+  end
+  L58_59.updateLabel = L59_60
+  L59_60 = L58_59.updateLabel
+  L59_60()
+  function L59_60(A0_127)
+    _UPVALUE0_.remove({
+      "prevScene",
+      "pmsession",
+      "start",
+      "page",
+      "pop"
+    })
+    _UPVALUE1_.to(_UPVALUE2_.textfield, {
+      time = 200,
+      y = _UPVALUE2_.textfield.y + _H,
+      transition = easing.inOutQuad
+    })
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE3_, "toBottom")
+    return true
+  end
+  L60_61 = _UPVALUE3_
+  L60_61 = L60_61.newButton
+  L61_62 = {}
+  L61_62.top = 25
+  L61_62.left = 10
+  L61_62.width = 52
+  L61_62.height = 30
+  L61_62.default = "back2.png"
+  L61_62.over = "back2-over.png"
+  L61_62.onRelease = L59_60
+  L60_61 = L60_61(L61_62)
+  L61_62 = L58_59.contents
+  L62_63 = L61_62
+  L61_62 = L61_62.insert
+  L63_64 = L60_61
+  L61_62(L62_63, L63_64)
+  L61_62 = display
+  L61_62 = L61_62.newRect
+  L62_63 = 0
+  L63_64 = L58_59.y
+  L64_65 = L58_59.height
+  L63_64 = L63_64 + L64_65
+  L64_65 = _W
+  L61_62 = L61_62(L62_63, L63_64, L64_65, L65_66)
+  L63_64 = L61_62
+  L62_63 = L61_62.setFillColor
+  L64_65 = unpack
+  L94_95 = L64_65(L65_66)
+  L62_63(L63_64, L64_65, L65_66, L66_67, L67_68, L68_69, L69_70, L70_71, L71_72, L72_73, L73_74, L74_75, L75_76, L76_77, L77_78, L78_79, L79_80, L80_81, L81_82, L82_83, L83_84, L84_85, L85_86, L86_87, L87_88, L88_89, L89_90, L90_91, L91_92, L92_93, L93_94, L94_95, L64_65(L65_66))
+  L62_63 = L58_59.bg
+  L63_64 = L62_63
+  L62_63 = L62_63.insert
+  L64_65 = L61_62
+  L62_63(L63_64, L64_65)
+  L62_63 = display
+  L62_63 = L62_63.newRect
+  L63_64 = 0
+  L64_65 = L61_62.y
+  L64_65 = L64_65 + L65_66
+  L62_63 = L62_63(L63_64, L64_65, L65_66, L66_67)
+  L61_62.line = L62_63
+  L62_63 = L61_62.line
+  L63_64 = L62_63
+  L62_63 = L62_63.setFillColor
+  L64_65 = 0
+  L62_63(L63_64, L64_65, L65_66, L66_67)
+  L62_63 = L58_59.bg
+  L63_64 = L62_63
+  L62_63 = L62_63.insert
+  L64_65 = L61_62.line
+  L62_63(L63_64, L64_65)
+  L62_63 = _UPVALUE3_
+  L62_63 = L62_63.newScrollView
+  L63_64 = {}
+  L64_65 = _W
+  L64_65 = L64_65 - 40
+  L63_64.width = L64_65
+  L63_64.height = 40
+  L64_65 = {
+    L65_66,
+    L66_67,
+    L67_68,
+    L68_69
+  }
+  L68_69 = 0
+  L63_64.bgColor = L64_65
+  L64_65 = system
+  L64_65 = L64_65.TemporaryDirectory
+  L63_64.baseDir = L64_65
+  L64_65 = "mask-"
+  L64_65 = L64_65 .. L65_66 .. L66_67
+  L63_64.maskFile = L64_65
+  L63_64.hideScrollBar = true
+  L62_63 = L62_63(L63_64)
+  L64_65 = L62_63
+  L63_64 = L62_63.setReferencePoint
+  L63_64(L64_65, L65_66)
+  L62_63.x = 0
+  L63_64 = L61_62.y
+  L64_65 = L61_62.height
+  L64_65 = L64_65 * 0.5
+  L63_64 = L63_64 - L64_65
+  L62_63.y = L63_64
+  L63_64 = L62_63.content
+  L63_64.verticalScrollDisabled = true
+  L63_64 = L62_63.height
+  L63_64 = L63_64 * 0.5
+  L63_64 = L63_64 + 2
+  L62_63.avatars_y = L63_64
+  L63_64 = L58_59.contents
+  L64_65 = L63_64
+  L63_64 = L63_64.insert
+  L63_64(L64_65, L65_66)
+  L63_64 = 0
+  function L64_65(A0_128)
+    local L1_129, L2_130, L3_131, L4_132, L5_133, L6_134, L7_135, L8_136, L9_137, L10_138, L11_139, L12_140, L13_141
+    L1_129 = A0_128.phase
+    if L1_129 == "moved" then
+      L2_130 = _UPVALUE0_
+      L3_131 = A0_128.xStart
+      L4_132 = A0_128.x
+      L3_131 = L3_131 - L4_132
+      L2_130 = L2_130(L3_131)
+      L3_131 = _UPVALUE0_
+      L4_132 = A0_128.yStart
+      L5_133 = A0_128.y
+      L4_132 = L4_132 - L5_133
+      L3_131 = L3_131(L4_132)
+      if L2_130 > L3_131 or L2_130 > 2 or L3_131 > 2 then
+        L4_132 = _UPVALUE1_
+        L5_133 = L4_132
+        L4_132 = L4_132.takeFocus
+        L6_134 = A0_128
+        L4_132(L5_133, L6_134)
+      end
+    elseif L1_129 == "release" or L1_129 == "cancelled" then
+      L2_130 = _UPVALUE2_
+      if L2_130 == false then
+        L2_130 = _UPVALUE3_
+        L2_130 = L2_130.showAlert
+        L3_131 = "Fetching session"
+        L4_132 = "Please wait for the session to load first."
+        L5_133 = {L6_134}
+        L6_134 = "Ok"
+        L2_130(L3_131, L4_132, L5_133)
+      else
+        L2_130 = ""
+        L3_131 = 30
+        L4_132 = _UPVALUE4_
+        L4_132 = L4_132 + 1
+        _UPVALUE4_ = L4_132
+        L4_132 = display
+        L4_132 = L4_132.newGroup
+        L4_132 = L4_132()
+        L5_133 = _UPVALUE5_
+        L6_134 = L5_133
+        L5_133 = L5_133.insert
+        L7_135 = L4_132
+        L5_133(L6_134, L7_135)
+        L5_133 = _UPVALUE4_
+        L4_132.tips = L5_133
+        L5_133 = display
+        L5_133 = L5_133.newImageRect
+        L6_134 = "pm-followers-bg.png"
+        L7_135 = _W
+        L8_136 = _H
+        L5_133 = L5_133(L6_134, L7_135, L8_136)
+        L6_134 = _UPVALUE6_
+        L5_133.x = L6_134
+        L6_134 = _UPVALUE7_
+        L5_133.y = L6_134
+        L7_135 = L5_133
+        L6_134 = L5_133.addEventListener
+        L8_136 = "touch"
+        function L9_137()
+          local L0_142, L1_143
+          L0_142 = true
+          return L0_142
+        end
+        L6_134(L7_135, L8_136, L9_137)
+        L7_135 = L4_132
+        L6_134 = L4_132.insert
+        L8_136 = L5_133
+        L6_134(L7_135, L8_136)
+        function L6_134()
+          _UPVALUE0_ = _UPVALUE0_ + 1
+          _UPVALUE1_.to(_UPVALUE2_, {
+            time = 200,
+            y = _H,
+            transition = easing.inOutQuad,
+            onComplete = function()
+              _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+            end
+          }, true)
+          return true
+        end
+        L7_135 = _UPVALUE9_
+        L7_135 = L7_135.newButton
+        L8_136 = {}
+        L8_136.top = 25
+        L8_136.left = 10
+        L8_136.width = 52
+        L8_136.height = 30
+        L8_136.default = "cancel.png"
+        L8_136.over = "cancel-over.png"
+        L8_136.onRelease = L6_134
+        L7_135 = L7_135(L8_136)
+        L9_137 = L4_132
+        L8_136 = L4_132.insert
+        L10_138 = L7_135
+        L8_136(L9_137, L10_138)
+        L8_136 = display
+        L8_136 = L8_136.newText
+        L9_137 = {}
+        L9_137.text = "Select users to add"
+        L10_138 = _UPVALUE10_
+        L10_138 = L10_138.fonts
+        L10_138 = L10_138.bold
+        L9_137.font = L10_138
+        L9_137.fontSize = 15
+        L8_136 = L8_136(L9_137)
+        L10_138 = L8_136
+        L9_137 = L8_136.setReferencePoint
+        L11_139 = display
+        L11_139 = L11_139.TopCenterReferencePoint
+        L9_137(L10_138, L11_139)
+        L9_137 = _UPVALUE6_
+        L8_136.x = L9_137
+        L8_136.y = 23
+        L10_138 = L8_136
+        L9_137 = L8_136.setFillColor
+        L11_139 = 255
+        L12_140 = 255
+        L13_141 = 255
+        L9_137(L10_138, L11_139, L12_140, L13_141, 230)
+        L10_138 = L4_132
+        L9_137 = L4_132.insert
+        L11_139 = L8_136
+        L9_137(L10_138, L11_139)
+        L9_137 = display
+        L9_137 = L9_137.newText
+        L10_138 = {}
+        L10_138.text = "Remember the user must be following all participants in the Group PM"
+        L10_138.width = 180
+        L10_138.height = 0
+        L11_139 = _UPVALUE10_
+        L11_139 = L11_139.fonts
+        L11_139 = L11_139.light
+        L10_138.font = L11_139
+        L10_138.fontSize = 8
+        L10_138.align = "center"
+        L9_137 = L9_137(L10_138)
+        L11_139 = L9_137
+        L10_138 = L9_137.setReferencePoint
+        L12_140 = display
+        L12_140 = L12_140.TopCenterReferencePoint
+        L10_138(L11_139, L12_140)
+        L10_138 = _UPVALUE6_
+        L9_137.x = L10_138
+        L9_137.y = 40
+        L11_139 = L9_137
+        L10_138 = L9_137.setFillColor
+        L12_140 = 255
+        L13_141 = 255
+        L10_138(L11_139, L12_140, L13_141, 255, 230)
+        L11_139 = L4_132
+        L10_138 = L4_132.insert
+        L12_140 = L9_137
+        L10_138(L11_139, L12_140)
+        L10_138 = display
+        L10_138 = L10_138.newGroup
+        L10_138 = L10_138()
+        L12_140 = L4_132
+        L11_139 = L4_132.insert
+        L13_141 = L10_138
+        L11_139(L12_140, L13_141)
+        L11_139 = _UPVALUE3_
+        L11_139 = L11_139.makeSprite
+        L12_140 = _UPVALUE6_
+        L13_141 = 112
+        L11_139 = L11_139(L12_140, L13_141)
+        L13_141 = L10_138
+        L12_140 = L10_138.insert
+        L12_140(L13_141, L11_139)
+        L12_140 = display
+        L12_140 = L12_140.newText
+        L13_141 = {}
+        L13_141.text = "Fetching mutual followers"
+        L13_141.font = _UPVALUE10_.fonts.light
+        L13_141.fontSize = 12
+        L12_140 = L12_140(L13_141)
+        L13_141 = L12_140.setReferencePoint
+        L13_141(L12_140, display.CenterReferencePoint)
+        L13_141 = _UPVALUE6_
+        L12_140.x = L13_141
+        L13_141 = L11_139.y
+        L13_141 = L13_141 + L11_139.height
+        L12_140.y = L13_141
+        L13_141 = L10_138.insert
+        L13_141(L10_138, L12_140)
+        function L13_141(A0_144)
+          local L1_145, L2_146
+          L1_145 = _UPVALUE0_
+          L1_145 = L1_145.tips
+          L2_146 = _UPVALUE1_
+          if L1_145 == L2_146 then
+            L1_145 = _UPVALUE2_
+            L1_145 = L1_145.decode
+            L2_146 = A0_144.response
+            L1_145 = L1_145(L2_146)
+            L2_146 = _UPVALUE3_
+            if L2_146 then
+              L2_146 = _UPVALUE4_
+              L2_146 = L2_146.delete
+              L2_146 = L2_146(_UPVALUE3_)
+              _UPVALUE3_ = L2_146
+            end
+            L2_146 = native
+            L2_146 = L2_146.setActivityIndicator
+            L2_146(false)
+            L2_146 = _UPVALUE5_
+            L2_146 = L2_146.newTableView
+            L2_146 = L2_146({
+              top = 64,
+              width = _W,
+              height = _H - 64,
+              bgColor = {
+                0,
+                0,
+                0,
+                0
+              },
+              baseDir = system.TemporaryDirectory,
+              maskFile = "mask-" .. _W .. "x" .. _H - 64 .. ".png"
+            })
+            _UPVALUE0_:insert(L2_146)
+            function L2_146.populate()
+              _UPVALUE0_:insertRow({
+                lineColor = {
+                  0,
+                  0,
+                  0,
+                  0
+                },
+                rowColor = {
+                  0,
+                  0,
+                  0,
+                  0
+                },
+                onRender = _UPVALUE1_,
+                height = 60,
+                id = _UPVALUE2_
+              })
+              for _FORV_4_ = 1, #_UPVALUE3_ do
+              end
+              for _FORV_4_ = 1, #_UPVALUE3_ do
+                _UPVALUE3_[_FORV_4_].version = tonumber(_UPVALUE3_[_FORV_4_].version)
+                if _UPVALUE2_ == "" or string.find(_UPVALUE3_[_FORV_4_].nickname:lower(), _UPVALUE2_:lower()) then
+                  if ((_UPVALUE2_ == "" or string.find(_UPVALUE3_[_FORV_4_].nickname:lower(), _UPVALUE2_:lower())) and 0 + 1) == 1 then
+                    _UPVALUE3_[_FORV_4_].bgimg = "listrow4"
+                  elseif _FORV_4_ == 1 then
+                    _UPVALUE3_[_FORV_4_].bgimg = "listrow1"
+                  elseif _FORV_4_ == ((_UPVALUE2_ == "" or string.find(_UPVALUE3_[_FORV_4_].nickname:lower(), _UPVALUE2_:lower())) and 0 + 1) then
+                    _UPVALUE3_[_FORV_4_].bgimg = "listrow3"
+                  else
+                    _UPVALUE3_[_FORV_4_].bgimg = "listrow2"
+                  end
+                  _UPVALUE0_:insertRow({
+                    lineColor = {
+                      0,
+                      0,
+                      0,
+                      0
+                    },
+                    rowColor = {
+                      0,
+                      0,
+                      0,
+                      0
+                    },
+                    onRender = _UPVALUE4_,
+                    onEvent = _UPVALUE5_,
+                    height = 45,
+                    id = _UPVALUE3_[_FORV_4_]
+                  })
+                end
+              end
+            end
+            L2_146.populate()
+          end
+        end
+        for _FORV_18_ = 1, #_UPVALUE13_ do
+          ({})[_UPVALUE13_[_FORV_18_].udid] = true
+        end
+        ;({})[_FOR_.udid] = true
+        _UPVALUE3_.network_request("get_mutual_followers_of_specific_users", L13_141, {
+          participants = {},
+          udid = _UPVALUE10_.udid
+        })
+        _UPVALUE8_.from(L4_132, {
+          time = 200,
+          y = _H,
+          transition = easing.inOutQuad
+        }, true)
+      end
+    end
+    L2_130 = true
+    return L2_130
+  end
+  L62_63.makeAddUsersButton = L65_66
+  L62_63.addUser = L65_66
+  for L68_69 = 1, #L37_38 do
+    L69_70 = L37_38[L68_69]
+    L69_70 = L69_70.udid
+    if L69_70 == L36_37 then
+      L69_70 = L62_63.addUser
+      L70_71 = L37_38[L68_69]
+      L69_70(L70_71)
+      break
+    end
+  end
+  for L68_69 = 1, #L37_38 do
+    if L68_69 == 1 then
+      L69_70 = L62_63.addUser
+      L70_71 = {}
+      L70_71.avatar = L17_18
+      L71_72 = _UPVALUE0_
+      L71_72 = L71_72.nickname
+      L70_71.nickname = L71_72
+      L71_72 = _UPVALUE0_
+      L71_72 = L71_72.udid
+      L70_71.udid = L71_72
+      L71_72 = _UPVALUE0_
+      L71_72 = L71_72.userbios
+      L70_71.bios = L71_72
+      L69_70(L70_71)
+    end
+    L69_70 = L37_38[L68_69]
+    L69_70 = L69_70.udid
+    if L69_70 ~= L36_37 then
+      L69_70 = L62_63.addUser
+      L70_71 = L37_38[L68_69]
+      L69_70(L70_71)
+    end
+  end
+  if L36_37 == L65_66 then
+    if L65_66 == "pm" then
+      L65_66()
+    end
+  end
+  L68_69 = L62_63.width
+  L68_69 = L68_69 + 1
+  L69_70 = L62_63.height
+  L68_69 = 0
+  L69_70 = 0
+  L70_71 = 0
+  L71_72 = 0
+  L66_67(L67_68, L68_69, L69_70, L70_71, L71_72)
+  L68_69 = L65_66
+  L66_67(L67_68, L68_69)
+  L68_69 = L62_63.height
+  L68_69 = L68_69 * 0.5
+  function L68_69(A0_147)
+    local L1_148, L2_149, L3_150
+    L1_148 = A0_147.target
+    L1_148.isVisible = false
+    L2_149 = L1_148.opposite
+    L2_149.isVisible = false
+    L2_149 = _UPVALUE0_
+    L2_149 = L2_149.makeSprite
+    L3_150 = _UPVALUE1_
+    L2_149 = L2_149(L3_150, _UPVALUE2_)
+    L3_150 = _UPVALUE3_
+    L3_150 = L3_150.contents
+    L3_150 = L3_150.insert
+    L3_150(L3_150, L2_149)
+    function L3_150()
+      local L0_151, L1_152
+      L0_151 = _UPVALUE1_
+      L0_151 = L0_151.delete
+      L1_152 = _UPVALUE0_
+      L0_151 = L0_151(L1_152)
+      _UPVALUE0_ = L0_151
+      L0_151 = ""
+      L1_152 = nil
+      if _UPVALUE2_.id == "yes" then
+        L0_151, L1_152 = "on", "You will now receive a notification when a new PM has been received in this session."
+      elseif _UPVALUE2_.id == "no" then
+        L0_151, L1_152 = "off", "You will not be notified of new PMs in this session."
+      end
+      _UPVALUE1_.showAlert("Notifications " .. L0_151, L1_152, {"Ok"})
+      _UPVALUE2_.opposite.isVisible = true
+    end
+    _UPVALUE0_.network_request("toggle_pm_notification", L3_150, {
+      session = _UPVALUE4_,
+      toggle = L1_148.id,
+      udid = _UPVALUE5_.udid
+    })
+    return true
+  end
+  L69_70 = _UPVALUE3_
+  L69_70 = L69_70.newButton
+  L70_71 = {}
+  L70_71.id = "no"
+  L70_71.width = 31
+  L70_71.height = 31
+  L70_71.default = "pm_notifications_on.png"
+  L70_71.over = "pm_notifications_on-over.png"
+  L70_71.onRelease = L68_69
+  L69_70 = L69_70(L70_71)
+  L71_72 = L69_70
+  L70_71 = L69_70.setReferencePoint
+  L72_73 = display
+  L72_73 = L72_73.CenterReferencePoint
+  L70_71(L71_72, L72_73)
+  L69_70.x = L66_67
+  L69_70.y = L67_68
+  L70_71 = L58_59.contents
+  L71_72 = L70_71
+  L70_71 = L70_71.insert
+  L72_73 = L69_70
+  L70_71(L71_72, L72_73)
+  L70_71 = _UPVALUE3_
+  L70_71 = L70_71.newButton
+  L71_72 = {}
+  L71_72.id = "yes"
+  L71_72.width = 31
+  L71_72.height = 31
+  L71_72.default = "pm_notifications_off.png"
+  L71_72.over = "pm_notifications_off-over.png"
+  L71_72.onRelease = L68_69
+  L70_71 = L70_71(L71_72)
+  L72_73 = L70_71
+  L71_72 = L70_71.setReferencePoint
+  L73_74 = display
+  L73_74 = L73_74.CenterReferencePoint
+  L71_72(L72_73, L73_74)
+  L70_71.x = L66_67
+  L70_71.y = L67_68
+  L71_72 = L58_59.contents
+  L72_73 = L71_72
+  L71_72 = L71_72.insert
+  L73_74 = L70_71
+  L71_72(L72_73, L73_74)
+  L69_70.opposite = L70_71
+  L70_71.opposite = L69_70
+  if L31_32 == "yes" then
+    L70_71.isVisible = false
+  elseif L31_32 == "no" then
+    L69_70.isVisible = false
+  end
+  function L71_72(A0_153)
+    A0_153 = A0_153:gsub("-", " ")
+    A0_153 = A0_153:gsub(":", " ")
+    A0_153 = A0_153 .. " "
+    for _FORV_5_ = 1, #_UPVALUE0_.split(A0_153, " ") do
+      _UPVALUE0_.split(A0_153, " ")[_FORV_5_] = tonumber(_UPVALUE0_.split(A0_153, " ")[_FORV_5_])
+    end
+    return _FOR_.time({
+      year = _UPVALUE0_.split(A0_153, " ")[1],
+      month = _UPVALUE0_.split(A0_153, " ")[2],
+      day = _UPVALUE0_.split(A0_153, " ")[3],
+      hour = _UPVALUE0_.split(A0_153, " ")[4],
+      min = _UPVALUE0_.split(A0_153, " ")[5],
+      sec = _UPVALUE0_.split(A0_153, " ")[6]
+    })
+  end
+  function L72_73(A0_154)
+    _UPVALUE0_.animateToolbar(A0_154, {
+      toolbar = _UPVALUE1_,
+      list = _UPVALUE2_.tableView
+    })
+    return true
+  end
+  L73_74 = _UPVALUE3_
+  L73_74 = L73_74.newTableView
+  L74_75 = {}
+  L75_76 = L61_62.y
+  L76_77 = L61_62.height
+  L76_77 = L76_77 * 0.5
+  L75_76 = L75_76 + L76_77
+  L74_75.top = L75_76
+  L75_76 = _W
+  L74_75.width = L75_76
+  L75_76 = _H
+  L75_76 = L75_76 - 257
+  L74_75.height = L75_76
+  L75_76 = {
+    L76_77,
+    L77_78,
+    L78_79,
+    L79_80
+  }
+  L76_77 = 0
+  L77_78 = 0
+  L78_79 = 0
+  L79_80 = 0
+  L74_75.bgColor = L75_76
+  L74_75.topPadding = 3
+  L74_75.bottomPadding = 10
+  L73_74 = L73_74(L74_75)
+  L58_59.list = L73_74
+  L4_5.tableView = L73_74
+  L75_76 = L4_5
+  L74_75 = L4_5.insert
+  L76_77 = L73_74
+  L74_75(L75_76, L76_77)
+  function L74_75(A0_155, A1_156)
+    A1_156 = A1_156 or 0
+    if _UPVALUE0_.virtualContentHeight > _UPVALUE0_.content.maskHeight then
+      _UPVALUE0_:scrollToY(-_UPVALUE0_.virtualContentHeight + _UPVALUE0_.content.maskHeight, A1_156)
+    end
+  end
+  L73_74.scrollToBottom = L74_75
+  function L74_75(A0_157)
+    local L1_158, L2_159, L3_160, L4_161, L5_162
+    L1_158 = A0_157.target
+    L1_158 = L1_158.height
+    L2_159 = L1_158 * 0.5
+    L3_160 = A0_157.view
+    L4_161 = A0_157.id
+    L4_161 = L4_161[1]
+    L5_162 = display
+    L5_162 = L5_162.newText
+    L5_162 = L5_162({
+      text = "",
+      font = _UPVALUE0_.fonts.light,
+      fontSize = 11
+    })
+    L5_162.origX = _UPVALUE1_
+    L5_162.origY = L2_159 + 1
+    L5_162:setFillColor(255, 255, 255, 180)
+    L3_160.date = L5_162
+    L3_160:insert(L5_162)
+    function L3_160.setDate(A0_163)
+      local L1_164, L2_165
+      L1_164 = ""
+      if A0_163 <= 86400 then
+        if A0_163 <= 60 then
+          L2_165 = A0_163
+          L1_164 = L2_165 .. "s ago"
+        elseif A0_163 <= 3600 then
+          L2_165 = _UPVALUE0_
+          L2_165 = L2_165(A0_163 / 60)
+          if L2_165 == 1 then
+            L1_164 = L2_165 .. " minute ago"
+          else
+            L1_164 = L2_165 .. " minutes ago"
+          end
+        else
+          L2_165 = _UPVALUE0_
+          L2_165 = L2_165(A0_163 / 3600)
+          if L2_165 == 1 then
+            L1_164 = L2_165 .. " hour ago"
+          else
+            L1_164 = L2_165 .. " hours ago"
+          end
+        end
+      elseif A0_163 <= 172800 then
+        L1_164 = "Yesterday"
+      elseif A0_163 <= 2629743 then
+        L2_165 = _UPVALUE0_
+        L2_165 = L2_165(A0_163 / 86400)
+        L1_164 = L2_165 .. " days ago"
+      elseif A0_163 <= 31556926 then
+        L2_165 = _UPVALUE0_
+        L2_165 = L2_165(A0_163 / 2629743)
+        if L2_165 == 1 then
+          L1_164 = L2_165 .. " month ago"
+        else
+          L1_164 = L2_165 .. " months ago"
+        end
+      else
+        L2_165 = _UPVALUE0_
+        L2_165 = L2_165(A0_163 / 31556926)
+        if L2_165 == 1 then
+          L1_164 = L2_165 .. " year ago"
+        else
+          L1_164 = L2_165 .. " years ago"
+        end
+      end
+      L2_165 = _UPVALUE1_
+      L2_165 = L2_165.setText
+      L2_165(L2_165, L1_164)
+      L2_165 = _UPVALUE1_
+      L2_165 = L2_165.setReferencePoint
+      L2_165(L2_165, display.CenterReferencePoint)
+      L2_165 = _UPVALUE1_
+      L2_165.x = _UPVALUE1_.origX
+      L2_165 = _UPVALUE1_
+      L2_165.y = _UPVALUE1_.origY
+    end
+    L3_160.setDate(L4_161.diff + (os.time() - L4_161.insertTime))
+  end
+  function L75_76(A0_166)
+    local L1_167, L2_168, L3_169, L4_170, L5_171, L6_172, L7_173, L8_174, L9_175, L10_176, L11_177, L12_178, L13_179, L14_180, L15_181
+    L1_167 = _UPVALUE0_
+    L1_167 = L1_167.content
+    L1_167 = L1_167.rows
+    L2_168 = A0_166.index
+    L1_167 = L1_167[L2_168]
+    L1_167 = L1_167.hasAnimated
+    if not L1_167 then
+      L1_167 = _UPVALUE0_
+      L1_167 = L1_167.content
+      L1_167 = L1_167.rows
+      L2_168 = A0_166.index
+      L1_167 = L1_167[L2_168]
+      L1_167.hasAnimated = false
+    end
+    L1_167 = A0_166.target
+    L1_167 = L1_167.height
+    L2_168 = L1_167 * 0.5
+    L3_169 = A0_166.view
+    L4_170 = A0_166.id
+    L4_170 = L4_170[1]
+    L5_171 = A0_166.id
+    L5_171 = L5_171[2]
+    L6_172 = L4_170.latestUnix
+    L7_173 = L4_170.udid
+    L8_174 = L4_170.unix
+    L9_175 = L4_170.pre
+    L10_176 = _UPVALUE1_
+    L10_176 = #L10_176
+    L10_176 = L10_176 + 1
+    L11_177 = _UPVALUE1_
+    L12_178 = {}
+    L11_177[L10_176] = L12_178
+    L11_177 = display
+    L11_177 = L11_177.newGroup
+    L11_177 = L11_177()
+    L13_179 = L3_169
+    L12_178 = L3_169.insert
+    L14_180 = L11_177
+    L12_178(L13_179, L14_180)
+    L12_178 = L4_170.type
+    if L12_178 ~= "alert" then
+      L12_178 = L4_170.type
+      if L12_178 ~= "joined" then
+        L12_178 = L4_170.type
+        if L12_178 ~= "left" then
+          L12_178 = L4_170.type
+        end
+      end
+    else
+      if L12_178 == "kicked" then
+        L12_178 = _UPVALUE1_
+        L12_178 = L12_178[L10_176]
+        L13_179 = display
+        L13_179 = L13_179.newText
+        L14_180 = {}
+        L15_181 = L4_170.message
+        L14_180.text = L15_181
+        L15_181 = _W
+        L15_181 = L15_181 - 46
+        L14_180.width = L15_181
+        L14_180.height = 0
+        L15_181 = _UPVALUE2_
+        L15_181 = L15_181.fonts
+        L15_181 = L15_181.bold
+        L14_180.font = L15_181
+        L14_180.fontSize = 13
+        L14_180.align = "center"
+        L13_179 = L13_179(L14_180)
+        L12_178.text = L13_179
+        L12_178 = _UPVALUE1_
+        L12_178 = L12_178[L10_176]
+        L12_178 = L12_178.text
+        L13_179 = L12_178
+        L12_178 = L12_178.setReferencePoint
+        L14_180 = display
+        L14_180 = L14_180.CenterReferencePoint
+        L12_178(L13_179, L14_180)
+        L12_178 = _UPVALUE1_
+        L12_178 = L12_178[L10_176]
+        L12_178 = L12_178.text
+        L13_179 = _UPVALUE3_
+        L12_178.x = L13_179
+        L12_178 = _UPVALUE1_
+        L12_178 = L12_178[L10_176]
+        L12_178 = L12_178.text
+        L13_179 = L2_168 + 4
+        L12_178.y = L13_179
+        L13_179 = L11_177
+        L12_178 = L11_177.insert
+        L14_180 = _UPVALUE1_
+        L14_180 = L14_180[L10_176]
+        L14_180 = L14_180.text
+        L12_178(L13_179, L14_180)
+    end
+    else
+      L12_178 = display
+      L12_178 = L12_178.newText
+      L13_179 = {}
+      L14_180 = L4_170.message
+      L13_179.text = L14_180
+      L14_180 = _W
+      L14_180 = L14_180 - 46
+      L13_179.width = L14_180
+      L13_179.height = 0
+      L14_180 = _UPVALUE2_
+      L14_180 = L14_180.fonts
+      L14_180 = L14_180.light
+      L13_179.font = L14_180
+      L13_179.fontSize = 13
+      L12_178 = L12_178(L13_179)
+      L13_179 = L12_178.height
+      L14_180 = _UPVALUE4_
+      L14_180 = L14_180.delete
+      L15_181 = L12_178
+      L14_180 = L14_180(L15_181)
+      L12_178 = L14_180
+      L14_180 = _UPVALUE2_
+      L14_180 = L14_180.udid
+      if L7_173 == L14_180 then
+        L14_180 = _UPVALUE2_
+        L14_180 = L14_180.udid
+        if L9_175 == L14_180 then
+          L14_180 = L6_172 + 600
+          if L8_174 <= L14_180 then
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L15_181 = display
+            L15_181 = L15_181.newText
+            L15_181 = L15_181({
+              text = L4_170.message,
+              width = _W - 46,
+              height = L13_179,
+              font = _UPVALUE2_.fonts.light,
+              fontSize = 13,
+              align = "right"
+            })
+            L14_180.text = L15_181
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L14_180 = L14_180.text
+            L15_181 = L14_180
+            L14_180 = L14_180.setReferencePoint
+            L14_180(L15_181, display.TopRightReferencePoint)
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L14_180 = L14_180.text
+            L15_181 = _W
+            L15_181 = L15_181 - 38
+            L14_180.x = L15_181
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L14_180 = L14_180.text
+            L14_180.y = 0
+            L15_181 = L11_177
+            L14_180 = L11_177.insert
+            L14_180(L15_181, _UPVALUE1_[L10_176].text)
+          end
+        else
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L15_181 = display
+          L15_181 = L15_181.newText
+          L15_181 = L15_181({
+            text = L4_170.nickname,
+            font = _UPVALUE2_.fonts.bold,
+            fontSize = 13
+          })
+          L14_180.name = L15_181
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.name
+          L15_181 = L14_180
+          L14_180 = L14_180.setReferencePoint
+          L14_180(L15_181, display.TopRightReferencePoint)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.name
+          L15_181 = _W
+          L15_181 = L15_181 - 38
+          L14_180.x = L15_181
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.name
+          L14_180.y = 0
+          L15_181 = L3_169
+          L14_180 = L3_169.insert
+          L14_180(L15_181, _UPVALUE1_[L10_176].name)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L15_181 = display
+          L15_181 = L15_181.newText
+          L15_181 = L15_181({
+            text = L4_170.message,
+            width = _W - 46,
+            height = L13_179,
+            font = _UPVALUE2_.fonts.light,
+            fontSize = 13,
+            align = "right"
+          })
+          L14_180.text = L15_181
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.text
+          L15_181 = L14_180
+          L14_180 = L14_180.setReferencePoint
+          L14_180(L15_181, display.TopRightReferencePoint)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.text
+          L15_181 = _W
+          L15_181 = L15_181 - 38
+          L14_180.x = L15_181
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.text
+          L14_180.y = 15
+          L15_181 = L11_177
+          L14_180 = L11_177.insert
+          L14_180(L15_181, _UPVALUE1_[L10_176].text)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L15_181 = _UPVALUE5_
+          L15_181 = L15_181.makeAvatar
+          L15_181 = L15_181({scale = 3, avatar = _UPVALUE6_})
+          L14_180.user_avatar = L15_181
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L15_181 = L14_180
+          L14_180 = L14_180.setReferencePoint
+          L14_180(L15_181, display.TopRightReferencePoint)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L15_181 = _W
+          L15_181 = L15_181 - 6
+          L14_180.x = L15_181
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L14_180.y = 3
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L15_181 = L14_180
+          L14_180 = L14_180.setMask
+          L14_180(L15_181, _UPVALUE7_)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L14_180.maskScaleX = 0.5
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L14_180.maskScaleY = 0.5
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L14_180 = L14_180.isFromImage
+          if L14_180 == false then
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L14_180 = L14_180.user_avatar
+            L15_181 = _UPVALUE1_
+            L15_181 = L15_181[L10_176]
+            L15_181 = L15_181.user_avatar
+            L15_181 = L15_181.width
+            L15_181 = L15_181 * 0.5
+            L14_180.maskX = L15_181
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L14_180 = L14_180.user_avatar
+            L15_181 = _UPVALUE1_
+            L15_181 = L15_181[L10_176]
+            L15_181 = L15_181.user_avatar
+            L15_181 = L15_181.height
+            L15_181 = L15_181 * 0.5
+            L14_180.maskY = L15_181
+          end
+          L15_181 = L3_169
+          L14_180 = L3_169.insert
+          L14_180(L15_181, _UPVALUE1_[L10_176].user_avatar)
+        end
+      else
+        L14_180 = L4_170.udid
+        if L9_175 == L14_180 then
+          L14_180 = L6_172 + 600
+          if L8_174 <= L14_180 then
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L15_181 = display
+            L15_181 = L15_181.newText
+            L15_181 = L15_181({
+              text = L4_170.message,
+              width = _W - 46,
+              height = L13_179,
+              font = _UPVALUE2_.fonts.light,
+              fontSize = 13,
+              align = "left"
+            })
+            L14_180.text = L15_181
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L14_180 = L14_180.text
+            L15_181 = L14_180
+            L14_180 = L14_180.setReferencePoint
+            L14_180(L15_181, display.TopLeftReferencePoint)
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L14_180 = L14_180.text
+            L14_180.x = 38
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L14_180 = L14_180.text
+            L14_180.y = 0
+            L15_181 = L11_177
+            L14_180 = L11_177.insert
+            L14_180(L15_181, _UPVALUE1_[L10_176].text)
+          end
+        else
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L15_181 = display
+          L15_181 = L15_181.newText
+          L15_181 = L15_181({
+            text = L4_170.nickname,
+            font = _UPVALUE2_.fonts.bold,
+            fontSize = 13
+          })
+          L14_180.name = L15_181
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.name
+          L15_181 = L14_180
+          L14_180 = L14_180.setReferencePoint
+          L14_180(L15_181, display.TopLeftReferencePoint)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.name
+          L14_180.x = 38
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.name
+          L14_180.y = 0
+          L15_181 = L3_169
+          L14_180 = L3_169.insert
+          L14_180(L15_181, _UPVALUE1_[L10_176].name)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L15_181 = display
+          L15_181 = L15_181.newText
+          L15_181 = L15_181({
+            text = L4_170.message,
+            width = _W - 46,
+            height = L13_179,
+            font = _UPVALUE2_.fonts.light,
+            fontSize = 13,
+            align = "left"
+          })
+          L14_180.text = L15_181
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.text
+          L15_181 = L14_180
+          L14_180 = L14_180.setReferencePoint
+          L14_180(L15_181, display.TopLeftReferencePoint)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.text
+          L14_180.x = 38
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.text
+          L14_180.y = 15
+          L15_181 = L11_177
+          L14_180 = L11_177.insert
+          L14_180(L15_181, _UPVALUE1_[L10_176].text)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L15_181 = _UPVALUE5_
+          L15_181 = L15_181.makeAvatar
+          L15_181 = L15_181({
+            scale = 3,
+            avatar = L4_170.avatar
+          })
+          L14_180.user_avatar = L15_181
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L15_181 = L14_180
+          L14_180 = L14_180.setReferencePoint
+          L14_180(L15_181, display.TopLeftReferencePoint)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L14_180.x = 6
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L14_180.y = 3
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L15_181 = L14_180
+          L14_180 = L14_180.setMask
+          L14_180(L15_181, _UPVALUE7_)
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L14_180.maskScaleX = 0.5
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L14_180.maskScaleY = 0.5
+          L14_180 = _UPVALUE1_
+          L14_180 = L14_180[L10_176]
+          L14_180 = L14_180.user_avatar
+          L14_180 = L14_180.isFromImage
+          if L14_180 == false then
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L14_180 = L14_180.user_avatar
+            L15_181 = _UPVALUE1_
+            L15_181 = L15_181[L10_176]
+            L15_181 = L15_181.user_avatar
+            L15_181 = L15_181.width
+            L15_181 = L15_181 * 0.5
+            L14_180.maskX = L15_181
+            L14_180 = _UPVALUE1_
+            L14_180 = L14_180[L10_176]
+            L14_180 = L14_180.user_avatar
+            L15_181 = _UPVALUE1_
+            L15_181 = L15_181[L10_176]
+            L15_181 = L15_181.user_avatar
+            L15_181 = L15_181.height
+            L15_181 = L15_181 * 0.5
+            L14_180.maskY = L15_181
+          end
+          L15_181 = L3_169
+          L14_180 = L3_169.insert
+          L14_180(L15_181, _UPVALUE1_[L10_176].user_avatar)
+        end
+      end
+      L14_180 = {}
+      L15_181 = ""
+      _UPVALUE8_:gsub(".", function(A0_182)
+        _UPVALUE0_ = _UPVALUE0_ .. "[" .. string.lower(A0_182) .. string.upper(A0_182) .. "]"
+      end)
+      L4_170.message:gsub(L15_181 .. "[%w@_-%/]*", function(A0_183)
+        table.insert(_UPVALUE0_, A0_183)
+      end)
+      if #L14_180 > 0 then
+        _UPVALUE9_.linkToSeedLinks(_UPVALUE1_[L10_176].text, L14_180, _UPVALUE10_, {
+          list = _UPVALUE0_,
+          listDirection = "vertical",
+          functionToExecuteBeforeChangingScene = function()
+            _UPVALUE0_.to(_UPVALUE1_.textfield, {
+              time = 200,
+              x = _UPVALUE1_.textfield.x - _W,
+              transition = easing.inOutQuad
+            })
+            _UPVALUE2_.dispatchEvent("clearLocalTimersAndListeners")
+          end
+        })
+      end
+    end
+    if L5_171 == "selfpost" or L5_171 == "newmessage" then
+      L12_178 = _UPVALUE0_
+      L12_178 = L12_178.content
+      L12_178 = L12_178.rows
+      L13_179 = A0_166.index
+      L12_178 = L12_178[L13_179]
+      L12_178 = L12_178.hasAnimated
+      if L12_178 == false then
+        L12_178 = _UPVALUE0_
+        L12_178 = L12_178.content
+        L12_178 = L12_178.rows
+        L13_179 = A0_166.index
+        L12_178 = L12_178[L13_179]
+        L12_178.hasAnimated = true
+        L13_179 = L11_177
+        L12_178 = L11_177.setReferencePoint
+        L14_180 = display
+        L14_180 = L14_180.TopCenterReferencePoint
+        L12_178(L13_179, L14_180)
+        L12_178 = transition
+        L12_178 = L12_178.from
+        L13_179 = L11_177
+        L14_180 = {}
+        L14_180.time = 200
+        L14_180.alpha = 0
+        L15_181 = easing
+        L15_181 = L15_181.inOutQuad
+        L14_180.transition = L15_181
+        L12_178(L13_179, L14_180)
+      end
+    else
+      L12_178 = _UPVALUE0_
+      L12_178 = L12_178.content
+      L12_178 = L12_178.rows
+      L13_179 = A0_166.index
+      L12_178 = L12_178[L13_179]
+      L12_178.hasAnimated = true
+    end
+  end
+  function L76_77()
+    local L0_184, L1_185, L2_186, L3_187, L4_188, L5_189, L6_190, L7_191
+    for L3_187 = 1, #L1_185 do
+      L4_188 = _UPVALUE0_
+      L4_188 = L4_188.content
+      L4_188 = L4_188.rows
+      L4_188 = L4_188[L3_187]
+      L4_188 = L4_188.id
+      L4_188 = L4_188[2]
+      if L4_188 == "date" then
+        L5_189 = _UPVALUE0_
+        L5_189 = L5_189.content
+        L5_189 = L5_189.rows
+        L5_189 = L5_189[L3_187]
+        L5_189 = L5_189.view
+        L6_190 = _UPVALUE0_
+        L6_190 = L6_190.content
+        L6_190 = L6_190.rows
+        L6_190 = L6_190[L3_187]
+        L6_190 = L6_190.id
+        L6_190 = L6_190[1]
+        L7_191 = L6_190.diff
+        L7_191 = L7_191 + (os.time() - L6_190.insertTime)
+        if L5_189 and L5_189._proxy then
+          L5_189.setDate(L7_191)
+        end
+      end
+    end
+  end
+  function L77_78()
+    local L0_192, L1_193
+    function L0_192(A0_194)
+      local L1_195, L2_196, L3_197, L4_198, L5_199
+      L1_195 = A0_194.target
+      L1_195 = L1_195.height
+      L2_196 = A0_194.view
+      L3_197 = display
+      L3_197 = L3_197.newGroup
+      L3_197 = L3_197()
+      L5_199 = L2_196
+      L4_198 = L2_196.insert
+      L4_198(L5_199, L3_197)
+      L4_198 = _UPVALUE0_
+      L4_198 = L4_198.makeSprite
+      L5_199 = 0
+      L4_198 = L4_198(L5_199, 0)
+      L5_199 = L4_198.setReferencePoint
+      L5_199(L4_198, display.CenterLeftReferencePoint)
+      L4_198.x = 0
+      L4_198.y = 0
+      L5_199 = L4_198.scale
+      L5_199(L4_198, 0.8, 0.8)
+      L5_199 = L3_197.insert
+      L5_199(L3_197, L4_198)
+      L5_199 = display
+      L5_199 = L5_199.newText
+      L5_199 = L5_199({
+        text = "Fetching messages",
+        x = 0,
+        y = 0,
+        font = _UPVALUE1_.fonts.light,
+        fontSize = 14
+      })
+      L5_199:setReferencePoint(display.CenterLeftReferencePoint)
+      L5_199.x = L4_198.width + 1
+      L5_199.y = 0
+      L3_197:insert(L5_199)
+      L3_197:setReferencePoint(display.CenterReferencePoint)
+      L3_197.x = _UPVALUE2_
+      L3_197.y = L1_195 * 0.5
+    end
+    L1_193 = _UPVALUE3_
+    L1_193 = L1_193.insertRow
+    L1_193(L1_193, {
+      onRender = L0_192,
+      height = 35,
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      }
+    })
+    function L1_193(A0_200)
+      local L1_201, L2_202, L3_203, L4_204, L5_205, L6_206, L7_207, L8_208, L9_209, L10_210, L11_211
+      L1_201 = _UPVALUE0_
+      L1_201 = L1_201.decode
+      L2_202 = A0_200.response
+      L1_201 = L1_201(L2_202)
+      L2_202 = _UPVALUE1_
+      L2_202 = L2_202.deleteRow
+      L2_202(L3_203, L4_204)
+      L2_202 = #L1_201
+      if L2_202 > 0 then
+        L2_202 = #L1_201
+        L2_202 = L2_202 - 1
+        _UPVALUE2_ = L3_203
+        if L2_202 > 0 then
+          for L6_206 = 1, L2_202 do
+            L7_207 = 16
+            if L8_208 == "message" then
+              L9_209.text = L10_210
+              L9_209.width = L10_210
+              L9_209.height = 0
+              L9_209.font = L10_210
+              L9_209.fontSize = 13
+              L7_207 = L8_208.height
+              L9_209.unix = L10_210
+            else
+              L8_208.unix = 0
+            end
+            L8_208.pre = L9_209
+            L8_208.latestUnix = L9_209
+            L8_208.insertTime = L9_209
+            if L8_208 == "left" then
+              if L8_208 then
+                for L11_211, _FORV_12_ in L8_208(L9_209) do
+                  if L1_201[L6_206].udid == _FORV_12_.udid then
+                    table.remove(_UPVALUE9_, L11_211)
+                    break
+                  end
+                end
+                L8_208.alpha = 0.5
+                if L8_208 == "closed" then
+                  L10_210.set = "suspend"
+                  L8_208(L9_209, L10_210)
+                end
+              end
+            elseif L8_208 == "joined" then
+              if L8_208 then
+                for _FORV_12_, _FORV_13_ in L9_209(L10_210) do
+                  if L1_201[L6_206].udid == _FORV_13_.udid then
+                    break
+                  end
+                end
+                L9_209(L10_210, L11_211)
+                L9_209.alpha = 1
+                if L9_209 ~= "closed" then
+                  L11_211.set = "activate"
+                  L9_209(L10_210, L11_211)
+                end
+              end
+            elseif L8_208 == "kicked" then
+              if L8_208 == L9_209 then
+                if L8_208 ~= "closed" then
+                  _UPVALUE2_ = L8_208
+                  L10_210.set = "suspend"
+                  L8_208(L9_209, L10_210)
+                  if L8_208 then
+                    newMsgTim = L8_208
+                    newMsgTim = L8_208
+                  end
+                end
+              end
+            end
+            if L8_208 == "message" then
+              if L8_208 == L9_209 then
+              elseif L8_208 > L9_209 then
+                _UPVALUE6_ = L8_208
+                L7_207 = L7_207 + 14
+                L10_210.lineColor = L11_211
+                L10_210.rowColor = L11_211
+                L10_210.onRender = L11_211
+                L10_210.height = 20
+                L10_210.id = L11_211
+                L10_210.dontRenderOnTouch = true
+                L8_208(L9_209, L10_210)
+              end
+            end
+            L10_210.lineColor = L11_211
+            L10_210.rowColor = L11_211
+            L10_210.onRender = L11_211
+            L10_210.height = L7_207
+            L10_210.id = L11_211
+            L10_210.dontRenderOnTouch = true
+            L8_208(L9_209, L10_210)
+            _UPVALUE7_ = L8_208
+            _UPVALUE14_ = L8_208
+          end
+          L3_203(L4_204, L5_205)
+        end
+      end
+      L2_202 = true
+      _UPVALUE15_ = L2_202
+      L2_202 = _UPVALUE4_
+      L2_202 = L2_202.dispatchEvent
+      L4_204.set = "activate"
+      L2_202(L3_203, L4_204)
+    end
+    _UPVALUE0_.network_request("get_messages", L1_193, {
+      session = _UPVALUE17_,
+      users = _UPVALUE10_,
+      start = _UPVALUE18_,
+      udid = _UPVALUE1_.udid,
+      pop = _UPVALUE19_
+    })
+  end
+  if L33_34 ~= "No session" then
+    L78_79 = L77_78
+    L78_79()
+  else
+    L10_11 = true
+  end
+  function L78_79(A0_212)
+    local L1_213, L2_214, L3_215, L4_216, L5_217, L6_218, L7_219, L8_220, L9_221
+    L1_213 = _UPVALUE0_
+    L1_213 = L1_213.textfield_counter
+    L2_214 = _UPVALUE0_
+    L2_214 = L2_214.textfield
+    L3_215 = A0_212.phase
+    L4_216 = L2_214.fakeLabel
+    L4_216 = L4_216.label
+    L5_217 = A0_212.target
+    L5_217 = L5_217.id
+    if L5_217 == "send" then
+      L6_218 = _UPVALUE1_
+      if L6_218 == false then
+        L6_218 = _UPVALUE2_
+        L6_218 = L6_218.showAlert
+        L7_219 = "Fetching session"
+        L8_220 = "Please wait while fetching the PM session."
+        L9_221 = {"Ok"}
+        L6_218(L7_219, L8_220, L9_221)
+      else
+        L7_219 = L4_216
+        L6_218 = L4_216.len
+        L6_218 = L6_218(L7_219)
+        if L6_218 > 0 then
+          L7_219 = L4_216
+          L6_218 = L4_216.len
+          L6_218 = L6_218(L7_219)
+          L7_219 = _UPVALUE3_
+          if L6_218 > L7_219 then
+            L6_218 = native
+            L6_218 = L6_218.showAlert
+            L7_219 = ""
+            L8_220 = "Message too long"
+            L9_221 = {"Ok"}
+            L6_218(L7_219, L8_220, L9_221)
+          else
+            L6_218 = _UPVALUE4_
+            L6_218()
+            L6_218 = {}
+            L7_219 = os
+            L7_219 = L7_219.time
+            L7_219 = L7_219()
+            L6_218.insertTime = L7_219
+            L7_219 = _UPVALUE5_
+            L6_218.latestUnix = L7_219
+            L7_219 = _UPVALUE6_
+            L7_219 = L7_219.nickname
+            L6_218.nickname = L7_219
+            L6_218.message = L4_216
+            L6_218.diff = 0
+            L7_219 = os
+            L7_219 = L7_219.date
+            L8_220 = "%Y-%m-%d %H:%M:%S"
+            L7_219 = L7_219(L8_220)
+            L6_218.date = L7_219
+            L7_219 = _UPVALUE7_
+            L8_220 = L6_218.date
+            L7_219 = L7_219(L8_220)
+            L6_218.unix = L7_219
+            L7_219 = _UPVALUE6_
+            L7_219 = L7_219.udid
+            L6_218.udid = L7_219
+            L6_218.type = "message"
+            L7_219 = _UPVALUE8_
+            L6_218.pre = L7_219
+            L7_219 = display
+            L7_219 = L7_219.newText
+            L8_220 = {}
+            L9_221 = L6_218.message
+            L8_220.text = L9_221
+            L8_220.x = 0
+            L8_220.y = 0
+            L9_221 = _W
+            L9_221 = L9_221 - 46
+            L8_220.width = L9_221
+            L8_220.height = 0
+            L9_221 = _UPVALUE6_
+            L9_221 = L9_221.fonts
+            L9_221 = L9_221.light
+            L8_220.font = L9_221
+            L8_220.fontSize = 13
+            L7_219 = L7_219(L8_220)
+            L8_220 = L7_219.height
+            L9_221 = _UPVALUE2_
+            L9_221 = L9_221.delete
+            L9_221 = L9_221(L7_219)
+            L7_219 = L9_221
+            L9_221 = _UPVALUE8_
+            if L9_221 == L6_218.udid then
+              L9_221 = L6_218.unix
+            elseif L9_221 > L6_218.latestUnix + 600 then
+              L9_221 = L6_218.udid
+              _UPVALUE8_ = L9_221
+              L8_220 = L8_220 + 14
+              L9_221 = _UPVALUE9_
+              L9_221 = L9_221.insertRow
+              L9_221(L9_221, {
+                lineColor = {
+                  0,
+                  0,
+                  0,
+                  0
+                },
+                rowColor = {
+                  0,
+                  0,
+                  0,
+                  0
+                },
+                onRender = _UPVALUE10_,
+                height = 20,
+                id = {L6_218, "date"},
+                dontRenderOnTouch = true
+              })
+            end
+            L9_221 = _UPVALUE9_
+            L9_221 = L9_221.insertRow
+            L9_221(L9_221, {
+              id = {L6_218, "selfpost"},
+              height = L8_220,
+              onRender = _UPVALUE11_,
+              rowColor = {
+                0,
+                0,
+                0,
+                0
+              },
+              lineColor = {
+                0,
+                0,
+                0,
+                0
+              }
+            })
+            L9_221 = L6_218.unix
+            _UPVALUE5_ = L9_221
+            L9_221 = timer
+            L9_221 = L9_221.performWithDelay
+            L9_221(50, function()
+              _UPVALUE0_:scrollToBottom(100)
+            end)
+            L9_221 = L2_214.setText
+            L9_221(L2_214)
+            L9_221 = L1_213.setText
+            L9_221(L1_213, _UPVALUE3_ .. " characters left")
+            L9_221 = L1_213.setReferencePoint
+            L9_221(L1_213, display.TopRightReferencePoint)
+            L9_221 = L1_213.origX
+            L1_213.x = L9_221
+            L9_221 = L1_213.origY
+            L1_213.y = L9_221
+            function L9_221(A0_222)
+              if _UPVALUE0_.decode(A0_222.response).status == "Not participating" then
+                _UPVALUE1_.showAlert("Could not send message", "You do not seem to be participating in this PM session.", {"Ok"})
+              elseif _UPVALUE0_.decode(A0_222.response).status == "Not following" then
+                _UPVALUE1_.showAlert("Could not send message", "You are not following one or more users in this PM session.", {"Ok"})
+              elseif _UPVALUE0_.decode(A0_222.response).status == "User not following" then
+                _UPVALUE1_.showAlert("Could not send message", "The user has unfollowed and closed this session.", {"Ok"})
+              elseif _UPVALUE0_.decode(A0_222.response).status == "Ticket has been closed" then
+                _UPVALUE1_.showAlert("Closed", "The report ticket has been closed.", {"Ok"})
+              elseif _UPVALUE0_.decode(A0_222.response).status == "Sent" and _UPVALUE2_ == "No session" then
+                _UPVALUE2_ = _UPVALUE0_.decode(A0_222.response).sessionid
+                _UPVALUE3_.pmsession.sessionid = _UPVALUE2_
+                _UPVALUE1_.update({
+                  pmsession = _UPVALUE3_.pmsession
+                })
+              end
+            end
+            _UPVALUE2_.network_request("postmessage", L9_221, {
+              sessionid = _UPVALUE13_,
+              nickname = L6_218.nickname,
+              message = L6_218.message,
+              users = _UPVALUE15_,
+              start = _UPVALUE16_,
+              udid = L6_218.udid,
+              pop = _UPVALUE17_
+            })
+          end
+        end
+      end
+    end
+    L6_218 = true
+    return L6_218
+  end
+  function L79_80(A0_223)
+    local L1_224
+    L1_224 = A0_223.phase
+    display.getCurrentStage():setFocus(A0_223.target)
+    if L1_224 == "ended" or L1_224 == "cancelled" then
+      display.getCurrentStage():setFocus(nil)
+    end
+    return true
+  end
+  L80_81 = display
+  L80_81 = L80_81.newImageRect
+  L81_82 = "chattab.png"
+  L82_83 = _W
+  L83_84 = 156
+  L80_81 = L80_81(L81_82, L82_83, L83_84)
+  L82_83 = L80_81
+  L81_82 = L80_81.setReferencePoint
+  L83_84 = display
+  L83_84 = L83_84.BottomCenterReferencePoint
+  L81_82(L82_83, L83_84)
+  L80_81.x = L8_9
+  L81_82 = _H
+  L80_81.y = L81_82
+  L82_83 = L80_81
+  L81_82 = L80_81.addEventListener
+  L83_84 = "touch"
+  L84_85 = L79_80
+  L81_82(L82_83, L83_84, L84_85)
+  L81_82 = L6_7.front
+  L82_83 = L81_82
+  L81_82 = L81_82.insert
+  L83_84 = L80_81
+  L81_82(L82_83, L83_84)
+  L81_82 = _UPVALUE5_
+  L81_82 = L81_82.newTextField
+  L82_83 = {}
+  L82_83.filename = "textfield_chattab-slice"
+  L82_83.width = 11
+  L82_83.height = 11
+  L82_83.slices = 9
+  L83_84 = {}
+  L83_84.id = "pmMessagesChatField"
+  L83_84.x = 0
+  L83_84.y = 0
+  L83_84.boxType = "textbox"
+  L84_85 = _W
+  L84_85 = L84_85 - 79
+  L83_84.width = L84_85
+  L83_84.height = 123
+  L83_84.size = 15
+  L84_85 = _UPVALUE0_
+  L84_85 = L84_85.fonts
+  L84_85 = L84_85.light
+  L83_84.font = L84_85
+  L84_85 = {
+    L85_86,
+    L86_87,
+    L87_88
+  }
+  L85_86 = 67
+  L86_87 = 67
+  L87_88 = 67
+  L83_84.defaultColor = L84_85
+  L83_84.topPadding = 6
+  L83_84.leftPadding = 6
+  L83_84.isEditable = false
+  L83_84.fakeLabelTopPadding = 2.5
+  L83_84.textAdditionalWidth = -3
+  L83_84.textfieldAdditionalWidth = 1
+  L83_84.textfieldAdditionalHeight = -4
+  L83_84.passTouchOnCancel = "yes"
+  L84_85 = L6_7.back
+  L83_84.insertCancelRectIntoGroup = L84_85
+  L83_84.updateFakeLabelOnEdit = "yes"
+  L81_82 = L81_82(L82_83, L83_84)
+  L83_84 = L81_82
+  L82_83 = L81_82.setReferencePoint
+  L84_85 = display
+  L84_85 = L84_85.BottomLeftReferencePoint
+  L82_83(L83_84, L84_85)
+  L81_82.x = 11
+  L82_83 = _H
+  L82_83 = L82_83 - 17
+  L81_82.y = L82_83
+  L6_7.textfield = L81_82
+  L82_83 = L6_7.front
+  L83_84 = L82_83
+  L82_83 = L82_83.insert
+  L84_85 = L81_82
+  L82_83(L83_84, L84_85)
+  L82_83 = display
+  L82_83 = L82_83.newText
+  L83_84 = {}
+  L84_85 = L42_43
+  L85_86 = " characters left"
+  L84_85 = L84_85 .. L85_86
+  L83_84.text = L84_85
+  L84_85 = _UPVALUE0_
+  L84_85 = L84_85.fonts
+  L84_85 = L84_85.light
+  L83_84.font = L84_85
+  L83_84.fontSize = 12
+  L82_83 = L82_83(L83_84)
+  L84_85 = L82_83
+  L83_84 = L82_83.setReferencePoint
+  L85_86 = display
+  L85_86 = L85_86.TopRightReferencePoint
+  L83_84(L84_85, L85_86)
+  L83_84 = L21_22
+  L84_85 = L81_82.x
+  L85_86 = L81_82.width
+  L84_85 = L84_85 + L85_86
+  L83_84 = L83_84(L84_85)
+  L82_83.x = L83_84
+  L83_84 = _H
+  L83_84 = L83_84 - 20
+  L82_83.y = L83_84
+  L83_84 = L82_83.x
+  L82_83.origX = L83_84
+  L83_84 = L82_83.y
+  L82_83.origY = L83_84
+  L82_83.currentColor = "80 80 80"
+  L84_85 = L82_83
+  L83_84 = L82_83.setFillColor
+  L85_86 = 80
+  L86_87 = 80
+  L87_88 = 80
+  L83_84(L84_85, L85_86, L86_87, L87_88)
+  L83_84 = L6_7.front
+  L84_85 = L83_84
+  L83_84 = L83_84.insert
+  L85_86 = L82_83
+  L83_84(L84_85, L85_86)
+  L6_7.textfield_counter = L82_83
+  L83_84 = _UPVALUE3_
+  L83_84 = L83_84.newButton
+  L84_85 = {}
+  L84_85.id = "send"
+  L84_85.width = 67
+  L84_85.height = 38
+  L84_85.default = "sendComment.png"
+  L84_85.over = "sendComment-over.png"
+  L84_85.onRelease = L78_79
+  L83_84 = L83_84(L84_85)
+  L85_86 = L83_84
+  L84_85 = L83_84.setReferencePoint
+  L86_87 = display
+  L86_87 = L86_87.TopLeftReferencePoint
+  L84_85(L85_86, L86_87)
+  L84_85 = _W
+  L84_85 = L84_85 - 67
+  L83_84.x = L84_85
+  L84_85 = _H
+  L84_85 = L84_85 - 53
+  L83_84.y = L84_85
+  L84_85 = L6_7.front
+  L85_86 = L84_85
+  L84_85 = L84_85.insert
+  L86_87 = L83_84
+  L84_85(L85_86, L86_87)
+  function L84_85(A0_225)
+    if A0_225.id == "pmMessagesChatField" then
+      _UPVALUE0_.to(_UPVALUE1_, {
+        time = 200,
+        y = _UPVALUE1_.y - 216,
+        transition = easing.inOutQuad
+      }, true)
+    end
+  end
+  L85_86 = _UPVALUE1_
+  L85_86 = L85_86.addRuntimeListener
+  L86_87 = "hasInitiatedTextfield"
+  L87_88 = L84_85
+  L85_86(L86_87, L87_88)
+  function L85_86(A0_226)
+    local L1_227
+    L1_227 = A0_226.id
+    if L1_227 == "pmMessagesChatField" then
+      L1_227 = _UPVALUE0_
+      L1_227 = L1_227 - A0_226.text:len()
+      if L1_227 < 0 and _UPVALUE1_.currentColor ~= "146 42 42" then
+        _UPVALUE1_:setFillColor(146, 42, 42)
+        _UPVALUE1_.currentColor = "146 42 42"
+      elseif L1_227 >= 0 and _UPVALUE1_.currentColor ~= "80 80 80" then
+        _UPVALUE1_:setFillColor(80, 80, 80)
+        _UPVALUE1_.currentColor = "80 80 80"
+      end
+      _UPVALUE1_:setText(L1_227 .. " characters left")
+      _UPVALUE1_:setReferencePoint(display.TopRightReferencePoint)
+      _UPVALUE1_.x = _UPVALUE1_.origX
+      _UPVALUE1_.y = _UPVALUE1_.origY
+    end
+  end
+  L86_87 = _UPVALUE1_
+  L86_87 = L86_87.addRuntimeListener
+  L87_88 = "hasEditedTextfield"
+  L88_89 = L85_86
+  L86_87(L87_88, L88_89)
+  function L86_87(A0_228)
+    if A0_228.id == "pmMessagesChatField" then
+      _UPVALUE0_.to(_UPVALUE1_, {
+        time = 200,
+        y = _UPVALUE1_.y + 216,
+        transition = easing.inOutQuad
+      }, true)
+    end
+  end
+  L87_88 = _UPVALUE1_
+  L87_88 = L87_88.addRuntimeListener
+  L88_89 = "hasFinishedTextfield"
+  L89_90 = L86_87
+  L87_88(L88_89, L89_90)
+  L87_88 = 0
+  L88_89 = L24_25
+  L89_90 = L16_17 / 60
+  L88_89 = L88_89(L89_90)
+  function L89_90()
+    local L0_229
+    L0_229 = _UPVALUE0_
+    if L0_229 == true then
+      L0_229 = _UPVALUE1_
+      if L0_229 == _UPVALUE2_.session then
+        function L0_229(A0_230)
+          local L1_231, L2_232, L3_233, L4_234, L5_235, L6_236, L7_237, L8_238, L9_239, L10_240, L11_241, L12_242
+          L1_231 = _UPVALUE0_
+          L1_231 = L1_231.decode
+          L2_232 = A0_230.response
+          L1_231 = L1_231(L2_232)
+          L2_232 = #L1_231
+          L2_232 = L2_232 - 1
+          L3_233 = 0
+          _UPVALUE1_ = L4_234
+          _UPVALUE2_ = L4_234
+          if L4_234 == L5_235 or L2_232 > 0 then
+            _UPVALUE2_ = L4_234
+            L4_234()
+          end
+          if L2_232 > 0 then
+            for L7_237 = 1, L2_232 do
+              L8_238 = 16
+              if L9_239 ~= "alert" then
+                if L9_239 ~= "joined" then
+                  if L9_239 ~= "left" then
+                    if L9_239 ~= "kicked" then
+                      L10_240.text = L11_241
+                      L10_240.width = L11_241
+                      L10_240.height = 0
+                      L10_240.font = L11_241
+                      L10_240.fontSize = 13
+                      L8_238 = L9_239.height
+                      L10_240.unix = L11_241
+                    end
+                  end
+                end
+              else
+                L9_239.unix = 0
+              end
+              L9_239.pre = L10_240
+              L9_239.latestUnix = L10_240
+              L9_239.insertTime = L10_240
+              if L9_239 == "left" then
+                if L9_239 then
+                  for L12_242, _FORV_13_ in L9_239(L10_240) do
+                    if L1_231[L7_237].udid == _FORV_13_.udid then
+                      table.remove(_UPVALUE11_, L12_242)
+                      break
+                    end
+                  end
+                  L9_239.alpha = 0.5
+                  if L9_239 == "closed" then
+                    L11_241.set = "suspend"
+                    L9_239(L10_240, L11_241)
+                  end
+                end
+              elseif L9_239 == "joined" then
+                if L9_239 then
+                  for _FORV_13_, _FORV_14_ in L10_240(L11_241) do
+                    if L1_231[L7_237].udid == _FORV_14_.udid then
+                      break
+                    end
+                  end
+                  L10_240(L11_241, L12_242)
+                  L10_240.alpha = 1
+                  if L10_240 ~= "closed" then
+                    L12_242.set = "activate"
+                    L10_240(L11_241, L12_242)
+                  end
+                end
+              elseif L9_239 == "kicked" then
+                if L9_239 == L10_240 then
+                  if L9_239 ~= "closed" then
+                    _UPVALUE1_ = L9_239
+                    L11_241.set = "suspend"
+                    L9_239(L10_240, L11_241)
+                    if L9_239 then
+                      newMsgTim = L9_239
+                      newMsgTim = L9_239
+                    end
+                  end
+                end
+              end
+              if L9_239 == "message" then
+                if L9_239 == L10_240 then
+                elseif L9_239 > L10_240 then
+                  _UPVALUE8_ = L9_239
+                  L8_238 = L8_238 + 14
+                  L11_241.lineColor = L12_242
+                  L11_241.rowColor = L12_242
+                  L11_241.onRender = L12_242
+                  L11_241.height = 20
+                  L11_241.id = L12_242
+                  L11_241.dontRenderOnTouch = true
+                  L9_239(L10_240, L11_241)
+                end
+              end
+              L11_241.id = L12_242
+              L11_241.height = L8_238
+              L11_241.onRender = L12_242
+              L11_241.rowColor = L12_242
+              L11_241.lineColor = L12_242
+              L9_239(L10_240, L11_241)
+              _UPVALUE9_ = L9_239
+              _UPVALUE17_ = L9_239
+              L3_233 = L8_238
+            end
+            if L4_234 <= L5_235 then
+              function L7_237()
+                _UPVALUE0_:scrollToBottom(100)
+              end
+              L5_235(L6_236, L7_237)
+            end
+          end
+          newMsgTim = L4_234
+        end
+        _UPVALUE8_.network_request("get_new_messages", L0_229, {
+          lastMsgId = _UPVALUE19_,
+          session = _UPVALUE22_,
+          udid = _UPVALUE2_.udid
+        }, {showErrorMsg = false})
+      end
+    else
+      L0_229 = timer
+      L0_229 = L0_229.performWithDelay
+      L0_229 = L0_229(_UPVALUE20_, _UPVALUE21_)
+      newMsgTim = L0_229
+    end
+  end
+  L90_91 = timer
+  L90_91 = L90_91.performWithDelay
+  L91_92 = L16_17
+  L92_93 = L89_90
+  L90_91 = L90_91(L91_92, L92_93)
+  newMsgTim = L90_91
+  function L90_91(A0_243)
+    local L1_244, L2_245, L3_246, L4_247, L5_248, L6_249, L7_250, L8_251, L9_252, L10_253, L11_254, L12_255, L13_256, L14_257, L15_258, L16_259
+    if L1_244 == "" then
+      L1_244 = "Nameless session"
+    else
+      L1_244 = _UPVALUE0_
+    end
+    L2_245 = display
+    L2_245 = L2_245.newGroup
+    L2_245 = L2_245()
+    L3_246 = _UPVALUE1_
+    L4_247 = L3_246
+    L3_246 = L3_246.insert
+    L5_248 = L2_245
+    L3_246(L4_247, L5_248)
+    L3_246 = display
+    L3_246 = L3_246.newGroup
+    L3_246 = L3_246()
+    L2_245.back = L3_246
+    L4_247 = L2_245
+    L3_246 = L2_245.insert
+    L5_248 = L2_245.back
+    L3_246(L4_247, L5_248)
+    L3_246 = display
+    L3_246 = L3_246.newGroup
+    L3_246 = L3_246()
+    L2_245.front = L3_246
+    L4_247 = L2_245
+    L3_246 = L2_245.insert
+    L5_248 = L2_245.front
+    L3_246(L4_247, L5_248)
+    L3_246 = graphics
+    L3_246 = L3_246.newMask
+    L4_247 = "mask-"
+    L5_248 = _W
+    L6_249 = "x"
+    L7_250 = _H
+    L8_251 = ".png"
+    L4_247 = L4_247 .. L5_248 .. L6_249 .. L7_250 .. L8_251
+    L5_248 = system
+    L5_248 = L5_248.TemporaryDirectory
+    L3_246 = L3_246(L4_247, L5_248)
+    function L4_247()
+      local L0_260, L1_261
+      L0_260 = true
+      return L0_260
+    end
+    L5_248 = _UPVALUE2_
+    L5_248 = L5_248.blurGroup
+    L6_249 = _UPVALUE1_
+    L5_248 = L5_248(L6_249)
+    L5_248.isHitTestable = true
+    L7_250 = L5_248
+    L6_249 = L5_248.addEventListener
+    L8_251 = "touch"
+    L9_252 = L4_247
+    L6_249(L7_250, L8_251, L9_252)
+    L6_249 = L2_245.back
+    L7_250 = L6_249
+    L6_249 = L6_249.insert
+    L8_251 = L5_248
+    L6_249(L7_250, L8_251)
+    L6_249 = display
+    L6_249 = L6_249.newRect
+    L7_250 = 0
+    L8_251 = 0
+    L9_252 = _W
+    L10_253 = _H
+    L6_249 = L6_249(L7_250, L8_251, L9_252, L10_253)
+    L8_251 = L6_249
+    L7_250 = L6_249.setFillColor
+    L9_252 = 0
+    L10_253 = 0
+    L11_254 = 0
+    L12_255 = 200
+    L7_250(L8_251, L9_252, L10_253, L11_254, L12_255)
+    L7_250 = L2_245.back
+    L8_251 = L7_250
+    L7_250 = L7_250.insert
+    L9_252 = L6_249
+    L7_250(L8_251, L9_252)
+    L7_250 = L2_245.back
+    L8_251 = L7_250
+    L7_250 = L7_250.setMask
+    L9_252 = L3_246
+    L7_250(L8_251, L9_252)
+    L7_250 = L2_245.back
+    L8_251 = _UPVALUE3_
+    L7_250.maskScaleX = L8_251
+    L7_250 = L2_245.back
+    L8_251 = _UPVALUE4_
+    L7_250.maskScaleY = L8_251
+    L7_250 = L2_245.back
+    L8_251 = L2_245.back
+    L8_251 = L8_251.width
+    L8_251 = L8_251 * 0.5
+    L7_250.maskX = L8_251
+    L7_250 = L2_245.back
+    L8_251 = L2_245.back
+    L8_251 = L8_251.height
+    L8_251 = L8_251 * 0.5
+    L7_250.maskY = L8_251
+    L7_250 = display
+    L7_250 = L7_250.newText
+    L8_251 = {}
+    L8_251.text = "Settings"
+    L9_252 = _UPVALUE5_
+    L9_252 = L9_252.fonts
+    L9_252 = L9_252.bold
+    L8_251.font = L9_252
+    L8_251.fontSize = 19
+    L7_250 = L7_250(L8_251)
+    L9_252 = L7_250
+    L8_251 = L7_250.setReferencePoint
+    L10_253 = display
+    L10_253 = L10_253.CenterReferencePoint
+    L8_251(L9_252, L10_253)
+    L8_251 = _UPVALUE6_
+    L7_250.x = L8_251
+    L8_251 = _UPVALUE7_
+    L8_251 = L8_251.yCenter
+    L7_250.y = L8_251
+    L8_251 = L2_245.front
+    L9_252 = L8_251
+    L8_251 = L8_251.insert
+    L10_253 = L7_250
+    L8_251(L9_252, L10_253)
+    L8_251 = _UPVALUE8_
+    L8_251 = L8_251.newTableView
+    L9_252 = {}
+    L10_253 = _W
+    L9_252.width = L10_253
+    L10_253 = _H
+    L10_253 = L10_253 - 64
+    L9_252.height = L10_253
+    L10_253 = {
+      L11_254,
+      L12_255,
+      L13_256,
+      L14_257
+    }
+    L11_254 = 0
+    L12_255 = 0
+    L9_252.bgColor = L10_253
+    L10_253 = system
+    L10_253 = L10_253.TemporaryDirectory
+    L9_252.baseDir = L10_253
+    L10_253 = "mask-"
+    L11_254 = _W
+    L12_255 = "x"
+    L10_253 = L10_253 .. L11_254 .. L12_255 .. L13_256 .. L14_257
+    L9_252.maskFile = L10_253
+    L9_252.topPadding = 100
+    L8_251 = L8_251(L9_252)
+    L10_253 = L8_251
+    L9_252 = L8_251.setReferencePoint
+    L11_254 = display
+    L11_254 = L11_254.TopCenterReferencePoint
+    L9_252(L10_253, L11_254)
+    L9_252 = _UPVALUE6_
+    L8_251.x = L9_252
+    L9_252 = _UPVALUE7_
+    L9_252 = L9_252.y
+    L10_253 = _UPVALUE7_
+    L10_253 = L10_253.height
+    L9_252 = L9_252 + L10_253
+    L8_251.y = L9_252
+    L9_252 = L2_245.front
+    L10_253 = L9_252
+    L9_252 = L9_252.insert
+    L11_254 = L8_251
+    L9_252(L10_253, L11_254)
+    L9_252 = _UPVALUE9_
+    L9_252 = L9_252.newTextField
+    L10_253 = "textfield_sessionname.png"
+    L11_254 = {}
+    L11_254.x = 20
+    L11_254.y = 22
+    L12_255 = _UPVALUE10_
+    L11_254.list = L12_255
+    L11_254.boxType = "textfield"
+    L11_254.width = 281
+    L11_254.height = 24
+    L11_254.size = 12
+    L12_255 = {
+      L13_256,
+      L14_257,
+      L15_258
+    }
+    L11_254.defaultColor = L12_255
+    L12_255 = {
+      L13_256,
+      L14_257,
+      L15_258
+    }
+    L11_254.initialColor = L12_255
+    L11_254.initialLabel = L1_244
+    L9_252 = L9_252(L10_253, L11_254)
+    function L10_253(A0_262)
+      local L1_263, L2_264, L3_265, L4_266
+      L1_263 = A0_262.target
+      L1_263 = L1_263.height
+      L2_264 = A0_262.view
+      L3_265 = A0_262.id
+      L4_266 = display
+      L4_266 = L4_266.newText
+      L4_266 = L4_266({
+        text = "Session name:",
+        font = _UPVALUE0_.fonts.bold,
+        fontSize = 13
+      })
+      L4_266:setReferencePoint(display.TopLeftReferencePoint)
+      L4_266.x = 20
+      L4_266.y = 0
+      L2_264:insert(L4_266)
+      L2_264:insert(_UPVALUE1_)
+    end
+    L12_255 = L8_251
+    L11_254 = L8_251.insertRow
+    L16_259 = 0
+    L13_256.lineColor = L14_257
+    L16_259 = 0
+    L13_256.rowColor = L14_257
+    L13_256.onRender = L10_253
+    L13_256.height = 50
+    L13_256.id = L14_257
+    L11_254(L12_255, L13_256)
+    function L11_254(A0_267)
+      local L1_268, L2_269, L3_270
+      L1_268 = A0_267.target
+      L1_268 = L1_268.height
+      L2_269 = A0_267.view
+      L3_270 = display
+      L3_270 = L3_270.newText
+      L3_270 = L3_270({
+        text = "Participants: " .. #_UPVALUE0_ + 1 .. " of " .. _UPVALUE1_.pm_amount_limit,
+        font = _UPVALUE1_.fonts.bold,
+        fontSize = 13
+      })
+      L3_270:setReferencePoint(display.CenterLeftReferencePoint)
+      L3_270.x = 20
+      L3_270.y = L1_268 * 0.5
+      L2_269:insert(L3_270)
+    end
+    L12_255 = L8_251.insertRow
+    L16_259 = 0
+    L14_257.lineColor = L15_258
+    L16_259 = 0
+    L14_257.rowColor = L15_258
+    L14_257.onRender = L11_254
+    L14_257.height = 20
+    L12_255(L13_256, L14_257)
+    function L12_255(A0_271)
+      local L1_272, L2_273, L3_274, L4_275, L5_276, L6_277
+      L1_272 = A0_271.target
+      L1_272 = L1_272.height
+      L2_273 = A0_271.view
+      L3_274 = A0_271.id
+      L4_275 = display
+      L4_275 = L4_275.newRect
+      L5_276 = 0
+      L6_277 = 0
+      L4_275 = L4_275(L5_276, L6_277, 29, 29)
+      L6_277 = L4_275
+      L5_276 = L4_275.setReferencePoint
+      L5_276(L6_277, display.CenterReferencePoint)
+      L4_275.x = 32
+      L5_276 = L1_272 * 0.5
+      L4_275.y = L5_276
+      L6_277 = L4_275
+      L5_276 = L4_275.setFillColor
+      L5_276(L6_277, 50, 50, 50)
+      L6_277 = L2_273
+      L5_276 = L2_273.insert
+      L5_276(L6_277, L4_275)
+      L5_276 = _UPVALUE0_
+      L5_276 = L5_276.makeAvatar
+      L6_277 = {}
+      L6_277.scale = 3
+      L6_277.avatar = L3_274.avatar
+      L5_276 = L5_276(L6_277)
+      L6_277 = L5_276.setReferencePoint
+      L6_277(L5_276, display.CenterReferencePoint)
+      L5_276.x = 32
+      L6_277 = L1_272 * 0.5
+      L5_276.y = L6_277
+      L6_277 = L2_273.insert
+      L6_277(L2_273, L5_276)
+      L6_277 = display
+      L6_277 = L6_277.newText
+      L6_277 = L6_277({
+        text = L3_274.nickname,
+        font = _UPVALUE1_.fonts.bold,
+        fontSize = 13
+      })
+      L6_277:setReferencePoint(display.CenterLeftReferencePoint)
+      L6_277.x = 54
+      L6_277.y = L1_272 * 0.5
+      L2_273:insert(L6_277)
+    end
+    L16_259 = {
+      0,
+      0,
+      0,
+      0
+    }
+    L15_258.lineColor = L16_259
+    L16_259 = {
+      0,
+      0,
+      0,
+      0
+    }
+    L15_258.rowColor = L16_259
+    L15_258.onRender = L12_255
+    L15_258.height = 36
+    L16_259 = {}
+    L16_259.avatar = _UPVALUE13_
+    L16_259.nickname = _UPVALUE5_.nickname
+    L16_259.udid = _UPVALUE5_.udid
+    L16_259.bios = _UPVALUE5_.userbios
+    L15_258.id = L16_259
+    L13_256(L14_257, L15_258)
+    for L16_259 = 1, #L14_257 do
+      L8_251:insertRow({
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        onRender = L12_255,
+        height = 36,
+        id = _UPVALUE11_[L16_259]
+      })
+    end
+    L15_258.top = 26
+    L16_259 = _W
+    L16_259 = L16_259 - 62
+    L15_258.left = L16_259
+    L15_258.width = 52
+    L15_258.height = 30
+    L15_258.default = "save.png"
+    L15_258.over = "save-over.png"
+    L15_258.onRelease = L13_256
+    L16_259 = L15_258
+    L15_258(L16_259, L14_257)
+    L16_259 = _UPVALUE8_
+    L16_259 = L16_259.newButton
+    L16_259 = L16_259({
+      top = 25,
+      left = 10,
+      width = 52,
+      height = 30,
+      default = "cancel.png",
+      over = "cancel-over.png",
+      onRelease = L15_258
+    })
+    L2_245.front:insert(L16_259)
+    _UPVALUE14_.from(L2_245.front, {
+      time = 320,
+      y = _H,
+      transition = easing.outCubic
+    })
+    _UPVALUE14_.from(L2_245.back, {
+      time = 320,
+      maskY = L2_245.back.maskY + _H,
+      transition = easing.outCubic
+    }, true)
+    return true
+  end
+  L91_92 = _UPVALUE3_
+  L91_92 = L91_92.newButton
+  L92_93 = {}
+  L92_93.width = 50
+  L92_93.height = 50
+  L92_93.default = "settingsbtn.png"
+  L92_93.over = "settingsbtn-over.png"
+  L92_93.onRelease = L90_91
+  L91_92 = L91_92(L92_93)
+  L93_94 = L91_92
+  L92_93 = L91_92.setReferencePoint
+  L94_95 = display
+  L94_95 = L94_95.CenterRightReferencePoint
+  L92_93(L93_94, L94_95)
+  L92_93 = _W
+  L92_93 = L92_93 + 5
+  L91_92.x = L92_93
+  L92_93 = L58_59.yCenter
+  L91_92.y = L92_93
+  L92_93 = L58_59.contents
+  L93_94 = L92_93
+  L92_93 = L92_93.insert
+  L94_95 = L91_92
+  L92_93(L93_94, L94_95)
+  function L92_93(A0_278)
+    if A0_278.set == "suspend" then
+      if _UPVALUE0_ == false then
+        _UPVALUE1_.textfield.bg.isEditable = false
+        _UPVALUE2_.alpha = 0.5
+        _UPVALUE0_ = true
+        native.setKeyboardFocus(nil)
+      end
+    elseif A0_278.set == "activate" and _UPVALUE0_ == true then
+      if _UPVALUE1_.textfield then
+        _UPVALUE1_.textfield.bg.isEditable = true
+      end
+      _UPVALUE2_.alpha = 1
+      _UPVALUE0_ = false
+    end
+  end
+  L93_94 = _UPVALUE1_
+  L93_94 = L93_94.addRuntimeListener
+  L94_95 = "setPMsession"
+  L93_94(L94_95, L92_93)
+  if L23_24 == false and L19_20 == true then
+    L93_94 = display
+    L93_94 = L93_94.newRect
+    L94_95 = 0
+    L93_94 = L93_94(L94_95, 0, _W, _H)
+    L94_95 = L93_94.setFillColor
+    L94_95(L93_94, 255, 255, 255, 125)
+    L94_95 = L93_94.addEventListener
+    L94_95(L93_94, "touch", function()
+      local L0_279, L1_280
+      L0_279 = true
+      return L0_279
+    end)
+    L94_95 = L0_1.insert
+    L94_95(L0_1, L93_94)
+    function L94_95(A0_281)
+      if A0_281.action == "clicked" then
+        if A0_281.index == 2 then
+          system.openURL("https://itunes.apple.com/app/id528919633")
+        end
+        _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+        _UPVALUE0_.restore("seedlist", platform, "all")
+        _UPVALUE0_.update({
+          listPos = _UPVALUE0_.getPadding().toppadding
+        })
+        director:changeScene("profile")
+      end
+    end
+    _UPVALUE1_.showAlert("Pro only", [[
+This section can only be used in Minecraft Seeds Pro.
+Upgrade to use this feature.]], {"Dismiss", "Upgrade"}, L94_95)
+  end
+  return L0_1
+end

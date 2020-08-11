@@ -1,0 +1,1473 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("openGLTextfield")
+if require("globals").os == "Android" then
+else
+end
+;({}).makeRegisterWindow = function(A0_1, A1_2)
+  local L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L2_3.back = L3_4
+  L4_5 = L2_3
+  L3_4 = L2_3.insert
+  L5_6 = L2_3.back
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L2_3.front = L3_4
+  L4_5 = L2_3
+  L3_4 = L2_3.insert
+  L5_6 = L2_3.front
+  L3_4(L4_5, L5_6)
+  if not A1_2 then
+    L3_4 = {}
+    A1_2 = L3_4
+  end
+  L3_4 = _W
+  L3_4 = L3_4 - 106
+  L5_6 = A0_1
+  L4_5 = A0_1.gsub
+  L6_7 = "[^_%a%d]"
+  L7_8 = ""
+  L4_5 = L4_5(L5_6, L6_7, L7_8)
+  L5_6, L6_7 = nil, nil
+  L7_8 = display
+  L7_8 = L7_8.newRect
+  L8_9 = 0
+  L9_10 = 0
+  L10_11 = _W
+  L11_12 = _H
+  L7_8 = L7_8(L8_9, L9_10, L10_11, L11_12)
+  L9_10 = L7_8
+  L8_9 = L7_8.setFillColor
+  L10_11 = 0
+  L11_12 = 0
+  L12_13 = 0
+  L13_14 = 200
+  L8_9(L9_10, L10_11, L11_12, L12_13, L13_14)
+  L7_8.isHitTestable = true
+  L9_10 = L7_8
+  L8_9 = L7_8.addEventListener
+  L10_11 = "touch"
+  function L11_12()
+    local L0_20, L1_21
+    L0_20 = true
+    return L0_20
+  end
+  L8_9(L9_10, L10_11, L11_12)
+  L8_9 = L2_3.back
+  L9_10 = L8_9
+  L8_9 = L8_9.insert
+  L10_11 = L7_8
+  L8_9(L9_10, L10_11)
+  L8_9 = display
+  L8_9 = L8_9.newText
+  L9_10 = A1_2.header
+  L10_11 = 0
+  L11_12 = 0
+  L12_13 = _UPVALUE0_
+  L12_13 = L12_13.fonts
+  L12_13 = L12_13.regular
+  L13_14 = 33
+  L8_9 = L8_9(L9_10, L10_11, L11_12, L12_13, L13_14)
+  L10_11 = L8_9
+  L9_10 = L8_9.setReferencePoint
+  L11_12 = display
+  L11_12 = L11_12.TopCenterReferencePoint
+  L9_10(L10_11, L11_12)
+  L9_10 = _UPVALUE1_
+  L8_9.x = L9_10
+  L8_9.y = 0
+  L9_10 = L2_3.front
+  L10_11 = L9_10
+  L9_10 = L9_10.insert
+  L11_12 = L8_9
+  L9_10(L10_11, L11_12)
+  L9_10 = display
+  L9_10 = L9_10.newText
+  L10_11 = {}
+  L11_12 = A1_2.subtext
+  L10_11.text = L11_12
+  L11_12 = _W
+  L11_12 = L11_12 - 90
+  L10_11.width = L11_12
+  L10_11.height = 0
+  L11_12 = _UPVALUE0_
+  L11_12 = L11_12.fonts
+  L11_12 = L11_12.light
+  L10_11.font = L11_12
+  L10_11.fontSize = 12
+  L10_11.align = "center"
+  L9_10 = L9_10(L10_11)
+  L11_12 = L9_10
+  L10_11 = L9_10.setReferencePoint
+  L12_13 = display
+  L12_13 = L12_13.TopCenterReferencePoint
+  L10_11(L11_12, L12_13)
+  L10_11 = L8_9.x
+  L9_10.x = L10_11
+  L10_11 = L8_9.y
+  L11_12 = L8_9.height
+  L10_11 = L10_11 + L11_12
+  L10_11 = L10_11 - 3
+  L9_10.y = L10_11
+  L11_12 = L9_10
+  L10_11 = L9_10.setFillColor
+  L12_13 = 255
+  L13_14 = 255
+  L14_15 = 255
+  L15_16 = 225
+  L10_11(L11_12, L12_13, L13_14, L14_15, L15_16)
+  L10_11 = L2_3.front
+  L11_12 = L10_11
+  L10_11 = L10_11.insert
+  L12_13 = L9_10
+  L10_11(L11_12, L12_13)
+  L10_11 = display
+  L10_11 = L10_11.newText
+  L11_12 = "Username:"
+  L12_13 = 0
+  L13_14 = 0
+  L14_15 = _UPVALUE0_
+  L14_15 = L14_15.fonts
+  L14_15 = L14_15.bold
+  L15_16 = 15
+  L10_11 = L10_11(L11_12, L12_13, L13_14, L14_15, L15_16)
+  L12_13 = L10_11
+  L11_12 = L10_11.setReferencePoint
+  L13_14 = display
+  L13_14 = L13_14.TopLeftReferencePoint
+  L11_12(L12_13, L13_14)
+  L11_12 = _UPVALUE1_
+  L12_13 = L3_4 * 0.5
+  L11_12 = L11_12 - L12_13
+  L10_11.x = L11_12
+  L11_12 = L9_10.y
+  L12_13 = L9_10.height
+  L11_12 = L11_12 + L12_13
+  L11_12 = L11_12 + 7
+  L10_11.y = L11_12
+  L11_12 = L2_3.front
+  L12_13 = L11_12
+  L11_12 = L11_12.insert
+  L13_14 = L10_11
+  L11_12(L12_13, L13_14)
+  L11_12 = display
+  L11_12 = L11_12.newText
+  L12_13 = "Max 30 characters"
+  L13_14 = 0
+  L14_15 = 0
+  L15_16 = _UPVALUE0_
+  L15_16 = L15_16.fonts
+  L15_16 = L15_16.lightItalic
+  L16_17 = 11
+  L11_12 = L11_12(L12_13, L13_14, L14_15, L15_16, L16_17)
+  L10_11.maxLength = L11_12
+  L11_12 = L10_11.maxLength
+  L12_13 = L11_12
+  L11_12 = L11_12.setReferencePoint
+  L13_14 = display
+  L13_14 = L13_14.CenterRightReferencePoint
+  L11_12(L12_13, L13_14)
+  L11_12 = L10_11.maxLength
+  L12_13 = _UPVALUE1_
+  L13_14 = L3_4 * 0.5
+  L12_13 = L12_13 + L13_14
+  L11_12.x = L12_13
+  L11_12 = L10_11.maxLength
+  L12_13 = L10_11.y
+  L13_14 = L10_11.height
+  L13_14 = L13_14 * 0.5
+  L12_13 = L12_13 + L13_14
+  L12_13 = L12_13 + 1
+  L11_12.y = L12_13
+  L11_12 = L2_3.front
+  L12_13 = L11_12
+  L11_12 = L11_12.insert
+  L13_14 = L10_11.maxLength
+  L11_12(L12_13, L13_14)
+  function L11_12(A0_22)
+    if A0_22.id == "username" then
+      _UPVALUE0_:setFillColor(255, 255, 255)
+      _UPVALUE0_.status.isVisible = false
+    elseif A0_22.id == "usertag" then
+      _UPVALUE1_:setFillColor(255, 255, 255)
+      _UPVALUE1_.status.isVisible = false
+    end
+    _UPVALUE2_.to(_UPVALUE3_.front, {
+      time = 200,
+      y = _UPVALUE3_.front.y - 150,
+      transition = easing.outQuad,
+      onComplete = function()
+        _UPVALUE0_.dispatchEvent("hasFinishedTextfieldAnimation")
+      end
+    }, true)
+  end
+  function L12_13(A0_23)
+    local L1_24, L2_25
+    L1_24 = A0_23.text
+    L2_25 = A0_23.bg
+    if L2_25.checkTimer then
+      timer.cancel(L2_25.checkTimer)
+    end
+    if A0_23.id == "username" then
+      _UPVALUE0_.status:setStatus("")
+      if L1_24:gsub(" ", ""):len() > 0 and L1_24 ~= _UPVALUE1_ then
+        _UPVALUE0_.status.loading.isVisible = true
+        L2_25.checkTimer = timer.performWithDelay(1000, function()
+          local L0_26
+          function L0_26(A0_27)
+            _UPVALUE0_.status:setStatus(A0_27.response)
+            _UPVALUE0_.status.loading.isVisible = false
+          end
+          _UPVALUE1_.network_request("checkIfUsernameIsTaken", L0_26, {nickname = _UPVALUE2_})
+        end)
+      end
+    elseif A0_23.id == "usertag" then
+      if L1_24:sub(1, 1) ~= "@" and _UPVALUE3_.bg.textfield then
+        L1_24 = "@" .. L1_24
+        _UPVALUE3_.bg.textfield.text = L1_24
+      end
+      if L1_24:sub(2):find("[^_%a%d]") then
+        _UPVALUE3_.additionalInfo.isVisible = true
+      else
+        _UPVALUE3_.additionalInfo.isVisible = false
+      end
+      _UPVALUE3_.status:setStatus("")
+      if not L1_24:sub(2):find("[^_%a%d]") and 0 < L1_24:sub(2):gsub(" ", ""):len() then
+        _UPVALUE3_.status.loading.isVisible = true
+        L2_25.checkTimer = timer.performWithDelay(1000, function()
+          local L0_28
+          function L0_28(A0_29)
+            _UPVALUE0_.status:setStatus(A0_29.response)
+            _UPVALUE0_.status.loading.isVisible = false
+          end
+          _UPVALUE1_.network_request("checkIfUsertagIsTaken", L0_28, {usertag = _UPVALUE2_})
+        end)
+      end
+    end
+  end
+  function L13_14(A0_30)
+    _UPVALUE0_.to(_UPVALUE1_.front, {
+      time = 200,
+      y = _UPVALUE1_.front.origY,
+      transition = easing.outQuad
+    }, true)
+  end
+  L14_15 = _UPVALUE4_
+  L14_15 = L14_15.newTextField
+  L15_16 = {}
+  L15_16.filename = "chooseusertext-slice"
+  L15_16.width = 6
+  L15_16.height = 6
+  L15_16.slices = 8
+  L16_17 = {}
+  L16_17.boxType = "textfield"
+  L16_17.width = L3_4
+  L16_17.id = "username"
+  L16_17.height = 28
+  L16_17.size = 16
+  L17_18 = _UPVALUE0_
+  L17_18 = L17_18.fonts
+  L17_18 = L17_18.light
+  L16_17.font = L17_18
+  L16_17.topPadding = 1
+  L16_17.leftPadding = -1
+  L17_18 = {
+    L18_19,
+    255,
+    255
+  }
+  L18_19 = 255
+  L16_17.defaultColor = L17_18
+  L16_17.defaultLabel = A0_1
+  L16_17.textAdditionalWidth = -40
+  L16_17.hasPreEditAnimation = true
+  L16_17.maxLength = 30
+  L16_17.onInitiatedCallback = L11_12
+  L16_17.onEditedCallback = L12_13
+  L16_17.onFinishedCallback = L13_14
+  L16_17.passTouchOnCancel = "yes"
+  L14_15 = L14_15(L15_16, L16_17)
+  L5_6 = L14_15
+  L15_16 = L5_6
+  L14_15 = L5_6.setReferencePoint
+  L16_17 = display
+  L16_17 = L16_17.TopCenterReferencePoint
+  L14_15(L15_16, L16_17)
+  L14_15 = _UPVALUE1_
+  L5_6.x = L14_15
+  L14_15 = L10_11.y
+  L15_16 = L10_11.height
+  L14_15 = L14_15 + L15_16
+  L14_15 = L14_15 + 2
+  L5_6.y = L14_15
+  L14_15 = L2_3.front
+  L15_16 = L14_15
+  L14_15 = L14_15.insert
+  L16_17 = L5_6
+  L14_15(L15_16, L16_17)
+  L14_15 = display
+  L14_15 = L14_15.newText
+  L15_16 = ""
+  L16_17 = 0
+  L17_18 = 0
+  L18_19 = _UPVALUE0_
+  L18_19 = L18_19.fonts
+  L18_19 = L18_19.lightItalic
+  L14_15 = L14_15(L15_16, L16_17, L17_18, L18_19, 11)
+  L5_6.status = L14_15
+  L14_15 = L5_6.status
+  L15_16 = L14_15
+  L14_15 = L14_15.setReferencePoint
+  L16_17 = display
+  L16_17 = L16_17.CenterLeftReferencePoint
+  L14_15(L15_16, L16_17)
+  L14_15 = L5_6.status
+  L15_16 = L5_6.x
+  L16_17 = L5_6.width
+  L16_17 = L16_17 * 0.5
+  L15_16 = L15_16 + L16_17
+  L15_16 = L15_16 + 8
+  L14_15.x = L15_16
+  L14_15 = L5_6.status
+  L15_16 = L5_6.y
+  L16_17 = L5_6.height
+  L16_17 = L16_17 * 0.5
+  L15_16 = L15_16 + L16_17
+  L14_15.y = L15_16
+  L14_15 = L5_6.status
+  L15_16 = L5_6.status
+  L15_16 = L15_16.x
+  L14_15.origX = L15_16
+  L14_15 = L5_6.status
+  L15_16 = L5_6.status
+  L15_16 = L15_16.y
+  L14_15.origY = L15_16
+  L14_15 = L5_6.status
+  L14_15.isVisible = false
+  L14_15 = L5_6.status
+  function L15_16(A0_31, A1_32)
+    _UPVALUE0_.status:setText(_UPVALUE1_.firstToUpper(A1_32))
+    if A1_32 == "available" then
+      _UPVALUE0_:setFillColor(116, 255, 116)
+      _UPVALUE0_.status:setFillColor(116, 255, 116)
+    elseif A1_32 == "taken" then
+      _UPVALUE0_:setFillColor(255, 116, 116)
+      _UPVALUE0_.status:setFillColor(255, 116, 116)
+    elseif A1_32 == "" then
+      _UPVALUE0_:setFillColor(255, 255, 255)
+      _UPVALUE0_.status:setFillColor(255, 255, 255)
+    end
+    _UPVALUE0_.status:setReferencePoint(display.CenterLeftReferencePoint)
+    _UPVALUE0_.status.x = _UPVALUE0_.status.origX
+    _UPVALUE0_.status.y = _UPVALUE0_.status.origY
+    _UPVALUE0_.status.isVisible = true
+  end
+  L14_15.setStatus = L15_16
+  L14_15 = L2_3.front
+  L15_16 = L14_15
+  L14_15 = L14_15.insert
+  L16_17 = L5_6.status
+  L14_15(L15_16, L16_17)
+  L14_15 = L5_6.status
+  L15_16 = _UPVALUE3_
+  L15_16 = L15_16.makeSprite
+  L16_17 = L5_6.status
+  L16_17 = L16_17.x
+  L17_18 = L5_6.status
+  L17_18 = L17_18.width
+  L17_18 = L17_18 * 0.5
+  L16_17 = L16_17 + L17_18
+  L17_18 = L5_6.status
+  L17_18 = L17_18.y
+  L15_16 = L15_16(L16_17, L17_18)
+  L14_15.loading = L15_16
+  L14_15 = L5_6.status
+  L14_15 = L14_15.loading
+  L15_16 = L14_15
+  L14_15 = L14_15.scale
+  L16_17 = 0.5
+  L17_18 = 0.5
+  L14_15(L15_16, L16_17, L17_18)
+  L14_15 = L5_6.status
+  L14_15 = L14_15.loading
+  L14_15.isVisible = false
+  L14_15 = L2_3.front
+  L15_16 = L14_15
+  L14_15 = L14_15.insert
+  L16_17 = L5_6.status
+  L16_17 = L16_17.loading
+  L14_15(L15_16, L16_17)
+  L14_15 = display
+  L14_15 = L14_15.newText
+  L15_16 = "Usertag:"
+  L16_17 = 0
+  L17_18 = 0
+  L18_19 = _UPVALUE0_
+  L18_19 = L18_19.fonts
+  L18_19 = L18_19.bold
+  L14_15 = L14_15(L15_16, L16_17, L17_18, L18_19, 15)
+  L16_17 = L14_15
+  L15_16 = L14_15.setReferencePoint
+  L17_18 = display
+  L17_18 = L17_18.TopLeftReferencePoint
+  L15_16(L16_17, L17_18)
+  L15_16 = L10_11.x
+  L14_15.x = L15_16
+  L15_16 = L5_6.y
+  L16_17 = L5_6.height
+  L15_16 = L15_16 + L16_17
+  L15_16 = L15_16 + 7
+  L14_15.y = L15_16
+  L15_16 = L2_3.front
+  L16_17 = L15_16
+  L15_16 = L15_16.insert
+  L17_18 = L14_15
+  L15_16(L16_17, L17_18)
+  L15_16 = display
+  L15_16 = L15_16.newText
+  L16_17 = "Max 15 characters"
+  L17_18 = 0
+  L18_19 = 0
+  L15_16 = L15_16(L16_17, L17_18, L18_19, _UPVALUE0_.fonts.lightItalic, 11)
+  L14_15.maxLength = L15_16
+  L15_16 = L14_15.maxLength
+  L16_17 = L15_16
+  L15_16 = L15_16.setReferencePoint
+  L17_18 = display
+  L17_18 = L17_18.CenterRightReferencePoint
+  L15_16(L16_17, L17_18)
+  L15_16 = L14_15.maxLength
+  L16_17 = _UPVALUE1_
+  L17_18 = L3_4 * 0.5
+  L16_17 = L16_17 + L17_18
+  L15_16.x = L16_17
+  L15_16 = L14_15.maxLength
+  L16_17 = L14_15.y
+  L17_18 = L14_15.height
+  L17_18 = L17_18 * 0.5
+  L16_17 = L16_17 + L17_18
+  L16_17 = L16_17 + 1
+  L15_16.y = L16_17
+  L15_16 = L2_3.front
+  L16_17 = L15_16
+  L15_16 = L15_16.insert
+  L17_18 = L14_15.maxLength
+  L15_16(L16_17, L17_18)
+  L15_16 = _UPVALUE4_
+  L15_16 = L15_16.newTextField
+  L16_17 = {}
+  L16_17.filename = "chooseusertext-slice"
+  L16_17.width = 6
+  L16_17.height = 6
+  L16_17.slices = 8
+  L17_18 = {}
+  L17_18.boxType = "textfield"
+  L17_18.width = L3_4
+  L17_18.height = 28
+  L17_18.id = "usertag"
+  L17_18.size = 16
+  L18_19 = _UPVALUE0_
+  L18_19 = L18_19.fonts
+  L18_19 = L18_19.lightItalic
+  L17_18.font = L18_19
+  L17_18.topPadding = 1
+  L17_18.leftPadding = -1
+  L18_19 = {
+    255,
+    255,
+    255,
+    200
+  }
+  L17_18.defaultColor = L18_19
+  L18_19 = "@"
+  L18_19 = L18_19 .. L4_5
+  L17_18.defaultLabel = L18_19
+  L17_18.maxLength = 16
+  L17_18.onInitiatedCallback = L11_12
+  L17_18.onEditedCallback = L12_13
+  L17_18.onFinishedCallback = L13_14
+  L17_18.passTouchOnCancel = "yes"
+  L15_16 = L15_16(L16_17, L17_18)
+  L6_7 = L15_16
+  L16_17 = L6_7
+  L15_16 = L6_7.setReferencePoint
+  L17_18 = display
+  L17_18 = L17_18.TopCenterReferencePoint
+  L15_16(L16_17, L17_18)
+  L15_16 = _UPVALUE1_
+  L6_7.x = L15_16
+  L15_16 = L14_15.y
+  L16_17 = L14_15.height
+  L15_16 = L15_16 + L16_17
+  L15_16 = L15_16 + 2
+  L6_7.y = L15_16
+  L15_16 = L2_3.front
+  L16_17 = L15_16
+  L15_16 = L15_16.insert
+  L17_18 = L6_7
+  L15_16(L16_17, L17_18)
+  L15_16 = display
+  L15_16 = L15_16.newText
+  L16_17 = ""
+  L17_18 = 0
+  L18_19 = 0
+  L15_16 = L15_16(L16_17, L17_18, L18_19, _UPVALUE0_.fonts.lightItalic, 11)
+  L6_7.status = L15_16
+  L15_16 = L6_7.status
+  L16_17 = L15_16
+  L15_16 = L15_16.setReferencePoint
+  L17_18 = display
+  L17_18 = L17_18.CenterLeftReferencePoint
+  L15_16(L16_17, L17_18)
+  L15_16 = L6_7.status
+  L16_17 = L6_7.x
+  L17_18 = L6_7.width
+  L17_18 = L17_18 * 0.5
+  L16_17 = L16_17 + L17_18
+  L16_17 = L16_17 + 8
+  L15_16.x = L16_17
+  L15_16 = L6_7.status
+  L16_17 = L6_7.y
+  L17_18 = L6_7.height
+  L17_18 = L17_18 * 0.5
+  L16_17 = L16_17 + L17_18
+  L15_16.y = L16_17
+  L15_16 = L6_7.status
+  L16_17 = L6_7.status
+  L16_17 = L16_17.x
+  L15_16.origX = L16_17
+  L15_16 = L6_7.status
+  L16_17 = L6_7.status
+  L16_17 = L16_17.y
+  L15_16.origY = L16_17
+  L15_16 = L6_7.status
+  L15_16.isVisible = false
+  L15_16 = L6_7.status
+  function L16_17(A0_33, A1_34)
+    _UPVALUE0_.status:setText(_UPVALUE1_.firstToUpper(A1_34))
+    if A1_34 == "available" then
+      _UPVALUE0_:setFillColor(116, 255, 116)
+      _UPVALUE0_.status:setFillColor(116, 255, 116)
+    elseif A1_34 == "taken" then
+      _UPVALUE0_:setFillColor(255, 116, 116)
+      _UPVALUE0_.status:setFillColor(255, 116, 116)
+    elseif A1_34 == "" then
+      _UPVALUE0_:setFillColor(255, 255, 255)
+      _UPVALUE0_.status:setFillColor(255, 255, 255)
+    end
+    _UPVALUE0_.status:setReferencePoint(display.CenterLeftReferencePoint)
+    _UPVALUE0_.status.x = _UPVALUE0_.status.origX
+    _UPVALUE0_.status.y = _UPVALUE0_.status.origY
+    _UPVALUE0_.status.isVisible = true
+  end
+  L15_16.setStatus = L16_17
+  L15_16 = L2_3.front
+  L16_17 = L15_16
+  L15_16 = L15_16.insert
+  L17_18 = L6_7.status
+  L15_16(L16_17, L17_18)
+  L15_16 = L6_7.status
+  L16_17 = _UPVALUE3_
+  L16_17 = L16_17.makeSprite
+  L17_18 = L6_7.status
+  L17_18 = L17_18.x
+  L18_19 = L6_7.status
+  L18_19 = L18_19.width
+  L18_19 = L18_19 * 0.5
+  L17_18 = L17_18 + L18_19
+  L18_19 = L6_7.status
+  L18_19 = L18_19.y
+  L16_17 = L16_17(L17_18, L18_19)
+  L15_16.loading = L16_17
+  L15_16 = L6_7.status
+  L15_16 = L15_16.loading
+  L16_17 = L15_16
+  L15_16 = L15_16.scale
+  L17_18 = 0.5
+  L18_19 = 0.5
+  L15_16(L16_17, L17_18, L18_19)
+  L15_16 = L6_7.status
+  L15_16 = L15_16.loading
+  L15_16.isVisible = false
+  L15_16 = L2_3.front
+  L16_17 = L15_16
+  L15_16 = L15_16.insert
+  L17_18 = L6_7.status
+  L17_18 = L17_18.loading
+  L15_16(L16_17, L17_18)
+  L15_16 = display
+  L15_16 = L15_16.newText
+  L16_17 = "Only letters, numbers and '_'."
+  L17_18 = 0
+  L18_19 = 0
+  L15_16 = L15_16(L16_17, L17_18, L18_19, _UPVALUE0_.fonts.lightItalic, 11)
+  L6_7.additionalInfo = L15_16
+  L15_16 = L6_7.additionalInfo
+  L16_17 = L15_16
+  L15_16 = L15_16.setReferencePoint
+  L17_18 = display
+  L17_18 = L17_18.TopLeftReferencePoint
+  L15_16(L16_17, L17_18)
+  L15_16 = L6_7.additionalInfo
+  L16_17 = L14_15.x
+  L15_16.x = L16_17
+  L15_16 = L6_7.additionalInfo
+  L16_17 = L6_7.y
+  L17_18 = L6_7.height
+  L16_17 = L16_17 + L17_18
+  L16_17 = L16_17 + 2
+  L15_16.y = L16_17
+  L15_16 = L6_7.additionalInfo
+  L16_17 = L15_16
+  L15_16 = L15_16.setFillColor
+  L17_18 = 255
+  L18_19 = 100
+  L15_16(L16_17, L17_18, L18_19, 100)
+  L15_16 = L6_7.additionalInfo
+  L15_16.isVisible = false
+  L15_16 = L2_3.front
+  L16_17 = L15_16
+  L15_16 = L15_16.insert
+  L17_18 = L6_7.additionalInfo
+  L15_16(L16_17, L17_18)
+  function L15_16(A0_35)
+    local L1_36, L2_37, L3_38, L4_39
+    L1_36 = A0_35.target
+    L2_37 = _UPVALUE0_
+    L2_37 = L2_37.fakeLabel
+    L2_37 = L2_37.label
+    L3_38 = _UPVALUE1_
+    L3_38 = L3_38.fakeLabel
+    L3_38 = L3_38.label
+    L4_39 = L3_38
+    L3_38 = L3_38.sub
+    L3_38 = L3_38(L4_39, 2)
+    L4_39 = _UPVALUE2_
+    L4_39 = L4_39.nickname
+    if L2_37 == L4_39 then
+      L4_39 = _UPVALUE2_
+      L4_39 = L4_39.usertag
+      if L3_38 == L4_39 then
+        L4_39 = _UPVALUE3_
+        L4_39 = L4_39.showAlert
+        L4_39("No changes made", "You have not made any changes.", {"Ok"})
+      end
+    else
+      L4_39 = string
+      L4_39 = L4_39.gsub
+      L4_39 = L4_39(L2_37, " ", "")
+      L4_39 = L4_39.len
+      L4_39 = L4_39(L4_39)
+      if L4_39 == 0 then
+        L4_39 = _UPVALUE3_
+        L4_39 = L4_39.showAlert
+        L4_39("Missing username", "You forgot to fill in a username.", {"Ok"})
+      else
+        L4_39 = L2_37.len
+        L4_39 = L4_39(L2_37)
+        if L4_39 > 30 then
+          L4_39 = _UPVALUE3_
+          L4_39 = L4_39.showAlert
+          L4_39("Username too long", "Username can contain maximum 30 characters.", {"Ok"})
+        else
+          L4_39 = L3_38.gsub
+          L4_39 = L4_39(L3_38, " ", "")
+          L4_39 = L4_39.len
+          L4_39 = L4_39(L4_39)
+          if L4_39 == 0 then
+            L4_39 = _UPVALUE3_
+            L4_39 = L4_39.showAlert
+            L4_39("Missing uertag", "You forgot to fill in a usertag.", {"Ok"})
+          else
+            L4_39 = L3_38.find
+            L4_39 = L4_39(L3_38, "[^_%a%d]")
+            if L4_39 then
+              L4_39 = _UPVALUE3_
+              L4_39 = L4_39.showAlert
+              L4_39("Invalid characters", "Usertag can only contain letters, numbers and '_'", {"Ok"})
+            else
+              L4_39 = L3_38.len
+              L4_39 = L4_39(L3_38)
+              if L4_39 > 15 then
+                L4_39 = _UPVALUE3_
+                L4_39 = L4_39.showAlert
+                L4_39("Usertag too long", "Usertag can contain maximum 15 characters.", {"Ok"})
+              else
+                L1_36.isVisible = false
+                L4_39 = L1_36.empty
+                L4_39.isVisible = true
+                L4_39 = L1_36.loading
+                L4_39.isVisible = true
+                function L4_39(A0_40)
+                  _UPVALUE1_.isVisible = true
+                  _UPVALUE1_.empty.isVisible = false
+                  _UPVALUE1_.loading.isVisible = false
+                  if _UPVALUE0_.decode(A0_40.response).nickError == "taken" then
+                    _UPVALUE2_.status:setStatus("taken")
+                  elseif _UPVALUE0_.decode(A0_40.response).tagError == "taken" then
+                    _UPVALUE3_.status:setStatus("taken")
+                  elseif _UPVALUE0_.decode(A0_40.response).nickError == "profane" then
+                    _UPVALUE4_.showAlert("Profanity", "Profanity detected in username. Please try refrain from including cuss words or profanity in the username.", {"Ok"})
+                    _UPVALUE2_:setFillColor(255, 116, 116)
+                  elseif _UPVALUE0_.decode(A0_40.response).tagError == "profane" then
+                    _UPVALUE4_.showAlert("Profanity", "Profanity detected in usertag. Please try refrain from including cuss words or profanity in the usertag.", {"Ok"})
+                    _UPVALUE3_:setFillColor(255, 116, 116)
+                  elseif _UPVALUE0_.decode(A0_40.response).nickError == "empty" then
+                    _UPVALUE4_.showAlert("Missing username", "You forgot to fill in a username.", {"Ok"})
+                  elseif _UPVALUE0_.decode(A0_40.response).tagError == "empty" then
+                    _UPVALUE4_.showAlert("Missing usertag", "You forgot to fill in a usertag.", {"Ok"})
+                  elseif _UPVALUE0_.decode(A0_40.response).nickError == false and _UPVALUE0_.decode(A0_40.response).tagError == false then
+                    if _UPVALUE5_.callback then
+                      _UPVALUE5_.callback(_UPVALUE0_.decode(A0_40.response).nickname, _UPVALUE0_.decode(A0_40.response).usertag)
+                    end
+                    _UPVALUE6_.to(_UPVALUE7_, {
+                      time = 320,
+                      y = _H,
+                      transition = easing.outQuad,
+                      onComplete = function()
+                        _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+                      end
+                    }, true)
+                  end
+                end
+                _UPVALUE3_.network_request("checkNicknameUsertagErrors", L4_39, {nickname = L2_37, usertag = L3_38})
+              end
+            end
+          end
+        end
+      end
+    end
+    L4_39 = true
+    return L4_39
+  end
+  L16_17 = _UPVALUE6_
+  L16_17 = L16_17.newButton
+  L17_18 = {}
+  L17_18.width = 150
+  L17_18.height = 40
+  L17_18.default = "chooseUsername.png"
+  L17_18.over = "chooseUsername-over.png"
+  L17_18.onRelease = L15_16
+  L16_17 = L16_17(L17_18)
+  L18_19 = L16_17
+  L17_18 = L16_17.setReferencePoint
+  L17_18(L18_19, display.TopCenterReferencePoint)
+  L17_18 = _UPVALUE1_
+  L16_17.x = L17_18
+  L17_18 = L6_7.additionalInfo
+  L17_18 = L17_18.y
+  L18_19 = L6_7.additionalInfo
+  L18_19 = L18_19.height
+  L17_18 = L17_18 + L18_19
+  L17_18 = L17_18 + 8
+  L16_17.y = L17_18
+  L17_18 = L2_3.front
+  L18_19 = L17_18
+  L17_18 = L17_18.insert
+  L17_18(L18_19, L16_17)
+  L17_18 = display
+  L17_18 = L17_18.newImageRect
+  L18_19 = "chooseUsername-empty.png"
+  L17_18 = L17_18(L18_19, 150, 40)
+  L16_17.empty = L17_18
+  L17_18 = L16_17.empty
+  L18_19 = L17_18
+  L17_18 = L17_18.setReferencePoint
+  L17_18(L18_19, display.TopCenterReferencePoint)
+  L17_18 = L16_17.empty
+  L18_19 = L16_17.x
+  L17_18.x = L18_19
+  L17_18 = L16_17.empty
+  L18_19 = L16_17.y
+  L17_18.y = L18_19
+  L17_18 = L16_17.empty
+  L17_18.isVisible = false
+  L17_18 = L2_3.front
+  L18_19 = L17_18
+  L17_18 = L17_18.insert
+  L17_18(L18_19, L16_17.empty)
+  L17_18 = _UPVALUE3_
+  L17_18 = L17_18.makeSprite
+  L18_19 = L16_17.x
+  L17_18 = L17_18(L18_19, L16_17.y + L16_17.height * 0.5, {
+    img = "activity_black.png"
+  })
+  L16_17.loading = L17_18
+  L17_18 = L16_17.loading
+  L18_19 = L17_18
+  L17_18 = L17_18.scale
+  L17_18(L18_19, 0.9, 0.9)
+  L17_18 = L16_17.loading
+  L17_18.isVisible = false
+  L17_18 = L2_3.front
+  L18_19 = L17_18
+  L17_18 = L17_18.insert
+  L17_18(L18_19, L16_17.loading)
+  L17_18 = A1_2.showCross
+  if L17_18 then
+    function L17_18(A0_41)
+      _UPVALUE0_.to(_UPVALUE1_, {
+        time = 200,
+        y = _H,
+        transition = easing.outQuad,
+        onComplete = function()
+          _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+        end
+      }, true)
+      return true
+    end
+    L18_19 = _UPVALUE6_
+    L18_19 = L18_19.newButton
+    L18_19 = L18_19({
+      width = 27,
+      height = 29,
+      default = "crossclose.png",
+      over = "crossclose-over.png",
+      onRelease = L17_18
+    })
+    L18_19:setReferencePoint(display.TopRightReferencePoint)
+    L18_19.x = _UPVALUE1_ + L3_4 * 0.5
+    L18_19.y = L8_9.y - 40
+    L2_3.front:insert(L18_19)
+  end
+  L17_18 = L2_3.front
+  L18_19 = L17_18
+  L17_18 = L17_18.setReferencePoint
+  L17_18(L18_19, display.CenterReferencePoint)
+  L17_18 = L2_3.front
+  L18_19 = _UPVALUE7_
+  L17_18.y = L18_19
+  L17_18 = L2_3.front
+  L18_19 = L2_3.front
+  L18_19 = L18_19.y
+  L17_18.origY = L18_19
+  L17_18 = _UPVALUE2_
+  L17_18 = L17_18.from
+  L18_19 = L2_3
+  L17_18(L18_19, {
+    delay = 1000,
+    time = 400,
+    y = L2_3.front.y + _H,
+    transition = easing.outQuad
+  }, true)
+  return L2_3
+end
+;({}).makeUsertagWindow = function(A0_42, A1_43)
+  local L2_44, L3_45, L4_46, L5_47, L6_48, L7_49, L8_50, L9_51, L10_52, L11_53, L12_54, L13_55, L14_56, L15_57, L16_58
+  L2_44 = display
+  L2_44 = L2_44.newGroup
+  L2_44 = L2_44()
+  L3_45 = display
+  L3_45 = L3_45.newGroup
+  L3_45 = L3_45()
+  L2_44.back = L3_45
+  L4_46 = L2_44
+  L3_45 = L2_44.insert
+  L5_47 = L2_44.back
+  L3_45(L4_46, L5_47)
+  L3_45 = display
+  L3_45 = L3_45.newGroup
+  L3_45 = L3_45()
+  L2_44.front = L3_45
+  L4_46 = L2_44
+  L3_45 = L2_44.insert
+  L5_47 = L2_44.front
+  L3_45(L4_46, L5_47)
+  if not A1_43 then
+    L3_45 = {}
+    A1_43 = L3_45
+  end
+  L3_45 = _W
+  L3_45 = L3_45 - 106
+  L5_47 = A0_42
+  L4_46 = A0_42.gsub
+  L6_48 = "[^_%a%d]"
+  L7_49 = ""
+  L4_46 = L4_46(L5_47, L6_48, L7_49)
+  L5_47 = nil
+  L6_48 = display
+  L6_48 = L6_48.newRect
+  L7_49 = 0
+  L8_50 = 0
+  L9_51 = _W
+  L10_52 = _H
+  L6_48 = L6_48(L7_49, L8_50, L9_51, L10_52)
+  L8_50 = L6_48
+  L7_49 = L6_48.setFillColor
+  L9_51 = 0
+  L10_52 = 0
+  L11_53 = 0
+  L12_54 = 200
+  L7_49(L8_50, L9_51, L10_52, L11_53, L12_54)
+  L6_48.isHitTestable = true
+  L8_50 = L6_48
+  L7_49 = L6_48.addEventListener
+  L9_51 = "touch"
+  function L10_52()
+    local L0_59, L1_60
+    L0_59 = true
+    return L0_59
+  end
+  L7_49(L8_50, L9_51, L10_52)
+  L7_49 = L2_44.back
+  L8_50 = L7_49
+  L7_49 = L7_49.insert
+  L9_51 = L6_48
+  L7_49(L8_50, L9_51)
+  L7_49 = display
+  L7_49 = L7_49.newText
+  L8_50 = A1_43.header
+  L9_51 = 0
+  L10_52 = 0
+  L11_53 = _UPVALUE0_
+  L11_53 = L11_53.fonts
+  L11_53 = L11_53.regular
+  L12_54 = 33
+  L7_49 = L7_49(L8_50, L9_51, L10_52, L11_53, L12_54)
+  L9_51 = L7_49
+  L8_50 = L7_49.setReferencePoint
+  L10_52 = display
+  L10_52 = L10_52.TopCenterReferencePoint
+  L8_50(L9_51, L10_52)
+  L8_50 = _UPVALUE1_
+  L7_49.x = L8_50
+  L7_49.y = 0
+  L8_50 = L2_44.front
+  L9_51 = L8_50
+  L8_50 = L8_50.insert
+  L10_52 = L7_49
+  L8_50(L9_51, L10_52)
+  L8_50 = display
+  L8_50 = L8_50.newText
+  L9_51 = {}
+  L10_52 = A1_43.subtext
+  L9_51.text = L10_52
+  L10_52 = _W
+  L10_52 = L10_52 - 90
+  L9_51.width = L10_52
+  L9_51.height = 0
+  L10_52 = _UPVALUE0_
+  L10_52 = L10_52.fonts
+  L10_52 = L10_52.light
+  L9_51.font = L10_52
+  L9_51.fontSize = 12
+  L9_51.align = "center"
+  L8_50 = L8_50(L9_51)
+  L10_52 = L8_50
+  L9_51 = L8_50.setReferencePoint
+  L11_53 = display
+  L11_53 = L11_53.TopCenterReferencePoint
+  L9_51(L10_52, L11_53)
+  L9_51 = L7_49.x
+  L8_50.x = L9_51
+  L9_51 = L7_49.y
+  L10_52 = L7_49.height
+  L9_51 = L9_51 + L10_52
+  L9_51 = L9_51 - 3
+  L8_50.y = L9_51
+  L10_52 = L8_50
+  L9_51 = L8_50.setFillColor
+  L11_53 = 255
+  L12_54 = 255
+  L13_55 = 255
+  L14_56 = 225
+  L9_51(L10_52, L11_53, L12_54, L13_55, L14_56)
+  L9_51 = L2_44.front
+  L10_52 = L9_51
+  L9_51 = L9_51.insert
+  L11_53 = L8_50
+  L9_51(L10_52, L11_53)
+  L9_51 = display
+  L9_51 = L9_51.newText
+  L10_52 = "Usertag:"
+  L11_53 = 0
+  L12_54 = 0
+  L13_55 = _UPVALUE0_
+  L13_55 = L13_55.fonts
+  L13_55 = L13_55.bold
+  L14_56 = 15
+  L9_51 = L9_51(L10_52, L11_53, L12_54, L13_55, L14_56)
+  L11_53 = L9_51
+  L10_52 = L9_51.setReferencePoint
+  L12_54 = display
+  L12_54 = L12_54.TopLeftReferencePoint
+  L10_52(L11_53, L12_54)
+  L10_52 = _UPVALUE1_
+  L11_53 = L3_45 * 0.5
+  L10_52 = L10_52 - L11_53
+  L9_51.x = L10_52
+  L10_52 = L8_50.y
+  L11_53 = L8_50.height
+  L10_52 = L10_52 + L11_53
+  L10_52 = L10_52 + 7
+  L9_51.y = L10_52
+  L10_52 = L2_44.front
+  L11_53 = L10_52
+  L10_52 = L10_52.insert
+  L12_54 = L9_51
+  L10_52(L11_53, L12_54)
+  L10_52 = display
+  L10_52 = L10_52.newText
+  L11_53 = "Max 15 characters"
+  L12_54 = 0
+  L13_55 = 0
+  L14_56 = _UPVALUE0_
+  L14_56 = L14_56.fonts
+  L14_56 = L14_56.lightItalic
+  L15_57 = 11
+  L10_52 = L10_52(L11_53, L12_54, L13_55, L14_56, L15_57)
+  L9_51.maxLength = L10_52
+  L10_52 = L9_51.maxLength
+  L11_53 = L10_52
+  L10_52 = L10_52.setReferencePoint
+  L12_54 = display
+  L12_54 = L12_54.CenterRightReferencePoint
+  L10_52(L11_53, L12_54)
+  L10_52 = L9_51.maxLength
+  L11_53 = _UPVALUE1_
+  L12_54 = L3_45 * 0.5
+  L11_53 = L11_53 + L12_54
+  L10_52.x = L11_53
+  L10_52 = L9_51.maxLength
+  L11_53 = L9_51.y
+  L12_54 = L9_51.height
+  L12_54 = L12_54 * 0.5
+  L11_53 = L11_53 + L12_54
+  L11_53 = L11_53 + 1
+  L10_52.y = L11_53
+  L10_52 = L2_44.front
+  L11_53 = L10_52
+  L10_52 = L10_52.insert
+  L12_54 = L9_51.maxLength
+  L10_52(L11_53, L12_54)
+  function L10_52(A0_61)
+    _UPVALUE0_:setFillColor(255, 255, 255)
+    _UPVALUE0_.status.isVisible = false
+    _UPVALUE1_.to(_UPVALUE2_.front, {
+      time = 200,
+      y = _UPVALUE2_.front.y - 150,
+      transition = easing.outQuad,
+      onComplete = function()
+        _UPVALUE0_.dispatchEvent("hasFinishedTextfieldAnimation")
+      end
+    }, true)
+  end
+  function L11_53(A0_62)
+    local L1_63, L2_64
+    L1_63 = A0_62.text
+    L2_64 = A0_62.bg
+    if L2_64.checkTimer then
+      timer.cancel(L2_64.checkTimer)
+    end
+    if L1_63:sub(1, 1) ~= "@" and _UPVALUE0_.bg.textfield then
+      L1_63 = "@" .. L1_63
+      _UPVALUE0_.bg.textfield.text = L1_63
+    end
+    if L1_63:sub(2):find("[^_%a%d]") then
+      _UPVALUE0_.additionalInfo.isVisible = true
+    else
+      _UPVALUE0_.additionalInfo.isVisible = false
+    end
+    _UPVALUE0_.status:setStatus("")
+    if not L1_63:sub(2):find("[^_%a%d]") and L1_63:sub(2):gsub(" ", ""):len() > 0 then
+      _UPVALUE0_.status.loading.isVisible = true
+      L2_64.checkTimer = timer.performWithDelay(1000, function()
+        local L0_65
+        function L0_65(A0_66)
+          _UPVALUE0_.status:setStatus(A0_66.response)
+          _UPVALUE0_.status.loading.isVisible = false
+        end
+        _UPVALUE1_.network_request("checkIfUsertagIsTaken", L0_65, {usertag = _UPVALUE2_})
+      end)
+    end
+  end
+  function L12_54(A0_67)
+    _UPVALUE0_.to(_UPVALUE1_.front, {
+      time = 200,
+      y = _UPVALUE1_.front.origY,
+      transition = easing.outQuad
+    }, true)
+  end
+  L13_55 = _UPVALUE4_
+  L13_55 = L13_55.newTextField
+  L14_56 = {}
+  L14_56.filename = "chooseusertext-slice"
+  L14_56.width = 6
+  L14_56.height = 6
+  L14_56.slices = 8
+  L15_57 = {}
+  L15_57.boxType = "textfield"
+  L15_57.width = L3_45
+  L15_57.height = 28
+  L15_57.id = "usertag"
+  L15_57.size = 16
+  L16_58 = _UPVALUE0_
+  L16_58 = L16_58.fonts
+  L16_58 = L16_58.lightItalic
+  L15_57.font = L16_58
+  L15_57.topPadding = 1
+  L15_57.leftPadding = -1
+  L16_58 = {
+    255,
+    255,
+    255,
+    200
+  }
+  L15_57.defaultColor = L16_58
+  L16_58 = "@"
+  L16_58 = L16_58 .. L4_46
+  L15_57.defaultLabel = L16_58
+  L15_57.maxLength = 16
+  L15_57.onInitiatedCallback = L10_52
+  L15_57.onEditedCallback = L11_53
+  L15_57.onFinishedCallback = L12_54
+  L15_57.passTouchOnCancel = "yes"
+  L13_55 = L13_55(L14_56, L15_57)
+  L5_47 = L13_55
+  L14_56 = L5_47
+  L13_55 = L5_47.setReferencePoint
+  L15_57 = display
+  L15_57 = L15_57.TopCenterReferencePoint
+  L13_55(L14_56, L15_57)
+  L13_55 = _UPVALUE1_
+  L5_47.x = L13_55
+  L13_55 = L9_51.y
+  L14_56 = L9_51.height
+  L13_55 = L13_55 + L14_56
+  L13_55 = L13_55 + 2
+  L5_47.y = L13_55
+  L13_55 = L2_44.front
+  L14_56 = L13_55
+  L13_55 = L13_55.insert
+  L15_57 = L5_47
+  L13_55(L14_56, L15_57)
+  L13_55 = display
+  L13_55 = L13_55.newText
+  L14_56 = ""
+  L15_57 = 0
+  L16_58 = 0
+  L13_55 = L13_55(L14_56, L15_57, L16_58, _UPVALUE0_.fonts.lightItalic, 11)
+  L5_47.status = L13_55
+  L13_55 = L5_47.status
+  L14_56 = L13_55
+  L13_55 = L13_55.setReferencePoint
+  L15_57 = display
+  L15_57 = L15_57.CenterLeftReferencePoint
+  L13_55(L14_56, L15_57)
+  L13_55 = L5_47.status
+  L14_56 = L5_47.x
+  L15_57 = L5_47.width
+  L15_57 = L15_57 * 0.5
+  L14_56 = L14_56 + L15_57
+  L14_56 = L14_56 + 8
+  L13_55.x = L14_56
+  L13_55 = L5_47.status
+  L14_56 = L5_47.y
+  L15_57 = L5_47.height
+  L15_57 = L15_57 * 0.5
+  L14_56 = L14_56 + L15_57
+  L13_55.y = L14_56
+  L13_55 = L5_47.status
+  L14_56 = L5_47.status
+  L14_56 = L14_56.x
+  L13_55.origX = L14_56
+  L13_55 = L5_47.status
+  L14_56 = L5_47.status
+  L14_56 = L14_56.y
+  L13_55.origY = L14_56
+  L13_55 = L5_47.status
+  L13_55.isVisible = false
+  L13_55 = L5_47.status
+  function L14_56(A0_68, A1_69)
+    _UPVALUE0_.status:setText(_UPVALUE1_.firstToUpper(A1_69))
+    if A1_69 == "available" then
+      _UPVALUE0_:setFillColor(116, 255, 116)
+      _UPVALUE0_.status:setFillColor(116, 255, 116)
+    elseif A1_69 == "taken" then
+      _UPVALUE0_:setFillColor(255, 116, 116)
+      _UPVALUE0_.status:setFillColor(255, 116, 116)
+    elseif A1_69 == "" then
+      _UPVALUE0_:setFillColor(255, 255, 255)
+      _UPVALUE0_.status:setFillColor(255, 255, 255)
+    end
+    _UPVALUE0_.status:setReferencePoint(display.CenterLeftReferencePoint)
+    _UPVALUE0_.status.x = _UPVALUE0_.status.origX
+    _UPVALUE0_.status.y = _UPVALUE0_.status.origY
+    _UPVALUE0_.status.isVisible = true
+  end
+  L13_55.setStatus = L14_56
+  L13_55 = L2_44.front
+  L14_56 = L13_55
+  L13_55 = L13_55.insert
+  L15_57 = L5_47.status
+  L13_55(L14_56, L15_57)
+  L13_55 = L5_47.status
+  L14_56 = _UPVALUE3_
+  L14_56 = L14_56.makeSprite
+  L15_57 = L5_47.status
+  L15_57 = L15_57.x
+  L16_58 = L5_47.status
+  L16_58 = L16_58.width
+  L16_58 = L16_58 * 0.5
+  L15_57 = L15_57 + L16_58
+  L16_58 = L5_47.status
+  L16_58 = L16_58.y
+  L14_56 = L14_56(L15_57, L16_58)
+  L13_55.loading = L14_56
+  L13_55 = L5_47.status
+  L13_55 = L13_55.loading
+  L14_56 = L13_55
+  L13_55 = L13_55.scale
+  L15_57 = 0.5
+  L16_58 = 0.5
+  L13_55(L14_56, L15_57, L16_58)
+  L13_55 = L5_47.status
+  L13_55 = L13_55.loading
+  L13_55.isVisible = false
+  L13_55 = L2_44.front
+  L14_56 = L13_55
+  L13_55 = L13_55.insert
+  L15_57 = L5_47.status
+  L15_57 = L15_57.loading
+  L13_55(L14_56, L15_57)
+  L13_55 = display
+  L13_55 = L13_55.newText
+  L14_56 = "Only letters, numbers and '_'."
+  L15_57 = 0
+  L16_58 = 0
+  L13_55 = L13_55(L14_56, L15_57, L16_58, _UPVALUE0_.fonts.lightItalic, 11)
+  L5_47.additionalInfo = L13_55
+  L13_55 = L5_47.additionalInfo
+  L14_56 = L13_55
+  L13_55 = L13_55.setReferencePoint
+  L15_57 = display
+  L15_57 = L15_57.TopLeftReferencePoint
+  L13_55(L14_56, L15_57)
+  L13_55 = L5_47.additionalInfo
+  L14_56 = L9_51.x
+  L13_55.x = L14_56
+  L13_55 = L5_47.additionalInfo
+  L14_56 = L5_47.y
+  L15_57 = L5_47.height
+  L14_56 = L14_56 + L15_57
+  L14_56 = L14_56 + 2
+  L13_55.y = L14_56
+  L13_55 = L5_47.additionalInfo
+  L14_56 = L13_55
+  L13_55 = L13_55.setFillColor
+  L15_57 = 255
+  L16_58 = 100
+  L13_55(L14_56, L15_57, L16_58, 100)
+  L13_55 = L5_47.additionalInfo
+  L13_55.isVisible = false
+  L13_55 = L2_44.front
+  L14_56 = L13_55
+  L13_55 = L13_55.insert
+  L15_57 = L5_47.additionalInfo
+  L13_55(L14_56, L15_57)
+  function L13_55(A0_70)
+    local L1_71, L2_72, L3_73
+    L1_71 = A0_70.target
+    L2_72 = _UPVALUE0_
+    L2_72 = L2_72.fakeLabel
+    L2_72 = L2_72.label
+    L3_73 = L2_72
+    L2_72 = L2_72.sub
+    L2_72 = L2_72(L3_73, 2)
+    L3_73 = L2_72.gsub
+    L3_73 = L3_73(L2_72, " ", "")
+    L3_73 = L3_73.len
+    L3_73 = L3_73(L3_73)
+    if L3_73 == 0 then
+      L3_73 = _UPVALUE1_
+      L3_73 = L3_73.showAlert
+      L3_73("Missing uertag", "You forgot to fill in a usertag.", {"Ok"})
+    else
+      L3_73 = L2_72.find
+      L3_73 = L3_73(L2_72, "[^_%a%d]")
+      if L3_73 then
+        L3_73 = _UPVALUE1_
+        L3_73 = L3_73.showAlert
+        L3_73("Invalid characters", "Usertag can only contain letters, numbers and '_'", {"Ok"})
+      else
+        L3_73 = L2_72.len
+        L3_73 = L3_73(L2_72)
+        if L3_73 > 15 then
+          L3_73 = _UPVALUE1_
+          L3_73 = L3_73.showAlert
+          L3_73("Usertag too long", "Usertag can contain maximum 15 characters.", {"Ok"})
+        else
+          L1_71.isVisible = false
+          L3_73 = L1_71.empty
+          L3_73.isVisible = true
+          L3_73 = L1_71.loading
+          L3_73.isVisible = true
+          function L3_73(A0_74)
+            local L1_75
+            L1_75 = A0_74.response
+            _UPVALUE0_.isVisible = true
+            _UPVALUE0_.empty.isVisible = false
+            _UPVALUE0_.loading.isVisible = false
+            if L1_75 == "taken" then
+              _UPVALUE1_.status:setStatus("taken")
+            elseif L1_75 == "profane" then
+              _UPVALUE2_.showAlert("Profanity", "Profanity detected in usertag. Please try refrain from including cuss words or profanity in the usertag.", {"Ok"})
+              _UPVALUE1_:setFillColor(255, 116, 116)
+            elseif L1_75 == "empty" then
+              _UPVALUE2_.showAlert("Missing usertag", "You forgot to fill in a usertag.", {"Ok"})
+            elseif L1_75 == "success" then
+              if _UPVALUE3_.callback then
+                _UPVALUE3_.callback(_UPVALUE4_, _UPVALUE5_)
+              end
+              _UPVALUE6_.from(_UPVALUE7_, {
+                time = 200,
+                alpha = 0,
+                transition = easing.outQuad
+              })
+              _UPVALUE6_.to(_UPVALUE8_.front, {
+                time = 320,
+                y = _H,
+                transition = easing.outQuad,
+                onComplete = function()
+                  _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+                end
+              }, true)
+            end
+          end
+          _UPVALUE1_.network_request("checkUsertagErrors", L3_73, {usertag = L2_72})
+        end
+      end
+    end
+    L3_73 = true
+    return L3_73
+  end
+  L14_56 = _UPVALUE5_
+  L14_56 = L14_56.newButton
+  L15_57 = {}
+  L15_57.width = 150
+  L15_57.height = 40
+  L15_57.default = "chooseUsername.png"
+  L15_57.over = "chooseUsername-over.png"
+  L15_57.onRelease = L13_55
+  L14_56 = L14_56(L15_57)
+  L16_58 = L14_56
+  L15_57 = L14_56.setReferencePoint
+  L15_57(L16_58, display.TopCenterReferencePoint)
+  L15_57 = _UPVALUE1_
+  L14_56.x = L15_57
+  L15_57 = L5_47.additionalInfo
+  L15_57 = L15_57.y
+  L16_58 = L5_47.additionalInfo
+  L16_58 = L16_58.height
+  L15_57 = L15_57 + L16_58
+  L14_56.y = L15_57
+  L15_57 = L2_44.front
+  L16_58 = L15_57
+  L15_57 = L15_57.insert
+  L15_57(L16_58, L14_56)
+  L15_57 = display
+  L15_57 = L15_57.newImageRect
+  L16_58 = "chooseUsername-empty.png"
+  L15_57 = L15_57(L16_58, 150, 40)
+  L14_56.empty = L15_57
+  L15_57 = L14_56.empty
+  L16_58 = L15_57
+  L15_57 = L15_57.setReferencePoint
+  L15_57(L16_58, display.TopCenterReferencePoint)
+  L15_57 = L14_56.empty
+  L16_58 = L14_56.x
+  L15_57.x = L16_58
+  L15_57 = L14_56.empty
+  L16_58 = L14_56.y
+  L15_57.y = L16_58
+  L15_57 = L14_56.empty
+  L15_57.isVisible = false
+  L15_57 = L2_44.front
+  L16_58 = L15_57
+  L15_57 = L15_57.insert
+  L15_57(L16_58, L14_56.empty)
+  L15_57 = _UPVALUE3_
+  L15_57 = L15_57.makeSprite
+  L16_58 = L14_56.x
+  L15_57 = L15_57(L16_58, L14_56.y + L14_56.height * 0.5, {
+    img = "activity_black.png"
+  })
+  L14_56.loading = L15_57
+  L15_57 = L14_56.loading
+  L16_58 = L15_57
+  L15_57 = L15_57.scale
+  L15_57(L16_58, 0.9, 0.9)
+  L15_57 = L14_56.loading
+  L15_57.isVisible = false
+  L15_57 = L2_44.front
+  L16_58 = L15_57
+  L15_57 = L15_57.insert
+  L15_57(L16_58, L14_56.loading)
+  L15_57 = A1_43.showCross
+  if L15_57 then
+    function L15_57(A0_76)
+      _UPVALUE0_.from(_UPVALUE1_, {
+        time = 200,
+        alpha = 0,
+        transition = easing.outQuad
+      })
+      _UPVALUE0_.to(_UPVALUE2_.front, {
+        time = 320,
+        y = _H,
+        transition = easing.outQuad,
+        onComplete = function()
+          _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+        end
+      }, true)
+      return true
+    end
+    L16_58 = _UPVALUE5_
+    L16_58 = L16_58.newButton
+    L16_58 = L16_58({
+      width = 27,
+      height = 29,
+      default = "crossclose.png",
+      over = "crossclose-over.png",
+      onRelease = L15_57
+    })
+    L16_58:setReferencePoint(display.TopRightReferencePoint)
+    L16_58.x = _UPVALUE1_ + L3_45 * 0.5
+    L16_58.y = L7_49.y - 40
+    L2_44.front:insert(L16_58)
+  end
+  L15_57 = L2_44.front
+  L16_58 = L15_57
+  L15_57 = L15_57.setReferencePoint
+  L15_57(L16_58, display.CenterReferencePoint)
+  L15_57 = L2_44.front
+  L16_58 = _UPVALUE6_
+  L15_57.y = L16_58
+  L15_57 = L2_44.front
+  L16_58 = L2_44.front
+  L16_58 = L16_58.y
+  L15_57.origY = L16_58
+  L15_57 = _UPVALUE2_
+  L15_57 = L15_57.from
+  L16_58 = L2_44
+  L15_57(L16_58, {
+    delay = 1000,
+    time = 400,
+    y = L2_44.front.y + _H,
+    transition = easing.outQuad
+  }, true)
+  L15_57 = display
+  L15_57 = L15_57.getCurrentStage
+  L15_57 = L15_57()
+  L16_58 = L15_57
+  L15_57 = L15_57.insert
+  L15_57(L16_58, L2_44)
+end
+return {}

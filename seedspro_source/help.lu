@@ -1,0 +1,390 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("creator")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = _UPVALUE0_
+  L5_6 = L5_6.getSceneProperties
+  L5_6 = L5_6()
+  L6_7 = _UPVALUE1_
+  L6_7 = L6_7.session
+  L6_7 = L6_7 + 1
+  L7_8 = _UPVALUE1_
+  L7_8.session = L6_7
+  L7_8 = L5_6.prevScene
+  L8_9 = L5_6.page
+  L9_10 = L5_6.taps
+  L10_11 = display
+  L10_11 = L10_11.contentCenterX
+  L11_12 = display
+  L11_12 = L11_12.contentCenterY
+  L12_13 = _UPVALUE0_
+  L12_13 = L12_13.makeBlurryBg
+  L12_13 = L12_13()
+  L14_15 = L12_13
+  L13_14 = L12_13.addEventListener
+  L15_16 = "touch"
+  function L16_17()
+    local L0_21, L1_22
+    L0_21 = true
+    return L0_21
+  end
+  L13_14(L14_15, L15_16, L16_17)
+  L14_15 = L2_3
+  L13_14 = L2_3.insert
+  L15_16 = L12_13
+  L13_14(L14_15, L15_16)
+  L13_14 = _UPVALUE2_
+  L13_14 = L13_14.createSideMenu
+  L14_15 = L1_2
+  L13_14 = L13_14(L14_15)
+  L15_16 = L0_1
+  L14_15 = L0_1.insert
+  L16_17 = L13_14
+  L14_15(L15_16, L16_17)
+  L0_1.side_menu = L13_14
+  L15_16 = L13_14
+  L14_15 = L13_14.toBack
+  L14_15(L15_16)
+  L14_15 = _UPVALUE3_
+  L14_15 = L14_15.newTableView
+  L15_16 = {}
+  L15_16.top = 64
+  L16_17 = _W
+  L15_16.width = L16_17
+  L16_17 = _H
+  L16_17 = L16_17 - 64
+  L15_16.height = L16_17
+  L16_17 = {
+    L17_18,
+    L18_19,
+    L19_20,
+    50
+  }
+  L17_18 = 0
+  L18_19 = 0
+  L19_20 = 0
+  L15_16.bgColor = L16_17
+  L14_15 = L14_15(L15_16)
+  L16_17 = L3_4
+  L15_16 = L3_4.insert
+  L17_18 = L14_15
+  L15_16(L16_17, L17_18)
+  function L15_16(A0_23)
+    local L1_24, L2_25, L3_26
+    L1_24 = A0_23.background
+    L2_25 = A0_23.phase
+    L3_26 = L1_24.setFillColor
+    L3_26(L1_24, 217, 217, 217)
+    L3_26 = A0_23.phase
+    if L3_26 ~= "release" then
+      L3_26 = A0_23.phase
+    elseif L3_26 == "tap" then
+      function L3_26()
+        if _UPVALUE0_ == _UPVALUE1_.session then
+          _UPVALUE2_:setFillColor(0, 0, 0, 0)
+        end
+      end
+      timer.performWithDelay(100, L3_26)
+      _UPVALUE1_.help = {
+        rowid = A0_23.target.rowid,
+        label = A0_23.target.label
+      }
+      _UPVALUE2_.insert({prevScene = "help"})
+      _UPVALUE2_.update({
+        taps = _UPVALUE3_ + 1
+      })
+      _UPVALUE2_.dispatchEvent("clearLocalTimersAndListeners")
+      director:changeScene("info", "overFromRightNew")
+    end
+    L3_26 = true
+    return L3_26
+  end
+  function L16_17(A0_27)
+    _UPVALUE1_:insertRow({
+      onRender = function(A0_28)
+        local L1_29, L2_30, L3_31
+        L1_29 = A0_28.target
+        L1_29 = L1_29.height
+        L2_30 = A0_28.view
+        L3_31 = display
+        L3_31 = L3_31.newText
+        L3_31 = L3_31({
+          text = _UPVALUE0_,
+          width = _W - 20,
+          height = 0,
+          font = _UPVALUE1_.fonts.regular,
+          fontSize = 13
+        })
+        L3_31:setReferencePoint(display.CenterLeftReferencePoint)
+        L3_31.x = 10
+        L3_31.y = L1_29 * 0.5
+        L2_30:insert(L3_31)
+      end,
+      height = 22,
+      isCategory = true,
+      rowColor = {
+        0,
+        0,
+        0,
+        100
+      },
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      }
+    })
+  end
+  function L17_18(A0_32, A1_33)
+    local L2_34, L3_35, L4_36
+    L2_34 = 13
+    L3_35 = 30
+    L4_36 = display
+    L4_36 = L4_36.newText
+    L4_36 = L4_36({
+      text = A0_32,
+      x = 0,
+      y = 0,
+      width = 290,
+      height = 0,
+      font = _UPVALUE0_.fonts.light,
+      fontSize = L2_34
+    })
+    if L4_36.height > 20 then
+      L3_35 = L4_36.height + 10
+    end
+    L4_36 = _UPVALUE1_.delete(L4_36)
+    _UPVALUE2_:insertRow({
+      onRender = function(A0_37)
+        local L1_38, L2_39, L3_40, L4_41, L5_42, L6_43, L7_44
+        L1_38 = A0_37.target
+        L1_38 = L1_38.height
+        L2_39 = L1_38 * 0.5
+        L3_40 = A0_37.view
+        L4_41 = A0_37.target
+        L5_42 = _UPVALUE0_
+        L4_41.rowid = L5_42
+        L5_42 = _UPVALUE1_
+        L4_41.label = L5_42
+        L5_42 = display
+        L5_42 = L5_42.newText
+        L6_43 = {}
+        L7_44 = L4_41.label
+        L6_43.text = L7_44
+        L7_44 = _W
+        L7_44 = L7_44 - 30
+        L6_43.width = L7_44
+        L6_43.height = 0
+        L7_44 = _UPVALUE2_
+        L7_44 = L7_44.fonts
+        L7_44 = L7_44.light
+        L6_43.font = L7_44
+        L7_44 = _UPVALUE3_
+        L6_43.fontSize = L7_44
+        L5_42 = L5_42(L6_43)
+        L7_44 = L5_42
+        L6_43 = L5_42.setReferencePoint
+        L6_43(L7_44, display.CenterLeftReferencePoint)
+        L5_42.x = 10
+        L5_42.y = L2_39
+        L7_44 = L3_40
+        L6_43 = L3_40.insert
+        L6_43(L7_44, L5_42)
+        L6_43 = display
+        L6_43 = L6_43.newImageRect
+        L7_44 = "rightarrow-over.png"
+        L6_43 = L6_43(L7_44, 7, 13)
+        L7_44 = L6_43.setReferencePoint
+        L7_44(L6_43, display.CenterRightReferencePoint)
+        L7_44 = _W
+        L7_44 = L7_44 - 13
+        L6_43.x = L7_44
+        L6_43.y = L2_39
+        L7_44 = L3_40.insert
+        L7_44(L3_40, L6_43)
+        L7_44 = display
+        L7_44 = L7_44.newRect
+        L7_44 = L7_44(0, L1_38, _W, 1)
+        L7_44:setFillColor(255, 255, 255, 20)
+        L3_40:insert(L7_44)
+      end,
+      onEvent = _UPVALUE3_,
+      height = L3_35,
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      }
+    })
+  end
+  L18_19 = L16_17
+  L19_20 = "Uploads"
+  L18_19(L19_20)
+  L18_19 = L17_18
+  L19_20 = "What is a seed?"
+  L18_19(L19_20, "whatisaseed")
+  L18_19 = L17_18
+  L19_20 = "How do I use a seed?"
+  L18_19(L19_20, "howdoiuseaseed")
+  L18_19 = L17_18
+  L19_20 = "What is a creation?"
+  L18_19(L19_20, "whatisacreation")
+  L18_19 = L17_18
+  L19_20 = "How do I upload content?"
+  L18_19(L19_20, "howdoiuploadcontent")
+  L18_19 = L17_18
+  L19_20 = "How do I take screenshots?"
+  L18_19(L19_20, "howdoitakescreenshots")
+  L18_19 = L17_18
+  L19_20 = "How do I find seed coordinates?"
+  L18_19(L19_20, "howdoifindseedcoordinates")
+  L18_19 = L17_18
+  L19_20 = "How do I search for an upload?"
+  L18_19(L19_20, "howdoisearchforanupload")
+  L18_19 = L17_18
+  L19_20 = "How do I sticky an upload?"
+  L18_19(L19_20, "howdoistickyanupload")
+  L18_19 = L17_18
+  L19_20 = "How can I get a link to a specific upload?"
+  L18_19(L19_20, "howcanigetalinktoaspecificupload")
+  L18_19 = L17_18
+  L19_20 = "When will my personal uploads instantly approve?"
+  L18_19(L19_20, "whenwillmypersonaluploadsinstantlyapprove")
+  L18_19 = L16_17
+  L19_20 = "Tools"
+  L18_19(L19_20)
+  L18_19 = L17_18
+  L19_20 = "What are snapshots?"
+  L18_19(L19_20, "whataresnapshots")
+  L18_19 = L17_18
+  L19_20 = "What are commands?"
+  L18_19(L19_20, "whatarecommands")
+  L18_19 = L17_18
+  L19_20 = "What are mods?"
+  L18_19(L19_20, "whataremods")
+  L18_19 = L16_17
+  L19_20 = "Account"
+  L18_19(L19_20)
+  L18_19 = L17_18
+  L19_20 = "How can I find uploads I've posted?"
+  L18_19(L19_20, "howcanifinduploadsiveposted")
+  L18_19 = L17_18
+  L19_20 = "Where are uploads I've favorited?"
+  L18_19(L19_20, "whereareuploadsivefavorited")
+  L18_19 = L17_18
+  L19_20 = "What does blocking users do, and how do I do it?"
+  L18_19(L19_20, "howdoiblockusers")
+  L18_19 = L17_18
+  L19_20 = "What does ignoring users do, and how do I do it?"
+  L18_19(L19_20, "howdoiignoreusers")
+  L18_19 = L17_18
+  L19_20 = "What is the stream located in my profile?"
+  L18_19(L19_20, "whatisthestream")
+  L18_19 = L17_18
+  L19_20 = "How can I search for other app users by their Mojang username / Xbox GT?"
+  L18_19(L19_20, "howcanisearchusers")
+  L18_19 = L17_18
+  L19_20 = "How do I change my profile picture?"
+  L18_19(L19_20, "howdoichangeprofilepicture")
+  L18_19 = L17_18
+  L19_20 = "How can I link to a users profile?"
+  L18_19(L19_20, "howcanilinktoausersprofile")
+  L18_19 = L16_17
+  L19_20 = "PM"
+  L18_19(L19_20)
+  L18_19 = L17_18
+  L19_20 = "How do I PM a user?"
+  L18_19(L19_20, "howdoipmauser")
+  L18_19 = L17_18
+  L19_20 = "How do I start a Group PM?"
+  L18_19(L19_20, "howdoistartagrouppm")
+  L18_19 = L17_18
+  L19_20 = "How do I kick a user from my Group PM?"
+  L18_19(L19_20, "howdoikickauserfrommygrouppm")
+  L18_19 = L17_18
+  L19_20 = "How do I add a user to my Group PM?"
+  L18_19(L19_20, "howdoiaddausertomygrouppm")
+  L18_19 = L16_17
+  L19_20 = "Avatars"
+  L18_19(L19_20)
+  L18_19 = L17_18
+  L19_20 = "How do I change my avatar?"
+  L18_19(L19_20, "howdoichangemyavatar")
+  L18_19 = L17_18
+  L19_20 = "How do I save/delete an avatar?"
+  L18_19(L19_20, "howdoisaveanavatar")
+  L18_19 = L16_17
+  L19_20 = "Moderation"
+  L18_19(L19_20)
+  L18_19 = L17_18
+  L19_20 = "What are moderators?"
+  L18_19(L19_20, "whataremoderators")
+  L18_19 = L17_18
+  L19_20 = "How do I become a moderator?"
+  L18_19(L19_20, "howdoibecomeamoderator")
+  L18_19 = L17_18
+  L19_20 = "How can I report an offensive comment or upload?"
+  L18_19(L19_20, "howcanireportacommentorupload")
+  L18_19 = L17_18
+  L19_20 = "Someone is bothering me! What can I do?"
+  L18_19(L19_20, "someoneisbotheringmewhatcanido")
+  L18_19 = L16_17
+  L19_20 = "Servers"
+  L18_19(L19_20)
+  L18_19 = L17_18
+  L19_20 = "How do I upload a server?"
+  L18_19(L19_20, "howdoiuploadaserver")
+  L18_19 = _UPVALUE0_
+  L18_19 = L18_19.makeToolbar
+  L19_20 = "Help"
+  L18_19 = L18_19(L19_20)
+  L19_20 = L4_5.insert
+  L19_20(L4_5, L18_19)
+  L19_20 = _UPVALUE2_
+  L19_20 = L19_20.createMenuButton
+  L19_20 = L19_20(L1_2)
+  L4_5:insert(L19_20)
+  return L0_1
+end

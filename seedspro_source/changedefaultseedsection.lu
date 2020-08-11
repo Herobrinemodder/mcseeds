@@ -1,0 +1,263 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("transitions")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.possibleDefaultSections
+  L8_9 = 0
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.imgSuff
+  L10_11 = _UPVALUE0_
+  L10_11 = L10_11.appdata
+  L11_12 = _UPVALUE1_
+  L11_12 = L11_12.getSceneProperties
+  L11_12 = L11_12()
+  L12_13 = L11_12.prevScene
+  L13_14 = _UPVALUE0_
+  L13_14 = L13_14.session
+  L13_14 = L13_14 + 1
+  L14_15 = _UPVALUE0_
+  L14_15.session = L13_14
+  L14_15 = _UPVALUE1_
+  L14_15 = L14_15.makeBlurryBg
+  L14_15 = L14_15()
+  L16_17 = L14_15
+  L15_16 = L14_15.addEventListener
+  L17_18 = "touch"
+  function L18_19()
+    local L0_23, L1_24
+    L0_23 = true
+    return L0_23
+  end
+  L15_16(L16_17, L17_18, L18_19)
+  L16_17 = L2_3
+  L15_16 = L2_3.insert
+  L17_18 = L14_15
+  L15_16(L16_17, L17_18)
+  L15_16 = _UPVALUE2_
+  L15_16 = L15_16.createSideMenu
+  L16_17 = L1_2
+  L15_16 = L15_16(L16_17)
+  L17_18 = L0_1
+  L16_17 = L0_1.insert
+  L18_19 = L15_16
+  L16_17(L17_18, L18_19)
+  L0_1.side_menu = L15_16
+  L17_18 = L15_16
+  L16_17 = L15_16.toBack
+  L16_17(L17_18)
+  L16_17 = _UPVALUE3_
+  L16_17 = L16_17.newTableView
+  L17_18 = {}
+  L17_18.top = 64
+  L17_18.left = 0
+  L18_19 = _W
+  L17_18.width = L18_19
+  L18_19 = _H
+  L18_19 = L18_19 - 64
+  L17_18.height = L18_19
+  L18_19 = {
+    L19_20,
+    L20_21,
+    L21_22,
+    0
+  }
+  L17_18.bgColor = L18_19
+  L16_17 = L16_17(L17_18)
+  L18_19 = L3_4
+  L17_18 = L3_4.insert
+  L17_18(L18_19, L19_20)
+  function L17_18(A0_25)
+    local L1_26, L2_27, L3_28, L4_29, L5_30
+    L1_26 = A0_25.target
+    L1_26 = L1_26.background
+    L2_27 = A0_25.phase
+    L3_28 = A0_25.index
+    L4_29 = A0_25.target
+    L4_29 = L4_29.text
+    L5_30 = A0_25.id
+    if _UPVALUE0_.defaultPlatform ~= L5_30 then
+      L1_26:setFillColor(217, 217, 217)
+      L4_29:setFillColor(255, 255, 255)
+      if L2_27 == "release" or L2_27 == "tap" then
+        timer.performWithDelay(100, function()
+          local L0_31, L1_32
+          L0_31 = _UPVALUE0_
+          L1_32 = L0_31
+          L0_31 = L0_31.setFillColor
+          L0_31(L1_32, unpack(_UPVALUE0_.color))
+          L0_31 = _UPVALUE1_
+          L1_32 = L0_31
+          L0_31 = L0_31.setFillColor
+          L0_31(L1_32, unpack(_UPVALUE1_.color))
+        end)
+        _UPVALUE1_.content.rows[_UPVALUE2_].checkMark.isVisible = false
+        _UPVALUE1_.content.rows[L3_28].checkMark.isVisible = true
+        _UPVALUE2_ = L3_28
+        _UPVALUE0_.defaultPlatform = L5_30
+        _UPVALUE3_.defaultPlatform = L5_30
+        _UPVALUE4_.updateAppData(_UPVALUE3_)
+      end
+    end
+    return true
+  end
+  function L18_19(A0_33)
+    local L1_34, L2_35, L3_36, L4_37, L5_38, L6_39, L7_40
+    L1_34 = A0_33.target
+    L1_34 = L1_34.height
+    L2_35 = L1_34 * 0.5
+    L3_36 = A0_33.view
+    L4_37 = A0_33.index
+    L5_38 = A0_33.id
+    L6_39 = A0_33.target
+    L7_40 = display
+    L7_40 = L7_40.newRect
+    L7_40 = L7_40(0, 0, _W, L1_34)
+    L6_39.background = L7_40
+    L6_39 = A0_33.target
+    L6_39 = L6_39.background
+    L7_40 = {
+      245,
+      245,
+      245
+    }
+    L6_39.color = L7_40
+    L6_39 = A0_33.target
+    L6_39 = L6_39.background
+    L7_40 = L6_39
+    L6_39 = L6_39.setFillColor
+    L6_39(L7_40, unpack(A0_33.target.background.color))
+    L7_40 = L3_36
+    L6_39 = L3_36.insert
+    L6_39(L7_40, A0_33.target.background)
+    L6_39 = A0_33.id
+    if L5_38 == "iOS" then
+      L6_39 = "PE"
+    end
+    L7_40 = A0_33.target
+    L7_40.text = display.newText({
+      text = L6_39,
+      font = _UPVALUE0_.fonts.light,
+      fontSize = 14
+    })
+    L7_40 = A0_33.target
+    L7_40 = L7_40.text
+    L7_40 = L7_40.setReferencePoint
+    L7_40(L7_40, display.CenterLeftReferencePoint)
+    L7_40 = A0_33.target
+    L7_40 = L7_40.text
+    L7_40.x = 20
+    L7_40 = A0_33.target
+    L7_40 = L7_40.text
+    L7_40.y = L2_35
+    L7_40 = A0_33.target
+    L7_40 = L7_40.text
+    L7_40.color = {
+      80,
+      80,
+      80
+    }
+    L7_40 = A0_33.target
+    L7_40 = L7_40.text
+    L7_40 = L7_40.setFillColor
+    L7_40(L7_40, unpack(A0_33.target.text))
+    L7_40 = L3_36.insert
+    L7_40(L3_36, A0_33.target.text)
+    L7_40 = A0_33.target
+    L7_40.checkMark = display.newImageRect("checkMark.png", 18, 18)
+    L7_40 = A0_33.target
+    L7_40 = L7_40.checkMark
+    L7_40 = L7_40.setReferencePoint
+    L7_40(L7_40, display.CenterRightReferencePoint)
+    L7_40 = A0_33.target
+    L7_40 = L7_40.checkMark
+    L7_40.x = _W - 10
+    L7_40 = A0_33.target
+    L7_40 = L7_40.checkMark
+    L7_40.y = L2_35
+    L7_40 = _UPVALUE1_
+    if L4_37 ~= L7_40 then
+      L7_40 = A0_33.target
+      L7_40 = L7_40.checkMark
+      L7_40.isVisible = false
+    end
+    L7_40 = L3_36.insert
+    L7_40(L3_36, A0_33.target.checkMark)
+    L7_40 = _UPVALUE2_
+    L7_40 = #L7_40
+    if L4_37 ~= L7_40 then
+      L7_40 = display
+      L7_40 = L7_40.newRect
+      L7_40 = L7_40(20, L1_34 - 1, _W - 20, 1)
+      L7_40:setFillColor(200, 200, 200)
+      L3_36:insert(L7_40)
+    end
+  end
+  for _FORV_22_ = 1, #L7_8 do
+    if L10_11.defaultPlatform == L7_8[_FORV_22_] then
+      L8_9 = _FORV_22_
+    end
+    L16_17:insertRow({
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      onRender = L18_19,
+      onEvent = L17_18,
+      height = 40,
+      id = L7_8[_FORV_22_]
+    })
+  end
+  L20_21(L21_22, L19_20)
+  L21_22:setReferencePoint(display.CenterLeftReferencePoint)
+  L21_22.x = -1
+  L21_22.y = L19_20.yCenter
+  L4_5:insert(L21_22)
+  return L0_1
+end

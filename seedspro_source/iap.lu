@@ -1,0 +1,101 @@
+local L0_0, L1_1, L2_2, L3_3, L4_4, L5_5, L6_6
+L0_0 = module
+L1_1 = (...)
+L2_2 = package
+L2_2 = L2_2.seeall
+L0_0(L1_1, L2_2)
+L0_0 = nil
+L1_1 = require
+L2_2 = "creator"
+L1_1 = L1_1(L2_2)
+L2_2 = require
+L3_3 = "globals"
+L2_2 = L2_2(L3_3)
+L3_3 = nil
+L4_4 = L2_2.appstore
+if L4_4 == "google" then
+  L4_4 = require
+  L5_5 = "plugin.google.iap.v3"
+  L4_4 = L4_4(L5_5)
+  L3_3 = L4_4
+else
+  L4_4 = require
+  L5_5 = "store"
+  L4_4 = L4_4(L5_5)
+  L3_3 = L4_4
+end
+L4_4 = {}
+localizedPrices = L4_4
+L4_4 = localizedPrices
+L4_4[1] = "$0.99"
+L4_4 = {}
+L4_4[1] = "extraimages"
+L5_5 = L1_1.getAppType
+L5_5 = L5_5()
+if L5_5 == true then
+  L4_4[2] = "pro_skins"
+elseif L5_5 == false then
+  L6_6 = L2_2.os
+  if L6_6 == "Android" then
+    L4_4[2] = "liteskins"
+  else
+    L4_4[2] = "liteSkins"
+  end
+end
+function L6_6(A0_7)
+  local L1_8
+  L1_8 = A0_7.transaction
+  print("Produkt: " .. L1_8.productIdentifier)
+  if L1_8.state == "purchased" then
+    if L1_8.productIdentifier == _UPVALUE0_[1] then
+      print("success buying product 1! Give the user the item here, or in the callback (see comments above)")
+    end
+  elseif L1_8.state == "cancelled" then
+    print("player cancelled; you may want to show an alert here")
+  elseif L1_8.state == "failed" then
+    print("transaction failed")
+    print("event.transaction.errorType = " .. tostring(L1_8.errorType))
+    print("event.transaction.errorString = " .. tostring(L1_8.errorString))
+    native.showAlert("Oops!", "Please check your internet connection and try again.", {"Dismiss"}, none)
+  end
+  if _UPVALUE1_ ~= nil then
+    _UPVALUE1_(L1_8.state)
+  end
+  native.setActivityIndicator(false)
+  _UPVALUE2_.finishTransaction(L1_8)
+end
+transactionCallback = L6_6
+L6_6 = L3_3.init
+L6_6(transactionCallback)
+function L6_6(A0_9)
+  local L1_10, L2_11, L3_12, L4_13, L6_14, L7_15
+  for L4_13 = 1, #L2_11 do
+    L6_14 = table
+    L6_14 = L6_14.insert
+    L7_15 = localizedPrices
+    L6_14(L7_15, L4_13, tostring(A0_9.products[L4_13].price))
+  end
+end
+L3_3.loadProducts(L4_4, L6_6)
+function buyItem1(A0_16)
+  if _UPVALUE0_.appstore == "google" then
+    _UPVALUE1_.purchase(_UPVALUE2_[1])
+  else
+    _UPVALUE1_.purchase({
+      _UPVALUE2_[1]
+    })
+  end
+  native.setActivityIndicator(true)
+  _UPVALUE3_ = A0_16
+end
+function buyItem2(A0_17)
+  if _UPVALUE0_.appstore == "google" then
+    _UPVALUE1_.purchase(_UPVALUE2_[2])
+  else
+    _UPVALUE1_.purchase({
+      _UPVALUE2_[2]
+    })
+  end
+  native.setActivityIndicator(true)
+  _UPVALUE3_ = A0_17
+end

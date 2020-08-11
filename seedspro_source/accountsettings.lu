@@ -1,0 +1,1166 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("openGLTextfield")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37, L37_38, L38_39
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = false
+  L8_9 = false
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.getAppType
+  L9_10 = L9_10()
+  L10_11 = _UPVALUE1_
+  L10_11 = L10_11.showAds
+  L11_12 = _UPVALUE1_
+  L11_12 = L11_12.nickname
+  L12_13 = _UPVALUE0_
+  L12_13 = L12_13.getPadding
+  L12_13 = L12_13()
+  L13_14 = _UPVALUE1_
+  L13_14 = L13_14.imgSuff
+  L14_15 = _UPVALUE0_
+  L14_15 = L14_15.getSceneProperties
+  L14_15 = L14_15()
+  L15_16 = _UPVALUE1_
+  L15_16 = L15_16.udid
+  L16_17 = L14_15.prevScene
+  L17_18 = math
+  L17_18 = L17_18.abs
+  L18_19 = L14_15.taps
+  L19_20 = _UPVALUE1_
+  L19_20 = L19_20.session
+  L19_20 = L19_20 + 1
+  L20_21 = _UPVALUE1_
+  L20_21.session = L19_20
+  L20_21 = _UPVALUE0_
+  L20_21 = L20_21.makeBlurryBg
+  L20_21 = L20_21()
+  L22_23 = L20_21
+  L21_22 = L20_21.addEventListener
+  L23_24 = "touch"
+  function L24_25()
+    local L0_40, L1_41
+    L0_40 = true
+    return L0_40
+  end
+  L21_22(L22_23, L23_24, L24_25)
+  L22_23 = L2_3
+  L21_22 = L2_3.insert
+  L23_24 = L20_21
+  L21_22(L22_23, L23_24)
+  L21_22 = _UPVALUE2_
+  L21_22 = L21_22.createSideMenu
+  L22_23 = L1_2
+  L21_22 = L21_22(L22_23)
+  L23_24 = L0_1
+  L22_23 = L0_1.insert
+  L24_25 = L21_22
+  L22_23(L23_24, L24_25)
+  L0_1.side_menu = L21_22
+  L23_24 = L21_22
+  L22_23 = L21_22.toBack
+  L22_23(L23_24)
+  L22_23 = _UPVALUE3_
+  L22_23 = L22_23.newTableView
+  L23_24 = {}
+  L23_24.top = 64
+  L24_25 = _H
+  L24_25 = L24_25 - 64
+  L23_24.height = L24_25
+  L24_25 = {
+    L25_26,
+    L26_27,
+    L27_28,
+    L28_29
+  }
+  L25_26 = 0
+  L26_27 = 0
+  L27_28 = 0
+  L28_29 = 0
+  L23_24.bgColor = L24_25
+  L23_24.bottomPadding = 10
+  L22_23 = L22_23(L23_24)
+  L24_25 = L3_4
+  L23_24 = L3_4.insert
+  L25_26 = L22_23
+  L23_24(L24_25, L25_26)
+  function L23_24(A0_42)
+    local L1_43, L2_44, L3_45, L4_46, L5_47, L6_48
+    L1_43 = A0_42.id
+    L1_43 = L1_43.onEvent
+    if L1_43 == true then
+      L1_43 = _UPVALUE0_
+      L1_43 = L1_43.isGameCenter
+      L1_43 = L1_43()
+      if L1_43 == true then
+        L1_43 = A0_42.target
+        L1_43 = L1_43.updateObjectShadow
+        L2_44 = A0_42.target
+        L2_44 = L2_44.updateObject
+        L3_45 = A0_42.target
+        L3_45 = L3_45.background
+        L4_46 = A0_42.phase
+        L5_47 = A0_42.target
+        L5_47 = L5_47.text
+        L6_48 = L3_45.setFillColor
+        L6_48(L3_45, 217, 217, 217)
+        L6_48 = L5_47.setFillColor
+        L6_48(L5_47, 255, 255, 255)
+        if L2_44 then
+          L6_48 = L2_44.setFillColor
+          L6_48(L2_44, 255, 255, 255)
+        end
+        if L4_46 == "release" or L4_46 == "tap" then
+          L6_48 = timer
+          L6_48 = L6_48.performWithDelay
+          L6_48(100, function()
+            _UPVALUE0_:setFillColor(unpack(_UPVALUE0_.color))
+            _UPVALUE1_:setFillColor(60, 60, 60)
+            if _UPVALUE2_ then
+              _UPVALUE2_:setFillColor(0, 0, 0, 160)
+            end
+          end)
+          L6_48 = A0_42.id
+          L6_48 = L6_48.scene
+          if L6_48 == "notificationsettings" then
+            L6_48 = _UPVALUE1_
+            L6_48 = L6_48.pushtoken
+            if L6_48 == "" then
+              function L6_48(A0_49)
+                if A0_49.action == "clicked" and A0_49.index == 2 then
+                  _UPVALUE0_.registerForPushNotifications()
+                end
+                return true
+              end
+              _UPVALUE0_.showAlert("Push notifications", "In order to modify your notifications you must have push notifications turned on.", {"Later", "Turn it on"}, L6_48)
+            end
+          else
+            L6_48 = _UPVALUE0_
+            L6_48 = L6_48.insert
+            L6_48({
+              prevScene = "accountsettings"
+            })
+            L6_48 = _UPVALUE0_
+            L6_48 = L6_48.dispatchEvent
+            L6_48("clearLocalTimersAndListeners")
+            L6_48 = director
+            L6_48 = L6_48.changeScene
+            L6_48(L6_48, A0_42.id.scene, "overFromRightNew")
+          end
+        end
+      end
+    end
+    L1_43 = true
+    return L1_43
+  end
+  function L24_25(A0_50)
+    local L1_51, L2_52, L3_53, L4_54, L5_55, L6_56, L7_57, L8_58, L9_59, L10_60, L11_61
+    L1_51 = A0_50.target
+    L1_51 = L1_51.height
+    L2_52 = L1_51 * 0.5
+    L3_53 = A0_50.view
+    L4_54 = A0_50.id
+    L5_55 = true
+    L6_56 = _UPVALUE0_
+    L6_56 = L6_56.accountSettings
+    L7_57 = L4_54.idInAccountSettingsTable
+    L6_56 = L6_56[L7_57]
+    if not L6_56 then
+      L5_55 = false
+    end
+    L6_56 = A0_50.target
+    L7_57 = display
+    L7_57 = L7_57.newRect
+    L8_58 = 0
+    L9_59 = 0
+    L10_60 = _W
+    L11_61 = L1_51
+    L7_57 = L7_57(L8_58, L9_59, L10_60, L11_61)
+    L6_56.background = L7_57
+    L6_56 = A0_50.target
+    L6_56 = L6_56.background
+    L7_57 = L6_56
+    L6_56 = L6_56.setFillColor
+    L8_58 = 245
+    L9_59 = 245
+    L10_60 = 245
+    L6_56(L7_57, L8_58, L9_59, L10_60)
+    L6_56 = A0_50.target
+    L6_56 = L6_56.background
+    L7_57 = {
+      L8_58,
+      L9_59,
+      L10_60
+    }
+    L8_58 = 245
+    L9_59 = 245
+    L10_60 = 245
+    L6_56.color = L7_57
+    L7_57 = L3_53
+    L6_56 = L3_53.insert
+    L8_58 = A0_50.target
+    L8_58 = L8_58.background
+    L6_56(L7_57, L8_58)
+    L6_56 = 0
+    L7_57 = L4_54.icon
+    if L7_57 then
+      L7_57 = display
+      L7_57 = L7_57.newImageRect
+      L8_58 = L4_54.icon
+      L9_59 = 28
+      L10_60 = 28
+      L7_57 = L7_57(L8_58, L9_59, L10_60)
+      L9_59 = L7_57
+      L8_58 = L7_57.setReferencePoint
+      L10_60 = display
+      L10_60 = L10_60.CenterLeftReferencePoint
+      L8_58(L9_59, L10_60)
+      L7_57.x = 7
+      L7_57.y = L2_52
+      L9_59 = L3_53
+      L8_58 = L3_53.insert
+      L10_60 = L7_57
+      L8_58(L9_59, L10_60)
+      L6_56 = L7_57.width
+    end
+    L7_57, L8_58 = nil, nil
+    L9_59 = L4_54.isAccountSetting
+    if L9_59 == true and L5_55 == false then
+      L9_59 = {
+        L10_60,
+        L11_61,
+        130,
+        240
+      }
+      L10_60 = 130
+      L11_61 = 130
+      L8_58 = L9_59
+    else
+      L9_59 = {
+        L10_60,
+        L11_61,
+        60
+      }
+      L10_60 = 60
+      L11_61 = 60
+      L8_58 = L9_59
+    end
+    L9_59 = A0_50.target
+    L10_60 = display
+    L10_60 = L10_60.newText
+    L11_61 = {}
+    L11_61.text = L4_54.label
+    L11_61.font = _UPVALUE0_.fonts.light
+    L11_61.fontSize = 12
+    L10_60 = L10_60(L11_61)
+    L9_59.text = L10_60
+    L9_59 = A0_50.target
+    L9_59 = L9_59.text
+    L10_60 = L9_59
+    L9_59 = L9_59.setReferencePoint
+    L11_61 = display
+    L11_61 = L11_61.CenterLeftReferencePoint
+    L9_59(L10_60, L11_61)
+    L9_59 = A0_50.target
+    L9_59 = L9_59.text
+    L10_60 = 12 + L6_56
+    L9_59.x = L10_60
+    L9_59 = A0_50.target
+    L9_59 = L9_59.text
+    L10_60 = L2_52 - 6
+    L9_59.y = L10_60
+    L9_59 = A0_50.target
+    L9_59 = L9_59.text
+    L10_60 = L9_59
+    L9_59 = L9_59.setFillColor
+    L11_61 = unpack
+    L11_61 = L11_61(L8_58)
+    L9_59(L10_60, L11_61, L11_61(L8_58))
+    L10_60 = L3_53
+    L9_59 = L3_53.insert
+    L11_61 = A0_50.target
+    L11_61 = L11_61.text
+    L9_59(L10_60, L11_61)
+    L9_59 = L4_54.switch
+    if L9_59 == true then
+      function L9_59(A0_62)
+        local L1_63
+        L1_63 = A0_62.state
+        if L1_63 == "yes" then
+          _UPVALUE0_.showAlert("Activated", _UPVALUE1_.activationNotice, {"Ok"})
+        elseif L1_63 == "no" then
+          _UPVALUE0_.showAlert("Deactivated", _UPVALUE1_.deactivationNotice, {"Ok"})
+        end
+        _UPVALUE2_.accountSettings[_UPVALUE1_.idInAccountSettingsTable] = L1_63
+        _UPVALUE0_.network_request("updateAccountSettings", nil, {
+          field = _UPVALUE1_.idInAccountSettingsTable,
+          state = L1_63,
+          udid = _UPVALUE3_
+        })
+      end
+      L10_60 = A0_50.target
+      L11_61 = _UPVALUE3_
+      L11_61 = L11_61.new
+      L11_61 = L11_61(L9_59, _UPVALUE0_.accountSettings[L4_54.idInAccountSettingsTable] or "no", _UPVALUE4_)
+      L10_60.switch = L11_61
+      L10_60 = A0_50.target
+      L10_60 = L10_60.switch
+      L11_61 = L10_60
+      L10_60 = L10_60.setReferencePoint
+      L10_60(L11_61, display.CenterRightReferencePoint)
+      L10_60 = A0_50.target
+      L10_60 = L10_60.switch
+      L11_61 = _W
+      L11_61 = L11_61 - 12
+      L10_60.x = L11_61
+      L10_60 = A0_50.target
+      L10_60 = L10_60.switch
+      L10_60.y = L2_52
+      L10_60 = A0_50.target
+      L10_60 = L10_60.switch
+      L11_61 = L10_60
+      L10_60 = L10_60.scale
+      L10_60(L11_61, 0.9, 0.9)
+      L11_61 = L3_53
+      L10_60 = L3_53.insert
+      L10_60(L11_61, A0_50.target.switch)
+      if L5_55 == false then
+        L10_60 = A0_50.target
+        L10_60 = L10_60.switch
+        L10_60.alpha = 0.3
+        function L10_60(A0_64)
+          local L1_65
+          L1_65 = A0_64.phase
+          if L1_65 == "moved" then
+            if _UPVALUE0_(A0_64.xStart - A0_64.x) < _UPVALUE0_(A0_64.yStart - A0_64.y) then
+              _UPVALUE1_:takeFocus(A0_64)
+            end
+          elseif L1_65 == "ended" or L1_65 == "cancelled" then
+            _UPVALUE2_.showAlert("Not active", "These settings are only active if you are logged in to Game Center", {"Ok"})
+          end
+          return true
+        end
+        L11_61 = display
+        L11_61 = L11_61.newRect
+        L11_61 = L11_61(0, 0, _W, L1_51 + 1)
+        L11_61:setFillColor(0, 0, 0, 0)
+        L11_61.isHitTestable = true
+        L11_61:addEventListener("touch", L10_60)
+        L3_53:insert(L11_61)
+      end
+    end
+  end
+  function L25_26(A0_66)
+    _UPVALUE0_:insertRow({
+      id = A0_66,
+      height = 40,
+      onEvent = _UPVALUE1_,
+      onRender = _UPVALUE2_,
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      }
+    })
+  end
+  function L26_27(A0_67)
+    local L1_68
+    L1_68 = A0_67.text
+    _UPVALUE0_ = true
+    if A0_67.id == "usertag" and L1_68:sub(1, 1) ~= "@" then
+      A0_67.target.text = "@" .. L1_68
+    end
+  end
+  function L27_28(A0_69)
+    local L1_70, L2_71, L3_72, L4_73, L5_74
+    L1_70 = A0_69.text
+    L2_71 = A0_69.bg
+    L3_72 = A0_69.id
+    L4_73 = _UPVALUE0_
+    L4_73 = L4_73.isGameCenter
+    L4_73 = L4_73()
+    if L4_73 == true then
+      L4_73 = _UPVALUE1_
+      if L4_73 == true then
+        if L3_72 == "nickname" then
+          L4_73 = _UPVALUE2_
+          L4_73 = L4_73.nickname
+          if L1_70 ~= L4_73 then
+            L4_73 = string
+            L4_73 = L4_73.gsub
+            L5_74 = L1_70
+            L4_73 = L4_73(L5_74, " ", "")
+            L5_74 = L4_73
+            L4_73 = L4_73.len
+            L4_73 = L4_73(L5_74)
+            if L4_73 == 0 then
+              L4_73 = _UPVALUE0_
+              L4_73 = L4_73.showAlert
+              L5_74 = "Missing username"
+              L4_73(L5_74, "You forgot to fill in a username.", {"Ok"})
+            else
+              L5_74 = L1_70
+              L4_73 = L1_70.len
+              L4_73 = L4_73(L5_74)
+              if L4_73 > 30 then
+                L4_73 = _UPVALUE0_
+                L4_73 = L4_73.showAlert
+                L5_74 = "Username too long"
+                L4_73(L5_74, "Username can contain maximum 30 characters.", {"Ok"})
+              else
+                function L4_73(A0_75)
+                  local L1_76, L2_77, L3_78
+                  L1_76 = A0_75.action
+                  if L1_76 == "clicked" then
+                    L1_76 = A0_75.index
+                    if L1_76 == 2 then
+                      L1_76 = _UPVALUE0_
+                      L1_76 = L1_76.showAlert
+                      L2_77 = "Updating username"
+                      L3_78 = " "
+                      L1_76 = L1_76(L2_77, L3_78)
+                      L2_77 = native
+                      L2_77 = L2_77.setActivityIndicator
+                      L3_78 = true
+                      L2_77(L3_78)
+                      function L2_77()
+                        _UPVALUE0_.cancelAlert(_UPVALUE1_)
+                        native.setActivityIndicator(false)
+                        _UPVALUE2_ = false
+                      end
+                      function L3_78(A0_79)
+                        local L1_80
+                        L1_80 = A0_79.response
+                        _UPVALUE0_()
+                        if L1_80 == "hasedited" then
+                          _UPVALUE1_.showAlert("Can not edit", "You can only change your usertag once every 48 hours. Please try again later.", {"Ok"})
+                          _UPVALUE2_.activateTextfield({phase = "ended", target = _UPVALUE2_})
+                        elseif L1_80 == "taken" then
+                          _UPVALUE1_.showAlert("Taken", "That username is already in use.", {"Ok"})
+                          _UPVALUE2_.activateTextfield({phase = "ended", target = _UPVALUE2_})
+                        elseif L1_80 == "profane" then
+                          _UPVALUE1_.showAlert("Profanity", "Profanity detected in username. Please try refrain from including cuss words or profanity in the username.", {"Ok"})
+                          _UPVALUE2_.activateTextfield({phase = "ended", target = _UPVALUE2_})
+                        elseif L1_80 == "empty" then
+                          _UPVALUE1_.showAlert("Missing username", "You forgot to fill in a username.", {"Ok"})
+                          _UPVALUE2_.activateTextfield({phase = "ended", target = _UPVALUE2_})
+                        elseif L1_80 == "success" then
+                          _UPVALUE3_.nickname = _UPVALUE4_
+                          _UPVALUE1_.showAlert("Updated!", "Your username has been updated.", {"Ok"})
+                        end
+                      end
+                      _UPVALUE0_.network_request("updateNickname", L3_78, {
+                        nickname = _UPVALUE4_,
+                        udid = _UPVALUE3_.udid
+                      })
+                    end
+                  end
+                  L1_76 = true
+                  return L1_76
+                end
+                L5_74 = _UPVALUE0_
+                L5_74 = L5_74.showAlert
+                L5_74("Update?", "Update username to " .. L1_70 .. [[
+?
+
+Keep in mind that updating your username makes your old one available again. You can only update your username once every 48h.]], {"Cancel", "Update"}, L4_73)
+              end
+            end
+          end
+        elseif L3_72 == "usertag" then
+          L5_74 = L1_70
+          L4_73 = L1_70.sub
+          L4_73 = L4_73(L5_74, 2)
+          L5_74 = _UPVALUE2_
+          L5_74 = L5_74.usertag
+          if L4_73 ~= L5_74 then
+            L5_74 = string
+            L5_74 = L5_74.gsub
+            L5_74 = L5_74(L4_73, " ", "")
+            L5_74 = L5_74.len
+            L5_74 = L5_74(L5_74)
+            if L5_74 == 0 then
+              L5_74 = _UPVALUE0_
+              L5_74 = L5_74.showAlert
+              L5_74("Missing usertag", "You forgot to fill in a tag.", {"Ok"})
+            else
+              L5_74 = L4_73.len
+              L5_74 = L5_74(L4_73)
+              if L5_74 > 30 then
+                L5_74 = _UPVALUE0_
+                L5_74 = L5_74.showAlert
+                L5_74("Usertag too long", "Usertag can contain maximum 15 characters.", {"Ok"})
+              else
+                L5_74 = L4_73.find
+                L5_74 = L5_74(L4_73, "[^_%a%d]")
+                if L5_74 then
+                  L5_74 = _UPVALUE0_
+                  L5_74 = L5_74.showAlert
+                  L5_74("Invalid characters", "Usertag can only contain letters, numbers and '_'", {"Ok"})
+                else
+                  function L5_74(A0_81)
+                    local L1_82, L2_83, L3_84
+                    L1_82 = A0_81.action
+                    if L1_82 == "clicked" then
+                      L1_82 = A0_81.index
+                      if L1_82 == 2 then
+                        L1_82 = _UPVALUE0_
+                        L1_82 = L1_82.showAlert
+                        L2_83 = "Updating usertag"
+                        L3_84 = " "
+                        L1_82 = L1_82(L2_83, L3_84)
+                        L2_83 = native
+                        L2_83 = L2_83.setActivityIndicator
+                        L3_84 = true
+                        L2_83(L3_84)
+                        function L2_83()
+                          _UPVALUE0_.cancelAlert(_UPVALUE1_)
+                          native.setActivityIndicator(false)
+                          _UPVALUE2_ = false
+                        end
+                        function L3_84(A0_85)
+                          local L1_86
+                          L1_86 = A0_85.response
+                          _UPVALUE0_()
+                          if L1_86 == "hasedited" then
+                            _UPVALUE1_.showAlert("Can not edit", "You can only change your usertag once every 48 hours. Please try again later.", {"Ok"})
+                            _UPVALUE2_.activateTextfield({phase = "ended", target = _UPVALUE2_})
+                          elseif L1_86 == "taken" then
+                            _UPVALUE1_.showAlert("Taken", "That usertag is already in use.", {"Ok"})
+                            _UPVALUE2_.activateTextfield({phase = "ended", target = _UPVALUE2_})
+                          elseif L1_86 == "profane" then
+                            _UPVALUE1_.showAlert("Profanity", "Profanity detected in usertag. Please try refrain from including cuss words or profanity in the usertag.", {"Ok"})
+                            _UPVALUE2_.activateTextfield({phase = "ended", target = _UPVALUE2_})
+                          elseif L1_86 == "empty" then
+                            _UPVALUE1_.showAlert("Missing usertag", "You forgot to fill in a usertag.", {"Ok"})
+                            _UPVALUE2_.activateTextfield({phase = "ended", target = _UPVALUE2_})
+                          elseif L1_86 == "success" then
+                            _UPVALUE3_.usertag = _UPVALUE4_
+                            _UPVALUE1_.showAlert("Updated!", "Your usertag has been updated.", {"Ok"})
+                          end
+                        end
+                        _UPVALUE0_.network_request("updateUsertag", L3_84, {
+                          usertag = _UPVALUE4_,
+                          udid = _UPVALUE3_.udid
+                        })
+                      end
+                    end
+                    L1_82 = true
+                    return L1_82
+                  end
+                  _UPVALUE0_.showAlert("Update?", "Update usertag to @" .. L4_73 .. [[
+?
+
+Keep in mind that updating your usertag makes your old one available again. You can only update your usertag once every 48h.]], {"Cancel", "Update"}, L5_74)
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  function L28_29(A0_87)
+    local L1_88
+    L1_88 = A0_87.phase
+    display.getCurrentStage():setFocus(A0_87.target)
+    if L1_88 == "moved" then
+      if _UPVALUE0_(A0_87.xStart - A0_87.x) > 4 or _UPVALUE0_(A0_87.yStart - A0_87.y) > 4 then
+        display.getCurrentStage():setFocus(nil)
+        _UPVALUE1_:takeFocus(A0_87)
+      end
+    elseif (L1_88 == "ended" or L1_88 == "cancelled") and _UPVALUE2_.isGameCenter() == true then
+      display.getCurrentStage():setFocus(nil)
+      _UPVALUE2_.insert({
+        prevScene = "accountsettings"
+      })
+      _UPVALUE2_.dispatchEvent("clearLocalTimersAndListeners")
+      director:changeScene("changeavatar", "overFromRightNew")
+    end
+    return true
+  end
+  L29_30 = graphics
+  L29_30 = L29_30.newMask
+  L30_31 = "mask-avatar6_5.png"
+  L29_30 = L29_30(L30_31)
+  function L30_31(A0_89)
+    local L1_90, L2_91, L3_92, L4_93, L5_94, L6_95, L7_96, L8_97, L9_98, L10_99, L11_100, L12_101
+    L1_90 = A0_89.target
+    L1_90 = L1_90.height
+    L2_91 = L1_90 * 0.5
+    L3_92 = A0_89.view
+    L4_93 = display
+    L4_93 = L4_93.newGroup
+    L4_93 = L4_93()
+    L6_95 = L3_92
+    L5_94 = L3_92.insert
+    L7_96 = L4_93
+    L5_94(L6_95, L7_96)
+    L5_94 = _UPVALUE0_
+    L5_94 = L5_94.makeAvatar
+    L6_95 = {}
+    L6_95.scale = 6.5
+    L7_96 = _UPVALUE1_
+    L7_96 = L7_96.avatar_code
+    L6_95.avatar = L7_96
+    L5_94 = L5_94(L6_95)
+    L7_96 = L5_94
+    L6_95 = L5_94.setMask
+    L8_97 = _UPVALUE2_
+    L6_95(L7_96, L8_97)
+    L5_94.maskScaleX = 0.5
+    L5_94.maskScaleY = 0.5
+    L6_95 = L5_94.isFromImage
+    if L6_95 == false then
+      L6_95 = L5_94.width
+      L6_95 = L6_95 * 0.5
+      L5_94.maskX = L6_95
+      L6_95 = L5_94.height
+      L6_95 = L6_95 * 0.5
+      L5_94.maskY = L6_95
+    end
+    L7_96 = L4_93
+    L6_95 = L4_93.insert
+    L8_97 = L5_94
+    L6_95(L7_96, L8_97)
+    L7_96 = L4_93
+    L6_95 = L4_93.setReferencePoint
+    L8_97 = display
+    L8_97 = L8_97.TopLeftReferencePoint
+    L6_95(L7_96, L8_97)
+    L4_93.x = 10
+    L4_93.y = 10
+    L7_96 = L4_93
+    L6_95 = L4_93.scale
+    L8_97 = L5_94.width
+    L8_97 = 50 / L8_97
+    L9_98 = L5_94.height
+    L9_98 = 50 / L9_98
+    L6_95(L7_96, L8_97, L9_98)
+    L6_95 = display
+    L6_95 = L6_95.newText
+    L7_96 = {}
+    L7_96.text = "Edit avatar"
+    L8_97 = _UPVALUE1_
+    L8_97 = L8_97.fonts
+    L8_97 = L8_97.bold
+    L7_96.font = L8_97
+    L7_96.fontSize = 11
+    L7_96.align = "center"
+    L6_95 = L6_95(L7_96)
+    L8_97 = L6_95
+    L7_96 = L6_95.setReferencePoint
+    L9_98 = display
+    L9_98 = L9_98.TopCenterReferencePoint
+    L7_96(L8_97, L9_98)
+    L6_95.x = 35
+    L7_96 = L4_93.y
+    L8_97 = L4_93.height
+    L7_96 = L7_96 + L8_97
+    L6_95.y = L7_96
+    L8_97 = L6_95
+    L7_96 = L6_95.setFillColor
+    L9_98 = 60
+    L10_99 = 60
+    L11_100 = 60
+    L7_96(L8_97, L9_98, L10_99, L11_100)
+    L6_95.xScale = 0.9
+    L8_97 = L3_92
+    L7_96 = L3_92.insert
+    L9_98 = L6_95
+    L7_96(L8_97, L9_98)
+    L7_96 = display
+    L7_96 = L7_96.newRect
+    L8_97 = 0
+    L9_98 = 0
+    L10_99 = 70
+    L11_100 = L1_90
+    L7_96 = L7_96(L8_97, L9_98, L10_99, L11_100)
+    L9_98 = L7_96
+    L8_97 = L7_96.setFillColor
+    L10_99 = 0
+    L11_100 = 0
+    L12_101 = 0
+    L8_97(L9_98, L10_99, L11_100, L12_101, 0)
+    L7_96.isHitTestable = true
+    L9_98 = L7_96
+    L8_97 = L7_96.addEventListener
+    L10_99 = "touch"
+    L11_100 = _UPVALUE3_
+    L8_97(L9_98, L10_99, L11_100)
+    L9_98 = L3_92
+    L8_97 = L3_92.insert
+    L10_99 = L7_96
+    L8_97(L9_98, L10_99)
+    L8_97 = display
+    L8_97 = L8_97.newText
+    L9_98 = {}
+    L9_98.text = "Username:"
+    L10_99 = _UPVALUE1_
+    L10_99 = L10_99.fonts
+    L10_99 = L10_99.bold
+    L9_98.font = L10_99
+    L9_98.fontSize = 14
+    L8_97 = L8_97(L9_98)
+    L10_99 = L8_97
+    L9_98 = L8_97.setReferencePoint
+    L11_100 = display
+    L11_100 = L11_100.TopLeftReferencePoint
+    L9_98(L10_99, L11_100)
+    L8_97.x = 71
+    L8_97.y = 13
+    L10_99 = L8_97
+    L9_98 = L8_97.setFillColor
+    L11_100 = 200
+    L12_101 = 200
+    L9_98(L10_99, L11_100, L12_101, 200)
+    L10_99 = L3_92
+    L9_98 = L3_92.insert
+    L11_100 = L8_97
+    L9_98(L10_99, L11_100)
+    L9_98 = _UPVALUE4_
+    L9_98 = L9_98.newTextField
+    L10_99 = ""
+    L11_100 = {}
+    L11_100.boxType = "textfield"
+    L12_101 = _W
+    L12_101 = L12_101 - (L8_97.x + L8_97.width + 5)
+    L11_100.width = L12_101
+    L11_100.height = 24
+    L11_100.id = "nickname"
+    L11_100.size = 14
+    L12_101 = _UPVALUE5_
+    L11_100.list = L12_101
+    L12_101 = _UPVALUE1_
+    L12_101 = L12_101.fonts
+    L12_101 = L12_101.regular
+    L11_100.font = L12_101
+    L11_100.textfieldTopPadding = -0.5
+    L12_101 = {
+      60,
+      60,
+      60
+    }
+    L11_100.defaultColor = L12_101
+    L12_101 = _UPVALUE1_
+    L12_101 = L12_101.nickname
+    L11_100.defaultLabel = L12_101
+    L12_101 = _UPVALUE1_
+    L12_101 = L12_101.nickname
+    L11_100.initialLabel = L12_101
+    L12_101 = {
+      200,
+      200,
+      200
+    }
+    L11_100.initialColor = L12_101
+    L11_100.displayInitialLabel = "no"
+    L12_101 = _UPVALUE6_
+    L11_100.onEditedCallback = L12_101
+    L12_101 = _UPVALUE7_
+    L11_100.onFinishedCallback = L12_101
+    L11_100.maxLength = 30
+    L9_98 = L9_98(L10_99, L11_100)
+    L11_100 = L9_98
+    L10_99 = L9_98.setReferencePoint
+    L12_101 = display
+    L12_101 = L12_101.TopLeftReferencePoint
+    L10_99(L11_100, L12_101)
+    L10_99 = L8_97.x
+    L11_100 = L8_97.width
+    L10_99 = L10_99 + L11_100
+    L9_98.x = L10_99
+    L10_99 = L8_97.y
+    L10_99 = L10_99 - 2.5
+    L9_98.y = L10_99
+    L11_100 = L3_92
+    L10_99 = L3_92.insert
+    L12_101 = L9_98
+    L10_99(L11_100, L12_101)
+    L10_99 = display
+    L10_99 = L10_99.newRect
+    L11_100 = 71
+    L12_101 = 36
+    L10_99 = L10_99(L11_100, L12_101, _W - 71, 1)
+    L12_101 = L10_99
+    L11_100 = L10_99.setFillColor
+    L11_100(L12_101, 200, 200, 200)
+    L12_101 = L3_92
+    L11_100 = L3_92.insert
+    L11_100(L12_101, L10_99)
+    L11_100 = display
+    L11_100 = L11_100.newText
+    L12_101 = {}
+    L12_101.text = "Usertag:"
+    L12_101.font = _UPVALUE1_.fonts.bold
+    L12_101.fontSize = 14
+    L11_100 = L11_100(L12_101)
+    L12_101 = L11_100.setReferencePoint
+    L12_101(L11_100, display.TopLeftReferencePoint)
+    L11_100.x = 71
+    L11_100.y = 42
+    L12_101 = L11_100.setFillColor
+    L12_101(L11_100, 200, 200, 200)
+    L12_101 = L3_92.insert
+    L12_101(L3_92, L11_100)
+    L12_101 = _UPVALUE4_
+    L12_101 = L12_101.newTextField
+    L12_101 = L12_101("", {
+      boxType = "textfield",
+      width = _W - (L8_97.x + L8_97.width + 5),
+      height = 24,
+      id = "usertag",
+      size = 14,
+      list = _UPVALUE5_,
+      font = _UPVALUE1_.fonts.italic,
+      textfieldTopPadding = -0.5,
+      defaultColor = {
+        60,
+        60,
+        60
+      },
+      defaultLabel = "@" .. _UPVALUE1_.usertag,
+      initialLabel = "@" .. _UPVALUE1_.usertag,
+      initialColor = {
+        200,
+        200,
+        200
+      },
+      displayInitialLabel = "no",
+      onEditedCallback = _UPVALUE6_,
+      onFinishedCallback = _UPVALUE7_,
+      maxLength = 15
+    })
+    L12_101:setReferencePoint(display.TopLeftReferencePoint)
+    L12_101.x = L9_98.x
+    L12_101.y = L11_100.y - 2.5
+    L3_92:insert(L12_101)
+  end
+  L32_33 = L22_23
+  L31_32 = L22_23.insertRow
+  L33_34 = {}
+  L34_35 = {
+    L35_36,
+    L36_37,
+    L37_38,
+    L38_39
+  }
+  L35_36 = 0
+  L36_37 = 0
+  L37_38 = 0
+  L38_39 = 0
+  L33_34.lineColor = L34_35
+  L34_35 = {
+    L35_36,
+    L36_37,
+    L37_38
+  }
+  L35_36 = 245
+  L36_37 = 245
+  L37_38 = 245
+  L33_34.rowColor = L34_35
+  L33_34.onRender = L30_31
+  L33_34.height = 78
+  L31_32(L32_33, L33_34)
+  L31_32 = L25_26
+  L32_33 = {}
+  L32_33.id = "notificationsettings"
+  L32_33.label = "Notifications settings"
+  L32_33.isAccountSetting = false
+  L32_33.scene = "notificationsettings"
+  L32_33.onEvent = true
+  L31_32(L32_33)
+  L31_32 = L25_26
+  L32_33 = {}
+  L32_33.id = "uploadsettings"
+  L32_33.label = "Upload settings"
+  L32_33.isAccountSetting = false
+  L32_33.scene = "uploadsettings"
+  L32_33.onEvent = true
+  L31_32(L32_33)
+  L31_32 = L25_26
+  L32_33 = {}
+  L32_33.id = "linkaccounts"
+  L32_33.label = "Link accounts"
+  L32_33.isAccountSetting = false
+  L32_33.scene = "linkaccounts"
+  L32_33.onEvent = true
+  L31_32(L32_33)
+  L31_32 = L25_26
+  L32_33 = {}
+  L32_33.id = "choosebackground"
+  L32_33.label = "Choose background"
+  L32_33.isAccountSetting = false
+  L32_33.scene = "choosebackground"
+  L32_33.onEvent = true
+  L31_32(L32_33)
+  L31_32 = L25_26
+  L32_33 = {}
+  L32_33.id = "changedefaultseedsection"
+  L32_33.label = "Change default section"
+  L32_33.isAccountSetting = false
+  L32_33.scene = "changedefaultseedsection"
+  L32_33.onEvent = true
+  L31_32(L32_33)
+  L31_32 = L25_26
+  L32_33 = {}
+  L32_33.id = "showonlineofflinestatus"
+  L32_33.label = "Show my Online/Offline status"
+  L32_33.isAccountSetting = true
+  L32_33.idInAccountSettingsTable = "statusBadge"
+  L32_33.switch = true
+  L32_33.activationNotice = "Your Online/Offline status is now visible in your profile."
+  L32_33.deactivationNotice = "Your status has been set to Offline."
+  L31_32(L32_33)
+  L31_32 = nil
+  function L32_33(A0_102)
+    _UPVALUE0_.to(_UPVALUE1_, {
+      time = 200,
+      y = _UPVALUE1_.y - 216,
+      transition = easing.outQuad,
+      onComplete = function()
+        _UPVALUE0_.dispatchEvent("hasFinishedTextfieldAnimation")
+      end
+    }, true)
+  end
+  function L33_34(A0_103)
+    local L1_104, L2_105
+    L1_104 = A0_103.text
+    L2_105 = _UPVALUE0_
+    L2_105 = L2_105.to
+    L2_105(_UPVALUE1_, {
+      time = 200,
+      y = 0,
+      transition = easing.outQuad
+    }, true)
+    L2_105 = _UPVALUE2_
+    L2_105 = L2_105.content
+    L2_105 = L2_105.rows
+    L2_105 = L2_105[_UPVALUE3_]
+    L2_105 = L2_105.id
+    L2_105 = L2_105.bios
+    if L1_104 ~= L2_105 then
+      function L2_105(A0_106)
+        local L1_107, L2_108
+        L1_107 = A0_106.action
+        if L1_107 == "clicked" then
+          L1_107 = A0_106.index
+          if L1_107 == 2 then
+            L1_107 = native
+            L1_107 = L1_107.setActivityIndicator
+            L2_108 = true
+            L1_107(L2_108)
+            L1_107 = _UPVALUE0_
+            L1_107 = L1_107.showAlert
+            L2_108 = " "
+            L1_107 = L1_107(L2_108, "Updating")
+            function L2_108(A0_109)
+              native.setActivityIndicator(false)
+              _UPVALUE0_.cancelAlert(_UPVALUE1_)
+              if A0_109.response == "Updated" then
+                _UPVALUE2_.userbios = _UPVALUE3_
+                _UPVALUE0_.update({fetchBios = _UPVALUE3_})
+                _UPVALUE0_.showAlert("Updated!", "Your bios has been updated.", {"Ok"})
+              end
+            end
+            _UPVALUE0_.network_request("updateBios", L2_108, {
+              bios = _UPVALUE2_,
+              udid = _UPVALUE1_.udid
+            })
+          end
+        end
+      end
+      _UPVALUE4_.showAlert("Update bios?", "Save your new bios changes?", {"Cancel", "Update"}, L2_105)
+    end
+  end
+  function L34_35(A0_110)
+    local L1_111, L2_112, L3_113, L4_114, L5_115, L6_116, L7_117, L8_118, L9_119
+    L1_111 = A0_110.target
+    L1_111 = L1_111.height
+    L2_112 = A0_110.target
+    L2_112 = L2_112.width
+    L3_113 = A0_110.view
+    L4_114 = A0_110.index
+    L5_115 = A0_110.id
+    L6_116 = display
+    L6_116 = L6_116.newRect
+    L7_117 = 0
+    L8_118 = 0
+    L9_119 = L2_112
+    L6_116 = L6_116(L7_117, L8_118, L9_119, L1_111)
+    L8_118 = L6_116
+    L7_117 = L6_116.setFillColor
+    L9_119 = 245
+    L7_117(L8_118, L9_119, 245, 245)
+    L8_118 = L3_113
+    L7_117 = L3_113.insert
+    L9_119 = L6_116
+    L7_117(L8_118, L9_119)
+    L7_117 = display
+    L7_117 = L7_117.newRect
+    L8_118 = 0
+    L9_119 = 0
+    L7_117 = L7_117(L8_118, L9_119, _W, 1)
+    L9_119 = L7_117
+    L8_118 = L7_117.setFillColor
+    L8_118(L9_119, 0, 0, 0, 50)
+    L9_119 = L3_113
+    L8_118 = L3_113.insert
+    L8_118(L9_119, L7_117)
+    L8_118 = nil
+    L9_119 = L5_115.bios
+    if L9_119 == "" then
+      L8_118 = "yes"
+    else
+      L8_118 = "no"
+    end
+    L9_119 = _UPVALUE0_
+    L9_119 = L9_119.newTextField
+    L9_119 = L9_119("", {
+      id = "biosTextField",
+      boxType = "textbox",
+      x = 10,
+      y = 12,
+      width = L2_112 - 20,
+      height = L1_111 - 20,
+      size = 12,
+      list = _UPVALUE1_,
+      font = _UPVALUE2_.fonts.light,
+      defaultLabel = L5_115.bios,
+      defaultColor = {
+        0,
+        0,
+        0,
+        200
+      },
+      initialLabel = "Biography",
+      initialColor = {
+        0,
+        0,
+        0,
+        100
+      },
+      topPadding = 5,
+      maxLength = 220,
+      displayInitialLabel = L8_118,
+      hasPreEditAnimation = true,
+      textAdditionalWidth = -4,
+      onInitiatedCallback = _UPVALUE3_,
+      onFinishedCallback = _UPVALUE4_,
+      fakeLabelAdditionalWidth = -2,
+      fakeLabelAdditionalHeight = -4,
+      fakeLabelTopPadding = 0.5
+    })
+    L3_113:insert(L9_119)
+  end
+  L36_37 = L22_23
+  L35_36 = L22_23.insertRow
+  L37_38 = {}
+  L38_39 = {
+    0,
+    0,
+    0,
+    0
+  }
+  L37_38.lineColor = L38_39
+  L38_39 = {
+    0,
+    0,
+    0,
+    0
+  }
+  L37_38.rowColor = L38_39
+  L37_38.onRender = L34_35
+  L37_38.height = 90
+  L38_39 = {}
+  L38_39.bios = _UPVALUE1_.userbios
+  L37_38.id = L38_39
+  L35_36(L36_37, L37_38)
+  L35_36 = L22_23.content
+  L35_36 = L35_36.rows
+  L31_32 = #L35_36
+  function L35_36(A0_120)
+    _UPVALUE1_.content.rows[_UPVALUE2_].id.bios = _UPVALUE0_.decode(A0_120.response).bios
+    _UPVALUE1_.content.rows[_UPVALUE2_].id.hasFetchedBios = true
+    _UPVALUE1_.content.rows[_UPVALUE2_].reRender = true
+    _UPVALUE1_.reRender()
+  end
+  L36_37 = _UPVALUE0_
+  L36_37 = L36_37.network_request
+  L37_38 = "getBios"
+  L38_39 = L35_36
+  L36_37(L37_38, L38_39, {
+    udid = _UPVALUE1_.udid
+  })
+  L36_37 = _UPVALUE0_
+  L36_37 = L36_37.makeToolbar
+  L37_38 = "Account settings"
+  L36_37 = L36_37(L37_38)
+  L38_39 = L4_5
+  L37_38 = L4_5.insert
+  L37_38(L38_39, L36_37)
+  function L37_38(A0_121)
+    _UPVALUE0_.remove({"prevScene"})
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE1_, "toRightNew")
+    return true
+  end
+  L38_39 = _UPVALUE3_
+  L38_39 = L38_39.newButton
+  L38_39 = L38_39({
+    width = 50,
+    height = 50,
+    default = "back.png",
+    over = "back-over.png",
+    onRelease = L37_38
+  })
+  L38_39:setReferencePoint(display.CenterLeftReferencePoint)
+  L38_39.x = -1
+  L38_39.y = L36_37.yCenter
+  L4_5:insert(L38_39)
+  L4_5:toFront()
+  return L0_1
+end

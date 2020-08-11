@@ -1,0 +1,330 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("creator")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = _UPVALUE0_
+  L5_6 = L5_6.getSceneProperties
+  L5_6 = L5_6()
+  L6_7 = _UPVALUE1_
+  L6_7 = L6_7.session
+  L6_7 = L6_7 + 1
+  L7_8 = _UPVALUE1_
+  L7_8.session = L6_7
+  L7_8 = _UPVALUE1_
+  L7_8 = L7_8.help
+  L8_9 = L5_6.prevScene
+  L9_10 = L5_6.page
+  L10_11 = L5_6.taps
+  L11_12, L12_13 = nil, nil
+  L13_14 = display
+  L13_14 = L13_14.contentCenterX
+  L14_15 = display
+  L14_15 = L14_15.contentCenterY
+  L15_16 = _UPVALUE0_
+  L15_16 = L15_16.makeBlurryBg
+  L15_16 = L15_16()
+  L17_18 = L15_16
+  L16_17 = L15_16.addEventListener
+  L18_19 = "touch"
+  function L19_20()
+    local L0_25, L1_26
+    L0_25 = true
+    return L0_25
+  end
+  L16_17(L17_18, L18_19, L19_20)
+  L17_18 = L2_3
+  L16_17 = L2_3.insert
+  L18_19 = L15_16
+  L16_17(L17_18, L18_19)
+  L16_17 = _UPVALUE2_
+  L16_17 = L16_17.createSideMenu
+  L17_18 = L1_2
+  L16_17 = L16_17(L17_18)
+  L18_19 = L0_1
+  L17_18 = L0_1.insert
+  L19_20 = L16_17
+  L17_18(L18_19, L19_20)
+  L0_1.side_menu = L16_17
+  L18_19 = L16_17
+  L17_18 = L16_17.toBack
+  L17_18(L18_19)
+  L17_18 = {}
+  L17_18.whataremods = "Mods (short for modifications) are anything that changes Minecraft's game content from what it originally was. Mods are getting increasingly popular and in-depth, adding whole new experiences and goals to the game."
+  L17_18.whatisaseed = "World generation seeds were added to Minecraft on February 23rd 2011 as part of the 1.3 beta update. A seed is a string of characters used to provide a starting point for the terrain generation algorithm when creating a new world. Using the same seed to generate two separate worlds will generate the same terrain consistently even on different computers. This means that seeds can be shared between players to generate the same world between them."
+  L17_18.howdoipmauser = "To PM someone, you have to first follow the user and they have to follow you back. Once you both follow each other, simply navigate in to the user's profile and then tap the PM (Envelope) button. Alternatively, tap in to your PM page and then choose the compose new message button, located in the top right corner, then choose the user you want to PM."
+  L17_18.howdoiuseaseed = [[
+To use a seed, click 'More World Options' when creating a new world then type in the seed into the box. On a mobile device, tap 'Advanced' when creating a new world and type in the seed id right under 'Seed'. Remember, seeds are case sensitive. That means if a seed id contains any capital characters or lower case characters, they must be typed in accordingly. Also note that on Minecraft PE, your spawn point will always be different if playing on 'Creative' game mode.
+
+If you do not enter anything a random seed will be generated. In Minecraft PC version it is possible to view the seed of a world and the coordinates to find specific locations by pressing F3.]]
+  L17_18.whatisacreation = "Creations are structures made by Minecraft users during a game session of Minecraft. From small houses to massive cities to carvings in mountains, creations can be anything players have made in their worlds. Unlike seeds, creations can not be replicated by the use of a code, you have to make your own unfortunately. But it's a great place to see what other users have made and get ideas on what to build."
+  L17_18.whatisthestream = "The stream is the section that lists the latest uploads made by the users you follow. It is located in your profile and can be accessed by tapping the menu button located in the top-left corner of the startpage and then 'My profile'. Then tap 'Stream'."
+  L17_18.whatarecommands = "Commands are currently only PC exclusive and may be used by players, operators and the Command Block while in multiplayer connected to a Minecraft server, and in singleplayer when the user has cheats enabled for the world. Some commands are also available in singleplayer even when cheats are not enabled. Commands may be entered from a Minecraft client while in the game or on the host computer's server console.\n\nCommands being entered into the Minecraft client itself must be prefixed by a slash (example: /toggledownfall). The command window is identical to the chat window and can be accessed by pressing T or starting directly by entering a slash.\n\nCommands being executed via the console are not preceded by a slash. Commands in command blocks can be preceded by a slash, but this is not required.\n\nPressing Tab \226\134\185 cycles through possible commands or arguments.\n\nIn our command section, required arguments appear in <angle brackets>, and optional arguments appear in [square brackets]. Arguments in italics should be replaced by an appropriate value; arguments in plain text must be entered exactly as shown."
+  L17_18.whataresnapshots = [[
+Snapshots are pre-releases of Minecraft that allow users to try out new features before implemented into an official update for the game. These snapshots are released once a week and usually every thursday.
+
+To install a snapshot in 1.6 and onwards, download the Minecraft launcher. Download link is available on the minecraft.net/download. Check Enable experimental development versions("snapshots"), now you are able to select snapshot builds. 'Snapshot 1.6.2' means 1.6.2 pre-release.
+
+By default, you can choose and play release versions of Minecraft, e.g. 1.5.2, 1.6.4, and 1.7.2. To select development versions, follow these steps:
+
+1) Create new profile for development versions. Press New Profile button on the launcher. A dialog will open. Name it something like 'Snapshots'.
+2) Check Game Directory and add a folder name to the end of the text beside it (the pathname, most likely starting with "C:\").
+3) Check Enable experimental development versions("snapshots").
+4) Choose the snapshot you like to use.
+5) Then, Save Profile.
+
+Now, you can play both latest release version and development version by switching profiles on the launcher. Keep in mind that Minecraft doesn't care about save data compatibility. You should use a temporary world when you test development builds. (Please note that it is possible to enable snapshots without changing the game directory, however separate game directories are to keep your worlds separated and prevent compatibility issues from destroying your maps.)
+
+If you want to compare with older snapshots, hit Edit Profile on the launcher and choose specific version from Use versions dropdown box.]]
+  L17_18.howdoiblockusers = [[
+Blocking users prevents the blocked user from interacting with all your uploads, ie commenting and rating.
+
+You can block users in two ways.
+
+Either A) Go in to your profile, tap the Settings icon located in the topright corner, continue on to 'Upload settings' and choose 'Block users'. In here simply search for the user you want to block in the searchfield and then tap the users name and save.
+
+Or B) By tapping the red action button located under one of the comments made by the user you'd like to block, and then choose 'Block user'.]]
+  L17_18.howdoiignoreusers = [[
+Ignoring users hides the comments they make from you inside the app.
+
+You can ignore users in two ways.
+
+Either A) Go in to your profile, tap the Settings icon located in the topright corner, continue on to 'Upload settings' and choose 'Ignore users'. In here simply search for the user you want to block in the searchfield and then tap the users name and save.
+
+Or B) By tapping the red action button located under one of the comments made by the user you'd like to ignore, and then choose 'Ignore user'.]]
+  L17_18.whataremoderators = [[
+Moderators help oversee the communication activity and can report comments as well as uploads for re-evaluation.
+
+To identify a moderator, look for the badge shown in the profile of the user next to their username. The badge must be written in blue color and is ONLY visible in the users profile - nowhere else (Ie. in seed comments).]]
+  L17_18.howcanisearchusers = "To search for other users by their Mojang username or Xbox gamertag, simply access the menu by tapping the top-left button at the startpage and then type in the users Mojang username / Xbox gamertag into the searchfield at the top. Users who have linked their Mojang / Xbox accounts to their Seeds Pro account will appear in the search. You can of course also search for users by their actual Seeds Pro username. :)"
+  L17_18.howdoisaveanavatar = [[
+To save an avatar you have made, simply tap the 'Save' button located under your canvas in the avatar editor.
+
+To delete an avatar you have made just scroll to the avatar you want to delete, tap and hold it for a short while and then tap the 'X' that appears.]]
+  L17_18.howdoiuploadaserver = [[
+To upload a server to the app, make first sure that your server is online and playable. Then simply head into the Servers-section of the app, tap the white '+'-button located in the top right corner of the screen and submit your server. As soon as your server has been approved it will be available directly inside the app.
+
+We currently only accept 24/7 dedicated PocketMine- or Bukkit servers. This means we do not accept temporary or "instant" servers. You must also have permission to upload the servers from the server owners.]]
+  L17_18.howdoistartagrouppm = [[
+To start a Group PM, simply open the app menu then tap the envelope (Alternatively, just tap the envelope located in your profile). Then tap the compose new message button at the top right corner, select who you want to start the Group PM with and then tap 'Done'.
+
+Remember that everyone you want to invite have to follow each other first in order to start the Group PM.]]
+  L17_18.howdoiuploadcontent = [[
+Seeds, Creations and more can be uploaded directly to the app from the 'Submit upload' section. The button to post uploads is located in the topright corner of the section you would like to post your upload to. Fill in the form, add your screenshots and you're done!
+
+In order to upload a Personal upload only visible to your followers and with immediate approval if you have more than 1000 followers, simply tap the '+ Post new upload'-button located directly in the menu under your Profile.
+
+Things to think about:
+1) Remember to provide a good description for your seed to let other users better understand what the seed is about.
+2) Remember that seeds are case sensitive, meaning that if a seed id contains any capital characters or lower case characters, they must be typed in accordingly.
+3) The better quality on your screenshots the more likely it is you will receive positive feedback, for a guide on how to get good proper screenshots for your seeds/creations, check out the tutorial 'How to take screenshots in Minecraft' in the Help section.
+4) If possible (PC/Xbox mainly), provide coordinates for all the cool sights you've found in the seed. It makes it easier on others.
+
+Happy uploading! :)]]
+  L17_18.howdoistickyanupload = [[
+Stickied uploads are uploads that users have chosen to retain at the top of their uploadslists. To sticky an upload, simply head into the upload you would like to sticky - tap the options button located in the top right corner and choose 'Sticky upload'. Your upload will now stay at the top of your list!
+
+Stickied uploads are useful to keep announcements or other a bit more significant uploads at the top of your list, where they can easily be seen.]]
+  L17_18.howdoichangemyavatar = "To change your account avatar simply go to your profile by tapping the menu button located in the top-left corner of the startpage and tap 'My profile'. Then tap 'Settings' followed by 'Change avatar'."
+  L17_18.howdoitakescreenshots = [[
+It is very easy to get good Minecraft screenshots and it makes your seed/creation much more enjoyable to others!
+
+PC) While in the game playing, press the 'F2' button on your keyboard to screencap the screen. The screenshot will be located inside your screenshots folder ('%appdata%\.minecraft\screenshots') alternatively ('AppData\Roaming\.minecraft\screenshots'). To get the images on to your phone/device, email them to yourself from your computer, log in to your email from your phone/device and save them to your photolibrary.
+
+Mac) While in game, hold the 'FN' button and press the 'F2' button to screencap the gaming window. The screenshot will be saved inside your Minecraft folder ('User/Library/Application Support/minecraft/screenshots'). To get the images on to your phone/device, email them to yourself from your computer, log in to your email from your phone/device and save them to your photolibrary.
+
+Xbox) To take an Xbox screenshot of Minecraft, you need to have your facebook profile connected to your Xbox live account. Once that is done, while in game playing simply press the 'start' button followed by the 'Y' button and upload the images to facebook. To get the images over to your phone/device, save the images from your facebook to your computer, email them to yourself, log in to your email from your phone/device and save them to your photolibrary.
+
+iOS) While in game, press the power button and the home button at the same time. Your screen should flash and your picture should be saved to your photolibrary.
+
+Happy uploading! :)]]
+  L17_18.howdoibecomeamoderator = "Moderators are selected by the MC Seeds staff and are considered based on who they think will be a good mod. If you are chosen to become a moderator you will be contacted with a push notification from the app (So make sure you have push notifications turned on) and your account will be upgraded."
+  L17_18.howdoisearchforanupload = [[
+To search for a specific upload in the app, tap the Magnifying glass in the uploadlist options. You can search for anything associated with the upload. Search through descriptions, seed id's, titles, etc.
+
+If you want to find a specific seed or upload you can wrap your search with quotationmarks ("") and your results will show up accordingly. For example if there are two seeds called 'Rainbow' and 'Rainbowdash' in the PE seed section and we only want 'Rainbow', we can search for "Rainbow", and we should get the 'Rainbow' seed alone as a result.
+
+Additionally, you can search seeds based on keywords as well. So if you are looking for a Lava seed or a mountainous type of seed, you can simply search for 'Mountains' or 'Lava' and the app will search through the seed descriptions and bring back relevent results.]]
+  L17_18.howdoifindseedcoordinates = [[
+On the PC version you can find the coordinates of specific locations by pressing the 'F3' button, or by using a map.
+
+On the Mac press and hold FN and then press F3 to bring up the coordinates screen.
+
+On the Xbox you spawn with a map in your inventory by default, use it to see the coordinates.
+
+The pocket edition currently has no coordinates.]]
+  L17_18.howdoiaddausertomygrouppm = [[
+When you are the creator of the Group PM session you can add additional users to the PM session even after it has been created. In order to add more users to the session, make sure you are the creator of the PM session - navigate into the PM session and tap the white '+'-button located to the right of the users avatars. Make sure the user you would like to add follows all of the users already in the session and then simply tap to add.
+
+Users that are added to the session can not see the previous conversations of the session before they were added.]]
+  L17_18.howcanilinktoausersprofile = [[
+You can now link directly to a users profile by using the seed links 'seeds://u/<usertag>'. To get the link to a users profile, simply go into their profile, tap and hold the usertag located underneath their username and choose 'Copy userlink'. Now simply paste this link to link directly to the users profile.
+
+User links can be used to let other users outside the app launch it and view the users profile directly with one tap, to much easier share profiles over Twitter, Facebook, iMessage or other websites and services.]]
+  L17_18.howdoichangeprofilepicture = "In order to change your profile picture navigate into your profile by tapping 'My profile' in the in-app menu, then tap the big profile picture located at the top of your profile and tap 'Upload'."
+  L17_18.whereareuploadsivefavorited = "All the uploads you have favorited can easily be accessed from your profile. To find your favorites tap the menu button located in the top-left corner of the startpage and go to 'My profile'. Then tap 'Favorites'."
+  L17_18.howcanifinduploadsiveposted = "All uploads you have posted to the app can easily be accessed from your profile. To find your uploads tap the menu button located in the top-left corner of the startpage and go to 'My profile'. Then tap 'Uploads'."
+  L17_18.howdoikickauserfrommygrouppm = "When you are the creator of the Group PM session you can kick users that are misbehaving as long as there are at least 3 users in that session (Ie as long as it still is a Group PM). To kick a specific user, tap his avatar in the PM session and drag upwards."
+  L17_18.howcanireportacommentorupload = [[
+If you spot any rule violating comments or uploads inside the app that you feel should be reported, they can be reported directly to the moderators using the built-in app report features.
+
+In order to report an upload for moderation, simply navigate to the upload in question and tap the Flag-button located underneath the upload images.
+
+To report comments, simply tap the red action-button located underneath the comment in question and tap 'Report comment'.]]
+  L17_18.someoneisbotheringmewhatcanido = [[
+If someone is being mean, rude or offensive to you in the app but at the same time isn't violating any of the app rules, simply Block the user and they will no longer be able to interact with your uploads any more. And if a user is being mean, rude or offensive to you on someone elses posts - simply Ignore the user and you will no longer see their comments and messages anywhere in the app anymore.
+
+To Block/Ignore a user, simply tap the red action button located underneath their comments and choose respective options, or alternatively go to your in-app Profile > Settings (Gear-icon in the topright corner) > Upload settings > Block/Ignore users and add the user manually to your list, then just hit 'Save'.
+
+For PM related issues where a user is being mean or offensive to you via PM, simply unfollow the user and they will no longer be able to PM with you.]]
+  L17_18.howcanigetalinktoaspecificupload = [[
+You can link to an upload directly using the upload's unique URL. To get the URL simply go to the upload and tap the "Copy URL" button located under the upload images. This will copy the URL for that upload directly to your pasteboard. Now simply paste it anywhere to share.
+
+This URL can be used to let users outside the app launch it and view the upload directly, to much easier share content over Twitter, Facebook, iMessage or other websites and services.]]
+  L17_18.whenwillmypersonaluploadsinstantlyapprove = [[
+Your personal uploads (Uploads posted via the 'Post new upload'-button in the menu), will now INSTANTLY approve as soon as you reach 1000 followers. As soon as you hit 1000 followers, your Personal/Private uploads will no longer pass through the approval filters and will instead instantly approve and appear in the app as soon as you upload them!
+
+So if you are playing on a Minecraft server and want all your followers to join come join you - or have an announcement you want all your followers to know about, just shoot it up as a Private/Personal upload and it will IMMEDIATELY appear in the app and ALL your followers will instantly be notified and able to check it out as fast as they can!
+
+Happy uploading!!! :)]]
+  L18_19 = _UPVALUE3_
+  L18_19 = L18_19.newTableView
+  L19_20 = {}
+  L19_20.top = 64
+  L20_21 = _W
+  L19_20.width = L20_21
+  L20_21 = _H
+  L20_21 = L20_21 - 64
+  L19_20.height = L20_21
+  L20_21 = {
+    L21_22,
+    L22_23,
+    L23_24,
+    50
+  }
+  L21_22 = 0
+  L22_23 = 0
+  L23_24 = 0
+  L19_20.bgColor = L20_21
+  L18_19 = L18_19(L19_20)
+  L20_21 = L3_4
+  L19_20 = L3_4.insert
+  L21_22 = L18_19
+  L19_20(L20_21, L21_22)
+  L19_20 = display
+  L19_20 = L19_20.newText
+  L20_21 = {}
+  L21_22 = L7_8.label
+  L20_21.text = L21_22
+  L21_22 = _W
+  L21_22 = L21_22 - 20
+  L20_21.width = L21_22
+  L20_21.height = 0
+  L21_22 = _UPVALUE1_
+  L21_22 = L21_22.fonts
+  L21_22 = L21_22.regular
+  L20_21.font = L21_22
+  L20_21.fontSize = 18
+  L20_21.align = "center"
+  L19_20 = L19_20(L20_21)
+  L21_22 = L19_20
+  L20_21 = L19_20.setReferencePoint
+  L22_23 = display
+  L22_23 = L22_23.TopCenterReferencePoint
+  L20_21(L21_22, L22_23)
+  L19_20.x = L13_14
+  L19_20.y = 20
+  L21_22 = L18_19
+  L20_21 = L18_19.insert
+  L22_23 = L19_20
+  L20_21(L21_22, L22_23)
+  L20_21 = display
+  L20_21 = L20_21.newText
+  L21_22 = {}
+  L22_23 = "\n"
+  L23_24 = L7_8.rowid
+  L23_24 = L17_18[L23_24]
+  L22_23 = L22_23 .. L23_24 .. "\n"
+  L21_22.text = L22_23
+  L21_22.x = 10
+  L22_23 = L19_20.height
+  L22_23 = L22_23 + 25
+  L21_22.y = L22_23
+  L22_23 = _W
+  L22_23 = L22_23 - 20
+  L21_22.width = L22_23
+  L21_22.height = 0
+  L22_23 = _UPVALUE1_
+  L22_23 = L22_23.fonts
+  L22_23 = L22_23.light
+  L21_22.font = L22_23
+  L21_22.fontSize = 13
+  L20_21 = L20_21(L21_22)
+  L22_23 = L18_19
+  L21_22 = L18_19.insert
+  L23_24 = L20_21
+  L21_22(L22_23, L23_24)
+  L21_22 = _UPVALUE0_
+  L21_22 = L21_22.makeToolbar
+  L22_23 = "Info"
+  L21_22 = L21_22(L22_23)
+  L23_24 = L4_5
+  L22_23 = L4_5.insert
+  L22_23(L23_24, L21_22)
+  function L22_23(A0_27)
+    _UPVALUE0_.remove({"prevScene"})
+    _UPVALUE0_.update({
+      taps = _UPVALUE1_ - 1
+    })
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE2_, "toRightNew")
+    return true
+  end
+  L23_24 = _UPVALUE3_
+  L23_24 = L23_24.newButton
+  L23_24 = L23_24({
+    width = 50,
+    height = 50,
+    default = "back.png",
+    over = "back-over.png",
+    onRelease = L22_23
+  })
+  L23_24:setReferencePoint(display.CenterLeftReferencePoint)
+  L23_24.x = -1
+  L23_24.y = L21_22.yCenter
+  L4_5:insert(L23_24)
+  return L0_1
+end

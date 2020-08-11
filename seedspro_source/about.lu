@@ -1,0 +1,252 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("creator")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = _UPVALUE0_
+  L5_6 = L5_6.getSceneProperties
+  L5_6 = L5_6()
+  L6_7 = _UPVALUE1_
+  L6_7 = L6_7.session
+  L6_7 = L6_7 + 1
+  L7_8 = _UPVALUE1_
+  L7_8.session = L6_7
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.getAppType
+  L7_8 = L7_8()
+  L8_9 = math
+  L8_9 = L8_9.ceil
+  L9_10 = L5_6.prevScene
+  L10_11 = L5_6.page
+  L11_12 = L5_6.taps
+  L12_13 = display
+  L12_13 = L12_13.contentCenterX
+  L13_14 = display
+  L13_14 = L13_14.contentCenterY
+  function L14_15(A0_28)
+    _UPVALUE0_.removeRuntimeListener("clearLocalTimersAndListeners", A0_28.self_listenerid)
+  end
+  L15_16 = _UPVALUE0_
+  L15_16 = L15_16.addRuntimeListener
+  L16_17 = "clearLocalTimersAndListeners"
+  L17_18 = L14_15
+  L15_16(L16_17, L17_18)
+  L15_16 = _UPVALUE0_
+  L15_16 = L15_16.makeBlurryBg
+  L15_16 = L15_16()
+  L17_18 = L15_16
+  L16_17 = L15_16.addEventListener
+  L18_19 = "touch"
+  function L19_20()
+    local L0_29, L1_30
+    L0_29 = true
+    return L0_29
+  end
+  L16_17(L17_18, L18_19, L19_20)
+  L17_18 = L2_3
+  L16_17 = L2_3.insert
+  L18_19 = L15_16
+  L16_17(L17_18, L18_19)
+  L16_17 = _UPVALUE2_
+  L16_17 = L16_17.createSideMenu
+  L17_18 = L1_2
+  L16_17 = L16_17(L17_18)
+  L18_19 = L0_1
+  L17_18 = L0_1.insert
+  L19_20 = L16_17
+  L17_18(L18_19, L19_20)
+  L0_1.side_menu = L16_17
+  L18_19 = L16_17
+  L17_18 = L16_17.toBack
+  L17_18(L18_19)
+  L17_18 = _UPVALUE3_
+  L17_18 = L17_18.newScrollView
+  L18_19 = {}
+  L18_19.top = 64
+  L18_19.left = 0
+  L19_20 = _W
+  L18_19.width = L19_20
+  L19_20 = _H
+  L19_20 = L19_20 - 64
+  L18_19.height = L19_20
+  L19_20 = {
+    L20_21,
+    L21_22,
+    L22_23,
+    L23_24
+  }
+  L20_21 = 0
+  L21_22 = 0
+  L22_23 = 0
+  L23_24 = 0
+  L18_19.bgColor = L19_20
+  L18_19.hideScrollBar = true
+  L17_18 = L17_18(L18_19)
+  L18_19 = L17_18.content
+  L18_19.horizontalScrollDisabled = true
+  L19_20 = L3_4
+  L18_19 = L3_4.insert
+  L20_21 = L17_18
+  L18_19(L19_20, L20_21)
+  L18_19 = display
+  L18_19 = L18_19.newImageRect
+  L19_20 = "aboutpage.png"
+  L20_21 = _W
+  L21_22 = _UPVALUE1_
+  L21_22 = L21_22.scaleFrom320
+  L21_22 = 278 * L21_22
+  L18_19 = L18_19(L19_20, L20_21, L21_22)
+  L20_21 = L18_19
+  L19_20 = L18_19.setReferencePoint
+  L21_22 = display
+  L21_22 = L21_22.TopCenterReferencePoint
+  L19_20(L20_21, L21_22)
+  L18_19.x = L12_13
+  L18_19.y = 0
+  L20_21 = L17_18
+  L19_20 = L17_18.insert
+  L21_22 = L18_19
+  L19_20(L20_21, L21_22)
+  L19_20 = display
+  L19_20 = L19_20.newText
+  L20_21 = {}
+  L20_21.text = "Follow us"
+  L21_22 = _UPVALUE1_
+  L21_22 = L21_22.fonts
+  L21_22 = L21_22.bold
+  L20_21.font = L21_22
+  L20_21.fontSize = 22
+  L19_20 = L19_20(L20_21)
+  L21_22 = L19_20
+  L20_21 = L19_20.setReferencePoint
+  L22_23 = display
+  L22_23 = L22_23.TopCenterReferencePoint
+  L20_21(L21_22, L22_23)
+  L19_20.x = L12_13
+  L20_21 = L18_19.y
+  L21_22 = L18_19.height
+  L20_21 = L20_21 + L21_22
+  L20_21 = L20_21 + 40
+  L19_20.y = L20_21
+  L21_22 = L17_18
+  L20_21 = L17_18.insert
+  L22_23 = L19_20
+  L20_21(L21_22, L22_23)
+  function L20_21(A0_31)
+    system.openURL("http://www.twitter.com/JNInteractive")
+    return true
+  end
+  L21_22 = _UPVALUE3_
+  L21_22 = L21_22.newButton
+  L22_23 = {}
+  L22_23.width = 34
+  L22_23.height = 34
+  L22_23.default = "more-twitter.png"
+  L22_23.over = "more-twitter-over.png"
+  L22_23.onRelease = L20_21
+  L21_22 = L21_22(L22_23)
+  L23_24 = L21_22
+  L22_23 = L21_22.setReferencePoint
+  L24_25 = display
+  L24_25 = L24_25.TopCenterReferencePoint
+  L22_23(L23_24, L24_25)
+  L21_22.x = L12_13
+  L22_23 = L19_20.y
+  L23_24 = L19_20.height
+  L22_23 = L22_23 + L23_24
+  L22_23 = L22_23 + 3
+  L21_22.y = L22_23
+  L23_24 = L17_18
+  L22_23 = L17_18.insert
+  L24_25 = L21_22
+  L22_23(L23_24, L24_25)
+  L22_23 = _UPVALUE0_
+  L22_23 = L22_23.makeToolbar
+  L23_24 = "About"
+  L22_23 = L22_23(L23_24)
+  L24_25 = L4_5
+  L23_24 = L4_5.insert
+  L25_26 = L22_23
+  L23_24(L24_25, L25_26)
+  function L23_24(A0_32)
+    _UPVALUE0_.remove({"prevScene"})
+    _UPVALUE0_.update({
+      taps = _UPVALUE1_ - 1
+    })
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE2_, "toRightNew")
+    return true
+  end
+  L24_25 = _UPVALUE3_
+  L24_25 = L24_25.newButton
+  L25_26 = {}
+  L25_26.width = 50
+  L25_26.height = 50
+  L25_26.default = "back.png"
+  L25_26.over = "back-over.png"
+  L25_26.onRelease = L23_24
+  L24_25 = L24_25(L25_26)
+  L26_27 = L24_25
+  L25_26 = L24_25.setReferencePoint
+  L25_26(L26_27, display.CenterLeftReferencePoint)
+  L24_25.x = -1
+  L25_26 = L22_23.yCenter
+  L24_25.y = L25_26
+  L26_27 = L4_5
+  L25_26 = L4_5.insert
+  L25_26(L26_27, L24_25)
+  L25_26 = ""
+  if L7_8 == true then
+    L25_26 = "Pro"
+  elseif L7_8 == false then
+    L25_26 = "Lite"
+  end
+  L26_27 = display
+  L26_27 = L26_27.newText
+  L26_27 = L26_27({
+    text = "Seeds " .. L25_26 .. " v" .. _UPVALUE0_.getLatestAppVersion(),
+    x = 0,
+    y = 0,
+    font = _UPVALUE1_.fonts.light,
+    fontSize = 12
+  })
+  L26_27:setReferencePoint(display.BottomRightReferencePoint)
+  L26_27.x = _W - 2
+  L26_27.y = _H - 2
+  L3_4:insert(L26_27)
+  L4_5:toFront()
+  return L0_1
+end

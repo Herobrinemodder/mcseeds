@@ -1,0 +1,184 @@
+local L0_0, L1_1, L2_2, L3_3, L4_4, L5_5, L6_6, L7_7, L8_8, L9_9, L10_10, L11_11, L12_12
+L0_0 = {}
+L1_1 = display
+L1_1 = L1_1.contentCenterX
+L2_2 = display
+L2_2 = L2_2.contentCenterY
+L3_3 = display
+L3_3 = L3_3.screenOriginY
+L4_4 = display
+L4_4 = L4_4.screenOriginX
+L5_5 = display
+L5_5 = L5_5.screenOriginY
+L6_6 = display
+L6_6 = L6_6.actualContentHeight
+L5_5 = L5_5 + L6_6
+L6_6 = display
+L6_6 = L6_6.screenOriginX
+L7_7 = display
+L7_7 = L7_7.actualContentWidth
+L6_6 = L6_6 + L7_7
+L7_7 = L6_6 - L4_4
+L8_8 = L5_5 - L3_3
+L9_9 = require
+L10_10 = "transitions"
+L9_9 = L9_9(L10_10)
+L10_10 = require
+L11_11 = "globals"
+L10_10 = L10_10(L11_11)
+L11_11 = require
+L12_12 = "creator"
+L11_11 = L11_11(L12_12)
+L12_12 = math
+L12_12 = L12_12.floor
+function L0_0.show(A0_13, A1_14, A2_15, A3_16, A4_17)
+  local L5_18
+  function L5_18()
+    _UPVALUE0_.to(_UPVALUE1_.back, {
+      time = 600,
+      alpha = 0,
+      transition = easing.outExpo
+    })
+    _UPVALUE0_.to(_UPVALUE1_.front, {
+      time = 600,
+      y = _H + _UPVALUE1_.height * 0.5,
+      transition = easing.outExpo,
+      onComplete = function()
+        _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+      end
+    }, true)
+    if _UPVALUE3_ ~= nil then
+      _UPVALUE3_(_UPVALUE4_, _UPVALUE5_, _UPVALUE6_, _UPVALUE7_)
+    end
+    return true
+  end
+  if A1_14 == nil then
+    A1_14 = 1
+  end
+  if A2_15 == nil then
+    A2_15 = 0
+  end
+  if A3_16 == nil then
+    A3_16 = 0
+  end
+  if A4_17 == nil then
+    A4_17 = 1
+  end
+  _UPVALUE7_, _UPVALUE8_, _UPVALUE9_, _UPVALUE10_ = A1_14, A2_15, A3_16, A4_17
+  _UPVALUE3_, _UPVALUE4_, _UPVALUE5_, _UPVALUE6_ = _UPVALUE7_ * 255, _UPVALUE8_ * 255, _UPVALUE9_ * 255, _UPVALUE10_ * 255
+  _UPVALUE1_ = display.newGroup()
+  _UPVALUE1_.back = display.newGroup()
+  _UPVALUE1_:insert(_UPVALUE1_.back)
+  _UPVALUE1_.front = display.newGroup()
+  _UPVALUE1_:insert(_UPVALUE1_.front)
+  _UPVALUE11_ = display.newRect(_UPVALUE1_.back, 0, 0, _W, _H)
+  _UPVALUE11_:setFillColor(0, 0, 0, 155)
+  _UPVALUE11_:addEventListener("tap", L5_18)
+  _UPVALUE11_:addEventListener("touch", function()
+    local L0_19, L1_20
+    L0_19 = true
+    return L0_19
+  end)
+  if _UPVALUE12_ < _UPVALUE13_ then
+    _UPVALUE14_ = _UPVALUE12_ * 0.4
+  else
+    _UPVALUE14_ = _UPVALUE13_ * 0.4
+  end
+  _UPVALUE15_ = display.newRoundedRect(_UPVALUE1_.front, 0, 0, _UPVALUE14_ * 1.75, _UPVALUE14_ * 1.65, _UPVALUE14_ / 5)
+  _UPVALUE15_.x = _UPVALUE14_ * 0.075
+  _UPVALUE15_.y = _UPVALUE14_ * 0.075
+  _UPVALUE15_:setFillColor(216, 216, 216)
+  _UPVALUE15_:addEventListener("touch", function()
+    local L0_21, L1_22
+    L0_21 = true
+    return L0_21
+  end)
+  _UPVALUE15_:addEventListener("tap", function()
+    local L0_23, L1_24
+    L0_23 = true
+    return L0_23
+  end)
+  _UPVALUE16_ = display.newRect(_UPVALUE1_.front, 0, 0, _UPVALUE14_, _UPVALUE14_)
+  _UPVALUE16_.x, _UPVALUE16_.y = 0, 0
+  _UPVALUE16_.gradient = {
+    type = "gradient",
+    color1 = {
+      _UPVALUE17_,
+      _UPVALUE18_,
+      _UPVALUE19_
+    },
+    color2 = {
+      1,
+      1,
+      1
+    },
+    direction = "left"
+  }
+  _UPVALUE16_.fill = _UPVALUE16_.gradient
+  _UPVALUE16_:addEventListener("touch", _UPVALUE20_)
+  _UPVALUE16_:addEventListener("tap", _UPVALUE20_)
+  _UPVALUE21_ = display.newRect(_UPVALUE1_.front, 0, 0, _UPVALUE16_.width, _UPVALUE16_.height)
+  _UPVALUE21_.x, _UPVALUE21_.y = _UPVALUE16_.x, _UPVALUE16_.y
+  _UPVALUE21_.gradient = {
+    type = "gradient",
+    color1 = {
+      1,
+      1,
+      1
+    },
+    color2 = {
+      0,
+      0,
+      0
+    },
+    direction = "down"
+  }
+  _UPVALUE21_.fill = _UPVALUE21_.gradient
+  _UPVALUE21_.blendMode = "multiply"
+  _UPVALUE22_ = display.newCircle(_UPVALUE1_.front, 0, 0, _UPVALUE14_ / 30)
+  _UPVALUE22_:setFillColor(0, 0, 0, 0)
+  _UPVALUE22_:setStrokeColor(216, 216, 216)
+  _UPVALUE22_.strokeWidth = _UPVALUE14_ / 80
+  _UPVALUE23_ = display.newGroup()
+  _UPVALUE1_.front:insert(_UPVALUE23_)
+  _UPVALUE23_.x = _UPVALUE14_ * 0.65
+  for _FORV_9_ = 1, 6 do
+    display.newRect(_UPVALUE23_, 0, 0, _UPVALUE14_ * 0.15, _UPVALUE14_ / 6):setReferencePoint(display.TopCenterReferencePoint)
+    display.newRect(_UPVALUE23_, 0, 0, _UPVALUE14_ * 0.15, _UPVALUE14_ / 6).fill, display.newRect(_UPVALUE23_, 0, 0, _UPVALUE14_ * 0.15, _UPVALUE14_ / 6).x, display.newRect(_UPVALUE23_, 0, 0, _UPVALUE14_ * 0.15, _UPVALUE14_ / 6).y = {
+      type = "gradient",
+      color1 = _UPVALUE24_[_FORV_9_],
+      color2 = _UPVALUE24_[_FORV_9_ + 1],
+      direction = "down"
+    }, 0, -_UPVALUE14_ * 0.5 + display.newRect(_UPVALUE23_, 0, 0, _UPVALUE14_ * 0.15, _UPVALUE14_ / 6).height * (_FORV_9_ - 1)
+  end
+  _FOR_:addEventListener("touch", _UPVALUE25_)
+  _UPVALUE23_:addEventListener("tap", _UPVALUE25_)
+  barNode = display.newRect(_UPVALUE1_.front, 0, 0, _UPVALUE14_ * 0.16, _UPVALUE14_ * 0.03)
+  barNode.x, barNode.y = _UPVALUE23_.x, 0
+  barNode:setFillColor(255, 255, 255, 127)
+  barNode:setStrokeColor(255, 255, 255)
+  barNode.strokeWidth = _UPVALUE14_ / 80
+  _UPVALUE26_ = display.newRect(_UPVALUE1_.front, _UPVALUE14_ * -0.5, _UPVALUE14_ * 0.55, 50, 25)
+  _UPVALUE26_:setFillColor(_UPVALUE3_, _UPVALUE4_, _UPVALUE5_, _UPVALUE6_)
+  _UPVALUE26_:addEventListener("tap", L5_18)
+  _UPVALUE26_:addEventListener("touch", function()
+    local L0_25, L1_26
+    L0_25 = true
+    return L0_25
+  end)
+  _UPVALUE1_.front:setReferencePoint(display.CenterReferencePoint)
+  _UPVALUE1_.front.x = _UPVALUE27_
+  _UPVALUE1_.front.y = _UPVALUE28_
+  _UPVALUE29_(_UPVALUE7_, _UPVALUE8_, _UPVALUE9_, _UPVALUE10_)
+  _UPVALUE0_.from(_UPVALUE1_.back, {
+    time = 600,
+    alpha = 0,
+    transition = easing.outExpo
+  })
+  _UPVALUE0_.from(_UPVALUE1_.front, {
+    time = 600,
+    y = _H + _UPVALUE1_.height * 0.5,
+    transition = easing.outExpo
+  }, true)
+end
+return L0_0

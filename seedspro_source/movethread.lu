@@ -1,0 +1,322 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("transitions")
+for _FORV_11_, _FORV_12_ in pairs(require("creator").copyTable(require("globals").appSections).Sections) do
+  if _FORV_11_ == "Moderators" or _FORV_12_ == "Moderators" or _FORV_11_ == "Servers" or _FORV_12_ == "Servers" then
+    require("creator").copyTable(require("globals").appSections).Sections[_FORV_11_] = nil
+  end
+end
+;({}).assemblePage = function(A0_1, A1_2, A2_3, A3_4)
+  local L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14
+  L4_5 = {}
+  L5_6 = {}
+  L6_7 = display
+  L6_7 = L6_7.newGroup
+  L6_7 = L6_7()
+  L8_9 = A0_1
+  L7_8 = A0_1.insert
+  L9_10 = L6_7
+  L7_8(L8_9, L9_10)
+  L7_8 = display
+  L7_8 = L7_8.newGroup
+  L7_8 = L7_8()
+  L7_8.alpha = 0
+  L9_10 = L6_7
+  L8_9 = L6_7.insert
+  L10_11 = L7_8
+  L8_9(L9_10, L10_11)
+  L8_9 = display
+  L8_9 = L8_9.newGroup
+  L8_9 = L8_9()
+  L8_9.alpha = 0
+  L10_11 = L6_7
+  L9_10 = L6_7.insert
+  L11_12 = L8_9
+  L9_10(L10_11, L11_12)
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.newImage
+  L10_11 = {
+    L11_12,
+    L12_13,
+    L13_14,
+    230
+  }
+  L11_12 = 0
+  L12_13 = 0
+  L13_14 = 0
+  L9_10 = L9_10(L10_11)
+  L11_12 = L9_10
+  L10_11 = L9_10.addEventListener
+  L12_13 = "touch"
+  function L13_14()
+    local L0_15, L1_16
+    L0_15 = true
+    return L0_15
+  end
+  L10_11(L11_12, L12_13, L13_14)
+  L11_12 = L7_8
+  L10_11 = L7_8.insert
+  L12_13 = L9_10
+  L10_11(L11_12, L12_13)
+  L10_11 = display
+  L10_11 = L10_11.newText
+  L11_12 = {}
+  L11_12.text = "Move upload"
+  L11_12.x = 0
+  L11_12.y = 0
+  L12_13 = _UPVALUE1_
+  L12_13 = L12_13.fonts
+  L12_13 = L12_13.bold
+  L11_12.font = L12_13
+  L11_12.fontSize = 22
+  L10_11 = L10_11(L11_12)
+  L12_13 = L10_11
+  L11_12 = L10_11.setReferencePoint
+  L13_14 = display
+  L13_14 = L13_14.TopCenterReferencePoint
+  L11_12(L12_13, L13_14)
+  L11_12 = _UPVALUE2_
+  L10_11.x = L11_12
+  L10_11.y = 24
+  L12_13 = L10_11
+  L11_12 = L10_11.setFillColor
+  L13_14 = 255
+  L11_12(L12_13, L13_14, 255, 255)
+  L12_13 = L7_8
+  L11_12 = L7_8.insert
+  L13_14 = L10_11
+  L11_12(L12_13, L13_14)
+  L12_13 = A1_2
+  L11_12 = A1_2.getContentPosition
+  L11_12 = L11_12(L12_13)
+  L13_14 = A1_2
+  L12_13 = A1_2.scrollToY
+  L12_13(L13_14, 0, 0)
+  L12_13 = _UPVALUE0_
+  L12_13 = L12_13.newImage
+  L12_13 = L12_13()
+  L13_14 = L12_13.addEventListener
+  L13_14(L12_13, "touch", function()
+    local L0_17, L1_18
+    L0_17 = true
+    return L0_17
+  end)
+  function L13_14()
+    local L0_19, L1_20, L2_21, L3_22, L4_23, L5_24, L6_25, L7_26, L8_27, L9_28, L10_29, L11_30, L12_31
+    L0_19 = display
+    L0_19 = L0_19.captureBounds
+    L1_20 = {}
+    L1_20.xMin = 0
+    L2_21 = _UPVALUE0_
+    L2_21 = L2_21.yPos
+    L1_20.yMin = L2_21
+    L2_21 = _W
+    L1_20.xMax = L2_21
+    L2_21 = _UPVALUE1_
+    L1_20.yMax = L2_21
+    L0_19 = L0_19(L1_20)
+    L2_21 = L0_19
+    L1_20 = L0_19.setReferencePoint
+    L3_22 = display
+    L3_22 = L3_22.CenterReferencePoint
+    L1_20(L2_21, L3_22)
+    L1_20 = _UPVALUE2_
+    L0_19.x = L1_20
+    L1_20 = L0_19.y
+    L2_21 = _UPVALUE0_
+    L2_21 = L2_21.yPos
+    L1_20 = L1_20 + L2_21
+    L0_19.y = L1_20
+    L1_20 = L0_19.x
+    L0_19.origX = L1_20
+    L1_20 = L0_19.y
+    L0_19.origY = L1_20
+    L1_20 = _UPVALUE3_
+    L2_21 = L1_20
+    L1_20 = L1_20.insert
+    L3_22 = L0_19
+    L1_20(L2_21, L3_22)
+    L1_20 = display
+    L1_20 = L1_20.newImageRect
+    L2_21 = "move_thread_gloss.png"
+    L3_22 = L0_19.width
+    L4_23 = L0_19.xScale
+    L3_22 = L3_22 * L4_23
+    L4_23 = L0_19.height
+    L5_24 = L0_19.yScale
+    L4_23 = L4_23 * L5_24
+    L1_20 = L1_20(L2_21, L3_22, L4_23)
+    L3_22 = L1_20
+    L2_21 = L1_20.setReferencePoint
+    L4_23 = display
+    L4_23 = L4_23.CenterReferencePoint
+    L2_21(L3_22, L4_23)
+    L2_21 = L0_19.x
+    L1_20.x = L2_21
+    L2_21 = L0_19.y
+    L1_20.y = L2_21
+    L2_21 = _UPVALUE3_
+    L3_22 = L2_21
+    L2_21 = L2_21.insert
+    L4_23 = L1_20
+    L2_21(L3_22, L4_23)
+    L2_21 = display
+    L2_21 = L2_21.newText
+    L3_22 = {}
+    L3_22.text = "Current section"
+    L4_23 = _UPVALUE4_
+    L4_23 = L4_23.fonts
+    L4_23 = L4_23.bold
+    L3_22.font = L4_23
+    L3_22.fontSize = 14
+    L2_21 = L2_21(L3_22)
+    L4_23 = L2_21
+    L3_22 = L2_21.setReferencePoint
+    L5_24 = display
+    L5_24 = L5_24.TopCenterReferencePoint
+    L3_22(L4_23, L5_24)
+    L3_22 = _UPVALUE2_
+    L2_21.x = L3_22
+    L2_21.y = 235
+    L3_22 = _UPVALUE5_
+    L4_23 = L3_22
+    L3_22 = L3_22.insert
+    L5_24 = L2_21
+    L3_22(L4_23, L5_24)
+    L3_22 = display
+    L3_22 = L3_22.newGroup
+    L3_22 = L3_22()
+    L4_23 = _UPVALUE5_
+    L5_24 = L4_23
+    L4_23 = L4_23.insert
+    L6_25 = L3_22
+    L4_23(L5_24, L6_25)
+    L4_23 = _UPVALUE6_
+    L4_23 = L4_23.category
+    L5_24 = _UPVALUE6_
+    L5_24 = L5_24.platform
+    L6_25 = _UPVALUE6_
+    L6_25 = L6_25.version
+    for L10_29 = 1, 3 do
+      if L10_29 == 1 then
+      elseif L10_29 == 2 then
+        if L4_23 == "Seeds" then
+          if L5_24 == "iOS" then
+            L5_24 = "PE"
+          end
+        else
+        end
+      elseif L10_29 == 3 then
+      end
+      _UPVALUE7_[L10_29] = {}
+      _UPVALUE7_[L10_29].label = display.newText({
+        text = L11_30,
+        x = 0,
+        y = 0,
+        font = _UPVALUE4_.fonts.bold,
+        fontSize = 15
+      })
+      _UPVALUE7_[L10_29].label:setReferencePoint(display.TopLeftReferencePoint)
+      _UPVALUE7_[L10_29].label.x = 0
+      _UPVALUE7_[L10_29].label.y = (L10_29 - 1) * 20
+      L3_22:insert(_UPVALUE7_[L10_29].label)
+      _UPVALUE7_[L10_29].answer = display.newText({
+        text = L12_31,
+        x = 0,
+        y = 0,
+        font = _UPVALUE4_.fonts.regular,
+        fontSize = 15
+      })
+      _UPVALUE7_[L10_29].answer:setReferencePoint(display.TopLeftReferencePoint)
+      _UPVALUE7_[L10_29].answer.x = 90
+      _UPVALUE7_[L10_29].answer.y = (L10_29 - 1) * 20
+      L3_22:insert(_UPVALUE7_[L10_29].answer)
+    end
+    L7_26(L8_27, L9_28)
+    L3_22.x = L7_26
+    L3_22.y = L7_26
+    L8_27.text = "New section"
+    L8_27.font = L9_28
+    L8_27.fontSize = 14
+    L8_27(L9_28, L10_29)
+    L7_26.x = L8_27
+    L7_26.y = 348
+    L8_27(L9_28, L10_29)
+    for _FORV_13_ = 1, 3 do
+      if _FORV_13_ == 1 then
+        id = "category"
+      elseif _FORV_13_ == 2 then
+        if L4_23 == "Seeds" then
+          id = "platform"
+        else
+          id = "board"
+        end
+      elseif _FORV_13_ == 3 then
+        id = "version"
+      end
+      _UPVALUE8_[_FORV_13_] = {}
+      _UPVALUE8_[_FORV_13_].button = _UPVALUE12_.newButton({
+        id = id,
+        width = 91,
+        height = 25,
+        default = "moveupload_" .. id .. ".png",
+        over = "moveupload_" .. id .. "-over.png",
+        onRelease = L9_28
+      })
+      _UPVALUE8_[_FORV_13_].button:setReferencePoint(display.TopCenterReferencePoint)
+      _UPVALUE8_[_FORV_13_].button.x = _UPVALUE2_
+      _UPVALUE8_[_FORV_13_].button.y = L7_26.y + (_FORV_13_ - 1) * 32 + 25
+      _UPVALUE8_[_FORV_13_].button.isSet = false
+      _UPVALUE8_[_FORV_13_].button.nr = _FORV_13_
+      _UPVALUE5_:insert(_UPVALUE8_[_FORV_13_].button)
+      _UPVALUE8_[_FORV_13_].label = display.newText({
+        text = "",
+        font = _UPVALUE4_.fonts.regular,
+        fontSize = 15
+      })
+      _UPVALUE8_[_FORV_13_].label:setReferencePoint(display.CenterRightReferencePoint)
+      _UPVALUE8_[_FORV_13_].label.x = _UPVALUE2_
+      _UPVALUE8_[_FORV_13_].label.y = _UPVALUE8_[_FORV_13_].button.y + _UPVALUE8_[_FORV_13_].button.height * 0.5
+      _UPVALUE5_:insert(_UPVALUE8_[_FORV_13_].label)
+    end
+    L12_31.id = "cancel"
+    L12_31.top = 26
+    L12_31.left = 10
+    L12_31.width = 52
+    L12_31.height = 30
+    L12_31.default = "cancel.png"
+    L12_31.over = "cancel-over.png"
+    L12_31.onRelease = L10_29
+    L12_31(L12_31, L11_30)
+    _UPVALUE5_:insert(L12_31)
+    if L0_19.width / L0_19.height > 0.8311688311688312 == true then
+    else
+    end
+    _UPVALUE3_:setReferencePoint(display.CenterReferencePoint)
+    transition.to(_UPVALUE3_, {
+      delay = 50,
+      time = 100,
+      alpha = 1,
+      transition = easing.inOutQuad,
+      onComplete = function()
+        transition.to(_UPVALUE0_, {
+          time = 500,
+          x = _UPVALUE1_,
+          y = 145,
+          xScale = _UPVALUE2_,
+          yScale = _UPVALUE2_,
+          transition = easing.inOutQuad
+        })
+      end
+    })
+    transition.to(_UPVALUE5_, {
+      delay = 150,
+      time = 450,
+      alpha = 1,
+      transition = easing.inOutQuad
+    })
+    _UPVALUE17_ = _UPVALUE10_.delete(_UPVALUE17_)
+  end
+  timer.performWithDelay(400, L13_14)
+end
+return {}

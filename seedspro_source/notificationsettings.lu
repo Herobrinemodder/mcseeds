@@ -1,0 +1,449 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("creator")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.imgSuff
+  L8_9 = _UPVALUE1_
+  L8_9 = L8_9.getSceneProperties
+  L8_9 = L8_9()
+  L9_10 = _UPVALUE0_
+  L9_10 = L9_10.udid
+  L10_11 = L8_9.prevScene
+  L11_12 = _UPVALUE0_
+  L11_12 = L11_12.session
+  L11_12 = L11_12 + 1
+  L12_13 = _UPVALUE0_
+  L12_13.session = L11_12
+  L12_13 = math
+  L12_13 = L12_13.abs
+  L13_14 = {}
+  L14_15 = {}
+  L15_16 = {}
+  L16_17 = {}
+  L17_18 = _UPVALUE1_
+  L17_18 = L17_18.makeBlurryBg
+  L17_18 = L17_18()
+  L19_20 = L17_18
+  L18_19 = L17_18.addEventListener
+  L20_21 = "touch"
+  function L21_22()
+    local L0_29, L1_30
+    L0_29 = true
+    return L0_29
+  end
+  L18_19(L19_20, L20_21, L21_22)
+  L19_20 = L2_3
+  L18_19 = L2_3.insert
+  L20_21 = L17_18
+  L18_19(L19_20, L20_21)
+  L18_19 = _UPVALUE2_
+  L18_19 = L18_19.createSideMenu
+  L19_20 = L1_2
+  L18_19 = L18_19(L19_20)
+  L20_21 = L0_1
+  L19_20 = L0_1.insert
+  L21_22 = L18_19
+  L19_20(L20_21, L21_22)
+  L0_1.side_menu = L18_19
+  L20_21 = L18_19
+  L19_20 = L18_19.toBack
+  L19_20(L20_21)
+  L19_20 = _UPVALUE3_
+  L19_20 = L19_20.newScrollView
+  L20_21 = {}
+  L20_21.top = 64
+  L21_22 = _W
+  L20_21.width = L21_22
+  L21_22 = _H
+  L21_22 = L21_22 - 64
+  L20_21.height = L21_22
+  L21_22 = {
+    L22_23,
+    L23_24,
+    L24_25,
+    L25_26
+  }
+  L22_23 = 0
+  L23_24 = 0
+  L24_25 = 0
+  L25_26 = 0
+  L20_21.bgColor = L21_22
+  L19_20 = L19_20(L20_21)
+  L19_20.scry = 0
+  L20_21 = {}
+  L19_20.refy = L20_21
+  L20_21 = L19_20.content
+  L20_21.horizontalScrollDisabled = true
+  L21_22 = L3_4
+  L20_21 = L3_4.insert
+  L22_23 = L19_20
+  L20_21(L21_22, L22_23)
+  function L20_21(A0_31)
+    local L1_32, L2_33
+    L1_32 = display
+    L1_32 = L1_32.newRect
+    L2_33 = 0
+    L1_32 = L1_32(L2_33, _UPVALUE0_.scry, _W, 20)
+    L2_33 = L1_32.setFillColor
+    L2_33(L1_32, 0, 0, 0, 70)
+    L2_33 = _UPVALUE0_
+    L2_33 = L2_33.insert
+    L2_33(L2_33, L1_32)
+    L2_33 = display
+    L2_33 = L2_33.newText
+    L2_33 = L2_33({
+      text = A0_31,
+      font = _UPVALUE1_.fonts.bold,
+      fontSize = 14
+    })
+    L2_33:setReferencePoint(display.CenterLeftReferencePoint)
+    L2_33.x = 20
+    L2_33.y = _UPVALUE0_.scry + 10
+    L2_33:setFillColor(255, 255, 255)
+    _UPVALUE0_:insert(L2_33)
+    _UPVALUE0_.scry = _UPVALUE0_.scry + L1_32.height + 1
+  end
+  function L21_22(A0_34)
+    local L1_35, L2_36, L3_37
+    L1_35 = A0_34.state
+    L2_36 = A0_34.target
+    L2_36 = L2_36.key
+    L3_37 = _UPVALUE0_
+    L3_37 = L3_37[L2_36]
+    L3_37.isVisible = true
+    L3_37 = _UPVALUE1_
+    L3_37[L2_36] = _UPVALUE2_.delete(_UPVALUE1_[L2_36])
+    function L3_37(A0_38)
+      local L1_39
+      L1_39 = A0_38.response
+      if L1_39 ~= "yes" and L1_39 ~= "no" then
+        L1_39 = "no"
+      end
+      _UPVALUE0_[_UPVALUE1_].isVisible = false
+      _UPVALUE2_[_UPVALUE1_] = _UPVALUE3_.new(_UPVALUE4_, L1_39, _UPVALUE5_)
+      _UPVALUE2_[_UPVALUE1_]:setReferencePoint(display.CenterRightReferencePoint)
+      _UPVALUE2_[_UPVALUE1_].x = _W - 12
+      _UPVALUE2_[_UPVALUE1_].y = _UPVALUE5_.refy[_UPVALUE1_] + 17
+      _UPVALUE2_[_UPVALUE1_]:scale(0.8, 0.8)
+      _UPVALUE2_[_UPVALUE1_].key = _UPVALUE1_
+      _UPVALUE5_:insert(_UPVALUE2_[_UPVALUE1_])
+    end
+    _UPVALUE2_.network_request("update_notification_settings", L3_37, {
+      pushtoken = _UPVALUE6_.pushtoken,
+      udid = _UPVALUE6_.udid,
+      key = L2_36,
+      val = L1_35
+    })
+  end
+  function L22_23(A0_40)
+    local L1_41
+    L1_41 = A0_40.phase
+    A0_40.target:setFillColor(217, 217, 217, 155)
+    if L1_41 == "began" then
+      display.getCurrentStage():setFocus(A0_40.target)
+    elseif L1_41 == "moved" then
+      if _UPVALUE0_(A0_40.xStart - A0_40.x) < _UPVALUE0_(A0_40.yStart - A0_40.y) then
+        display.getCurrentStage():setFocus(nil)
+        A0_40.target:setFillColor(255, 255, 255, 20)
+        _UPVALUE1_:takeFocus(A0_40)
+      end
+    elseif L1_41 == "ended" or L1_41 == "cancelled" then
+      display.getCurrentStage():setFocus(nil)
+      A0_40.target:setFillColor(255, 255, 255, 20)
+      _UPVALUE2_.dispatchEvent("clearLocalTimersAndListeners")
+      if A0_40.target.scene == "notificationsettings_specificusers" then
+        _UPVALUE2_.update({
+          searchString = "",
+          prevScene = "notificationsettings",
+          listPos = 0,
+          start = 0,
+          page = "notificationsettings_specificusers",
+          pop = 50
+        })
+      end
+      director:changeScene(A0_40.target.scene, "overFromRightNew")
+    end
+    return true
+  end
+  function L23_24(A0_42, A1_43, A2_44)
+    local L3_45, L4_46, L5_47
+    if not A2_44 then
+      L3_45 = display
+      L3_45 = L3_45.newRect
+      L4_46 = 0
+      L5_47 = _UPVALUE0_
+      L5_47 = L5_47.scry
+      L3_45 = L3_45(L4_46, L5_47, _W, 22)
+      L5_47 = L3_45
+      L4_46 = L3_45.setFillColor
+      L4_46(L5_47, 255, 255, 255, 20)
+      L3_45.isHitTestable = true
+      L5_47 = L3_45
+      L4_46 = L3_45.addEventListener
+      L4_46(L5_47, "touch", _UPVALUE1_)
+      L3_45.scene = A1_43
+      L4_46 = _UPVALUE0_
+      L5_47 = L4_46
+      L4_46 = L4_46.insert
+      L4_46(L5_47, L3_45)
+      L4_46 = display
+      L4_46 = L4_46.newImageRect
+      L5_47 = "rightarrow-over.png"
+      L4_46 = L4_46(L5_47, 6, 11)
+      L5_47 = L4_46.setReferencePoint
+      L5_47(L4_46, display.CenterRightReferencePoint)
+      L5_47 = _W
+      L5_47 = L5_47 - 15
+      L4_46.x = L5_47
+      L5_47 = _UPVALUE0_
+      L5_47 = L5_47.scry
+      L5_47 = L5_47 + L3_45.height * 0.5
+      L4_46.y = L5_47
+      L4_46.alpha = 0.8
+      L5_47 = _UPVALUE0_
+      L5_47 = L5_47.insert
+      L5_47(L5_47, L4_46)
+      L5_47 = display
+      L5_47 = L5_47.newText
+      L5_47 = L5_47({
+        text = A0_42,
+        font = _UPVALUE2_.fonts.bold,
+        fontSize = 12
+      })
+      L5_47:setReferencePoint(display.CenterRightReferencePoint)
+      L5_47.x = L4_46.x - L4_46.width - 3
+      L5_47.y = L4_46.y - 1
+      L5_47.alpha = 0.8
+      _UPVALUE0_:insert(L5_47)
+      _UPVALUE0_.scry = _UPVALUE0_.scry + L3_45.height + 1
+    else
+      L3_45 = _UPVALUE0_
+      L3_45 = L3_45.refy
+      L4_46 = _UPVALUE0_
+      L4_46 = L4_46.scry
+      L3_45[A2_44] = L4_46
+      L3_45 = display
+      L3_45 = L3_45.newRect
+      L4_46 = 0
+      L5_47 = _UPVALUE0_
+      L5_47 = L5_47.scry
+      L3_45 = L3_45(L4_46, L5_47, _W, 34)
+      L5_47 = L3_45
+      L4_46 = L3_45.setFillColor
+      L4_46(L5_47, 255, 255, 255, 20)
+      L4_46 = _UPVALUE0_
+      L5_47 = L4_46
+      L4_46 = L4_46.insert
+      L4_46(L5_47, L3_45)
+      L4_46 = display
+      L4_46 = L4_46.newText
+      L5_47 = {}
+      L5_47.text = A0_42
+      L5_47.font = _UPVALUE2_.fonts.light
+      L5_47.fontSize = 14
+      L4_46 = L4_46(L5_47)
+      L5_47 = L4_46.setReferencePoint
+      L5_47(L4_46, display.CenterLeftReferencePoint)
+      L4_46.x = 20
+      L5_47 = _UPVALUE0_
+      L5_47 = L5_47.scry
+      L5_47 = L5_47 + L3_45.height * 0.5
+      L4_46.y = L5_47
+      L5_47 = _UPVALUE0_
+      L5_47 = L5_47.insert
+      L5_47(L5_47, L4_46)
+      L5_47 = _UPVALUE3_
+      L5_47[A2_44] = _UPVALUE4_.makeSprite(0, 0)
+      L5_47 = _UPVALUE3_
+      L5_47 = L5_47[A2_44]
+      L5_47 = L5_47.setReferencePoint
+      L5_47(L5_47, display.CenterRightReferencePoint)
+      L5_47 = _UPVALUE3_
+      L5_47 = L5_47[A2_44]
+      L5_47.x = _W - 12
+      L5_47 = _UPVALUE3_
+      L5_47 = L5_47[A2_44]
+      L5_47.y = L4_46.y
+      L5_47 = _UPVALUE3_
+      L5_47 = L5_47[A2_44]
+      L5_47 = L5_47.scale
+      L5_47(L5_47, 0.9, 0.9)
+      L5_47 = _UPVALUE0_
+      L5_47 = L5_47.insert
+      L5_47(L5_47, _UPVALUE3_[A2_44])
+      L5_47 = _UPVALUE0_
+      L5_47.scry = _UPVALUE0_.scry + L3_45.height + 1
+    end
+  end
+  L24_25 = L20_21
+  L25_26 = "Personal"
+  L24_25(L25_26)
+  L24_25 = L23_24
+  L25_26 = "New follower"
+  L26_27 = "yes"
+  L27_28 = "newfollower"
+  L24_25(L25_26, L26_27, L27_28)
+  L24_25 = L23_24
+  L25_26 = "New private messages"
+  L26_27 = "yes"
+  L27_28 = "newprivatemessage"
+  L24_25(L25_26, L26_27, L27_28)
+  L24_25 = L20_21
+  L25_26 = "Uploads"
+  L24_25(L25_26)
+  L24_25 = L23_24
+  L25_26 = "Upload approved"
+  L26_27 = "yes"
+  L27_28 = "uploadapproved"
+  L24_25(L25_26, L26_27, L27_28)
+  L24_25 = L23_24
+  L25_26 = "New ratings"
+  L26_27 = "yes"
+  L27_28 = "newrating"
+  L24_25(L25_26, L26_27, L27_28)
+  L24_25 = L23_24
+  L25_26 = "New comments"
+  L26_27 = "yes"
+  L27_28 = "newcomment"
+  L24_25(L25_26, L26_27, L27_28)
+  L24_25 = L20_21
+  L25_26 = "General"
+  L24_25(L25_26)
+  L24_25 = L23_24
+  L25_26 = "New upload by follow"
+  L26_27 = "yes"
+  L27_28 = "newsubscriberseed"
+  L24_25(L25_26, L26_27, L27_28)
+  L24_25 = L23_24
+  L25_26 = "Choose specific users"
+  L26_27 = "notificationsettings_specificusers"
+  L24_25(L25_26, L26_27)
+  L24_25 = L23_24
+  L25_26 = "New comment replies"
+  L26_27 = "yes"
+  L27_28 = "newcommentreply"
+  L24_25(L25_26, L26_27, L27_28)
+  L24_25 = L23_24
+  L25_26 = "Reports processed"
+  L26_27 = "yes"
+  L27_28 = "reportprocessed"
+  L24_25(L25_26, L26_27, L27_28)
+  L24_25 = _UPVALUE0_
+  L24_25 = L24_25.moderator
+  if L24_25 == true then
+    L24_25 = L20_21
+    L25_26 = "Moderator"
+    L24_25(L25_26)
+    L24_25 = L23_24
+    L25_26 = "New moderator upload"
+    L26_27 = "yes"
+    L27_28 = "newmoderatorupload"
+    L24_25(L25_26, L26_27, L27_28)
+  end
+  L24_25 = L20_21
+  L25_26 = "Features"
+  L24_25(L25_26)
+  L24_25 = L23_24
+  L25_26 = "News"
+  L26_27 = "no"
+  L27_28 = "news"
+  L24_25(L25_26, L26_27, L27_28)
+  L24_25 = L23_24
+  L25_26 = "Updates"
+  L26_27 = "no"
+  L27_28 = "updates"
+  L24_25(L25_26, L26_27, L27_28)
+  function L24_25(A0_48)
+    local L1_49, L2_50, L3_51, L4_52, L5_53, L6_54
+    L1_49 = _UPVALUE0_
+    L1_49 = L1_49.decode
+    L1_49 = L1_49(L2_50)
+    for L5_53, L6_54 in L2_50(L3_51) do
+      _UPVALUE1_[L5_53].isVisible = false
+      _UPVALUE2_[L5_53] = _UPVALUE3_.new(_UPVALUE4_, L6_54, _UPVALUE5_)
+      _UPVALUE2_[L5_53]:setReferencePoint(display.CenterRightReferencePoint)
+      _UPVALUE2_[L5_53].x = _W - 12
+      _UPVALUE2_[L5_53].y = _UPVALUE5_.refy[L5_53] + 17
+      _UPVALUE2_[L5_53]:scale(0.8, 0.8)
+      _UPVALUE2_[L5_53].key = L5_53
+      _UPVALUE5_:insert(_UPVALUE2_[L5_53])
+    end
+  end
+  L25_26 = _UPVALUE1_
+  L25_26 = L25_26.network_request
+  L26_27 = "get_notification_settings"
+  L27_28 = L24_25
+  L25_26(L26_27, L27_28, {
+    pushtoken = _UPVALUE0_.pushtoken,
+    udid = _UPVALUE0_.udid
+  })
+  L25_26 = _UPVALUE1_
+  L25_26 = L25_26.makeToolbar
+  L26_27 = "Notifications settings"
+  L27_28 = {}
+  L27_28.list = L19_20
+  L27_28.fontSize = 17
+  L25_26 = L25_26(L26_27, L27_28)
+  L27_28 = L4_5
+  L26_27 = L4_5.insert
+  L26_27(L27_28, L25_26)
+  function L26_27(A0_55)
+    _UPVALUE0_.remove({"prevScene"})
+    _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+    director:changeScene(_UPVALUE1_, "toRightNew")
+    return true
+  end
+  L27_28 = _UPVALUE3_
+  L27_28 = L27_28.newButton
+  L27_28 = L27_28({
+    width = 50,
+    height = 50,
+    default = "back.png",
+    over = "back-over.png",
+    onRelease = L26_27
+  })
+  L27_28:setReferencePoint(display.CenterLeftReferencePoint)
+  L27_28.x = -1
+  L27_28.y = L25_26.yCenter
+  L4_5:insert(L27_28)
+  return L0_1
+end

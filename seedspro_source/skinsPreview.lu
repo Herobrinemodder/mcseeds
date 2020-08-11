@@ -1,0 +1,135 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("creator")
+;({}).previewSkin = function(A0_1, A1_2, A2_3, A3_4)
+  local L4_5, L5_6, L6_7, L7_8, L8_9
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L5_6 = {}
+  L4_5.rects = L5_6
+  L5_6 = type
+  L6_7 = A1_2
+  L5_6 = L5_6(L6_7)
+  if L5_6 == "number" then
+    A3_4 = A2_3
+    A2_3 = A1_2
+    L5_6 = system
+    A1_2 = L5_6.TemporaryDirectory
+  end
+  L5_6 = print
+  L6_7 = A2_3
+  L7_8 = A3_4
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.newImageRect
+  L6_7 = A0_1
+  L7_8 = A1_2
+  L8_9 = A2_3
+  L5_6 = L5_6(L6_7, L7_8, L8_9, A3_4)
+  L7_8 = L5_6
+  L6_7 = L5_6.setReferencePoint
+  L8_9 = display
+  L8_9 = L8_9.TopLeftReferencePoint
+  L6_7(L7_8, L8_9)
+  L6_7 = _UPVALUE0_
+  L7_8 = A2_3 * 0.5
+  L6_7 = L6_7 - L7_8
+  L5_6.x = L6_7
+  L6_7 = _UPVALUE1_
+  L7_8 = A3_4 * 0.5
+  L6_7 = L6_7 - L7_8
+  L5_6.y = L6_7
+  L6_7 = display
+  L6_7 = L6_7.newRect
+  L7_8 = 0
+  L8_9 = 0
+  L6_7 = L6_7(L7_8, L8_9, _UPVALUE2_.width, _UPVALUE2_.height)
+  L8_9 = L6_7
+  L7_8 = L6_7.setFillColor
+  L7_8(L8_9, 0, 0, 0, 0)
+  L8_9 = L4_5
+  L7_8 = L4_5.insert
+  L7_8(L8_9, L6_7)
+  function L7_8(A0_10, A1_11, A2_12, A3_13)
+    A0_10 = A0_10 + _UPVALUE0_.x
+    A1_11 = A1_11 + _UPVALUE0_.y
+    display.colorSample(_UPVALUE0_.x, _UPVALUE0_.y, function(A0_14)
+      local L1_15, L2_16, L3_17, L4_18, L5_19, L6_20, L7_21, L8_22
+      L4_18 = "."
+      _UPVALUE0_ = L1_15
+      for L4_18 = _UPVALUE1_, L2_16 + L3_17 do
+        for L8_22 = _UPVALUE3_, L6_20 + L7_21 do
+          display.colorSample(L4_18, L8_22, function(A0_23)
+            if A0_23.r .. "." .. A0_23.g .. "." .. A0_23.b .. "." .. A0_23.a ~= _UPVALUE0_ then
+              _UPVALUE1_ = false
+            end
+          end)
+          if _UPVALUE5_ == false then
+            break
+          end
+        end
+        if L5_19 == false then
+          break
+        end
+      end
+    end)
+    return true
+  end
+  function L8_9(A0_24, A1_25, A2_26, A3_27, A4_28, A5_29)
+    local L6_30
+    L6_30 = _UPVALUE0_
+    L6_30 = L6_30.x
+    A2_26 = A2_26 + L6_30
+    L6_30 = _UPVALUE0_
+    L6_30 = L6_30.y
+    A3_27 = A3_27 + L6_30
+    L6_30 = _UPVALUE1_
+    L6_30 = L6_30.rects
+    L6_30 = #L6_30
+    L6_30 = L6_30 + 1
+    _UPVALUE1_.rects[L6_30] = display.captureBounds({
+      xMin = A2_26,
+      xMax = A2_26 + A4_28,
+      yMin = A3_27,
+      yMax = A3_27 + A5_29
+    })
+    _UPVALUE1_.rects[L6_30]:setReferencePoint(display.TopLeftReferencePoint)
+    _UPVALUE1_.rects[L6_30].x = A0_24
+    _UPVALUE1_.rects[L6_30].y = A1_25
+    _UPVALUE1_:insert(_UPVALUE1_.rects[L6_30])
+  end
+  L8_9(26, 0, 8, 8, 8, 8)
+  if L7_8(40, 8, 8, 8) == false then
+    L8_9(26, 0, 40, 8, 8, 8)
+  end
+  L8_9(26, 8, 20, 20, 8, 12)
+  if A2_3 == 64 and A3_4 == 32 then
+    L8_9(22, 8, 44, 20, 4, 12)
+    L8_9(26, 20, 4, 20, 4, 12)
+  elseif A2_3 == 64 and A3_4 == 64 then
+    if L7_8(20, 36, 8, 12) == false then
+      L8_9(26, 8, 20, 36, 8, 12)
+    end
+    L8_9(22, 8, 44, 20, 4, 12)
+    if L7_8(44, 36, 4, 12) == false then
+      L8_9(22, 8, 44, 36, 4, 12)
+    end
+    L8_9(26, 20, 4, 20, 4, 12)
+    if L7_8(4, 36, 4, 12) == false then
+      L8_9(26, 20, 4, 36, 4, 12)
+    end
+    L8_9(34, 8, 36, 52, 4, 12)
+    if L7_8(52, 52, 4, 12) == false then
+      L8_9(34, 8, 52, 52, 4, 12)
+    end
+    L8_9(30, 20, 20, 52, 4, 12)
+    if L7_8(4, 52, 4, 12) == false then
+      L8_9(30, 20, 4, 52, 4, 12)
+    end
+  end
+  L4_5:setReferencePoint(display.CenterReferencePoint)
+  L4_5.x = display.contentCenterX
+  L4_5.y = display.contentCenterY
+end
+return {}

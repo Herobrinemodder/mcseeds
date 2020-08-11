@@ -1,0 +1,1198 @@
+local L0_0, L1_1, L2_2, L3_3, L4_4, L5_5, L6_6, L7_7, L8_8, L9_9, L10_10, L11_11, L12_12, L13_13, L14_14, L15_15, L16_16, L17_17, L18_18, L19_19, L20_20, L21_21, L22_22, L23_23, L24_24, L25_25, L26_26, L27_27, L28_28, L29_29, L30_30, L31_31, L32_32, L33_33, L34_34, L35_35, L36_36, L37_37, L38_38, L39_39, L40_40, L41_41, L42_42
+L0_0 = module
+L1_1 = (...)
+L2_2 = package
+L2_2 = L2_2.seeall
+L0_0(L1_1, L2_2)
+L0_0 = print
+L1_1 = "-----------------------------------------------"
+L0_0(L1_1)
+L0_0 = true
+showDebug = L0_0
+L0_0 = display
+L0_0 = L0_0.newGroup
+L0_0 = L0_0()
+directorView = L0_0
+L0_0 = display
+L0_0 = L0_0.newGroup
+L0_0 = L0_0()
+L1_1 = display
+L1_1 = L1_1.newGroup
+L1_1 = L1_1()
+L2_2 = display
+L2_2 = L2_2.newGroup
+L2_2 = L2_2()
+L3_3 = display
+L3_3 = L3_3.newGroup
+L3_3 = L3_3()
+L4_4 = display
+L4_4 = L4_4.newGroup
+L4_4 = L4_4()
+L5_5 = display
+L5_5 = L5_5.newGroup
+L5_5 = L5_5()
+function L6_6()
+  directorView:insert(_UPVALUE0_)
+  directorView:insert(_UPVALUE1_)
+  directorView:insert(_UPVALUE2_)
+  directorView:insert(_UPVALUE3_)
+  directorView:insert(_UPVALUE4_)
+  directorView:insert(_UPVALUE5_)
+end
+L7_7 = require
+L8_8 = "globals"
+L7_7 = L7_7(L8_8)
+L8_8 = require
+L9_9 = "creator"
+L8_8 = L8_8(L9_9)
+L9_9 = require
+L10_10 = "transitions"
+L9_9 = L9_9(L10_10)
+L10_10 = {}
+L11_11, L12_12, L13_13, L14_14 = nil, nil, nil, nil
+L15_15 = "main"
+L16_16 = "main"
+L17_17 = "main"
+L18_18 = "main"
+L19_19 = display
+L19_19 = L19_19.contentCenterX
+L20_20 = display
+L20_20 = L20_20.contentCenterY
+L21_21 = nil
+L22_22 = L7_7.px
+L23_23 = math
+L23_23 = L23_23.random
+L24_24 = L8_8.getAppType
+L24_24 = L24_24()
+L25_25 = 0
+L26_26 = 0
+L27_27 = 320
+L28_28 = 0
+L29_29 = easing
+L29_29 = L29_29.outCubic
+L30_30 = false
+L31_31 = nil
+L32_32 = false
+L33_33 = {}
+L34_34 = 1
+L35_35 = nil
+L36_36 = _W
+L36_36 = -L36_36
+L1_1.x = L36_36
+L1_1.y = 0
+L0_0.x = 0
+L0_0.y = 0
+L36_36 = _W
+L2_2.x = L36_36
+L2_2.y = 0
+L4_4.x = 0
+L4_4.y = 0
+function L36_36(A0_43, A1_44, A2_45)
+  local L3_46, L4_47, L5_48
+  if type(A0_43) == "nil" then
+    A0_43 = "black"
+  end
+  if string.lower(tostring(A0_43)) == "red" then
+    L3_46 = 255
+    L4_47 = 0
+    L5_48 = 0
+  elseif string.lower(tostring(A0_43)) == "green" then
+    L3_46 = 0
+    L4_47 = 255
+    L5_48 = 0
+  elseif string.lower(tostring(A0_43)) == "blue" then
+    L3_46 = 0
+    L4_47 = 0
+    L5_48 = 255
+  elseif string.lower(tostring(A0_43)) == "yellow" then
+    L3_46 = 255
+    L4_47 = 255
+    L5_48 = 0
+  elseif string.lower(tostring(A0_43)) == "pink" then
+    L3_46 = 255
+    L4_47 = 0
+    L5_48 = 255
+  elseif string.lower(tostring(A0_43)) == "white" then
+    L3_46 = 255
+    L4_47 = 255
+    L5_48 = 255
+  elseif type(A0_43) == "number" and type(A1_44) == "number" and type(A2_45) == "number" then
+    L3_46 = A0_43
+    L4_47 = A1_44
+    L5_48 = A2_45
+  else
+    L3_46 = 0
+    L4_47 = 0
+    L5_48 = 0
+  end
+  return L3_46, L4_47, L5_48
+end
+function L37_37(A0_49, A1_50)
+  local L2_51, L3_52
+  L2_51 = "Director ERROR: "
+  L3_52 = tostring
+  L3_52 = L3_52(A0_49)
+  L2_51 = L2_51 .. L3_52
+  function L3_52(A0_53)
+    print()
+    print("-----------------------")
+    print(_UPVALUE0_)
+    print("-----------------------")
+    print(_UPVALUE1_)
+    print("-----------------------")
+    error()
+  end
+  if showDebug then
+  else
+    L3_52()
+  end
+end
+function L38_38(A0_54)
+  collectgarbage("collect")
+end
+L39_39 = getmetatable
+L40_40 = display
+L40_40 = L40_40.getCurrentStage
+L42_42 = L40_40()
+L39_39 = L39_39(L40_40, L41_41, L42_42, L40_40())
+function L40_40(A0_55)
+  return type(A0_55) == "table" and getmetatable(A0_55) == _UPVALUE0_
+end
+L41_41 = display
+L41_41 = L41_41.newRect
+L42_42 = _W
+L42_42 = -L42_42
+L41_41 = L41_41(L42_42, -_H, _W * 3, _H * 3)
+L42_42 = L41_41.setFillColor
+L42_42(L41_41, 255, 255, 255)
+L41_41.alpha = 0.01
+L41_41.isVisible = false
+L42_42 = L3_3.insert
+L42_42(L3_3, L41_41)
+function L42_42(A0_56)
+  local L1_57
+  L1_57 = true
+  return L1_57
+end
+L41_41:addEventListener("touch", L42_42)
+L41_41:addEventListener("tap", L42_42)
+function director.changeFxTime(A0_58, A1_59)
+  if type(A1_59) == "number" then
+    _UPVALUE0_ = A1_59
+  end
+end
+function director.changeSafeDelay(A0_60, A1_61)
+  if type(A1_61) == "number" then
+    _UPVALUE0_ = A1_61
+  end
+end
+function director.getPrevScene(A0_62)
+  local L1_63
+  L1_63 = _UPVALUE0_
+  return L1_63
+end
+function director.getCurrScene(A0_64)
+  local L1_65
+  L1_65 = _UPVALUE0_
+  return L1_65
+end
+function director.getNextScene(A0_66)
+  local L1_67
+  L1_67 = _UPVALUE0_
+  return L1_67
+end
+function director.changeScene(A0_68, A1_69, A2_70, A3_71, A4_72, A5_73, A6_74)
+  local L7_75, L8_76, L9_77, L10_78, L11_79
+  for L10_78, L11_79 in L7_75(L8_76) do
+    _UPVALUE1_.removeRuntimeListener(L11_79)
+  end
+  L7_75[L8_76] = L9_77
+  if L7_75 then
+    return L7_75
+  else
+    _UPVALUE3_ = L7_75
+  end
+  if L7_75 then
+    _UPVALUE4_ = L7_75
+  else
+    _UPVALUE4_ = L7_75
+  end
+  _UPVALUE5_ = L7_75
+  _UPVALUE6_ = L7_75
+  animEndX = L7_75
+  animEndY = L7_75
+  if L8_76 then
+    if L8_76 then
+      L8_76.UIDefaultColor = L9_77
+      L8_76.UIDefaultColorSolid = L9_77
+    end
+  else
+    L8_76.UIDefaultColor = L9_77
+    L8_76.UIDefaultColorSolid = L9_77
+  end
+  if L8_76 then
+    return L8_76
+  end
+  if L8_76 ~= "table" then
+    A6_74 = A5_73
+    A5_73 = A4_72
+    A4_72 = A3_71
+    A3_71 = A2_70
+    A2_70 = A1_69
+    A1_69 = nil
+  end
+  if L8_76 ~= "string" then
+    L8_76(L9_77)
+    return L8_76
+  end
+  if L8_76 ~= "main" then
+    L8_76(L9_77)
+    return L8_76
+  end
+  for _FORV_12_ = L8_76.numChildren, 1, -1 do
+    if type(L8_76[_FORV_12_].directorId) == "nil" then
+      L8_76[_FORV_12_].directorId = _UPVALUE10_
+    end
+    if L8_76[_FORV_12_].directorId == _UPVALUE10_ and L8_76[_FORV_12_].directorId ~= "main" then
+      _UPVALUE11_:insert(L8_76[_FORV_12_])
+    end
+  end
+  if A2_70 == "main" then
+    return L9_77
+  end
+  L9_77.isVisible = true
+  _UPVALUE13_ = A2_70
+  L10_78(L11_79, A1_69)
+  for _FORV_13_ = L8_76.numChildren, 1, -1 do
+    if type(L8_76[_FORV_13_].directorId) == "nil" then
+      L8_76[_FORV_13_].directorId = _UPVALUE13_
+    end
+    if L8_76[_FORV_13_].directorId == _UPVALUE13_ and L8_76[_FORV_13_].directorId ~= "main" then
+      _UPVALUE15_:insert(L8_76[_FORV_13_])
+    end
+  end
+  if A3_71 == "moveFromRight" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+  elseif A3_71 == "overFromRight" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+  elseif A3_71 == "overFromRightNew" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+    L11_79(L10_78, 0, 0, 0)
+    L10_78.alpha = 0
+    L11_79(L11_79, L10_78)
+  elseif A3_71 == "toRight" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+    L10_78(L11_79)
+  elseif A3_71 == "toRightNew" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+    L10_78(L11_79)
+    L11_79(L10_78, 0, 0, 0)
+    L10_78.alpha = 0.5
+    L11_79(L11_79, L10_78)
+  elseif A3_71 == "moveFromLeft" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+  elseif A3_71 == "overFromLeft" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+  elseif A3_71 == "moveFromTop" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+  elseif A3_71 == "overFromTop" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+  elseif A3_71 == "moveFromBottom" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+  elseif A3_71 == "overFromBottom" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+  elseif A3_71 == "toBottom" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+    L10_78(L11_79)
+  elseif A3_71 == "crossfade" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+    L10_78.alpha = 0
+  elseif A3_71 == "fadein" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+    L10_78.alpha = 0
+    L10_78(L11_79)
+  elseif A3_71 == "fadeout" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+    L10_78.alpha = 1
+    L10_78(L11_79)
+  elseif A3_71 == "zoomOut" then
+    if A1_69 then
+    elseif not L10_78 then
+      L10_78(L11_79)
+    end
+    if A1_69 then
+    elseif not L10_78 then
+      L10_78(L11_79)
+    end
+    if A1_69 then
+    elseif not L10_78 then
+      L10_78(L11_79)
+    end
+    if A1_69 then
+    elseif not L10_78 then
+      L10_78(L11_79)
+    end
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+    L10_78.alpha = 1
+    L10_78(L11_79)
+    L10_78(L11_79, display.TopLeftReferencePoint)
+    if L10_78 then
+      for _FORV_14_ = 1, #A1_69.transObjects do
+        L10_78:insert(A1_69.transObjects[_FORV_14_])
+      end
+      L11_79(L10_78, {time = 200, alpha = 0})
+    end
+    L10_78(L11_79, {
+      time = 450,
+      xScale = A1_69.xScale / _W,
+      yScale = A1_69.yScale / _H,
+      x = A1_69.x,
+      y = A1_69.y,
+      transition = _UPVALUE18_,
+      onComplete = _UPVALUE20_
+    }, true)
+  elseif A3_71 == "fade" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+    L10_78.alpha = 0
+    L11_79(L11_79, L10_78)
+  elseif A3_71 == "flip" then
+    L10_78.xScale = 0.001
+    L10_78.x = L11_79
+  elseif A3_71 == "downFlip" then
+    L10_78.x = L11_79
+    L10_78.y = L11_79
+    L10_78.xScale = 0.001
+    L10_78.yScale = 0.7
+  else
+    L10_78(L11_79, _UPVALUE20_)
+  end
+  return L10_78
+end
+function director.openPopUp(A0_80, A1_81, A2_82, A3_83)
+  local L4_84, L5_85, L6_86
+  L4_84 = type
+  L5_85 = A1_81
+  L4_84 = L4_84(L5_85)
+  if L4_84 ~= "table" then
+    A3_83 = A2_82
+    A2_82 = A1_81
+    A1_81 = nil
+  end
+  L4_84 = type
+  L5_85 = A2_82
+  L4_84 = L4_84(L5_85)
+  if L4_84 ~= "string" then
+    L4_84 = _UPVALUE0_
+    L5_85 = "Module name must be a string. moduleName = "
+    L6_86 = tostring
+    L6_86 = L6_86(A2_82)
+    L5_85 = L5_85 .. L6_86
+    L4_84(L5_85)
+    L4_84 = false
+    return L4_84
+  end
+  L4_84 = type
+  L5_85 = A3_83
+  L4_84 = L4_84(L5_85)
+  if L4_84 == "function" then
+    _UPVALUE1_ = A3_83
+  else
+    L4_84 = nil
+    _UPVALUE1_ = L4_84
+  end
+  L4_84 = _UPVALUE2_
+  if A2_82 ~= L4_84 then
+    L4_84 = _UPVALUE3_
+  elseif A2_82 == L4_84 or A2_82 == "main" then
+    L4_84 = false
+    return L4_84
+  end
+  L4_84 = _UPVALUE4_
+  if L4_84 ~= "main" then
+    L4_84 = _UPVALUE0_
+    L5_85 = "Could not load more then 1 popup."
+    L4_84(L5_85)
+    L4_84 = false
+    return L4_84
+  end
+  L4_84 = _UPVALUE5_
+  L5_85 = "popup"
+  L4_84(L5_85)
+  L4_84 = _UPVALUE6_
+  L5_85 = A2_82
+  L4_84(L5_85)
+  L4_84 = "main"
+  _UPVALUE4_ = L4_84
+  L4_84 = nil
+  _UPVALUE7_ = L4_84
+  L4_84 = pcall
+  L5_85 = require
+  L6_86 = A2_82
+  L5_85 = L4_84(L5_85, L6_86)
+  if not L4_84 then
+    L6_86 = _UPVALUE0_
+    L6_86("Failed to load module '" .. A2_82 .. "' - Please check if the file exists and it is correct.", L5_85)
+    L6_86 = false
+    return L6_86
+  end
+  L6_86 = package
+  L6_86 = L6_86.loaded
+  L6_86 = L6_86[A2_82]
+  L6_86 = L6_86.new
+  if not L6_86 then
+    L6_86 = _UPVALUE0_
+    L6_86("Module '" .. tostring(A2_82) .. "' must have a new() function.")
+    L6_86 = false
+    return L6_86
+  end
+  L6_86 = package
+  L6_86 = L6_86.loaded
+  L6_86 = L6_86[A2_82]
+  L6_86 = L6_86.new
+  L4_84, _UPVALUE7_ = pcall(L6_86, A1_81)
+  if not L4_84 then
+    _UPVALUE0_("Failed to execute news( params ) function on '" .. tostring(moduleName) .. "'.", _UPVALUE7_)
+    return false
+  end
+  if not _UPVALUE8_(_UPVALUE9_) then
+    _UPVALUE0_("Module " .. moduleName .. " must return a display.newGroup().")
+    return false
+  end
+  _UPVALUE10_:insert(_UPVALUE7_)
+  _UPVALUE4_ = A2_82
+  _UPVALUE11_("popup")
+  _UPVALUE12_.isVisible = true
+  return true
+end
+function director.closePopUp(A0_87)
+  if _UPVALUE0_ == "main" then
+    return true
+  end
+  _UPVALUE1_("popup")
+  _UPVALUE2_(newPopUpScene)
+  _UPVALUE0_ = "main"
+  _UPVALUE3_ = nil
+  _UPVALUE4_.isVisible = false
+  if type(_UPVALUE5_) == "function" then
+    _UPVALUE5_()
+  end
+  return true
+end
+function director.isBook(A0_88)
+  local L1_89
+  L1_89 = _UPVALUE0_
+  return L1_89
+end
+function getCurrBookPage()
+  local L0_90, L1_91
+  L0_90 = _UPVALUE0_
+  L1_91 = _UPVALUE1_
+  L0_90 = L0_90[L1_91]
+  if L0_90 then
+    L0_90 = _UPVALUE0_
+    L1_91 = _UPVALUE1_
+    L0_90 = L0_90[L1_91]
+    return L0_90
+  end
+end
+function getCurrBookPageNum()
+  local L0_92, L1_93
+  L0_92 = _UPVALUE0_
+  return L0_92
+end
+function getBookPageCount()
+  return table.maxn(_UPVALUE0_)
+end
+function director.newBookPages(A0_94, A1_95, A2_96)
+  local L3_97, L4_98, L5_99, L6_100
+  L3_97 = _UPVALUE0_
+  if not L3_97 then
+    L3_97 = true
+    return L3_97
+  end
+  L3_97 = type
+  L4_98 = A1_95
+  L3_97 = L3_97(L4_98)
+  if L3_97 ~= "table" then
+    L3_97 = true
+    return L3_97
+  end
+  while true do
+    L3_97 = getBookPageCount
+    L3_97 = L3_97()
+    if L3_97 > 0 then
+      L3_97 = table
+      L3_97 = L3_97.remove
+      L4_98 = _UPVALUE1_
+      L3_97(L4_98)
+    end
+  end
+  L3_97 = 1
+  while true do
+    L4_98 = A1_95[L3_97]
+    if L4_98 then
+      L4_98 = type
+      L5_99 = A1_95[L3_97]
+      L4_98 = L4_98(L5_99)
+      if L4_98 == "table" then
+        L4_98 = _UPVALUE1_
+        L5_99 = A1_95[L3_97]
+        L4_98[L3_97] = L5_99
+        L3_97 = L3_97 + 1
+      end
+    end
+  end
+  L4_98 = display
+  L4_98 = L4_98.newRect
+  L5_99 = 0
+  L6_100 = 0
+  L4_98 = L4_98(L5_99, L6_100, _W, _H)
+  L6_100 = L4_98
+  L5_99 = L4_98.setFillColor
+  L5_99(L6_100, 0, 0, 0)
+  L4_98.alpha = 0
+  L4_98.isVisible = false
+  L5_99 = _UPVALUE2_
+  L6_100 = L5_99
+  L5_99 = L5_99.insert
+  L5_99(L6_100, L4_98)
+  function L5_99(A0_101)
+    _UPVALUE0_:removeSelf()
+    _UPVALUE0_ = nil
+  end
+  function L6_100(A0_102)
+    local L1_103, L2_104
+    L1_103 = _UPVALUE0_
+    L2_104 = "prev"
+    L1_103(L2_104)
+    L1_103 = _UPVALUE1_
+    L2_104 = _UPVALUE2_
+    L2_104 = L2_104[1]
+    if L1_103 ~= L2_104 then
+      L1_103 = _UPVALUE1_
+      L2_104 = _UPVALUE2_
+      L2_104 = L2_104[2]
+      if L1_103 ~= L2_104 then
+        L1_103 = _UPVALUE3_
+        L2_104 = _UPVALUE1_
+        L1_103(L2_104)
+      end
+    end
+    L1_103 = "main"
+    _UPVALUE1_ = L1_103
+    L1_103 = _UPVALUE0_
+    L2_104 = "next"
+    L1_103(L2_104)
+    L1_103 = _UPVALUE4_
+    L2_104 = _UPVALUE2_
+    L2_104 = L2_104[1]
+    if L1_103 ~= L2_104 then
+      L1_103 = _UPVALUE4_
+      L2_104 = _UPVALUE2_
+      L2_104 = L2_104[2]
+      if L1_103 ~= L2_104 then
+        L1_103 = _UPVALUE3_
+        L2_104 = _UPVALUE4_
+        L1_103(L2_104)
+      end
+    end
+    L1_103 = "main"
+    _UPVALUE4_ = L1_103
+    L1_103 = _UPVALUE2_
+    L1_103 = L1_103[1]
+    if L1_103 then
+      L1_103 = _UPVALUE5_
+      L2_104 = _UPVALUE2_
+      L2_104 = L2_104[1]
+      L2_104 = L2_104.page
+      L1_103(L2_104, _UPVALUE2_[1].params)
+      L1_103 = 1
+      _UPVALUE6_ = L1_103
+    end
+    L1_103 = _UPVALUE2_
+    L1_103 = L1_103[2]
+    if L1_103 then
+      L1_103 = _UPVALUE7_
+      L2_104 = _UPVALUE2_
+      L2_104 = L2_104[2]
+      L2_104 = L2_104.page
+      L1_103(L2_104, _UPVALUE2_[2].params)
+    end
+    L1_103 = _UPVALUE8_
+    if L1_103 then
+      L1_103 = _UPVALUE8_
+      L1_103 = L1_103.start
+      if L1_103 then
+        L1_103 = pcall
+        L2_104 = _UPVALUE8_
+        L2_104 = L2_104.start
+        L2_104 = L1_103(L2_104)
+        if not L1_103 then
+          _UPVALUE9_("Failed to start page of object '" .. _UPVALUE10_ .. "' - Please verify the localGroup.start() function.", L2_104)
+          return false
+        end
+      end
+    end
+    L1_103 = _UPVALUE11_
+    L1_103 = L1_103.to
+    L2_104 = _UPVALUE12_
+    L1_103 = L1_103(L2_104, {
+      alpha = 0,
+      time = _UPVALUE13_,
+      onComplete = _UPVALUE14_
+    })
+  end
+  if A2_96 then
+    L4_98.isVisible = true
+  else
+    L6_100()
+  end
+end
+function director.changeBookPage(A0_105, A1_106)
+  local L2_107
+  L2_107 = _UPVALUE0_
+  if not L2_107 then
+    L2_107 = true
+    return L2_107
+  end
+  L2_107 = _UPVALUE1_
+  if L2_107 then
+    L2_107 = true
+    return L2_107
+  else
+    L2_107 = true
+    _UPVALUE1_ = L2_107
+  end
+  L2_107 = type
+  L2_107 = L2_107(A1_106)
+  if L2_107 == nil then
+    L2_107 = true
+    return L2_107
+  end
+  L2_107 = string
+  L2_107 = L2_107.lower
+  L2_107 = L2_107(A1_106)
+  if L2_107 == "next" then
+    L2_107 = getCurrBookPageNum
+    L2_107 = L2_107()
+    L2_107 = L2_107 + 1
+    if L2_107 < getBookPageCount() then
+      L2_107 = getCurrBookPageNum
+      L2_107 = L2_107()
+      A1_106 = L2_107 + 1
+    else
+      L2_107 = getBookPageCount
+      L2_107 = L2_107()
+      A1_106 = L2_107
+    end
+  else
+    L2_107 = string
+    L2_107 = L2_107.lower
+    L2_107 = L2_107(A1_106)
+    if L2_107 == "prev" then
+      L2_107 = getCurrBookPageNum
+      L2_107 = L2_107()
+      L2_107 = L2_107 - 1
+      if L2_107 > 1 then
+        L2_107 = getCurrBookPageNum
+        L2_107 = L2_107()
+        A1_106 = L2_107 - 1
+      else
+        A1_106 = 1
+      end
+    end
+  end
+  L2_107 = type
+  L2_107 = L2_107(A1_106)
+  L2_107 = not L2_107
+  if L2_107 == "number" then
+    L2_107 = true
+    return L2_107
+  end
+  L2_107 = nil
+  if A1_106 < 1 or A1_106 > getBookPageCount() or A1_106 == getCurrBookPageNum() then
+    L2_107 = _UPVALUE2_.to(_UPVALUE3_, {
+      x = -_W,
+      time = _UPVALUE4_,
+      transition = easing.outQuad
+    })
+    L2_107 = _UPVALUE2_.to(_UPVALUE5_, {
+      x = 0,
+      time = _UPVALUE4_,
+      transition = easing.outQuad
+    })
+    L2_107 = _UPVALUE2_.to(_UPVALUE6_, {
+      x = _W,
+      time = _UPVALUE4_,
+      transition = easing.outQuad,
+      onComplete = function(A0_108)
+        _UPVALUE0_ = false
+      end
+    })
+  elseif A1_106 > getCurrBookPageNum() then
+    L2_107 = _UPVALUE2_.to(_UPVALUE3_, {
+      x = -_W,
+      time = _UPVALUE4_,
+      transition = easing.outQuad
+    })
+    L2_107 = _UPVALUE2_.to(_UPVALUE5_, {
+      x = -_W,
+      time = _UPVALUE4_,
+      transition = easing.outQuad
+    })
+    L2_107 = _UPVALUE2_.to(_UPVALUE6_, {
+      x = 0,
+      time = _UPVALUE4_,
+      transition = easing.outQuad,
+      onComplete = function(A0_109)
+        local L1_110, L2_111
+        L1_110 = _UPVALUE0_
+        L2_111 = "prev"
+        L1_110(L2_111)
+        L1_110 = _UPVALUE1_
+        L2_111 = _UPVALUE2_
+        if L1_110 ~= L2_111 then
+          L1_110 = _UPVALUE1_
+          L2_111 = _UPVALUE3_
+          if L1_110 ~= L2_111 then
+            L1_110 = _UPVALUE4_
+            L2_111 = _UPVALUE1_
+            L1_110(L2_111)
+          end
+        end
+        L1_110 = _UPVALUE6_
+        _UPVALUE5_ = L1_110
+        L1_110 = _UPVALUE2_
+        _UPVALUE1_ = L1_110
+        L1_110 = _UPVALUE7_
+        L2_111 = L1_110
+        L1_110 = L1_110.insert
+        L1_110(L2_111, _UPVALUE5_)
+        L1_110 = _UPVALUE7_
+        L2_111 = _W
+        L2_111 = -L2_111
+        L1_110.x = L2_111
+        L1_110 = _UPVALUE8_
+        L2_111 = "prev"
+        L1_110(L2_111)
+        L1_110 = _UPVALUE9_
+        _UPVALUE6_ = L1_110
+        L1_110 = _UPVALUE3_
+        _UPVALUE2_ = L1_110
+        L1_110 = _UPVALUE10_
+        L2_111 = L1_110
+        L1_110 = L1_110.insert
+        L1_110(L2_111, _UPVALUE6_)
+        L1_110 = _UPVALUE10_
+        L1_110.x = 0
+        L1_110 = nil
+        _UPVALUE9_ = L1_110
+        L1_110 = _UPVALUE11_
+        L2_111 = _UPVALUE12_
+        L2_111 = L2_111 + 1
+        L1_110 = L1_110[L2_111]
+        if L1_110 then
+          L1_110 = _UPVALUE13_
+          L2_111 = _UPVALUE11_
+          L2_111 = L2_111[_UPVALUE12_ + 1]
+          L2_111 = L2_111.page
+          L1_110(L2_111, _UPVALUE11_[_UPVALUE12_ + 1].params)
+        end
+        L1_110 = _UPVALUE14_
+        L2_111 = _W
+        L1_110.x = L2_111
+        L1_110 = _UPVALUE12_
+        _UPVALUE15_ = L1_110
+        L1_110 = false
+        _UPVALUE16_ = L1_110
+        L1_110 = _UPVALUE6_
+        if L1_110 then
+          L1_110 = _UPVALUE6_
+          L1_110 = L1_110.start
+          if L1_110 then
+            L1_110 = pcall
+            L2_111 = _UPVALUE6_
+            L2_111 = L2_111.start
+            L2_111 = L1_110(L2_111)
+            if not L1_110 then
+              _UPVALUE17_("Failed to start page of object '" .. _UPVALUE2_ .. "' - Please verify the localGroup.start() function.", L2_111)
+              return false
+            end
+          end
+        end
+      end
+    })
+  else
+    L2_107 = _UPVALUE2_.to(_UPVALUE3_, {
+      x = 0,
+      time = _UPVALUE4_,
+      transition = easing.outQuad
+    })
+    L2_107 = _UPVALUE2_.to(_UPVALUE5_, {
+      x = _W,
+      time = _UPVALUE4_,
+      transition = easing.outQuad
+    })
+    L2_107 = _UPVALUE2_.to(_UPVALUE6_, {
+      x = _W,
+      time = _UPVALUE4_,
+      transition = easing.outQuad,
+      onComplete = function(A0_112)
+        local L1_113, L2_114
+        L1_113 = _UPVALUE0_
+        L2_114 = "next"
+        L1_113(L2_114)
+        L1_113 = _UPVALUE1_
+        L2_114 = _UPVALUE2_
+        if L1_113 ~= L2_114 then
+          L1_113 = _UPVALUE3_
+          L2_114 = _UPVALUE2_
+          if L1_113 ~= L2_114 then
+            L1_113 = _UPVALUE4_
+            L2_114 = _UPVALUE2_
+            L1_113(L2_114)
+          end
+        end
+        L1_113 = _UPVALUE6_
+        _UPVALUE5_ = L1_113
+        L1_113 = _UPVALUE3_
+        _UPVALUE2_ = L1_113
+        L1_113 = _UPVALUE7_
+        L2_114 = L1_113
+        L1_113 = L1_113.insert
+        L1_113(L2_114, _UPVALUE5_)
+        L1_113 = _UPVALUE7_
+        L2_114 = _W
+        L1_113.x = L2_114
+        L1_113 = _UPVALUE8_
+        L2_114 = "next"
+        L1_113(L2_114)
+        L1_113 = _UPVALUE9_
+        _UPVALUE6_ = L1_113
+        L1_113 = _UPVALUE1_
+        _UPVALUE3_ = L1_113
+        L1_113 = _UPVALUE10_
+        L2_114 = L1_113
+        L1_113 = L1_113.insert
+        L1_113(L2_114, _UPVALUE6_)
+        L1_113 = _UPVALUE10_
+        L1_113.x = 0
+        L1_113 = nil
+        _UPVALUE9_ = L1_113
+        L1_113 = _UPVALUE11_
+        L2_114 = _UPVALUE12_
+        L2_114 = L2_114 - 1
+        L1_113 = L1_113[L2_114]
+        if L1_113 then
+          L1_113 = _UPVALUE13_
+          L2_114 = _UPVALUE11_
+          L2_114 = L2_114[_UPVALUE12_ - 1]
+          L2_114 = L2_114.page
+          L1_113(L2_114, _UPVALUE11_[_UPVALUE12_ - 1].params)
+        end
+        L1_113 = _UPVALUE14_
+        L2_114 = _W
+        L2_114 = -L2_114
+        L1_113.x = L2_114
+        L1_113 = _UPVALUE12_
+        _UPVALUE15_ = L1_113
+        L1_113 = false
+        _UPVALUE16_ = L1_113
+        L1_113 = _UPVALUE6_
+        if L1_113 then
+          L1_113 = _UPVALUE6_
+          L1_113 = L1_113.start
+          if L1_113 then
+            L1_113 = pcall
+            L2_114 = _UPVALUE6_
+            L2_114 = L2_114.start
+            L2_114 = L1_113(L2_114)
+            if not L1_113 then
+              _UPVALUE17_("Failed to start page of object '" .. _UPVALUE3_ .. "' - Please verify the localGroup.start() function.", L2_114)
+              return false
+            end
+          end
+        end
+      end
+    })
+  end
+end
+function L35_35(A0_115)
+  local L1_116
+  L1_116 = _UPVALUE0_
+  if not L1_116 then
+    L1_116 = true
+    return L1_116
+  end
+  L1_116 = _UPVALUE1_
+  if L1_116 then
+    L1_116 = true
+    return L1_116
+  end
+  L1_116 = A0_115.phase
+  if L1_116 == "moved" then
+    L1_116 = A0_115.xStart
+    if L1_116 > A0_115.x then
+      L1_116 = _UPVALUE2_
+      L1_116.x = -_W - (A0_115.xStart - A0_115.x)
+      L1_116 = _UPVALUE3_
+      L1_116.x = 0 - (A0_115.xStart - A0_115.x)
+      L1_116 = _UPVALUE4_
+      L1_116.x = _W - (A0_115.xStart - A0_115.x)
+    else
+      L1_116 = _UPVALUE2_
+      L1_116.x = -_W + (A0_115.x - A0_115.xStart)
+      L1_116 = _UPVALUE3_
+      L1_116.x = 0 + (A0_115.x - A0_115.xStart)
+      L1_116 = _UPVALUE4_
+      L1_116.x = _W + (A0_115.x - A0_115.xStart)
+    end
+  else
+    L1_116 = A0_115.phase
+    if L1_116 == "ended" then
+      L1_116 = 0.2
+      if _UPVALUE3_.x < -_W * L1_116 then
+        director:changeBookPage("next")
+      elseif _UPVALUE3_.x > _W * L1_116 then
+        director:changeBookPage("prev")
+      else
+        director:changeBookPage(getCurrBookPageNum())
+      end
+    end
+  end
+end
+function director.goToPage(A0_117, A1_118, A2_119, A3_120)
+  local L4_121, L5_122, L6_123
+  L4_121 = type
+  L5_122 = A1_118
+  L4_121 = L4_121(L5_122)
+  if L4_121 ~= "table" then
+    A3_120 = A2_119
+    A2_119 = A1_118
+    A1_118 = nil
+  end
+  L4_121 = type
+  L5_122 = A2_119
+  L4_121 = L4_121(L5_122)
+  if L4_121 ~= "number" then
+    L4_121 = _UPVALUE0_
+    L5_122 = "The page name must be a number. page = "
+    L6_123 = tostring
+    L6_123 = L6_123(A2_119)
+    L5_122 = L5_122 .. L6_123
+    L4_121(L5_122)
+    L4_121 = false
+    return L4_121
+  end
+  if A2_119 < 1 then
+    L4_121 = _UPVALUE0_
+    L5_122 = "Cannot change to page lower then 1. page = "
+    L6_123 = tostring
+    L6_123 = L6_123(A2_119)
+    L5_122 = L5_122 .. L6_123
+    L4_121(L5_122)
+    L4_121 = false
+    return L4_121
+  end
+  L4_121 = display
+  L4_121 = L4_121.newRect
+  L5_122 = _W
+  L5_122 = -L5_122
+  L6_123 = _H
+  L6_123 = -L6_123
+  L4_121 = L4_121(L5_122, L6_123, _W * 3, _H * 3)
+  L6_123 = L4_121
+  L5_122 = L4_121.setFillColor
+  L5_122(L6_123, 0, 0, 0)
+  L4_121.alpha = 0
+  L4_121.isVisible = false
+  L5_122 = _UPVALUE1_
+  L6_123 = L5_122
+  L5_122 = L5_122.insert
+  L5_122(L6_123, L4_121)
+  function L5_122(A0_124)
+    _UPVALUE0_:removeSelf()
+    _UPVALUE0_ = nil
+  end
+  function L6_123(A0_125)
+    local L1_126, L2_127
+    L1_126 = _UPVALUE0_
+    if L1_126 == 1 then
+      L1_126 = _UPVALUE1_
+      L2_127 = "prev"
+      L1_126(L2_127)
+      L1_126 = _UPVALUE2_
+      L2_127 = _UPVALUE3_
+      if L1_126 ~= L2_127 then
+        L1_126 = _UPVALUE2_
+        L2_127 = _UPVALUE4_
+        if L1_126 ~= L2_127 then
+          L1_126 = _UPVALUE5_
+          L2_127 = _UPVALUE2_
+          L1_126(L2_127)
+        end
+      end
+      L1_126 = _UPVALUE6_
+      L1_126 = L1_126[1]
+      if L1_126 then
+        L1_126 = _UPVALUE7_
+        L2_127 = _UPVALUE6_
+        L2_127 = L2_127[1]
+        L2_127 = L2_127.page
+        L1_126(L2_127, _UPVALUE8_ or _UPVALUE6_[1].params)
+        L1_126 = 1
+        _UPVALUE9_ = L1_126
+      end
+      L1_126 = _UPVALUE6_
+      L1_126 = L1_126[2]
+      if L1_126 then
+        L1_126 = _UPVALUE10_
+        L2_127 = _UPVALUE6_
+        L2_127 = L2_127[2]
+        L2_127 = L2_127.page
+        L1_126(L2_127, _UPVALUE6_[2].params)
+      end
+    else
+      L1_126 = _UPVALUE0_
+      L2_127 = getBookPageCount
+      L2_127 = L2_127()
+      if L1_126 == L2_127 then
+        L1_126 = _UPVALUE6_
+        L2_127 = _UPVALUE0_
+        L1_126 = L1_126[L2_127]
+        if L1_126 then
+          L1_126 = _UPVALUE7_
+          L2_127 = _UPVALUE6_
+          L2_127 = L2_127[_UPVALUE0_]
+          L2_127 = L2_127.page
+          L1_126(L2_127, _UPVALUE8_ or _UPVALUE6_[_UPVALUE0_].params)
+          L1_126 = _UPVALUE0_
+          _UPVALUE9_ = L1_126
+        end
+        L1_126 = _UPVALUE6_
+        L2_127 = _UPVALUE0_
+        L2_127 = L2_127 - 1
+        L1_126 = L1_126[L2_127]
+        if L1_126 then
+          L1_126 = _UPVALUE11_
+          L2_127 = _UPVALUE6_
+          L2_127 = L2_127[_UPVALUE0_ - 1]
+          L2_127 = L2_127.page
+          L1_126(L2_127, _UPVALUE6_[_UPVALUE0_ - 1].params)
+        end
+        L1_126 = _UPVALUE1_
+        L2_127 = "next"
+        L1_126(L2_127)
+        L1_126 = _UPVALUE2_
+        L2_127 = _UPVALUE4_
+        if L1_126 ~= L2_127 then
+          L1_126 = _UPVALUE3_
+          L2_127 = _UPVALUE4_
+          if L1_126 ~= L2_127 then
+            L1_126 = _UPVALUE5_
+            L2_127 = _UPVALUE4_
+            L1_126(L2_127)
+          end
+        end
+      else
+        L1_126 = _UPVALUE6_
+        L2_127 = _UPVALUE0_
+        L2_127 = L2_127 - 1
+        L1_126 = L1_126[L2_127]
+        if L1_126 then
+          L1_126 = _UPVALUE11_
+          L2_127 = _UPVALUE6_
+          L2_127 = L2_127[_UPVALUE0_ - 1]
+          L2_127 = L2_127.page
+          L1_126(L2_127, _UPVALUE6_[_UPVALUE0_ - 1].params)
+        end
+        L1_126 = _UPVALUE6_
+        L2_127 = _UPVALUE0_
+        L1_126 = L1_126[L2_127]
+        if L1_126 then
+          L1_126 = _UPVALUE7_
+          L2_127 = _UPVALUE6_
+          L2_127 = L2_127[_UPVALUE0_]
+          L2_127 = L2_127.page
+          L1_126(L2_127, _UPVALUE8_ or _UPVALUE6_[_UPVALUE0_].params)
+          L1_126 = _UPVALUE0_
+          _UPVALUE9_ = L1_126
+        end
+        L1_126 = _UPVALUE6_
+        L2_127 = _UPVALUE0_
+        L2_127 = L2_127 + 1
+        L1_126 = L1_126[L2_127]
+        if L1_126 then
+          L1_126 = _UPVALUE10_
+          L2_127 = _UPVALUE6_
+          L2_127 = L2_127[_UPVALUE0_ + 1]
+          L2_127 = L2_127.page
+          L1_126(L2_127, _UPVALUE6_[_UPVALUE0_ + 1].params)
+        end
+      end
+    end
+    L1_126 = _UPVALUE12_
+    if L1_126 then
+      L1_126 = _UPVALUE12_
+      L1_126 = L1_126.start
+      if L1_126 then
+        L1_126 = pcall
+        L2_127 = _UPVALUE12_
+        L2_127 = L2_127.start
+        L2_127 = L1_126(L2_127)
+        if not L1_126 then
+          _UPVALUE13_("Failed to start page of object '" .. _UPVALUE3_ .. "' - Please verify the localGroup.start() function.", L2_127)
+          return false
+        end
+      end
+    end
+    L1_126 = _UPVALUE14_
+    L1_126 = L1_126.to
+    L2_127 = _UPVALUE15_
+    L1_126 = L1_126(L2_127, {
+      alpha = 0,
+      time = _UPVALUE16_,
+      onComplete = _UPVALUE17_
+    })
+  end
+  if A3_120 then
+    L4_121.isVisible = true
+  else
+    L6_123()
+  end
+end
+function director.turnToBook(A0_128)
+  _UPVALUE0_ = true
+end
+function director.turnToScenes(A0_129)
+  _UPVALUE0_ = false
+  _UPVALUE1_("prev")
+  if _UPVALUE2_ ~= _UPVALUE3_ and _UPVALUE2_ ~= _UPVALUE4_ then
+    _UPVALUE5_(_UPVALUE2_)
+  end
+  _UPVALUE1_("next")
+  if _UPVALUE2_ ~= _UPVALUE4_ and _UPVALUE3_ ~= _UPVALUE4_ then
+    _UPVALUE5_(_UPVALUE4_)
+  end
+  _UPVALUE6_ = nil
+  _UPVALUE7_ = nil
+  _UPVALUE2_ = "main"
+  _UPVALUE4_ = "main"
+end

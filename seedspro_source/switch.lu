@@ -1,0 +1,356 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("transitions")
+;({}).new = function(A0_1, A1_2, A2_3)
+  local L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L3_4.on = L4_5
+  L4_5 = L3_4.on
+  L4_5.alpha = 0
+  L5_6 = L3_4
+  L4_5 = L3_4.insert
+  L6_7 = L3_4.on
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L3_4.off = L4_5
+  L4_5 = L3_4.off
+  L4_5.alpha = 0
+  L5_6 = L3_4
+  L4_5 = L3_4.insert
+  L6_7 = L3_4.off
+  L4_5(L5_6, L6_7)
+  L4_5 = A1_2
+  L5_6 = display
+  L5_6 = L5_6.newImageRect
+  L6_7 = "switch-fill-green.png"
+  L7_8 = 51
+  L8_9 = 31
+  L5_6 = L5_6(L6_7, L7_8, L8_9)
+  L7_8 = L5_6
+  L6_7 = L5_6.setReferencePoint
+  L8_9 = display
+  L8_9 = L8_9.CenterReferencePoint
+  L6_7(L7_8, L8_9)
+  L5_6.x = 0
+  L5_6.y = 0
+  L6_7 = L3_4.on
+  L7_8 = L6_7
+  L6_7 = L6_7.insert
+  L8_9 = L5_6
+  L6_7(L7_8, L8_9)
+  L6_7 = display
+  L6_7 = L6_7.newImageRect
+  L7_8 = "switch-border-green.png"
+  L8_9 = 51
+  L9_10 = 31
+  L6_7 = L6_7(L7_8, L8_9, L9_10)
+  L8_9 = L6_7
+  L7_8 = L6_7.setReferencePoint
+  L9_10 = display
+  L9_10 = L9_10.CenterReferencePoint
+  L7_8(L8_9, L9_10)
+  L7_8 = L5_6.x
+  L6_7.x = L7_8
+  L7_8 = L5_6.y
+  L6_7.y = L7_8
+  L7_8 = L3_4.on
+  L8_9 = L7_8
+  L7_8 = L7_8.insert
+  L9_10 = L6_7
+  L7_8(L8_9, L9_10)
+  L7_8 = display
+  L7_8 = L7_8.newImageRect
+  L8_9 = "switch-knob-green.png"
+  L9_10 = 31
+  L10_11 = 32
+  L7_8 = L7_8(L8_9, L9_10, L10_11)
+  L9_10 = L7_8
+  L8_9 = L7_8.setReferencePoint
+  L10_11 = display
+  L10_11 = L10_11.CenterRightReferencePoint
+  L8_9(L9_10, L10_11)
+  L8_9 = L5_6.x
+  L9_10 = L5_6.width
+  L9_10 = L9_10 * 0.5
+  L8_9 = L8_9 + L9_10
+  L7_8.x = L8_9
+  L8_9 = L5_6.y
+  L8_9 = L8_9 + 2
+  L7_8.y = L8_9
+  L8_9 = L7_8.x
+  L7_8.origX = L8_9
+  L8_9 = L7_8.y
+  L7_8.origY = L8_9
+  L8_9 = L5_6.x
+  L9_10 = L5_6.width
+  L9_10 = L9_10 * 0.5
+  L8_9 = L8_9 - L9_10
+  L9_10 = L7_8.width
+  L8_9 = L8_9 + L9_10
+  L7_8.minWidth = L8_9
+  L8_9 = L5_6.x
+  L9_10 = L5_6.width
+  L9_10 = L9_10 * 0.5
+  L8_9 = L8_9 + L9_10
+  L7_8.maxWidth = L8_9
+  L8_9 = L3_4.on
+  L9_10 = L8_9
+  L8_9 = L8_9.insert
+  L10_11 = L7_8
+  L8_9(L9_10, L10_11)
+  L8_9 = display
+  L8_9 = L8_9.newImageRect
+  L9_10 = "switch-fill-gray.png"
+  L10_11 = 51
+  L11_12 = 31
+  L8_9 = L8_9(L9_10, L10_11, L11_12)
+  L10_11 = L8_9
+  L9_10 = L8_9.setReferencePoint
+  L11_12 = display
+  L11_12 = L11_12.CenterReferencePoint
+  L9_10(L10_11, L11_12)
+  L9_10 = L5_6.x
+  L8_9.x = L9_10
+  L9_10 = L5_6.y
+  L8_9.y = L9_10
+  L9_10 = L3_4.off
+  L10_11 = L9_10
+  L9_10 = L9_10.insert
+  L11_12 = L8_9
+  L9_10(L10_11, L11_12)
+  L9_10 = display
+  L9_10 = L9_10.newImageRect
+  L10_11 = "switch-fill-white.png"
+  L11_12 = 51
+  L12_13 = 31
+  L9_10 = L9_10(L10_11, L11_12, L12_13)
+  L11_12 = L9_10
+  L10_11 = L9_10.setReferencePoint
+  L12_13 = display
+  L12_13 = L12_13.CenterReferencePoint
+  L10_11(L11_12, L12_13)
+  L10_11 = L8_9.x
+  L9_10.x = L10_11
+  L10_11 = L8_9.y
+  L9_10.y = L10_11
+  L10_11 = L9_10.x
+  L9_10.origX = L10_11
+  L10_11 = L9_10.y
+  L9_10.origY = L10_11
+  L10_11 = L3_4.off
+  L11_12 = L10_11
+  L10_11 = L10_11.insert
+  L12_13 = L9_10
+  L10_11(L11_12, L12_13)
+  L10_11 = display
+  L10_11 = L10_11.newImageRect
+  L11_12 = "switch-border-gray.png"
+  L12_13 = 51
+  L13_14 = 31
+  L10_11 = L10_11(L11_12, L12_13, L13_14)
+  L12_13 = L10_11
+  L11_12 = L10_11.setReferencePoint
+  L13_14 = display
+  L13_14 = L13_14.CenterReferencePoint
+  L11_12(L12_13, L13_14)
+  L11_12 = L8_9.x
+  L10_11.x = L11_12
+  L11_12 = L8_9.y
+  L10_11.y = L11_12
+  L11_12 = L3_4.off
+  L12_13 = L11_12
+  L11_12 = L11_12.insert
+  L13_14 = L10_11
+  L11_12(L12_13, L13_14)
+  L11_12 = display
+  L11_12 = L11_12.newImageRect
+  L12_13 = "switch-knob-gray.png"
+  L13_14 = 31
+  L14_15 = 32
+  L11_12 = L11_12(L12_13, L13_14, L14_15)
+  L13_14 = L11_12
+  L12_13 = L11_12.setReferencePoint
+  L14_15 = display
+  L14_15 = L14_15.CenterLeftReferencePoint
+  L12_13(L13_14, L14_15)
+  L12_13 = L8_9.x
+  L13_14 = L8_9.width
+  L13_14 = L13_14 * 0.5
+  L12_13 = L12_13 - L13_14
+  L11_12.x = L12_13
+  L12_13 = L8_9.y
+  L12_13 = L12_13 + 2
+  L11_12.y = L12_13
+  L12_13 = L11_12.x
+  L11_12.origX = L12_13
+  L12_13 = L11_12.y
+  L11_12.origY = L12_13
+  L12_13 = L8_9.x
+  L13_14 = L8_9.width
+  L13_14 = L13_14 * 0.5
+  L12_13 = L12_13 - L13_14
+  L11_12.minWidth = L12_13
+  L12_13 = L8_9.x
+  L13_14 = L8_9.width
+  L13_14 = L13_14 * 0.5
+  L12_13 = L12_13 + L13_14
+  L13_14 = L11_12.width
+  L12_13 = L12_13 - L13_14
+  L11_12.maxWidth = L12_13
+  L12_13 = L3_4.off
+  L13_14 = L12_13
+  L12_13 = L12_13.insert
+  L14_15 = L11_12
+  L12_13(L13_14, L14_15)
+  if A1_2 == "yes" then
+    L12_13 = L3_4.on
+    L12_13.alpha = 1
+  elseif A1_2 == "no" then
+    L12_13 = L3_4.off
+    L12_13.alpha = 1
+  end
+  function L12_13()
+    local L0_19, L1_20
+    L0_19 = _UPVALUE0_
+    L1_20 = _UPVALUE0_
+    L1_20 = L1_20.origX
+    L0_19.x = L1_20
+    L0_19 = _UPVALUE0_
+    L0_19.xScale = 1
+    L0_19 = _UPVALUE0_
+    L0_19.yScale = 1
+  end
+  function L13_14(A0_21)
+    _UPVALUE0_.x = _UPVALUE0_.origX
+    _UPVALUE1_.x = _UPVALUE1_.origX
+    if _UPVALUE2_ ~= _UPVALUE3_ then
+      _UPVALUE3_ = _UPVALUE2_
+      _UPVALUE4_({state = _UPVALUE3_, target = _UPVALUE5_})
+      if _UPVALUE3_ == "yes" then
+        _UPVALUE6_.to(_UPVALUE5_.off, {time = 50, alpha = 0}, true)
+        _UPVALUE6_.to(_UPVALUE5_.on, {time = 50, alpha = 1})
+      elseif _UPVALUE3_ == "no" then
+        _UPVALUE6_.to(_UPVALUE5_.off, {time = 50, alpha = 1}, true)
+        _UPVALUE6_.to(_UPVALUE5_.on, {time = 50, alpha = 0})
+      end
+    end
+  end
+  L14_15 = 0
+  L15_16 = nil
+  L16_17 = false
+  function L17_18(A0_22)
+    local L1_23, L3_24
+    L1_23 = A0_22.phase
+    L3_24 = A0_22.target
+    if L1_23 == "began" then
+      display.getCurrentStage():setFocus(A0_22.target)
+      if _UPVALUE0_.trans then
+        _UPVALUE1_.cancel(_UPVALUE0_.trans)
+      end
+      if _UPVALUE2_ == "yes" then
+        _UPVALUE3_ = _UPVALUE4_
+      elseif _UPVALUE2_ == "no" then
+        _UPVALUE3_ = _UPVALUE5_
+        _UPVALUE0_.trans = _UPVALUE1_.to(_UPVALUE0_, {
+          time = 400,
+          xScale = 0.2,
+          yScale = 0.001,
+          x = _UPVALUE6_.x - _UPVALUE6_.width * 0.25,
+          transition = easing.outQuad,
+          onComplete = function()
+            local L1_25
+            L1_25 = _UPVALUE0_
+            L1_25.isVisible = false
+          end
+        })
+      end
+      _UPVALUE7_ = _UPVALUE3_.x
+    elseif L1_23 == "moved" then
+      if _UPVALUE8_(A0_22.x - A0_22.xStart) > _UPVALUE8_(A0_22.y - A0_22.yStart) or _UPVALUE9_ == true then
+        _UPVALUE9_ = true
+        if _UPVALUE7_ + (A0_22.x - A0_22.xStart) < _UPVALUE3_.minWidth then
+        elseif _UPVALUE3_.minWidth > _UPVALUE3_.maxWidth then
+        end
+        _UPVALUE3_.x = _UPVALUE3_.maxWidth
+      elseif _UPVALUE8_(A0_22.y - A0_22.yStart) > 3 then
+        display.getCurrentStage():setFocus(nil)
+        _UPVALUE10_({
+          phase = "ended",
+          target = L3_24,
+          x = A0_22.x,
+          xStart = A0_22.xStart
+        })
+        _UPVALUE11_:takeFocus(A0_22)
+      end
+    elseif L1_23 == "ended" or L1_23 == "cancelled" then
+      display.getCurrentStage():setFocus(nil)
+      _UPVALUE9_ = false
+      if _UPVALUE0_.trans then
+        _UPVALUE1_.cancel(_UPVALUE0_.trans)
+      end
+      if _UPVALUE0_.xScale < 1 then
+        _UPVALUE0_.isVisible = true
+        _UPVALUE0_.trans = _UPVALUE1_.to(_UPVALUE0_, {
+          time = 400,
+          xScale = 1,
+          yScale = 1,
+          x = _UPVALUE0_.origX,
+          transition = easing.outQuad
+        })
+      end
+      if A0_22.x - A0_22.xStart < -8 then
+        _UPVALUE12_ = "no"
+        transition.to(_UPVALUE3_, {
+          time = 300,
+          x = _UPVALUE3_.minWidth,
+          transition = easing.outExpo,
+          onComplete = _UPVALUE13_
+        })
+      elseif A0_22.x - A0_22.xStart >= 8 then
+        _UPVALUE12_ = "yes"
+        transition.to(_UPVALUE3_, {
+          time = 300,
+          x = _UPVALUE3_.maxWidth,
+          transition = easing.outExpo,
+          onComplete = _UPVALUE13_
+        })
+      elseif A0_22.x - A0_22.xStart == 0 then
+        if _UPVALUE2_ == "yes" then
+          _UPVALUE12_ = "no"
+          transition.to(_UPVALUE3_, {
+            time = 300,
+            x = _UPVALUE3_.minWidth,
+            transition = easing.outExpo,
+            onComplete = _UPVALUE13_
+          })
+        elseif _UPVALUE2_ == "no" then
+          _UPVALUE12_ = "yes"
+          transition.to(_UPVALUE3_, {
+            time = 300,
+            x = _UPVALUE3_.maxWidth,
+            transition = easing.outExpo,
+            onComplete = _UPVALUE13_
+          })
+        end
+      else
+        transition.to(_UPVALUE3_, {
+          time = 300,
+          x = _UPVALUE7_,
+          transition = easing.outExpo,
+          onComplete = _UPVALUE13_
+        })
+      end
+    end
+    return true
+  end
+  L3_4:addEventListener("touch", L17_18)
+  return L3_4
+end
+return {}

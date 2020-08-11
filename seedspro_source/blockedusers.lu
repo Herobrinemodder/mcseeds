@@ -1,0 +1,1016 @@
+local L0_0
+L0_0 = require
+L0_0 = L0_0("openGLTextfield")
+;({}).make = function(A0_1, A1_2)
+  local L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28
+  L2_3 = {}
+  L3_4 = {}
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L5_6 = display
+  L5_6 = L5_6.newRect
+  L6_7 = 0
+  L7_8 = 0
+  L8_9 = _W
+  L9_10 = _H
+  L5_6 = L5_6(L6_7, L7_8, L8_9, L9_10)
+  L7_8 = L5_6
+  L6_7 = L5_6.setFillColor
+  L8_9 = 0
+  L9_10 = 0
+  L10_11 = 0
+  L11_12 = 220
+  L6_7(L7_8, L8_9, L9_10, L10_11, L11_12)
+  L5_6.isHitTestable = true
+  L7_8 = L5_6
+  L6_7 = L5_6.addEventListener
+  L8_9 = "touch"
+  function L9_10()
+    native.setKeyboardFocus(nil)
+    return true
+  end
+  L6_7(L7_8, L8_9, L9_10)
+  L7_8 = L4_5
+  L6_7 = L4_5.insert
+  L8_9 = L5_6
+  L6_7(L7_8, L8_9)
+  L6_7 = display
+  L6_7 = L6_7.newText
+  L7_8 = {}
+  L7_8.text = "Block users"
+  L8_9 = _UPVALUE0_
+  L8_9 = L8_9.fonts
+  L8_9 = L8_9.bold
+  L7_8.font = L8_9
+  L7_8.fontSize = 20
+  L6_7 = L6_7(L7_8)
+  L8_9 = L6_7
+  L7_8 = L6_7.setReferencePoint
+  L9_10 = display
+  L9_10 = L9_10.CenterReferencePoint
+  L7_8(L8_9, L9_10)
+  L7_8 = _UPVALUE1_
+  L6_7.x = L7_8
+  L6_7.y = 49
+  L8_9 = L6_7
+  L7_8 = L6_7.setFillColor
+  L9_10 = 255
+  L10_11 = 255
+  L11_12 = 255
+  L7_8(L8_9, L9_10, L10_11, L11_12)
+  L8_9 = L4_5
+  L7_8 = L4_5.insert
+  L9_10 = L6_7
+  L7_8(L8_9, L9_10)
+  L7_8 = _UPVALUE2_
+  L7_8 = L7_8.makeImageFromSlices
+  L8_9 = {}
+  L8_9.filename = "blockignoreusersbg-slice"
+  L9_10 = _W
+  L9_10 = L9_10 - 49
+  L8_9.resWidth = L9_10
+  L9_10 = _H
+  L9_10 = L9_10 - 159
+  L8_9.resHeight = L9_10
+  L8_9.width = 6
+  L8_9.height = 6
+  L8_9.slices = 4
+  L9_10 = {
+    L10_11,
+    L11_12,
+    L12_13
+  }
+  L10_11 = 210
+  L11_12 = 213
+  L12_13 = 214
+  L8_9.fillColor = L9_10
+  L7_8 = L7_8(L8_9)
+  L9_10 = L7_8
+  L8_9 = L7_8.setReferencePoint
+  L10_11 = display
+  L10_11 = L10_11.TopCenterReferencePoint
+  L8_9(L9_10, L10_11)
+  L8_9 = _UPVALUE1_
+  L7_8.x = L8_9
+  L7_8.y = 94
+  L9_10 = L4_5
+  L8_9 = L4_5.insert
+  L10_11 = L7_8
+  L8_9(L9_10, L10_11)
+  L8_9 = _UPVALUE3_
+  L8_9 = L8_9.newTableView
+  L9_10 = {}
+  L10_11 = _W
+  L10_11 = L10_11 - 78
+  L9_10.width = L10_11
+  L10_11 = _UPVALUE4_
+  L11_12 = _H
+  L11_12 = L11_12 * 0.5
+  L10_11 = L10_11(L11_12)
+  L10_11 = L10_11 - 170
+  L9_10.height = L10_11
+  L10_11 = {
+    L11_12,
+    L12_13,
+    L13_14,
+    L14_15
+  }
+  L11_12 = 0
+  L12_13 = 0
+  L13_14 = 0
+  L14_15 = 0
+  L9_10.bgColor = L10_11
+  L10_11 = system
+  L10_11 = L10_11.TemporaryDirectory
+  L9_10.baseDir = L10_11
+  L10_11 = "mask-"
+  L11_12 = _W
+  L11_12 = L11_12 - 78
+  L12_13 = "x"
+  L13_14 = _UPVALUE4_
+  L14_15 = _H
+  L14_15 = L14_15 * 0.5
+  L13_14 = L13_14(L14_15)
+  L13_14 = L13_14 - 170
+  L14_15 = ".png"
+  L10_11 = L10_11 .. L11_12 .. L12_13 .. L13_14 .. L14_15
+  L9_10.maskFile = L10_11
+  L8_9 = L8_9(L9_10)
+  L10_11 = L8_9
+  L9_10 = L8_9.setReferencePoint
+  L11_12 = display
+  L11_12 = L11_12.TopCenterReferencePoint
+  L9_10(L10_11, L11_12)
+  L9_10 = _UPVALUE1_
+  L8_9.x = L9_10
+  L8_9.y = 141
+  L10_11 = L4_5
+  L9_10 = L4_5.insert
+  L11_12 = L8_9
+  L9_10(L10_11, L11_12)
+  L9_10 = _UPVALUE3_
+  L9_10 = L9_10.newTableView
+  L10_11 = {}
+  L11_12 = _W
+  L11_12 = L11_12 - 78
+  L10_11.width = L11_12
+  L11_12 = _UPVALUE4_
+  L12_13 = _H
+  L12_13 = L12_13 * 0.5
+  L11_12 = L11_12(L12_13)
+  L11_12 = L11_12 - 56
+  L10_11.height = L11_12
+  L11_12 = {
+    L12_13,
+    L13_14,
+    L14_15,
+    L15_16
+  }
+  L12_13 = 0
+  L13_14 = 0
+  L14_15 = 0
+  L15_16 = 0
+  L10_11.bgColor = L11_12
+  L11_12 = system
+  L11_12 = L11_12.TemporaryDirectory
+  L10_11.baseDir = L11_12
+  L11_12 = "mask-"
+  L12_13 = _W
+  L12_13 = L12_13 - 78
+  L13_14 = "x"
+  L14_15 = _UPVALUE4_
+  L15_16 = _H
+  L15_16 = L15_16 * 0.5
+  L14_15 = L14_15(L15_16)
+  L14_15 = L14_15 - 56
+  L15_16 = ".png"
+  L11_12 = L11_12 .. L12_13 .. L13_14 .. L14_15 .. L15_16
+  L10_11.maskFile = L11_12
+  L9_10 = L9_10(L10_11)
+  L11_12 = L9_10
+  L10_11 = L9_10.setReferencePoint
+  L12_13 = display
+  L12_13 = L12_13.TopCenterReferencePoint
+  L10_11(L11_12, L12_13)
+  L10_11 = _UPVALUE1_
+  L9_10.x = L10_11
+  L10_11 = L8_9.y
+  L11_12 = L8_9.height
+  L10_11 = L10_11 + L11_12
+  L10_11 = L10_11 + 5
+  L9_10.y = L10_11
+  L11_12 = L4_5
+  L10_11 = L4_5.insert
+  L12_13 = L9_10
+  L10_11(L11_12, L12_13)
+  function L10_11(A0_29)
+    local L1_30, L2_31, L3_32, L4_33, L5_34, L6_35
+    L1_30 = _UPVALUE0_
+    L1_30 = L1_30.content
+    L1_30 = L1_30.rows
+    L1_30 = #L1_30
+    for L5_34 = 1, L1_30 do
+      L6_35 = _UPVALUE0_
+      L6_35 = L6_35.content
+      L6_35 = L6_35.rows
+      L6_35 = L6_35[L5_34]
+      L6_35 = L6_35.id
+      if L6_35 then
+        L6_35 = _UPVALUE0_
+        L6_35 = L6_35.content
+        L6_35 = L6_35.rows
+        L6_35 = L6_35[L5_34]
+        L6_35 = L6_35.id
+        L6_35 = L6_35.id
+        if L6_35 == A0_29 then
+          L6_35 = _UPVALUE0_
+          L6_35 = L6_35.deleteRow
+          L6_35(L6_35, L5_34)
+          break
+        end
+      end
+    end
+    for L6_35 = 1, L2_31 do
+      if _UPVALUE1_.content.rows[L6_35].id.id == A0_29 then
+        _UPVALUE1_.content.rows[L6_35].checkmark.isVisible = false
+        break
+      end
+    end
+    for L6_35, _FORV_7_ in L3_32(L4_33) do
+      if _FORV_7_.id == A0_29 then
+        if _UPVALUE2_[L6_35].type == "blockedfrombefore" then
+          _UPVALUE2_[L6_35].type = "unblocked"
+        else
+          _UPVALUE2_[L6_35] = _UPVALUE3_.delete(_UPVALUE2_[L6_35])
+          table.remove(_UPVALUE2_, L6_35)
+        end
+      end
+    end
+  end
+  function L11_12(A0_36)
+    local L1_37, L2_38, L3_39, L4_40
+    L1_37 = A0_36.target
+    L1_37 = L1_37.height
+    L2_38 = A0_36.target
+    L2_38 = L2_38.width
+    L3_39 = A0_36.view
+    L4_40 = display
+    L4_40 = L4_40.newText
+    L4_40 = L4_40({
+      text = "User",
+      font = _UPVALUE0_.fonts.regular,
+      fontSize = 12
+    })
+    L4_40:setReferencePoint(display.CenterLeftReferencePoint)
+    L4_40.x = 11
+    L4_40.y = L1_37 * 0.5 + 2
+    L4_40:setFillColor(71, 75, 76)
+    L3_39:insert(L4_40)
+  end
+  function L12_13(A0_41)
+    local L1_42, L2_43, L4_44, L5_45
+    L1_42 = A0_41.background
+    L2_43 = A0_41.target
+    L2_43 = L2_43.username
+    L4_44 = A0_41.id
+    L5_45 = A0_41.phase
+    L1_42:setFillColor(217, 217, 217)
+    L2_43:setFillColor(255, 255, 255)
+    if A0_41.target.mod then
+      A0_41.target.mod:setFillColor(255, 255, 255)
+    end
+    if L5_45 == "release" or L5_45 == "tap" then
+      timer.performWithDelay(100, function()
+        _UPVALUE0_:setFillColor(0, 0, 0, 0)
+        _UPVALUE1_:setFillColor(71, 75, 76)
+        if _UPVALUE2_ then
+          _UPVALUE2_:setFillColor(unpack(_UPVALUE2_.color))
+        end
+        _UPVALUE3_(_UPVALUE4_.id)
+      end)
+    end
+  end
+  function L13_14(A0_46)
+    local L1_47, L2_48, L3_49, L4_50, L5_51
+    L1_47 = A0_46.target
+    L1_47 = L1_47.height
+    L2_48 = L1_47 * 0.5
+    L3_49 = A0_46.view
+    L4_50 = A0_46.id
+    L5_51 = _UPVALUE0_
+    L5_51 = L5_51.makeAvatar
+    L5_51 = L5_51({
+      scale = 2,
+      avatar = L4_50.avatar
+    })
+    L5_51:setReferencePoint(display.CenterLeftReferencePoint)
+    L5_51.x = 11
+    L5_51.y = L2_48
+    L3_49:insert(L5_51)
+    A0_46.target.username = display.newText({
+      text = L4_50.nickname,
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 12
+    })
+    A0_46.target.username:setReferencePoint(display.CenterLeftReferencePoint)
+    A0_46.target.username.x = 36
+    A0_46.target.username.y = L2_48
+    A0_46.target.username:setFillColor(71, 75, 76)
+    L3_49:insert(A0_46.target.username)
+    if L4_50.udid == "1234567890" then
+      A0_46.target.mod = display.newText({
+        text = "(Adm)",
+        x = 0,
+        y = 0,
+        font = _UPVALUE1_.fonts.light,
+        fontSize = 12
+      })
+      A0_46.target.mod:setReferencePoint(display.CenterLeftReferencePoint)
+      A0_46.target.mod.x = 38 + A0_46.target.username.width
+      A0_46.target.mod.y = L2_48
+      A0_46.target.mod:setFillColor(111, 33, 33, 240)
+      A0_46.target.mod.color = {
+        111,
+        33,
+        33,
+        240
+      }
+      L3_49:insert(A0_46.target.mod)
+    elseif _UPVALUE2_[L4_50.udid] then
+      A0_46.target.mod = display.newText({
+        text = "(Mod)",
+        x = 0,
+        y = 0,
+        font = _UPVALUE1_.fonts.light,
+        fontSize = 12
+      })
+      A0_46.target.mod:setReferencePoint(display.CenterLeftReferencePoint)
+      A0_46.target.mod.x = 38 + A0_46.target.username.width
+      A0_46.target.mod.y = L2_48
+      A0_46.target.mod:setFillColor(33, 83, 111, 240)
+      A0_46.target.mod.color = {
+        33,
+        83,
+        111,
+        240
+      }
+      L3_49:insert(A0_46.target.mod)
+    end
+  end
+  function L14_15(A0_52, A1_53)
+    _UPVALUE0_:insertRow({
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      onRender = _UPVALUE1_,
+      onEvent = _UPVALUE2_,
+      height = 24,
+      id = A0_52
+    })
+    _UPVALUE3_[#_UPVALUE3_ + 1] = A0_52
+    _UPVALUE3_[#_UPVALUE3_ + 1].type = A1_53
+    _UPVALUE0_:scrollToBottom(100)
+  end
+  function L15_16(A0_54)
+    local L1_55, L2_56, L3_57, L4_58, L5_59, L6_60
+    L1_55 = A0_54.target
+    L1_55 = L1_55.height
+    L2_56 = A0_54.target
+    L2_56 = L2_56.width
+    L3_57 = A0_54.view
+    L4_58 = display
+    L4_58 = L4_58.newGroup
+    L4_58 = L4_58()
+    L6_60 = L3_57
+    L5_59 = L3_57.insert
+    L5_59(L6_60, L4_58)
+    L5_59 = _UPVALUE0_
+    L5_59 = L5_59.makeSprite
+    L6_60 = 0
+    L5_59 = L5_59(L6_60, 0, {
+      img = "activity_black.png"
+    })
+    L6_60 = L5_59.setReferencePoint
+    L6_60(L5_59, display.CenterLeftReferencePoint)
+    L5_59.x = 0
+    L5_59.y = 0
+    L6_60 = L5_59.scale
+    L6_60(L5_59, 0.5, 0.5)
+    L6_60 = L4_58.insert
+    L6_60(L4_58, L5_59)
+    L6_60 = display
+    L6_60 = L6_60.newText
+    L6_60 = L6_60({
+      text = "Searching users",
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 13
+    })
+    L6_60:setReferencePoint(display.CenterLeftReferencePoint)
+    L6_60.x = 17
+    L6_60.y = 0
+    L6_60:setFillColor(71, 75, 76)
+    L4_58:insert(L6_60)
+    L4_58:setReferencePoint(display.CenterReferencePoint)
+    L4_58.x = L2_56 * 0.5
+    L4_58.y = L1_55 * 0.5
+  end
+  function L16_17(A0_61)
+    local L1_62, L2_63, L3_64, L4_65, L5_66
+    L1_62 = A0_61.target
+    L1_62 = L1_62.height
+    L2_63 = L1_62 * 0.5
+    L3_64 = A0_61.view
+    L4_65 = A0_61.id
+    L5_66 = _UPVALUE0_
+    L5_66 = L5_66.makeAvatar
+    L5_66 = L5_66({
+      scale = 2,
+      avatar = L4_65.avatar
+    })
+    L5_66:setReferencePoint(display.CenterLeftReferencePoint)
+    L5_66.x = 5
+    L5_66.y = L2_63
+    L3_64:insert(L5_66)
+    A0_61.target.username = display.newText({
+      text = L4_65.nickname,
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 12
+    })
+    A0_61.target.username:setReferencePoint(display.CenterLeftReferencePoint)
+    A0_61.target.username.x = 30
+    A0_61.target.username.y = L2_63
+    A0_61.target.username:setFillColor(71, 75, 76)
+    L3_64:insert(A0_61.target.username)
+    if L4_65.udid == "1234567890" then
+      A0_61.target.mod = display.newText({
+        text = "(Adm)",
+        x = 0,
+        y = 0,
+        font = _UPVALUE1_.fonts.light,
+        fontSize = 12
+      })
+      A0_61.target.mod:setReferencePoint(display.CenterLeftReferencePoint)
+      A0_61.target.mod.x = 32 + A0_61.target.username.width
+      A0_61.target.mod.y = L2_63
+      A0_61.target.mod:setFillColor(111, 33, 33, 240)
+      A0_61.target.mod.color = {
+        111,
+        33,
+        33,
+        240
+      }
+      L3_64:insert(A0_61.target.mod)
+    elseif _UPVALUE2_[L4_65.udid] then
+      A0_61.target.mod = display.newText({
+        text = "(Mod)",
+        x = 0,
+        y = 0,
+        font = _UPVALUE1_.fonts.light,
+        fontSize = 12
+      })
+      A0_61.target.mod:setReferencePoint(display.CenterLeftReferencePoint)
+      A0_61.target.mod.x = 32 + A0_61.target.username.width
+      A0_61.target.mod.y = L2_63
+      A0_61.target.mod:setFillColor(33, 83, 111, 240)
+      A0_61.target.mod.color = {
+        33,
+        83,
+        111,
+        240
+      }
+      L3_64:insert(A0_61.target.mod)
+    end
+    A0_61.target.checkmark = display.newImageRect("blockignoreuserscheckmark.png", 18, 18)
+    A0_61.target.checkmark:setReferencePoint(display.CenterRightReferencePoint)
+    A0_61.target.checkmark.x = 230
+    A0_61.target.checkmark.y = L2_63
+    A0_61.target.checkmark.isVisible = false
+    L3_64:insert(A0_61.target.checkmark)
+    for _FORV_9_, _FORV_10_ in pairs(_UPVALUE3_) do
+      if _UPVALUE3_[_FORV_9_].id == L4_65.id then
+        A0_61.target.checkmark.isVisible = true
+        break
+      end
+    end
+  end
+  function L17_18(A0_67)
+    local L1_68, L2_69, L3_70, L4_71, L5_72, L6_73, L7_74
+    L1_68 = A0_67.background
+    L2_69 = A0_67.target
+    L2_69 = L2_69.checkmark
+    L3_70 = A0_67.target
+    L3_70 = L3_70.username
+    L4_71 = A0_67.id
+    L5_72 = A0_67.phase
+    L6_73 = A0_67.target
+    L6_73 = L6_73.mod
+    L7_74 = L1_68.setFillColor
+    L7_74(L1_68, 217, 217, 217)
+    L7_74 = L3_70.setFillColor
+    L7_74(L3_70, 255, 255, 255)
+    if L6_73 then
+      L7_74 = L6_73.setFillColor
+      L7_74(L6_73, 255, 255, 255)
+    end
+    if L5_72 == "release" or L5_72 == "tap" then
+      function L7_74()
+        _UPVALUE0_:setFillColor(0, 0, 0, 0)
+        _UPVALUE1_:setFillColor(71, 75, 76)
+        if _UPVALUE2_ then
+          _UPVALUE2_:setFillColor(unpack(_UPVALUE2_.color))
+        end
+        if not _UPVALUE3_[_UPVALUE4_.udid] then
+          if _UPVALUE5_.isVisible == false then
+            _UPVALUE5_.isVisible = true
+            _UPVALUE6_(_UPVALUE4_, "blocked")
+          else
+            _UPVALUE7_(_UPVALUE4_.id)
+          end
+        else
+          native.showAlert("Cannot block moderators", "You can not block moderators", {"Ok"})
+        end
+      end
+      timer.performWithDelay(120, L7_74)
+    end
+    L7_74 = true
+    return L7_74
+  end
+  L18_19 = nil
+  function L19_20(A0_75)
+    local L1_76
+    L1_76 = _UPVALUE0_
+    L1_76 = L1_76.fakeLabel
+    L1_76 = L1_76.label
+    if L1_76 ~= "" then
+      L1_76 = _UPVALUE0_
+      L1_76 = L1_76.fakeLabel
+      L1_76 = L1_76.hasEdited
+      if L1_76 == true then
+        L1_76 = _UPVALUE1_
+        L1_76 = L1_76.deleteAllRows
+        L1_76(L1_76)
+        L1_76 = _UPVALUE1_
+        L1_76 = L1_76.insertRow
+        L1_76(L1_76, {
+          height = 24,
+          onRender = _UPVALUE2_,
+          rowColor = {
+            0,
+            0,
+            0,
+            0
+          },
+          lineColor = {
+            0,
+            0,
+            0,
+            0
+          }
+        })
+        function L1_76(A0_77)
+          if _UPVALUE1_ then
+            _UPVALUE2_:deleteRow(#_UPVALUE2_.content.rows)
+            for _FORV_5_ = 1, #_UPVALUE0_.decode(A0_77.response) do
+              _UPVALUE2_:insertRow({
+                id = _UPVALUE0_.decode(A0_77.response)[_FORV_5_],
+                height = 24,
+                onEvent = _UPVALUE3_,
+                onRender = _UPVALUE4_,
+                rowColor = {
+                  0,
+                  0,
+                  0,
+                  0
+                },
+                lineColor = {
+                  0,
+                  0,
+                  0,
+                  0
+                }
+              })
+            end
+          end
+        end
+        _UPVALUE7_.network_request("get_users_to_block_or_ignore", L1_76, {
+          searchString = _UPVALUE0_.fakeLabel.label
+        })
+      end
+    end
+    L1_76 = true
+    return L1_76
+  end
+  function L20_21(A0_78)
+    local L1_79
+    L1_79 = A0_78.phase
+    if A0_78.id == "searchUser" then
+      _UPVALUE0_()
+    end
+  end
+  L21_22 = _UPVALUE8_
+  L21_22 = L21_22.newTextField
+  L22_23 = {}
+  L22_23.filename = "blockIgnoreUsersSearchField-slice"
+  L22_23.width = 3
+  L22_23.height = 3
+  L22_23.slices = 9
+  L23_24 = {}
+  L23_24.id = "searchUser"
+  L23_24.boxType = "textfield"
+  L24_25 = L8_9.width
+  L24_25 = L24_25 - 46
+  L23_24.width = L24_25
+  L23_24.height = 25
+  L23_24.size = 14
+  L24_25 = list
+  L23_24.list = L24_25
+  L24_25 = _UPVALUE0_
+  L24_25 = L24_25.fonts
+  L24_25 = L24_25.light
+  L23_24.font = L24_25
+  L23_24.textfieldTopPadding = -0.5
+  L23_24.defaultLabel = ""
+  L24_25 = {
+    L25_26,
+    L26_27,
+    L27_28
+  }
+  L25_26 = 71
+  L26_27 = 75
+  L27_28 = 76
+  L23_24.defaultColor = L24_25
+  L23_24.initialLabel = "Search user"
+  L24_25 = {
+    L25_26,
+    L26_27,
+    L27_28
+  }
+  L25_26 = 175
+  L26_27 = 175
+  L27_28 = 175
+  L23_24.initialColor = L24_25
+  L24_25 = _UPVALUE0_
+  L24_25 = L24_25.fonts
+  L24_25 = L24_25.lightItalic
+  L23_24.initialFont = L24_25
+  L23_24.onFinishedCallback = L20_21
+  L21_22 = L21_22(L22_23, L23_24)
+  L18_19 = L21_22
+  L22_23 = L18_19
+  L21_22 = L18_19.setReferencePoint
+  L23_24 = display
+  L23_24 = L23_24.TopLeftReferencePoint
+  L21_22(L22_23, L23_24)
+  L21_22 = L8_9.x
+  L22_23 = L8_9.width
+  L22_23 = L22_23 * 0.5
+  L21_22 = L21_22 - L22_23
+  L18_19.x = L21_22
+  L18_19.y = 107
+  L22_23 = L4_5
+  L21_22 = L4_5.insert
+  L23_24 = L18_19
+  L21_22(L22_23, L23_24)
+  L21_22 = _UPVALUE3_
+  L21_22 = L21_22.newButton
+  L22_23 = {}
+  L22_23.width = 56
+  L22_23.height = 27
+  L22_23.default = "searchblockignoreusers.png"
+  L22_23.over = "searchblockignoreusers-over.png"
+  L22_23.onRelease = L19_20
+  L21_22 = L21_22(L22_23)
+  L23_24 = L21_22
+  L22_23 = L21_22.setReferencePoint
+  L24_25 = display
+  L24_25 = L24_25.TopLeftReferencePoint
+  L22_23(L23_24, L24_25)
+  L22_23 = L18_19.x
+  L23_24 = L18_19.width
+  L22_23 = L22_23 + L23_24
+  L22_23 = L22_23 - 10
+  L21_22.x = L22_23
+  L21_22.y = 106.5
+  L23_24 = L4_5
+  L22_23 = L4_5.insert
+  L24_25 = L21_22
+  L22_23(L23_24, L24_25)
+  function L22_23(A0_80)
+    local L1_81, L2_82, L3_83
+    L1_81 = A0_80.target
+    L1_81 = L1_81.height
+    L2_82 = A0_80.view
+    L3_83 = display
+    L3_83 = L3_83.newText
+    L3_83 = L3_83({
+      text = "Blocked users",
+      font = _UPVALUE0_.fonts.bold,
+      fontSize = 14
+    })
+    L3_83:setReferencePoint(display.CenterLeftReferencePoint)
+    L3_83.x = 10
+    L3_83.y = L1_81 * 0.5 + 3
+    L3_83:setFillColor(71, 75, 76)
+    L2_82:insert(L3_83)
+  end
+  L24_25 = L9_10
+  L23_24 = L9_10.insertRow
+  L25_26 = {}
+  L25_26.height = 26
+  L25_26.onRender = L22_23
+  L26_27 = {
+    L27_28,
+    0,
+    0,
+    0
+  }
+  L27_28 = 0
+  L25_26.rowColor = L26_27
+  L26_27 = {
+    L27_28,
+    0,
+    0,
+    0
+  }
+  L27_28 = 0
+  L25_26.lineColor = L26_27
+  L23_24(L24_25, L25_26)
+  function L23_24(A0_84)
+    local L1_85, L2_86, L3_87, L4_88, L5_89
+    L1_85 = A0_84.target
+    L1_85 = L1_85.height
+    L2_86 = A0_84.view
+    L3_87 = display
+    L3_87 = L3_87.newGroup
+    L3_87 = L3_87()
+    L5_89 = L2_86
+    L4_88 = L2_86.insert
+    L4_88(L5_89, L3_87)
+    L4_88 = _UPVALUE0_
+    L4_88 = L4_88.makeSprite
+    L5_89 = _UPVALUE1_
+    L4_88 = L4_88(L5_89, L1_85 * 0.5, {
+      img = "activity_black.png"
+    })
+    L5_89 = L4_88.setReferencePoint
+    L5_89(L4_88, display.CenterLeftReferencePoint)
+    L4_88.x = 0
+    L4_88.y = 0
+    L5_89 = L4_88.scale
+    L5_89(L4_88, 0.7, 0.7)
+    L5_89 = L3_87.insert
+    L5_89(L3_87, L4_88)
+    L5_89 = display
+    L5_89 = L5_89.newText
+    L5_89 = L5_89({
+      text = "Fetching blocked users",
+      font = _UPVALUE2_.fonts.light,
+      fontSize = 14
+    })
+    L5_89:setReferencePoint(display.CenterLeftReferencePoint)
+    L5_89.x = 22
+    L5_89.y = 0
+    L5_89:setFillColor(71, 75, 76)
+    L3_87:insert(L5_89)
+    L3_87:setReferencePoint(display.CenterLeftReferencePoint)
+    L3_87.x = 10
+    L3_87.y = L1_85 * 0.5
+  end
+  L25_26 = L9_10
+  L24_25 = L9_10.insertRow
+  L26_27 = {}
+  L26_27.height = 28
+  L26_27.onRender = L23_24
+  L27_28 = {
+    0,
+    0,
+    0,
+    0
+  }
+  L26_27.rowColor = L27_28
+  L27_28 = {
+    0,
+    0,
+    0,
+    0
+  }
+  L26_27.lineColor = L27_28
+  L24_25(L25_26, L26_27)
+  function L24_25(A0_90)
+    local L1_91, L2_92, L3_93
+    L1_91 = _UPVALUE0_
+    L1_91 = L1_91.decode
+    L2_92 = A0_90.response
+    L1_91 = L1_91(L2_92)
+    L2_92 = _UPVALUE1_
+    if L2_92 then
+      L2_92 = _UPVALUE2_
+      L3_93 = L2_92
+      L2_92 = L2_92.deleteRow
+      L2_92(L3_93, 2)
+      L2_92 = _UPVALUE2_
+      L3_93 = L2_92
+      L2_92 = L2_92.insertRow
+      L2_92(L3_93, {
+        onRender = _UPVALUE3_,
+        isCategory = true,
+        rowColor = {
+          242,
+          242,
+          243,
+          220
+        },
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        height = 20
+      })
+      L2_92 = false
+      L3_93 = #L1_91
+      for _FORV_7_ = 1, L3_93 do
+        _UPVALUE4_(L1_91[_FORV_7_], "blockedfrombefore")
+        if _UPVALUE5_ and _UPVALUE5_.udid == L1_91[_FORV_7_].udid then
+          L2_92 = true
+        end
+      end
+      if L2_92 == true then
+        _UPVALUE6_.showAlert("User blocked", "The user is already blocked.", {"Ok"})
+      elseif _UPVALUE5_ then
+        if _UPVALUE7_[_UPVALUE5_.udid] then
+          native.showAlert("Cannot block moderators", "You can not block moderators", {"Ok"})
+        else
+          _UPVALUE4_(_UPVALUE5_, "blocked")
+        end
+      end
+    end
+  end
+  L25_26 = _UPVALUE2_
+  L25_26 = L25_26.network_request
+  L26_27 = "fetch_blocked_users"
+  L27_28 = L24_25
+  L25_26(L26_27, L27_28, {udid = _UPVALUE9_})
+  function L25_26(A0_94)
+    local L1_95, L2_96, L3_97
+    L1_95 = A0_94.target
+    L1_95 = L1_95.id
+    L2_96 = native
+    L2_96 = L2_96.setKeyboardFocus
+    L3_97 = nil
+    L2_96(L3_97)
+    if L1_95 == "save" then
+      L2_96 = native
+      L2_96 = L2_96.setActivityIndicator
+      L3_97 = true
+      L2_96(L3_97)
+      L2_96 = _UPVALUE0_
+      L2_96 = L2_96.showAlert
+      L3_97 = ""
+      L2_96 = L2_96(L3_97, "Updating blocked users..", {})
+      function L3_97(A0_98)
+        _UPVALUE0_.to(_UPVALUE1_, {
+          time = 200,
+          y = _UPVALUE1_.animFrom,
+          transition = easing.outQuad,
+          onComplete = function()
+            _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+          end
+        }, true)
+        _UPVALUE0_.to(_UPVALUE3_, {
+          time = 200,
+          y = _UPVALUE3_.animFrom,
+          transition = easing.outQuad,
+          onComplete = function()
+            _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+          end
+        }, true)
+        _UPVALUE2_.cancelAlert(_UPVALUE4_)
+        native.setActivityIndicator(false)
+      end
+      _UPVALUE0_.network_request("blockusers", L3_97, {
+        blockedusers = _UPVALUE4_,
+        udid = _UPVALUE5_.udid
+      })
+    elseif L1_95 == "cancel" then
+      L2_96 = _UPVALUE1_
+      L2_96 = L2_96.to
+      L3_97 = _UPVALUE2_
+      L2_96(L3_97, {
+        time = 200,
+        y = _UPVALUE2_.animFrom,
+        transition = easing.outQuad,
+        onComplete = function()
+          _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+        end
+      }, true)
+      L2_96 = _UPVALUE1_
+      L2_96 = L2_96.to
+      L3_97 = _UPVALUE3_
+      L2_96(L3_97, {
+        time = 200,
+        y = _UPVALUE3_.animFrom,
+        transition = easing.outQuad,
+        onComplete = function()
+          _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+        end
+      }, true)
+    end
+    L2_96 = true
+    return L2_96
+  end
+  L26_27 = _UPVALUE3_
+  L26_27 = L26_27.newButton
+  L27_28 = {}
+  L27_28.sheet = {
+    default = {
+      filename = "blockIgnoreUsersSaveBtn-slice",
+      width = 6,
+      height = 6,
+      slices = 4,
+      fillColor = {
+        210,
+        213,
+        214
+      }
+    },
+    over = {
+      filename = "blockIgnoreUsersSaveBtn-over-slice",
+      width = 6,
+      height = 6,
+      slices = 4,
+      fillColor = {
+        168,
+        170,
+        171
+      }
+    }
+  }
+  L27_28.width = L7_8.width
+  L27_28.height = 40
+  L27_28.onRelease = L25_26
+  L27_28.label = "Save"
+  L27_28.fontSize = 21
+  L27_28.font = _UPVALUE0_.fonts.bold
+  L27_28.labelColor = {
+    default = {
+      71,
+      75,
+      76
+    },
+    over = {
+      50,
+      52,
+      54
+    }
+  }
+  L27_28.id = "save"
+  L26_27 = L26_27(L27_28)
+  L27_28 = L26_27.setReferencePoint
+  L27_28(L26_27, display.CenterReferencePoint)
+  L27_28 = _UPVALUE1_
+  L26_27.x = L27_28
+  L27_28 = _UPVALUE4_
+  L27_28 = L27_28((L7_8.y + L7_8.height + _H) * 0.5)
+  L26_27.y = L27_28
+  L27_28 = L4_5.insert
+  L27_28(L4_5, L26_27)
+  L27_28 = _UPVALUE3_
+  L27_28 = L27_28.newButton
+  L27_28 = L27_28({
+    top = 37,
+    left = _W - 49,
+    width = 27,
+    height = 29,
+    default = "crossclose.png",
+    over = "crossclose-over.png",
+    onRelease = L25_26,
+    id = "cancel"
+  })
+  L4_5:insert(L27_28)
+  L18_19.animFrom = L18_19.y + _H
+  L4_5.animFrom = L4_5.y + _H
+  _UPVALUE10_.from(L18_19, {
+    time = 200,
+    y = L18_19.animFrom,
+    transition = easing.outQuad
+  })
+  _UPVALUE10_.from(L4_5, {
+    time = 200,
+    y = L4_5.animFrom,
+    transition = easing.outQuad
+  }, true)
+  return L4_5
+end
+return {}

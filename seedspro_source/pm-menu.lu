@@ -1,0 +1,1208 @@
+local L0_0
+L0_0 = module
+L0_0((...), package.seeall)
+L0_0 = require
+L0_0 = L0_0("openGLTextfield")
+function new()
+  local L0_1, L1_2, L2_3, L3_4, L4_5, L5_6, L6_7, L7_8, L8_9, L9_10, L10_11, L11_12, L12_13, L13_14, L14_15, L15_16, L16_17, L17_18, L18_19, L19_20, L20_21, L21_22, L22_23, L23_24, L24_25, L25_26, L26_27, L27_28, L28_29, L29_30, L30_31, L31_32, L32_33, L33_34, L34_35, L35_36, L36_37, L37_38, L38_39, L39_40, L40_41, L41_42, L42_43, L43_44, L44_45, L45_46, L46_47, L47_48, L48_49, L49_50, L50_51, L51_52, L52_53, L53_54, L54_55, L55_56
+  L0_1 = display
+  L0_1 = L0_1.newGroup
+  L0_1 = L0_1()
+  L1_2 = display
+  L1_2 = L1_2.newGroup
+  L1_2 = L1_2()
+  L3_4 = L0_1
+  L2_3 = L0_1.insert
+  L4_5 = L1_2
+  L2_3(L3_4, L4_5)
+  L2_3 = display
+  L2_3 = L2_3.newGroup
+  L2_3 = L2_3()
+  L4_5 = L1_2
+  L3_4 = L1_2.insert
+  L5_6 = L2_3
+  L3_4(L4_5, L5_6)
+  L3_4 = display
+  L3_4 = L3_4.newGroup
+  L3_4 = L3_4()
+  L5_6 = L1_2
+  L4_5 = L1_2.insert
+  L6_7 = L3_4
+  L4_5(L5_6, L6_7)
+  L4_5 = display
+  L4_5 = L4_5.newGroup
+  L4_5 = L4_5()
+  L6_7 = L1_2
+  L5_6 = L1_2.insert
+  L7_8 = L4_5
+  L5_6(L6_7, L7_8)
+  L5_6 = display
+  L5_6 = L5_6.contentCenterX
+  L6_7 = display
+  L6_7 = L6_7.contentCenterY
+  L7_8 = _UPVALUE0_
+  L7_8 = L7_8.getAppType
+  L7_8 = L7_8()
+  L8_9 = true
+  L9_10 = false
+  L10_11 = _UPVALUE1_
+  L10_11 = L10_11.pm_amount_limit
+  L11_12 = _UPVALUE1_
+  L11_12 = L11_12.UIDefaultColor
+  L12_13 = _UPVALUE0_
+  L12_13 = L12_13.getScriptFile
+  L12_13 = L12_13()
+  L13_14 = _UPVALUE1_
+  L13_14 = L13_14.nickname
+  L14_15 = _UPVALUE1_
+  L14_15 = L14_15.imgSuff
+  L15_16 = _UPVALUE0_
+  L15_16 = L15_16.getPadding
+  L15_16 = L15_16()
+  L16_17 = _UPVALUE0_
+  L16_17 = L16_17.getSceneProperties
+  L16_17 = L16_17()
+  L17_18 = _UPVALUE1_
+  L17_18 = L17_18.showAds
+  L18_19 = math
+  L18_19 = L18_19.abs
+  L19_20 = L16_17.searchString
+  L20_21 = L16_17.prevScene
+  L21_22 = L16_17.listPos
+  L22_23 = L16_17.start
+  L23_24 = L16_17.page
+  L24_25 = L16_17.taps
+  L25_26 = L16_17.pop
+  L26_27, L27_28 = nil, nil
+  L28_29 = 0
+  L29_30 = 0
+  L30_31 = _UPVALUE1_
+  L30_31 = L30_31.session
+  L30_31 = L30_31 + 1
+  L31_32 = _UPVALUE1_
+  L31_32.session = L30_31
+  L31_32 = {}
+  L32_33 = {}
+  L33_34 = {}
+  L34_35 = {}
+  L35_36 = graphics
+  L35_36 = L35_36.newMask
+  L36_37 = "mask-"
+  L37_38 = _W
+  L38_39 = "x"
+  L39_40 = _H
+  L40_41 = ".png"
+  L36_37 = L36_37 .. L37_38 .. L38_39 .. L39_40 .. L40_41
+  L37_38 = system
+  L37_38 = L37_38.TemporaryDirectory
+  L35_36 = L35_36(L36_37, L37_38)
+  L37_38 = L1_2
+  L36_37 = L1_2.setMask
+  L38_39 = L35_36
+  L36_37(L37_38, L38_39)
+  L1_2.maskX = L5_6
+  L1_2.maskY = L6_7
+  L36_37 = _UPVALUE1_
+  L36_37 = L36_37.contentScaleX
+  L1_2.maskScaleX = L36_37
+  L36_37 = _UPVALUE1_
+  L36_37 = L36_37.contentScaleY
+  L1_2.maskScaleY = L36_37
+  L36_37 = _UPVALUE0_
+  L36_37 = L36_37.makeBlurryBg
+  L36_37 = L36_37()
+  L38_39 = L36_37
+  L37_38 = L36_37.addEventListener
+  L39_40 = "touch"
+  function L40_41()
+    local L0_57, L1_58
+    L0_57 = true
+    return L0_57
+  end
+  L37_38(L38_39, L39_40, L40_41)
+  L38_39 = L2_3
+  L37_38 = L2_3.insert
+  L39_40 = L36_37
+  L37_38(L38_39, L39_40)
+  L37_38 = _UPVALUE2_
+  L37_38 = L37_38.createSideMenu
+  L38_39 = L1_2
+  L37_38 = L37_38(L38_39)
+  L39_40 = L0_1
+  L38_39 = L0_1.insert
+  L40_41 = L37_38
+  L38_39(L39_40, L40_41)
+  L0_1.side_menu = L37_38
+  L39_40 = L37_38
+  L38_39 = L37_38.toBack
+  L38_39(L39_40)
+  function L38_39(A0_59)
+    _UPVALUE0_.animateToolbar(A0_59, {
+      toolbar = _UPVALUE1_.toolbar,
+      list = _UPVALUE2_.list
+    })
+    return true
+  end
+  L39_40 = _UPVALUE3_
+  L39_40 = L39_40.newTableView
+  L40_41 = {}
+  L40_41.top = 96
+  L41_42 = _W
+  L40_41.width = L41_42
+  L41_42 = _H
+  L41_42 = L41_42 - 96
+  L40_41.height = L41_42
+  L41_42 = {
+    L42_43,
+    L43_44,
+    L44_45,
+    L45_46
+  }
+  L42_43 = 0
+  L43_44 = 0
+  L44_45 = 0
+  L45_46 = 0
+  L40_41.bgColor = L41_42
+  L40_41.listener = L38_39
+  L39_40 = L39_40(L40_41)
+  L3_4.list = L39_40
+  L41_42 = L3_4
+  L40_41 = L3_4.insert
+  L42_43 = L39_40
+  L40_41(L41_42, L42_43)
+  function L40_41(A0_60)
+    _UPVALUE0_:scrollToY(A0_60, 0)
+  end
+  L39_40.scrollList = L40_41
+  function L40_41()
+    return _UPVALUE0_:getContentPosition() - _UPVALUE1_.toppadding
+  end
+  L39_40.getPos = L40_41
+  function L40_41(A0_61)
+    local L1_62, L2_63, L3_64, L4_65, L5_66
+    L1_62 = A0_61.target
+    L1_62 = L1_62.height
+    L2_63 = A0_61.view
+    L3_64 = display
+    L3_64 = L3_64.newGroup
+    L3_64 = L3_64()
+    L5_66 = L2_63
+    L4_65 = L2_63.insert
+    L4_65(L5_66, L3_64)
+    L4_65 = _UPVALUE0_
+    L4_65 = L4_65.makeSprite
+    L5_66 = 0
+    L4_65 = L4_65(L5_66, 0)
+    L5_66 = L4_65.setReferencePoint
+    L5_66(L4_65, display.CenterLeftReferencePoint)
+    L4_65.x = 0
+    L4_65.y = 0
+    L5_66 = L3_64.insert
+    L5_66(L3_64, L4_65)
+    L5_66 = display
+    L5_66 = L5_66.newText
+    L5_66 = L5_66({
+      text = "Fetching more",
+      font = _UPVALUE1_.fonts.light,
+      fontSize = 16
+    })
+    L5_66:setReferencePoint(display.CenterLeftReferencePoint)
+    L5_66.x = L4_65.width + 7
+    L5_66.y = 0
+    L5_66:setFillColor(255, 255, 255)
+    L3_64:insert(L5_66)
+    L3_64:setReferencePoint(display.CenterReferencePoint)
+    L3_64.x = _UPVALUE2_
+    L3_64.y = L1_62 * 0.5
+  end
+  function L41_42()
+    _UPVALUE0_:insertRow({
+      onRender = _UPVALUE1_,
+      height = 35,
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      lineColor = {
+        0,
+        0,
+        0,
+        0
+      }
+    })
+  end
+  L39_40.displayFetchingMore = L41_42
+  L41_42 = _UPVALUE0_
+  L41_42 = L41_42.makeToolbar
+  L42_43 = "Messages"
+  L41_42 = L41_42(L42_43)
+  L4_5.toolbar = L41_42
+  L43_44 = L4_5
+  L42_43 = L4_5.insert
+  L44_45 = L41_42
+  L42_43(L43_44, L44_45)
+  if not L20_21 then
+    L42_43 = _UPVALUE2_
+    L42_43 = L42_43.createMenuButton
+    L43_44 = L1_2
+    L42_43 = L42_43(L43_44)
+    L43_44 = L41_42.contents
+    L44_45 = L43_44
+    L43_44 = L43_44.insert
+    L45_46 = L42_43
+    L43_44(L44_45, L45_46)
+  else
+    function L42_43(A0_67)
+      local L1_68
+      L1_68 = _UPVALUE0_
+      L1_68 = L1_68.remove
+      L1_68({
+        "searchString",
+        "prevScene",
+        "listPos",
+        "start",
+        "page",
+        "pop"
+      })
+      L1_68 = pageTable
+      if L1_68 then
+        L1_68 = _UPVALUE1_
+        if L1_68 == pageTable[1].taps then
+          L1_68 = _UPVALUE0_
+          L1_68 = L1_68.remove
+          L1_68({"pageTable"})
+        end
+      end
+      L1_68 = _UPVALUE0_
+      L1_68 = L1_68.update
+      L1_68({
+        taps = _UPVALUE1_ - 1
+      })
+      L1_68 = "toRightNew"
+      if _UPVALUE2_ == "seedlist" then
+        L1_68 = "toBottom"
+      end
+      _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+      director:changeScene(_UPVALUE2_, L1_68)
+      return true
+    end
+    L43_44 = _UPVALUE3_
+    L43_44 = L43_44.newButton
+    L44_45 = {}
+    L44_45.width = 50
+    L44_45.height = 50
+    L44_45.default = "back.png"
+    L44_45.over = "back-over.png"
+    L44_45.onRelease = L42_43
+    L43_44 = L43_44(L44_45)
+    L45_46 = L43_44
+    L44_45 = L43_44.setReferencePoint
+    L46_47 = display
+    L46_47 = L46_47.CenterLeftReferencePoint
+    L44_45(L45_46, L46_47)
+    L43_44.x = -1
+    L44_45 = L41_42.yCenter
+    L43_44.y = L44_45
+    L44_45 = L41_42.contents
+    L45_46 = L44_45
+    L44_45 = L44_45.insert
+    L46_47 = L43_44
+    L44_45(L45_46, L46_47)
+  end
+  function L42_43(A0_69)
+    local L1_70, L2_71, L3_72, L4_73, L5_74, L6_75, L7_76, L8_77, L9_78, L10_79, L11_80, L12_81, L13_82, L14_83, L15_84, L16_85
+    L1_70 = _UPVALUE0_
+    L1_70 = L1_70 + 1
+    _UPVALUE0_ = L1_70
+    L1_70 = ""
+    L2_71 = 30
+    L3_72 = 0
+    L4_73 = {}
+    L5_74 = display
+    L5_74 = L5_74.newGroup
+    L5_74 = L5_74()
+    L6_75 = _UPVALUE1_
+    L7_76 = L6_75
+    L6_75 = L6_75.insert
+    L8_77 = L5_74
+    L6_75(L7_76, L8_77)
+    L6_75 = _UPVALUE0_
+    L5_74.tips = L6_75
+    L6_75 = display
+    L6_75 = L6_75.newImageRect
+    L7_76 = "pm-followers-bg.png"
+    L8_77 = _W
+    L9_78 = _H
+    L6_75 = L6_75(L7_76, L8_77, L9_78)
+    L7_76 = _UPVALUE2_
+    L6_75.x = L7_76
+    L7_76 = _UPVALUE3_
+    L6_75.y = L7_76
+    L8_77 = L6_75
+    L7_76 = L6_75.addEventListener
+    L9_78 = "touch"
+    function L10_79()
+      local L0_86, L1_87
+      L0_86 = true
+      return L0_86
+    end
+    L7_76(L8_77, L9_78, L10_79)
+    L8_77 = L5_74
+    L7_76 = L5_74.insert
+    L9_78 = L6_75
+    L7_76(L8_77, L9_78)
+    function L7_76(A0_88)
+      _UPVALUE0_ = _UPVALUE0_ + 1
+      _UPVALUE1_.to(_UPVALUE2_, {
+        time = 200,
+        y = _H,
+        transition = easing.inOutQuad,
+        onComplete = function()
+          _UPVALUE0_ = _UPVALUE1_.delete(_UPVALUE0_)
+        end
+      }, true)
+      return true
+    end
+    L8_77 = _UPVALUE6_
+    L8_77 = L8_77.newButton
+    L9_78 = {}
+    L9_78.top = 25
+    L9_78.left = 10
+    L9_78.width = 52
+    L9_78.height = 30
+    L9_78.default = "cancel.png"
+    L9_78.over = "cancel-over.png"
+    L9_78.onRelease = L7_76
+    L8_77 = L8_77(L9_78)
+    L10_79 = L5_74
+    L9_78 = L5_74.insert
+    L11_80 = L8_77
+    L9_78(L10_79, L11_80)
+    function L9_78(A0_89)
+      if _UPVALUE0_ <= 0 then
+        _UPVALUE1_.showAlert("No users selected", "You have to pick at least one user to PM with.", {"Ok"})
+      else
+        native.setActivityIndicator(true)
+        _UPVALUE1_.network_request("get_pm_session", {
+          success = function(A0_90)
+            native.setActivityIndicator(false)
+            native.cancelAlert(_UPVALUE1_)
+            _UPVALUE2_.update({searchString = _UPVALUE3_})
+            _UPVALUE2_.insert({
+              prevScene = "pm-menu",
+              pmsession = _UPVALUE0_.decode(A0_90.response),
+              start = 0,
+              page = "pm-messages",
+              pop = 200
+            })
+            _UPVALUE2_.dispatchEvent("clearLocalTimersAndListeners")
+            director:changeScene("pm-messages", "toBottom")
+          end,
+          failed = function()
+            native.setActivityIndicator(false)
+            native.cancelAlert(_UPVALUE0_)
+          end
+        }, {
+          users = _UPVALUE4_,
+          udid = _UPVALUE5_.udid
+        })
+      end
+    end
+    L10_79 = _UPVALUE6_
+    L10_79 = L10_79.newButton
+    L11_80 = {}
+    L11_80.top = 26
+    L12_81 = _W
+    L12_81 = L12_81 - 62
+    L11_80.left = L12_81
+    L11_80.width = 52
+    L11_80.height = 30
+    L11_80.default = "done.png"
+    L11_80.over = "done-over.png"
+    L11_80.onRelease = L9_78
+    L10_79 = L10_79(L11_80)
+    L12_81 = L5_74
+    L11_80 = L5_74.insert
+    L13_82 = L10_79
+    L11_80(L12_81, L13_82)
+    L11_80 = display
+    L11_80 = L11_80.newText
+    L12_81 = {}
+    L12_81.text = "Select users to PM"
+    L13_82 = _UPVALUE9_
+    L13_82 = L13_82.fonts
+    L13_82 = L13_82.bold
+    L12_81.font = L13_82
+    L12_81.fontSize = 15
+    L11_80 = L11_80(L12_81)
+    L13_82 = L11_80
+    L12_81 = L11_80.setReferencePoint
+    L14_83 = display
+    L14_83 = L14_83.TopCenterReferencePoint
+    L12_81(L13_82, L14_83)
+    L12_81 = _UPVALUE2_
+    L11_80.x = L12_81
+    L11_80.y = 23
+    L13_82 = L11_80
+    L12_81 = L11_80.setFillColor
+    L14_83 = 255
+    L15_84 = 255
+    L16_85 = 255
+    L12_81(L13_82, L14_83, L15_84, L16_85, 230)
+    L13_82 = L5_74
+    L12_81 = L5_74.insert
+    L14_83 = L11_80
+    L12_81(L13_82, L14_83)
+    L12_81 = display
+    L12_81 = L12_81.newText
+    L13_82 = {}
+    L13_82.text = "Remember Group PM requires all participants to follow each other"
+    L13_82.width = 180
+    L13_82.height = 0
+    L14_83 = _UPVALUE9_
+    L14_83 = L14_83.fonts
+    L14_83 = L14_83.light
+    L13_82.font = L14_83
+    L13_82.fontSize = 8
+    L13_82.align = "center"
+    L12_81 = L12_81(L13_82)
+    L14_83 = L12_81
+    L13_82 = L12_81.setReferencePoint
+    L15_84 = display
+    L15_84 = L15_84.TopCenterReferencePoint
+    L13_82(L14_83, L15_84)
+    L13_82 = _UPVALUE2_
+    L12_81.x = L13_82
+    L12_81.y = 40
+    L14_83 = L12_81
+    L13_82 = L12_81.setFillColor
+    L15_84 = 255
+    L16_85 = 255
+    L13_82(L14_83, L15_84, L16_85, 255, 230)
+    L14_83 = L5_74
+    L13_82 = L5_74.insert
+    L15_84 = L12_81
+    L13_82(L14_83, L15_84)
+    L13_82 = display
+    L13_82 = L13_82.newGroup
+    L13_82 = L13_82()
+    L15_84 = L5_74
+    L14_83 = L5_74.insert
+    L16_85 = L13_82
+    L14_83(L15_84, L16_85)
+    L14_83 = _UPVALUE5_
+    L14_83 = L14_83.makeSprite
+    L15_84 = _UPVALUE2_
+    L16_85 = 112
+    L14_83 = L14_83(L15_84, L16_85)
+    L16_85 = L13_82
+    L15_84 = L13_82.insert
+    L15_84(L16_85, L14_83)
+    L15_84 = display
+    L15_84 = L15_84.newText
+    L16_85 = {}
+    L16_85.text = "Fetching mutual followers"
+    L16_85.font = _UPVALUE9_.fonts.light
+    L16_85.fontSize = 12
+    L15_84 = L15_84(L16_85)
+    L16_85 = L15_84.setReferencePoint
+    L16_85(L15_84, display.CenterReferencePoint)
+    L16_85 = _UPVALUE2_
+    L15_84.x = L16_85
+    L16_85 = L14_83.y
+    L16_85 = L16_85 + L14_83.height
+    L15_84.y = L16_85
+    L16_85 = L13_82.insert
+    L16_85(L13_82, L15_84)
+    function L16_85(A0_91)
+      local L1_92, L2_93
+      L1_92 = _UPVALUE0_
+      L1_92 = L1_92.tips
+      if L1_92 == L2_93 then
+        L1_92 = _UPVALUE2_
+        L1_92 = L1_92.decode
+        L1_92 = L1_92(L2_93)
+        if L2_93 then
+          _UPVALUE3_ = L2_93
+        end
+        L2_93(false)
+        for _FORV_5_ = 1, #L1_92 do
+          L1_92[_FORV_5_].available = "yes"
+          L1_92[_FORV_5_].version = tonumber(L1_92[_FORV_5_].version)
+        end
+        _UPVALUE0_:insert(L2_93)
+        function L2_93.populate()
+          _UPVALUE0_:insertRow({
+            lineColor = {
+              0,
+              0,
+              0,
+              0
+            },
+            rowColor = {
+              0,
+              0,
+              0,
+              0
+            },
+            onRender = _UPVALUE1_,
+            height = 60,
+            id = _UPVALUE2_
+          })
+          for _FORV_4_ = 1, #_UPVALUE3_ do
+          end
+          for _FORV_4_ = 1, #_UPVALUE3_ do
+            if _UPVALUE2_ == "" or string.find(_UPVALUE3_[_FORV_4_].nickname:lower(), _UPVALUE2_:lower()) then
+              if ((_UPVALUE2_ == "" or string.find(_UPVALUE3_[_FORV_4_].nickname:lower(), _UPVALUE2_:lower())) and 0 + 1) == 1 then
+                _UPVALUE3_[_FORV_4_].bgimg = "listrow4"
+              elseif _FORV_4_ == 1 then
+                _UPVALUE3_[_FORV_4_].bgimg = "listrow1"
+              elseif _FORV_4_ == ((_UPVALUE2_ == "" or string.find(_UPVALUE3_[_FORV_4_].nickname:lower(), _UPVALUE2_:lower())) and 0 + 1) then
+                _UPVALUE3_[_FORV_4_].bgimg = "listrow3"
+              else
+                _UPVALUE3_[_FORV_4_].bgimg = "listrow2"
+              end
+              _UPVALUE0_:insertRow({
+                lineColor = {
+                  0,
+                  0,
+                  0,
+                  0
+                },
+                rowColor = {
+                  0,
+                  0,
+                  0,
+                  0
+                },
+                onRender = _UPVALUE4_,
+                onEvent = _UPVALUE5_,
+                height = 45,
+                id = _UPVALUE3_[_FORV_4_]
+              })
+            end
+          end
+          _FOR_()
+        end
+        L2_93.populate()
+      end
+    end
+    _UPVALUE5_.network_request("get_mutual_followers", L16_85, {
+      udid = _UPVALUE9_.udid
+    })
+    _UPVALUE4_.from(L5_74, {
+      time = 200,
+      y = _H,
+      transition = easing.inOutQuad
+    }, true)
+    return true
+  end
+  L43_44 = _UPVALUE3_
+  L43_44 = L43_44.newButton
+  L44_45 = {}
+  L44_45.width = 50
+  L44_45.height = 50
+  L44_45.default = "composenewpm.png"
+  L44_45.over = "composenewpm-over.png"
+  L44_45.onRelease = L42_43
+  L43_44 = L43_44(L44_45)
+  L45_46 = L43_44
+  L44_45 = L43_44.setReferencePoint
+  L46_47 = display
+  L46_47 = L46_47.TopRightReferencePoint
+  L44_45(L45_46, L46_47)
+  L44_45 = display
+  L44_45 = L44_45.contentWidth
+  L44_45 = L44_45 + 2
+  L43_44.x = L44_45
+  L43_44.y = 15
+  L44_45 = L41_42.contents
+  L45_46 = L44_45
+  L44_45 = L44_45.insert
+  L46_47 = L43_44
+  L44_45(L45_46, L46_47)
+  L44_45 = _UPVALUE0_
+  L45_46 = L44_45
+  L44_45 = L44_45.createSubMenu
+  L46_47 = 0
+  L47_48 = 64
+  L48_49 = category
+  L49_50 = platform
+  L50_51 = L19_20
+  L51_52 = false
+  L52_53 = sort
+  L53_54 = {}
+  L53_54.page = L23_24
+  L54_55 = pageTable
+  L53_54.pageTable = L54_55
+  L53_54.taps = L24_25
+  L53_54.list = L39_40
+  L53_54.showOnlySearchField = true
+  L45_46 = L44_45(L45_46, L46_47, L47_48, L48_49, L49_50, L50_51, L51_52, L52_53, L53_54)
+  L46_47 = L41_42.bg
+  L47_48 = L46_47
+  L46_47 = L46_47.insert
+  L48_49 = L44_45
+  L46_47(L47_48, L48_49)
+  L46_47 = L41_42.contents
+  L47_48 = L46_47
+  L46_47 = L46_47.insert
+  L48_49 = L45_46
+  L46_47(L47_48, L48_49)
+  function L46_47(A0_94)
+    local L1_95, L2_96, L3_97, L4_98
+    L1_95 = A0_94.target
+    L1_95 = L1_95.height
+    L2_96 = A0_94.view
+    L3_97 = display
+    L3_97 = L3_97.newText
+    L4_98 = {}
+    L4_98.text = "Fetching messages"
+    L4_98.font = _UPVALUE0_.fonts.regular
+    L4_98.fontSize = 16
+    L3_97 = L3_97(L4_98)
+    L4_98 = L3_97.setReferencePoint
+    L4_98(L3_97, display.CenterReferencePoint)
+    L4_98 = _UPVALUE1_
+    L4_98 = L4_98 + 22
+    L3_97.x = L4_98
+    L4_98 = L1_95 * 0.5
+    L3_97.y = L4_98
+    L4_98 = L3_97.setFillColor
+    L4_98(L3_97, 255, 255, 255)
+    L4_98 = L2_96.insert
+    L4_98(L2_96, L3_97)
+    L4_98 = _UPVALUE2_
+    L4_98 = L4_98.makeSprite
+    L4_98 = L4_98(_UPVALUE1_ - L3_97.width * 0.5 + 5, L1_95 * 0.5)
+    L2_96:insert(L4_98)
+  end
+  L48_49 = L39_40
+  L47_48 = L39_40.insertRow
+  L49_50 = {}
+  L49_50.onRender = L46_47
+  L49_50.height = 35
+  L50_51 = {
+    L51_52,
+    L52_53,
+    L53_54,
+    L54_55
+  }
+  L51_52 = 0
+  L52_53 = 0
+  L53_54 = 0
+  L54_55 = 0
+  L49_50.rowColor = L50_51
+  L50_51 = {
+    L51_52,
+    L52_53,
+    L53_54,
+    L54_55
+  }
+  L51_52 = 255
+  L52_53 = 255
+  L53_54 = 255
+  L54_55 = 0
+  L49_50.lineColor = L50_51
+  L47_48(L48_49, L49_50)
+  function L47_48()
+    _UPVALUE2_:insertRow({
+      onRender = function(A0_99)
+        local L1_100, L2_101, L3_102
+        L1_100 = A0_99.view
+        L2_101 = A0_99.target
+        L2_101 = L2_101.height
+        L3_102 = display
+        L3_102 = L3_102.newText
+        L3_102 = L3_102({
+          text = "No messages",
+          font = _UPVALUE0_.fonts.regular,
+          fontSize = 16
+        })
+        L3_102:setReferencePoint(display.CenterReferencePoint)
+        L3_102.x = _UPVALUE1_
+        L3_102.y = L2_101 * 0.5
+        L3_102:setFillColor(255, 255, 255)
+        L1_100:insert(L3_102)
+      end,
+      height = 40,
+      rowColor = {
+        0,
+        0,
+        0,
+        0
+      },
+      lineColor = {
+        255,
+        255,
+        255,
+        0
+      }
+    })
+  end
+  function L48_49(A0_103)
+    local L1_104, L2_105, L3_106, L4_107, L5_108, L6_109, L7_110
+    L1_104 = A0_103.background
+    L2_105 = A0_103.target
+    L2_105 = L2_105.pmsession
+    L3_106 = A0_103.phase
+    L4_107 = A0_103.target
+    L4_107 = L4_107.texts
+    L5_108 = A0_103.index
+    L6_109 = A0_103.id
+    L7_110 = _UPVALUE0_
+    L7_110 = L7_110.content
+    L7_110 = L7_110.rows
+    L7_110 = L7_110[L5_108]
+    L7_110 = L7_110.view
+    if L3_106 == "press" then
+      L1_104:setFillColor(217, 217, 217)
+      for _FORV_11_, _FORV_12_ in pairs(L4_107) do
+        _FORV_12_:setFillColor(255, 255, 255)
+      end
+    elseif L3_106 == "swipeLeft" or L3_106 == "swipeRight" then
+      if L7_110.animateLeft then
+        _UPVALUE1_.cancel(L7_110.animateLeft)
+        L7_110.animateLeft = nil
+      end
+      L1_104:setFillColor(0, 0, 0, 0)
+      for _FORV_11_, _FORV_12_ in pairs(L4_107) do
+        _FORV_12_:setFillColor(unpack(_FORV_12_.color))
+      end
+      if L3_106 == "swipeLeft" and L6_109.hasAnimatedLeft == false then
+        if L7_110 and L7_110._proxy then
+          L7_110.deleteBtn.isVisible = true
+          L7_110.animateLeft = _UPVALUE1_.to(L7_110, {
+            time = 200,
+            x = L7_110.x - L7_110.delete_width,
+            transition = easing.inOutQuad,
+            onComplete = function()
+              local L1_111
+              L1_111 = _UPVALUE0_
+              L1_111.animateLeft = nil
+            end
+          }, true)
+        end
+        L6_109.hasAnimatedLeft = true
+      elseif L3_106 == "swipeRight" and L6_109.hasAnimatedLeft == true then
+        if L7_110 and L7_110._proxy then
+          L7_110.animateLeft = _UPVALUE1_.to(L7_110, {
+            time = 200,
+            x = 0,
+            transition = easing.inOutQuad,
+            onComplete = function()
+              local L0_112, L1_113
+              L0_112 = _UPVALUE0_
+              L0_112 = L0_112.deleteBtn
+              L0_112.isVisible = false
+              L0_112 = _UPVALUE0_
+              L0_112.animateLeft = nil
+            end
+          }, true)
+        end
+        L6_109.hasAnimatedLeft = false
+      end
+    elseif L3_106 == "release" or L3_106 == "tap" then
+      L1_104:setFillColor(217, 217, 217)
+      for _FORV_11_, _FORV_12_ in pairs(L4_107) do
+        _FORV_12_:setFillColor(255, 255, 255)
+      end
+      timer.performWithDelay(100, function()
+        _UPVALUE0_:setFillColor(0, 0, 0, 0)
+        for _FORV_3_, _FORV_4_ in pairs(_UPVALUE1_) do
+          _FORV_4_:setFillColor(unpack(_FORV_4_.color))
+        end
+      end)
+      _UPVALUE2_.update({searchString = _UPVALUE3_})
+      _UPVALUE2_.insert({
+        prevScene = "pm-menu",
+        pmsession = L6_109.pmsession,
+        start = 0,
+        page = "pm-messages",
+        pop = 200
+      })
+      _UPVALUE2_.dispatchEvent("clearLocalTimersAndListeners")
+      director:changeScene("pm-messages", "overFromBottom")
+    end
+    return true
+  end
+  function L49_50(A0_114)
+    local L1_115, L2_116, L3_117
+    L1_115 = A0_114.phase
+    L2_116 = A0_114.target
+    L2_116 = L2_116.index
+    L3_117 = A0_114.target
+    L3_117 = L3_117.id
+    if L1_115 == "moved" then
+      if _UPVALUE0_(A0_114.x - A0_114.xStart) > 2 or _UPVALUE0_(A0_114.y - A0_114.yStart) > 2 then
+        _UPVALUE1_:takeFocus(A0_114)
+      end
+    elseif L1_115 == "release" or L1_115 == "cancelled" then
+      _UPVALUE2_.to(A0_114.target.parent, {
+        time = 200,
+        x = A0_114.target.parent.x - _W,
+        transition = easing.inOutQuad,
+        onComplete = function()
+          _UPVALUE0_:deleteRow(_UPVALUE1_)
+          for _FORV_3_ = _UPVALUE1_, #_UPVALUE0_.content.rows do
+            if _UPVALUE0_.content.rows[_FORV_3_].view then
+              _UPVALUE0_.content.rows[_FORV_3_].view.deleteBtn.id = _UPVALUE0_.content.rows[_FORV_3_].id
+              _UPVALUE0_.content.rows[_FORV_3_].view.deleteBtn.index = _FORV_3_
+            end
+          end
+          if #_FOR_.content.rows == 0 then
+            _UPVALUE2_()
+          end
+        end
+      }, true)
+      _UPVALUE4_.network_request("delete_pm_session", nil, {
+        nickname = _UPVALUE5_.nickname,
+        session = L3_117.pmsession.sessionid,
+        rowid = L3_117.pmsession.rowid,
+        type = L3_117.pmsession.sessionType,
+        udid = _UPVALUE5_.udid
+      })
+    end
+    return true
+  end
+  L50_51 = graphics
+  L50_51 = L50_51.newMask
+  L51_52 = "mask-avatar3_5.png"
+  L50_51 = L50_51(L51_52)
+  function L51_52(A0_118)
+    local L1_119, L2_120, L3_121, L4_122, L5_123, L6_124, L7_125, L8_126, L9_127, L10_128, L11_129, L12_130, L13_131, L14_132, L15_133, L16_134, L17_135
+    L1_119 = A0_118.target
+    L1_119 = L1_119.height
+    L2_120 = L1_119 * 0.5
+    L3_121 = A0_118.view
+    L3_121.delete_width = 80
+    L4_122 = L1_119 + 1
+    L3_121.delete_height = L4_122
+    L3_121.hasAnimatedLeft = false
+    L4_122 = A0_118.index
+    L5_123 = A0_118.id
+    L6_124 = L5_123.pmsession
+    L7_125 = nil
+    L8_126 = L6_124.sessionName
+    if L8_126 == "" then
+      L7_125 = L6_124.nicknames
+    else
+      L7_125 = L6_124.sessionName
+    end
+    L8_126 = _UPVALUE0_
+    L8_126 = L8_126.makeAvatar
+    L9_127 = {}
+    L9_127.scale = 3.5
+    L10_128 = L5_123.firstAvatar
+    L9_127.avatar = L10_128
+    L8_126 = L8_126(L9_127)
+    L10_128 = L8_126
+    L9_127 = L8_126.setReferencePoint
+    L11_129 = display
+    L11_129 = L11_129.CenterLeftReferencePoint
+    L9_127(L10_128, L11_129)
+    L8_126.x = 8
+    L8_126.y = L2_120
+    L10_128 = L8_126
+    L9_127 = L8_126.setMask
+    L11_129 = _UPVALUE1_
+    L9_127(L10_128, L11_129)
+    L8_126.maskScaleX = 0.5
+    L8_126.maskScaleY = 0.5
+    L9_127 = L8_126.isFromImage
+    if L9_127 == false then
+      L9_127 = L8_126.width
+      L9_127 = L9_127 * 0.5
+      L8_126.maskX = L9_127
+      L9_127 = L8_126.height
+      L9_127 = L9_127 * 0.5
+      L8_126.maskY = L9_127
+    end
+    L10_128 = L3_121
+    L9_127 = L3_121.insert
+    L11_129 = L8_126
+    L9_127(L10_128, L11_129)
+    L9_127 = {}
+    L10_128 = A0_118.target
+    L10_128.texts = L9_127
+    L10_128 = ""
+    L11_129 = 0
+    for L15_133 in L12_130(L13_131, L14_132) do
+      L11_129 = L11_129 + 1
+      if L11_129 == 25 then
+        L17_135 = "..."
+        L10_128 = L16_134 .. L17_135
+        break
+      else
+        L17_135 = L15_133
+        L10_128 = L16_134 .. L17_135
+      end
+    end
+    L13_131.text = L10_128
+    L13_131.font = L14_132
+    L13_131.fontSize = 14
+    L9_127.users = L12_130
+    L12_130(L13_131, L14_132)
+    L12_130.x = 44
+    L12_130.y = L13_131
+    L12_130.color = L13_131
+    L17_135 = L14_132(L15_133)
+    L12_130(L13_131, L14_132, L15_133, L16_134, L17_135, L14_132(L15_133))
+    L12_130(L13_131, L14_132)
+    if L13_131 == "closed" then
+    elseif L13_131 == "newmessage" then
+    elseif L13_131 == "inviteduser" then
+    elseif L13_131 == "" then
+      if L13_131 ~= "" then
+        for L17_135 in L14_132(L15_133, L16_134) do
+          if L13_131 == 55 then
+            break
+          else
+          end
+        end
+      end
+    end
+    L14_132.text = L12_130
+    L14_132.font = L15_133
+    L14_132.fontSize = 10
+    L9_127.status = L13_131
+    L13_131(L14_132, L15_133)
+    L13_131.x = 44
+    L13_131.y = L14_132
+    L17_135 = 255
+    L13_131(L14_132, L15_133, L16_134, L17_135, 210)
+    L17_135 = 255
+    L13_131.color = L14_132
+    L13_131(L14_132, L15_133)
+    if L13_131 == "closed" then
+      L8_126.alpha = 0.6
+      L13_131.alpha = 0.6
+      L13_131.alpha = 0.6
+    end
+    L17_135 = L3_121.delete_width
+    L17_135 = 1
+    L17_135 = 255
+    L14_132(L15_133, L16_134, L17_135, 255, 50)
+    L14_132(L15_133, L16_134)
+    L15_133.id = L5_123
+    L15_133.width = L16_134
+    L15_133.height = L16_134
+    L15_133.default = "pm_deleterow.png"
+    L15_133.over = "pm_deleterow-over.png"
+    L15_133.onEvent = L16_134
+    L3_121.deleteBtn = L14_132
+    L14_132(L15_133, L16_134)
+    L14_132.x = L15_133
+    L14_132.y = L15_133
+    L14_132.isVisible = false
+    L14_132.index = L4_122
+    L14_132(L15_133, L16_134)
+    if L14_132 ~= "newmessage" then
+    elseif L14_132 == "inviteduser" then
+      L17_135 = 181
+      L14_132(L15_133, L16_134, L17_135, 50)
+      L17_135 = 181
+      L14_132.color = L15_133
+      L15_133()
+    end
+    if L14_132 == true then
+      L3_121.x = L14_132
+      L14_132.isVisible = true
+    end
+  end
+  function L52_53(A0_136)
+    local L1_137, L2_138, L3_139
+    L1_137 = _UPVALUE0_
+    L1_137 = L1_137.decode
+    L2_138 = A0_136.response
+    L1_137 = L1_137(L2_138)
+    L2_138 = #L1_137
+    L2_138 = L1_137[L2_138]
+    L3_139 = _UPVALUE1_
+    L3_139 = L3_139.deleteRow
+    L3_139(L3_139, #_UPVALUE1_.content.rows)
+    L3_139 = #L1_137
+    L3_139 = L3_139 - 1
+    for _FORV_7_ = 1, L3_139 do
+      L1_137[_FORV_7_].taps = _UPVALUE2_
+      for _FORV_12_, _FORV_13_ in pairs(L1_137[_FORV_7_].users) do
+        break
+      end
+      _UPVALUE1_:insertRow({
+        onRender = _UPVALUE3_,
+        onEvent = _UPVALUE4_,
+        height = 44,
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        lineColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        id = {
+          pmsession = L1_137[_FORV_7_],
+          hasAnimatedLeft = false,
+          firstAvatar = _FORV_13_.avatar
+        }
+      })
+      _UPVALUE5_ = _UPVALUE5_ + 1
+    end
+    if tonumber(L2_138) ~= tonumber(_UPVALUE5_) then
+      _UPVALUE1_:insertRow({
+        onRender = function(A0_140)
+          local L1_141, L2_142, L3_143, L4_144
+          L1_141 = A0_140.target
+          L1_141 = L1_141.height
+          L2_142 = A0_140.view
+          L3_143 = A0_140.target
+          L4_144 = display
+          L4_144 = L4_144.newText
+          L4_144 = L4_144({
+            text = "Load more (" .. _UPVALUE0_ .. " of " .. _UPVALUE1_ .. " messages)",
+            font = _UPVALUE2_.fonts.light,
+            fontSize = 16
+          })
+          L4_144:setReferencePoint(display.CenterReferencePoint)
+          L4_144.x = _UPVALUE3_
+          L4_144.y = L1_141 * 0.5
+          L4_144:setFillColor(255, 255, 255)
+          L2_142:insert(L4_144)
+        end,
+        onEvent = function(A0_145)
+          local L2_146
+          L2_146 = A0_145.background
+          L2_146:setFillColor(217, 217, 217)
+          if (A0_145.phase == "release" or A0_145.phase == "tap") and _UPVALUE0_ == false then
+            _UPVALUE1_:deleteRow(#_UPVALUE1_.content.rows)
+            _UPVALUE1_.displayFetchingMore()
+            _UPVALUE0_ = true
+            _UPVALUE2_ = _UPVALUE2_ + _UPVALUE3_
+            _UPVALUE3_ = 30
+            _UPVALUE4_.network_request("fetch_pm_sessions", _UPVALUE5_, {
+              searchString = _UPVALUE6_,
+              start = _UPVALUE2_,
+              udid = _UPVALUE7_.udid,
+              pop = _UPVALUE3_
+            })
+          end
+          return true
+        end,
+        height = 40,
+        rowColor = {
+          0,
+          0,
+          0,
+          0
+        },
+        lineColor = {
+          255,
+          255,
+          255,
+          0
+        }
+      })
+    elseif tonumber(L2_138) == 0 then
+      _UPVALUE14_()
+    end
+    if _UPVALUE15_ == true then
+      _UPVALUE1_.scrollList(_UPVALUE16_)
+      _UPVALUE15_ = false
+    end
+    _UPVALUE17_[#_UPVALUE17_ + 1] = {
+      [1] = L2_138
+    }
+    _UPVALUE6_ = false
+  end
+  L53_54 = pageTable
+  if L53_54 then
+    L53_54 = pageTable
+    L53_54 = L53_54[1]
+    if L53_54 then
+      L53_54 = pageTable
+      L53_54 = L53_54[1]
+      L53_54 = L53_54.taps
+      if L53_54 then
+        L53_54 = pageTable
+        L53_54 = L53_54[1]
+        L53_54 = L53_54.taps
+        if L53_54 == L24_25 then
+          L53_54 = timer
+          L53_54 = L53_54.performWithDelay
+          L54_55 = 200
+          function L55_56()
+            _UPVALUE0_({
+              status = 200,
+              response = _UPVALUE1_.encode(pageTable)
+            })
+          end
+          L53_54(L54_55, L55_56)
+        end
+      end
+    end
+  else
+    function L53_54(A0_147)
+      if _UPVALUE0_ == _UPVALUE1_.session then
+        _UPVALUE2_ = true
+        _UPVALUE3_.network_request("fetch_pm_sessions", _UPVALUE4_, {
+          searchString = _UPVALUE5_,
+          start = _UPVALUE6_,
+          udid = _UPVALUE1_.udid,
+          pop = _UPVALUE7_
+        })
+      end
+      _UPVALUE3_.removeRuntimeListener("sceneLoaded", A0_147.self_listenerid)
+    end
+    L54_55 = _UPVALUE0_
+    L54_55 = L54_55.addRuntimeListener
+    L55_56 = "sceneLoaded"
+    L54_55(L55_56, L53_54)
+  end
+  if L7_8 == false and L17_18 == true then
+    function L53_54(A0_148)
+      local L1_149
+      L1_149 = true
+      return L1_149
+    end
+    L54_55 = display
+    L54_55 = L54_55.newRect
+    L55_56 = 0
+    L54_55 = L54_55(L55_56, 0, _W, _H)
+    L55_56 = L54_55.setFillColor
+    L55_56(L54_55, 255, 255, 255, 125)
+    L55_56 = L54_55.addEventListener
+    L55_56(L54_55, "touch", L53_54)
+    L55_56 = L0_1.insert
+    L55_56(L0_1, L54_55)
+    function L55_56(A0_150)
+      if A0_150.action == "clicked" then
+        if A0_150.index == 2 then
+          system.openURL("https://itunes.apple.com/app/id528919633")
+        end
+        _UPVALUE0_.remove({
+          "searchString",
+          "prevScene",
+          "listPos",
+          "start",
+          "page",
+          "pop"
+        })
+        _UPVALUE0_.update({
+          taps = _UPVALUE1_ - 1
+        })
+        _UPVALUE0_.dispatchEvent("clearLocalTimersAndListeners")
+        director:changeScene("profile")
+      end
+    end
+    _UPVALUE0_.showAlert("Pro only", [[
+This section can only be used in Minecraft Seeds Pro.
+Upgrade to use this feature.]], {"Dismiss", "Upgrade"}, L55_56)
+  end
+  return L0_1
+end
